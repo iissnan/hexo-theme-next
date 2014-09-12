@@ -1,0 +1,6 @@
+if theme.menu
+    ul.navigation#navigation
+        each path, name in theme.menu
+            - item_specific = "navigation-item-" + name.toLowerCase()
+            li.navigation-item(class=item_specific)
+                != link_to(path, name)

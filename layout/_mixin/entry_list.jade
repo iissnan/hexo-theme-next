@@ -1,0 +1,12 @@
+mixin renderPostList(post)
+
+    -var articleLink = config.root + post.path
+
+    div.post
+        a.post-title-link(href=articleLink)
+            h2.post-title
+                = post.title || "Untitled"
+            div.post-meta
+                span.post-time
+                    | Posted on &nbsp;
+                    = date(post.date, "YYYY-MM-DD")

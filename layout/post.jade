@@ -1,0 +1,15 @@
+extends _layout.jade
+include _mixin/entry.jade
+
+block head
+    title= page.title + " | " + config.title
+
+block content
+    -page.pageType = "post"
+    +renderPost(page)
+
+    if config.disqus_shortname && page.comments
+        div.comments
+            div#disqus_thread
+                noscript.
+                  Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>

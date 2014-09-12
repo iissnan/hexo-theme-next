@@ -1,0 +1,61 @@
+doctype
+-var page_class = is_home() ? "page-home" : (is_archive() ? "page-archives" : "")
+-var post_list_class = is_home() || is_post() ? "posts-expand" : "posts-collapse"
+html(class=page_class)
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        link(rel="stylesheet", type="text/css", href="/vendors/nprogress/nprogress.css")
+        link(rel="stylesheet", type="text/css", href="/css/main.css")
+        include _partial/head.jade
+
+    -var column = theme.sidebar ? "two-column" : "one-column"
+    body(class=column)
+        div.container
+            div#header.header
+                div.header-inner
+                    include _partial/brand.jade
+                    include _partial/menu.jade
+                    block header
+
+            div#main.main
+                .main-inner
+                    div#content.content
+                        div#post-list(class=post_list_class)
+                            block content
+
+                        block pagination
+
+                    if theme.sidebar
+                        include _partial/sidebar
+
+            div#footer.footer
+                .footer-inner
+                    include _partial/footer.jade
+                    block footer
+
+            block scripts
+
+        script(src="/vendors/jquery/dist/jquery.min.js")
+        script(src="/vendors/jquery-pjax/jquery.pjax.js")
+        script(src="/vendors/nprogress/nprogress.js")
+        script(src="http://#{config.disqus_shortname}.disqus.com/embed.js")
+        script.
+            $(document)
+              .pjax('a', '#main', {fragment: '#main'})
+              .on('pjax:start', function () { NProgress.start() })
+              .on('pjax:end', function () { NProgress.done(); disqus() });
+
+            function disqus() {
+                var $disqusEl = $('#disqus_thread');
+                if ($disqusEl.size() > 0) {
+                    DISQUS.reset({
+                      reload: true,
+                      config: function () {
+                        this.page.identifier = window.location.pathname;
+                        this.page.url = window.location.toString();
+                      }
+                    });
+                }
+            }

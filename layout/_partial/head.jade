@@ -1,0 +1,11 @@
+if config.description
+    meta(name='description', content = config.description)
+if theme.rss
+    link(rel='alternative', href = theme.rss, title = config.title, type='application/atom+xml')
+if theme.favicon
+    link(rel="icon", type="image/x-icon", href=theme.favicon)
+if theme.touch_icons
+    each path, size in theme.touch_icons
+        link(rel="apple-touch-icon", size=size href=path)
+
+block head

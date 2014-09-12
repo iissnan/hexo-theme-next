@@ -1,0 +1,37 @@
+div.copyright
+    | &copy; &nbsp;
+    if theme.since
+        = theme.since + " - "
+    = date(Date.now(), "YYYY")
+    | &nbsp;
+    | &hearts; &nbsp;
+    span.author
+        =config.author
+
+
+div.powered-by
+    | Powered By 
+    a.theme-link(href="http://hexo.io") Hexo
+
+div.theme-info
+    | Theme - &nbsp;
+    a.theme-link(href="https://github.com/iissnan/hexo-theme-notes")
+        | Notes
+        //span.theme-version= " (v" + theme.version + ")"
+
+if config.disqus_shortname
+    - var disqus_type = page.comments ? 'embed' : 'count'
+    script.
+        var disqus_developer = 1;
+        (function(h,g,l,k,j,i){j=h.createElement(g),i=h.getElementsByTagName(g)[0],
+        j.src="//"+l+".disqus.com/"+k+".js",i.parentNode.insertBefore(j,i)})
+        (document,"script","#{config.disqus_shortname}","#{disqus_type}");
+
+if theme.google_analytics
+    script.
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','#{theme.google_analytics}');ga('send','pageview');
