@@ -1,0 +1,144 @@
+// https://github.com/chriskempson/tomorrow-theme
+
+@require "theme"
+
+$articlePadding = $desktopContentPadding
+
+$code-block
+  background: highlight-background
+  margin: 20px 0 //$articlePadding * -1
+  padding: 15px //$articlePadding
+  overflow: auto
+  font-size 13px
+  color: highlight-foreground
+  line-height:  18px //$fontSizeBase * $fontLineHeightBase
+
+$line-numbers
+  color: #666
+  font-size: 0.85em
+
+.post
+  pre, code
+    font-family: $fontFamilyMono
+  code
+    background: $colorGainsboro
+    text-shadow: 0 1px #fff
+    padding: 0 0.3em
+  pre
+    @extend $code-block
+    code
+      background: none
+      text-shadow: none
+      padding: 0
+  .highlight
+    @extend $code-block
+    pre
+      border: none
+      margin: 0
+      padding: 0
+    table
+      margin: 0
+      width: auto
+    td
+      border: none
+      padding: 0
+    figcaption
+      clearfix()
+      font-size: 0.85em
+      color: highlight-comment
+      line-height: 1em
+      margin-bottom: 1em
+      a
+        float: right
+    .gutter pre
+      @extend $line-numbers
+      text-align: right
+      padding-right: 20px
+  .gist
+    margin: 20px 0 //0 $articlePadding * -1
+    border-style: solid
+    border-color: $baseBorderColor
+    border-width: 1px 0
+    background: highlight-background
+    padding: 15px $articlePadding 15px 15px
+    .gist-file
+      border: none
+      font-family: $fontFamilyMono
+      margin: 0
+      .gist-data
+        background: none
+        border: none
+        .line-numbers
+          @extend $line-numbers
+          background: none
+          border: none
+          padding: 0 20px 0 0
+        .line-data
+          padding: 0 !important
+      .highlight
+        margin: 0
+        padding: 0
+        border: none
+      .gist-meta
+        background: highlight-background
+        color: highlight-comment
+        font: 13px $fontFamilySans
+        text-shadow: 0 0
+        padding: 0
+        margin-top: 1em
+        margin-left: $articlePadding
+        a
+          color: color-link
+          font-weight: normal
+          &:hover
+            text-decoration: underline
+
+pre
+  .comment
+  .title
+    color: highlight-comment
+  .variable
+  .attribute
+  .tag
+  .regexp
+  .ruby .constant
+  .xml .tag .title
+  .xml .pi
+  .xml .doctype
+  .html .doctype
+  .css .id
+  .css .class
+  .css .pseudo
+    color: highlight-red
+  .number
+  .preprocessor
+  .built_in
+  .literal
+  .params
+  .constant
+    color: highlight-orange
+  .class
+  .ruby .class .title
+  .css .rules .attribute
+    color: highlight-green
+  .string
+  .value
+  .inheritance
+  .header
+  .ruby .symbol
+  .xml .cdata
+    color: highlight-green
+  .css .hexcolor
+    color: highlight-aqua
+  .function
+  .python .decorator
+  .python .title
+  .ruby .function .title
+  .ruby .title .keyword
+  .perl .sub
+  .javascript .title
+  .coffeescript .title
+    color: highlight-blue
+  .keyword
+  .javascript .function
+    color: highlight-purple
