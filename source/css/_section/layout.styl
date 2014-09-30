@@ -1,0 +1,35 @@
+.header-inner {
+  margin: 0 auto;
+  padding: 100px 0 70px;
+  width: $desktopMainWidth;
+  .one-column & {
+    width: $desktopContentWidth;
+  }
+}
+
+.main-inner {
+  margin: 0 auto;
+  width: $desktopMainWidth;
+  .one-column & {
+    width: $desktopContentWidth;
+  }
+
+  .content {
+    overflow: hidden;
+    width: $desktopContentWidth;
+  }
+
+  .sidebar {
+    float: right;
+    margin-left: 20px;
+    width: $desktopSidebarWidth;
+  }
+}
+
+.footer-inner {
+  margin 20px auto
+  width $desktopMainWidth - 40px
+  .one-column & {
+    width $desktopContentWidth - 40px
+  }
+}

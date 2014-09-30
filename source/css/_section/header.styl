@@ -1,0 +1,85 @@
+
+.header {
+  background: $headerBackgroundColor;
+  border-bottom: solid $headerBorderBottomWidth $headerBorderBottomColor;
+}
+
+.header-inner {
+  position: relative;
+  font-family: $fontFamilySans;
+}
+
+.brand {
+  text-align: $brandTextAlignment;
+
+  a {
+    display: inline-block;
+    padding: 2px 15px;
+    text-align: center;
+    color: $brandTextColor;
+    background: $brandBackground
+    border-bottom: none;
+    font-family: $fontFamilySans;
+
+    the-shape(15px, white, 2px);
+  }
+
+  .site-title {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 35px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+.navigation {
+  margin-top: 20px;
+  padding-left: 0;
+  text-align: center;
+}
+
+.navigation .navigation-item {
+  display: inline-block;
+
+  &:first-child {
+    margin-right: 30px;
+  }
+
+  &::before {
+
+  }
+
+  a {
+    display: block;
+    color: $colorDeepBlack;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: capitalize;
+    border-bottom: 1px solid $colorDarkGray;
+
+    &:hover {
+      border-bottom-color: $colorDeepBlack;
+    }
+    &::before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+
+    }
+  }
+}
+
+.navigation .navigation-item-home a::before{
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMDI0IiB3aWR0aD0iMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTkyIDU3Nmw2NCAzODRoMTkyVjY0MGgxMjh2MzIwaDE5Mmw2NC0zODRMNTEyIDI1NiAxOTIgNTc2ek04MzIgMzg0VjEyOEg3MDRsMC4zMTIgMTI4LjMxMkw1MTIgNjQgMCA1NzZoMTI4bDM4NC0zODQgMzg0IDM4NGgxMjhMODMyIDM4NHoiLz48L3N2Zz4=") no-repeat 0 50%;
+  background-size: 100% 100%;
+}
+
+.navigation .navigation-item-archives a::before{
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMDI0IiB3aWR0aD0iODk2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0wIDcwNGgxMjh2LTY0SDY0VjM4NGg2NHYtNjRIMFY3MDR6TTM4NCAxOTJ2NjQwaDUxMlYxOTJIMzg0ek03NjggNzA0SDUxMlYzMjBoMjU2VjcwNHpNMTkyIDc2OGgxMjh2LTY0aC02NFYzMjBoNjR2LTY0SDE5MlY3Njh6Ii8+PC9zdmc+") no-repeat 0 50%;
+  background-size: 100% 100%;
+}
