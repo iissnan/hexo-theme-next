@@ -1,0 +1,30 @@
+the-shape($width, $color, $top=0, $padding=0, $paddingColor=transparent) {
+  .the-shape {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+
+    &::before, &::after {
+      position: relative;
+      top: $top;
+      content: ' ';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-width: $width;
+      border-style: solid;
+    }
+
+    &::before {
+      border-color: $paddingColor;
+      border-right-color: $color;
+      border-left-width: $padding;
+    }
+
+    &::after {
+      border-color: $paddingColor;
+      border-left-color: $color;
+      border-right-width: $padding;
+    }
+  }
+}
