@@ -1,0 +1,169 @@
+.posts-expand {
+  font-family: $fontFamilyPost;
+  padding-top: 40px;
+}
+
+.posts-expand .post-title {
+  margin-bottom 30px
+  font-size 26px
+}
+.posts-expand .post-title-link {
+  position: relative;
+  color $colorLightBlack
+  border-bottom: none;
+  line-height: 1.2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  &:hover::before {
+    visibility: visible
+    transform: scaleX(1);
+  }
+}
+
+.posts-expand .post-meta {
+  font-family $fontFamilySans
+  color $colorDarkGray
+  font-size 12px
+
+  .post-category-list {
+    display inline-block
+    margin 0
+    padding 3px
+  }
+  .post-category-list-link {
+    color $colorDarkGray
+  }
+}
+
+.posts-expand .post-body {
+  h2, h3, h4, h5, h6 {
+    margin 30px 0 15px
+  }
+
+  ul {
+    list-style square
+  }
+
+  blockquote {
+    margin 10px 0
+    padding 0 15px
+    color $colorDimGray
+    border-left 2px solid $colorLightGray
+    & cite::before {
+      content "-"
+      padding 0 5px
+    }
+  }
+
+  table {
+    width 100%
+    border-collapse collapse
+    border-spacing 0
+  }
+
+  caption, th, td {
+    text-align left
+    vertical-align middle
+    font-weight normal
+  }
+  th {
+    font-weight 700
+    border-bottom 3px solid $colorLighterGray
+    padding-bottom 10px
+  }
+  td {
+    border-bottom 1px solid $colorLighterGray
+    padding 10px 0
+  }
+  dt {
+    font-weight 700
+  }
+  dd {
+    margin 0
+    padding 0
+  }
+  img {
+    box-sizing: border-box;
+    margin auto
+    border 1px solid $colorLightGray
+  }
+
+
+  .pullquote {
+    width 45%
+    &.left {
+      float left
+      margin-left 5px
+      margin-right 10px
+    }
+    &.right {
+      float right
+      margin-left 10px
+      margin-right 5px
+    }
+  }
+  .highlight table, .gist table {
+    width auto
+    td {
+      border none
+    }
+
+  }
+  .highlight, .gist {
+    a {
+      color $highlightLinkColor !important
+      text-decoration none !important
+    }
+  }
+
+  .video-container {
+    position relative
+    padding-top 60%
+    height 0
+    overflow hidden
+    iframe, object, embed {
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height 100%
+    }
+  }
+}
+
+.posts-expand .post-tags {
+  margin-top 20px
+  font-family $fontFamilySans
+
+  a {
+    display inline-block
+    margin-right 10px
+    font-size: 13px
+  }
+}
+
+.posts-expand {
+  the-shape(6px, $colorLightGray, -13px, 5px, #fff);
+  .post-eof {
+    display: block;
+    margin 120px auto 80px
+    width 8%
+    height 1px
+    background $colorLightGray
+    text-align center
+  }
+}
+
+
