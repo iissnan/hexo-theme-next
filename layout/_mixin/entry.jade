@@ -9,13 +9,14 @@ mixin renderPost(post, pageType, last)
                 span.post-time
                     | Posted on &nbsp;
                     = date(post.date, "YYYY-MM-DD")
-            h2.post-title
-                if post.pageType !== "post"
+            if post.title
+                h2.post-title
+                    if post.pageType !== "post"
 
-                    a.post-title-link(href=articleLink)
-                        = post.title
-                else
-                    =post.title
+                        a.post-title-link(href=articleLink)
+                            = post.title
+                    else
+                        =post.title
         div.post-body
             if post.excerpt && post.pageType == "index"
                 != post.excerpt

@@ -3,14 +3,16 @@
 }
 
 .posts-expand .post-title {
-  margin-bottom 30px
-  font-size 26px
+  margin-bottom: 60px;
+  font-size: 26px;
+  text-align: center;
 }
 .posts-expand .post-title-link {
   position: relative;
-  color $colorLightBlack
+  color: $colorLightBlack;
   border-bottom: none;
   line-height: 1.2;
+  vertical-align: top;
 
   &::before {
     content: "";
@@ -32,8 +34,9 @@
 }
 
 .posts-expand .post-meta {
-  color $colorDarkGray
-  font-size 12px
+  color: $colorDarkGray;
+  font-size: 12px;
+  text-align: center;
 
   .post-category-list {
     display inline-block
@@ -47,21 +50,45 @@
 
 .posts-expand .post-body {
   h2, h3, h4, h5, h6 {
-    margin 30px 0 15px
+    margin: 30px 0 15px;
   }
 
   ul {
-    list-style square
+    list-style: square;
   }
 
   blockquote {
-    margin 10px 0
-    padding 0 15px
-    color $colorDimGray
-    border-left 2px solid $colorLightGray
+    position: relative;
+    margin: 10px 0;
+    padding: 0 15px;
+    color: $colorDimGray;
+    text-align: center;
+
+    &::before, &::after {
+      position: absolute;
+      content: ' ';
+      display: block;
+      width: 100%;
+      height: 24px;
+      opacity: 0.2;
+
+    }
+    &::before {
+      top: -15px;
+      background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDM0aDZsNC04di0xMmgtMTJ2MTJoNnptMTYgMGg2bDQtOHYtMTJoLTEydjEyaDZ6Ii8+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+") no-repeat 50% 0;
+      background-size: 24px 24px;
+    }
+    &::after {
+      bottom: -20px;
+      background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDM0aDZsNC04di0xMmgtMTJ2MTJoNnptMTYgMGg2bDQtOHYtMTJoLTEydjEyaDZ6Ii8+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+") no-repeat 50% 0;
+      background-size: 24px 24px;
+    }
     & cite::before {
       content "-"
       padding 0 5px
+    }
+    p, div {
+      text-align: center
     }
   }
 
@@ -142,7 +169,8 @@
 }
 
 .posts-expand .post-tags {
-  margin-top 20px
+  margin-top: 60px;
+  text-align: center;
 
   a {
     display inline-block
@@ -155,7 +183,7 @@
   the-shape(6px, $colorLightGray, -13px, 5px, #fff);
   .post-eof {
     display: block;
-    margin 120px auto 80px
+    margin 160px auto 120px
     width 8%
     height 1px
     background $colorLightGray
