@@ -8,8 +8,6 @@ block content
     -page.pageType = "post"
     +renderPost(page)
 
-    if config.disqus_shortname && page.comments
+    if config.duoshuo.enable && config.duoshuo.shortname && page.comments
         div.comments
-            div#disqus_thread
-                noscript.
-                  Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            div.ds-thread(data-thread-key="#{page.path}", data-title="#{page.title}", data-url="#{page.permalink}")

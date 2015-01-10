@@ -40,22 +40,26 @@ html(class=page_class)
         script(src="/vendors/jquery/dist/jquery.min.js")
         script(src="/vendors/jquery-pjax/jquery.pjax.js")
         script(src="/vendors/nprogress/nprogress.js")
-        script(src="http://#{config.disqus_shortname}.disqus.com/embed.js")
+
+        if config.duoshuo.enable && config.duoshuo.shortname
+            script.
+                var duoshuoQuery = {short_name:"#{config.duoshuo.shortname}"};
+                (function() {
+                    var ds = document.createElement('script');
+                    ds.type = 'text/javascript';ds.async = true;
+                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                    ds.charset = 'UTF-8';
+                    (document.getElementsByTagName('head')[0]
+                     || document.getElementsByTagName('body')[0]).appendChild(ds);
+                })();
+
         script.
             $(document)
               .pjax('a', '#main', {fragment: '#main'})
               .on('pjax:start', function () { NProgress.start() })
-              .on('pjax:end', function () { NProgress.done(); disqus() });
+              .on('pjax:end', function () { NProgress.done(); duoshuo(); });
 
-            function disqus() {
-                var $disqusEl = $('#disqus_thread');
-                if ($disqusEl.size() > 0) {
-                    DISQUS.reset({
-                      reload: true,
-                      config: function () {
-                        this.page.identifier = window.location.pathname;
-                        this.page.url = window.location.toString();
-                      }
-                    });
-                }
+            function duoshuo() {
+                var dst = $(".ds-thread");
+                dst.size() === 1 && DUOSHUO.EmbedThread(dst[0]);
             }

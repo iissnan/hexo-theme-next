@@ -17,15 +17,6 @@ div.theme-info
     | Theme - &nbsp;
     a.theme-link(href="https://github.com/iissnan/hexo-theme-next")
         | NexT
-        //span.theme-version= " (v" + theme.version + ")"
-
-if config.disqus_shortname
-    - var disqus_type = page.comments ? 'embed' : 'count'
-    script.
-        var disqus_developer = 1;
-        (function(h,g,l,k,j,i){j=h.createElement(g),i=h.getElementsByTagName(g)[0],
-        j.src="//"+l+".disqus.com/"+k+".js",i.parentNode.insertBefore(j,i)})
-        (document,"script","#{config.disqus_shortname}","#{disqus_type}");
 
 if theme.google_analytics
     script.
