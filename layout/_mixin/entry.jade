@@ -20,8 +20,8 @@ mixin renderPost(post, pageType, last)
         div.post-body
             if post.excerpt && post.pageType == "index"
                 != post.excerpt
-                div.post-more-link
-                    a(href=articleLink) Read more
+                div.post-more-link.center
+                    a.btn(href=articleLink) Read more &raquo;
 
             else
                 != post.content
