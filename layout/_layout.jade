@@ -25,7 +25,8 @@ html(class=page_class)
                         div#post-list(class=post_list_class)
                             block content
 
-                        include _partial/pagination.jade
+                        if !is_post()
+                            include _partial/pagination.jade
 
                     if theme.sidebar
                         include _partial/sidebar
