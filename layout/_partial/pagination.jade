@@ -1,0 +1,6 @@
+if page.prev || page.next
+    div.pagination
+        if page.prev
+            a.btn.pagination-prev(href=url_for(page.prev_link)) &laquo; Prev
+        if page.next
+            a.btn.pagination-next(href=url_for(page.next_link)) Next &raquo;
