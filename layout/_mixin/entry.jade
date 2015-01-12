@@ -11,7 +11,7 @@ mixin renderPost(post, pageType, last)
                     = date(post.date, "YYYY-MM-DD")
             if post.title
                 h2.post-title
-                    if post.pageType !== "post"
+                    if post.pageType !== "post" || post.link_to
 
                         a.post-title-link(href=articleLink)
                             = post.title
