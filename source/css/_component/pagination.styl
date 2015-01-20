@@ -1,10 +1,36 @@
 .pagination {
-  margin: 80px 0 0;
+  margin: 120px 0 40px;
   text-align: center;
+  border-top: 1px solid $colorGainsboro;
 }
 
-.pagination a {
-  &:first-child {
-    margin-right: 20px;
+.page-number-basic {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  margin: 0 10px;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.pagination {
+  .prev, .next, .page-number {
+    @extend .page-number-basic;
+    border-bottom: 0;
+    border-top: 1px solid $colorGainsboro;
+
+    &:hover {
+      border-top: 1px solid $colorDeepBlack;
+    }
+  }
+
+  .space {
+    @extend .page-number-basic;
+  }
+
+  .page-number.current {
+    color: white;
+    background: $colorDeepBlack;
+    border-top-color: $colorDeepBlack;
   }
 }
