@@ -4,9 +4,8 @@ mixin renderPostList(post)
 
     div.post
         a.post-title-link(href=articleLink)
-            h2.post-title
-                = post.title || "Untitled"
             div.post-meta
                 span.post-time
-                    | Posted on &nbsp;
-                    = date(post.date, "YYYY-MM-DD")
+                    = date(post.date, "MM-DD")
+            h2.post-title
+                = post.title || "未命名"
