@@ -11,8 +11,10 @@
 
 ## TODO
 
+- [ ] Using Swig instead jade.
 - [ ] Rewrite link post related stuffs.
 - [ ] Redesign pagination for mobile devices.
 - [ ] Support category.
 - [ ] Support gallery posts.
+- [ ] Make PAJAX and NProgress as optional.
 - [ ] Refactor.
