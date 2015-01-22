@@ -8,6 +8,6 @@ block content
     -page.pageType = "post"
     +renderPost(page)
 
-    if config.duoshuo.enable && config.duoshuo.shortname && page.comments
+    if config.duoshuo && config.duoshuo.enable && config.duoshuo.shortname && page.comments
         div.comments
             div.ds-thread(data-thread-key="#{page.path}", data-title="#{page.title}", data-url="#{page.permalink}")

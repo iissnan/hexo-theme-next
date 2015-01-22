@@ -9,3 +9,10 @@
 [bower-image]: http://img.shields.io/badge/Bower-Powered-2BAF2B.svg?style=flat-square
 [bower-url]: http://bower.io
 
+## TODO
+
+- [ ] Rewrite link post related stuffs.
+- [ ] Redesign pagination for mobile devices.
+- [ ] Support category.
+- [ ] Support gallery posts.
+- [ ] Refactor.
