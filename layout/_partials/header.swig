@@ -9,7 +9,7 @@
   <ul id="menu" class="menu">
     {% for path, name in theme.menu %}
       <li class="menu-item menu-item-{{ name.toLowerCase() }}">
-        {{ link_to(path, name) }}
+        {{ link_to(name, path) }}
       </li>
     {% endfor %}
   </ul>

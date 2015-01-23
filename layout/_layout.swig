@@ -17,8 +17,14 @@
     <div id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content">
-          {% set postListClass = is_home() || is_post() ? "posts-expand" : "posts-collapse" %}
-          <div id="posts" class="{{ postListClass }}">
+
+          {% if is_home() or is_post() %}
+            {% set postsClass = "posts-exapnd" %}
+          {% else %}
+            {% set postsClass = "posts-collapse" %}
+          {% endif %}
+
+          <div id="posts" class="{{ postsClass }}">
             {% block content %}{% endblock %}
 
             {% if not is_post() and (page.prev || page.next) %}

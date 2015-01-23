@@ -6,7 +6,7 @@
     {{ postLink = post.link }}
   {% endif %}
 
-  <div class="post post-type-{{ post.type }}">
+  <div class="post post-type-{{ post.type | default('normal') }}">
     <div class="post-header">
 
       <div class="post-meta">
@@ -24,16 +24,18 @@
       {% endif %}
     </div>
 
-    <div class="post-body">
-      {% if not is_post() and post.excerpt %}
-        {{ post.excerpt }}
-        <div class="post-more-link center">
-          <a class="btn" href="{{ postLink }}">Read more &raquo;</a>
-        </div>
-      {% else %}
-        {{ post.content }}
-      {% endif  %}
-    </div>
+    {% if not (is_archive() or is_archive() or is_category()) %}
+      <div class="post-body">
+        {% if not is_post() and post.excerpt %}
+          {{ post.excerpt }}
+          <div class="post-more-link center">
+            <a class="btn" href="{{ postLink }}">Read more &raquo;</a>
+          </div>
+        {% else %}
+          {{ post.content }}
+        {% endif  %}
+      </div>
+    {% endif %}
 
     <div class="post-footer">
       {% if post.tags and post.tags.length %}
