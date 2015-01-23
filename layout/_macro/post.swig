@@ -20,11 +20,11 @@
           <a class="post-title-link" href="{{ postLink }}">{{ post.title }}</a>
         </h1>
       {% else %}
-        {{ post.title }}
+        {{ post.content }}
       {% endif %}
     </div>
 
-    {% if not (is_archive() or is_archive() or is_category()) %}
+    {% if not (is_archive() or is_archive() or is_category() or is_tag()) %}
       <div class="post-body">
         {% if not is_post() and post.excerpt %}
           {{ post.excerpt }}
