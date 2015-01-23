@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container  one-column">
 
     <div id="header" class="header">
       <div class="header-inner">
@@ -19,7 +19,7 @@
         <div id="content" class="content">
 
           {% if is_home() or is_post() %}
-            {% set postsClass = "posts-exapnd" %}
+            {% set postsClass = "posts-expand" %}
           {% else %}
             {% set postsClass = "posts-collapse" %}
           {% endif %}
