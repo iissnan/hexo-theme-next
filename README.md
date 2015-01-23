@@ -11,10 +11,14 @@
 
 ## TODO
 
-- [x] Using Swig instead jade.
-- [ ] Rewrite link post related stuffs.
+- [x] Using Swig instead of jade.
+- [ ] Using SCSS instead of stylus (?).
+- [ ] Rewrite link post related stuffs (Breaking changes).
 - [ ] Redesign pagination for mobile devices.
 - [ ] Support category.
 - [ ] Support gallery posts.
 - [ ] Make PAJAX and NProgress as optional.
 - [ ] Refactor.
+- [ ] How to use this theme.
+- [ ] Publish as a bower package.
+- [ ] Home page.
