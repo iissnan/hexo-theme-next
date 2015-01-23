@@ -1,14 +1,22 @@
-.posts-collapse .archives-date {
-  margin: 40px 0;
+.posts-collapse .collection-title {
+  display: inline-block;
+  margin: 30px 0;
+  padding: 5px;
+  color: white;
+  font-family: $fontFamilyPost;
+  background: $colorDeepBlack;
 }
-.posts-collapse .post a {
-  display: block;
-  overflow: hidden;
-  margin: 0 30px;
-  padding: 20px 0;
-  border-bottom: none;
 
-  &:hover .post-title{
+.posts-collapse .post {
+  margin: 0 0 35px 30px;
+}
+
+.posts-collapse .post a {
+  display: inline-block;
+  color: $colorLightBlack;
+  border-bottom-color: white;
+
+  &:hover {
     color: $colorDeepBlack;
     border-bottom-color: $colorDeepBlack;
   }
@@ -29,7 +37,6 @@
 
 .posts-collapse .post-title {
   display: inline-block;
-  margin-left: 15px;
   vertical-align: middle;
   font-size: 20px;
   color: $colorLightBlack;
