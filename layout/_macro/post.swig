@@ -1,4 +1,4 @@
-{% macro post(post, type, last) %}
+{% macro post(post) %}
 
   {% set postLink = config.root + post.path %}
 
@@ -22,11 +22,10 @@
       {% else %}
         {{ post.title }}
       {% endif %}
-
     </div>
 
     <div class="post-body">
-      {% if post.excerpt %}
+      {% if not is_post() and post.excerpt %}
         {{ post.excerpt }}
         <div class="post-more-link center">
           <a class="btn" href="{{ postLink }}">Read more &raquo;</a>
@@ -38,9 +37,9 @@
 
     <div class="post-footer">
       {% if post.tags and post.tags.length %}
-      <div class="post-tags">
-        {{ list_tags(post.tags, {show_count: false}) }}
-      </div>
+        <div class="post-tags">
+          {{ list_tags(post.tags, {show_count: false}) }}
+        </div>
       {% endif %}
 
       {% if is_post() %}
