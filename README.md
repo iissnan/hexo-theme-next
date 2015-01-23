@@ -11,7 +11,7 @@
 
 ## TODO
 
-- [ ] Using Swig instead jade.
+- [x] Using Swig instead jade.
 - [ ] Rewrite link post related stuffs.
 - [ ] Redesign pagination for mobile devices.
 - [ ] Support category.
