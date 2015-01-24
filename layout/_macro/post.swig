@@ -14,12 +14,18 @@
       </div>
 
       <h1 class="post-title">
-        {% if not is_post() %}
-          <a class="post-title-link" href="{{ config.root + post.path }}">
-            {{ post.title | default('Untitled')}}
+        {% if post.link %}
+          <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}">
+            {{ post.link }}
           </a>
         {% else %}
-          {{ post.title }}
+          {% if not is_post() %}
+            <a class="post-title-link" href="{{ url_for(post.path) }}">
+              {{ post.title | default('Untitled')}}
+            </a>
+          {% else %}
+            {{ post.title }}
+          {% endif %}
         {% endif %}
       </h1>
     </div>

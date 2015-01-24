@@ -24,8 +24,6 @@
   ],
   "dependencies": {
     "jquery": "1.*",
-    "nprogress": "*",
-    "jquery-pjax": "~1.9.2",
     "fancybox": "~2.1.5"
   }
 }
