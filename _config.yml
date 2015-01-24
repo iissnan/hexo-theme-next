@@ -1,7 +1,6 @@
 menu:
   home: /
   archives: /archives
-  tags: /tags
 
 favicon: /favicon.ico
 
@@ -15,6 +14,6 @@ highlight_theme: normal
 fancybox: true
 
 # Specify the date when the site was setup
-since: 2013
+since: 2015
 
-version: 0.0.5
+version: 0.1.0
