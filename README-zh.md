@@ -8,10 +8,9 @@
 
 ## 预览
 
-<p style="overflow:hidden">
-  <img src="screenshots/desktop.png" style="max-width: 51%" />
-  <img src="screenshots/mobile.png" style="max-width: 30%" />
-</p>
+[Desktop Preview](screenshots/desktop.png) | [Mobile Preview](screenshots/mobile.png)
+
+<img src="screenshots/mobile.png" />
 
 
 ## 安装
