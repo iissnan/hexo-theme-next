@@ -9,12 +9,8 @@
 ## 预览
 
 <p style="overflow:hidden">
-  <span style="display: inline-block; width: 50%">
-    <img src="screenshots/desktop.png" style="max-width: 100%" />
-  </span>
-  <span style="display: inline-block; width: 50%">
-      <img src="screenshots/desktop.png" style="max-width: 100%" />
-    </span>
+  <img src="screenshots/desktop.png" style="max-width: 51%" />
+  <img src="screenshots/mobile.png" style="max-width: 30%" />
 </p>
 
 
@@ -97,9 +93,6 @@ fancybox: true
 
 # 指定站点建立时间
 since: 2013
-
-# 主题版本号
-version: 0.0.5
 ```
 
 [![hexo-image]][hexo-url]

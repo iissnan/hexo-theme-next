@@ -3,17 +3,13 @@
 > NexT is high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
 
-[Live Preview](http://notes.iissnan.com)  [中文文档](README-zh.md)
+[Live Preview](http://notes.iissnan.com)  |  [中文文档](README-zh.md)
 
 ## Screenshots
 
 <p style="overflow:hidden">
-  <span style="display: inline-block; width: 50%">
-    <img src="screenshots/desktop.png" style="max-width: 100%" />
-  </span>
-  <span style="display: inline-block; width: 50%">
-      <img src="screenshots/desktop.png" style="max-width: 100%" />
-    </span>
+  <img src="screenshots/desktop.png" style="max-width: 51%" />
+  <img src="screenshots/mobile.png" style="max-width: 30%" />
 </p>
 
 
@@ -98,8 +94,6 @@ fancybox: true
 # Specify the date when the site was setup
 since: 2013
 
-# Theme version
-version: 0.0.5
 ```
 
 
