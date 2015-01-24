@@ -2,8 +2,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-{% if theme.pjax %}
-<link rel="stylesheet" type="text/css" href="/vendors/nprogress/nprogress.css"/>
+{% if theme.fancybox %}
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 {% endif %}
 
 <link rel="stylesheet" type="text/css" href="/css/main.css"/>

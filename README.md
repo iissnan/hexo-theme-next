@@ -16,7 +16,7 @@
 - [ ] Rewrite link post related stuffs (Breaking changes).
 - [ ] Redesign pagination for mobile devices.
 - [ ] Support category.
-- [ ] Support gallery posts.
+- [x] Support gallery posts.
 - [x] Make PAJAX and NProgress as optional.
 - [ ] Refactor.
 - [ ] How to use this theme.

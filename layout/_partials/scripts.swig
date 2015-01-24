@@ -1,20 +1,13 @@
 <script type="text/javascript" src="/vendors/jquery/dist/jquery.min.js"></script>
 
-{% if theme.pjax %}
-  <script type="text/javascript" src="/vendors/jquery-pjax/jquery.pjax.js"></script>
-  <script type="text/javascript" src="/vendors/nprogress/nprogress.js"></script>
+{% if theme.fancybox %}
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript">
-    $(document)
-        .pjax('a', '#main', {fragment: '#main'})
-        .on('pjax:start', function () { NProgress.start() })
-        .on('pjax:end', function () { NProgress.done(); duoshuo(); });
-
-    function duoshuo() {
-      var dst = $(".ds-thread");
-      dst.size() === 1 && DUOSHUO.EmbedThread(dst[0]);
-    }
+    $(document).ready(function() {
+      $(".fancybox").fancybox();
+    });
   </script>
-{% endif %}
+{% endif  %}
 
 {% if theme.duoshuo and theme.duoshuo.enable and theme.duoshuo.shortname %}
   <script type="text/javascript">

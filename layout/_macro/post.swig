@@ -26,6 +26,19 @@
 
     {% if not (is_archive() or is_category() or is_tag()) %}
       <div class="post-body">
+
+        {# Gallery support #}
+        {% if post.photos and post.photos.length %}
+          <div class="post-gallery">
+            {% for photo in post.photos %}
+              <a class="post-gallery-img fancybox" href="{{ url_for(photo) }}"
+                 rel="gallery_{{ post._id }}">
+                <img src="{{ url_for(photo) }}" />
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+
         {% if not is_post() and post.excerpt %}
           {{ post.excerpt }}
           <div class="post-more-link center">
@@ -34,6 +47,7 @@
         {% else %}
           {{ post.content }}
         {% endif  %}
+
       </div>
     {% endif %}
 
