@@ -1,6 +1,7 @@
 <div class="copyright">
-  &copy; &nbsp; {% if theme.since %} {{ theme.since }} - {% endif %}
-  {{ date(Date.now(), "YYYY") }}
+  {% set current = date(Date.now(), "YYYY") %}
+  &copy; &nbsp; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}
+  {{ current }}
   <span class="with-love">&hearts;</span>
   <span class="author">{{ config.author }}</span>
 </div>
