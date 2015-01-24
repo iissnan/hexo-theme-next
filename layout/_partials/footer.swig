@@ -6,11 +6,11 @@
 </div>
 
 <div class="powered-by">
-  Powered By <a class="theme-link" href="http://hexo.io">Hexo</a>
+  {{ __('footer.powered') }} - <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme - <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NextT</a>
+  {{ __('footer.theme') }} - <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NextT</a>
 </div>
 
 {% block footer %}{% endblock %}

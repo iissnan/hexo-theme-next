@@ -19,6 +19,7 @@
 - [x] Support gallery posts.
 - [x] Make PAJAX and NProgress as optional. (Removed, conflicts with fancybox)
 - [x] Refactor.
+- [x] i18n.
 - [ ] How to use this theme.
 - [ ] Publish as a bower package.
 - [ ] Home page.

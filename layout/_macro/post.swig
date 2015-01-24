@@ -6,7 +6,7 @@
       <div class="post-meta">
           <span class="post-time">
             {% if is_home() or is_post() %}
-              Posted on {{ post.date | date('Y-m-d') }}
+              {{ __('post.posted') }} {{ post.date | date('Y-m-d') }}
             {% else %}
               {{ post.date | date('m-d') }}
             {% endif %}
@@ -21,7 +21,7 @@
         {% else %}
           {% if not is_post() %}
             <a class="post-title-link" href="{{ url_for(post.path) }}">
-              {{ post.title | default('Untitled')}}
+              {{ post.title | default(__('post.untitled'))}}
             </a>
           {% else %}
             {{ post.title }}
@@ -48,7 +48,9 @@
         {% if not is_post() and post.excerpt %}
           {{ post.excerpt }}
           <div class="post-more-link center">
-            <a class="btn" href="{{ url_for(post.path) }}">Read more &raquo;</a>
+            <a class="btn" href="{{ url_for(post.path) }}">
+              {{ __('post.read_more') }} &raquo;
+            </a>
           </div>
         {% else %}
           {{ post.content }}

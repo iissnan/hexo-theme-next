@@ -8,8 +8,9 @@
 {% if theme.menu %}
   <ul id="menu" class="menu">
     {% for name, path in theme.menu %}
-      <li class="menu-item menu-item-{{ name.toLowerCase() }}">
-        {{ link_to(path, name) }}
+      {% set itemName = name.toLowerCase() %}
+      <li class="menu-item menu-item-{{ itemName }}">
+        {{ link_to(path, __('menu.' + itemName)) }}
       </li>
     {% endfor %}
   </ul>

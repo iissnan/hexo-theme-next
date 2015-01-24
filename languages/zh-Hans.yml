@@ -1,0 +1,14 @@
+menu:
+  home: 首页
+  archives: 归档
+  tags: 标签
+
+post:
+  posted: 发表于
+  read_more: 阅读全文 &raquo;
+  untitled: 未命名
+
+
+footer:
+  powered: 驱动软件
+  theme: 主题

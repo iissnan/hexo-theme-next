@@ -1,0 +1,14 @@
+menu:
+  home: Home
+  archives: Archives
+  tags: Tags
+
+post:
+  posted: Posted on
+  read_more: Read more
+  untitled: Untitled
+
+
+footer:
+  powered: Powered By
+  theme: Theme
