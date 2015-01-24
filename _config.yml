@@ -11,6 +11,9 @@ favicon: /favicon.ico
 ## https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
+# Use jQuery-Pjax and NProgress
+pjax: true
+
 # Specify the date when the site was setup
 since: 2013
 

@@ -17,7 +17,7 @@
 - [ ] Redesign pagination for mobile devices.
 - [ ] Support category.
 - [ ] Support gallery posts.
-- [ ] Make PAJAX and NProgress as optional.
+- [x] Make PAJAX and NProgress as optional.
 - [ ] Refactor.
 - [ ] How to use this theme.
 - [ ] Publish as a bower package.
