@@ -14,7 +14,7 @@
 - [x] Using Swig instead of jade.
 - [ ] Using SCSS instead of stylus (?).
 - [x] Rewrite link post related stuffs (Breaking changes).
-- [ ] Redesign pagination for mobile devices.
+- [x] Redesign pagination for mobile devices.
 - [x] Support category.(Won't support).
 - [x] Support gallery posts.
 - [x] Make PAJAX and NProgress as optional. (Removed, conflicts with fancybox)

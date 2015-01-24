@@ -34,3 +34,21 @@
     border-top-color: $colorDeepBlack;
   }
 }
+
+@media (max-width: 767px)
+  .pagination {
+    text-align: left;
+    border-top: none;
+  }
+  .pagination {
+    .prev, .next, .page-number {
+      margin-bottom: 10px;
+      border-top: 0;
+      border-bottom: 1px solid $colorGainsboro;
+
+      &:hover {
+        border-top-color: $colorDeepBlack;
+      }
+    }
+  }
+
