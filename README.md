@@ -12,13 +12,13 @@
 ## TODO
 
 - [x] Using Swig instead of jade.
-- [ ] Using SCSS instead of stylus (?).
+- [x] Using SCSS instead of stylus (depends?).
 - [x] Rewrite link post related stuffs (Breaking changes).
 - [x] Redesign pagination for mobile devices.
 - [x] Support category.(Won't support).
 - [x] Support gallery posts.
 - [x] Make PAJAX and NProgress as optional. (Removed, conflicts with fancybox)
-- [ ] Refactor.
+- [x] Refactor.
 - [ ] How to use this theme.
 - [ ] Publish as a bower package.
 - [ ] Home page.

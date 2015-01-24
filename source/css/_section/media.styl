@@ -1,49 +1,24 @@
 @media (max-width: 767px)
-  body
-    font-size 14px
-  .container
-    .header
-      .header-inner
-        margin 0 auto
-        width auto
-        .one-column &
-          width auto
+  body {
+    font-size: 14px;
+  }
 
-    .main
-      .main-inner
-        margin 20px auto 0
-        width auto
-        .one-column &
-          width auto
-
-        .content
-          width: auto
-          .posts-expand, .posts-collapse
-            margin 0 20px
+  .header-inner,
+  .one-column .header-inner,
+  .main-inner,
+  .one-column .main-inner,
+  .main-inner .content,
+  .footer-inner,
+  .one-column .footer-inner{
+    width: auto;
+  }
 
 
-        .sidebar
-          float right
-          margin-left 20px
-          width auto
+  .main-inner {
+    margin: 20px auto 0;
+  }
 
-    .footer
-      .footer-inner
-        margin 20px auto
-        padding 0 10px
-        width auto
-        .one-column &
-          width auto
 
-  .post-body
-    pre, .highlight
-      margin 0 -20px
-      padding 10px 20px
-      .gutter pre
-        padding-right 10px
-
-  .posts-collapse
-    .post-title, .post-meta
-      display: block
-      width: auto
-      text-align left
+  .footer-inner {
+    padding: 0 10px;
+  }

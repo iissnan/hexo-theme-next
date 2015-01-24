@@ -11,7 +11,7 @@
     {% set post.year = post.date | date('Y') %}
     {% if post.year !== year %}
       {% set year = post.year %}
-      <h2 class="collection-title">{{ post.year }}</h2>
+      <h2 class="collection-title">{{ year }}</h2>
     {% endif %}
     {# endshow #}
 

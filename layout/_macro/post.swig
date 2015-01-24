@@ -48,7 +48,7 @@
         {% if not is_post() and post.excerpt %}
           {{ post.excerpt }}
           <div class="post-more-link center">
-            <a class="btn" href="{{ postLink }}">Read more &raquo;</a>
+            <a class="btn" href="{{ url_for(post.path) }}">Read more &raquo;</a>
           </div>
         {% else %}
           {{ post.content }}
