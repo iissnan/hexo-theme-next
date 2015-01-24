@@ -2,13 +2,20 @@
 
 > NexT是一款高质量简洁的 [Hexo](http://hexo.io)主题，她经过精心雕琢而来。
 
-[![hexo-image]][hexo-url]
-[![bower-image]][bower-url]
-[![jquery-image]][jquery-url]
+
+[在线预览](http://notes.iissnan.com)
 
 
-[预览](http://notes.iissnan.com)
+## 预览
 
+<p style="overflow:hidden">
+  <span style="display: inline-block; width: 50%">
+    <img src="screenshots/desktop.png" style="max-width: 100%" />
+  </span>
+  <span style="display: inline-block; width: 50%">
+      <img src="screenshots/desktop.png" style="max-width: 100%" />
+    </span>
+</p>
 
 
 ## 安装
@@ -27,6 +34,45 @@
 cd theme/next
 git pull
 ```
+
+
+## 特性
+
+1. 英语/简体中文双语支持
+
+    > 默认语言是英文
+    > 编辑站点的`_config.yml`，将`language`字段更改为`zh-Hans`来启用中文
+
+        languages: zh-Hans
+
+2. 多说评论支持
+
+    > 编辑站点的`_config.yml`，添加`duoshuo`字段，设置如下
+
+        duoshuo:
+          enable: true
+          shortname: 多说shortname
+
+3. 标签云页面
+
+    > 添加一个标签云页面，并在菜单中显示标签云链接。
+
+    - 新建一个页面，命名为`tags`。命令如下：
+
+                hexo new page "tags"
+
+    - 编辑刚新建的页面，将页面的类型设置为`tags`，主题将自动为这个页面显示标签云。
+
+                title: All tags
+                date: 2014-12-22 12:39:04
+                type: "tags"
+
+    - 在菜单中添加链接。编辑主题的`_config.yml`，添加`tags`到`menu`中，如下:
+
+                menu:
+                  home: /
+                  archives: /archives
+                  tags: /tags
 
 
 ## 主题配置
@@ -55,6 +101,10 @@ since: 2013
 # 主题版本号
 version: 0.0.5
 ```
+
+[![hexo-image]][hexo-url]
+[![bower-image]][bower-url]
+[![jquery-image]][jquery-url]
 
 [hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
 [hexo-url]: http://hexo.io

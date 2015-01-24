@@ -1,6 +1,7 @@
 menu:
   home: /
   archives: /archives
+  tags: /tags
 
 favicon: /favicon.ico
 

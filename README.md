@@ -2,14 +2,19 @@
 
 > NexT is high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
-[![hexo-image]][hexo-url]
-[![bower-image]][bower-url]
-[![jquery-image]][jquery-url]
 
-[中文文档](README-zh.md)
+[Live Preview](http://notes.iissnan.com)  [中文文档](README-zh.md)
 
-[Live Preview](http://notes.iissnan.com)
+## Screenshots
 
+<p style="overflow:hidden">
+  <span style="display: inline-block; width: 50%">
+    <img src="screenshots/desktop.png" style="max-width: 100%" />
+  </span>
+  <span style="display: inline-block; width: 50%">
+      <img src="screenshots/desktop.png" style="max-width: 100%" />
+    </span>
+</p>
 
 
 ## Installation
@@ -29,6 +34,45 @@
 cd theme/next
 git pull
 ```
+
+## Features
+
+1. English/Simple Chinese language support.
+
+    > Default language is English.
+    > Set `languages` field as following in site `_config.yml` to change to Chinese.
+
+        languages: zh-Hans
+
+2. DuoShuo comment support.
+
+    > Add `duoshuo` field to site `_config.yml`. For instance
+
+        duoshuo:
+          enable: true
+          shortname: duoshuo-shortname
+
+3. Tags page.
+
+    > Add a tags page contains all tags in your site.
+
+    - Create a page named `tags`
+
+                hexo new page "tags"
+
+    - Edit tags page, set page type to `tags`.
+
+                title: All tags
+                date: 2014-12-22 12:39:04
+                type: "tags"
+
+    - Add `tags` to theme `_config.yml`:
+
+                menu:
+                  home: /
+                  archives: /archives
+                  tags: /tags
+
 
 ## Configuration
 
@@ -74,6 +118,10 @@ version: 0.0.5
 - [ ] Publish as a bower package.
 - [ ] Home page.
 
+
+[![hexo-image]][hexo-url]
+[![bower-image]][bower-url]
+[![jquery-image]][jquery-url]
 
 [hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
 [hexo-url]: http://hexo.io
