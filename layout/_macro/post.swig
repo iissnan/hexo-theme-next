@@ -13,21 +13,25 @@
           </span>
       </div>
 
-      <h1 class="post-title">
-        {% if post.link %}
-          <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}">
-            {{ post.link }}
-          </a>
-        {% else %}
-          {% if not is_post() %}
-            <a class="post-title-link" href="{{ url_for(post.path) }}">
-              {{ post.title | default(__('post.untitled'))}}
+      {# Not show title for quote posts that do not have a title #}
+      {% if not (is_home() and post.type === 'quote' and not post.title) %}
+        <h1 class="post-title">
+          {# Link posts #}
+          {% if post.link %}
+            <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}">
+              {{ post.title or post.link }}
             </a>
           {% else %}
-            {{ post.title }}
+            {% if is_post() %}
+              {{ post.title }}
+            {% else %}
+              <a class="post-title-link" href="{{ url_for(post.path) }}">
+                {{ post.title | default(__('post.untitled'))}}
+              </a>
+            {% endif %}
           {% endif %}
-        {% endif %}
-      </h1>
+        </h1>
+      {% endif %}
     </div>
 
     {% if not (is_archive() or is_category() or is_tag()) %}
