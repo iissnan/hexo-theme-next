@@ -101,13 +101,18 @@ since: 2013
 ![Browser support](screenshots/browser-support.png)
 
 
+## 贡献
+
+接受各种形式的贡献，包括不限于提交问题与需求，修复代码。等待您的`PR`。
+
+
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
 [![jquery-image]][jquery-url]
 
 [hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
 [hexo-url]: http://hexo.io
-[bower-image]: http://img.shields.io/badge/Bower-Powered-2BAF2B.svg?style=flat-square
+[bower-image]: http://img.shields.io/badge/Bower-*-2BAF2B.svg?style=flat-square
 [bower-url]: http://bower.io
 [jquery-image]: https://img.shields.io/badge/jquery-1.9-blue.svg?style=flat-square
 [jquery-url]: http://jquery.com/

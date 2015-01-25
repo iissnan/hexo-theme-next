@@ -1,6 +1,6 @@
 # NexT
 
-> NexT is high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
+> NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
 
 [Live Preview](http://notes.iissnan.com)  |  [中文文档](README-zh.md)
@@ -116,6 +116,9 @@ since: 2013
 - [x] Publish as a bower package.
 - [ ] Home page.
 
+## Contributing
+
+Contribution is welcome, feel free to open an issue and fork. Waiting for your pull request.
 
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
@@ -123,7 +126,7 @@ since: 2013
 
 [hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
 [hexo-url]: http://hexo.io
-[bower-image]: http://img.shields.io/badge/Bower-Powered-2BAF2B.svg?style=flat-square
+[bower-image]: http://img.shields.io/badge/Bower-*-2BAF2B.svg?style=flat-square
 [bower-url]: http://bower.io
 [jquery-image]: https://img.shields.io/badge/jquery-1.9-blue.svg?style=flat-square
 [jquery-url]: http://jquery.com/
