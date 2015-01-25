@@ -9,7 +9,8 @@
 
 [Desktop Preview](screenshots/desktop.png) | [Mobile Preview](screenshots/mobile.png)
 
-<img src="screenshots/mobile.png" />
+
+![Mobile Preview](screenshots/mobile.png)
 
 
 ## Installation
@@ -35,9 +36,9 @@ git pull
 1. English/Simple Chinese language support.
 
     > Default language is English.
-    > Set `languages` field as following in site `_config.yml` to change to Chinese.
+    > Set `language` field as following in site `_config.yml` to change to Chinese.
 
-        languages: zh-Hans
+        language: zh-Hans
 
 2. DuoShuo comment support.
 
@@ -53,20 +54,20 @@ git pull
 
     - Create a page named `tags`
 
-                hexo new page "tags"
+        hexo new page "tags"
 
     - Edit tags page, set page type to `tags`.
 
-                title: All tags
-                date: 2014-12-22 12:39:04
-                type: "tags"
+        title: All tags
+        date: 2014-12-22 12:39:04
+        type: "tags"
 
     - Add `tags` to theme `_config.yml`:
 
-                menu:
-                  home: /
-                  archives: /archives
-                  tags: /tags
+        menu:
+          home: /
+          archives: /archives
+          tags: /tags
 
 
 ## Configuration
@@ -94,6 +95,10 @@ fancybox: true
 since: 2013
 
 ```
+
+## Browser support
+
+![Browser support](screenshots/browser-support.png)
 
 
 ## TODO
