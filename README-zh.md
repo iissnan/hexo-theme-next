@@ -39,7 +39,7 @@ git pull
     > 默认语言是英文
     > 编辑站点的`_config.yml`，将`language`字段更改为`zh-Hans`来启用中文
 
-        languages: zh-Hans
+        language: zh-Hans
 
 2. 多说评论支持
 
@@ -55,20 +55,20 @@ git pull
 
     - 新建一个页面，命名为`tags`。命令如下：
 
-        hexo new page "tags"
+            hexo new page "tags"
 
     - 编辑刚新建的页面，将页面的类型设置为`tags`，主题将自动为这个页面显示标签云。
 
-        title: All tags
-        date: 2014-12-22 12:39:04
-        type: "tags"
+            title: All tags
+            date: 2014-12-22 12:39:04
+            type: "tags"
 
     - 在菜单中添加链接。编辑主题的`_config.yml`，添加`tags`到`menu`中，如下:
 
-        menu:
-          home: /
-          archives: /archives
-          tags: /tags
+            menu:
+              home: /
+              archives: /archives
+              tags: /tags
 
 
 

@@ -54,20 +54,20 @@ git pull
 
     - Create a page named `tags`
 
-        hexo new page "tags"
+            hexo new page "tags"
 
     - Edit tags page, set page type to `tags`.
 
-        title: All tags
-        date: 2014-12-22 12:39:04
-        type: "tags"
+            title: All tags
+            date: 2014-12-22 12:39:04
+            type: "tags"
 
     - Add `tags` to theme `_config.yml`:
 
-        menu:
-          home: /
-          archives: /archives
-          tags: /tags
+            menu:
+              home: /
+              archives: /archives
+              tags: /tags
 
 
 ## Configuration
@@ -113,7 +113,7 @@ since: 2013
 - [x] Refactor.
 - [x] i18n.
 - [x] How to use this theme.
-- [ ] Publish as a bower package.
+- [x] Publish as a bower package.
 - [ ] Home page.
 
 

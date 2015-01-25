@@ -1,17 +1,18 @@
 {
-  "name": "Hexo theme - NexT",
-  "version": "0.0.5",
+  "name": "isn-next",
+  "version": "0.1.0",
   "homepage": "https://github.com/iissnan/hexo-theme-next",
   "authors": [
     "iissnan <iissnan@gmail.com>"
   ],
-  "description": "A clean and lightweight theme for Hexo",
+  "description": "High quality and elegant theme for Hexo",
   "repository": "https://github.com/iissnan/hexo-theme-next",
   "keywords": [
     "hexo",
     "notes",
     "theme",
-    "iissnan"
+    "iissnan",
+    "NexT"
   ],
   "license": "MIT",
   "ignore": [
@@ -20,7 +21,8 @@
     "bower_components",
     "source/vendors",
     "test",
-    "tests"
+    "tests",
+    "screenshots"
   ],
   "dependencies": {
     "jquery": "1.*",
