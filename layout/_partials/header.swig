@@ -1,8 +1,25 @@
-<h1 class="brand">
-  <a href="{{ url_for() }}">
-    <span class="logo the-shape"></span>
-    <span class="site-title">{{ config.title }}</span>
-  </a>
+{% set has_feed_class = '' %}
+
+{# Search feed settings from site configuration #}
+{% if config.feed and config.feed.path %}
+    {% set has_feed_class = 'has-feed' %}
+    {% set feed_path = config.feed.path %}
+{% endif %}
+
+{# Search feed settings from site configuration #}
+{% if theme.feed and theme.feed.path  %}
+    {% set has_feed_class = 'has-feed' %}
+    {% set feed_path = theme.feed.path %}
+{% endif %}
+
+<h1 class="site-meta {% if has_feed_class %} {{ has_feed_class }} {% endif %}">
+    <a href="{{ url_for() }}" class="brand">
+        <span class="logo the-shape"></span>
+        <span class="site-title">{{ config.title }}</span>
+    </a>
+    {% if feed_path %}
+        <a class="feed" href="{{ feed_path }}"></a>
+    {% endif %}
 </h1>
 
 {% if theme.menu %}
