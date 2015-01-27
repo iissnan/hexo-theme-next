@@ -33,7 +33,7 @@ git pull
 
 ## Features
 
-1. English/Simple Chinese language support.
+1. English/Simplified Chinese language support.
 
     > Default language is English.
     > Set `language` field as following in site `_config.yml` to change to Chinese.
@@ -110,6 +110,7 @@ since: 2013
 - [x] Support category.(Won't support).
 - [x] Support gallery posts.
 - [x] Make PAJAX and NProgress as optional. (Removed, conflicts with fancybox)
+- [ ] Add a feed link.
 - [x] Refactor.
 - [x] i18n.
 - [x] How to use this theme.
