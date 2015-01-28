@@ -110,7 +110,7 @@ since: 2013
 - [x] Support category.(Won't support).
 - [x] Support gallery posts.
 - [x] Make PAJAX and NProgress as optional. (Removed, conflicts with fancybox)
-- [ ] Add a feed link.
+- [x] Add a feed link.
 - [x] Refactor.
 - [x] i18n.
 - [x] How to use this theme.

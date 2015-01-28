@@ -6,14 +6,8 @@
     {% set feed_path = config.feed.path %}
 {% endif %}
 
-{# Search feed settings from site configuration #}
-{% if theme.feed and theme.feed.path  %}
-    {% set has_feed_class = 'has-feed' %}
-    {% set feed_path = theme.feed.path %}
-{% endif %}
-
 <h1 class="site-meta {% if has_feed_class %} {{ has_feed_class }} {% endif %}">
-    <a href="{{ url_for() }}" class="brand">
+    <a href="{{ config.root }}" class="brand">
         <span class="logo the-shape"></span>
         <span class="site-title">{{ config.title }}</span>
     </a>

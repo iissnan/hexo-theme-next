@@ -8,6 +8,9 @@ post:
   read_more: Read more
   untitled: Untitled
 
+page:
+  totally: Totally
+  tags: tags
 
 footer:
   powered: Powered By
