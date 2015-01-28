@@ -34,42 +34,53 @@ git pull
 
 ## 特性
 
-1. 英语/简体中文双语支持
+### 英语/简体中文双语支持
 
-    > 默认语言是英文
-    > 编辑站点的`_config.yml`，将`language`字段更改为`zh-Hans`来启用中文
+> 默认语言是英文
+> 编辑站点的`_config.yml`，将`language`字段更改为`zh-Hans`来启用中文
 
-        language: zh-Hans
+```
+language: zh-Hans
+```
 
-2. 多说评论支持
+### 多说评论支持
 
-    > 编辑站点的`_config.yml`，添加`duoshuo`字段，设置如下
+> 编辑站点的`_config.yml`，添加`duoshuo`字段，设置如下
 
-        duoshuo:
-          enable: true
-          shortname: 多说shortname
+```
+duoshuo:
+  enable: true
+  shortname: duoshuo-shortname
+```
 
-3. 标签云页面
+### 标签云页面
 
-    > 添加一个标签云页面，并在菜单中显示标签云链接。
+> 添加一个标签云页面，并在菜单中显示标签云链接。
 
-    - 新建一个页面，命名为`tags`。命令如下：
+- 新建一个页面，命名为`tags`。命令如下：
 
-            hexo new page "tags"
+        hexo new page "tags"
 
-    - 编辑刚新建的页面，将页面的类型设置为`tags`，主题将自动为这个页面显示标签云。
+- 编辑刚新建的页面，将页面的类型设置为`tags`，主题将自动为这个页面显示标签云。
 
-            title: All tags
-            date: 2014-12-22 12:39:04
-            type: "tags"
+        title: All tags
+        date: 2014-12-22 12:39:04
+        type: "tags"
 
-    - 在菜单中添加链接。编辑主题的`_config.yml`，添加`tags`到`menu`中，如下:
+- 在菜单中添加链接。编辑主题的`_config.yml`，添加`tags`到`menu`中，如下:
 
-            menu:
-              home: /
-              archives: /archives
-              tags: /tags
+        menu:
+          home: /
+          archives: /archives
+          tags: /tags
 
+
+### Feed链接
+
+> 显示feed链接
+
+此特性依赖于[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) 插件，先在站点的`package.json`中引用，并生成对应的feed。
+依照`hexo-generator-feed`插件的安装说明进行feed生成，当配件配置完毕后，主题将自动显示feed链接。
 
 
 ## 主题配置

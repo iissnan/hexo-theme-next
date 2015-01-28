@@ -12,7 +12,7 @@
         <span class="site-title">{{ config.title }}</span>
     </a>
     {% if feed_path %}
-        <a class="feed" href="{{ feed_path }}"></a>
+        <a class="feed" href="{{ config.root + feed_path }}"></a>
     {% endif %}
 </h1>
 

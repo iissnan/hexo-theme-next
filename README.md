@@ -33,41 +33,53 @@ git pull
 
 ## Features
 
-1. English/Simplified Chinese language support.
+### English/Simplified Chinese language support.
 
-    > Default language is English.
-    > Set `language` field as following in site `_config.yml` to change to Chinese.
+> Default language is English.
+> Set `language` field as following in site `_config.yml` to change to Chinese.
 
-        language: zh-Hans
+```
+language: zh-Hans
+```
 
-2. DuoShuo comment support.
+### DuoShuo comment support.
 
-    > Add `duoshuo` field to site `_config.yml`. For instance
+> Add `duoshuo` field to site `_config.yml`. For instance
 
-        duoshuo:
-          enable: true
-          shortname: duoshuo-shortname
+```
+duoshuo:
+  enable: true
+  shortname: duoshuo-shortname
+```
 
-3. Tags page.
 
-    > Add a tags page contains all tags in your site.
+### Tags page.
 
-    - Create a page named `tags`
+> Add a tags page contains all tags in your site.
 
-            hexo new page "tags"
+- Create a page named `tags`
 
-    - Edit tags page, set page type to `tags`.
+        hexo new page "tags"
 
-            title: All tags
-            date: 2014-12-22 12:39:04
-            type: "tags"
+- Edit tags page, set page type to `tags`.
 
-    - Add `tags` to theme `_config.yml`:
+        title: All tags
+        date: 2014-12-22 12:39:04
+        type: "tags"
 
-            menu:
-              home: /
-              archives: /archives
-              tags: /tags
+- Add `tags` to theme `_config.yml`:
+
+        menu:
+          home: /
+          archives: /archives
+          tags: /tags
+
+### Feed link.
+
+> Show a feed link.
+
+This feature rely on [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin, you should install it first.
+Follow the installation instruction in the plugin's README. After the configuration is done for this plugin, the feed link is ready too.
 
 
 ## Configuration
