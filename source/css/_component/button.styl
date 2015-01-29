@@ -4,11 +4,13 @@
   font-size: 15px;
   color: white;
   background: $paginationLinkHoverBackgroundColor
-  border: 1px solid $colorDeepBlack;
+  border: 2px solid $colorDeepBlack;
   text-decoration: none;
+  transition-property: background-color;
+  the-transition();
 
   &:hover {
-    border: 1px solid $colorLightGray;
+    border-color: $colorDeepBlack;
     color: $colorDeepBlack;
     background: $paginationLinkBackgroundColor;
   }

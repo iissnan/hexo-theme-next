@@ -15,24 +15,27 @@
 .brand {
   position: relative;
   display: inline-block;
-  vertical-align: bottom;
-  padding: 2px 20px;
+  padding: 0 25px;
   color: $brandTextColor;
   background: $brandBackground
   border-bottom: none;
   font-family: $fontLogo;
 
-  the-shape(15px, white, 2px);
+  the-shape(12px, white, 6px);
+
+  .the-shape {
+    margin-right: 5px;
+  }
 }
 
 
 .site-title {
   display: inline-block;
   vertical-align: top;
-  line-height: 35px;
+  line-height: 36px;
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 .menu {
@@ -52,10 +55,12 @@
   a {
     display: block;
     color: $colorDeepBlack;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
     text-transform: capitalize;
-    border-bottom: 1px solid $colorDarkGray;
+    border-bottom: 1px solid white;
+    trasition-property: border-color;
+    the-transition();
 
     &:hover {
       border-bottom-color: $colorDeepBlack;
