@@ -6,7 +6,7 @@
   <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 {% endif %}
 
-<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+<link rel="stylesheet" type="text/css" href="/css/main.css?v={{ theme.version }}"/>
 
 {% if config.description %}
     <meta name="description" content="{{ config.description }}" />
