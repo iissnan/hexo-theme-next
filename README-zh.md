@@ -79,9 +79,14 @@ duoshuo:
 
 > 显示feed链接
 
-此特性依赖于[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) 插件，先在站点的`package.json`中引用，并生成对应的feed。
-依照`hexo-generator-feed`插件的安装说明进行feed生成，当配件配置完毕后，主题将自动显示feed链接。
+打开主题的`_config.yml`中，将 `rss`字段设置为：
 
+1. `rss: false`，这将会禁用Feed链接。
+2. `rss:  `，当值为空的时候，默认会使用站点的Feed链接。在此之前需要使用[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) 插件生成feed。
+
+    依照`hexo-generator-feed`插件的安装说明进行feed生成，当配件配置完毕后，主题将自动显示feed链接。
+
+3. `rss: http://your-feed-url`，指定特定的链接地址，适用于已经烧制过feed的情形。
 
 ## 主题配置
 

@@ -78,9 +78,14 @@ duoshuo:
 
 > Show a feed link.
 
-This feature rely on [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) plugin, you should install it first.
-Follow the installation instruction in the plugin's README. After the configuration is done for this plugin, the feed link is ready too.
+Set `rss` field in theme's `_config.yml`, as the following value:
 
+1. `rss: false` will totally disable feed link.
+2. `rss:  ` use sites' feed link. This is the default option.
+
+    Follow the installation instruction in the plugin's README. After the configuration is done for this plugin, the feed link is ready too.
+
+3. `rss: http://your-feed-url` set specific feed link.
 
 ## Configuration
 

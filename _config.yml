@@ -5,6 +5,10 @@ menu:
 
 favicon: /favicon.ico
 
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site's feed link.
+# Set rss to specific value if you have burned your feed already.
+rss:
 
 # Code Highlight theme
 ## Available value: normal | night | night eighties | night blue | night bright
