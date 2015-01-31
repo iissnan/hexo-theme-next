@@ -41,7 +41,7 @@
       var clock = 0;
       function moveOn() {
         $('.archive-move-on').animate({
-          opacity: clock ? 1 : 0.3
+          opacity: clock ? 1 : 0.1
         }, 1000);
         clock = !clock;
         setTimeout(moveOn, 1000);
