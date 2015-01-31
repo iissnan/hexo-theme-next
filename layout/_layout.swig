@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <div class="container one-column">
+  <div class="container one-column {% block page_class %}{% endblock %}">
 
     <div id="header" class="header">
       <div class="header-inner">
@@ -46,5 +46,6 @@
   </div>
 
   {% include '_partials/scripts.swig' %}
+  {% block script_extra %}{% endblock %}
 </body>
 </html>

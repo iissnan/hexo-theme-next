@@ -1,6 +1,6 @@
-{% macro post(post) %}
+{% macro post(post, post_extra_class) %}
 
-  <div class="post post-type-{{ post.type | default('normal') }}">
+  <div class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}">
     <div class="post-header">
 
       <div class="post-meta">

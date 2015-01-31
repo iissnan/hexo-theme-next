@@ -1,0 +1,126 @@
+.page-archive {
+
+  .posts-collapse {
+    position: relative;
+    text-align: center;
+
+    .archive-move-on {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      margin-left: -6px;
+      width: 12px;
+      height: 12px;
+      opacity: 0.5;
+      background: $colorLightBlack;
+    }
+
+    .post {
+      margin: 30px 0;
+    }
+
+    &::before, &::after {
+      content: " ";
+      position: absolute;
+    }
+
+    &::after {
+      top: 0;
+      left: 50%;
+      margin-left: -2px;
+      width: 4px;
+      height: 100%;
+      background: $colorWhiteSmoke;
+      z-index: -1;
+    }
+
+    .collection-title {
+      padding: 5px 30px;
+      background: white;
+      border: 2px solid $colorDeepBlack;
+      color: $colorDeepBlack;
+      font-size: 20px;
+    }
+
+    .post-header {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+    }
+
+    .post-meta {
+      position: absolute;
+      font-size: 12px;
+      top: 3px;
+    }
+
+    .post-title {
+      font-size: 16px;
+      font-weight: normal;
+      font-family: $fontFamilyPost;
+      line-height: inherit;
+
+      &::after {
+        margin-left: 3px;
+        opacity: 0.6;
+      }
+    }
+
+    .post-align-left {
+      text-align: left;
+    }
+
+    .post-align-right {
+      text-align: right;
+    }
+
+    .post-align-left .post-header {
+      text-align: right;
+
+      &::before {
+        content: " ";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        right: -3px;
+        top: 9px;
+        background: $colorGray;
+      }
+    }
+
+    .post-align-left .post-meta {
+      right: 8px;
+    }
+    .post-align-left .post-title {
+      margin-right: 60px;
+      text-align: right;
+    }
+
+    .post-align-right .post-header {
+      text-align: left;
+
+      &::before {
+        content: " ";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: -3px;
+        top: 9px;
+        background: $colorLighterGray;
+      }
+    }
+    .post-align-right .post-meta {
+      left: 10px;
+    }
+    .post-align-right .post-title {
+      margin-left: 50px;
+      text-align: left;
+    }
+
+    .post-header:hover::before {
+      background: $colorDeepBlack;
+    }
+  }
+}
+
+
