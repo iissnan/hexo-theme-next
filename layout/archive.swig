@@ -6,8 +6,6 @@
 {% block page_class %} page-archive {% endblock %}
 
 {% block content %}
-  {# clock #}
-  {% set clock = 0 %}
 
   <span class="archive-move-on"></span>
 
@@ -19,19 +17,14 @@
 
     {% if post.year !== year %}
       {% set year = post.year %}
-      <h2 class="collection-title">{{ year }}</h2>
+      <div class="archive-year">
+        <h2 class="collection-title">{{ year }}</h2>
+      </div>
     {% endif %}
     {# endshow #}
 
-    {% if clock % 2 === 0 %}
-      {% set post_extra_class = "post-align-left" %}
-    {% else %}
-      {% set post_extra_class = "post-align-right" %}
-    {% endif %}
+    {{ render.post(post) }}
 
-    {{ render.post(post, post_extra_class) }}
-
-    {% set clock = clock + 1 %}
   {% endfor %}
 {% endblock %}
 
