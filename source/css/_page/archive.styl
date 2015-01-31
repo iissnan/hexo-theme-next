@@ -1,6 +1,13 @@
 .page-archive {
 
   $left = 55px;
+  $left-mobile = 30px;
+
+  .archive-page-counter {
+    position: relative;
+    top: -20px;
+    left: 50px;
+  }
 
   .posts-collapse {
     position: relative;
@@ -13,6 +20,10 @@
       height: 100%;
       background: $colorWhiteSmoke;
       z-index: -1;
+
+      +mobile() {
+        left: $left-mobile;
+      }
     }
 
     .archive-move-on {
@@ -24,10 +35,18 @@
       height: 12px;
       opacity: 0.5;
       background: $colorLightBlack;
+
+      +mobile() {
+        left: $left-mobile;
+      }
     }
 
     .post {
       margin: 30px 0 30px $left;
+
+      +mobile() {
+        margin-left: $left-mobile;
+      }
     }
 
     &::before, &::after {
@@ -39,6 +58,10 @@
       position: relative;
       text-align: center;
       margin-left: $left;
+
+      +mobile() {
+        margin-left: $left-mobile;
+      }
 
       &::before {
         content: " ";
@@ -66,7 +89,8 @@
     }
 
     .collection-title {
-      margin-left: -34px;
+      margin: 30px 0;
+      margin-left: -54px;
       padding: 5px 30px;
       background: white;
       border: 2px solid $colorDimGray;

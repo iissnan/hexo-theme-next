@@ -8,6 +8,10 @@
 {% block content %}
 
   <span class="archive-move-on"></span>
+  <span class="archive-page-counter">
+    Great! {{ site.posts.length }} posts in total. <br />
+    Keep on posting.
+  </span>
 
   {% for post in page.posts %}
 
