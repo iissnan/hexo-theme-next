@@ -1,0 +1,148 @@
+.page-archive {
+
+  $left = 55px;
+  $left-mobile = 30px;
+
+  .archive-page-counter {
+    position: relative;
+    top: -20px;
+    left: 50px;
+  }
+
+  .posts-collapse {
+    position: relative;
+
+    &::after {
+      top: 0;
+      left: $left;
+      margin-left: -2px;
+      width: 4px;
+      height: 100%;
+      background: $colorWhiteSmoke;
+      z-index: -1;
+
+      +mobile() {
+        left: $left-mobile;
+      }
+    }
+
+    .archive-move-on {
+      position: absolute;
+      top: -12px;
+      left: $left;
+      margin-left: -6px;
+      width: 12px;
+      height: 12px;
+      opacity: 0.5;
+      background: $colorLightBlack;
+
+      +mobile() {
+        left: $left-mobile;
+      }
+    }
+
+    .post {
+      margin: 30px 0 30px $left;
+
+      +mobile() {
+        margin-left: $left-mobile;
+      }
+    }
+
+    &::before, &::after {
+      content: " ";
+      position: absolute;
+    }
+
+    .archive-year {
+      position: relative;
+      text-align: center;
+      margin-left: $left;
+
+      +mobile() {
+        margin-left: $left-mobile;
+      }
+
+      &::before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-left: -4px;
+        margin-top: -4px;
+        width: 8px;
+        height: 8px;
+        background: $colorGray;
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+        margin-top: -1px;
+        width: 50%;
+        height: 2px;
+        background: $colorWhiteSmoke;
+      }
+    }
+
+    .collection-title {
+      margin: 30px 0;
+      margin-left: -54px;
+      padding: 5px 30px;
+      background: white;
+      border: 2px solid $colorDimGray;
+      color: $colorDimGray;
+      font-size: 20px;
+    }
+
+    .post-header {
+      position: relative;
+      border-bottom: 1px dashed $colorLightGray;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        top: 13px;
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        background: $colorGray;
+      }
+    }
+
+    .post-header:hover {
+
+      border-bottom-color: $colorDimGray;
+
+      &::before {
+        background: $colorDeepBlack;
+      }
+    }
+
+    .post-meta {
+      position: absolute;
+      font-size: 12px;
+      left: 20px;
+      top: 5px;
+    }
+
+    .post-title {
+      margin-left: 60px;
+      font-size: 16px;
+      font-weight: normal;
+      font-family: $fontFamilyPost;
+      line-height: inherit;
+
+      &::after {
+        margin-left: 3px;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+

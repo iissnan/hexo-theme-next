@@ -1,6 +1,6 @@
-{% macro post(post) %}
+{% macro post(post, post_extra_class) %}
 
-  <div class="post post-type-{{ post.type | default('normal') }}">
+  <div class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}">
     <div class="post-header">
 
       <div class="post-meta">
@@ -34,7 +34,7 @@
       {% endif %}
     </div>
 
-    {% if not (is_archive() or is_category() or is_tag()) %}
+    {% if is_home() or is_post() %}
       <div class="post-body">
 
         {# Gallery support #}

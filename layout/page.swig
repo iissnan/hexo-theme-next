@@ -10,7 +10,7 @@
   {% if page.type === "tags" %}
     <div class="tag-cloud">
       <div class="tag-cloud-title">
-        Totally {{ site.tags.length }} tags
+        <div class="collection-title">Totally {{ site.tags.length }} tags</div>
       </div>
       <div class="tag-cloud-tags">
         {{ tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) }}
