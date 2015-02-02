@@ -1,50 +1,51 @@
 # NexT
 
-> NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
+> NexT是一款高质量简洁的 [Hexo](http://hexo.io)主题，她经过精心雕琢而来。
 
 
-[Live Preview](http://notes.iissnan.com)  |  [中文文档](README-zh.md)
+[在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)
 
-## Screenshots
 
-[Desktop Preview](screenshots/desktop.png) | [Mobile Preview](screenshots/mobile.png)
+## 预览
+
+[桌面设备预览](screenshots/desktop.png)
 
 
 ![Mobile Preview](screenshots/mobile.png)
 
 
-## Installation
+## 安装
 
-1. Get it from GitHub
+1. 从`Github`下载
 
         $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
-2. Add it to `_config.yml`
+2. 将`_config.yml`中的`theme`字段设置为`next`
 
         theme: next
 
-
-## Update
+## 更新
 
 ```
 cd theme/next
 git pull
 ```
 
-## Features
 
-### English/Simplified Chinese language support.
+## 特性
 
-> Default language is English.
-> Set `language` field as following in site `_config.yml` to change to Chinese.
+### 英语/简体中文双语支持
+
+> 默认语言是英文
+> 编辑站点的`_config.yml`，将`language`字段更改为`zh-Hans`来启用中文
 
 ```
 language: zh-Hans
 ```
 
-### DuoShuo comment support.
+### 多说评论支持
 
-> Add `duoshuo` field to site `_config.yml`. For instance
+> 编辑站点的`_config.yml`，添加`duoshuo`字段，设置如下
 
 ```
 duoshuo:
@@ -52,48 +53,57 @@ duoshuo:
   shortname: duoshuo-shortname
 ```
 
+### 标签云页面
 
-### Tags page.
+> 添加一个标签云页面，并在菜单中显示标签云链接。
 
-> Add a tags page contains all tags in your site.
-
-- Create a page named `tags`
+- 新建一个页面，命名为`tags`。命令如下：
 
         hexo new page "tags"
 
-- Edit tags page, set page type to `tags`.
+- 编辑刚新建的页面，将页面的类型设置为`tags`，主题将自动为这个页面显示标签云。
 
         title: All tags
         date: 2014-12-22 12:39:04
         type: "tags"
 
-- Add `tags` to theme `_config.yml`:
+- 在菜单中添加链接。编辑主题的`_config.yml`，添加`tags`到`menu`中，如下:
 
         menu:
           home: /
           archives: /archives
           tags: /tags
 
-### Feed link.
 
-> Show a feed link.
+### Feed链接
 
-Set `rss` field in theme's `_config.yml`, as the following value:
+> 显示feed链接
 
-1. `rss: false` will totally disable feed link.
-2. `rss:  ` use sites' feed link. This is the default option.
+打开主题的`_config.yml`中，将 `rss`字段设置为：
 
-    Follow the installation instruction in the plugin's README. After the configuration is done for this plugin, the feed link is ready too.
+1. `rss: false`，这将会禁用Feed链接。
+2. `rss:  `，当值为空的时候，默认会使用站点的Feed链接。在此之前需要使用[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) 插件生成feed。
 
-3. `rss: http://your-feed-url` set specific feed link.
+    依照`hexo-generator-feed`插件的安装说明进行feed生成，当配件配置完毕后，主题将自动显示feed链接。
 
-## Configuration
+3. `rss: http://your-feed-url`，指定特定的链接地址，适用于已经烧制过feed的情形。
 
-NexT comes with few configurations.
+### 内置5款代码高亮主题
+
+NexT 使用 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 作为代码高亮，共有5款主题供你选择。
+默认使用的是白色的`normal`，以下是`normal` 与 `night` 的预览：
+
+![Tomorrow Normal Preview](screenshots/tomorrow-normal.png)
+![Tomorrow Night Preview](screenshots/tomorrow-night.png)
+
+请打开[Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme)查看更多主题。
+
+## 主题配置
+
+NexT 拥有少许的配置
 
 ```
-
-# Menu configuration.
+# 菜单配置
 menu:
   home: /
   archives: /archives
@@ -101,21 +111,25 @@ menu:
 # Favicon
 favicon: /favicon.ico
 
-# Code highlight theme
+# 代码高亮主题
 # available: normal | night | night eighties | night blue | night bright
 highlight_theme: normal
 
-# Fancybox for image gallery
+# Fancybox - 用于显示照片组
 fancybox: true
 
-# Specify the date when the site was setup
+# 指定站点建立时间
 since: 2013
-
 ```
 
-## Browser support
+## 浏览器支持
 
 ![Browser support](screenshots/browser-support.png)
+
+
+## 贡献
+
+接受各种形式的贡献，包括不限于提交问题与需求，修复代码。等待您的`PR`。
 
 
 ## TODO
@@ -134,9 +148,6 @@ since: 2013
 - [x] Publish as a bower package.
 - [ ] Home page.
 
-## Contributing
-
-Contribution is welcome, feel free to open an issue and fork. Waiting for your pull request.
 
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
