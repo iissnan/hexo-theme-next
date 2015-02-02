@@ -1,13 +1,15 @@
-<script type="text/javascript" src="/vendors/jquery/dist/jquery.min.js"></script>
+{% if theme.jquery || theme.fancybox %}
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js"></script>
+{% endif %}
 
 {% if theme.fancybox %}
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.pack.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $(".fancybox").fancybox();
     });
   </script>
-{% endif  %}
+{% endif %}
 
 {% if theme.duoshuo and theme.duoshuo.enable and theme.duoshuo.shortname %}
   <script type="text/javascript">
