@@ -3,21 +3,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 {% if theme.fancybox %}
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+  <link rel="stylesheet" type="text/css" href="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 {% endif %}
 
-<link rel="stylesheet" type="text/css" href="/css/main.css?v={{ theme.version }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}"/>
 
 {% if config.description %}
     <meta name="description" content="{{ config.description }}" />
 {% endif %}
 
 {% if theme.rss %}
-    <link rel="alternate" href="{{ theme.rss }}"
+    <link rel="alternate" href="{{ url_for(theme.rss) }}"
           title="{{ config.title }}" type="application/atom+xml" />
 {% endif %}
 
 {% if theme.favicon %}
-    <link rel="icon" type="image/x-icon" href="{{ theme.favicon }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}" />
 {% endif %}
 

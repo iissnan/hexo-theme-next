@@ -5,6 +5,10 @@ menu:
 
 favicon: /favicon.ico
 
+# Static files
+vendors: /vendors
+css: /css
+
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
@@ -15,8 +19,10 @@ rss:
 ## https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
+# jQuery
+jquery: false
 # Fancybox
-fancybox: true
+fancybox: false
 
 # Specify the date when the site was setup
 since: 2015
