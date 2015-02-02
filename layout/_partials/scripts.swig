@@ -1,6 +1,4 @@
-{% if theme.jquery || theme.fancybox %}
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js"></script>
-{% endif %}
+<script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js"></script>
 
 {% if theme.fancybox %}
   <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.pack.js"></script>

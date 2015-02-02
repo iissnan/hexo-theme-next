@@ -3,11 +3,8 @@ menu:
   archives: /archives
   tags: /tags
 
+# Place your favicon.ico to /source directory.
 favicon: /favicon.ico
-
-# Static files
-vendors: /vendors
-css: /css
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -19,12 +16,19 @@ rss:
 ## https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
-# jQuery
-jquery: false
-# Fancybox
-fancybox: false
-
 # Specify the date when the site was setup
 since: 2015
 
+
+## DO NOT EDIT THE FOLLOWING SETTINGS
+## UNLESS YOU KNOW WHAT YOU ARE DOING
+
+# Fancybox
+fancybox: true
+
+# Static files
+vendors: /vendors
+css: /css
+
+# Theme version
 version: 0.1.3
