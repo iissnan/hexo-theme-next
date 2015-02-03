@@ -75,7 +75,7 @@ duoshuo:
           tags: /tags
 
 
-### Feed链接
+### RSS链接
 
 > 显示feed链接
 
@@ -87,6 +87,27 @@ duoshuo:
     依照`hexo-generator-feed`插件的安装说明进行feed生成，当配件配置完毕后，主题将自动显示feed链接。
 
 3. `rss: http://your-feed-url`，指定特定的链接地址，适用于已经烧制过feed的情形。
+
+
+### About页面与菜单链接
+
+> 新建 关于 页面
+
+新建一个`about`页面：
+
+```
+hexo new page "about"
+```
+
+菜单显示`About`链接，在主题设置中将`menu`中`about`前面的注释去掉即可。
+
+```
+menu:
+  home: /
+  archives: /archives
+  tags: /tags
+  about: /about
+```
 
 ### 内置5款代码高亮主题
 
@@ -107,6 +128,8 @@ NexT 拥有少许的配置
 menu:
   home: /
   archives: /archives
+  tags: /tags
+  #about: /about
 
 # Favicon
 favicon: /favicon.ico

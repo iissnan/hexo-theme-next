@@ -23,7 +23,7 @@
     {% endfor %}
     {% if feed_uri %}
       <li class="menu-item menu-item-feed">
-        <a href="{{ feed_uri }}">Feed</a>
+        <a href="{{ feed_uri }}">RSS</a>
       </li>
     {% endif %}
   </ul>
