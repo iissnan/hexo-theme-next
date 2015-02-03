@@ -12,12 +12,18 @@ favicon: /favicon.ico
 rss:
 
 # Code Highlight theme
-## Available value: normal | night | night eighties | night blue | night bright
-## https://github.com/chriskempson/tomorrow-theme
+# Available value: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
 # Specify the date when the site was setup
 since: 2015
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | public
+creative_commons: 
+
 
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
@@ -29,6 +35,7 @@ fancybox: true
 # Static files
 vendors: /vendors
 css: /css
+images: /images
 
 # Theme version
 version: 0.1.3
