@@ -7,6 +7,7 @@
 
 <body>
   <div class="container one-column {% block page_class %}{% endblock %}">
+    <div class="headband"></div>
 
     <div id="header" class="header">
       <div class="header-inner">
@@ -26,13 +27,13 @@
 
           <div id="posts" class="{{ postsClass }}">
             {% block content %}{% endblock %}
-
-            {% if not is_post() and (page.prev || page.next) %}
-              <div class="pagination">
-                {{ paginator({prev_text: '&laquo;', next_text: '&raquo;'}) }}
-              </div>
-            {% endif %}
           </div>
+
+          {% if not is_post() and (page.prev || page.next) %}
+            <div class="pagination">
+              {{ paginator({prev_text: '&laquo;', next_text: '&raquo;'}) }}
+            </div>
+          {% endif %}
         </div>
       </div>
     </div>
