@@ -12,6 +12,12 @@ favicon: /favicon.ico
 # Set rss to specific value if you have burned your feed already.
 rss:
 
+# Icon fonts
+# Place your font into next/source/fonts, specify directory-name and font-name here
+icon_fonts:
+  path: next-default
+  name: icomoon
+
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme

@@ -18,11 +18,13 @@
     {% for name, path in theme.menu %}
       {% set itemName = name.toLowerCase() %}
       <li class="menu-item menu-item-{{ itemName }}">
+        <i class="menu-item-icon icon-{{ itemName }}"></i>
         {{ link_to(path, __('menu.' + itemName)) }}
       </li>
     {% endfor %}
     {% if feed_uri %}
       <li class="menu-item menu-item-feed">
+        <i class="menu-item-icon icon-feed"></i>
         <a href="{{ feed_uri }}">RSS</a>
       </li>
     {% endif %}
