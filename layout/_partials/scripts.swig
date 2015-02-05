@@ -9,7 +9,7 @@
   </script>
 {% endif %}
 
-{% if theme.duoshuo and theme.duoshuo.enable and theme.duoshuo.shortname %}
+{% if theme.duoshuo and theme.duoshuo.shortname %}
   <script type="text/javascript">
     var duoshuoQuery = {short_name:"{{config.duoshuo.shortname}}"};
     (function() {
