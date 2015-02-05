@@ -34,6 +34,21 @@ git pull
 
 ## 特性
 
+### 自定义LOGO以及主题图标
+
+NexT使用[IcoMoon](http://icomoon.io)的服务为主题提供四套内建的图标。
+
+借助于这个特性，你可以定制自己的`LOGO`以及主题的图标。自定义图标需要手工处理：
+
+1. 在IcoMoon挑选图标，并生成对应的字体文件。假设你的字体文件命名为{foo}。需要注意的是，字体的文件名`icomoon`不要更改。
+2. 将你的字体文件放置于`source/fonts/icon-foo`。
+3. 在`source/css/_fonts/`目录下新建一个`styl`文件，名字为`icon-foo.styl`。并将IcoMoon提供的样式文件迁移到这个`styl`文件中。请参看内置的文件。
+4. 在主题中将`icon_font`设置为`foo`，即：
+
+        icon_font: foo
+
+完成。
+
 ### 英语/简体中文双语支持
 
 > 默认语言是英文
