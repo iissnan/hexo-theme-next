@@ -10,7 +10,7 @@
   {% if page.type === "tags" %}
     <div class="tag-cloud">
       <div class="tag-cloud-title">
-          {{ site.tags.length }} tags in total.
+          {{ _p('counter.tag_cloud', site.tags.length) }}
       </div>
       <div class="tag-cloud-tags">
         {{ tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) }}

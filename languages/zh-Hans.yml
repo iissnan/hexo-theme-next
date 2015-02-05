@@ -14,5 +14,27 @@ page:
   tags: 标签
 
 footer:
-  powered: 驱动软件
+  powered: "由 %s 强力驱动"
   theme: 主题
+
+
+counter:
+  tag_cloud:
+    zero: 暂无标签。
+    one: 目前共计 1 个标签。
+    other: "目前共计 %d 个标签。"
+
+  archive_posts:
+    zero: 暂无日志。
+    one: 目前共计 1 个日志。
+    other: "目前共计 %d 个日志。"
+
+cheers:
+  um: 嗯..
+  ok: OK
+  nice: 好
+  good: 很好
+  great: 非常好
+  excellent: 太棒了
+
+keep_on: 继续努力。

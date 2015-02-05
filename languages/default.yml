@@ -14,5 +14,27 @@ page:
   tags: tags
 
 footer:
-  powered: Powered By
+  powered: "Powered by %s"
   theme: Theme
+
+counter:
+  tag_cloud:
+    zero: No tags.
+    one: 1 tag in total.
+    other: "%d tags in total."
+
+  archive_posts:
+    zero: No posts.
+    one: 1 post.
+    other: "%d posts in total."
+
+cheers:
+  um: Um..
+  ok: OK
+  nice: Nice
+  good: Good
+  great: Great
+  excellent: Excellent
+
+keep_on: Keep on posting.
+
