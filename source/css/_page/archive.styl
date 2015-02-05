@@ -1,7 +1,7 @@
 .page-archive {
 
   $left = 55px;
-  $left-mobile = 30px;
+  $left-mobile = 5px;
 
   .archive-page-counter {
     position: relative;
@@ -9,7 +9,8 @@
     left: 70px;
 
     +mobile() {
-      left: 50px;
+      top: 5px;
+      left: $left-mobile + 10px;
     }
   }
 

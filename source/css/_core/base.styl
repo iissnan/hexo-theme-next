@@ -23,6 +23,12 @@ for headline in (1..6)
     font-size: $fontSizeHeadlineBase - $fontSizeHeadlineStep * headline;
   }
 
+  +mobile() {
+    h{headline} {
+      font-size: $fontSizeHeadlineBase - $fontSizeHeadlineStep * headline - 4px;
+    }
+  }
+
 p {
   margin: 20px 0;
 }
