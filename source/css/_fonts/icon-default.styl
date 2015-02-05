@@ -1,28 +1,12 @@
-$iconFontPrefix = '../fonts/' + hexo-config('icon_fonts.path') + '/' + hexo-config('icon_fonts.name');
+// FONT-SIZE FOR default ICON SET.
+// Duplicate class name to improve priority.
 
-@font-face {
-  font-family: 'icomoon';
-  src:url($iconFontPrefix + '.eot?-9394c0');
-  src:url($iconFontPrefix + '.eot?#iefix-9394c0') format('embedded-opentype'),
-  url($iconFontPrefix + '.woff?-9394c0') format('woff'),
-  url($iconFontPrefix + '.ttf?-9394c0') format('truetype'),
-  url($iconFontPrefix + '.svg?-9394c0#' + hexo-config('icon_fonts.name')) format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
-[class^="icon-"], [class*=" icon-"] {
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+// REQUIRED ICONS
+
+.icon-logo:before {
+  content: "\e61c";
 }
 
 .icon-home:before {
@@ -42,15 +26,24 @@ $iconFontPrefix = '../fonts/' + hexo-config('icon_fonts.path') + '/' + hexo-conf
 }
 
 .icon-feed:before {
-  content: "\ea96";
+  content: "\e62b";
+  //content: "\e604";
 }
+
+.icon-external-link:before {
+  content: "\e607";
+}
+
+.icon-heart:before {
+  content: "\e601";
+}
+
+
+// OPTIONAL ICONS
+
 
 .icon-account-circle:before {
   content: "\e600";
-}
-
-.icon-favorite:before {
-  content: "\e601";
 }
 
 .icon-favorite-outline:before {
@@ -69,10 +62,6 @@ $iconFontPrefix = '../fonts/' + hexo-config('icon_fonts.path') + '/' + hexo-conf
   content: "\e606";
 }
 
-.icon-open-in-new:before {
-  content: "\e607";
-}
-
 .icon-room:before {
   content: "\e608";
 }
@@ -84,8 +73,6 @@ $iconFontPrefix = '../fonts/' + hexo-config('icon_fonts.path') + '/' + hexo-conf
 .icon-search:before {
   content: "\e60a";
 }
-
-
 
 .icon-location-on:before {
   content: "\e60c";
@@ -103,13 +90,9 @@ $iconFontPrefix = '../fonts/' + hexo-config('icon_fonts.path') + '/' + hexo-conf
   content: "\e60f";
 }
 
-
-
 .icon-format-quote:before {
   content: "\e611";
 }
-
-
 
 .icon-keyboard-arrow-down:before {
   content: "\e613";

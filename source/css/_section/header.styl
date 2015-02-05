@@ -24,14 +24,14 @@
   background: $brandBackground
   border-bottom: none;
   font-family: $fontLogo;
-
-  the-shape(12px, white, 6px);
-
-  .the-shape {
-    margin-right: 5px;
-  }
 }
 
+.logo {
+  display: inline-block;
+  margin-right: 5px;
+  line-height: 36px;
+  vertical-align: top;
+}
 
 .site-title {
   display: inline-block;
@@ -58,12 +58,11 @@
 
   a {
     display: block;
-    padding-bottom: 2px;
     color: $colorDeepBlack;
     font-size: 13px;
     text-decoration: none;
     text-transform: capitalize;
-    line-height: 1;
+    line-height: 1.5;
     border-bottom: 1px solid white;
     transition-property: border-color;
     the-transition();
@@ -72,14 +71,4 @@
       border-bottom-color: $colorDeepBlack;
     }
   }
-}
-
-.menu-item-icon {
-  font-size: 24px;
-  line-height: 24px;
-  color: black;
-}
-
-.icon-feed {
-  font-size: 20px;
 }
