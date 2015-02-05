@@ -4,7 +4,9 @@
 {% block title %} Tag: {{ page.tag }} | {{ config.title }} {% endblock %}
 
 {% block content %}
-  <h2 class="collection-title">{{ page.tag }}</h2>
+  <div class="collection-title">
+    <h2 >{{ page.tag }}</h2>
+  </div>
 
   {% for post in page.posts %}
     {{ render.post(post) }}

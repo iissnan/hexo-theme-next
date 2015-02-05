@@ -52,90 +52,9 @@
       }
     }
 
-    .post {
-      margin: 30px 0 30px $left;
-
-      +mobile() {
-        margin-left: $left-mobile;
-      }
-    }
-
     &::before, &::after {
       content: " ";
       position: absolute;
-    }
-
-    .archive-year {
-      position: relative;
-      margin: 60px 0 60px $left;
-
-      +mobile() {
-        margin-left: $left-mobile;
-      }
-
-      h2 {
-        margin-left: 20px;
-      }
-
-      &::before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        margin-left: -4px;
-        margin-top: -4px;
-        width: 8px;
-        height: 8px;
-        background: $colorGray;
-        circle();
-      }
-    }
-
-    .post-header {
-      position: relative;
-      border-bottom: 1px dashed $colorLightGray;
-
-      &::before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        top: 12px;
-        width: 6px;
-        height: 6px;
-        margin-left: -4px;
-        background: $colorGray;
-        circle();
-        border: 1px solid white;
-      }
-    }
-
-    .post-header:hover {
-
-      border-bottom-color: $colorDimGray;
-
-      &::before {
-        background: $colorDeepBlack;
-      }
-    }
-
-    .post-meta {
-      position: absolute;
-      font-size: 12px;
-      left: 20px;
-      top: 5px;
-    }
-
-    .post-title {
-      margin-left: 60px;
-      font-size: 16px;
-      font-weight: normal;
-      font-family: $fontFamilyPost;
-      line-height: inherit;
-
-      &::after {
-        margin-left: 3px;
-        opacity: 0.6;
-      }
     }
   }
 }

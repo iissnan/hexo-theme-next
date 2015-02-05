@@ -30,7 +30,7 @@
 
     {% if post.year !== year %}
       {% set year = post.year %}
-      <div class="archive-year">
+      <div class="collection-title">
         <h2 id="archive-year-{{ year }}">{{ year }}</h2>
       </div>
     {% endif %}
