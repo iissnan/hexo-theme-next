@@ -153,10 +153,22 @@
   }
   img {
     box-sizing: border-box;
-    margin auto
-    border 1px solid $colorLightGray
+    margin: auto;
+    padding: 3px;
+    border: 1px solid $colorLighterGray;
   }
 
+  .full-image {
+    max-width: none;
+    width: 126%;
+    height: auto;
+    margin: 0 -13%;
+
+    +mobile() {
+      max-width: 100%;
+      margin: auto;
+    }
+  }
 
   .pullquote {
     width 45%
