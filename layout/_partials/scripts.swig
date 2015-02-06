@@ -1,4 +1,4 @@
-<script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v=0.2.1"></script>
 
 {% if theme.fancybox %}
   <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.pack.js"></script>

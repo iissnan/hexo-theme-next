@@ -43,6 +43,7 @@ NexT使用[IcoMoon](http://icomoon.io)的服务为主题提供四套内建的图
 
 1. 在[IcoMoon](http://icomoon.io)挑选图标，并生成对应的字体文件。假设你的字体文件命名为`foo`。需要注意的是，生成字体的文件名`icomoon`不要更改。
 2. 在`source/fonts/`目录下新建一个目录，名称以`icon-`开头加上`foo`，即`source/fonts/icon-foo`。
+3. 在`source/css/_fonts/`目录下新建一个`styl`文件，名字为`icon-foo.styl`。将IcoMoon提供的样式文件迁移到这个`styl`文件中。请参看内置的文件。
 
     |class               | usage                |
     |:-------------------|:---------------------|
@@ -55,8 +56,6 @@ NexT使用[IcoMoon](http://icomoon.io)的服务为主题提供四套内建的图
     |icon-heart          | 指定菜单中底部心的图标      |
     |icon-external-link  | 指定菜单中外链的链接图标  |
 
-
-3. 在`source/css/_fonts/`目录下新建一个`styl`文件，名字为`icon-foo.styl`。将IcoMoon提供的样式文件迁移到这个`styl`文件中。请参看内置的文件。
 4. 在主题中将`icon_font`设置为`foo`，即：
 
         icon_font: foo
@@ -186,6 +185,12 @@ since: 2013
 接受各种形式的贡献，包括不限于提交问题与需求，修复代码。等待您的`PR`。
 
 
+## 开发
+
+> NexT is built for easily use with elegant appearance.
+
+First things first, always keep things simple.
+
 ## TODO
 
 - [x] Using Swig instead of jade.
@@ -201,8 +206,10 @@ since: 2013
 - [x] How to use this theme.
 - [x] Publish as a bower package.
 - [ ] Home page.
+- [ ] HTML5 Please
 - [ ] Add [typicons.font](https://github.com/stephenhutchings/typicons.font).
 - [ ] Disuqus support.
+- [ ] TIT - Theme in theme.
 
 
 [![hexo-image]][hexo-url]

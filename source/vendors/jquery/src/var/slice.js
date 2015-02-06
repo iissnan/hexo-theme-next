@@ -1,5 +1,5 @@
 define([
-	"./deletedIds"
-], function( deletedIds ) {
-	return deletedIds.slice;
+	"./arr"
+], function( arr ) {
+	return arr.slice;
 });
