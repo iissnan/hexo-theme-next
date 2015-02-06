@@ -16,8 +16,9 @@
 
 ## 安装
 
-1. 从`Github`下载
+1. 从`GitHub`下载
 
+        $ cd your-hexo-site
         $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
 2. 将`_config.yml`中的`theme`字段设置为`next`
@@ -40,9 +41,22 @@ NexT使用[IcoMoon](http://icomoon.io)的服务为主题提供四套内建的图
 
 借助于这个特性，你可以定制自己的`LOGO`以及主题的图标。自定义图标需要手工处理：
 
-1. 在IcoMoon挑选图标，并生成对应的字体文件。假设你的字体文件命名为{foo}。需要注意的是，字体的文件名`icomoon`不要更改。
-2. 将你的字体文件放置于`source/fonts/icon-foo`。
-3. 在`source/css/_fonts/`目录下新建一个`styl`文件，名字为`icon-foo.styl`。并将IcoMoon提供的样式文件迁移到这个`styl`文件中。请参看内置的文件。
+1. 在[IcoMoon](http://icomoon.io)挑选图标，并生成对应的字体文件。假设你的字体文件命名为`foo`。需要注意的是，生成字体的文件名`icomoon`不要更改。
+2. 在`source/fonts/`目录下新建一个目录，名称以`icon-`开头加上`foo`，即`source/fonts/icon-foo`。
+
+    |class               | usage                |
+    |:-------------------|:---------------------|
+    |icon-logo           | 指定Logo图标          |
+    |icon-home           | 指定菜单中Home链接图标  |
+    |icon-archives       | 指定菜单中Archives链接图标    |
+    |icon-tags           | 指定菜单中Tags链接图标    |
+    |icon-feed           | 指定菜单中RSS链接图标   |
+    |icon-about          | 指定菜单中About链接图标    |
+    |icon-heart          | 指定菜单中底部心的图标      |
+    |icon-external-link  | 指定菜单中外链的链接图标  |
+
+
+3. 在`source/css/_fonts/`目录下新建一个`styl`文件，名字为`icon-foo.styl`。将IcoMoon提供的样式文件迁移到这个`styl`文件中。请参看内置的文件。
 4. 在主题中将`icon_font`设置为`foo`，即：
 
         icon_font: foo
@@ -64,7 +78,6 @@ language: zh-Hans
 
 ```
 duoshuo:
-  enable: true
   shortname: duoshuo-shortname
 ```
 
@@ -106,7 +119,7 @@ duoshuo:
 
 ### About页面与菜单链接
 
-> 新建 关于 页面
+> 新建 About 页面
 
 新建一个`about`页面：
 
@@ -136,7 +149,7 @@ NexT 使用 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 作
 
 ## 主题配置
 
-NexT 拥有少许的配置
+> NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。
 
 ```
 # 菜单配置
@@ -147,16 +160,19 @@ menu:
   #about: /about
 
 # Favicon
+# 从`Next 0.2`开始，favicon将不再放置于主题之内。请将你的favicon放置在`hexo-site/source/`目录下。
 favicon: /favicon.ico
 
 # 代码高亮主题
 # available: normal | night | night eighties | night blue | night bright
 highlight_theme: normal
 
-# Fancybox - 用于显示照片组
+# Fancybox
+# 用于显示照片组
 fancybox: true
 
 # 指定站点建立时间
+# 这个时间将在站点的底部显示，例如 `© 2013 - 2015`
 since: 2013
 ```
 
@@ -185,6 +201,8 @@ since: 2013
 - [x] How to use this theme.
 - [x] Publish as a bower package.
 - [ ] Home page.
+- [ ] Add [typicons.font](https://github.com/stephenhutchings/typicons.font).
+- [ ] Disuqus support.
 
 
 [![hexo-image]][hexo-url]
