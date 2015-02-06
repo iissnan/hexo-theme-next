@@ -16,11 +16,11 @@
   {{ __('footer.theme') }} - <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT</a>
 </div>
 
-{% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'public': 1} %}
+{% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
 {% if theme.creative_commons in cc %}
   <div class="cc-license">
     <a href="http://creativecommons.org/licenses/{{ theme.creative_commons }}/4.0" class="cc-opacity" target="_blank">
-      <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.png" alt="Creative Commons" />
+      <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
     </a>
   </div>
 {% endif %}
