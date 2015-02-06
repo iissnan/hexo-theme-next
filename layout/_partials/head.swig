@@ -18,6 +18,6 @@
 {% endif %}
 
 {% if theme.favicon %}
-    <link rel="icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}" />
+    <link rel="shorticon icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
 
