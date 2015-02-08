@@ -1,4 +1,4 @@
-{% if theme.rss == '' and config.feed and config.feed.path %}
+{% if theme.rss === '' and config.feed and config.feed.path %}
     {% set theme.rss = config.root + config.feed.path %}
 {% endif %}
 
