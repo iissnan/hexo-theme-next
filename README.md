@@ -162,6 +162,20 @@ menu:
 # 从`Next 0.2`开始，favicon将不再放置于主题之内。请将你的favicon放置在`hexo-site/source/`目录下。
 favicon: /favicon.ico
 
+# 设置为`false`不显示`rss`链接
+# 留空，并且通过`hexo-site-feed`插件配置使用默认的feed
+# 设置成特定的`url`，适用于通过第三方服务定制feed的情况。
+rss: false
+
+
+# 图标字体
+# NexT内建四种图标: default | linecons | fifty-shades | feather
+icon_font: default
+#icon_font: fifty-shades
+#icon_font: feather
+#icon_font: linecons
+
+
 # 代码高亮主题
 # available: normal | night | night eighties | night blue | night bright
 highlight_theme: normal
@@ -169,6 +183,11 @@ highlight_theme: normal
 # Fancybox
 # 用于显示照片组
 fancybox: true
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# 可用: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+creative_commons:
 
 # 指定站点建立时间
 # 这个时间将在站点的底部显示，例如 `© 2013 - 2015`
