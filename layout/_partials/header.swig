@@ -1,11 +1,3 @@
-{% if theme.rss !== false %}
-  {% if theme.rss %}
-    {% set feed_uri = theme.rss %}
-  {% elif config.feed and config.feed.path %}
-    {% set feed_uri = config.root + config.feed.path %}
-  {% endif %}
-{% endif %}
-
 <h1 class="site-meta">
     <a href="{{ config.root }}" class="brand">
         <span class="logo">
@@ -26,9 +18,9 @@
         </a>
       </li>
     {% endfor %}
-    {% if feed_uri %}
+    {% if theme.rss %}
       <li class="menu-item menu-item-feed">
-        <a href="{{ url_for(feed_uri) }}">
+        <a href="{{ url_for(theme.rss) }}">
           <i class="menu-item-icon icon-feed"></i> <br />
           RSS
         </a>
