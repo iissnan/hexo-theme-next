@@ -229,6 +229,9 @@ First things first, always keep things simple.
 - [ ] Add [typicons.font](https://github.com/stephenhutchings/typicons.font).
 - [ ] Disuqus support.
 - [ ] TIT - Theme in theme.
+- [ ] Motion design.
+- [ ] Expandable information area.
+- [ ] New Gallery design.
 
 
 [![hexo-image]][hexo-url]
