@@ -71,13 +71,24 @@ NexT使用[IcoMoon](http://icomoon.io)的服务为主题提供四套内建的图
 language: zh-Hans
 ```
 
-### 多说评论支持
+### 多说/DISQUS评论系统支持
 
-> 编辑站点的`_config.yml`，添加`duoshuo`字段，设置如下
+> 添加多说或者Disqus第三方评论系统。当同时设置了多说和Disqus时，优先选择多说。
+
+使用多说
+
+编辑**站点**的`_config.yml`，添加`duoshuo_shortname`字段，设置如下
 
 ```
-duoshuo:
-  shortname: duoshuo-shortname
+duoshuo_shortname: your-duoshuo-shortname
+```
+
+使用[Disqus](https://disqus.com)
+
+编辑**站点**的`_config.yml`，添加`duoshuo_shortname`字段，设置如下
+
+```
+disqus_shortname: your-disqus-shortname
 ```
 
 ### 标签云页面
@@ -239,7 +250,7 @@ First things first, always keep things simple.
 - [ ] Home page.
 - [ ] HTML5 Please
 - [ ] Add [typicons.font](https://github.com/stephenhutchings/typicons.font).
-- [ ] Disuqus support.
+- [x] Disuqus support.
 - [ ] TIT - Theme in theme.
 - [ ] Motion design.
 - [ ] Expandable information area.

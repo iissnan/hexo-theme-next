@@ -43,12 +43,15 @@
         {% include '_partials/footer.swig' %}
       </div>
     </div>
-
   </div>
 
-  {% include '_partials/scripts.swig' %}
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v=0.2.1"></script>
+  {% include '_partials/fancy-box.swig' %}
+
   {% block script_extra %}{% endblock %}
 
-  {% include '_partials/google-analytics.swig' %}
+  {% include '_partials/comments/duoshuo.swig' %}
+  {% include '_partials/comments/disqus.swig' %}
+  {% include '_partials/analytics/google-analytics.swig' %}
 </body>
 </html>

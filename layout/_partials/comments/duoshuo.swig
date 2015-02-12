@@ -1,15 +1,4 @@
-<script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v=0.2.1"></script>
-
-{% if theme.fancybox %}
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".fancybox").fancybox();
-    });
-  </script>
-{% endif %}
-
-{% if theme.duoshuo and theme.duoshuo.shortname %}
+{% if config.duoshuo and config.duoshuo.shortname %}
   <script type="text/javascript">
     var duoshuoQuery = {short_name:"{{config.duoshuo.shortname}}"};
     (function() {

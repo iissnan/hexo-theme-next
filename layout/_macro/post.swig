@@ -32,13 +32,22 @@
               {{ post.date | date('m-d') }}
             {% endif %}
           </span>
-        {% if config.duoshuo and config.duoshuo.shortname and post.comments %}
-          <span class="post-comments-count">
+        {% if post.comments %}
+          {% if (config.duoshuo and config.duoshuo.shortname) or config.duoshuo_shortname %}
+            <span class="post-comments-count">
             &nbsp; | &nbsp;
             <a href="{{ config.root + post.path }}#comments" >
               <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}"></span>
             </a>
           </span>
+          {% elseif config.disqus_shortname %}
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="{{ config.root + post.path }}#comments" >
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}"></span>
+            </a>
+          </span>
+          {% endif %}
         {% endif %}
       </div>
     </div>
