@@ -1,7 +1,7 @@
 {% extends '_layout.swig' %}
 {% import '_macro/post.swig' as render %}
 
-{% block title %} Archive | {{ config.title }} {% endblock %}
+{% block title %} {{ __('title.archive') }} // {{ config.title }} {% endblock %}
 
 {% block page_class %} page-archive {% endblock %}
 

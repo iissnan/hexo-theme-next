@@ -1,7 +1,7 @@
 {% extends '_layout.swig' %}
 {% import '_macro/post.swig' as render %}
 
-{% block title %} Tag: {{ page.tag }} | {{ config.title }} {% endblock %}
+{% block title %} {{ __('title.tag') }}: {{ page.tag }} // {{ config.title }} {% endblock %}
 
 {% block content %}
   <div class="collection-title">
