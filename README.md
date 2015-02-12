@@ -197,6 +197,9 @@ google_site_verification:
 # Google分析ID
 google_analytics:
 
+# 百度分析ID
+baidu_analytics:
+
 
 # 指定站点建立时间
 # 这个时间将在站点的底部显示，例如 `© 2013 - 2015`
@@ -242,6 +245,7 @@ First things first, always keep things simple.
 - [ ] Expandable information area.
 - [ ] New Gallery design.
 - [x] Add Google site verification meta.
+- [x] Add Google/Baidu analytics.
 
 
 [![hexo-image]][hexo-url]
