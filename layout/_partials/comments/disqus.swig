@@ -1,4 +1,4 @@
-{% if not (config.duoshuo and config.duoshuo.shortname) %}
+{% if not (config.duoshuo and config.duoshuo.shortname) and not config.duoshuo_shortname %}
 
   {% if config.disqus_shortname and (is_home() or is_post()) %}
 
