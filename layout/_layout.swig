@@ -48,5 +48,7 @@
 
   {% include '_partials/scripts.swig' %}
   {% block script_extra %}{% endblock %}
+
+  {% include '_partials/google-analytics.swig' %}
 </body>
 </html>
