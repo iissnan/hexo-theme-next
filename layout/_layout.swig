@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh">
+<html>
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
