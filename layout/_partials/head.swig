@@ -6,6 +6,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+{% if theme.google_site_verification %}
+  <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
+{% endif %}
+
 {% if theme.fancybox %}
   <link rel="stylesheet" type="text/css" href="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 {% endif %}

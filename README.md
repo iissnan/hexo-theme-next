@@ -189,6 +189,10 @@ fancybox: true
 # 可用: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 creative_commons:
 
+# Google Webmaster tools verification setting
+# 设置Google站点管理工具的验证字符串，用于提交sitemap
+google_site_verification:
+
 # 指定站点建立时间
 # 这个时间将在站点的底部显示，例如 `© 2013 - 2015`
 since: 2013
@@ -232,6 +236,7 @@ First things first, always keep things simple.
 - [ ] Motion design.
 - [ ] Expandable information area.
 - [ ] New Gallery design.
+- [x] Add Google site verification meta.
 
 
 [![hexo-image]][hexo-url]
