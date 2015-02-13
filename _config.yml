@@ -25,27 +25,9 @@ icon_font: default
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
-# Specify the date when the site was setup
-since: 2015
-
-# Creative Commons 4.0 International License.
-# http://creativecommons.org/
-# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-creative_commons:
 
 
-# Google Webmaster tools verification setting
-# See: https://www.google.com/webmasters/
-google_site_verification:
 
-
-# Google Analytics
-# Google分析ID
-google_analytics:
-
-
-# 百度分析ID
-baidu_analytics:
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING

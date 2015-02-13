@@ -1,6 +1,6 @@
-{% if not (config.duoshuo and config.duoshuo.shortname) and not config.duoshuo_shortname %}
+{% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname %}
 
-  {% if config.disqus_shortname and (is_home() or is_post()) %}
+  {% if theme.disqus_shortname and (is_home() or is_post()) %}
 
     {% if page.comments %}
       {% set disqus_script = 'embed.js' %}
@@ -9,7 +9,7 @@
     {% endif %}
 
     <script type="text/javascript">
-      var disqus_shortname = '{{config.disqus_shortname}}';
+      var disqus_shortname = '{{theme.disqus_shortname}}';
       var disqus_identifier = '{{ page.path }}';
       var disqus_url = '{{ page.permalink }}';
 
