@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v=0.2.1"></script>
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v={{ theme.version }}"></script>
   {% include '_partials/fancy-box.swig' %}
 
   {% block script_extra %}{% endblock %}

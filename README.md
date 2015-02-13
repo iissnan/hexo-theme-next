@@ -35,6 +35,19 @@ git pull
 
 ## 特性
 
+特性概览：
+
+- [支持自定义LOGO以及主题图标](#自定义LOGO以及主题图标)
+- [支持英语/简体中文双语](#英语/简体中文双语支持)
+- [支持多说/DISQUS评论系统](#多说/DISQUS评论系统支持)
+- [支持标签云页面](#标签云页面)
+- [支持RSS链接](#RSS链接)
+- [支持about页面](#about页面)
+- [支持5款代码高亮主题](#支持5款代码高亮主题)
+- [支持[Google](www.google.com/analytics)/[百度统计](http://tongji.baidu.com/)](#支持Google统计/百度统计)
+- [支持Google Webmaster tools](#支持Google Webmaster tools)
+- [支持Creative Commons](#Creative Commons)
+
 ### 自定义LOGO以及主题图标
 
 NexT使用[IcoMoon](http://icomoon.io)的服务为主题提供四套内建的图标。
@@ -127,9 +140,9 @@ disqus_shortname: your-disqus-shortname
 3. `rss: http://your-feed-url`，指定特定的链接地址，适用于已经烧制过feed的情形。
 
 
-### About页面与菜单链接
+### about页面
 
-> 新建 About 页面
+> 新建 about 页面
 
 新建一个`about`页面：
 
@@ -137,7 +150,7 @@ disqus_shortname: your-disqus-shortname
 hexo new page "about"
 ```
 
-菜单显示`About`链接，在主题设置中将`menu`中`about`前面的注释去掉即可。
+菜单显示`About`链接，在主题的`_configy.yml`设置中将`menu`中`about`前面的注释去掉即可。
 
 ```
 menu:
@@ -147,7 +160,7 @@ menu:
   about: /about
 ```
 
-### 内置5款代码高亮主题
+### 支持5款代码高亮主题
 
 NexT 使用 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 作为代码高亮，共有5款主题供你选择。
 默认使用的是白色的`normal`，以下是`normal` 与 `night` 的预览：
@@ -155,7 +168,52 @@ NexT 使用 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 作
 ![Tomorrow Normal Preview](screenshots/tomorrow-normal.png)
 ![Tomorrow Night Preview](screenshots/tomorrow-night.png)
 
-请打开[Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme)查看更多主题。
+请访问[Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme)查看更多主题。
+
+
+### 支持Google统计/百度统计
+
+> 添加Google或者百度的统计ID即可开启网站统计
+
+编辑**站点**的`_config.yml`，新增字段`google_analytics`或者`baidu_analytics`（取决于使用的统计系统）
+
+```
+google_analytics: your-analytics-id
+
+baidu_analytics: your-analytics-id
+
+```
+
+### 支持Google Webmaster tools
+
+> 设置[Google站点管理工具](https://www.google.com/webmasters/tools/)的验证字符串，用于提交sitemap
+
+编辑**站点**的`_config.yml`，新增字段`google_site_verification`
+
+```
+google_site_verification: your-verification-meta
+```
+
+### 支持Creative Commons
+
+> 设置站点的[Creative commons协议](http://creativecommons.org/)
+
+编辑**站点**的`_config.yml`，新增字段`creative_commons`。
+可选的值有： `by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero`
+
+```
+creative_commons: by-nc-sa
+```
+
+### 支持指定站点建立时间
+
+> 这个时间将在站点的底部显示，例如 `© 2013 - 2015`
+
+编辑**站点**的`_config.yml`，新增字段`since`。
+
+```
+since: 2013
+```
 
 ## 主题配置
 
@@ -170,7 +228,8 @@ menu:
   #about: /about
 
 # Favicon
-# 从`Next 0.2`开始，favicon将不再放置于主题之内。请将你的favicon放置在`hexo-site/source/`目录下。
+# 从`Next 0.2`起，favicon将不再放置于主题之内。
+# 请将你的favicon放置在`hexo-site/source/`目录下。
 favicon: /favicon.ico
 
 # 设置为`false`不显示`rss`链接
@@ -190,31 +249,6 @@ icon_font: default
 # 代码高亮主题
 # available: normal | night | night eighties | night blue | night bright
 highlight_theme: normal
-
-# Fancybox
-# 用于显示照片组
-fancybox: true
-
-# Creative Commons 4.0 International License.
-# http://creativecommons.org/
-# 可用: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-creative_commons:
-
-# Google Webmaster tools verification
-# 设置Google站点管理工具的验证字符串，用于提交sitemap
-google_site_verification:
-
-# Google Analytics
-# Google分析ID
-google_analytics:
-
-# 百度分析ID
-baidu_analytics:
-
-
-# 指定站点建立时间
-# 这个时间将在站点的底部显示，例如 `© 2013 - 2015`
-since: 2013
 ```
 
 ## 浏览器支持
