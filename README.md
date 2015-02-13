@@ -37,16 +37,17 @@ git pull
 
 特性概览：
 
-- [支持自定义LOGO以及主题图标](#自定义LOGO以及主题图标)
-- [支持英语/简体中文双语](#英语/简体中文双语支持)
-- [支持多说/DISQUS评论系统](#多说/DISQUS评论系统支持)
-- [支持标签云页面](#标签云页面)
-- [支持RSS链接](#RSS链接)
-- [支持about页面](#about页面)
-- [支持5款代码高亮主题](#支持5款代码高亮主题)
-- [支持[Google](www.google.com/analytics)/[百度统计](http://tongji.baidu.com/)](#支持Google统计/百度统计)
-- [支持Google Webmaster tools](#支持Google Webmaster tools)
-- [支持Creative Commons](#Creative Commons)
+- 支持自定义LOGO以及主题图标
+- 支持英语/简体中文双语
+- 支持多说/DISQUS评论系统
+- 支持标签云页面
+- 支持RSS链接
+- 支持about页面
+- 支持5款代码高亮主题
+- 支持[Google](www.google.com/analytics)/[百度统计](http://tongji.baidu.com/)
+- 支持Google Webmaster tools
+- 支持Creative Commons
+- 支持指定站点建立时间
 
 ### 自定义LOGO以及主题图标
 
