@@ -28,6 +28,9 @@
     line-height: 0;
     z-index: 3;
   }
+
+
+
   .sidebar-toggle-line {
     position: relative;
     display: inline-block;
@@ -158,4 +161,36 @@
   .one-column & {
     width $desktopContentWidth
   }
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  opacity: 0.5;
+  bottom: 0;
+  right: 20px;
+  width: 15px;
+  padding: 5px;
+  background: $colorDeepBlack;
+  color: white;
+  font-size: 13px;
+
+  +desktop() {
+    display: block;
+  }
+
+  &:before {
+    display: block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-width: 0 7px 8px 7px;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+  }
+}
+
+.has-motion .back-to-top {
+  bottom: -15px;
+  opacity: 0;
 }

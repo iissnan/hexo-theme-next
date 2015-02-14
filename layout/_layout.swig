@@ -94,6 +94,8 @@
         {% include '_partials/footer.swig' %}
       </div>
     </div>
+
+    <div class="back-to-top"></div>
   </div>
 
   <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v={{ theme.version }}"></script>
@@ -136,18 +138,21 @@
     var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
 
     sidebatToggleMotion();
-
     postsListMotion();
+    backToTopMotion();
 
     function sidebarContentMotion () {
       $('.sidebar .motion-element').velocity('transition.slideDownIn', {stagger: 100, drag: true});
     }
 
 
-    $('.sidebar-toggle').on('click', function () {
-      isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
-      isSidebarVisible = !isSidebarVisible;
-    });
+    function backToTopMotion () {
+      var b2top = $('.back-to-top');
+      b2top.velocity({bottom: 0, opacity: 0.5});
+      b2top.on('click', function () {
+        body.velocity('scroll');
+      });
+    }
 
     function sidebarShowMotion () {
       var sidebarDisplayDuration = 300;
@@ -163,7 +168,7 @@
     }
 
     function sidebarHideMotion () {
-      isDesktop() && body.velocity('reverse');
+      isDesktop() && body.velocity({paddingRight: 0});
       sidebar.velocity('reverse');
 
       sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
@@ -176,17 +181,20 @@
     }
 
     function sidebatToggleMotion () {
+      sidebarToggle.on('click', function () {
+        isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
+        isSidebarVisible = !isSidebarVisible;
+      });
       sidebarToggle.hover(function () {
         if (isSidebarVisible) {return}
-        sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusArrow);
-        sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusArrow);
-        sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusArrow);
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
       }, function () {
         if (isSidebarVisible) {return}
-        sidebarToggle.velocity('reverse');
-        sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
-        sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
-        sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
+        sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
+        sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
+        sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
       });
     }
 
