@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="{% if theme.motion %}has-motion{% endif %}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
@@ -46,9 +46,27 @@
   </div>
 
   <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v={{ theme.version }}"></script>
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/velocity/velocity.ui.min.js"></script>
   {% include '_partials/fancy-box.swig' %}
 
+  {% if is_home() %}
+  <script type="text/javascript">
+    $.Velocity.RunSequence([
+      { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
+      { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
+      { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200, sequenceQueue: false } }
+    ]);
+    $('.menu-item').velocity('transition.slideDownIn', {display: null});
+  </script>
+  {% endif %}
+
+  <script type="text/javascript">
+    $('.post').velocity('transition.slideDownIn', {stagger: 300, drag: true});
+  </script>
+
   {% block script_extra %}{% endblock %}
+
 
   {% include '_partials/comments/duoshuo.swig' %}
   {% include '_partials/comments/disqus.swig' %}

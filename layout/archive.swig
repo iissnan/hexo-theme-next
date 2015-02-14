@@ -31,7 +31,7 @@
     {% if post.year !== year %}
       {% set year = post.year %}
       <div class="collection-title">
-        <h2 id="archive-year-{{ year }}">{{ year }}</h2>
+        <h2 class="archive-year motion-element" id="archive-year-{{ year }}">{{ year }}</h2>
       </div>
     {% endif %}
     {# endshow #}
@@ -43,16 +43,6 @@
 
 {% block script_extra %}
   <script type="text/javascript">
-    $(document).ready(function () {
-      var clock = 0;
-      function moveOn() {
-        $('.archive-move-on').animate({
-          opacity: clock ? 1 : 0.1
-        }, 1000);
-        clock = !clock;
-        setTimeout(moveOn, 1000);
-      }
-      moveOn();
-    });
+    $('.archive-year').velocity('transition.slideLeftIn');
   </script>
 {% endblock %}
