@@ -18,10 +18,36 @@
     width: $desktopContentWidth;
   }
 
+  .sidebar-toggle {
+    position: fixed;
+    right: 10px;
+    top: 15px;
+    width: 20px;
+    padding: 5px;
+    background: $colorDeepBlack;
+    line-height: 0;
+  }
+  .sidebar-toggle-line {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    height: 2px;
+    width: 100%;
+    background: white;
+    margin-top: 3px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
   .sidebar {
-    float: right;
-    margin-left: 20px;
+    display: none;
     width: $desktopSidebarWidth;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }
 

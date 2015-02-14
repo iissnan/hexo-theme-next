@@ -18,7 +18,6 @@
     <div id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content">
-
           {% if is_home() or is_post() %}
             {% set postsClass = "posts-expand" %}
           {% else %}
@@ -35,6 +34,15 @@
             </div>
           {% endif %}
         </div>
+
+        <div class="sidebar-toggle">
+          <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+          <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+          <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+        </div>
+
+        <div id="sidebar" class="sidebar"></div>
+
       </div>
     </div>
 
@@ -62,7 +70,33 @@
   {% endif %}
 
   <script type="text/javascript">
+    sidebatToggleAnimation();
+
     $('.post').velocity('transition.slideDownIn', {stagger: 300, drag: true});
+
+
+    function sidebatToggleAnimation () {
+      var arrowAnimationProperties = {width: '50%'};
+      var topArrowAnimationProperties = $.extend({rotateZ: '-35deg', top: '2px'}, arrowAnimationProperties);
+      var bottomArrowAnimationProperties = $.extend({rotateZ: '35deg', top: '-2px'}, arrowAnimationProperties);
+
+      var sidebarToggle = $('.sidebar-toggle');
+      var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
+      var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
+      var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
+
+      sidebarToggle.hover(function () {
+        sidebarToggle.velocity({right: '+=10px'});
+        sidebarToggleLine1st.velocity(topArrowAnimationProperties);
+        sidebarToggleLine2nd.velocity({width: '90%'});
+        sidebarToggleLine3rd.velocity(bottomArrowAnimationProperties);
+      }, function () {
+        sidebarToggle.velocity('reverse');
+        sidebarToggleLine1st.velocity('reverse');
+        sidebarToggleLine2nd.velocity('reverse');
+        sidebarToggleLine3rd.velocity('reverse');
+      });
+    }
   </script>
 
   {% block script_extra %}{% endblock %}
