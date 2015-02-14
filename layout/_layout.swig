@@ -45,12 +45,12 @@
 
         <div id="sidebar" class="sidebar">
           <div class="sidebar-inner">
-            <div class="site-author">
+            <div class="site-author motion-element">
               <img class="site-author-image" src="{{ theme.avatar || '/images/default_avatar.jpg' }}" alt="{{ theme.author }}" />
               <p class="site-author-name">{{ theme.author }}</p>
             </div>
-            <p class="site-description">{{ theme.description }}</p>
-            <div class="site-state">
+            <p class="site-description motion-element">{{ theme.description }}</p>
+            <div class="site-state motion-element">
               <div class="site-state-item site-state-posts">
                 <span class="site-state-item-count">{{ site.posts.length }}</span>
                 <span class="site-state-item-name">{{ __('state.posts') }}</span>
@@ -66,7 +66,7 @@
             </div>
 
             {% if theme.rss %}
-            <div class="feed-link">
+            <div class="feed-link motion-element">
               <a href="{{ url_for(theme.rss) }}">
                 <i class="menu-item-icon icon-feed"></i>
                 RSS
@@ -74,7 +74,7 @@
             </div>
             {% endif %}
 
-            <div class="social-info">
+            <div class="social-info motion-element">
               {% if theme.social %}
                 {% for name, link in theme.social %}
                   <span class="soclial-item">
@@ -136,7 +136,13 @@
     var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
 
     sidebatToggleMotion();
+
     postsListMotion();
+
+    function sidebarContentMotion () {
+      $('.sidebar .motion-element').velocity('transition.slideDownIn', {stagger: 100, drag: true});
+    }
+
 
     $('.sidebar-toggle').on('click', function () {
       isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
@@ -153,6 +159,7 @@
 
       sidebar.velocity({width: sidebarWidth}, sidebarDisplayDuration);
       isDesktop() && body.velocity({paddingRight: sidebarWidth}, sidebarDisplayDuration);
+      sidebarContentMotion();
     }
 
     function sidebarHideMotion () {
