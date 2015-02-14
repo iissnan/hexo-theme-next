@@ -56,3 +56,7 @@ desktop() {
 circle() {
   border-radius: 50%;
 }
+
+random-color($min, $max) {
+  return floor(math(0, 'random') * ($max - $min + 1) + $min);
+}

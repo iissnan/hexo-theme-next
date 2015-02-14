@@ -34,6 +34,11 @@ counter:
     one: 目前共计 1 个日志。
     other: "目前共计 %d 个日志。"
 
+state:
+  posts: 日志
+  pages: 页面
+  tags: 标签
+
 cheers:
   um: 嗯..
   ok: OK

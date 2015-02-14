@@ -33,6 +33,11 @@ counter:
     one: 1 post.
     other: "%d posts in total."
 
+state:
+  posts: posts
+  pages: pages
+  tags: tags
+
 cheers:
   um: Um..
   ok: OK
@@ -42,4 +47,3 @@ cheers:
   excellent: Excellent
 
 keep_on: Keep on posting.
-

@@ -18,13 +18,5 @@
         </a>
       </li>
     {% endfor %}
-    {% if theme.rss %}
-      <li class="menu-item menu-item-feed">
-        <a href="{{ url_for(theme.rss) }}">
-          <i class="menu-item-icon icon-feed"></i> <br />
-          RSS
-        </a>
-      </li>
-    {% endif %}
   </ul>
 {% endif %}
