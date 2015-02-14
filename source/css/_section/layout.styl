@@ -20,12 +20,13 @@
 
   .sidebar-toggle {
     position: fixed;
-    right: 10px;
+    right: 15px;
     top: 15px;
-    width: 20px;
+    width: 15px;
     padding: 5px;
     background: $colorDeepBlack;
     line-height: 0;
+    z-index: 3;
   }
   .sidebar-toggle-line {
     position: relative;
@@ -42,12 +43,13 @@
   }
 
   .sidebar {
-    display: none;
-    width: $desktopSidebarWidth;
+    width: 0;
     position: fixed;
     right: 0;
     top: 0;
     bottom: 0;
+    box-shadow: inset 0 2px 6px black;
+    background: $colorDeepBlack;
   }
 }
 
