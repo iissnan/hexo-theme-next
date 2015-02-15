@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="theme-next">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
