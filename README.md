@@ -8,8 +8,19 @@
 
 ## 预览
 
-[桌面设备预览](screenshots/desktop.png)
+* 大屏幕显示效果
 
+![Desktop Preview](screenshots/desktop-preview.png)
+
+* 侧边栏
+
+![Desktop Sidebar Preview](screenshots/desktop-sidebar-preview.png)
+
+* 侧边栏（文章页面）
+
+![Desktop Sidebar Preview](screenshots/desktop-sidebar-toc.png)
+
+* 小屏幕
 
 ![Mobile Preview](screenshots/mobile.png)
 
