@@ -12,8 +12,12 @@
 
     {% if is_post() %}
       <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-overview" data-target="site-overview">Overview</li>
-        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc">Table Of Contents</li>
+        <li class="sidebar-nav-overview" data-target="site-overview">
+          {{ __('sidebar.overview') }}
+        </li>
+        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc">
+          {{ __('sidebar.toc') }}
+        </li>
       </ul>
     {% endif %}
 

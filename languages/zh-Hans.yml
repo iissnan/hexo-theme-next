@@ -9,6 +9,11 @@ menu:
   tags: 标签
   about: 关于
 
+
+sidebar:
+  overview: 站点概览
+  toc: 文章目录
+
 post:
   posted: 发表于
   read_more: 继续阅读

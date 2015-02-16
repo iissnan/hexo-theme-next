@@ -9,6 +9,10 @@ menu:
   tags: Tags
   about: About
 
+sidebar:
+  overview: Overview
+  toc: Table Of Contents
+
 post:
   posted: Posted on
   read_more: Read more
