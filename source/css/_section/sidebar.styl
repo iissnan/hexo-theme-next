@@ -1,12 +1,14 @@
 .sidebar-toggle {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: 50px;
+  bottom: 50px;
   width: 15px;
+  height: 15px;
   padding: 5px;
   background: $colorDeepBlack;
   line-height: 0;
   z-index: 3;
+  cursor: pointer;
 }
 
 
@@ -129,6 +131,10 @@
   color: $colorLightBlack;
   border-bottom-color: $colorLightBlack;
   font-size: 13px;
+
+  &:hover {
+    color: $colorDarkGray;
+  }
 
   &:before {
     display: inline-block;

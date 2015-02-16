@@ -102,7 +102,6 @@
 
     function backToTopMotion () {
       var b2top = $('.back-to-top');
-      b2top.velocity({bottom: 0, opacity: 0.5});
       b2top.on('click', function () {
         body.velocity('scroll');
       });

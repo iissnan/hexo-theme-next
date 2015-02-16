@@ -1,0 +1,32 @@
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 50px;
+  width: 15px;
+  height: 13px;
+  padding: 5px;
+  background: $colorDeepBlack;
+  color: white;
+  cursor: pointer;
+
+  +desktop() {
+    display: block;
+  }
+
+  &:before {
+    display: block;
+    content: " ";
+    margin-top: 2px;
+    width: 0;
+    height: 0;
+    border-width: 0 7px 8px 7px;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+  }
+}
+
+.has-motion .back-to-top {
+  bottom: -15px;
+  opacity: 0;
+}
