@@ -142,7 +142,10 @@
     backToTopMotion();
 
     function sidebarContentMotion () {
-      $('.sidebar .motion-element').velocity('transition.slideDownIn', {stagger: 100, drag: true});
+      $('.sidebar .motion-element').velocity(
+        'transition.slideRightIn',
+        {stagger: 100, drag: true}
+      );
     }
 
 
