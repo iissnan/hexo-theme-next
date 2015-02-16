@@ -42,7 +42,9 @@
 {% endblock %}
 
 {% block script_extra %}
-  <script type="text/javascript">
-    $('.archive-year').velocity('transition.slideLeftIn');
-  </script>
+  {% if theme.use_motion %}
+    <script type="text/javascript">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  {% endif %}
 {% endblock %}

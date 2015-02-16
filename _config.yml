@@ -26,11 +26,13 @@ icon_font: default
 highlight_theme: normal
 
 
-motion: true
 
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING
+
+# Use velocity to animate everything.
+use_motion: true
 
 # Fancybox
 fancybox: true

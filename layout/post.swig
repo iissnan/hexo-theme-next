@@ -25,43 +25,44 @@
 
 
 {% block script_extra %}
-  <script type="text/javascript">
-    (function () {
-      var html = $('html');
+  {% if theme.use_motion %}
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var html = $('html');
 
-      $('.sidebar-nav li').on('click', function () {
-        var item = $(this);
-        var activeTabClassName = 'sidebar-nav-active';
-        var activePanelClassName = 'sidebar-panel-active';
-        if (item.hasClass(activeTabClassName)) {
-          return;
-        }
+        $('.sidebar-nav li').on('click', function () {
+          var item = $(this);
+          var activeTabClassName = 'sidebar-nav-active';
+          var activePanelClassName = 'sidebar-panel-active';
+          if (item.hasClass(activeTabClassName)) {
+            return;
+          }
 
-        var currentTarget = $('.' + activePanelClassName);
-        var target = $('.' + item.data('target'));
+          var currentTarget = $('.' + activePanelClassName);
+          var target = $('.' + item.data('target'));
 
-        $.Velocity
-          .animate(currentTarget, 'transition.slideUpOut', 200)
-          .then(function () {
-            target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', 200)
-            .addClass(activePanelClassName);
+          $.Velocity
+            .animate(currentTarget, 'transition.slideUpOut', 200)
+            .then(function () {
+              target
+              .velocity('stop')
+              .velocity('transition.slideDownIn', 200)
+              .addClass(activePanelClassName);
+            });
+
+          item.siblings().removeClass(activeTabClassName);
+          item.addClass(activeTabClassName);
+        });
+
+        $('.post-toc a').on('click', function (e) {
+          e.preventDefault();
+          var offset = $(this.getAttribute('href')).offset().top;
+          html.velocity('stop').velocity('scroll', {
+            offset: offset  + 'px',
+            mobileHA: false
           });
-
-        item.siblings().removeClass(activeTabClassName);
-        item.addClass(activeTabClassName);
-      });
-
-      $('.post-toc a').on('click', function (e) {
-        e.preventDefault();
-        var offset = $(this.getAttribute('href')).offset().top;
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
         });
       });
-    }());
-
-  </script>
+    </script>
+  {% endif %}
 {% endblock %}
