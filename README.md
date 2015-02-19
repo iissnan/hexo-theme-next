@@ -113,7 +113,7 @@ duoshuo_shortname: your-duoshuo-shortname
 
 使用 [Disqus](https://disqus.com)
 
-编辑**站点**的 `_config.yml` ，添加 `duoshuo_shortname` 字段，设置如下
+编辑**站点**的 `_config.yml` ，添加 `disqus_shortname` 字段，设置如下
 
 ```
 disqus_shortname: your-disqus-shortname
