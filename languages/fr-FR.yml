@@ -1,0 +1,53 @@
+title:
+  archive: Archive
+  category: Catégorie
+  tag: Tag
+
+menu:
+  home: Accueil
+  archives: Archives
+  tags: Tags
+  about: A propos
+
+sidebar:
+  overview: Ensemble
+  toc: Table Des Matières
+
+post:
+  posted: Posté le
+  read_more: Lire la suite
+  untitled: Non titré
+
+page:
+  totally: Total
+  tags: tags
+
+footer:
+  powered: "Powered by %s"
+  theme: Thème
+
+counter:
+  tag_cloud:
+    zero: Aucun tags.
+    one: 1 tag au total.
+    other: "%d tags au total."
+
+  archive_posts:
+    zero: Aucun article.
+    one: 1 article.
+    other: "%d articles au total."
+
+state:
+  posts: articles
+  pages: pages
+  tags: tags
+
+cheers:
+  um: Um..
+  ok: OK
+  nice: Jolie
+  good: Bien
+  great: Super
+  excellent: Excellent
+
+keep_on: Et ca ne fait que commencer.
