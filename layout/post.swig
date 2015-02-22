@@ -41,15 +41,13 @@
           var currentTarget = $('.' + activePanelClassName);
           var target = $('.' + item.data('target'));
 
-          $.Velocity
-            .animate(currentTarget, 'transition.slideUpOut', 200)
-            .then(function () {
-              target
+          currentTarget.velocity('transition.slideUpOut', 200, function () {
+            target
               .velocity('stop')
               .velocity('transition.slideDownIn', 200)
               .addClass(activePanelClassName);
-            });
-
+          });
+          
           item.siblings().removeClass(activeTabClassName);
           item.addClass(activeTabClassName);
         });
