@@ -27,6 +27,7 @@
   "dependencies": {
     "jquery": "2.*",
     "fancybox": "~2.1.5",
-    "velocity": "~1.2.1"
+    "velocity": "~1.2.1",
+    "MathJax": "~2.5.1"
   }
 }

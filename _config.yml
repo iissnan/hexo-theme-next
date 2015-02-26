@@ -30,6 +30,11 @@ uppercase_title: true
 uppercase_author: true
 
 
+# MathJax Support
+mathjax:
+
+
+
 
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
@@ -47,4 +52,4 @@ css: /css
 images: /images
 
 # Theme version
-version: 0.3.0rc1
+version: 0.3.0rc2

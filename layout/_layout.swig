@@ -206,7 +206,7 @@
 
   {% block script_extra %}{% endblock %}
 
-
+  {% include '_partials/mathjax.swig' %}
   {% include '_partials/comments/duoshuo.swig' %}
   {% include '_partials/comments/disqus.swig' %}
   {% include '_partials/analytics/google-analytics.swig' %}
