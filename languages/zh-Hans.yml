@@ -36,8 +36,8 @@ counter:
 
   archive_posts:
     zero: 暂无日志。
-    one: 目前共计 1 个日志。
-    other: "目前共计 %d 个日志。"
+    one: 目前共计 1 篇日志。
+    other: "目前共计 %d 篇日志。"
 
 state:
   posts: 日志
