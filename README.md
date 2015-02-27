@@ -61,6 +61,7 @@ git pull
 - 支持Google Webmaster tools
 - 支持Creative Commons
 - 支持指定站点建立时间
+- 支持数学公式显示（借助MathJax）
 
 ### 自定义 LOGO 以及主题图标
 

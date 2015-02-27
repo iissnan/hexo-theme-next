@@ -25,10 +25,6 @@ icon_font: default
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
-# Uppercase title/author
-uppercase_title: true
-uppercase_author: true
-
 
 # MathJax Support
 mathjax:

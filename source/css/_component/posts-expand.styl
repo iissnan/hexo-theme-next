@@ -73,7 +73,24 @@
   }
 }
 
-.posts-expand .post-body {}
+.posts-expand .post-body {
+
+  img {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 3px;
+    border: 1px solid $colorLighterGray;
+  }
+
+  .full-image {
+    border: none;
+    +desktop() {
+      max-width: none;
+      width: 126%;
+      margin: 0 -13%;
+    }
+  }
+}
 
 .posts-expand .post-tags {
   margin-top: 60px;
