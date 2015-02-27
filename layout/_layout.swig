@@ -157,19 +157,19 @@
           sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
         });
       }
-
-      function isDesktop () {
-        return screen.width > 991;
-      }
-
-      function isTablet () {
-        return screen.width < 992 && screen.width > 767;
-      }
-
-      function isMobile () {
-        return screen.width < 767;
-      }
     });
+    
+    function isDesktop () {
+      return screen.width > 991;
+    }
+
+    function isTablet () {
+      return screen.width < 992 && screen.width > 767;
+    }
+
+    function isMobile () {
+      return screen.width < 767;
+    }
   </script>
 
   {% else %}

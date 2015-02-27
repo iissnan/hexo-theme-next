@@ -43,12 +43,12 @@
       </div>
 
       {% if theme.rss %}
-      <div class="feed-link motion-element">
-        <a href="{{ url_for(theme.rss) }}">
-          <i class="menu-item-icon icon-feed"></i>
-          RSS
-        </a>
-      </div>
+        <div class="feed-link motion-element">
+          <a href="{{ url_for(theme.rss) }}">
+            <i class="menu-item-icon icon-feed"></i>
+            RSS
+          </a>
+        </div>
       {% endif %}
 
       <div class="social-info motion-element">

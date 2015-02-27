@@ -61,6 +61,11 @@
             mobileHA: false
           });
         });
+
+        // Expand sidebar on post detail page by default, when post has a toc.
+        if ($('.post-toc').html().trim().length > 0 && isDesktop()) {
+          $('.sidebar-toggle').trigger('click');
+        }
       });
     </script>
   {% endif %}
