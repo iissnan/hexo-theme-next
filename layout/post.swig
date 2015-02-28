@@ -172,6 +172,7 @@
         }
 
         if (activeTarget && scrollTop < offsets[0]) {
+          $(this.selector).trigger('clear.bs.scrollspy')  // Add a custom event.
           this.activeTarget = null
           return this.clear()
         }
@@ -256,7 +257,26 @@
   </script>
   <script type="text/javascript">
     $(document).ready(function () {
-      $('body').scrollspy({ target: '.post-toc' });
+      var tocSelector = '.post-toc';
+      var activeCurrentSelector = '.active-current';
+
+      $(tocSelector)
+        .on('activate.bs.scrollspy', function () {
+          var $currentActiveElement = $(tocSelector + ' .active').last();
+
+          removeCurrentActiveClass()
+          $currentActiveElement.addClass('active-current');
+        })
+        .on('clear.bs.scrollspy', function () {
+          removeCurrentActiveClass()
+        });
+
+      function removeCurrentActiveClass () {
+        $(tocSelector + ' ' + activeCurrentSelector)
+          .removeClass(activeCurrentSelector.substring(1));
+      }
+
+      $('body').scrollspy({ target: tocSelector });
     });
   </script>
 {% endblock %}
