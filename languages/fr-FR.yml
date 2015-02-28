@@ -28,9 +28,9 @@ footer:
 
 counter:
   tag_cloud:
-    zero: Aucun tags.
-    one: 1 tag au total.
-    other: "%d tags au total."
+    zero: Aucun tags
+    one: 1 tag au total
+    other: "%d tags au total"
 
   archive_posts:
     zero: Aucun article.

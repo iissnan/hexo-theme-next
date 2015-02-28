@@ -1,24 +1,41 @@
-@import "_core/normalize";
+// CSS Style Guide: http://codeguide.co/#css
+
+
+
+
+// Core variables and mixins
 @import "_core/variables";
 @import "_core/mixins";
-@import "_fonts/lato";
+
+
+// Reset using normalize and fonts.
+@import "_core/normalize";
+
+
+// Core CSS
 @import "_core/base";
-@import "_core/helpers";
+
+
+// Fonts
+@import "_fonts/lato";
 @import "_fonts/icon-font";
 @require "_fonts/icon-" + hexo-config('icon_font');
 
+
+// Vendors
 @import "_vendor/highlight/highlight";
 
+
+// Sections
 @import "_section/layout";
 @import "_section/header";
 @import "_section/body";
 @import "_section/sidebar";
 @import "_section/footer";
+@import "_section/media";
 
-@import "_page/home";
-@import "_page/archive";
-@import "_page/post-detail";
 
+// Components
 @import "_component/button";
 @import "_component/posts-expand";
 @import "_component/posts-collapse";
@@ -29,8 +46,17 @@
 @import "_component/gallery";
 @import "_component/back-to-top";
 @import "_component/duoshuo";
-@import "_component/blockquote-center";
 
-@import "_section/media";
 
+// Helers
+@import "_core/helpers";
+
+
+// Page specific styles
+@import "_page/home";
+@import "_page/archive";
+@import "_page/post-detail";
+
+
+// Custom styles
 @import "_custom";

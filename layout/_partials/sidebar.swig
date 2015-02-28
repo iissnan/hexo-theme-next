@@ -23,7 +23,7 @@
 
     <div class="site-overview">
       <div class="site-author motion-element">
-        <img class="site-author-image" src="{{ theme.avatar || '/images/default_avatar.jpg' }}" alt="{{ theme.author }}" />
+        <img class="site-author-image" src="{{ theme.avatar || url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" />
         <p class="site-author-name">{{ theme.author }}</p>
       </div>
       <p class="site-description motion-element">{{ theme.description }}</p>

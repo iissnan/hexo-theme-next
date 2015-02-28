@@ -30,9 +30,9 @@ footer:
 
 counter:
   tag_cloud:
-    zero: 暂无标签。
-    one: 目前共计 1 个标签。
-    other: "目前共计 %d 个标签。"
+    zero: 暂无标签
+    one: 目前共计 1 个标签
+    other: "目前共计 %d 个标签"
 
   archive_posts:
     zero: 暂无日志。
