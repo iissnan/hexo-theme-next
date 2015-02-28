@@ -33,7 +33,7 @@
   </script>
 
   {% if theme.use_motion %}
-    <script type="text/javascript" id="post-details-motion">
+    <script type="text/javascript" id="motion.post.details">
       $(document).ready(function () {
         var html = $('html');
 
@@ -78,7 +78,7 @@
     </script>
   {% endif %}
 
-  <script type="text/javascript" id="bootstrap.scrollspy">
+  <script type="text/javascript" id="bootstrap.scrollspy.custom">
     /* ========================================================================
     * Bootstrap: scrollspy.js v3.3.2
     * http://getbootstrap.com/javascript/#scrollspy
@@ -255,7 +255,7 @@
 
     }(jQuery);
   </script>
-  <script type="text/javascript">
+  <script type="text/javascript" id="sidebar.highlight.toc">
     $(document).ready(function () {
       var tocSelector = '.post-toc';
       var activeCurrentSelector = '.active-current';
