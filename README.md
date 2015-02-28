@@ -10,19 +10,19 @@
 
 * 大屏幕显示效果
 
-![Desktop Preview](screenshots/desktop-preview.png)
+![Desktop Preview](http://iissnan.com/nexus/next/desktop-preview.png)
 
 * 侧边栏
 
-![Desktop Sidebar Preview](screenshots/desktop-sidebar-preview.png)
+![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-preview.png)
 
 * 侧边栏（文章页面）
 
-![Desktop Sidebar Preview](screenshots/desktop-sidebar-toc.png)
+![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-toc.png)
 
 * 小屏幕
 
-![Mobile Preview](screenshots/mobile.png)
+![Mobile Preview](http://iissnan.com/nexus/next/mobile.png)
 
 
 ## 安装
@@ -181,8 +181,8 @@ menu:
 NexT 使用 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 作为代码高亮，共有5款主题供你选择。
 默认使用的是白色的 `normal`，以下是 `normal` 与 `night` 的预览：
 
-![Tomorrow Normal Preview](screenshots/tomorrow-normal.png)
-![Tomorrow Night Preview](screenshots/tomorrow-night.png)
+![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png)
+![Tomorrow Night Preview](http://iissnan.com/nexus/next/tomorrow-night.png)
 
 请访问 [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) 查看更多主题。
 
@@ -301,7 +301,7 @@ highlight_theme: normal
 
 ## 浏览器支持
 
-![Browser support](screenshots/browser-support.png)
+![Browser support](http://iissnan.com/nexus/next/browser-support.png)
 
 
 ## 贡献

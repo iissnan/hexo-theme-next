@@ -7,10 +7,20 @@
 
 ## Screenshots
 
-[Desktop Preview](screenshots/desktop.png)
+* Desktop
+![Desktop Preview](http://iissnan.com/nexus/next/desktop-preview.png)
 
+* Sidebar
 
-![Mobile Preview](screenshots/mobile.png)
+![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-preview.png)
+
+* Sidebar (Post details page)
+
+![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-toc.png)
+
+* Mobile
+
+![Mobile Preview](http://iissnan.com/nexus/next/mobile.png)
 
 
 ## Installation
@@ -92,8 +102,8 @@ Set `rss` field in theme's `_config.yml`, as the following value:
 NexT uses [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) with 5 themes for you to choose from.
 Next use `normal` by default. Have a preview about `normal` and `night`:
 
-![Tomorrow Normal Preview](screenshots/tomorrow-normal.png)
-![Tomorrow Night Preview](screenshots/tomorrow-night.png)
+![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png)
+![Tomorrow Night Preview](http://iissnan.com/nexus/next/tomorrow-night.png)
 
 Head over to [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) for more details.
 
@@ -125,7 +135,7 @@ since: 2013
 
 ## Browser support
 
-![Browser support](screenshots/browser-support.png)
+![Browser support](http://iissnan.com/nexus/next/browser-support.png)
 
 
 ## Contributing

@@ -49,7 +49,7 @@
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/dist/jquery.min.js?v={{ theme.version }}"></script>
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/index.js?v=2.1.3"></script>
   {% include '_partials/fancy-box.swig' %}
 
 
@@ -158,7 +158,7 @@
         });
       }
     });
-    
+
     function isDesktop () {
       return screen.width > 991;
     }
