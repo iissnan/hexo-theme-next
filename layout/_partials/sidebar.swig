@@ -12,11 +12,11 @@
 
     {% if is_post() %}
       <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-overview" data-target="site-overview">
-          {{ __('sidebar.overview') }}
-        </li>
         <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc">
           {{ __('sidebar.toc') }}
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview">
+          {{ __('sidebar.overview') }}
         </li>
       </ul>
     {% endif %}
@@ -65,7 +65,7 @@
 
     {% if is_post() %}
       <div class="post-toc sidebar-panel-active">
-        {{ toc(page.content, {"class": "motion-element"}) }}
+        {{ toc(page.content, {"class": "nav"}) }}
       </div>
     {% endif %}
   </div>

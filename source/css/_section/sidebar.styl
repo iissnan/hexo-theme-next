@@ -42,6 +42,7 @@
   bottom: 0;
   box-shadow: inset 0 2px 6px black;
   background: $colorDeepBlack;
+  -webkit-transform: translateZ(0); // http://stackoverflow.com/questions/17079857/position-fixed-broken-in-chrome-with-flash-behind
 
   a {
     color: $colorLightBlack;
@@ -50,7 +51,7 @@
 }
 
 .sidebar-inner {
-  padding: 40px 20px;
+  padding: 20px 10px;
   color: $colorDarkGray;
   text-align: center;
 }
@@ -152,4 +153,4 @@
     border-radius: 50%;
     background: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
   }
-}// Sidebar Navigation.sidebar-nav {  margin: 0;  padding-left: 0;}.sidebar-nav li {  display: inline-block;  cursor: pointer;  border-bottom: 1px solid transparent;  font-size: 15px;  &:hover {    color: $colorWhiteSmoke;  }}.page-post-detail .sidebar-nav-toc {  margin-left: 10px;  padding: 0 5px;}.sidebar-nav .sidebar-nav-active {  color: $sidebarHighlightBlue;  border-bottom-color: $sidebarHighlightBlue;  &:hover {    color: $sidebarHighlightBlue;  }}.post-toc ol {  overflow: auto;  max-height: 500px;  text-align: left;  list-style: none;  font-size: 14px;  a {    color: $colorDarkGray;    &:hover {      color: $colorLightGray;    }  }}
+}// Sidebar Navigation.sidebar-nav {  margin: 0;  padding-left: 0;}.sidebar-nav li {  display: inline-block;  cursor: pointer;  border-bottom: 1px solid transparent;  font-size: 15px;  &:hover {    color: $colorWhiteSmoke;  }}.page-post-detail .sidebar-nav-toc {  padding: 0 5px;}.page-post-detail .sidebar-nav-overview {  margin-left: 10px;}.sidebar-nav .sidebar-nav-active {  color: $sidebarHighlightBlue;  border-bottom-color: $sidebarHighlightBlue;  &:hover {    color: $sidebarHighlightBlue;  }}.post-toc ol {  overflow: auto;  margin: 0;  padding: 10px;  text-align: left;  list-style: none;  font-size: 14px;  a {    color: $colorDarkGray;    &:hover {      color: $colorLightGray;    }  }}.post-toc .nav .nav-child {  display: none;}.post-toc .nav .active .nav-child {  display: block;}
