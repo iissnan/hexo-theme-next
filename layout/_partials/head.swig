@@ -28,4 +28,4 @@
     <link rel="shorticon icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
 
-{% include 'analytics/baidu-analytics.swig' %}
+{% include '../_scripts/analytics/baidu-analytics.swig' %}
