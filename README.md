@@ -1,6 +1,6 @@
 # NexT [![views](https://sourcegraph.com/api/repos/github.com/iissnan/hexo-theme-next/.counters/views.svg)](https://sourcegraph.com/github.com/iissnan/hexo-theme-next)
 
-> NexT 是一款高质量简洁的 [Hexo](http://hexo.io) 主题，她经过精心雕琢而来。
+> 精于心，简于形
 
 
 [在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)

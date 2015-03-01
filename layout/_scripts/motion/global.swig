@@ -8,6 +8,9 @@
     var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
     var sidebar = $('.sidebar');
 
+    var SIDEBAR_WIDTH = '320px';
+    var SIDEBAR_DISPLAY_DURATION = 300;
+
     var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
 
     var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
@@ -26,12 +29,18 @@
     postsListMotion();
     backToTopMotion();
 
-    function sidebarContentMotion () {
-      $('.sidebar .motion-element').velocity(
-        'transition.slideRightIn',
-        {stagger: 50, drag: true}
-      );
-    }
+
+    $(document)
+      .on('sidebar.show', function () {
+        isDesktop() && body.velocity(
+          {paddingRight: SIDEBAR_WIDTH},
+          SIDEBAR_DISPLAY_DURATION
+        );
+        sidebarContentMotion();
+      })
+      .on('sidebar.hide', function () {
+
+      });
 
 
     function backToTopMotion () {
@@ -42,16 +51,13 @@
     }
 
     function sidebarShowMotion () {
-      var sidebarDisplayDuration = 300;
-      var sidebarWidth = '320px';
 
       sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
       sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
       sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
 
-      sidebar.velocity({width: sidebarWidth}, sidebarDisplayDuration);
-      isDesktop() && body.velocity({paddingRight: sidebarWidth}, sidebarDisplayDuration);
-      sidebarContentMotion();
+      sidebar.velocity({width: SIDEBAR_WIDTH}, SIDEBAR_DISPLAY_DURATION);
+      sidebar.trigger('sidebar.show');
     }
 
     function sidebarHideMotion () {
@@ -61,7 +67,16 @@
       sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
       sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
       sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
+
+      sidebar.trigger('sidebar.hide');
     };
+
+    function sidebarContentMotion () {
+      $('.sidebar .motion-element').velocity(
+        'transition.slideRightIn',
+        {stagger: 50, drag: true}
+      );
+    }
 
     function postsListMotion () {
       $('.post').velocity('transition.slideDownIn', {stagger: 300, drag: true});
@@ -72,6 +87,7 @@
         isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
         isSidebarVisible = !isSidebarVisible;
       });
+
       sidebarToggle.hover(function () {
         if (isSidebarVisible) {return}
         sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
