@@ -6,21 +6,20 @@
 
 //== Colors
 //
-//## Gray colors for use across theme.
+//## Colors for use across theme.
 
-$colorWhiteSmoke = #f5f5f5
-$colorGainsboro = #eee
-$colorLighterGray = #ddd
-$colorLightGray = #ccc
-$colorGray = #bbb
-$colorDarkGray = #999
-$colorDimGray = #666
-$colorLightBlack = #555
-$colorDeepBlack = #222
-$colorRed = #ff2a2a
-$colorBlue = #0684bd
-$colorDeepBlue = #262a30
-
+$whitesmoke   = #f5f5f5
+$gainsboro    = #eee
+$gray-lighter = #ddd
+$grey-light   = #ccc
+$grey         = #bbb
+$grey-dark    = #999
+$grey-dim     = #666
+$black-light  = #555
+$black-deep   = #222
+$red          = #ff2a2a
+$blue         = #0684bd
+$blue-deep    = #262a30
 
 
 
@@ -28,16 +27,24 @@ $colorDeepBlue = #262a30
 //
 //## Settings for some of the most global styles.
 
-$baseTextColor = $colorLightBlack
-$baseLinkColor = $colorDeepBlack
-$baseLinkHoverColor = $colorDeepBlack
-$baseLinkDecorationColor = $colorLightGray
-$baseLinkHoverDecorationColor = $colorDeepBlack
-$baseBorderColor = $colorLightGray
-$bodyBackgroundColor = white
+//** Global text color on <body>
+$text-color                   = $black-light
+
+//** Global link color.
+$link-color                   = $black-deep
+$link-hover-color             = $black-deep
+$link-decoration-color        = $grey-light
+$link-decoration-hover-color  = $black-deep
+
+//** Global border color.
+$border-color                 = $grey-light
+
+//** Background color for <body>
+$body-bg-color                = white
+
 $contentBackgroundColor = white
 $sidebarBackgroundColor = white
-$sidebarHighlightBlue = #87daff;
+$sidebarHighlightBlue   = #87daff;
 
 
 
@@ -45,21 +52,30 @@ $sidebarHighlightBlue = #87daff;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$fontFamilySans = "Avenir Next", Avenir, "Tahoma", "Vendana", sans-serif
-$fontFamilySerif = "PT Serif", "Cambria", Georgia, "Times New Roman", serif
-$fontFamilyMono = "PT Mono", consolas, Monaco, Menlo, monospace
-$fontFamilyHeadline = "PT Serif", "Cambria", Georgia, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", "Times New Roman", serif
-$fontFamilyPost = "Lato", "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif
-$fontFamilyBase = $fontFamilyPost
-$fontSizeBase = 16px
-$fontLineHeightBase = 1.8
-$fontSizeHeadlineBase = 28px
-$fontSizeHeadlineStep = 2px
-$fontDir = "fonts/"
-$fontIcon = FontAwesome
-$fontIconVersion = "0.0.1"
-$headlineFontFamily = $fontFamilyHeadline
-$fontLogo = $fontFamilyPost
+//** Font families.
+$font-family-sans-serif = "Avenir Next", Avenir, "Tahoma", "Vendana", sans-serif
+$font-family-serif      = "PT Serif", "Cambria", Georgia, "Times New Roman", serif
+$font-family-monospace  = "PT Mono", consolas, Monaco, Menlo, monospace
+$font-family-chinese    = "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei"
+$font-family-headings   = Cambria, Georgia, $font-family-chinese, "Times New Roman", serif
+$font-family-posts      = Lato, $font-family-chinese, sans-serif
+$font-family-base       = $font-family-posts
+
+//** Font size
+$font-size-smaller  = $font-size - 4px
+$font-size-small    = $font-size - 2px
+$font-size-base     = 16px
+$font-size-large    = $font-size + 2px
+
+//** Headings font size
+$font-size-headings-base = 28px
+$font-size-headings-step = 2px
+
+//** Global line height
+$line-height-base = 1.8
+
+
+
 
 // Layout ==================================================================
 $desktopMainWidth = 960px
@@ -71,12 +87,12 @@ $contentWrapMarginHorizontal = 20px;
 // Layout ==================================================================
 $siteMetaTextAlignment = center;
 $brandTextColor = white;
-$brandBackground = $colorDeepBlack;
+$brandBackground = $black-deep;
 
 // Theme ===================================================================
 $mainBackgroundImage = hexo-config('background_image')
 $headerBackgroundColor = white
-$headerBorderBottomColor = $colorBlue
+$headerBorderBottomColor = $blue
 $headerBorderBottomWidth = 0
 $brandWidth = 60px
 $brandHeight = $headerHeight
@@ -86,13 +102,13 @@ $logoBackgroundColor = white
 $menuItemLinkHeight = $headerHeight
 $menuItemRightMargin = 10px
 $menuItemHoverBackgroundColor = darken($headerBackgroundColor, 50%)
-$paginationBackgroundColor = $colorWhiteSmoke
+$paginationBackgroundColor = $whitesmoke
 $paginationLinkBackgroundColor = white
-$paginationLinkHoverBackgroundColor = $colorDeepBlack;
-$postTypeLinkColor = $colorBlue
+$paginationLinkHoverBackgroundColor = $black-deep;
+$postTypeLinkColor = $blue
 $postTypeLinkBackgroundColor = #d9edf7
 $postTypeLinkBorderColor = #bce8f1
-$highlightLinkColor = $baseLinkHoverColor
+$highlightLinkColor = $link-hover-color
 
 // Article
 $articlePadding = 0px

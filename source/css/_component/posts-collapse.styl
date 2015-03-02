@@ -36,7 +36,7 @@
       margin-top: -4px;
       width: 8px;
       height: 8px;
-      background: $colorGray;
+      background: $grey;
       circle();
     }
   }
@@ -51,7 +51,7 @@
 
   .post-header {
     position: relative;
-    border-bottom: 1px dashed $colorLightGray;
+    border-bottom: 1px dashed $grey-light;
 
     &::before {
       content: " ";
@@ -61,17 +61,17 @@
       width: 6px;
       height: 6px;
       margin-left: -4px;
-      background: $colorGray;
+      background: $grey;
       circle();
       border: 1px solid white;
     }
   }
 
   .post-header:hover {
-    border-bottom-color: $colorDimGray;
+    border-bottom-color: $grey-dim;
 
     &::before {
-      background: $colorDeepBlack;
+      background: $black-deep;
     }
   }
 
@@ -90,7 +90,7 @@
     margin-left: 60px;
     font-size: 16px;
     font-weight: normal;
-    font-family: $fontFamilyPost;
+    font-family: $font-family-base;
     line-height: inherit;
 
     &::after {
@@ -99,7 +99,7 @@
     }
 
     a {
-      color: $colorDimGray;
+      color: $grey-dim;
       border-bottom: none;
     }
   }

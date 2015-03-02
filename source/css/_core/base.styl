@@ -1,79 +1,12 @@
-::selection {
-  background: $colorDeepBlue;
-  color: white;
-}
+h2, h3, h4, h5, h6 { margin: 60px 0 15px; }
 
-body {
-  color: $baseTextColor;
-  background: $bodyBackgroundColor;
-  font: $fontSizeBase/$fontLineHeightBase $fontFamilyBase;
-  position: relative; // Required by scrollspy
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  line-height: 1;
-  font-family: $headlineFontFamily;
-}
-
-for headline in (1..6)
-  h{headline} {
-    font-size: $fontSizeHeadlineBase - $fontSizeHeadlineStep * headline;
-  }
-
-  +mobile() {
-    h{headline} {
-      font-size: $fontSizeHeadlineBase - $fontSizeHeadlineStep * headline - 4px;
-    }
-  }
-
-p {
-  margin: 20px 0;
-}
-
-a {
-  color: $baseLinkColor;
-  text-decoration: none;
-  border-bottom: 1px solid $colorDarkGray;
-
-  &:hover {
-    border-bottom-color: $baseLinkHoverDecorationColor;
-  }
-}
-
-ul {
-  list-style: none;
-}
-
-blockquote {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  margin: auto 0;
-  max-width: 100%;
-  height: auto;
-}
-
-
-h2, h3, h4, h5, h6 {
-  margin: 60px 0 15px;
-}
-
-ul {
-  list-style: square;
-}
+ul { list-style: square; }
 
 hr {
   margin: 40px 0;
   height: 3px;
   border: none;
-  background-color: $colorLighterGray;
+  background-color: $gray-lighter;
   background-image: repeating-linear-gradient(
     -45deg,
     white,
@@ -85,8 +18,8 @@ hr {
 
 blockquote {
   padding: 0 15px;
-  color: $colorDimGray;
-  border-left: 4px solid $colorLighterGray;
+  color: $grey-dim;
+  border-left: 4px solid $gray-lighter;
 
   cite::before {
     content: "-";
@@ -94,26 +27,6 @@ blockquote {
   }
 }
 
-table {
-  width 100%
-  border-collapse collapse
-  border-spacing 0
-}
-
-caption, th, td {
-  text-align left
-  vertical-align middle
-  font-weight normal
-}
-th {
-  font-weight 700
-  border-bottom 3px solid $colorLighterGray
-  padding-bottom 10px
-}
-td {
-  border-bottom 1px solid $colorLighterGray
-  padding 10px 0
-}
 dt {
   font-weight 700
 }

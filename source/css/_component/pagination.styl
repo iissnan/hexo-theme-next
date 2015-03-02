@@ -1,7 +1,7 @@
 .pagination {
   margin: 120px 0 40px;
   text-align: center;
-  border-top: 1px solid $colorGainsboro;
+  border-top: 1px solid $gainsboro;
 }
 
 .page-number-basic {
@@ -17,12 +17,12 @@
   .prev, .next, .page-number {
     @extend .page-number-basic;
     border-bottom: 0;
-    border-top: 1px solid $colorGainsboro;
+    border-top: 1px solid $gainsboro;
     transition-property: border-color;
     the-transition();
 
     &:hover {
-      border-top-color: $colorDeepBlack;
+      border-top-color: $black-deep;
     }
   }
 
@@ -32,8 +32,8 @@
 
   .page-number.current {
     color: white;
-    background: $colorDeepBlack;
-    border-top-color: $colorDeepBlack;
+    background: $black-deep;
+    border-top-color: $black-deep;
   }
 }
 
@@ -46,10 +46,10 @@
     .prev, .next, .page-number {
       margin-bottom: 10px;
       border-top: 0;
-      border-bottom: 1px solid $colorGainsboro;
+      border-bottom: 1px solid $gainsboro;
 
       &:hover {
-        border-bottom-color: $colorDeepBlack;
+        border-bottom-color: $black-deep;
       }
     }
   }

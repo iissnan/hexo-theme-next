@@ -1,13 +1,22 @@
+//
+// Scaffolding
+// --------------------------------------------------
 
-// Align inline/inline-block elements with center/left/right.
 
-.align-center { text-align: center; }
-.align-left   { text-align: left; }
-.align-right  { text-align: right; }
 
+// Alignment
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+.text-nowrap  { white-space: nowrap; }
+
+// Transformation
+.text-lowercase  { text-transform: lowercase; }
+.text-uppercase  { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
 
 // Center-align a block level element.
-
 .center-block {
   display: block;
   margin-left: auto;
@@ -16,21 +25,17 @@
 
 
 // Clearfix. http://nicolasgallagher.com/micro-clearfix-hack/
-
 .clearfix {
   &:before,
   &:after {
     content: " ";
     display: table;
   }
-  &:after {
-    clear: both;
-  }
+  &:after { clear: both; }
 }
 
 
 // Expand image to 126% with nagative margin-left/right.
-
 .full-image.full-image.full-image {
   border: none;
   +desktop() {
@@ -42,7 +47,6 @@
 
 
 // Blockquote with all children centered.
-
 .blockquote-center {
   position: relative;
   margin: 40px 0;
@@ -63,20 +67,16 @@
   }
   &::before {
     top: -20px;
-    border-top: 1px solid $colorLightGray;
+    border-top: 1px solid $grey-light;
   }
   &::after {
     bottom: -20px;
-    border-bottom: 1px solid $colorLightGray;
+    border-bottom: 1px solid $grey-light;
     background-position: 100% 7px;
   }
 
-  p, div {
-    text-align: center
-  }
+  p, div { text-align: center; }
 }
 
 
-.use-motion .motion-element {
-  opacity: 0;
-}
+.use-motion .motion-element { opacity: 0; }

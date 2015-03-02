@@ -6,22 +6,21 @@ $articlePadding = $desktopContentPadding
 
 $code-block
   background: highlight-background
-  margin: 20px 0 //$articlePadding * -1
-  padding: 15px //$articlePadding
+  margin: 20px 0
+  padding: 15px
   overflow: auto
   font-size 13px
   color: highlight-foreground
-  line-height:  18px //$fontSizeBase * $fontLineHeightBase
+  line-height:  $line-height-base
 
 $line-numbers
   color: #666
-  font-size: 0.85em
 
 .post
   pre, code
-    font-family: $fontFamilyMono
+    font-family: $font-family-monospace
   code
-    background: $colorGainsboro
+    background: $gainsboro
     text-shadow: 0 1px #fff
     padding: 0 0.3em
   pre
@@ -65,7 +64,7 @@ $line-numbers
     padding: 15px $articlePadding 15px 15px
     .gist-file
       border: none
-      font-family: $fontFamilyMono
+      font-family: $font-family-monospace
       margin: 0
       .gist-data
         background: none
@@ -84,7 +83,7 @@ $line-numbers
       .gist-meta
         background: highlight-background
         color: highlight-comment
-        font: 13px $fontFamilySans
+        font: 13px $font-family-base
         text-shadow: 0 0
         padding: 0
         margin-top: 1em
