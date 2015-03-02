@@ -43,9 +43,9 @@ use_motion: true
 fancybox: true
 
 # Static files
-vendors: /vendors
-css: /css
-images: /images
+vendors: vendors
+css: css
+images: images
 
 # Theme version
 version: 0.3.0rc3
