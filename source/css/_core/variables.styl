@@ -18,6 +18,7 @@ $grey-dim     = #666
 $black-light  = #555
 $black-deep   = #222
 $red          = #ff2a2a
+$blue-bright  = #87daff
 $blue         = #0684bd
 $blue-deep    = #262a30
 
@@ -49,9 +50,9 @@ $body-bg-color                = white
 // --------------------------------------------------
 
 // Font families.
-$font-family-sans-serif   = "Avenir Next", Avenir, "Tahoma", "Vendana", sans-serif
+$font-family-sans-serif   = "Avenir Next", Avenir, Tahoma, Vendana, sans-serif
 $font-family-serif        = "PT Serif", Cambria, Georgia, "Times New Roman", serif
-$font-family-monospace    = "PT Mono", consolas, Monaco, Menlo, monospace
+$font-family-monospace    = "PT Mono", Consolas, Monaco, Menlo, monospace
 $font-family-chinese      = "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei"
 $font-family-headings     = Cambria, Georgia, $font-family-chinese, "Times New Roman", serif
 $font-family-posts        = Lato, $font-family-chinese, sans-serif
@@ -73,7 +74,7 @@ $line-height-base         = 1.8
 
 
 // Buttons
-// -------------------------------------------------------------------------
+// --------------------------------------------------
 
 $btn-font-weight =  normal
 
@@ -87,7 +88,7 @@ $btn-default-hover-border-color  = $black-deep
 
 
 // Pagination
-// -------------------------------------------------------------------------
+// --------------------------------------------------
 
 $pagination-border              = $gainsboro;
 
@@ -105,54 +106,51 @@ $pagination-active-border       = $grey-light
 
 
 
-// Layout ==================================================================
-$desktopMainWidth = 960px
-$desktopContentWidth = 700px
-$desktopSidebarWidth = 240px
-$desktopContentPadding = 40px
-$contentWrapMarginHorizontal = 20px;
+// Layout sizes
+// --------------------------------------------------
 
-// Layout ==================================================================
-$siteMetaTextAlignment = center;
-$brandTextColor = white;
-$brandBackground = $black-deep;
-
-// Theme ===================================================================
-$contentBackgroundColor = white
-$sidebarBackgroundColor = white
-$sidebarHighlightBlue   = #87daff;
-$mainBackgroundImage = hexo-config('background_image')
-$headerBackgroundColor = white
-$headerBorderBottomColor = $blue
-$headerBorderBottomWidth = 0
-$brandWidth = 60px
-$brandHeight = $headerHeight
-$logoWidth = 12px
-$logoHeight = 20px
-$logoBackgroundColor = white
-$menuItemLinkHeight = $headerHeight
-$menuItemRightMargin = 10px
-$menuItemHoverBackgroundColor = darken($headerBackgroundColor, 50%)
-$paginationBackgroundColor = $whitesmoke
-$pagination-link-bg-color = $black-deep
-$paginationLinkHoverBackgroundColor = white
-$postTypeLinkColor = $blue
-$postTypeLinkBackgroundColor = #d9edf7
-$postTypeLinkBorderColor = #bce8f1
-$highlightLinkColor = $link-hover-color
-
-// Article
-$articlePadding = 0px
-
-// Highlight
-$highlightFontSize = 12px
-$highlightLineHeight = 1.2
+$main-desktop                   = 960px
+$content-desktop                = 700px
+$sidebar-desktop                = 240px
+$content-desktop-padding        = 40px
 
 
 
-//== Iconography
-//
-//## Icons SVG Base64
+// Headband
+// --------------------------------------------------
+$headband-bg = $black-deep
 
-//** blockquote-center
+
+
+// Section Header
+// Variables for header section elements.
+// --------------------------------------------------
+
+$head-bg                = white
+
+// Site Meta
+$site-meta-text-align   = center
+$brand-color            = white
+$brand-bg               = $black-deep
+$brand-font-family      = $font-family-base
+
+// Menu
+$menu-link-border       = transparent
+$menu-link-hover-border = $black-deep
+
+
+
+// Section Sidebar
+// Variables for sidebar section elements.
+// --------------------------------------------------
+
+$sidebar-highlight      = $blue-bright
+
+
+
+// Iconography
+// Icons SVG Base64
+// --------------------------------------------------
+
+// blockquote-center icon
 $blockquoteCenterIcon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDM0aDZsNC04di0xMmgtMTJ2MTJoNnptMTYgMGg2bDQtOHYtMTJoLTEydjEyaDZ6Ii8+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+"

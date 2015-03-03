@@ -1,29 +1,22 @@
 .headband {
   height: 3px;
-  background: $black-deep;
+  background: $headband-bg;
 }
 
-.header {
-  background: $headerBackgroundColor;
-  border-bottom: solid $headerBorderBottomWidth $headerBorderBottomColor;
-}
+.header { background: $head-bg; }
 
-.header-inner {
-  position: relative;
-}
+.header-inner { position: relative; }
 
-.site-meta {
-  text-align: $siteMetaTextAlignment;
-}
+.site-meta { text-align: $site-meta-text-align; }
 
 .brand {
   position: relative;
   display: inline-block;
   padding: 0 25px;
-  color: $brandTextColor;
-  background: $brandBackground
+  color: $brand-color;
+  background: $brand-bg;
   border-bottom: none;
-  font-family: $font-family-base;
+  font-family: $brand-font-family;
 }
 
 .logo {
@@ -51,23 +44,17 @@
   display: inline-block;
   margin-left: 20px;
 
-  &:first-child {
-    margin-left: 0;
-  }
+  &:first-child { margin-left: 0; }
 
   a {
     display: block;
-    color: $black-deep;
     font-size: 13px;
-    text-decoration: none;
     text-transform: capitalize;
     line-height: 1.5;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid $menu-link-border;
     transition-property: border-color;
     the-transition();
 
-    &:hover {
-      border-bottom-color: $black-deep;
-    }
+    &:hover { border-bottom-color: $menu-link-hover-border; }
   }
 }

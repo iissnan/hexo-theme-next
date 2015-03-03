@@ -1,28 +1,23 @@
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: $desktopMainWidth;
-  .one-column & {
-    width: $desktopContentWidth;
-  }
+  width: $main-desktop;
+
+  .one-column & { width: $content-desktop; }
 }
 
 .main-inner {
   margin: 0 auto;
-  width: $desktopMainWidth;
-  .one-column & {
-    width: $desktopContentWidth;
-  }
+  width: $main-desktop;
 
-  .content {
-    width: $desktopContentWidth;
-  }
+  .one-column & { width: $content-desktop; }
+
+  .content { width: $content-desktop; }
 }
 
 .footer-inner {
-  margin 20px auto
-  width $desktopMainWidth
-  .one-column & {
-    width $desktopContentWidth
-  }
+  margin: 20px auto;
+  width: $main-desktop;
+
+  .one-column & { width: $content-desktop; }
 }
