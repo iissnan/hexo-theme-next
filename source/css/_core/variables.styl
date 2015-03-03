@@ -1,12 +1,12 @@
 //
 // Variables
+// =================================================
+
+
+
+// Colors
+// colors for use across theme.
 // --------------------------------------------------
-
-
-
-//== Colors
-//
-//## Colors for use across theme.
 
 $whitesmoke   = #f5f5f5
 $gainsboro    = #eee
@@ -23,57 +23,85 @@ $blue-deep    = #262a30
 
 
 
-//== Scaffolding
-//
-//## Settings for some of the most global styles.
+// Scaffolding
+// Settings for some of the most global styles.
+// --------------------------------------------------
 
-//** Global text color on <body>
+// Global text color on <body>
 $text-color                   = $black-light
 
-//** Global link color.
+// Global link color.
 $link-color                   = $black-deep
 $link-hover-color             = $black-deep
 $link-decoration-color        = $grey-light
 $link-decoration-hover-color  = $black-deep
 
-//** Global border color.
+// Global border color.
 $border-color                 = $grey-light
 
-//** Background color for <body>
+// Background color for <body>
 $body-bg-color                = white
 
-$contentBackgroundColor = white
-$sidebarBackgroundColor = white
-$sidebarHighlightBlue   = #87daff;
+
+
+// Typography
+// Font, line-height, and elements colors.
+// --------------------------------------------------
+
+// Font families.
+$font-family-sans-serif   = "Avenir Next", Avenir, "Tahoma", "Vendana", sans-serif
+$font-family-serif        = "PT Serif", Cambria, Georgia, "Times New Roman", serif
+$font-family-monospace    = "PT Mono", consolas, Monaco, Menlo, monospace
+$font-family-chinese      = "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei"
+$font-family-headings     = Cambria, Georgia, $font-family-chinese, "Times New Roman", serif
+$font-family-posts        = Lato, $font-family-chinese, sans-serif
+$font-family-base         = $font-family-posts
+
+// Font size
+$font-size-smaller        = $font-size - 4px
+$font-size-small          = $font-size - 2px
+$font-size-base           = 16px
+$font-size-large          = $font-size + 2px
+
+// Headings font size
+$font-size-headings-base  = 28px
+$font-size-headings-step  = 2px
+
+// Global line height
+$line-height-base         = 1.8
 
 
 
-//== Typography
-//
-//## Font, line-height, and color for body text, headings, and more.
+// Buttons
+// -------------------------------------------------------------------------
 
-//** Font families.
-$font-family-sans-serif = "Avenir Next", Avenir, "Tahoma", "Vendana", sans-serif
-$font-family-serif      = "PT Serif", "Cambria", Georgia, "Times New Roman", serif
-$font-family-monospace  = "PT Mono", consolas, Monaco, Menlo, monospace
-$font-family-chinese    = "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei"
-$font-family-headings   = Cambria, Georgia, $font-family-chinese, "Times New Roman", serif
-$font-family-posts      = Lato, $font-family-chinese, sans-serif
-$font-family-base       = $font-family-posts
+$btn-font-weight =  normal
 
-//** Font size
-$font-size-smaller  = $font-size - 4px
-$font-size-small    = $font-size - 2px
-$font-size-base     = 16px
-$font-size-large    = $font-size + 2px
+$btn-default-bg                  = $black-deep
+$btn-default-color               = white
+$btn-default-border              = $black-deep
+$btn-default-hover-bg            = white
+$btn-default-hover-color         = $black-deep
+$btn-default-hover-border-color  = $black-deep
 
-//** Headings font size
-$font-size-headings-base = 28px
-$font-size-headings-step = 2px
 
-//** Global line height
-$line-height-base = 1.8
 
+// Pagination
+// -------------------------------------------------------------------------
+
+$pagination-border              = $gainsboro;
+
+$pagination-link-bg             = transparent
+$pagination-link-color          = $link-color
+$pagination-link-border         = $gainsboro
+
+$pagination-link-hover-bg       = transparent
+$pagination-link-hover-color    = $link-color
+$pagination-link-hover-border   = $black-deep
+
+$pagination-active-bg           = $grey-light
+$pagination-active-color        = white
+$pagination-active-border       = $grey-light
 
 
 
@@ -90,6 +118,9 @@ $brandTextColor = white;
 $brandBackground = $black-deep;
 
 // Theme ===================================================================
+$contentBackgroundColor = white
+$sidebarBackgroundColor = white
+$sidebarHighlightBlue   = #87daff;
 $mainBackgroundImage = hexo-config('background_image')
 $headerBackgroundColor = white
 $headerBorderBottomColor = $blue
@@ -103,8 +134,8 @@ $menuItemLinkHeight = $headerHeight
 $menuItemRightMargin = 10px
 $menuItemHoverBackgroundColor = darken($headerBackgroundColor, 50%)
 $paginationBackgroundColor = $whitesmoke
-$paginationLinkBackgroundColor = white
-$paginationLinkHoverBackgroundColor = $black-deep;
+$pagination-link-bg-color = $black-deep
+$paginationLinkHoverBackgroundColor = white
 $postTypeLinkColor = $blue
 $postTypeLinkBackgroundColor = #d9edf7
 $postTypeLinkBorderColor = #bce8f1
