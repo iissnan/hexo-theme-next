@@ -331,6 +331,7 @@ First things first, always keep things simple.
 - [x] Publish as a bower package.
 - [ ] Home page.
 - [ ] HTML5 Please
+- [ ] Add a search using [swiftype](https://swiftype.com)
 - [ ] Add [typicons.font](https://github.com/stephenhutchings/typicons.font).
 - [x] Disuqus support.
 - [ ] TIT - Theme in theme.
