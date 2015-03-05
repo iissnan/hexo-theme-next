@@ -1,0 +1,61 @@
+
+.header-inner {
+  padding-top: 0;
+
+  +mobile() {
+    padding-bottom: 30px;
+  }
+}
+
+
+
+.site-meta {
+  float: left;
+  text-align: left;
+
+  +mobile() {
+    float: none
+    .brand {
+      display: block;
+      line-height: 50px;
+    }
+  }
+
+  .brand {
+    padding: 0 20px 0 10px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    +mobile() {
+      line-height: 50px;
+    }
+  }
+  .site-title {
+    font-size: 16px;
+    +mobile() {
+      line-height: 50px;
+    }
+  }
+}
+
+.menu {
+  float: right;
+  margin: 14px 0 0 0;
+  padding: 0 20px;
+
+  a::before {
+    display: none;
+
+    +mobile() {
+      display: block;
+    }
+  }
+
+  +mobile() {
+    float: none;
+  }
+}
