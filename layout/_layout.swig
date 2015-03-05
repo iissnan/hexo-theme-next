@@ -61,5 +61,6 @@
   {% include '_scripts/comments/duoshuo.swig' %}
   {% include '_scripts/comments/disqus.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
+  {% include '_scripts/analytics/baidu-analytics.swig' %}
 </body>
 </html>
