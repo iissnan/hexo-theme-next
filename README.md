@@ -1,29 +1,11 @@
-# NexT [![views](https://sourcegraph.com/api/repos/github.com/iissnan/hexo-theme-next/.counters/views.svg)](https://sourcegraph.com/github.com/iissnan/hexo-theme-next)
+<h1>
+  NexT
+  <small>[在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)</small>
+</h1>
 
 > 精于心，简于形
 
-
-[在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)
-
-
-## 预览
-
-* 大屏幕显示效果
-
 ![Desktop Preview](http://iissnan.com/nexus/next/desktop-preview.png)
-
-* 侧边栏
-
-![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-preview.png)
-
-* 侧边栏（文章页面）
-
-![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-toc.png)
-
-* 小屏幕
-
-![Mobile Preview](http://iissnan.com/nexus/next/mobile.png)
-
 
 ## 安装
 
@@ -39,7 +21,7 @@
 ## 更新
 
 ```
-cd theme/next
+cd themes/next
 git pull
 ```
 
@@ -341,6 +323,7 @@ First things first, always keep things simple.
 - [x] Add Google site verification meta.
 - [x] Add Google/Baidu analytics.
 
+[![views](https://sourcegraph.com/api/repos/github.com/iissnan/hexo-theme-next/.counters/views.svg)](https://sourcegraph.com/github.com/iissnan/hexo-theme-next)
 
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
