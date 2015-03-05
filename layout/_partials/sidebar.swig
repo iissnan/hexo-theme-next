@@ -54,8 +54,8 @@
       <div class="social-info motion-element">
         {% if theme.social %}
           {% for name, link in theme.social %}
-            <span class="soclial-item">
-              <a href="{{ link }}">{{ name|upper }}</a>
+            <span class="social-item">
+              <a href="{{ link }}">{{ name }}</a>
             </span>
           {% endfor %}
         {% endif %}

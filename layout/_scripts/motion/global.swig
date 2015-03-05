@@ -31,16 +31,14 @@
 
 
     $(document)
-      .on('sidebar.show', function () {
+      .on('sidebar.isShowing', function () {
         isDesktop() && body.velocity(
           {paddingRight: SIDEBAR_WIDTH},
           SIDEBAR_DISPLAY_DURATION
         );
         sidebarContentMotion();
       })
-      .on('sidebar.hide', function () {
-
-      });
+      .on('sidebar.isHiding', function () {});
 
 
     function backToTopMotion () {
@@ -56,8 +54,14 @@
       sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
       sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
 
-      sidebar.velocity({width: SIDEBAR_WIDTH}, SIDEBAR_DISPLAY_DURATION);
-      sidebar.trigger('sidebar.show');
+      sidebar.velocity({width: SIDEBAR_WIDTH}, {
+        duration: SIDEBAR_DISPLAY_DURATION,
+        complete: function () {
+          sidebar.addClass('sidebar-active');
+          sidebar.trigger('sidebar.didShow');
+        }
+      });
+      sidebar.trigger('sidebar.isShowing');
     }
 
     function sidebarHideMotion () {
@@ -68,7 +72,8 @@
       sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
       sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
 
-      sidebar.trigger('sidebar.hide');
+      sidebar.removeClass('sidebar-active');
+      sidebar.trigger('sidebar.isHiding');
     };
 
     function sidebarContentMotion () {
