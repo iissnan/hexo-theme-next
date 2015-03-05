@@ -1,4 +1,76 @@
 
+{% include '../bootstrap.scrollspy.swig' %}
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      $tocSelector.scrollPager({
+        max: getTOCMaxHeight()
+      });
+    }
+
+    function getTOCMaxHeight () {
+      // TODO: Make it beautiful
+      var $sidebarInner = $('.sidebar-inner');
+      var height = $('.sidebar').height() -
+        parseInt($sidebarInner.css('padding-top'), 10) -
+        parseInt($sidebarInner.css('padding-bottom'), 10) -
+        $('.sidebar-nav').height() -
+        parseInt($tocSelector.css('margin-top'), 10) -
+        parseInt($tocSelector.css('margin-bottom'), 10);
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    $(document).on('sidebar.didShow', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+      });
+    }
+  });
+</script>
+
 {% if theme.use_motion %}
   <script type="text/javascript" id="sidebar.nav">
     $(document).ready(function () {
@@ -44,30 +116,3 @@
     });
   </script>
 {% endif %}
-
-{% include '../bootstrap.scrollspy.swig' %}
-
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var activeCurrentSelector = '.active-current';
-
-    $(tocSelector)
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
-
-        removeCurrentActiveClass()
-        $currentActiveElement.addClass('active-current');
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass()
-      });
-
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
-    }
-
-    $('body').scrollspy({ target: tocSelector });
-  });
-</script>
