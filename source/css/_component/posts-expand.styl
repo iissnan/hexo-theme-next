@@ -88,13 +88,49 @@
 }
 
 .posts-expand .post-tags {
-  margin-top: 60px;
+  margin-top: 40px;
   text-align: center;
 
   a {
     display inline-block
     margin-right 10px
     font-size: 13px
+  }
+}
+
+.post-nav {
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 10px;
+  white-space: nowrap;
+  border-top: 1px solid $gainsboro;
+}
+
+.post-nav-item {
+  display: inline-block;
+  width: 50%;
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    color: $black-light;
+    background-size: 18px;
+  }
+}
+
+.post-nav-prev {
+  a {
+    padding-left: 14px;
+    background: url($chevron-left) no-repeat 0 50%;
+  }
+}
+
+.post-nav-next {
+  text-align: right;
+
+  a {
+    padding-right: 14px;
+    background: url($chevron-right) no-repeat 100% 50%;
   }
 }
 
