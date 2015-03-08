@@ -93,10 +93,25 @@
           </div>
         {% endif %}
 
-        {% set isLast = loop.index % page.per_page === 0 %}
+        {% if is_post() and (post.prev or post.next) %}
+          <div class="post-nav">
+            <div class="post-nav-prev post-nav-item">
+              {% if post.prev %}
+                <a href="{{ url_for(post.prev.path) }}">{{post.prev.title}}</a>
+              {% endif %}
+            </div>
 
+            <div class="post-nav-next post-nav-item">
+              {% if post.next %}
+                <a href="{{ url_for(post.next.path) }}">{{post.next.title}}</a>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% set isLast = loop.index % page.per_page === 0 %}
         {% if is_home() and not isLast %}
-          <div class="post-eof the-shape"></div>
+          <div class="post-eof"></div>
         {% endif %}
       </div>
     {% endif %}
