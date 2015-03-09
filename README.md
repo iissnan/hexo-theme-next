@@ -1,7 +1,7 @@
-# NexT 
+# NexT
 
 > 精于心，简于形
- 
+
 [在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)
 
 ![Desktop Preview](http://iissnan.com/nexus/next/desktop-preview.png)
@@ -93,7 +93,41 @@ icon_font: default
 # 代码高亮主题
 # available: normal | night | night eighties | night blue | night bright
 highlight_theme: normal
+
+# MathJax support
+# 开启数学公式渲染支持，默认关闭。设置为 `true` 开启。
+mathjax:
+
+# `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `<!-- more -->` 的地方。
+scroll_to_more: true
 ```
+
+## 主题内建样式
+
+`.blockquote-center`
+
+> 带上下分割线的引用，引用内文本将自动居中。适用于单行引用文本的场景。
+
+示例文章： [The ButterFly Effect](http://notes.iissnan.com/2015/The-ButterFly-Effect/)
+
+使用方式：
+
+```
+<blockquote class="blockquote-center">blah blah blah</blockquote>
+```
+
+`.full-image`
+
+> 图片将自动扩展 26%，突破文章宽度。
+
+示例文章： [为何使用Jekyll这样的静态编译博客？](http://notes.iissnan.com/2015/why-to-blog-using-static-site-generator/)
+
+使用方式：
+
+```
+<img src="/image-url" class="full-image" />
+```
+
 
 ## 浏览器支持
 
