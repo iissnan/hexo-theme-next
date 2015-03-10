@@ -31,23 +31,23 @@ git pull
 
 特性概览：
 
-- [支持自定义LOGO以及主题图标](https://github.com/iissnan/hexo-theme-next/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89LOGO%E4%BB%A5%E5%8F%8A%E4%B8%BB%E9%A2%98%E5%9B%BE%E6%A0%87)
-- [支持英语/简体中文双语](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80)
-- [支持多说/DISQUS评论系统](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E5%A4%9A%E8%AF%B4-DISQUS%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F)
+- [支持自定义 LOGO 以及主题图标](https://github.com/iissnan/hexo-theme-next/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89LOGO%E4%BB%A5%E5%8F%8A%E4%B8%BB%E9%A2%98%E5%9B%BE%E6%A0%87)
+- [支持 英语 / 简体 中文双语](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80)
+- [支持 多说 / DISQUS 评论系统](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E5%A4%9A%E8%AF%B4-DISQUS%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F)
 - [支持标签云页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2)
-- [支持RSS链接](https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5)
+- [支持 RSS 链接](https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5)
 - [支持about页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2)
 - [支持5款代码高亮主题](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E5%AE%9A%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E4%B8%BB%E9%A2%98)
 - [支持 Google / 百度统计](https://github.com/iissnan/hexo-theme-next/wiki/%E6%B7%BB%E5%8A%A0-Google---%E7%99%BE%E5%BA%A6-%E7%BB%9F%E8%AE%A1)
-- [支持Google Webmaster tools](https://github.com/iissnan/hexo-theme-next/wiki/%E6%B7%BB%E5%8A%A0-Google-Webmaster-tools-%E9%AA%8C%E8%AF%81)
-- [支持Creative Commons](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE-Creative-Commons-%E5%8D%8F%E8%AE%AE)
+- [支持 Google Webmaster tools](https://github.com/iissnan/hexo-theme-next/wiki/%E6%B7%BB%E5%8A%A0-Google-Webmaster-tools-%E9%AA%8C%E8%AF%81)
+- [支持 Creative Commons](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE-Creative-Commons-%E5%8D%8F%E8%AE%AE)
 - [支持指定站点建立时间](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E5%AE%9A%E7%AB%99%E7%82%B9%E5%BB%BA%E7%AB%8B%E6%97%B6%E9%97%B4)
-- [支持数学公式显示（借助MathJax）](https://github.com/iissnan/hexo-theme-next/wiki/%E5%BC%80%E5%90%AF%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA)
+- [支持数学公式显示（借助 MathJax）](https://github.com/iissnan/hexo-theme-next/wiki/%E5%BC%80%E5%90%AF%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA)
 - [设置侧边栏头像](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F)
 - [设置侧边栏社交链接](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5)
 
 
-## 主题配置
+## 配置
 
 > NexT 坚持将复杂的细节隐藏，提供尽量少并且简便的设置，保持最大限度的易用性。
 
@@ -62,6 +62,7 @@ since: 2015
 # EndNexT 主题相关配置 ==========================
 ```
 
+### 主题配置
 
 ```
 # 菜单配置
@@ -108,9 +109,11 @@ scroll_to_more: true
 
 > 带上下分割线的引用，引用内文本将自动居中。适用于单行引用文本的场景。
 
-示例文章： [The ButterFly Effect](http://notes.iissnan.com/2015/The-ButterFly-Effect/)
+### 示例
 
-使用方式：
+![Blockquote Center](http://iissnan.com/nexus/next/blockquote-center.png)
+
+### 使用方式：
 
 ```
 <blockquote class="blockquote-center">blah blah blah</blockquote>
@@ -120,9 +123,11 @@ scroll_to_more: true
 
 > 图片将自动扩展 26%，突破文章宽度。
 
-示例文章： [为何使用Jekyll这样的静态编译博客？](http://notes.iissnan.com/2015/why-to-blog-using-static-site-generator/)
+### 示例
 
-使用方式：
+![Full Image](http://iissnan.com/nexus/next/full-image.png)
+
+### 使用方式：
 
 ```
 <img src="/image-url" class="full-image" />
@@ -151,10 +156,13 @@ First things first, always keep things simple.
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
 [![jquery-image]][jquery-url]
+[![velocity-image]][velocity-url]
 
 [hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
 [hexo-url]: http://hexo.io
 [bower-image]: http://img.shields.io/badge/Bower-*-2BAF2B.svg?style=flat-square
 [bower-url]: http://bower.io
-[jquery-image]: https://img.shields.io/badge/jquery-1.9-blue.svg?style=flat-square
+[jquery-image]: https://img.shields.io/badge/jquery-2.1-2BAF2B.svg?style=flat-square
 [jquery-url]: http://jquery.com/
+[velocity-image]: https://img.shields.io/badge/Velocity-1.2-2BAF2B.svg?style=flat-square
+[velocity-url]: http://julian.com/research/velocity/
