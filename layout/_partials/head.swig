@@ -20,6 +20,13 @@
     <meta name="description" content="{{ config.description }}" />
 {% endif %}
 
+{% if page.tags and page.tags.length %}
+	<meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }},{% endfor %}" />
+{% else %}
+{% if theme.keywords %}
+    <meta name="keywords" content="{{ theme.keywords }}" />
+{% endif %}
+
 {% if theme.rss %}
     <link rel="alternate" href="{{ url_for(theme.rss) }}" title="{{ config.title }}" type="application/atom+xml" />
 {% endif %}
