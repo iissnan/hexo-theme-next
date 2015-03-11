@@ -55,6 +55,7 @@
       sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
 
       sidebar.velocity({width: SIDEBAR_WIDTH}, {
+        display: 'block',
         duration: SIDEBAR_DISPLAY_DURATION,
         complete: function () {
           sidebar.addClass('sidebar-active');
