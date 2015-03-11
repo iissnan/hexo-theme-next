@@ -26,9 +26,7 @@
     }
 
     function processTOC () {
-      $tocSelector.scrollPager({
-        max: getTOCMaxHeight()
-      });
+      getTOCMaxHeight();
     }
 
     function getTOCMaxHeight () {
