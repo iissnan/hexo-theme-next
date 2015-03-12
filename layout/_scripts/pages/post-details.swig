@@ -37,7 +37,7 @@
         parseInt($sidebarInner.css('padding-bottom'), 10) -
         $('.sidebar-nav').height() -
         parseInt($tocSelector.css('margin-top'), 10) -
-        parseInt($tocSelector.css('margin-bottom'), 10);
+        parseInt($tocSelector.css('margin-bottom'), 10) - 20;
 
       $tocSelector.css('height', height);
 
@@ -58,14 +58,33 @@
     onScroll($tocSelector);
 
     function onScroll (element) {
+
       element.on('mousewheel DOMMouseScroll', function (event) {
           var oe = event.originalEvent;
           var delta = oe.wheelDelta || -oe.detail;
+          var self = this;
 
           this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
           event.preventDefault();
+
+          tocOverflowIndicator(
+            '.post-toc-indicator-top',
+            self.scrollTop > 0 ? 'show' : 'hide'
+          );
+
+          tocOverflowIndicator(
+            '.post-toc-indicator-bottom',
+            self.scrollTop >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+          )
       });
     }
+
+    function tocOverflowIndicator (indicator, action) {
+      $(indicator).velocity('stop').velocity({
+        opacity: action === 'show' ? 0.4 : 0
+      });
+    }
+
   });
 </script>
 

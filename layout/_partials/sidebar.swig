@@ -64,9 +64,12 @@
     </div>
 
     {% if is_post() %}
+      <div class="post-toc-indicator-top post-toc-indicator"></div>
       <div class="post-toc sidebar-panel-active">
         {{ toc(page.content, {"class": "nav"}) }}
       </div>
+      <div class="post-toc-indicator-bottom post-toc-indicator"></div>
     {% endif %}
+
   </div>
 </div>

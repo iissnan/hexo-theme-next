@@ -201,13 +201,13 @@
 .post-toc {
   overflow: hidden;
   position: relative;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .post-toc ol {
   overflow: auto;
   margin: 0;
-  padding: 10px;
+  padding: 0 10px 10px;
   text-align: left;
   list-style: none;
   font-size: 14px;
@@ -237,4 +237,25 @@
   &:hover {
     color: $sidebar-highlight;
   }
+}
+
+.post-toc-indicator {
+  height: 20px;
+  opacity: 0.4;
+  background: no-repeat 10px 50%;
+  background-size: 10px 12px;
+}
+
+.post-toc-indicator-top {
+  opacity: 0;
+  margin-top: 10px;
+  background-image: url($post-toc-indicator-top);
+}
+.post-toc-indicator-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url($post-toc-indicator-bottom);
+  background-position-x: 20px;
 }
