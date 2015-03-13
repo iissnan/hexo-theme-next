@@ -112,33 +112,56 @@
   white-space: normal;
 
   a {
+    position: relative;
     display: inline-block;
+    line-height: 25px;
     font-size: 14px;
     color: $black-light;
     border-bottom: none;
-    background-size: 18px;
 
     &:hover {
       color: $black-deep;
       font-weight: bold;
       border-bottom: none;
     }
+
+    &:active {
+      top: 2px;
+    }
+
+    &:before, &:after {
+      display: inline-block;
+      width: 16px;
+      height: 25px;
+      vertical-align: top;
+      opacity: 0.4;
+      background-size: 16px;
+    }
   }
+
 }
 
 .post-nav-prev {
-  a {
-    padding-left: 14px;
+  a:before {
+    content: ' ';
     background: url($chevron-left) no-repeat 0 50%;
+    background-size: 8px;
+  }
+  a:hover:before {
+    opacity: 1;
   }
 }
 
 .post-nav-next {
   text-align: right;
 
-  a {
-    padding-right: 14px;
+  a:after {
+    content: ' ';
     background: url($chevron-right) no-repeat 100% 50%;
+    background-size: 8px;
+  }
+  a:hover:after {
+    opacity: 1;
   }
 }
 

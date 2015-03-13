@@ -25,13 +25,13 @@
       {% endif %}
 
       <div class="post-meta">
-          <span class="post-time">
-            {% if is_home() or is_post() %}
-              {{ __('post.posted') }} {{ post.date | date('Y-m-d') }}
-            {% else %}
-              {{ post.date | date('m-d') }}
-            {% endif %}
-          </span>
+        <span class="post-time">
+          {% if is_home() or is_post() %}
+            {{ __('post.posted') }} {{ post.date | date('Y-m-d') }}
+          {% else %}
+            {{ post.date | date('m-d') }}
+          {% endif %}
+        </span>
         {% if post.comments %}
           {% if (config.duoshuo and config.duoshuo.shortname) or config.duoshuo_shortname %}
             <span class="post-comments-count">

@@ -1,5 +1,4 @@
 .back-to-top {
-  display: none;
   position: fixed;
   bottom: 24px;
   right: 50px;
@@ -12,8 +11,11 @@
   cursor: pointer;
   -webkit-transform: translateZ(0);
 
-  +desktop() {
-    display: block;
+  +mobile() {
+    display: none;
+  }
+  +tablet() {
+    display: none;
   }
 
   &:before {

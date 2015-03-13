@@ -41,6 +41,12 @@
   {% endfor %}
 {% endblock %}
 
+{% block script_extra_before %}
+  {% if theme.use_motion %}
+    postMotionOptions = {stagger: 100, drag: true};
+  {% endif %}
+{% endblock %}
+
 {% block script_extra %}
   {% if theme.use_motion %}
     <script type="text/javascript" id="motion.page.archive">

@@ -85,7 +85,8 @@
     }
 
     function postsListMotion () {
-      $('.post').velocity('transition.slideDownIn', {stagger: 300, drag: true});
+      var postMotionOptions = postMotionOptions || {stagger: 300, drag: true};
+      $('.post').velocity('transition.slideDownIn', postMotionOptions);
     }
 
     function sidebatToggleMotion () {
