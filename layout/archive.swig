@@ -43,7 +43,9 @@
 
 {% block script_extra_before %}
   {% if theme.use_motion %}
-    postMotionOptions = {stagger: 100, drag: true};
+    <script type="text/javascript">
+      postMotionOptions = {stagger: 100, drag: true};
+    </script>
   {% endif %}
 {% endblock %}
 
