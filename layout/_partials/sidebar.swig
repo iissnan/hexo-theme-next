@@ -12,7 +12,7 @@
 
     {% if is_post() %}
       <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc">
+        <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
           {{ __('sidebar.toc') }}
         </li>
         <li class="sidebar-nav-overview" data-target="site-overview">
@@ -73,11 +73,13 @@
     </div>
 
     {% if is_post() %}
-      <div class="post-toc-indicator-top post-toc-indicator"></div>
-      <div class="post-toc sidebar-panel-active">
-        {{ toc(page.content, {"class": "nav"}) }}
+      <div class="post-toc-wrap sidebar-panel-active">
+        <div class="post-toc-indicator-top post-toc-indicator"></div>
+        <div class="post-toc">
+          {{ toc(page.content, {"class": "nav"}) }}
+        </div>
+        <div class="post-toc-indicator-bottom post-toc-indicator"></div>
       </div>
-      <div class="post-toc-indicator-bottom post-toc-indicator"></div>
     {% endif %}
 
   </div>

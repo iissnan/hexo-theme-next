@@ -60,6 +60,7 @@
 }
 
 .sidebar-inner {
+  position: relative;
   padding: 20px 10px;
   color: $grey-dark;
   text-align: center;
@@ -201,7 +202,6 @@
 .post-toc {
   overflow: hidden;
   position: relative;
-  margin-bottom: 20px;
 }
 
 .post-toc ol {
@@ -252,10 +252,7 @@
   background-image: url($post-toc-indicator-top);
 }
 .post-toc-indicator-bottom {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  position: absolute;
   width: 100%;
   background-image: url($post-toc-indicator-bottom);
-  background-position-x: 20px;
 }
