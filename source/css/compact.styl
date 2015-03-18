@@ -1,16 +1,47 @@
+$font-size-headings-base = 23px;
 
+h2, h3, h4, h5, h6 { margin: 20px 0 10px; }
+
+p { margin: 10px 0; }
+
+a { border-bottom-color: $grey; }
+
+hr { margin: 20px 0; }
+
+
+for headline in (1..6) {
+  h{headline} {
+    font-size: $font-size-headings-base - $font-size-headings-step * headline;
+  }
+
+  +mobile() {
+    h{headline} {
+      font-size: $font-size-headings-base - $font-size-headings-step * headline - 4px;
+    }
+  }
+}
+
+.btn {
+  padding: 0 10px;
+  border-width: 2px;
+  border-radius: 0;
+}
+
+.headband { display: none; }
+
+.header { background: $whitesmoke; }
 .header-inner {
-  padding-top: 0;
+  margin-bottom: 80px;
+  padding: 40px 0;
 
   +mobile() {
     padding-bottom: 30px;
   }
 }
 
-
-
 .site-meta {
   float: left;
+  margin-left: -20px;
   text-align: left;
 
   +mobile() {
@@ -22,30 +53,55 @@
   }
 
   .brand {
-    padding: 0 20px 0 10px;
-    text-align: center;
+    padding: 2px 1px;
+    color: $black-deep;
+    background: none;
   }
 
-  .logo {
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    +mobile() {
-      line-height: 50px;
-    }
-  }
+  .logo { display: none; }
+
   .site-title {
-    font-size: 16px;
+    font-size: 24px;
+    font-weight: bolder;
     +mobile() {
       line-height: 50px;
     }
   }
 }
 
+
+.logo-line-before,
+.logo-line-after {
+  display: block;
+  margin: 0 auto;
+  width: 75%
+  height: 5px;
+  background: $black-deep;
+}
+
+
+// Menu
+// --------------------------------------------------
 .menu {
   float: right;
-  margin: 14px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0 20px;
+
+  br { display: none; }
+
+  .menu-item { margin-left: 10px; }
+
+  .menu-item a {
+    padding: 5px 10px;
+    background: $black-deep;
+    border: none;
+    color: white;
+    transition-property: background;
+
+    &:hover {
+      background: $grey;
+    }
+  }
 
   a::before {
     display: none;
@@ -58,4 +114,69 @@
   +mobile() {
     float: none;
   }
+}
+
+.menu-item-icon { display: none; }
+
+
+
+// Post Expanded
+// --------------------------------------------------
+.posts-expand {
+  padding-top: 0;
+
+  .post-title,
+  .post-meta { text-align: left; }
+  .post-eof { display: none; }
+
+  .post { margin-top: 80px; }
+  .post:first-child { margin-top: 0; }
+
+  .post-meta { margin-bottom: 20px; }
+
+  .post-title { font-size: 22px; }
+
+  .post-body img { margin: 0; }
+}
+
+.post-more-link {
+  margin-top: 20px;
+  text-align: left;
+}
+
+
+
+// Pagination
+// --------------------------------------------------
+.pagination {
+  margin: 80px 0 0;
+  border-top: none;
+  text-align: left;
+
+  .page-number:first-child { margin-left: 0; }
+  .page-number, .prev, .next {
+    border-bottom: none;
+    border-top: none;
+  }
+}
+
+// Footer
+// --------------------------------------------------
+.footer {
+  margin-top: 80px;
+  padding: 10px 0;
+  background: $whitesmoke;
+  color: $grey-dim;
+}
+.footer-inner {
+  margin: 0 auto;
+  text-align: left;
+}
+
+// Helpers
+// --------------------------------------------------
+.full-image.full-image.full-image {
+  max-width: 100%;
+  width: auto;
+  margin: 0;
 }
