@@ -1,26 +1,26 @@
-$font-size-headings-base = 23px;
+//
+// Compact theme
+// =================================================
 
+
+.test { border: 10px; }
+
+// Tags
+// --------------------------------------------------
 h2, h3, h4, h5, h6 { margin: 20px 0 10px; }
 
 p { margin: 10px 0; }
 
 a { border-bottom-color: $grey; }
 
-hr { margin: 20px 0; }
-
-
-for headline in (1..6) {
-  h{headline} {
-    font-size: $font-size-headings-base - $font-size-headings-step * headline;
-  }
-
-  +mobile() {
-    h{headline} {
-      font-size: $font-size-headings-base - $font-size-headings-step * headline - 4px;
-    }
-  }
+hr {
+  margin: 20px 0;
+  height: 2px;
 }
 
+
+// Components
+// --------------------------------------------------
 .btn {
   padding: 0 10px;
   border-width: 2px;
@@ -29,14 +29,16 @@ for headline in (1..6) {
 
 .headband { display: none; }
 
+
+// Header
+// --------------------------------------------------
 .header { background: $whitesmoke; }
 .header-inner {
   margin-bottom: 80px;
   padding: 40px 0;
+  clearfix();
 
-  +mobile() {
-    padding-bottom: 30px;
-  }
+  +mobile() { padding-bottom: 30px; }
 }
 
 .site-meta {
@@ -75,7 +77,7 @@ for headline in (1..6) {
   display: block;
   margin: 0 auto;
   width: 75%
-  height: 5px;
+  height: 4px;
   background: $black-deep;
 }
 
@@ -98,22 +100,16 @@ for headline in (1..6) {
     color: white;
     transition-property: background;
 
-    &:hover {
-      background: $grey;
-    }
+    &:hover { background: $grey; }
   }
 
   a::before {
     display: none;
 
-    +mobile() {
-      display: block;
-    }
+    +mobile() { display: block; }
   }
 
-  +mobile() {
-    float: none;
-  }
+  +mobile() { float: none; }
 }
 
 .menu-item-icon { display: none; }
@@ -137,11 +133,24 @@ for headline in (1..6) {
   .post-title { font-size: 22px; }
 
   .post-body img { margin: 0; }
+
+  .post-tags {
+    text-align: left;
+    a {
+      padding: 1px 5px;
+      background: $whitesmoke;
+      border-bottom: none;
+    }
+    a:hover { background: $grey-light; }
+  }
+  .post-nav { margin-top: 40px; }
 }
 
 .post-more-link {
   margin-top: 20px;
   text-align: left;
+
+  a { font-size: 14px; }
 }
 
 

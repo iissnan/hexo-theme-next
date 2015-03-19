@@ -1,9 +1,10 @@
 // CSS Style Guide: http://codeguide.co/#css
 
-
+$is-compact = hexo-config('theme') == 'compact';
 
 // Core variables and mixins
-@import "_core/variables";
+@import "_variables/base";
+@import "_variables/compact" if $is-compact;
 @import "_core/mixins";
 
 
@@ -49,14 +50,14 @@
 @import "_component/duoshuo";
 
 
-
 // Page specific styles
 @import "_page/home";
 @import "_page/archive";
 @import "_page/post-detail";
 
-@require "compact" if hexo-config('theme') == "compact";
 
+// Import theme.
+@import "_compact" if $is-compact;
 
 // Custom styles
 @import "_custom";

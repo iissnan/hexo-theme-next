@@ -11,10 +11,12 @@
 .text-justify { text-align: justify; }
 .text-nowrap  { white-space: nowrap; }
 
+
 // Transformation
 .text-lowercase  { text-transform: lowercase; }
 .text-uppercase  { text-transform: uppercase; }
 .text-capitalize { text-transform: capitalize; }
+
 
 // Center-align a block level element.
 .center-block {
@@ -26,12 +28,7 @@
 
 // Clearfix. http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix {
-  &:before,
-  &:after {
-    content: " ";
-    display: table;
-  }
-  &:after { clear: both; }
+  clearfix();
 }
 
 
