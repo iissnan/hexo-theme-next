@@ -75,15 +75,24 @@ hr {
 .logo-line-before,
 .logo-line-after {
   display: block;
+  overflow: hidden;
   margin: 0 auto;
-  width: 75%
-  height: 4px;
-  background: $black-deep;
+  width: 75%;
 
-  +mobile() {
-    width: 40%;
-    height: 3px;
+  +mobile() { width: 40%; }
+
+  i {
+    position: relative;
+    display: block;
+    height: 4px;
+    background: $black-deep;
+    +mobile() { height: 3px; }
   }
+}
+
+.use-motion {
+  .logo-line-before i { left: -100%; }
+  .logo-line-after i { right: -100%; }
 }
 
 

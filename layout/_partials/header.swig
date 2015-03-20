@@ -1,12 +1,12 @@
 <h1 class="site-meta">
-  <span class="logo-line-before"></span>
+  <span class="logo-line-before"><i></i></span>
   <a href="{{ config.root }}" class="brand">
       <span class="logo">
         <i class="icon-logo"></i>
       </span>
       <span class="site-title">{{ config.title }}</span>
   </a>
-  <span class="logo-line-after"></span>
+  <span class="logo-line-after"><i></i></span>
 </h1>
 
 {% if theme.menu %}
