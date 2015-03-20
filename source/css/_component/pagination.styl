@@ -11,6 +11,8 @@
   margin: 0 10px;
   padding: 0 10px;
   line-height: 30px;
+
+  +mobile() { margin: 0 5px; }
 }
 
 .pagination {
@@ -26,7 +28,12 @@
 
   .space {
     @extend .page-number-basic;
+    padding: 0;
+    margin: 0;
   }
+
+  .prev { margin-left: 0; }
+  .next { margin-right: 0; }
 
   .page-number.current {
     color: $pagination-active-color;
@@ -36,10 +43,8 @@
 }
 
 @media (max-width: 767px)
-  .pagination {
-    text-align: left;
-    border-top: none;
-  }
+  .pagination { border-top: none; }
+  
   .pagination {
     .prev, .next, .page-number {
       margin-bottom: 10px;
@@ -49,4 +54,3 @@
       &:hover { border-bottom-color: $pagination-link-hover-border; }
     }
   }
-
