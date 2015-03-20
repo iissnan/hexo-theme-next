@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next {% if theme.use_motion %}use-motion{% endif %}">
+<html class="theme-next {% if theme.use_motion %}use-motion{% endif %} {% if theme.theme %}theme-next-{{theme.theme}}{% endif %}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>

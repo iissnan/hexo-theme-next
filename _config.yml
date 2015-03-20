@@ -32,7 +32,11 @@ highlight_theme: normal
 # MathJax Support
 mathjax:
 
-theme: compact
+
+# Theme
+# Available: default | compact
+theme: default
+#theme: compact
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
