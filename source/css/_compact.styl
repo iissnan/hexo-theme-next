@@ -44,20 +44,18 @@ hr {
 .site-meta {
   float: left;
   margin-left: -20px;
-  text-align: left;
 
   +mobile() {
-    float: none
-    .brand {
-      display: block;
-      line-height: 50px;
-    }
+    float: none;
+    margin-left: 0;
   }
 
   .brand {
     padding: 2px 1px;
     color: $black-deep;
     background: none;
+
+    +mobile() { display: block; }
   }
 
   .logo { display: none; }
@@ -65,8 +63,10 @@ hr {
   .site-title {
     font-size: 24px;
     font-weight: bolder;
+
     +mobile() {
-      line-height: 50px;
+      font-size: 22px;
+      line-height: 40px;
     }
   }
 }
@@ -79,6 +79,11 @@ hr {
   width: 75%
   height: 4px;
   background: $black-deep;
+
+  +mobile() {
+    width: 40%;
+    height: 3px;
+  }
 }
 
 
@@ -86,8 +91,10 @@ hr {
 // --------------------------------------------------
 .menu {
   float: right;
-  margin: 10px 0 0 0;
+  margin: 8px 0 0 0;
   padding: 0 20px;
+
+  +mobile() { margin-top: 20px; }
 
   br { display: none; }
 
@@ -122,7 +129,10 @@ hr {
   padding-top: 0;
 
   .post-title,
-  .post-meta { text-align: left; }
+  .post-meta {
+    text-align: $site-meta-text-align;
+    +mobile() { text-align: center; }
+  }
   .post-eof { display: none; }
 
   .post { margin-top: 80px; }
@@ -130,7 +140,7 @@ hr {
 
   .post-meta { margin-bottom: 20px; }
 
-  .post-title { font-size: 22px; }
+  .post-title { font-size: 24px; }
 
   .post-body img { margin: 0; }
 
@@ -154,18 +164,25 @@ hr {
 }
 
 
+// Page - Post details
+// --------------------------------------------------
+.page-post-detail {
+  .post-title,
+  .post-meta { text-align: center; }
+
+  .post-meta { margin-bottom: 60px; }
+}
+
 
 // Pagination
 // --------------------------------------------------
 .pagination {
   margin: 80px 0 0;
-  border-top: none;
   text-align: left;
 
-  .page-number:first-child { margin-left: 0; }
-  .page-number, .prev, .next {
-    border-bottom: none;
-    border-top: none;
+  +mobile() {
+    margin: 80px 10px 0;
+    text-align: center;
   }
 }
 
@@ -180,6 +197,8 @@ hr {
 .footer-inner {
   margin: 0 auto;
   text-align: left;
+
+  +mobile() { text-align: center; }
 }
 
 // Helpers

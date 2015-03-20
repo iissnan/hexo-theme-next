@@ -7,7 +7,11 @@
 
 .header-inner { position: relative; }
 
-.site-meta { text-align: $site-meta-text-align; }
+.site-meta {
+  text-align: $site-meta-text-align;
+
+  +mobile() { text-align: center; }
+}
 
 .brand {
   position: relative;
