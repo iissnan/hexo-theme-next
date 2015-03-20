@@ -37,6 +37,10 @@ mathjax:
 scroll_to_more: true
 
 
+# Automatically add list number to toc.
+toc_list_number: false
+
+
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING
 
