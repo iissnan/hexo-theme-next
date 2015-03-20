@@ -1,22 +1,16 @@
 .use-motion {
-  .post {
-    opacity: 0;
-  }
+  .post { opacity: 0; }
 }
 
 .page-archive {
 
-  $left = 55px;
-  $left-mobile = 5px;
-
   .archive-page-counter {
     position: relative;
     top: 3px;
-    left: 70px;
+    left: 20px;
 
     +mobile() {
       top: 5px;
-      left: $left-mobile + 10px;
     }
   }
 
@@ -25,22 +19,18 @@
 
     &::after {
       top: 20px;
-      left: $left;
+      left: 0;
       margin-left: -2px;
       width: 4px;
       height: 100%;
       background: $whitesmoke;
       z-index: $zindex-bottom;
-
-      +mobile() {
-        left: $left-mobile;
-      }
     }
 
     .archive-move-on {
       position: absolute;
       top: 11px;
-      left: $left;
+      left: 0;
       margin-left: -6px;
       width: 10px;
       height: 10px;
@@ -49,9 +39,6 @@
       border: 1px solid white;
 
       circle();
-      +mobile() {
-        left: $left-mobile;
-      }
     }
 
     &::before, &::after {

@@ -12,20 +12,14 @@
 
 .posts-collapse {
 
-  $left = 55px;
-  $left-mobile = 5px;
+  margin-left: $posts-collpase-left;
+  +mobile() { padding-left: $posts-collpase-left-mobile; }
 
   .collection-title {
     position: relative;
-    margin: 60px 0 60px $left;
+    margin: 60px 0;
 
-    +mobile() {
-      margin-left: $left-mobile;
-    }
-
-    h2 {
-      margin-left: 20px;
-    }
+    h2 { margin-left: 20px; }
 
     &::before {
       content: " ";
@@ -41,13 +35,7 @@
     }
   }
 
-  .post {
-    margin: 30px 0 30px $left;
-
-    +mobile() {
-      margin-left: $left-mobile;
-    }
-  }
+  .post { margin: 30px 0; }
 
   .post-header {
     position: relative;
@@ -70,9 +58,7 @@
   .post-header:hover {
     border-bottom-color: $grey-dim;
 
-    &::before {
-      background: $black-deep;
-    }
+    &::before { background: $black-deep; }
   }
 
   .post-meta {
@@ -82,9 +68,7 @@
     top: 5px;
   }
 
-  .post-comments-count {
-    display: none;
-  }
+  .post-comments-count { display: none; }
 
   .post-title {
     margin-left: 60px;
