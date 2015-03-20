@@ -76,7 +76,12 @@
       <div class="post-toc-wrap sidebar-panel-active">
         <div class="post-toc-indicator-top post-toc-indicator"></div>
         <div class="post-toc">
-          {{ toc(page.content, {"class": "nav"}) }}
+          {% set toc = toc(page.content, {"class": "nav", list_number: theme.toc_list_number}) %}
+          {% if toc.length === 0 %}
+            <p class="post-toc-empty">{{ __('post.toc_empty') }}</div>
+          {% else %}
+            <div class="post-toc-content">{{ toc }}</div>
+          {% endif %}
         </div>
         <div class="post-toc-indicator-bottom post-toc-indicator"></div>
       </div>
