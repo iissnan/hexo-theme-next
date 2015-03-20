@@ -38,7 +38,7 @@ scroll_to_more: true
 
 
 # Automatically add list number to toc.
-toc_list_number: false
+toc_list_number: true
 
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
