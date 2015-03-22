@@ -125,7 +125,8 @@
       });
 
       // Expand sidebar on post detail page by default, when post has a toc.
-      if ($('.post-toc-content').html().trim().length > 0 && isDesktop()) {
+      var $tocContent = $('.post-toc-content');
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0 && isDesktop()) {
         setTimeout(function () {
           $('.sidebar-toggle').trigger('click');
         }, 800);

@@ -78,7 +78,7 @@
         <div class="post-toc">
           {% set toc = toc(page.content, {"class": "nav", list_number: theme.toc_list_number}) %}
           {% if toc.length === 0 %}
-            <p class="post-toc-empty">{{ __('post.toc_empty') }}</div>
+            <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
           {% else %}
             <div class="post-toc-content">{{ toc }}</div>
           {% endif %}
