@@ -15,6 +15,7 @@ sidebar:
 
 post:
   posted: Posté le
+  in: In
   read_more: Lire la suite
   untitled: Non titré
   toc_empty: This post does not have a Table Of Contents
@@ -52,3 +53,7 @@ cheers:
   excellent: Excellent
 
 keep_on: Et ca ne fait que commencer.
+
+symbol:
+  comma: ', '
+  period: '. '

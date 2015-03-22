@@ -5,7 +5,10 @@
 
 {% block content %}
   <div class="collection-title">
-    <h2 >{{ page.tag }}</h2>
+    <h2 >
+      {{ page.tag }}
+      <small>{{  __('title.tag')  }}</small>
+    </h2>
   </div>
 
   {% for post in page.posts %}

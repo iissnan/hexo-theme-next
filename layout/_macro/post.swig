@@ -32,6 +32,24 @@
             {{ post.date | date('m-d') }}
           {% endif %}
         </span>
+
+        {% if is_home() or is_post() %}
+          {% if post.categories and post.categories.length %}
+            <span class="post-category">
+              &nbsp; | &nbsp; {{ __('post.in') }}
+              {% for cat in post.categories %}
+                <a href="{{ url_for(cat.path) }}">{{ cat.name }}</a>
+
+                {% set cat_length = post.categories.length %}
+                {% if cat_length > 1 and loop.index !== cat_length %}
+                  {{ __('symbol.comma') }}
+                {% endif %}
+
+              {% endfor %}
+            </span>
+          {% endif %}
+        {% endif %}
+
         {% if post.comments %}
           {% if (config.duoshuo and config.duoshuo.shortname) or config.duoshuo_shortname %}
             <span class="post-comments-count">
