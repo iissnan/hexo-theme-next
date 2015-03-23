@@ -1,5 +1,6 @@
 menu:
   home: /
+  #categories: /categories
   archives: /archives
   tags: /tags
   #about: /about
@@ -34,7 +35,7 @@ mathjax:
 
 
 # Schemes
-scheme: compact
+#scheme: compact
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.

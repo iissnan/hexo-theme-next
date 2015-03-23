@@ -6,6 +6,7 @@ title:
 menu:
   home: Accueil
   archives: Archives
+  categories: Categories
   tags: Tags
   about: A propos
 
@@ -33,6 +34,11 @@ counter:
     zero: Aucun tags
     one: 1 tag au total
     other: "%d tags au total"
+
+  categories:
+    zero: Aucun categories
+    one: 1 category au total
+    other: "%d categories au total"
 
   archive_posts:
     zero: Aucun article.

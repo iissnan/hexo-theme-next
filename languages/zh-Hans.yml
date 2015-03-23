@@ -6,6 +6,7 @@ title:
 menu:
   home: 首页
   archives: 归档
+  categories: 分类
   tags: 标签
   about: 关于
 
@@ -35,6 +36,11 @@ counter:
     zero: 暂无标签
     one: 目前共计 1 个标签
     other: "目前共计 %d 个标签"
+
+  categories:
+    zero: 暂无分类
+    one: 目前共计 1 个分类
+    other: "目前共计 %d 个分类"
 
   archive_posts:
     zero: 暂无日志。

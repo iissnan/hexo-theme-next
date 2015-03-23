@@ -1,0 +1,28 @@
+.category-all-page {
+  .category-all-title { text-align: center; }
+
+  .category-all { margin-top: 20px; }
+
+  .category-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .category-list-item {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .category-list-count {
+    color: $grey;
+    &:before {
+      display: inline;
+      content: " ("
+    }
+    &:after {
+      display: inline;
+      content: ") "
+    }
+  }
+}

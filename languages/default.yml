@@ -6,6 +6,7 @@ title:
 menu:
   home: Home
   archives: Archives
+  categories: Categories
   tags: Tags
   about: About
 
@@ -33,6 +34,11 @@ counter:
     zero: No tags
     one: 1 tag in total
     other: "%d tags in total"
+
+  categories:
+    zero: No categories
+    one: 1 category in total
+    other: "%d categories in total"
 
   archive_posts:
     zero: No posts.
