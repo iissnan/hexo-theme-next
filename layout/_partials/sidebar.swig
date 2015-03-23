@@ -51,10 +51,10 @@
         </div>
       {% endif %}
 
-      <div class="social-info motion-element">
+      <div class="links-of-author motion-element">
         {% if theme.social %}
           {% for name, link in theme.social %}
-            <span class="social-item">
+            <span class="links-of-author-item">
               <a href="{{ link }}">{{ name }}</a>
             </span>
           {% endfor %}
