@@ -36,7 +36,7 @@
 
 ## Update
 
-```
+```shell
 cd theme/next
 git pull
 ```
@@ -48,7 +48,7 @@ git pull
 > Default language is English.
 > Set `language` field as following in site `_config.yml` to change to Chinese.
 
-```
+```yml
 language: zh-Hans
 ```
 
@@ -56,7 +56,7 @@ language: zh-Hans
 
 > Add `duoshuo` field to site `_config.yml`. For instance
 
-```
+```yml
 duoshuo:
   enable: true
   shortname: duoshuo-shortname
@@ -111,7 +111,7 @@ Head over to [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) fo
 
 NexT comes with few configurations.
 
-```
+```yml
 
 # Menu configuration.
 menu:
