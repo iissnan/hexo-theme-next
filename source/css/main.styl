@@ -1,10 +1,10 @@
 // CSS Style Guide: http://codeguide.co/#css
 
-$is-compact = hexo-config('scheme') == 'compact';
+$is-mist = hexo-config('scheme') == 'Mist';
 
 // Core variables and mixins
 @import "_variables/base";
-@import "_variables/compact" if $is-compact;
+@import "_variables/mist" if $is-mist;
 @import "_core/mixins";
 
 
@@ -58,7 +58,7 @@ $is-compact = hexo-config('scheme') == 'compact';
 
 
 // Import theme.
-@import "_compact" if $is-compact;
+@import "_mist" if $is-mist;
 
 // Custom styles
 @import "_custom";
