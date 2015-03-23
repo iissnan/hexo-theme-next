@@ -4,7 +4,12 @@
 
 [在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)
 
-![Desktop Preview](http://iissnan.com/nexus/next/desktop-preview.png)
+## 预览
+
+> NexT - 默认主题
+
+![NexT Preview](http://iissnan.com/nexus/next/desktop-preview.png)
+
 
 ## 安装
 
@@ -35,6 +40,7 @@ git pull
 - [支持 英语 / 简体 中文双语](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80)
 - [支持 多说 / DISQUS 评论系统](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E5%A4%9A%E8%AF%B4-DISQUS%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F)
 - [支持 标签云 页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2)
+- [支持 分类 页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2)
 - [支持 RSS 链接](https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5)
 - [支持 About 页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA-%22%E5%85%B3%E4%BA%8E%E6%88%91%22-%E9%A1%B5%E9%9D%A2)
 - [支持 5 款代码高亮主题](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E5%AE%9A%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E4%B8%BB%E9%A2%98)
@@ -112,7 +118,7 @@ since: 2011
 menu:
   home: /
   archives: /archives
-  categories: /categories
+  #categories: /categories
   tags: /tags
   #about: /about
 
@@ -142,6 +148,11 @@ highlight_theme: normal
 # MathJax support
 # 开启数学公式渲染支持，默认关闭。设置为 `true` 开启。
 mathjax:
+
+
+# Mist
+#scheme: Mist
+
 
 # `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `<!-- more -->` 的地方。
 scroll_to_more: true
