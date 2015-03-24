@@ -41,6 +41,8 @@
 
   .post-header {
     position: relative;
+    the-transition();
+    transition-property: border;
     border-bottom: 1px dashed $grey-light;
 
     &::before {
@@ -54,6 +56,8 @@
       background: $grey;
       circle();
       border: 1px solid white;
+      the-transition();
+      transition-property: background;
     }
   }
 

@@ -55,7 +55,7 @@
         {% if theme.social %}
           {% for name, link in theme.social %}
             <span class="links-of-author-item">
-              <a href="{{ link }}">{{ name }}</a>
+              <a href="{{ link }}" target="_blank">{{ name }}</a>
             </span>
           {% endfor %}
         {% endif %}

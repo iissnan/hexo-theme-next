@@ -11,12 +11,14 @@ h2, h3, h4, h5, h6 { margin: 20px 0 10px; }
 
 p { margin: 10px 0; }
 
-a { border-bottom-color: $grey; }
+a { border-bottom-color: $grey-light; }
 
 hr {
   margin: 20px 0;
   height: 2px;
 }
+
+li { list-style: circle; }
 
 
 // Components
@@ -172,7 +174,20 @@ hr {
   margin-top: 20px;
   text-align: left;
 
-  a { font-size: 14px; }
+  a {
+    font-size: 14px;
+    color: $grey-dim;
+    background: none;
+    border: none;
+    border-left: 4px solid $grey-dim;
+    border-right: 4px solid $grey-dim;
+    transition-property: border;
+
+    &:hover {
+      border-left: 6px double $black-deep;
+      border-right: 6px double $black-deep;
+    }
+  }
 }
 
 
