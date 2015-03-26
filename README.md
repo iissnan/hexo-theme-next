@@ -10,6 +10,9 @@
 
 ![NexT Preview](http://iissnan.com/nexus/next/desktop-preview.png)
 
+> Mist - Compact of NexT
+
+![Mist Preview](http://iissnan.com/nexus/next/mist-desktop-preview.png)
 
 ## 安装
 
