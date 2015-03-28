@@ -51,6 +51,7 @@ state:
   posts: 日志
   pages: 页面
   tags: 标签
+  categories: 分类
 
 cheers:
   um: 嗯..

@@ -47,8 +47,9 @@
   -webkit-transform: translateZ(0); // http://stackoverflow.com/questions/17079857/position-fixed-broken-in-chrome-with-flash-behind
 
   a {
-    color: $black-light;
+    color: $grey-dark;
     border-bottom-color: $black-light;
+    &:hover { color: $gainsboro; }
   }
 
   +tablet() {
@@ -99,6 +100,10 @@
   &:first-child {
     border-left: none;
   }
+
+  a {
+    border-bottom: none;
+  }
 }
 .site-state-item-count {
   display: block;
@@ -145,13 +150,8 @@
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
-  color: $black-light;
   border-bottom-color: $black-light;
   font-size: 13px;
-
-  &:hover {
-    color: $grey-dark;
-  }
 
   &:before {
     display: inline-block;

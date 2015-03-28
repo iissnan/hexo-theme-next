@@ -51,6 +51,7 @@ state:
   posts: 文章
   pages: 頁面
   tags: 標籤
+  categories: 分類
 
 cheers:
   um: 嗯..
