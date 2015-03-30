@@ -2,8 +2,6 @@
 
 @require "theme"
 
-$articlePadding = $content-desktop-padding
-
 $code-block
   background: highlight-background
   margin: 20px 0
@@ -56,12 +54,12 @@ $line-numbers
     .line
       height: 20px
   .gist
-    margin: 20px 0 //0 $articlePadding * -1
+    margin: 20px 0
     border-style: solid
-    border-color: $baseBorderColor
+    border-color: $border-color
     border-width: 1px 0
     background: highlight-background
-    padding: 15px $articlePadding 15px 15px
+    padding: 15px $content-desktop-padding 15px 15px
     .gist-file
       border: none
       font-family: $font-family-monospace
@@ -87,7 +85,7 @@ $line-numbers
         text-shadow: 0 0
         padding: 0
         margin-top: 1em
-        margin-left: $articlePadding
+        margin-left: $content-desktop-padding
         a
           color: color-link
           font-weight: normal
