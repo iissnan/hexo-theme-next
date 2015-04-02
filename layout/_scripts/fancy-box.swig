@@ -4,10 +4,10 @@
     $(document).ready(function() {
       $('.content img').each(function () {
         var $image = $(this);
-        var $imageWrapLink = $image.parent('a').addClass('fancybox');
+        var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
-          $image.wrap('<a href="' + this.getAttribute('src') + '"></a>');
+          $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
         }
         $imageWrapLink.addClass('fancybox');
       });
