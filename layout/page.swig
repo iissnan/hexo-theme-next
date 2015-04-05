@@ -1,7 +1,13 @@
 {% extends '_layout.swig' %}
 
 {% block title %}
-  {{ page.title + ' // ' + config.title }}
+  {% if page.type === "categories" %}
+    {{ __('title.category') + ' // ' + config.title }}
+  {% elif page.type === "tags" %}
+    {{ __('title.tag') + ' // ' + config.title }}
+  {% else %}
+    {{ page.title + ' // ' + config.title }}
+  {% endif %}
 {% endblock %}
 
 {% block content %}
