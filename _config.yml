@@ -35,7 +35,7 @@ mathjax:
 
 
 # Schemes
-#scheme: Mist
+scheme: Mist
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
