@@ -59,6 +59,7 @@ fancybox: true
 # Static files
 vendors: vendors
 css: css
+js: js
 images: images
 
 # Theme version
