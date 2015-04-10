@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next {% if theme.use_motion %}use-motion{% endif %} {% if theme.theme %}theme-next-{{theme.theme}}{% endif %}">
+<html class="theme-next {% if theme.use_motion %}use-motion{% endif %} {% if theme.scheme %}theme-next-{{ theme.scheme | lower }}{% endif %}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
@@ -18,26 +18,11 @@
     <div id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content">
-          {% if is_home() or is_post() %}
-            {% set postsClass = "posts-expand" %}
-          {% else %}
-            {% set postsClass = "posts-collapse" %}
-          {% endif %}
-
-          <div id="posts" class="{{ postsClass }}">
-            {% block content %}{% endblock %}
-          </div>
-
-          {% if not is_post() and (page.prev || page.next) %}
-            <div class="pagination">
-              {{ paginator({prev_text: '&laquo;', next_text: '&raquo;', mid_size: 1}) }}
-            </div>
-          {% endif %}
+          {% block content %}{% endblock %}
         </div>
-
-        {% include '_partials/sidebar.swig' %}
-
       </div>
+
+      {% block sidebar %}{% endblock %}
     </div>
 
     <div id="footer" class="footer">
@@ -61,8 +46,8 @@
   {% block script_extra %}{% endblock %}
 
   {% include '_scripts/mathjax.swig' %}
-  {% include '_scripts/comments/duoshuo.swig' %}
-  {% include '_scripts/comments/disqus.swig' %}
+  {% block comment_system %}{% endblock %}
+
   {% include '_scripts/analytics/google-analytics.swig' %}
 </body>
 </html>

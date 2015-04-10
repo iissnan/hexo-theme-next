@@ -1,6 +1,6 @@
 {% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname %}
 
-  {% if theme.disqus_shortname and (is_home() or is_post()) %}
+  {% if theme.disqus_shortname %}
 
     {% if page.comments %}
       {% set disqus_script = 'embed.js' %}
