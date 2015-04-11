@@ -6,6 +6,7 @@
 </head>
 
 <body>
+<!--[if lte IE 8]> <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'> <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://7u2nvr.com1.z0.glb.clouddn.com/pic/outerie.webp" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." style='margin-left:auto;margin-right:auto;display: block;'/></a></div> <![endif]-->
   <div class="container one-column {% block page_class %}{% endblock %}">
     <div class="headband"></div>
 
@@ -20,7 +21,12 @@
         <div id="content" class="content">
           {% block content %}{% endblock %}
         </div>
+
+        <!-- 多说热评文章-->
+        <p>热评文章</p>
+        <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
       </div>
+        
 
       {% block sidebar %}{% endblock %}
     </div>
@@ -48,6 +54,7 @@
   {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
 
+  {% include '_scripts/baidushare.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
 </body>
 </html>

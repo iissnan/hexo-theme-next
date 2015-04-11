@@ -59,6 +59,9 @@ git pull
 
 - [Swiftype 站内搜索](https://github.com/iissnan/hexo-theme-next/wiki/Swiftype%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2)
 
+2015-04 新增特性
+- 新增多说热评文章
+- 增加 IE8 下提示升级到新浏览器 banner
 
 ## 配置
 
