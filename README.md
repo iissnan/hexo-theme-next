@@ -60,9 +60,10 @@ git pull
 - [Swiftype 站内搜索](https://github.com/iissnan/hexo-theme-next/wiki/Swiftype%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2)
 
 2015-04 新增特性
-- 新增多说热评文章
+- [新增多说热评文章](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E5%A4%9A%E8%AF%B4%E7%83%AD%E8%AF%84%E6%96%87%E7%AB%A0)
 - 增加 IE8 下提示升级到新浏览器 banner
 - 增加360 站点认证 360-site-verification
+- [增加百度站内分享，适配主题样式](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E5%88%86%E4%BA%AB)
 
 ## 配置
 
