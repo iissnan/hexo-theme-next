@@ -15,7 +15,7 @@
     </div>
 
     {% for post in page.posts %}
-      {{ render.post(post) }}
+      {{ post_template.render(post) }}
     {% endfor %}
   </div>
 
