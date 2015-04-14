@@ -64,6 +64,8 @@ git pull
 - 增加 IE8 下提示升级到新浏览器 banner
 - 增加360 站点认证 360-site-verification
 - [增加百度站内分享，适配主题样式](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E5%88%86%E4%BA%AB)
+- [增加腾讯公益404页面](http://ixirong.com/404.html) 使用时，将主题中的 404.html 拷贝到<code>public</code>根目录即可。
+
 
 ## 配置
 
