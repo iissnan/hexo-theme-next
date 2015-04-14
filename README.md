@@ -62,6 +62,7 @@ git pull
 2015-04 新增特性
 - 新增多说热评文章
 - 增加 IE8 下提示升级到新浏览器 banner
+- 增加360 站点认证 360-site-verification
 
 ## 配置
 
