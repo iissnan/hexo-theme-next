@@ -1,0 +1,70 @@
+//
+// Scaffolding
+// =================================================
+
+
+::selection {
+  background: $blue-deep;
+  color: white;
+}
+
+body {
+  position: relative; // Required by scrollspy
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background: $body-bg-color;
+
+  +tablet() {
+    padding-right: 0 !important;
+  }
+  +mobile() {
+    padding-right: 0 !important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  line-height: 1;
+  font-family: $font-family-headings;
+}
+
+
+for headline in (1..6) {
+  h{headline} {
+    font-size: $font-size-headings-base - $font-size-headings-step * headline;
+  }
+
+  +mobile() {
+    h{headline} {
+      font-size: $font-size-headings-base - $font-size-headings-step * headline - 4px;
+    }
+  }
+}
+
+p { margin: 20px 0; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom: 1px solid $grey-dark;
+
+  &:hover { border-bottom-color: $link-decoration-hover-color; }
+}
+
+ul { list-style: none; }
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  margin: auto 0;
+  max-width: 100%;
+  height: auto;
+}

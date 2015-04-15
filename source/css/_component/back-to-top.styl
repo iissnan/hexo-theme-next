@@ -1,0 +1,31 @@
+.back-to-top {
+  position: fixed;
+  bottom: 19px;
+  right: 50px;
+  z-index: $zindex-5;
+  width: 15px;
+  height: 13px;
+  padding: 5px;
+  background: $black-deep;
+  color: white;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+
+  +mobile() {
+    display: none;
+  }
+  +tablet() {
+    display: none;
+  }
+
+  &:before {
+    display: block;
+    content: " ";
+    margin-top: 2px;
+    width: 0;
+    height: 0;
+    border-width: 0 7px 8px 7px;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+  }
+}

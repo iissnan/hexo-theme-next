@@ -1,0 +1,78 @@
+h2, h3, h4, h5, h6 { margin: 60px 0 15px; }
+
+ul { list-style: square; }
+
+hr {
+  margin: 40px 0;
+  height: 3px;
+  border: none;
+  background-color: $gray-lighter;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    white,
+    white 4px,
+    transparent 4px,
+    transparent 8px
+  )
+}
+
+blockquote {
+  padding: 0 15px;
+  color: $grey-dim;
+  border-left: 4px solid $gray-lighter;
+
+  cite::before {
+    content: "-";
+    padding: 0 5px;
+  }
+}
+
+dt {
+  font-weight 700
+}
+dd {
+  margin 0
+  padding 0
+}
+
+.pullquote {
+  width 45%
+  &.left {
+    float left
+    margin-left 5px
+    margin-right 10px
+  }
+  &.right {
+    float right
+    margin-left 10px
+    margin-right 5px
+  }
+}
+
+.highlight table, .gist table {
+  width auto
+  td {
+    border none
+  }
+
+}
+.highlight, .gist {
+  a {
+    color $link-hover-color !important
+    text-decoration none !important
+  }
+}
+
+.video-container {
+  position relative
+  padding-top 60%
+  height 0
+  overflow hidden
+  iframe, object, embed {
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+  }
+}

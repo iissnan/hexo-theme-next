@@ -1,0 +1,51 @@
+//
+// Layout
+// =================================================
+
+
+html, body { height: 100%; }
+
+.container {
+  position: relative;
+  min-height: 100%;
+}
+
+
+// Header Section
+// --------------------------------------------------
+.header-inner {
+  margin: 0 auto;
+  padding: 100px 0 70px;
+  width: $main-desktop;
+
+  .one-column & { width: $content-desktop; }
+}
+
+// Main Section
+// --------------------------------------------------
+.main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
+.main-inner {
+  margin: 0 auto;
+  width: $main-desktop;
+
+  .one-column & { width: $content-desktop; }
+
+  .content { width: $content-desktop; }
+}
+
+
+// Footer Section
+// --------------------------------------------------
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: $footer-height;
+}
+.footer-inner {
+  margin: 20px auto;
+  width: $main-desktop;
+
+  .one-column & { width: $content-desktop; }
+}
