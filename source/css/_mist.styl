@@ -2,7 +2,6 @@
 // Mist scheme
 // =================================================
 
-
 .test { border: 10px; }
 
 // Tags
@@ -63,8 +62,7 @@ li { list-style: circle; }
   .logo { display: none; }
 
   .site-title {
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: 30px;
 
     +mobile() {
       font-size: 22px;
@@ -86,10 +84,13 @@ li { list-style: circle; }
   i {
     position: relative;
     display: block;
-    height: 4px;
+    height: 3px;
     background: $black-deep;
     +mobile() { height: 3px; }
   }
+}
+.logo-line-after {
+  padding-top: 6px;
 }
 
 .use-motion {
