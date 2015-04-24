@@ -61,7 +61,7 @@ git pull
 
 2015-04 新增特性
 - [新增多说热评文章](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E5%A4%9A%E8%AF%B4%E7%83%AD%E8%AF%84%E6%96%87%E7%AB%A0)
-- 增加 IE8 下提示升级到新浏览器 banner
+- [增加 IE8 下提示升级到新浏览器 banner](https://github.com/xirong/hexo-theme-next/wiki/ie-8%E4%BB%A5%E4%B8%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%90%E7%A4%BA%E4%BD%BF%E7%94%A8%E6%96%B0%E7%89%88%E6%9C%AC%E8%AE%BF%E9%97%AE%E7%AB%99%E7%82%B9)
 - 增加360 站点认证 360-site-verification
 - [增加百度站内分享，适配主题样式](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E5%88%86%E4%BA%AB)
 - [简体中文版增加腾讯公益404页面](https://github.com/xirong/hexo-theme-next/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E5%A2%9E%E5%8A%A0%E8%85%BE%E8%AE%AF%E5%85%AC%E7%9B%8A404%E9%A1%B5%E9%9D%A2) 
