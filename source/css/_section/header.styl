@@ -78,8 +78,8 @@
 
 //searchbar
 input.menu-search-input {
-  background-repeat: no-repeat;  
-  background-position: 5px center; 
+  background-repeat: no-repeat;
+  background-position: 5px center;
   width:70px;
   height:20px;
   padding:3px 9px 3px 23px;
@@ -95,7 +95,10 @@ input.menu-search-input {
 .menu .menu-item-search
   .st-search-input
     width 80px
-    float left
+    .theme-next &
+      float left
+    .theme-next-mist &
+      float none
   @media screen and (max-width: 767px)
     margin-bottom 15px
     display block
