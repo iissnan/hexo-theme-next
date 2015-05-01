@@ -60,6 +60,9 @@
 .menu .menu-item {
   display: inline-block;
   margin-left: 20px;
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
 
   &:first-child { margin-left: 0; }
 
@@ -95,8 +98,7 @@ input.menu-search-input {
 .menu .menu-item-search
   .st-search-input
     width 80px
-    .theme-next &
-      float left
+    float left
     .theme-next-mist &
       float none
   @media screen and (max-width: 767px)
