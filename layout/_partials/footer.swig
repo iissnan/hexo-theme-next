@@ -9,12 +9,15 @@
 </div>
 
 <div class="powered-by">
+  Designed by <a href="https://github.com/iissnan/hexo-theme-next">Iissnan</a>
+</div>
+<div class="powered-by">
   {{ __('footer.powered', '<a class="theme-link" href="http://hexo.io">Hexo</a>') }}
 </div>
 
 <div class="theme-info">
-  {{ __('footer.theme') }} -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+  {{ __('footer.theme') }} 
+  <a class="theme-link" href="https://github.com/xirong/hexo-theme-next">
     NexT{% if theme.scheme %}.{{ theme.scheme }}{% endif %}
   </a>
 </div>

@@ -1,15 +1,16 @@
 menu:
-  home: /
-  #categories: /categories
+  #home: /
+  about: /about
+  categories: /categories
   archives: /archives
   tags: /tags
-  #about: /about
+  commonweal: /404.html
 
 # Place your favicon.ico to /source directory.
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo,next"
+keywords: "xirong,个人博客,xirong 一家之言,技术分享,读书分享,资料整理回顾"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -19,10 +20,10 @@ rss:
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
 # Avialable: default | linecons | fifty-shades | feather
-icon_font: default
+#icon_font: default
 #icon_font: fifty-shades
 #icon_font: feather
-#icon_font: linecons
+icon_font: linecons
 
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
@@ -35,7 +36,7 @@ mathjax:
 
 
 # Schemes
-#scheme: Mist
+scheme: Mist
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
@@ -62,3 +63,9 @@ images: images
 
 # Theme version
 version: 0.4.2
+
+# xirong custom 
+
+
+# Google analysis 
+
