@@ -28,7 +28,7 @@
         <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
         {% endif %}
       </div>
-        
+
 
       {% block sidebar %}{% endblock %}
     </div>
@@ -57,7 +57,6 @@
   {% block comment_system %}{% endblock %}
 
   {% include '_scripts/baidushare.swig' %}
-  {% include '_scripts/analytics/baidu-analytics.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
 </body>
 </html>
