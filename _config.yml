@@ -1,9 +1,10 @@
 menu:
   home: /
   #categories: /categories
+  #about: /about
   archives: /archives
   tags: /tags
-  #about: /about
+  #commonweal: /404.html
 
 # Place your favicon.ico to /source directory.
 favicon: /favicon.ico
