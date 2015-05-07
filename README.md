@@ -2,7 +2,7 @@
 
 > 精于心，简于形
 
-[在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)
+[在线预览](http://notes.iissnan.com) |  [README in English](README.en.md)
 
 ## 预览
 
@@ -10,7 +10,8 @@
 
 ![NexT Preview](http://iissnan.com/nexus/next/desktop-preview.png)
 
-> Mist - Compact of NexT
+> Mist - 紧凑版
+> 开启：将主题配置文件中的 `#scheme: Mist` 前的 `#` 去掉
 
 ![Mist Preview](http://iissnan.com/nexus/next/mist-desktop-preview.png)
 
@@ -56,7 +57,6 @@ git pull
 - [支持数学公式显示（借助 MathJax）](https://github.com/iissnan/hexo-theme-next/wiki/%E5%BC%80%E5%90%AF%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA)
 - [设置侧边栏头像](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F)
 - [设置侧边栏社交链接](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5)
-
 - [Swiftype 站内搜索](https://github.com/iissnan/hexo-theme-next/wiki/Swiftype%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2)
 
 
