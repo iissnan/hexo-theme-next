@@ -3,11 +3,15 @@
 {% endif %}
 
 <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
 {% if theme.google_site_verification %}
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
+{% endif %}
+
+{% if config.qihu_site_verification %}
+  <meta name="360-site-verification" content="{{ config.qihu_site_verification }}" />
 {% endif %}
 
 {% if theme.fancybox %}
