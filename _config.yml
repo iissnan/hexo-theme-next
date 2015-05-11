@@ -1,9 +1,9 @@
 menu:
   home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
+  categories: /categories
   tags: /tags
+  archives: /archives
+  about: /about
   #commonweal: /404.html
 
 # Place your favicon.ico to /source directory.
@@ -15,7 +15,7 @@ keywords: "Hexo,next"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: atom.xml
 
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
@@ -36,7 +36,7 @@ mathjax:
 
 
 # Schemes
-#scheme: Mist
+scheme: Mist
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
