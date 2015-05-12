@@ -1,4 +1,4 @@
-{% if (theme.duoshuo and theme.duoshuo.shortname and page.comments) or (theme.duoshuo_shortname and page.comments)%}
+{% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
 
   {% if theme.duoshuo %}
     {% set duoshuo_shortname = config.duoshuo.shortname %}
