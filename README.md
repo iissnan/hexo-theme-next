@@ -134,10 +134,12 @@ menu:
   tags: /tags
   #about: /about
 
+
 # Favicon
 # 从`Next 0.2`起，favicon将不再放置于主题之内。
 # 请将你的favicon放置在`hexo-site/source/`目录下。
 favicon: /favicon.ico
+
 
 # 设置为`false`不显示`rss`链接
 # 留空，并且通过`hexo-site-feed`插件配置使用默认的feed
@@ -157,17 +159,29 @@ icon_font: default
 # available: normal | night | night eighties | night blue | night bright
 highlight_theme: normal
 
+
 # MathJax support
 # 开启数学公式渲染支持，默认关闭。设置为 `true` 开启。
 mathjax:
 
 
 # Mist
+# 使用 Mist 主题
 #scheme: Mist
+
+
+# Sidebar 侧栏行为，可选值有
+#  - post   默认值，在文章页面自动展开侧栏
+#  - always 在所有页面自动展开侧栏
+#  - hide   在手动点击侧栏的开关按钮时展开
+sidebar: post
+#sidebar: always
+#sidebar: hide
 
 
 # `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `<!-- more -->` 的地方。
 scroll_to_more: true
+
 
 # 是否为侧边栏文章的目录自动添加索引，默认开启。设置为 `false` 关闭。
 toc_list_number: true

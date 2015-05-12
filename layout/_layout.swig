@@ -53,6 +53,15 @@
 
   {% block script_extra %}{% endblock %}
 
+  <script type="text/javascript">
+    var HEXO_SIDEBAR_CONFIGURATION = '{{ theme.sidebar }}';
+    $(document).ready(function () {
+      if (HEXO_SIDEBAR_CONFIGURATION === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
   {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
 
