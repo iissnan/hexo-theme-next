@@ -65,6 +65,7 @@ git pull
 - 增加360 站点认证 360-site-verification
 - [增加百度站内分享，适配主题样式](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E5%88%86%E4%BA%AB)
 - [简体中文版增加腾讯公益404页面](https://github.com/xirong/hexo-theme-next/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E5%A2%9E%E5%8A%A0%E8%85%BE%E8%AE%AF%E5%85%AC%E7%9B%8A404%E9%A1%B5%E9%9D%A2) 
+- [增加百度联盟认证ID]()
 
 
 ## 配置

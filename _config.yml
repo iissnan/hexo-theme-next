@@ -23,12 +23,12 @@ rss:
 #icon_font: default
 #icon_font: fifty-shades
 #icon_font: feather
-icon_font: linecons
+icon_font: default
 
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties  
 
 
 # MathJax Support

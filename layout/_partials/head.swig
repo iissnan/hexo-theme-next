@@ -14,6 +14,19 @@
   <meta name="360-site-verification" content="{{ config.qihu_site_verification }}" />
 {% endif %}
 
+{% if config.sogou_site_verification %}
+<meta name="sogou_site_verification" content="{{ config.sogou_site_verification }}"/>
+{% endif %} 
+
+
+{% if config.baidu_union_verify %}
+  <meta name="baidu_union_verify" content="{{ config.baidu_union_verify }}" />
+{% endif %}
+
+{% if config.baidu_cloud_monitor_verify %}
+  <meta  baidu-gxt-verify-token="{{ config.baidu_cloud_monitor_verify }}" />
+{% endif %}
+
 {% if theme.fancybox %}
   <link rel="stylesheet" type="text/css" href="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
 {% endif %}
@@ -37,5 +50,3 @@
 {% if theme.favicon %}
   <link rel="shorticon icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
-
-{% include '../_scripts/analytics/baidu-analytics.swig' %}
