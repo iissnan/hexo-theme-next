@@ -24,11 +24,9 @@ rss:
 icon_font: default
 #icon_font: fifty-shades
 #icon_font: feather
-<<<<<<< HEAD
 icon_font: default
-=======
 #icon_font: linecons
->>>>>>> iissnan/master
+
 
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
