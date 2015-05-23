@@ -67,6 +67,9 @@ git pull
 - [简体中文版增加腾讯公益404页面](https://github.com/xirong/hexo-theme-next/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E5%A2%9E%E5%8A%A0%E8%85%BE%E8%AE%AF%E5%85%AC%E7%9B%8A404%E9%A1%B5%E9%9D%A2) 
 - [增加百度联盟认证ID]()
 
+2015-05 新增特性 
+- [增加博客打赏功能](https://github.com/xirong/hexo-theme-next/wiki/%E5%A2%9E%E5%8A%A0%E5%8D%9A%E5%AE%A2%E6%89%93%E8%B5%8F%E5%8A%9F%E8%83%BD)
+
 
 ## 配置
 
