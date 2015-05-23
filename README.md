@@ -2,7 +2,7 @@
 
 > 精于心，简于形
 
-[在线预览](http://notes.iissnan.com) |  [English Documentation](README.en.md)
+[在线预览](http://notes.iissnan.com) |  [README in English](README.en.md)
 
 ## 预览
 
@@ -10,7 +10,8 @@
 
 ![NexT Preview](http://iissnan.com/nexus/next/desktop-preview.png)
 
-> Mist - Compact of NexT
+> Mist - 紧凑版
+> 开启：将主题配置文件中的 `#scheme: Mist` 前的 `#` 去掉
 
 ![Mist Preview](http://iissnan.com/nexus/next/mist-desktop-preview.png)
 
@@ -56,19 +57,16 @@ git pull
 - [支持数学公式显示（借助 MathJax）](https://github.com/iissnan/hexo-theme-next/wiki/%E5%BC%80%E5%90%AF%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA)
 - [设置侧边栏头像](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F)
 - [设置侧边栏社交链接](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5)
-
 - [Swiftype 站内搜索](https://github.com/iissnan/hexo-theme-next/wiki/Swiftype%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2)
-
-2015-04 新增特性
-- [新增多说热评文章](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E5%A4%9A%E8%AF%B4%E7%83%AD%E8%AF%84%E6%96%87%E7%AB%A0)
-- [增加 IE8 下提示升级到新浏览器 banner](https://github.com/xirong/hexo-theme-next/wiki/ie-8%E4%BB%A5%E4%B8%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%90%E7%A4%BA%E4%BD%BF%E7%94%A8%E6%96%B0%E7%89%88%E6%9C%AC%E8%AE%BF%E9%97%AE%E7%AB%99%E7%82%B9)
-- 增加360 站点认证 360-site-verification
-- [增加百度站内分享，适配主题样式](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E5%88%86%E4%BA%AB)
-- [简体中文版增加腾讯公益404页面](https://github.com/xirong/hexo-theme-next/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E5%A2%9E%E5%8A%A0%E8%85%BE%E8%AE%AF%E5%85%AC%E7%9B%8A404%E9%A1%B5%E9%9D%A2) 
-- [增加百度联盟认证ID]()
+- [多说热评文章](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E5%A4%9A%E8%AF%B4%E7%83%AD%E8%AF%84%E6%96%87%E7%AB%A0)
+- [低版本新浏览器提示](https://github.com/xirong/hexo-theme-next/wiki/ie-8%E4%BB%A5%E4%B8%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%90%E7%A4%BA%E4%BD%BF%E7%94%A8%E6%96%B0%E7%89%88%E6%9C%AC%E8%AE%BF%E9%97%AE%E7%AB%99%E7%82%B9)
+- 增加 360 站点认证 360-site-verification
+- [百度站内分享](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E5%88%86%E4%BA%AB)
+- [简体中文版增加腾讯公益404页面](https://github.com/xirong/hexo-theme-next/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E5%A2%9E%E5%8A%A0%E8%85%BE%E8%AE%AF%E5%85%AC%E7%9B%8A404%E9%A1%B5%E9%9D%A2)
 
 2015-05 新增特性 
 - [增加博客打赏功能](https://github.com/xirong/hexo-theme-next/wiki/%E5%A2%9E%E5%8A%A0%E5%8D%9A%E5%AE%A2%E6%89%93%E8%B5%8F%E5%8A%9F%E8%83%BD)
+
 
 
 ## 配置
@@ -140,10 +138,12 @@ menu:
   tags: /tags
   #about: /about
 
+
 # Favicon
 # 从`Next 0.2`起，favicon将不再放置于主题之内。
 # 请将你的favicon放置在`hexo-site/source/`目录下。
 favicon: /favicon.ico
+
 
 # 设置为`false`不显示`rss`链接
 # 留空，并且通过`hexo-site-feed`插件配置使用默认的feed
@@ -163,17 +163,29 @@ icon_font: default
 # available: normal | night | night eighties | night blue | night bright
 highlight_theme: normal
 
+
 # MathJax support
 # 开启数学公式渲染支持，默认关闭。设置为 `true` 开启。
 mathjax:
 
 
 # Mist
+# 使用 Mist 主题
 #scheme: Mist
+
+
+# Sidebar 侧栏行为，可选值有
+#  - post   默认值，在文章页面自动展开侧栏
+#  - always 在所有页面自动展开侧栏
+#  - hide   在手动点击侧栏的开关按钮时展开
+sidebar: post
+#sidebar: always
+#sidebar: hide
 
 
 # `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `<!-- more -->` 的地方。
 scroll_to_more: true
+
 
 # 是否为侧边栏文章的目录自动添加索引，默认开启。设置为 `false` 关闭。
 toc_list_number: true

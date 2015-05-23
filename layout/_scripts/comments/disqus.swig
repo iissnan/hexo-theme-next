@@ -11,6 +11,7 @@
     <script type="text/javascript">
       var disqus_shortname = '{{theme.disqus_shortname}}';
       var disqus_identifier = '{{ page.path }}';
+      var disqus_title = '{{ page.title }}';
       var disqus_url = '{{ page.permalink }}';
 
       (function(){

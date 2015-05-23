@@ -60,6 +60,9 @@
 .menu .menu-item {
   display: inline-block;
   margin-left: 20px;
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
 
   &:first-child { margin-left: 0; }
 
@@ -78,8 +81,8 @@
 
 //searchbar
 input.menu-search-input {
-  background-repeat: no-repeat;  
-  background-position: 5px center; 
+  background-repeat: no-repeat;
+  background-position: 5px center;
   width:70px;
   height:20px;
   padding:3px 9px 3px 23px;
@@ -91,3 +94,16 @@ input.menu-search-input {
   background-image: url(/images/searchicon.png);
   background-size: 15px 15px;
 }
+
+.menu .menu-item-search
+  .st-search-input
+    width 80px
+    float left
+    .theme-next-mist &
+      float none
+  @media screen and (max-width: 767px)
+    margin-bottom 15px
+    display block
+    .st-search-input
+      width auto
+      float none
