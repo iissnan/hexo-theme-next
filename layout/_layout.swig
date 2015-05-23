@@ -20,6 +20,7 @@
       <div class="main-inner">
         <div id="content" class="content">
           {% block content %}{% endblock %}
+         
         </div>
 
         {% if (theme.duoshuo_hotartical and page.title)  %}
