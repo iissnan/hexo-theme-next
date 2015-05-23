@@ -29,7 +29,6 @@
         <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
         {% endif %}
       </div>
-               
 
       {% block sidebar %}{% endblock %}
     </div>
@@ -54,11 +53,19 @@
 
   {% block script_extra %}{% endblock %}
 
+  <script type="text/javascript">
+    var HEXO_SIDEBAR_CONFIGURATION = '{{ theme.sidebar }}';
+    $(document).ready(function () {
+      if (HEXO_SIDEBAR_CONFIGURATION === 'always') {
+        displaySidebar();
+      }
+    });
+  </script>
+
   {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
 
   {% include '_scripts/baidushare.swig' %}
-  {% include '_scripts/analytics/baidu-analytics.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
 </body>
 </html>
