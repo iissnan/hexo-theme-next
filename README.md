@@ -56,16 +56,13 @@ git pull
 - [支持数学公式显示（借助 MathJax）](https://github.com/iissnan/hexo-theme-next/wiki/%E5%BC%80%E5%90%AF%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA)
 - [设置侧边栏头像](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E5%A4%B4%E5%83%8F)
 - [设置侧边栏社交链接](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E4%BE%A7%E8%BE%B9%E6%A0%8F%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5)
-
 - [Swiftype 站内搜索](https://github.com/iissnan/hexo-theme-next/wiki/Swiftype%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2)
-
-2015-04 新增特性
 - [新增多说热评文章](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E5%A4%9A%E8%AF%B4%E7%83%AD%E8%AF%84%E6%96%87%E7%AB%A0)
 - [增加 IE8 下提示升级到新浏览器 banner](https://github.com/xirong/hexo-theme-next/wiki/ie-8%E4%BB%A5%E4%B8%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%90%E7%A4%BA%E4%BD%BF%E7%94%A8%E6%96%B0%E7%89%88%E6%9C%AC%E8%AE%BF%E9%97%AE%E7%AB%99%E7%82%B9)
 - 增加360 站点认证 360-site-verification
 - [增加百度站内分享，适配主题样式](https://github.com/xirong/hexo-theme-next/wiki/%E6%96%B0%E5%A2%9E%E7%99%BE%E5%BA%A6%E7%AB%99%E5%86%85%E5%88%86%E4%BA%AB)
 - [简体中文版增加腾讯公益404页面](https://github.com/xirong/hexo-theme-next/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E5%A2%9E%E5%8A%A0%E8%85%BE%E8%AE%AF%E5%85%AC%E7%9B%8A404%E9%A1%B5%E9%9D%A2) 
-- [增加百度联盟认证ID]()
+
 
 2015-05 新增特性 
 - [增加博客打赏功能](https://github.com/xirong/hexo-theme-next/wiki/%E5%A2%9E%E5%8A%A0%E5%8D%9A%E5%AE%A2%E6%89%93%E8%B5%8F%E5%8A%9F%E8%83%BD)
