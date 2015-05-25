@@ -28,7 +28,7 @@
 
       {# Show year #}
       {% set year %}
-      {% set post.year = date(post.date, 'Y') %}
+      {% set post.year = date(post.date, 'YYYY') %}
 
       {% if post.year !== year %}
         {% set year = post.year %}
