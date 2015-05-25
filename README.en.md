@@ -43,13 +43,21 @@ git pull
 
 ## Features
 
-### English/Simplified Chinese language support.
+### Multiple languages support, including: English / Russian / French / German / Simplified Chinese / Traditional Chinese.
 
 Default language is English.
 
 ```yml
-language: default
+language: en
+# language: zh-Hans
+# language: fr-FR
+# language: zh-hk
+# language: zh-tw
+# language: ru
+# language: ru
+# language: de
 ```
+
 Set `language` field as following in site `_config.yml` to change to Chinese.
 
 ```yml
