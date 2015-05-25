@@ -27,3 +27,7 @@ function displaySidebar () {
     $('.sidebar-toggle').trigger('click');
   }, 800);
 }
+
+function isMist () {
+  return CONFIG.scheme === 'Mist';
+}

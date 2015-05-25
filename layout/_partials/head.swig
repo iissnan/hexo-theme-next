@@ -38,4 +38,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
 
+{# HEXO CONFIGURATIONS #}
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: '{{ theme.scheme }}',
+    analytics: {
+      baidu: '{{ theme.baidu_analytics }}',
+      google: '{{ theme.google_analytics }}'
+    },
+    sidebar: '{{ theme.sidebar }}'
+  };
+</script>
+
 {% include '../_scripts/analytics/baidu-analytics.swig' %}

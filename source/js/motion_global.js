@@ -2,7 +2,7 @@ $(document).ready(function () {
   var body = $('body');
   var isSidebarVisible = false;
   var sidebarToggle = $('.sidebar-toggle');
-  var sidebarToggleLine1st = $('.sidebar-toggle-line-first')
+  var sidebarToggleLine1st = $('.sidebar-toggle-line-first');
   var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
   var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
   var sidebar = $('.sidebar');
@@ -10,22 +10,22 @@ $(document).ready(function () {
   var SIDEBAR_WIDTH = '320px';
   var SIDEBAR_DISPLAY_DURATION = 300;
 
-  var sidebarToogleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
+  var sidebarToggleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
 
-  var sidebarToggleLine1stStatusInit = sidebarToogleLineStatusInit;
+  var sidebarToggleLine1stStatusInit = sidebarToggleLineStatusInit;
   var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
-  var sidebarToogleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
+  var sidebarToggleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
 
-  var sidebarToggleLine2ndStatusInit = sidebarToogleLineStatusInit;
+  var sidebarToggleLine2ndStatusInit = sidebarToggleLineStatusInit;
   var sidebarToggleLine2ndStatusArrow = {width: '90%'};
-  var sidebarToogleLine2ndStatusClose = {opacity: 0};
+  var sidebarToggleLine2ndStatusClose = {opacity: 0};
 
-  var sidebarToggleLine3rdStatusInit = sidebarToogleLineStatusInit;
+  var sidebarToggleLine3rdStatusInit = sidebarToggleLineStatusInit;
   var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
-  var sidebarToogleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
+  var sidebarToggleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
 
   LogoAndMenuMotion();
-  sidebatToggleMotion();
+  sidebarToggleMotion();
   postsListMotion();
   backToTopMotion();
 
@@ -41,15 +41,19 @@ $(document).ready(function () {
     .on('sidebar.isHiding', function () {});
 
   function LogoAndMenuMotion() {
-    $.Velocity.RunSequence([
+    var sequence = [
       { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
-      { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} },
-      {% if theme.scheme === 'Mist' %}
-      { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
-      { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } },
-      {% endif %}
-      { e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } }
-    ]);
+      { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} }
+    ];
+
+    isMist() && sequence.push(
+        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
+        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } }
+    );
+
+    sequence.push({ e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } });
+
+    $.Velocity.RunSequence(sequence);
     $('.menu-item').velocity('transition.slideDownIn', {display: null});
   }
 
@@ -63,9 +67,9 @@ $(document).ready(function () {
 
   function sidebarShowMotion () {
 
-    sidebarToggleLine1st.velocity(sidebarToogleLine1stStatusClose);
-    sidebarToggleLine2nd.velocity(sidebarToogleLine2ndStatusClose);
-    sidebarToggleLine3rd.velocity(sidebarToogleLine3rdStatusClose);
+    sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusClose);
+    sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusClose);
+    sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusClose);
 
     sidebar.velocity({width: SIDEBAR_WIDTH}, {
       display: 'block',
@@ -88,7 +92,7 @@ $(document).ready(function () {
 
     sidebar.removeClass('sidebar-active');
     sidebar.trigger('sidebar.isHiding');
-  };
+  }
 
   function sidebarContentMotion () {
     $('.sidebar .motion-element').velocity(
@@ -102,7 +106,7 @@ $(document).ready(function () {
     $('.post').velocity('transition.slideDownIn', postMotionOptions);
   }
 
-  function sidebatToggleMotion () {
+  function sidebarToggleMotion () {
     sidebarToggle.on('click', function () {
       isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
       isSidebarVisible = !isSidebarVisible;

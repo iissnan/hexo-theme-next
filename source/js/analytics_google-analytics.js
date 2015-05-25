@@ -3,4 +3,4 @@
   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
   e.src='//www.google-analytics.com/analytics.js';
   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-ga('create','{{ theme.google_analytics }}');ga('send','pageview');
+ga('create',CONFIG.analytics.google);ga('send','pageview');
