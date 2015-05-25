@@ -17,7 +17,7 @@
       </div>
 
       <div class="post-meta">
-        <span class="post-time"> {{ post.date | date('m-d') }} </span>
+        <span class="post-time"> {{ date(post.date, 'MM-DD') }} </span>
       </div>
 
     </div>

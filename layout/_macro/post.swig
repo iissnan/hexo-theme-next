@@ -26,7 +26,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          {{ __('post.posted') }} {{ post.date | date('Y-m-d') }}
+          {{ __('post.posted') }} {{ date(post.date, 'YYYY-MM-DD') }}
         </span>
 
         {% if post.categories and post.categories.length %}
