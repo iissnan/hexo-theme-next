@@ -47,7 +47,6 @@
     _ts(option);
     </script>
   <!--增加“tinysou”站内搜索功能end-->
-  {% endif %}
     {% for name, path in theme.menu %}
       {% set itemName = name.toLowerCase() %}
       <li class="menu-item menu-item-{{ itemName }}">

@@ -24,12 +24,14 @@ rss:
 icon_font: default
 #icon_font: fifty-shades
 #icon_font: feather
+icon_font: default
 #icon_font: linecons
+
 
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties  
 
 
 # MathJax Support
@@ -56,6 +58,8 @@ scroll_to_more: true
 # Automatically add list number to toc.
 toc_list_number: true
 
+# `阅读全文` 按钮跳转之后是否自动滚动页面到设置 `<!-- more -->` 的地方。
+scroll_to_more: true
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING

@@ -9,7 +9,7 @@
 </div>
 
 <div class="powered-by">
-  {{ __('footer.powered', '<a class="theme-link" href="http://hexo.io">Hexo</a>') }}
+  {{ __('footer.powered', '<a class="theme-link" href="http://hexo.io">Hexo</a>' ) }}
 </div>
 
 <div class="theme-info">
@@ -19,4 +19,6 @@
   </a>
 </div>
 
-{% block footer %}{% endblock %}
+
+{% block footer %}
+{% endblock %}
