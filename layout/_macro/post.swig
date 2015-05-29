@@ -4,7 +4,7 @@
     <div class="post-header">
 
       {# Not to show title for quote posts that do not have a title #}
-      {% if not (is_home() and post.type === 'quote' and not post.title) %}
+      {% if not (is_index and post.type === 'quote' and not post.title) %}
         <h1 class="post-title">
           {# Link posts #}
           {% if post.link %}
@@ -13,7 +13,7 @@
               <i class="icon-external-link"></i>
             </a>
           {% else %}
-            {% if is_home() %}
+            {% if is_index %}
               <a class="post-title-link" href="{{ url_for(post.path) }}">
                 {{ post.title | default(__('post.untitled'))}}
               </a>
@@ -77,7 +77,7 @@
         </div>
       {% endif %}
 
-      {% if is_home() %}
+      {% if is_index %}
         {% if post.description %}
           {{ post.description }}
           <div class="post-more-link text-center">
@@ -101,7 +101,7 @@
     </div>
 
     <div class="post-footer">
-      {% if post.tags and post.tags.length %}
+      {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
             <a href="{{ url_for(tag.path) }}"> #{{ tag.name }} </a>
@@ -126,7 +126,7 @@
       {% endif %}
 
       {% set isLast = loop.index % page.per_page === 0 %}
-      {% if is_home() and not isLast %}
+      {% if is_index and not isLast %}
         <div class="post-eof"></div>
       {% endif %}
     </div>
