@@ -1,4 +1,4 @@
-{% if theme.mathjax %}
+{% if page.mathjax %}
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
