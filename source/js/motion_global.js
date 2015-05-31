@@ -29,14 +29,32 @@ $(document).ready(function () {
   postsListMotion();
   backToTopMotion();
 
+  //add motion effect to toc
+  $('.sidebar-nav-toc') && $('.post-toc-wrap').addClass('motion-element');
+
+
+  //当前选择的是目录列表时添加 class 'motion-element'
+  sidebar.bind('click', function(e){ 
+    if(!!$('.sidebar-nav-toc') && e.target == $('.sidebar-nav-toc')[0]){
+      $('.post-toc-wrap').addClass('motion-element');
+    }});
+
+  //防止 humberger 被选择导致 sidebar 上方出现高亮
+  document.onselectstart = function(e) {
+    if((e.target == sidebarToggle[0]) || (e.target == $('.sidebar-toggle-line-wrap')[0]) || (e.target == sidebarToggleLine1st[0]) || (e.target == sidebarToggleLine2nd[0]) || (e.target == sidebarToggleLine3rd[0])){
+      e.preventDefault();
+    }
+  };
 
   $(document)
     .on('sidebar.isShowing', function () {
-      isDesktop() && body.velocity(
+      //添加 “.velocity('stop')” 用以中止动画
+      isDesktop() && body.velocity('stop').velocity(
         {paddingRight: SIDEBAR_WIDTH},
         SIDEBAR_DISPLAY_DURATION
       );
-      sidebarContentMotion();
+      // sidebar 内容的效果应该在sidebarsidebarShowMotion内触发
+      // sidebarContentMotion(); 
     })
     .on('sidebar.isHiding', function () {});
 
@@ -67,13 +85,18 @@ $(document).ready(function () {
 
   function sidebarShowMotion () {
 
-    sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusClose);
-    sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusClose);
-    sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusClose);
+    sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusClose);
+    sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusClose);
+    sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusClose);
 
-    sidebar.velocity({width: SIDEBAR_WIDTH}, {
+    //添加 “.velocity('stop')” 用以中止动画
+    sidebar.velocity('stop').velocity({width: SIDEBAR_WIDTH}, {
       display: 'block',
       duration: SIDEBAR_DISPLAY_DURATION,
+      //将 sidebar 内容动画效果函数移动到这里
+      begin: function(e) {
+        sidebarContentMotion();
+      },
       complete: function () {
         sidebar.addClass('sidebar-active');
         sidebar.trigger('sidebar.didShow');
@@ -83,15 +106,30 @@ $(document).ready(function () {
   }
 
   function sidebarHideMotion () {
-    isDesktop() && body.velocity({paddingRight: 0});
-    sidebar.velocity('reverse');
+    //添加 “.velocity('stop')” 用以中止动画
+    isDesktop() && body.velocity('stop').velocity({paddingRight: 0});
+    // sidebar 内容动画中止和隐藏
+    $('.sidebar .motion-element').velocity('stop').css('display','none');;
+    // sidebar 动画中止和隐藏
+    sidebar.velocity('stop').velocity({width: 0}, {display: 'none'});
 
-    sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
-    sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
-    sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
+    sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
+    sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
+    sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
 
     sidebar.removeClass('sidebar-active');
     sidebar.trigger('sidebar.isHiding');
+
+    //在 post 页面下按下隐藏 sidebar 时如果当前选中的是“站点概览”，将 toc 去除 motion 效果
+    //防止再次打开时会出现在“站点概览”下的 bug
+    if(!!$('.post-toc-wrap')){
+      if($('.site-overview').css('display') == 'block'){
+        $('.post-toc-wrap').removeClass('motion-element');
+      }
+      // else {
+      //   $('.post-toc-wrap').addClass('motion-element');
+      // }
+    }
   }
 
   function sidebarContentMotion () {
