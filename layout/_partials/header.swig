@@ -9,24 +9,35 @@
   <span class="logo-line-after"><i></i></span>
 </h1>
 
-{% set hasSearch = config.swiftype_key || config.tinysou_Key %}
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
 
-{% if theme.menu %}
-  <ul id="menu" class="menu {{ hasSearch and 'menu-left' }}">
-    {% for name, path in theme.menu %}
-      {% set itemName = name.toLowerCase() %}
-      <li class="menu-item menu-item-{{ itemName }}">
-        <a href="{{ url_for(path) }}">
-          <i class="menu-item-icon icon-{{ itemName }}"></i> <br />
-          {{ __('menu.' + itemName) }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-{% endif %}
+<div class="site-nav">
+  {% set hasSearch = config.swiftype_key || config.tinysou_Key %}
 
-{% if hasSearch %}
-  <div class="site-search">
-    {% include 'search.swig' %}
-  </div>
-{% endif %}
+  {% if theme.menu %}
+    <ul id="menu" class="menu {{ hasSearch and 'menu-left' }}">
+      {% for name, path in theme.menu %}
+        {% set itemName = name.toLowerCase() %}
+        <li class="menu-item menu-item-{{ itemName }}">
+          <a href="{{ url_for(path) }}">
+            <i class="menu-item-icon icon-{{ itemName }}"></i> <br />
+            {{ __('menu.' + itemName) }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if hasSearch %}
+    <div class="site-search">
+      {% include 'search.swig' %}
+    </div>
+  {% endif %}
+</div>
+

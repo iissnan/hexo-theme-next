@@ -39,7 +39,10 @@ ul li { list-style: circle; }
   padding: 40px 0;
   clearfix();
 
-  +mobile() { padding-bottom: 30px; }
+  +mobile() {
+    margin-bottom: 50px;
+    padding: 10px;
+  }
 }
 
 .site-meta {
@@ -47,8 +50,7 @@ ul li { list-style: circle; }
   margin-left: -20px;
 
   +mobile() {
-    float: none;
-    margin-left: 0;
+    margin-left: 10px;
   }
 
   .brand {
@@ -65,10 +67,7 @@ ul li { list-style: circle; }
     font-size: 22px;
     font-weight: bolder;
 
-    +mobile() {
-      font-size: 22px;
-      line-height: 40px;
-    }
+    +mobile() { line-height: 34px; }
   }
 }
 
@@ -80,7 +79,7 @@ ul li { list-style: circle; }
   margin: 0 auto;
   width: 75%;
 
-  +mobile() { width: 40%; }
+  +mobile() { display: none; }
 
   i {
     position: relative;
@@ -97,6 +96,7 @@ ul li { list-style: circle; }
 }
 
 
+
 // Menu
 // --------------------------------------------------
 .menu {
@@ -104,17 +104,27 @@ ul li { list-style: circle; }
   margin: 8px 0 0 20px;
   padding: 0 20px;
 
-  +mobile() { margin-top: 20px; }
+  +mobile() {
+    margin: 0;
+    padding: 0;
+  }
 
   br { display: none; }
 
-  .menu-item { margin-left: 0; }
+  .menu-item {
+    margin-left: 0;
+    +mobile() { display: block; }
+  }
 
   .menu-item a {
     padding: 5px 10px;
     background: none;
     border: none;
     transition-property: background;
+
+    +mobile() {
+      text-align: left;
+    }
 
     &:hover { background: #e1e1e1; }
   }
@@ -128,7 +138,10 @@ ul li { list-style: circle; }
   +mobile() { float: none; }
 }
 
-.menu-left { float: left; }
+.menu-left {
+  float: left;
+  +mobile() { float: none; }
+}
 
 .menu-item-icon { display: none; }
 
@@ -139,6 +152,11 @@ ul li { list-style: circle; }
 .site-search {
   float: right;
   margin-top: 8px;
+
+  +mobile() {
+    float: none;
+    padding: 0 10px;
+  }
 
   input {
     padding: 3px;
