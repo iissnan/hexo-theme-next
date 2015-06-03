@@ -43,7 +43,6 @@
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
     analytics: {
-      baidu: '{{ theme.baidu_analytics }}',
       google: '{{ theme.google_analytics }}'
     },
     sidebar: '{{ theme.sidebar }}'
