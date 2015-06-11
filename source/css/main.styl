@@ -1,65 +1,87 @@
 // CSS Style Guide: http://codeguide.co/#css
 
-$is-mist = hexo-config('scheme') == 'Mist';
-
-// Core variables and mixins
-@import "_variables/base";
-@import "_variables/mist" if $is-mist;
-@import "_custom/variables";
-@import "_core/mixins";
 
 
-// Reset using normalize and fonts.
-@import "_core/normalize";
+$scheme    = hexo-config('scheme') ? hexo-config('scheme') : 'default';
+$variables = base $scheme custom;
+$mixins    = base $scheme custom;
+
+
+
+// Variables Layer
+// --------------------------------------------------
+for $variable in $variables
+  @import "_variables/" + $variable
+
+
+// Mixins Layer
+// --------------------------------------------------
+for $mixin in $mixins
+  @import "_mixins/" + $mixin;
+
+
+
+// Common Layer
+// --------------------------------------------------
+
+
+// Reset using normalize.
+@import "_common/_core/normalize";
 
 
 // Core CSS
-@import "_core/scaffolding";
-@import "_core/base";
-@import "_core/tables";
-@import "_core/helpers";
+@import "_common/_core/scaffolding";
+@import "_common/_core/base";
+@import "_common/_core/tables";
+@import "_common/_core/helpers";
+
 
 // Fonts
-@import "_fonts/lato";
-@import "_fonts/icon-font";
-@require "_fonts/icon-" + hexo-config('icon_font');
+@import "_common/_fonts/lato";
+@import "_common/_fonts/icon-font";
+@import "_common/_fonts/icon-" + hexo-config('icon_font');
 
 
 // Vendors
-@import "_vendor/highlight/highlight";
+@import "_common/_vendor/highlight/highlight";
 
 
 // Sections
-@import "_section/layout";
-@import "_section/header";
-@import "_section/body";
-@import "_section/sidebar";
-@import "_section/footer";
-@import "_section/media";
+@import "_common/_section/layout";
+@import "_common/_section/header";
+@import "_common/_section/body";
+@import "_common/_section/sidebar";
+@import "_common/_section/footer";
+@import "_common/_section/media";
 
 
 // Components
-@import "_component/buttons";
-@import "_component/posts-expand";
-@import "_component/posts-collapse";
-@import "_component/posts-type";
-@import "_component/pagination";
-@import "_component/comments";
-@import "_component/tag-cloud";
-@import "_component/gallery";
-@import "_component/back-to-top";
-@import "_component/duoshuo";
+@import "_common/_component/buttons";
+@import "_common/_component/posts-expand";
+@import "_common/_component/posts-collapse";
+@import "_common/_component/posts-type";
+@import "_common/_component/pagination";
+@import "_common/_component/comments";
+@import "_common/_component/tag-cloud";
+@import "_common/_component/gallery";
+@import "_common/_component/back-to-top";
+@import "_common/_component/duoshuo";
 
 
 // Page specific styles
-@import "_page/home";
-@import "_page/archive";
-@import "_page/post-detail";
-@import "_page/categories";
+@import "_common/_page/home";
+@import "_common/_page/archive";
+@import "_common/_page/post-detail";
+@import "_common/_page/categories";
 
 
-// Import theme.
-@import "_mist" if $is-mist;
 
-// Custom styles
+// Schemes Layer
+// --------------------------------------------------
+@import "_schemes/" + $scheme;
+
+
+
+// Custom Layer
+// --------------------------------------------------
 @import "_custom/custom";

@@ -51,7 +51,7 @@
   {% include '_scripts/fancy-box.swig' %}
   {% include '_scripts/helpers.swig' %}
   {% include '_scripts/motion.swig' %}
-  {% if theme.scheme === "Mist" %}<script type="text/javascript" src="{{ url_for(theme.js) }}/mist.js"></script>{% endif %}
+  <script type="text/javascript" src="{{ url_for(theme.js) }}/search-toggle.js"></script>
 
   {% block script_extra %}{% endblock %}
 

@@ -1,0 +1,51 @@
+// Search
+// --------------------------------------------------
+.site-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+
+  +mobile() { position: static; }
+}
+
+.site-search form {
+  position: relative;
+  vertical-align: top;
+  background: $black-deep;
+  height: 30px;
+  z-index: 10;
+
+  +mobile() {
+    background: none;
+  }
+
+  input {
+    border: none;
+    color: $grey-light;
+    background: transparent url(/images/searchicon.png) no-repeat 10px 40%;
+    background-size: 15px 15px;
+
+    +mobile() { color: $black-deep; }
+  }
+}
+
+.use-motion .site-search form {
+  top: -50px;
+  +mobile() { top: 0 !important; }
+}
+
+.site-search-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  width: 15px;
+  height: 20px;
+  cursor: pointer;
+  vertical-align: top;
+  background: $black-deep url(/images/searchicon.png) no-repeat 50% 40%;
+  background-size: 15px 15px;
+
+  +mobile() { display: none; }
+}

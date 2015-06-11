@@ -1,0 +1,263 @@
+.sidebar-toggle {
+  position: fixed;
+  right: 50px;
+  bottom: 45px;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  background: $black-deep;
+  line-height: 0;
+  z-index: $zindex-5;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+
+  +tablet() {
+    display: none;
+  }
+  +mobile() {
+    display: none;
+  }
+}
+
+
+
+.sidebar-toggle-line {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 2px;
+  width: 100%;
+  background: white;
+  margin-top: 3px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.sidebar {
+  width: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: $zindex-4;
+  box-shadow: inset 0 2px 6px black;
+  background: $black-deep;
+  -webkit-transform: translateZ(0); // http://stackoverflow.com/questions/17079857/position-fixed-broken-in-chrome-with-flash-behind
+
+  a {
+    color: $grey-dark;
+    border-bottom-color: $black-light;
+    &:hover { color: $gainsboro; }
+  }
+
+  +tablet() {
+    display: none !important;
+  }
+  +mobile() {
+    display: none !important;
+  }
+}
+
+.sidebar-inner {
+  position: relative;
+  padding: 20px 10px;
+  color: $grey-dark;
+  text-align: center;
+}
+
+.site-author-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 96px;
+  height: auto;
+  border: 2px solid #333;
+  padding: 2px;
+}
+
+.site-author-name {
+  margin: 5px 0 0;
+  color: $whitesmoke;
+}
+
+.site-description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: $black-light;
+}
+
+.site-state {
+  overflow: hidden;
+  line-height: 1.4;
+}
+
+.site-state-item {
+  display: inline-block;
+  padding: 0 15px;
+  border-left: 1px solid #333;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  a {
+    border-bottom: none;
+  }
+}
+.site-state-item-count {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+}
+
+.site-state-item-name {
+  font-size: 13px;
+}
+
+.feed-link {
+  margin-top: 20px;
+
+  a {
+    display: inline-block;
+    padding: 0 15px;
+    color: rgb(252, 100, 35);
+    border: 1px solid rgb(252, 100, 35);
+    border-radius: 4px;
+
+    i {
+      color: rgb(252, 100, 35);
+      font-size: 14px;
+    }
+
+    &:hover {
+      color:white;
+      background: rgb(252, 100, 35);
+
+      i {
+        color: white;
+      }
+    }
+  }
+}
+
+.links-of-author {
+  margin-top: 20px;
+}
+
+.links-of-author a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-bottom-color: $black-light;
+  font-size: 13px;
+
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+    content: " ";
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
+  }
+}
+
+// Sidebar Navigation
+
+.sidebar-nav {
+  margin: 0;
+  padding-left: 0;
+}
+.sidebar-nav li {
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  font-size: 15px;
+
+  &:hover {
+    color: $whitesmoke;
+  }
+}
+.page-post-detail .sidebar-nav-toc {
+  padding: 0 5px;
+}
+
+.page-post-detail .sidebar-nav-overview {
+  margin-left: 10px;
+}
+
+.sidebar-nav .sidebar-nav-active {
+  color: $sidebar-highlight;
+  border-bottom-color: $sidebar-highlight;
+
+  &:hover {
+    color: $sidebar-highlight;
+  }
+}
+
+
+.post-toc {
+  overflow: hidden;
+  position: relative;
+}
+
+.post-toc-empty {
+  font-size: 14px;
+  color: $grey-dim;
+}
+
+.post-toc ol {
+  overflow: auto;
+  margin: 0;
+  padding: 0 10px 10px;
+  text-align: left;
+  list-style: none;
+  font-size: 14px;
+
+  a {
+    color: $grey-dark;
+    &:hover {
+      color: $grey-light;
+    }
+  }
+}
+
+.post-toc .nav .nav-child {
+  display: none;
+}
+
+.post-toc .nav .active .nav-child {
+  display: block;
+}
+
+.post-toc .nav .active > a {
+  color: $grey-light;
+}
+
+.post-toc .nav .active-current > a {
+  color: $sidebar-highlight;
+  &:hover {
+    color: $sidebar-highlight;
+  }
+}
+
+.post-toc-indicator {
+  height: 20px;
+  opacity: 0.4;
+  background: no-repeat 10px 50%;
+  background-size: 10px 12px;
+}
+
+.post-toc-indicator-top {
+  opacity: 0;
+  margin-top: 10px;
+  background-image: url($post-toc-indicator-top);
+}
+.post-toc-indicator-bottom {
+  position: absolute;
+  width: 100%;
+  background-image: url($post-toc-indicator-bottom);
+}

@@ -99,6 +99,12 @@ ul li { list-style: circle; }
 
 // Menu
 // --------------------------------------------------
+.site-nav-toggle {
+  position: static;
+  float: right;
+}
+
+
 .menu {
   float: right;
   margin: 8px 0 0 20px;
@@ -130,10 +136,10 @@ ul li { list-style: circle; }
   }
 
   a::before {
-    display: none;
+      display: none;
 
-    +mobile() { display: block; }
-  }
+      +mobile() { display: block; }
+    }
 
   +mobile() { float: none; }
 }

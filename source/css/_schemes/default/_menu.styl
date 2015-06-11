@@ -1,0 +1,32 @@
+.site-nav {
+  +mobile() {
+    position: absolute;
+    left: 0;
+    top: 52px;
+    margin: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+.menu {
+  +mobile() { text-align: left; }
+}
+.menu .menu-item {
+  +mobile() {
+    display: block;
+    margin-left: 0;
+    vertical-align: top;
+  }
+
+  br {
+    +mobile() { display: none; }
+  }
+}
+
+.menu .menu-item-icon {
+  +mobile() {
+    font-size: 15px;
+  }
+}
