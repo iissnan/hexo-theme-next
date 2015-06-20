@@ -44,7 +44,7 @@ git pull
 
 - [支持自定义 LOGO 以及主题图标](https://github.com/iissnan/hexo-theme-next/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89LOGO%E4%BB%A5%E5%8F%8A%E4%B8%BB%E9%A2%98%E5%9B%BE%E6%A0%87)
 - [支持多语言：英语 / 简体中文 / 繁体中文 / 法语 / 俄语 / 德语](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80)
-- [支持 多说 / DISQUS 评论系统](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E5%A4%9A%E8%AF%B4-DISQUS%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F)
+- [支持 多说 / DISQUS 评论系统](https://github.com/iissnan/hexo-theme-next/wiki/%E8%AE%BE%E7%BD%AE%E5%A4%9A%E8%AF%B4-DISQUS)
 - [支持 标签云 页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E6%A0%87%E7%AD%BE%E4%BA%91%E9%A1%B5%E9%9D%A2)
 - [支持 分类 页面](https://github.com/iissnan/hexo-theme-next/wiki/%E5%88%9B%E5%BB%BA%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2)
 - [支持 RSS 链接](https://github.com/iissnan/hexo-theme-next/wiki/%E6%98%BE%E7%A4%BA-feed-%E9%93%BE%E6%8E%A5)
