@@ -1,9 +1,9 @@
 {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
 
   {% if theme.duoshuo %}
-    {% set duoshuo_shortname = config.duoshuo.shortname %}
+    {% set duoshuo_shortname = theme.duoshuo.shortname %}
   {% else %}
-    {% set duoshuo_shortname = config.duoshuo_shortname %}
+    {% set duoshuo_shortname = theme.duoshuo_shortname %}
   {% endif %}
 
   <script type="text/javascript">
