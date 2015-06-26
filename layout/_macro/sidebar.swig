@@ -79,6 +79,17 @@
           </div>
         {% endif %}
 
+        <div class="links-of-author motion-element">
+          {% if theme.links %}
+            <p class="site-author-name">{{ theme.links_title }}</p>
+            {% for name, link in theme.links %}
+              <span class="links-of-author-item">
+              <a href="{{ link }}" target="_blank">{{ name }}</a>
+              </span>
+            {% endfor %}
+          {% endif %}
+        </div>
+        
       </div>
 
       {% if is_post %}
