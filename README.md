@@ -90,6 +90,9 @@ disqus_shortname: your-disqus-shortname
 # JiaThis 分享服务
 jiathis: true
 
+# 多说 分享服务（必须启用多说）
+duoshuo_share: 
+
 # 社交链接，将在侧栏中显示
 social:
   GitHub: your-github-url
