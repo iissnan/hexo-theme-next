@@ -1,0 +1,18 @@
+{
+  "curly": true,
+  "eqnull": true,
+  "eqeqeq": true,
+  "undef": true,
+  "newcap": true,
+  "undef": true,
+  "unused": true,
+  "laxcomma": false,
+  "asi": false,
+  "expr": true,
+  "loopfunc": false,
+  "strict": false,
+
+  "globals": {
+    "module": true
+  }
+}
