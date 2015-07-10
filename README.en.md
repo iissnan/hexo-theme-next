@@ -104,6 +104,27 @@ disqus:
           home: /
           archives: /archives
           tags: /tags
+          
+### Categories page.
+
+> Add a categories page contains all categories in your site.
+
+- Create a page named `categories`
+
+        hexo new page "categories"
+
+- Edit categories page, set page type to `categories`.
+
+        title: All categories
+        date: 2014-12-22 12:39:04
+        type: "categories"
+
+- Add `categories` to theme `_config.yml`:
+
+        menu:
+          home: /
+          archives: /archives
+          categories: /categories
 
 ### Social Media
 
