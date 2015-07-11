@@ -4,9 +4,9 @@
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
 </head>
-
 <body>
   {% include '_partials/old-browsers.swig' %}
+  {% include '_scripts/analytics.swig' %}
 
   <div class="container one-column {% block page_class %}{% endblock %}">
     <div class="headband"></div>
@@ -67,7 +67,6 @@
   {% block comment_system %}{% endblock %}
 
   {% include '_scripts/baidushare.swig' %}
-  {% include '_scripts/analytics/google-analytics.swig' %}
   
   <!-- lazyload -->
   <script type="text/javascript" src="{{ url_for(theme.js) }}/lazyload.js"></script>

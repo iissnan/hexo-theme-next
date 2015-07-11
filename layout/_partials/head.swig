@@ -46,11 +46,6 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
-    analytics: {
-      google: '{{ theme.google_analytics }}'
-    },
     sidebar: '{{ theme.sidebar }}'
   };
 </script>
-
-{% include '../_scripts/analytics/baidu-analytics.swig' %}
