@@ -4,14 +4,14 @@
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
 </head>
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
   {% include '_partials/old-browsers.swig' %}
   {% include '_scripts/analytics.swig' %}
 
   <div class="container one-column {% block page_class %}{% endblock %}">
     <div class="headband"></div>
 
-    <div id="header" class="header">
+    <div id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner">
         {% include '_partials/header.swig' %}
       </div>

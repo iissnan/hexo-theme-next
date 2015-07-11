@@ -12,7 +12,7 @@
 
       {% if is_post %}
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             {{ __('sidebar.toc') }}
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -24,12 +24,12 @@
       <div class="site-overview">
         <div class="site-author motion-element">
           <img class="site-author-image" src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" />
-          <p class="site-author-name">{{ theme.author }}</p>
+          <p class="site-author-name" itemprop="author">{{ theme.author }}</p>
         </div>
         <p class="site-description motion-element">{{ theme.description }}</p>
         <div class="site-state motion-element">
           <div class="site-state-item site-state-posts">
-            <a href="{{ url_for(theme.menu.archives) }}">
+            <a href="{{ url_for(theme.menu.archives) }}" itemprop>
               <span class="site-state-item-count">{{ site.posts.length }}</span>
               <span class="site-state-item-name">{{ __('state.posts') }}</span>
             </a>
@@ -72,7 +72,7 @@
 
         {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
         {% if theme.creative_commons in cc %}
-          <div class="cc-license motion-element">
+          <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/{{ theme.creative_commons }}/4.0" class="cc-opacity" target="_blank">
               <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
             </a>

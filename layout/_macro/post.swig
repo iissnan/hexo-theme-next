@@ -1,20 +1,20 @@
 {% macro render(post, is_index, post_extra_class) %}
 
-  <div class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}">
+  <div class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
     <div class="post-header">
 
       {# Not to show title for quote posts that do not have a title #}
       {% if not (is_index and post.type === 'quote' and not post.title) %}
-        <h1 class="post-title">
+        <h1 class="post-title" itemprop="name">
           {# Link posts #}
           {% if post.link %}
-            <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}">
+            <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
               {{ post.title or post.link }}
               <i class="icon-external-link"></i>
             </a>
           {% else %}
             {% if is_index %}
-              <a class="post-title-link" href="{{ url_for(post.path) }}">
+              <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
                 {{ post.title | default(__('post.untitled'))}}
               </a>
             {% else %}
@@ -26,14 +26,14 @@
 
       <div class="post-meta">
         <span class="post-time">
-          {{ __('post.posted') }} {{ date(post.date, config.date_format) }}
+          {{ __('post.posted') }} <span itemprop="dateCreated" content="{{ post.date|date('Y-m-d') }}">{{ date(post.date, config.date_format) }}</span>
         </span>
 
         {% if post.categories and post.categories.length %}
-          <span class="post-category">
+          <span class="post-category" >
             &nbsp; | &nbsp; {{ __('post.in') }}
             {% for cat in post.categories %}
-              <a href="{{ url_for(cat.path) }}">{{ cat.name }}</a>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="{{ url_for(cat.path) }}" itemprop="url"><span itemprop="name">{{ cat.name }}</span></a></span>
 
               {% set cat_length = post.categories.length %}
               {% if cat_length > 1 and loop.index !== cat_length %}
@@ -47,16 +47,16 @@
         {% if post.comments %}
           {% if (config.duoshuo and config.duoshuo.shortname) or config.duoshuo_shortname %}
             <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="{{ url_for(post.path) }}#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}"></span>
-            </a>
-          </span>
+              &nbsp; | &nbsp;
+              <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentsCount"></span>
+              </a>
+            </span>
           {% elseif config.disqus_shortname %}
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="{{ url_for(post.path) }}#comments" >
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}"></span>
+            <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>
             </a>
           </span>
           {% endif %}
@@ -68,10 +68,10 @@
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
-        <div class="post-gallery">
+        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
           {% for photo in post.photos %}
-            <a class="post-gallery-img fancybox" href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}">
-              <img src="{{ url_for(photo) }}" />
+            <a class="post-gallery-img fancybox" href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <img src="{{ url_for(photo) }}" itemprop="contentUrl"/>
             </a>
           {% endfor %}
         </div>
@@ -79,24 +79,24 @@
 
       {% if is_index %}
         {% if post.description %}
-          {{ post.description }}
+          <span itemprop="description">{{ post.description }}</span>
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
           {% elif post.excerpt  %}
-          {{ post.excerpt }}
+          {{ post.excerpt }}</span>
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
         {% else %}
-          {{ post.content }}
+        <span itemprop="text articleBody">{{ post.content }}</span>
         {% endif %}
       {% else %}
-        {{ post.content }}
+        <span itemprop="text articleBody">{{ post.content }}</span>
       {% endif  %}
     </div>
 
