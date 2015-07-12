@@ -1,7 +1,7 @@
 {% macro render(post, is_index, post_extra_class) %}
 
-  <div class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
-    <div class="post-header">
+  <article class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
       {# Not to show title for quote posts that do not have a title #}
       {% if not (is_index and post.type === 'quote' and not post.title) %}
@@ -26,7 +26,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          {{ __('post.posted') }} <span itemprop="dateCreated" content="{{ post.date|date('Y-m-d') }}">{{ date(post.date, config.date_format) }}</span>
+          {{ __('post.posted') }} <time itemprop="dateCreated" datetime="{{ post.date|date('c') }}" content="{{ post.date|date('Y-m-d') }}">{{ date(post.date, config.date_format) }}</time>
         </span>
 
         {% if post.categories and post.categories.length %}
@@ -62,7 +62,7 @@
           {% endif %}
         {% endif %}
       </div>
-    </div>
+    </header>
 
     <div class="post-body">
 
@@ -130,6 +130,6 @@
         <div class="post-eof"></div>
       {% endif %}
     </div>
-  </div>
+  </article>
 
 {% endmacro %}

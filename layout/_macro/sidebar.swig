@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <sidebar id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
       {% if is_post %}
@@ -21,10 +21,10 @@
         </ul>
       {% endif %}
 
-      <div class="site-overview">
+      <div class="site-overview" itemprop="author" itemscope itemtype="http://schema.org/Person">
         <div class="site-author motion-element">
           <img class="site-author-image" src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" />
-          <p class="site-author-name" itemprop="author">{{ theme.author }}</p>
+          <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
         </div>
         <p class="site-description motion-element">{{ theme.description }}</p>
         <div class="site-state motion-element">
@@ -64,8 +64,8 @@
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
-              <a href="{{ link }}" target="_blank">{{ name }}</a>
-            </span>
+                <a href="{{ link }}" target="_blank" itemprop="sameAs">{{ name }}</a>
+              </span>
             {% endfor %}
           {% endif %}
         </div>
@@ -89,7 +89,7 @@
             {% endfor %}
           {% endif %}
         </div>
-        
+
       </div>
 
       {% if is_post %}
@@ -108,5 +108,5 @@
       {% endif %}
 
     </div>
-  </div>
+  </sidebar>
 {% endmacro %}
