@@ -5,7 +5,7 @@
 
       {# Not to show title for quote posts that do not have a title #}
       {% if not (is_index and post.type === 'quote' and not post.title) %}
-        <h1 class="post-title" itemprop="name">
+        <h1 class="post-title" itemprop="name headline">
           {# Link posts #}
           {% if post.link %}
             <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
@@ -33,7 +33,7 @@
           <span class="post-category" >
             &nbsp; | &nbsp; {{ __('post.in') }}
             {% for cat in post.categories %}
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="{{ url_for(cat.path) }}" itemprop="url"><span itemprop="name">{{ cat.name }}</span></a></span>
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a href="{{ url_for(cat.path) }}" itemprop="url" rel="index"><span itemprop="name">{{ cat.name }}</span></a></span>
 
               {% set cat_length = post.categories.length %}
               {% if cat_length > 1 and loop.index !== cat_length %}
@@ -86,25 +86,25 @@
             </a>
           </div>
           {% elif post.excerpt  %}
-          {{ post.excerpt }}</span>
+          {{ post.excerpt }}
           <div class="post-more-link text-center">
-            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}">
+            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}" rel="contents">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
         {% else %}
-        <span itemprop="text articleBody">{{ post.content }}</span>
+        <span itemprop="articleBody">{{ post.content }}</span>
         {% endif %}
       {% else %}
-        <span itemprop="text articleBody">{{ post.content }}</span>
+        <span itemprop="articleBody">{{ post.content }}</span>
       {% endif  %}
     </div>
 
-    <div class="post-footer">
+    <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}"> #{{ tag.name }} </a>
+            <a href="{{ url_for(tag.path) }}" rel="tag">#{{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
@@ -113,13 +113,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             {% if post.prev %}
-              <a href="{{ url_for(post.prev.path) }}">{{post.prev.title}}</a>
+              <a href="{{ url_for(post.prev.path) }}" rel="prev">{{post.prev.title}}</a>
             {% endif %}
           </div>
 
           <div class="post-nav-next post-nav-item">
             {% if post.next %}
-              <a href="{{ url_for(post.next.path) }}">{{post.next.title}}</a>
+              <a href="{{ url_for(post.next.path) }}" rel="next">{{post.next.title}}</a>
             {% endif %}
           </div>
         </div>
@@ -129,7 +129,7 @@
       {% if is_index and not isLast %}
         <div class="post-eof"></div>
       {% endif %}
-    </div>
+    </footer>
   </article>
 
 {% endmacro %}
