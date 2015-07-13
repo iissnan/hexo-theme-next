@@ -8,7 +8,7 @@
 
 {% block content %}
 
-  <div id="posts" class="posts-collapse">
+  <section id="posts" class="posts-collapse">
     <span class="archive-move-on"></span>
 
     <span class="archive-page-counter">
@@ -43,7 +43,7 @@
 
     {% endfor %}
 
-  </div>
+  </section>
 
   {% include '_partials/pagination.swig' %}
 

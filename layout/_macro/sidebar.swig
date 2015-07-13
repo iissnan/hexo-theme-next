@@ -7,12 +7,12 @@
     </div>
   </div>
 
-  <div id="sidebar" class="sidebar">
+  <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
       {% if is_post %}
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             {{ __('sidebar.toc') }}
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -21,13 +21,13 @@
         </ul>
       {% endif %}
 
-      <div class="site-overview">
-        <div class="site-author motion-element">
-          <img class="site-author-image" src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" />
-          <p class="site-author-name">{{ theme.author }}</p>
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
         </div>
-        <p class="site-description motion-element">{{ theme.description }}</p>
-        <div class="site-state motion-element">
+        <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
+        <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="{{ url_for(theme.menu.archives) }}">
               <span class="site-state-item-count">{{ site.posts.length }}</span>
@@ -49,11 +49,11 @@
               {% if theme.menu.tags %}</a>{% endif %}
           </div>
 
-        </div>
+        </nav>
 
         {% if theme.rss %}
           <div class="feed-link motion-element">
-            <a href="{{ url_for(theme.rss) }}">
+            <a href="{{ url_for(theme.rss) }}" rel="alternate">
               <i class="menu-item-icon icon-feed"></i>
               RSS
             </a>
@@ -64,15 +64,15 @@
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
-              <a href="{{ link }}" target="_blank">{{ name }}</a>
-            </span>
+                <a href="{{ link }}" target="_blank">{{ name }}</a>
+              </span>
             {% endfor %}
           {% endif %}
         </div>
 
         {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
         {% if theme.creative_commons in cc %}
-          <div class="cc-license motion-element">
+          <div class="cc-license motion-element" itemprop="license">
             <a href="http://creativecommons.org/licenses/{{ theme.creative_commons }}/4.0" class="cc-opacity" target="_blank">
               <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
             </a>
@@ -89,24 +89,24 @@
             {% endfor %}
           {% endif %}
         </div>
-        
-      </div>
+
+      </section>
 
       {% if is_post %}
-        <div class="post-toc-wrap sidebar-panel-active">
+        <section class="post-toc-wrap sidebar-panel-active">
           <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
             {% set toc = toc(page.content, {"class": "nav", list_number: theme.toc_list_number}) %}
-            {% if toc.length === 0 %}
+            {% if toc.length <= 1 %}
               <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
             {% else %}
               <div class="post-toc-content">{{ toc }}</div>
             {% endif %}
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
-        </div>
+        </section>
       {% endif %}
 
     </div>
-  </div>
+  </aside>
 {% endmacro %}

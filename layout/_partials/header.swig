@@ -1,6 +1,6 @@
 <h1 class="site-meta">
   <span class="logo-line-before"><i></i></span>
-  <a href="{{ config.root }}" class="brand">
+  <a href="{{ config.root }}" class="brand" rel="start">
       <span class="logo">
         <i class="icon-logo"></i>
       </span>
@@ -17,7 +17,7 @@
   </button>
 </div>
 
-<div class="site-nav">
+<nav class="site-nav">
   {% set hasSearch = config.swiftype_key || config.tinysou_Key %}
 
   {% if theme.menu %}
@@ -25,7 +25,7 @@
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
-          <a href="{{ url_for(path) }}">
+          <a href="{{ url_for(path) }}" rel="section">
             <i class="menu-item-icon icon-{{ itemName }}"></i> <br />
             {{ __('menu.' + itemName) }}
           </a>
@@ -39,5 +39,5 @@
       {% include 'search.swig' %}
     </div>
   {% endif %}
-</div>
+</nav>
 
