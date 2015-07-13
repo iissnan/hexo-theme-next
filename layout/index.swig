@@ -9,11 +9,11 @@
 {% endblock %}
 
 {% block content %}
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     {% for post in page.posts %}
       {{ post_template.render(post, true) }}
     {% endfor %}
-  </div>
+  </section>
 
   {% include '_partials/pagination.swig' %}
 {% endblock %}
