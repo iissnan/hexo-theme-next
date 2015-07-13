@@ -56,6 +56,10 @@ scroll_to_more: true
 # Automatically add list number to toc.
 toc_list_number: true
 
+# Automatically Excerpt
+auto_excerpt:
+  enable: false
+  length: 150
 
 # Use Lato font
 # Note: this option is avialable only when the language is not `zh-Hans`
