@@ -68,16 +68,16 @@
 
   {% include '_scripts/baidushare.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
-  
+
   <!-- lazyload -->
   <script type="text/javascript" src="{{ url_for(theme.js) }}/lazyload.js"></script>
       <script type="text/javascript">
-        jQuery(function() {          
+        jQuery(function() {
             jQuery("#posts img").lazyload({
-              placeholder:"http://www.arao.me/loading.gif",  
+              placeholder:"{{ url_for(theme.images) }}/placeholder.gif",
                 effect:"fadeIn"
               });
             });
-    </script>   
+    </script>
 </body>
 </html>
