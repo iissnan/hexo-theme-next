@@ -91,7 +91,7 @@ disqus_shortname: your-disqus-shortname
 jiathis: true
 
 # 多说 分享服务（必须启用多说）
-duoshuo_share: 
+duoshuo_share:
 
 # 社交链接，将在侧栏中显示
 social:
@@ -206,7 +206,11 @@ toc_list_number: true
 ### 使用方式：
 
 ```html
+<!-- HTML -->
 <blockquote class="blockquote-center">blah blah blah</blockquote>
+
+<!-- Built-in tag (Require NexT 0.4.5) -->
+{% centerquote %}blah blah blah{% endcenterquote %}
 ```
 
 `.full-image`
@@ -220,7 +224,11 @@ toc_list_number: true
 ### 使用方式：
 
 ```html
+<!-- HTML -->
 <img src="/image-url" class="full-image" />
+
+<!-- Built-in tag (Require NexT 0.4.5) -->
+{% full_image /image-url, alt, title %}
 ```
 
 

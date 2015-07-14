@@ -15,6 +15,9 @@
   "globals": {
     "define": true,
     "require": true,
+    "it": true,
+    "module": true,
+    "describe": true,
     "window": true,
     "$": true
   }
