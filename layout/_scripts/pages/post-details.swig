@@ -31,7 +31,6 @@
     }
 
     function getTOCMaxHeight () {
-      var $sidebarInner = $('.sidebar-inner');
       var height = $('.sidebar').height() -
                    $tocSelector.position().top -
                    $('.post-toc-indicator-bottom').height();
@@ -53,7 +52,7 @@
       )
     }
 
-    $(document).on('sidebar.didShow', function () {
+    $(document).on('sidebar.motion.complete', function () {
       processTOC();
     });
 

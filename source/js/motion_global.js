@@ -35,7 +35,7 @@ $(document).ready(function () {
 
 
   //当前选择的是目录列表时添加 class 'motion-element'
-  sidebar.bind('click', function(e){ 
+  sidebar.bind('click', function(e){
     if(!!$('.sidebar-nav-toc') && e.target == $('.sidebar-nav-toc')[0]){
       $('.post-toc-wrap').addClass('motion-element');
     }});
@@ -55,7 +55,7 @@ $(document).ready(function () {
         SIDEBAR_DISPLAY_DURATION
       );
       // sidebar 内容的效果应该在sidebarsidebarShowMotion内触发
-      // sidebarContentMotion(); 
+      // sidebarContentMotion();
     })
     .on('sidebar.isHiding', function () {});
 
@@ -134,9 +134,14 @@ $(document).ready(function () {
   }
 
   function sidebarContentMotion () {
-    $('.sidebar .motion-element').velocity(
-      'transition.slideRightIn',
-      {stagger: 50, drag: true}
+    $('.sidebar .motion-element')
+      .velocity('transition.slideRightIn',{
+        stagger: 50,
+        drag: true,
+        complete: function () {
+          sidebar.trigger('sidebar.motion.complete');
+        }
+      }
     );
   }
 

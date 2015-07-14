@@ -13,6 +13,8 @@
   "strict": false,
 
   "globals": {
-    "module": true
+    "$": true,
+    "window": true,
+    "document": true
   }
 }
