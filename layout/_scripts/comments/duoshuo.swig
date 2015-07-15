@@ -17,4 +17,8 @@
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+  {% if theme.duoshuo_ua %}
+  	<script src="{{ url_for(theme.js) }}/ua-parser.min.js"></script>
+  	<script src="{{ url_for(theme.js) }}/hook-duoshuo.js"></script>
+  {% endif %}
 {% endif %}
