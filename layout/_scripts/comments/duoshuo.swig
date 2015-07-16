@@ -17,4 +17,13 @@
       || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
+    {% if theme.duoshuo_info.ua_enable %}
+     {% if theme.duoshuo_info.admin_enable %}
+  	  <script type="text/javascript">
+  		var duoshuo_user_ID = {{theme.duoshuo_info.user_id}}
+  	  </script>
+     {% endif %}
+  	<script src="{{ url_for(theme.js) }}/ua-parser.min.js"></script>
+  	<script src="{{ url_for(theme.js) }}/hook-duoshuo.js"></script>
+  {% endif %}
 {% endif %}
