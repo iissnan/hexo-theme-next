@@ -16,7 +16,7 @@ function hook_duoshuo_templates() {
 		var rs = _D_post(e, t);
 		var is_admin;
 		if (e.post.author.user_id && (e.post.author.user_id == duoshuo_user_ID)) {
-			is_admin = '<span class="this_ua admin">²©Ö÷</span>'
+			is_admin = '<span class="this_ua admin">åšä¸»</span>'
 		} else {
 			is_admin = '';
 		}
