@@ -209,7 +209,7 @@ toc_list_number: true
 <!-- HTML -->
 <blockquote class="blockquote-center">blah blah blah</blockquote>
 
-<!-- Built-in tag (Require NexT 0.4.5) -->
+<!-- Built-in tag (Require NexT 0.4.5 or above) -->
 {% centerquote %}blah blah blah{% endcenterquote %}
 ```
 
@@ -227,8 +227,8 @@ toc_list_number: true
 <!-- HTML -->
 <img src="/image-url" class="full-image" />
 
-<!-- Built-in tag (Require NexT 0.4.5) -->
-{% full_image /image-url, alt, title %}
+<!-- Built-in tag (Require NexT 0.4.5 or above) -->
+{% fullimage /image-url, alt, title %}
 ```
 
 
