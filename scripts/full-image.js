@@ -1,5 +1,5 @@
 /* global hexo */
-// Usage: {% full_image /path/to/image, alt, title %}
+// Usage: {% fullimage /path/to/image, alt, title %}
 
 function fullImage(args) {
   args = args.join('').split(',');
