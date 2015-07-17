@@ -2,7 +2,7 @@
   <span class="logo-line-before"><i></i></span>
   <a href="{{ config.root }}" class="brand" rel="start">
       <span class="logo">
-        <i class="icon-logo"></i>
+        <i class="icon-next-logo"></i>
       </span>
       <span class="site-title">{{ config.title }}</span>
   </a>
@@ -26,7 +26,7 @@
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
           <a href="{{ url_for(path) }}" rel="section">
-            <i class="menu-item-icon icon-{{ itemName }}"></i> <br />
+            <i class="menu-item-icon icon-next-{{ itemName }}"></i> <br />
             {{ __('menu.' + itemName) }}
           </a>
         </li>
