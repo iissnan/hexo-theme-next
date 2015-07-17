@@ -31,6 +31,16 @@
           </a>
         </li>
       {% endfor %}
+
+      {# Search icon for default scheme #}
+      {% if not theme.scheme %}
+        <li class="menu-item menu-item-search">
+          <a href="#" class="st-search-show-outputs">
+            <i class="menu-item-icon icon-next-search"></i> <br />
+            {{ __('menu.search') }}
+          </a>
+        </li>
+      {% endif %}
     </ul>
   {% endif %}
 

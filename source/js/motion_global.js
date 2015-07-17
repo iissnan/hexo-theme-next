@@ -28,7 +28,6 @@ $(document).ready(function () {
   sidebarToggleMotion();
   postsListMotion();
   backToTopMotion();
-  searchMotion();
 
   //add motion effect to toc
   $('.sidebar-nav-toc') && $('.post-toc-wrap').addClass('motion-element');
@@ -167,20 +166,5 @@ $(document).ready(function () {
       sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
       sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
     });
-  }
-
-  function searchMotion () {
-    var $searchForm = $('.site-search form');
-    var $searchToggle = $('.site-search-toggle');
-
-    if (isDesktop()) {
-      $searchToggle.on('click', function () {
-        $searchForm.velocity('stop').velocity({ top: 0 });
-      });
-
-      $(document).on('click', function (event) {
-        !$(event.target).closest('.site-search').length && $searchForm.velocity('stop').velocity({ top: -50 });
-      });
-    }
   }
 });
