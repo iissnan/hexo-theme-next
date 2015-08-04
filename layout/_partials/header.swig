@@ -18,7 +18,7 @@
 </div>
 
 <nav class="site-nav">
-  {% set hasSearch = config.swiftype_key || config.tinysou_Key %}
+  {% set hasSearch = theme.swiftype_key || theme.tinysou_Key %}
 
   {% if theme.menu %}
     <ul id="menu" class="menu {{ hasSearch and 'menu-left' }}">
@@ -33,7 +33,7 @@
       {% endfor %}
 
       {# Search icon for default scheme #}
-      {% if not theme.scheme %}
+      {% if not theme.scheme and theme.swiftype_key %}
         <li class="menu-item menu-item-search">
           <a href="#" class="st-search-show-outputs">
             <i class="menu-item-icon icon-next-search"></i> <br />
