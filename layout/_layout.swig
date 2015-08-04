@@ -66,14 +66,14 @@
   
   <script type="text/javascript" src="{{ url_for(theme.js) }}/nav-toggle.js?v={{ theme.version }}"></script>
 
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fastclick/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   <script type="text/javascript">
     $(document).ready(function () {
       if (CONFIG.sidebar === 'always') {
         displaySidebar();
       }
-      if (!!isMobile) {
+      if (isMobile()) {
         FastClick.attach(document.body);
       }
     });
