@@ -63,10 +63,11 @@
   {% include '_scripts/fancy-box.swig' %}
   {% include '_scripts/helpers.swig' %}
   {% include '_scripts/motion.swig' %}
-  
-  <script type="text/javascript" src="{{ url_for(theme.js) }}/nav-toggle.js?v={{ theme.version }}"></script>
 
+  <script type="text/javascript" src="{{ url_for(theme.js) }}/nav-toggle.js?v={{ theme.version }}"></script>
   <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  {% block script_extra %}{% endblock %}
 
   <script type="text/javascript">
     $(document).ready(function () {
