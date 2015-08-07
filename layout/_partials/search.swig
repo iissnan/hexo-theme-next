@@ -1,5 +1,5 @@
-{% if config.swiftype_key %}
+{% if theme.swiftype_key %}
   {% include 'search/swiftype.swig' %}
-{% elseif config.tinysou_Key %}
+{% elseif theme.tinysou_Key %}
   {% include 'search/tinysou.swig' %}
 {% endif %}

@@ -14,8 +14,8 @@
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
 {% endif %}
 
-{% if config.qihu_site_verification %}
-  <meta name="360-site-verification" content="{{ config.qihu_site_verification }}" />
+{% if theme.qihu_site_verification %}
+  <meta name="360-site-verification" content="{{ theme.qihu_site_verification }}" />
 {% endif %}
 
 {% if theme.fancybox %}

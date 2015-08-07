@@ -1,10 +1,9 @@
-{# 集成 tinysou 站内搜索功能#}
 <form class="site-search-form" >
   <input type="text" id="ts-search-input" class="menu-search-input">
 </form>
 <script>
   var option = {
-    engineKey: '{{ config.tinysou_Key }}'
+    engineKey: '{{ theme.tinysou_Key }}'
   };
   (function(w,d,t,u,n,s,e){
     s = d.createElement(t);

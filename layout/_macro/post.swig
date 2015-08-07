@@ -52,14 +52,14 @@
         {% endif %}
 
         {% if post.comments %}
-          {% if (config.duoshuo and config.duoshuo.shortname) or config.duoshuo_shortname %}
+          {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
             <span class="post-comments-count">
               &nbsp; | &nbsp;
               <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
                 <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentsCount"></span>
               </a>
             </span>
-          {% elseif config.disqus_shortname %}
+          {% elseif theme.disqus_shortname %}
             <span class="post-comments-count">
             &nbsp; | &nbsp;
             <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
