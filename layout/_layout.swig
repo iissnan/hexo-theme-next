@@ -42,7 +42,9 @@
         {% endif %}
       </div>
 
-      {% block sidebar %}{% endblock %}
+      {% if theme.sidebar !== 'remove' %}
+        {% block sidebar %}{% endblock %}
+      {% endif %}
     </main>
 
     <footer id="footer" class="footer">
