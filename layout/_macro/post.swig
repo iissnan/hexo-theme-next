@@ -1,75 +1,81 @@
 {% macro render(post, is_index, post_extra_class) %}
 
-  <article class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  {% set headlessPost = Array.prototype.indexOf.call(['quote', 'picture'], post.type) > -1 %}
+  {% set navlessPost = headlessPost %}
 
-      {# Not to show title for quote posts that do not have a title #}
-      {% if not (is_index and post.type === 'quote' and not post.title) %}
-        <h1 class="post-title" itemprop="name headline">
-          {# Link posts #}
-          {% if post.link %}
-            <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
-              {{ post.title or post.link }}
-              <i class="icon-external-link"></i>
-            </a>
-          {% else %}
-            {% if is_index %}
-              <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
-                {{ post.title | default(__('post.untitled'))}}
+  <article class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
+
+    {% if not headlessPost %}
+      <header class="post-header">
+
+        {# Not to show title for quote posts that do not have a title #}
+        {% if not (is_index and post.type === 'quote' and not post.title) %}
+          <h1 class="post-title" itemprop="name headline">
+            {# Link posts #}
+            {% if post.link %}
+              <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
+                {{ post.title or post.link }}
+                <i class="icon-external-link"></i>
               </a>
             {% else %}
-              {{ post.title }}
+              {% if is_index %}
+                <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
+                  {{ post.title | default(__('post.untitled'))}}
+                </a>
+              {% else %}
+                {{ post.title }}
+              {% endif %}
             {% endif %}
+          </h1>
+        {% endif %}
+
+        <div class="post-meta">
+          <span class="post-time">
+            {{ __('post.posted') }}
+            <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
+              {{ date(post.date, config.date_format) }}
+            </time>
+          </span>
+
+          {% if post.categories and post.categories.length %}
+            <span class="post-category" >
+              &nbsp; | &nbsp; {{ __('post.in') }}
+              {% for cat in post.categories %}
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
+                    <span itemprop="name">{{ cat.name }}</span>
+                  </a>
+                </span>
+
+                {% set cat_length = post.categories.length %}
+                {% if cat_length > 1 and loop.index !== cat_length %}
+                  {{ __('symbol.comma') }}
+                {% endif %}
+
+              {% endfor %}
+            </span>
           {% endif %}
-        </h1>
-      {% endif %}
 
-      <div class="post-meta">
-        <span class="post-time">
-          {{ __('post.posted') }}
-          <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
-            {{ date(post.date, config.date_format) }}
-          </time>
-        </span>
-
-        {% if post.categories and post.categories.length %}
-          <span class="post-category" >
-            &nbsp; | &nbsp; {{ __('post.in') }}
-            {% for cat in post.categories %}
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
-                  <span itemprop="name">{{ cat.name }}</span>
+          {% if post.comments %}
+            {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentsCount"></span>
                 </a>
               </span>
-
-              {% set cat_length = post.categories.length %}
-              {% if cat_length > 1 and loop.index !== cat_length %}
-                {{ __('symbol.comma') }}
-              {% endif %}
-
-            {% endfor %}
-          </span>
-        {% endif %}
-
-        {% if post.comments %}
-          {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
-            <span class="post-comments-count">
+            {% elseif theme.disqus_shortname %}
+              <span class="post-comments-count">
               &nbsp; | &nbsp;
               <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="{{ post.path }}" itemprop="commentsCount"></span>
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>
               </a>
             </span>
-          {% elseif theme.disqus_shortname %}
-            <span class="post-comments-count">
-            &nbsp; | &nbsp;
-            <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>
-            </a>
-          </span>
+            {% endif %}
           {% endif %}
-        {% endif %}
-      </div>
-    </header>
+        </div>
+      </header>
+    {% endif %}
 
     <div class="post-body">
 
@@ -119,7 +125,13 @@
             </a>
           </div>
         {% else %}
-          <span itemprop="articleBody">{{ post.content }}</span>
+          <span itemprop="articleBody">
+            {% if post.type === 'picture' %}
+              <a href="{{ url_for(post.path) }}">{{ post.content }}</a>
+            {% else %}
+              {{ post.content }}
+            {% endif %}
+          </span>
         {% endif %}
       {% else %}
         <span itemprop="articleBody">{{ post.content }}</span>
@@ -135,7 +147,7 @@
         </div>
       {% endif %}
 
-      {% if not is_index and (post.prev or post.next) %}
+      {% if not is_index and (post.prev or post.next) and not navlessPost %}
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             {% if post.prev %}
