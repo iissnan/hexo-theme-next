@@ -20,6 +20,10 @@ for $mixin in $mixins
   @import "_mixins/" + $mixin;
 
 
+// Custom Layer
+// --------------------------------------------------
+@import "_custom/custom";
+
 
 // Common Layer
 // --------------------------------------------------
@@ -44,9 +48,6 @@ for $mixin in $mixins
 // Vendors
 @import "_common/_vendor/highlight/highlight";
 
-// Custom Layer
-// --------------------------------------------------
-@import "_custom/custom";
 
 // Sections
 @import "_common/_section/layout";
@@ -76,7 +77,6 @@ for $mixin in $mixins
 @import "_common/_page/archive";
 @import "_common/_page/post-detail";
 @import "_common/_page/categories";
-
 
 
 // Schemes Layer
