@@ -4,7 +4,7 @@
       <span class="logo">
         <i class="icon-next-logo"></i>
       </span>
-      <span class="site-title">{{ config.title }}</span>
+      <span class="site-title">{{ config.subtitle }}</span>
   </a>
   <span class="logo-line-after"><i></i></span>
 </h1>
