@@ -82,6 +82,7 @@
     });
   </script>
 
+  {% include '_scripts/tinysou.swig' %}
   {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
   {% include '_scripts/baidushare.swig' %}
