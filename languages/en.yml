@@ -56,11 +56,11 @@ cheers:
   um: Um..
   ok: OK
   nice: Nice
-  good: Good
+  good: Welcome
   great: Great
   excellent: Excellent
 
-keep_on: Keep on posting.
+keep_on: ''
 
 symbol:
   comma: ', '

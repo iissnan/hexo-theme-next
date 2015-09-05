@@ -3,8 +3,8 @@ menu:
   home: /
   #categories: /categories
   #about: /about
-  archives: /archives
-  tags: /tags
+  #archives: /archives
+  tags: tags
   #commonweal: /404.html
 
 # Place your favicon.ico to /source directory.
@@ -33,7 +33,7 @@ highlight_theme: normal
 
 
 # MathJax Support
-mathjax:
+mathjax: true
 
 
 # Schemes
