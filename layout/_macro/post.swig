@@ -21,16 +21,29 @@
               {{ post.title }}
             {% endif %}
           {% endif %}
-        </h1>
+        </h1> <!-- h1.post-title -->
       {% endif %}
 
       <div class="post-meta">
-        <span class="post-time">
-          {{ __('post.posted') }}
+
+        <div class="post-time">
           <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
             {{ date(post.date, config.date_format) }}
           </time>
-        </span>
+        </div>
+
+        <div class='post-tags'>
+          <ul>
+            {% for tag in post.tags %}
+            <li class='post-tag-item'>
+              <a href={{'/tags/'+ tag.name.replace(':', '-')}}
+                 class='anchor-tag'>
+                {{tag.name}}
+                </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
 
         {% if post.categories and post.categories.length %}
           <span class="post-category" >
@@ -68,7 +81,8 @@
           </span>
           {% endif %}
         {% endif %}
-      </div>
+      </div> <!-- post-meta -->
+
     </header>
 
     <div class="post-body">
@@ -127,34 +141,6 @@
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.length and not is_index %}
-        <div class="post-tags">
-          {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag">#{{ tag.name }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
-
-      {% if not is_index and (post.prev or post.next) %}
-        <div class="post-nav">
-          <div class="post-nav-prev post-nav-item">
-            {% if post.prev %}
-              <a href="{{ url_for(post.prev.path) }}" rel="prev">{{post.prev.title}}</a>
-            {% endif %}
-          </div>
-
-          <div class="post-nav-next post-nav-item">
-            {% if post.next %}
-              <a href="{{ url_for(post.next.path) }}" rel="next">{{post.next.title}}</a>
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
-
-      {% set isLast = loop.index % page.per_page === 0 %}
-      {% if is_index and not isLast %}
-        <div class="post-eof"></div>
-      {% endif %}
     </footer>
   </article>
 

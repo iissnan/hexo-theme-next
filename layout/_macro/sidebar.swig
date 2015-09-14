@@ -22,73 +22,21 @@
       {% endif %}
 
       <section class="site-overview">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
+
+      <div class="search-box">
+        <textarea class="st-default-search-input" ></textarea>
+      </div>
+
+      <div class="tag-box">
+        <a class="tag-anchor" href='lang:Chinese'>All Chinese Posts</a>
+        <a class="tag-anchor" href='lang:English'>All English Posts</a>
+      </div>
+
+      {% if hasSearch %}
+        <div class="site-search">
+          {% include '../_partials/search.swig' %}
         </div>
-        <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="{{ url_for(theme.menu.archives) }}">
-              <span class="site-state-item-count">{{ site.posts.length }}</span>
-              <span class="site-state-item-name">{{ __('state.posts') }}</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            {% if theme.menu.categories %}<a href="{{ url_for(theme.menu.categories) }}">{% endif %}
-              <span class="site-state-item-count">{{ site.categories.length }}</span>
-              <span class="site-state-item-name">{{ __('state.categories') }}</span>
-              {% if theme.menu.categories %}</a>{% endif %}
-          </div>
-
-          <div class="site-state-item site-state-tags">
-            {% if theme.menu.tags %}<a href="{{ url_for(theme.menu.tags) }}">{% endif %}
-              <span class="site-state-item-count">{{ site.tags.length }}</span>
-              <span class="site-state-item-name">{{ __('state.tags') }}</span>
-              {% if theme.menu.tags %}</a>{% endif %}
-          </div>
-
-        </nav>
-
-        {% if theme.rss %}
-          <div class="feed-link motion-element">
-            <a href="{{ url_for(theme.rss) }}" rel="alternate">
-              <i class="menu-item-icon icon-next-feed"></i>
-              RSS
-            </a>
-          </div>
-        {% endif %}
-
-        <div class="links-of-author motion-element">
-          {% if theme.social %}
-            {% for name, link in theme.social %}
-              <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank">{{ name }}</a>
-              </span>
-            {% endfor %}
-          {% endif %}
-        </div>
-
-        {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
-        {% if theme.creative_commons in cc %}
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="http://creativecommons.org/licenses/{{ theme.creative_commons }}/4.0" class="cc-opacity" target="_blank">
-              <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
-            </a>
-          </div>
-        {% endif %}
-
-        <div class="links-of-author motion-element">
-          {% if theme.links %}
-            <p class="site-author-name">{{ theme.links_title }}</p>
-            {% for name, link in theme.links %}
-              <span class="links-of-author-item">
-              <a href="{{ link }}" target="_blank">{{ name }}</a>
-              </span>
-            {% endfor %}
-          {% endif %}
-        </div>
+      {% endif %}
 
       </section>
 

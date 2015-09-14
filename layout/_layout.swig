@@ -80,7 +80,7 @@
     });
   </script>
 
-  {% include '_scripts/mathjax.swig' %}b
+  {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
   {% include '_scripts/baidushare.swig' %}
 

@@ -13,19 +13,19 @@
     <nav>
           <div class="navLink">
             <a href="..">
-              <img src="../homeIcon.png" />
+              <img src="/homeIcon.png" />
               <div>Home</div>
             </a>
           </div>
           <div class="navLink">
-            <a href="../about">
-              <img src="../aboutIcon.png" />
+            <a href="/about">
+              <img src="/aboutIcon.png" />
               <div>About</div>
             </a>
           </div>
           <div class="navLink">
             <a href=".">
-              <img src="../blogIcon.png" />
+              <img src="/blogIcon.png" />
               <div>Blog</div>
             </a>
           </div>
