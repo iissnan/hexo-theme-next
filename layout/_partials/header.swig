@@ -24,7 +24,7 @@
             </a>
           </div>
           <div class="navLink">
-            <a href=".">
+            <a href="/blog">
               <img src="/blogIcon.png" />
               <div>Blog</div>
             </a>
