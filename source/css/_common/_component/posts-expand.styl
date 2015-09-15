@@ -21,9 +21,10 @@
 .posts-expand .post-title {
   font-size: 26px;
   text-align: center;
-
+  font-family: "Roboto Condensed", "Microsoft Yahei", "微软雅黑“, STXihei, "华文细黑", sans-serif;
+  margin-bottom: 50px;
   +mobile() {
-    font-size: 22px;
+  font-size: 22px;
   }
 }
 .posts-expand .post-title-link {
@@ -60,11 +61,12 @@ a.btn {
 // Look here!
 
 .posts-expand .post-meta {
-  display: absolute;
-  width: 200px;
-  margin-left: -220px;
+  display: block;
+  width: 100%;
+  margin-left: 0px;
   text-align: right;
   float: left;
+  margin-bottom: 10px;
   
   li {
     width: 100%;
@@ -99,14 +101,14 @@ a.btn {
   img {
     box-sizing: border-box;
     margin: auto;
-    padding: 3px;
-    border: 1px solid $gray-lighter;
+    padding: 0 px;
   }
 }
 
 .post-time {
-  font-size: 13px;
-  float: right;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  float: left;
   margin: 0;
 }
 
@@ -114,9 +116,17 @@ a.btn {
   content: "|";
 }
 
+.post-name {
+  font-size: 16px;
+  float: left;
+  font-family: "Roboto", sans-serif;
+  margin-left: 5px;
+}
+
 .posts-expand .post-tags {
   text-align: center;
-
+  float: right;
+  display: block;
   a {
     display inline-block;
     font-size: 13px;
@@ -129,6 +139,10 @@ a.btn {
   
   a:hover {
     text-decoration: none;
+  }
+  
+  ul {
+    margin:0;
   }
 }
 

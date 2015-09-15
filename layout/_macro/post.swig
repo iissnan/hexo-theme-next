@@ -32,6 +32,10 @@
           </time>
         </div>
 
+        <div class="post-name">
+          <p> 端Lab・舒欣</p>
+        </div>
+
         <div class='post-tags'>
           <ul>
             {% for tag in post.tags %}
