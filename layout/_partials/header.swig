@@ -10,19 +10,19 @@
   {% set hasSearch = theme.swiftype_key || theme.tinysou_Key %}
 
   {% if theme.menu %}
-      <a href=".">
+      <a href="/">
         <div class="navLink">
           <img src="/images/home_icon.png">
           <div>Home</div>
         </div>
       </a>
-      <a href="./about">
+      <a href="/about">
         <div class="navLink">
           <img src="/images/about_icon.png">
           <div>About</div>
         </div>
       </a>
-      <a href="./blog">
+      <a href="/blog">
         <div class="navLink">
           <img src="/images/blog_icon.png">
           <div>Blog</div>
