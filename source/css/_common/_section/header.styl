@@ -14,11 +14,11 @@
   +mobile() { text-align: center; }
 }
 
-nav {
+.site-nav {
   margin: 0 auto;
   width:100%;
   max-width: 800px;
-  font-family: '', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #010101;
   padding: 10px 0;
@@ -31,15 +31,23 @@ nav {
   z-index: 100;
 }
 
-nav img {
-  width: 44px;
+nav .navLink {
+  display: inline-block;
+  text-align: center;
+  width: 5em;
+  margin: 5px 25px;
 }
 
-nav a {
+.navLink img {
+  width: 44px;
+  margin: 0 auto;
+}
+
+.site-nav a {
   display:inline-block;
 }
 
-nav a:hover {
+.site-nav a:hover {
   cursor: pointer;
   transform: translate(0px,-5px) rotate(5deg);
   -webkit-transform: translate(0px, -5px) rotate(5deg);
@@ -52,16 +60,6 @@ a:link, a:visited {
   color: black;
 }
 
-nav .navLink {
-  display: inline-block;
-  text-align: center;
-  width: 5em;
-  margin: 5px 25px;
-}
-
-.navLink img {
-  margin: 0 auto;
-}
 
 .brand {
   position: relative;
