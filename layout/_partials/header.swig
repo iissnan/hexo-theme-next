@@ -10,26 +10,25 @@
   {% set hasSearch = theme.swiftype_key || theme.tinysou_Key %}
 
   {% if theme.menu %}
-    <nav>
-          <div class="navLink">
-            <a href="..">
-              <img src="../homeIcon.png" />
-              <div>Home</div>
-            </a>
-          </div>
-          <div class="navLink">
-            <a href="../about">
-              <img src="../aboutIcon.png" />
-              <div>About</div>
-            </a>
-          </div>
-          <div class="navLink">
-            <a href=".">
-              <img src="../blogIcon.png" />
-              <div>Blog</div>
-            </a>
-          </div>
-        </nav>
+      <a href=".">
+        <div class="navLink">
+          <img src="/images/home_icon.png">
+          <div>Home</div>
+        </div>
+      </a>
+      <a href="./about">
+        <div class="navLink">
+          <img src="/images/about_icon.png">
+          <div>About</div>
+        </div>
+      </a>
+      <a href="./blog">
+        <div class="navLink">
+          <img src="/images/blog_icon.png">
+          <div>Blog</div>
+        </div>
+      </a>
+    
   {% endif %}
 
   {% if hasSearch %}

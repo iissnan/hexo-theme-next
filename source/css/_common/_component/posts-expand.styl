@@ -1,5 +1,5 @@
 .posts-expand {
-  padding-top: 40px;
+  padding-top: 200px;
 }
 
 @media (max-width: 767px) {
@@ -53,11 +53,31 @@
   }
 }
 
+a.btn {
+  color: white;
+}
+
+// Look here!
+
 .posts-expand .post-meta {
-  margin: 3px 0 60px 0;
-  color: $grey-dark;
-  font-size: 12px;
-  text-align: center;
+  display: absolute;
+  width: 200px;
+  margin-left: -220px;
+  text-align: right;
+  float: left;
+  
+  li {
+    width: 100%;
+    list-style: none;
+  }
+  
+  a.anchor-tag {
+    text-decoration: none;
+    display: block;
+    background-color: #A0A0A0;
+    color: white;
+    padding: 0.1em;
+  }
 
   .post-category-list {
     display inline-block
@@ -84,14 +104,31 @@
   }
 }
 
+.post-time {
+  font-size: 13px;
+  float: right;
+  margin: 0;
+}
+
+.post-time:after {
+  content: "|";
+}
+
 .posts-expand .post-tags {
-  margin-top: 40px;
   text-align: center;
 
   a {
-    display inline-block
-    margin-right 10px
-    font-size: 13px
+    display inline-block;
+    font-size: 13px;
+    float: right;
+    margin-top: 10px;
+    clear: both;
+    padding-right: 0 5px;
+    width: 75px;
+  }
+  
+  a:hover {
+    text-decoration: none;
   }
 }
 
@@ -171,8 +208,4 @@
     background $grey-light
     text-align center
   }
-}
-
-.post-more-link {
-  margin-top: 50px;
 }
