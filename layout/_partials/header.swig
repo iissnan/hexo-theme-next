@@ -10,7 +10,6 @@
   {% set hasSearch = theme.swiftype_key || theme.tinysou_Key %}
 
   {% if theme.menu %}
-    <nav>
       <a href=".">
         <div class="navLink">
           <img src="/images/home_icon.png">
@@ -29,7 +28,6 @@
           <div>Blog</div>
         </div>
       </a>
-    </nav>
     
   {% endif %}
 
