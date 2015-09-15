@@ -21,7 +21,7 @@
 .posts-expand .post-title {
   font-size: 26px;
   text-align: center;
-  font-family: "Roboto Condensed", "Microsoft Yahei", "微软雅黑“, STXihei, "华文细黑", sans-serif;
+  font-family: $font-family-headings
   margin-bottom: 50px;
   +mobile() {
   font-size: 22px;
@@ -106,7 +106,7 @@ a.btn {
 }
 
 .post-time {
-  font-size: 16px;
+  font-size: $font-size-base;
   font-family: "Roboto", sans-serif;
   float: left;
   margin: 0;
@@ -117,9 +117,9 @@ a.btn {
 }
 
 .post-name {
-  font-size: 16px;
+  font-size: $font-size-base;
   float: left;
-  font-family: "Roboto", sans-serif;
+  font-family: $font-family-base;
   margin-left: 5px;
 }
 
@@ -127,9 +127,11 @@ a.btn {
   text-align: center;
   float: right;
   display: block;
+  
   a {
     display inline-block;
-    font-size: 13px;
+    font-size: $font-size-smaller;
+    font-family: $font-family-base;
     float: right;
     margin-top: 10px;
     clear: both;
@@ -179,11 +181,11 @@ a.btn {
 
     &:before, &:after {
       display: inline-block;
-      width: 16px;
+      width: $font-size-base;
       height: 25px;
       vertical-align: top;
       opacity: 0.4;
-      background-size: 16px;
+      background-size: $font-size-base;
     }
   }
 
