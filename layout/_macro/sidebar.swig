@@ -28,8 +28,8 @@
       </div>
 
       <div class="tag-box">
-        <a class="tag-anchor" href='lang:Chinese'>All Chinese Posts</a>
-        <a class="tag-anchor" href='lang:English'>All English Posts</a>
+        <a class="tag-anchor" href='/tags/lang-Chinese/'>All Chinese Posts</a>
+        <a class="tag-anchor" href='/tags/lang-English/'>All English Posts</a>
       </div>
 
       {% if hasSearch %}
