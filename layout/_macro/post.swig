@@ -33,7 +33,7 @@
         </div>
 
         <div class="post-name">
-          <p> 端Lab・舒欣</p>
+          <p>{{post.author}}</p>
         </div>
 
         <div class='post-tags'>
