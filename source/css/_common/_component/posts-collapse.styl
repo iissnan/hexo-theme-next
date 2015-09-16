@@ -13,7 +13,8 @@
 .posts-collapse {
 
   margin-left: $posts-collpase-left;
-  +mobile() { margin: 0 20px; }
+  margin-top: $posts-collpase-top;
+  +mobile() { margin: 100px 20px; }
 
   .collection-title {
     position: relative;
@@ -68,17 +69,19 @@
   }
 
   .post-meta {
-    position: absolute;
-    font-size: 12px;
+  position: absolute;
+    font-size: $font-size-base;
+    font-family: $font-family-posts;
     left: 20px;
-    top: 5px;
+    margin-top: -26px;
+    padding: 0;
   }
 
   .post-comments-count { display: none; }
 
   .post-title {
-    margin-left: 60px;
-    font-size: 16px;
+    margin-left: 80px;
+    font-size: $font-size-base;
     font-weight: normal;
     font-family: $font-family-posts;
     line-height: inherit;
