@@ -168,3 +168,27 @@ $(document).ready(function () {
     });
   }
 });
+
+// Create offset shadow anchors for incoming references, to compensate for the fixed header.
+
+(function(){
+  var realHeadings = document.querySelectorAll('h2'); // Use querySelector to get static list, to avoid infinite loop.
+  var header = document.getElementsByClassName('site-nav')[0];
+  var headerHeight = parseInt(window.getComputedStyle(header).height, 10);
+  var i, heading, shadowAnchor;
+
+  for (i = 0; i < realHeadings.length; i += 1) {
+    heading = realHeadings[i];
+    console.log('adding shadow anchor to' + heading.id);
+    shadowAnchor = document.createElement('a');
+    shadowAnchor.id = heading.id;
+    shadowAnchor.style.display = 'block';
+    shadowAnchor.style.position = 'relative';
+    shadowAnchor.style.top = '-' + headerHeight + 'px';
+    shadowAnchor.visibility = 'hidden';
+
+    heading.removeAttribute('id');
+
+    heading.parentNode.insertBefore(shadowAnchor, heading);
+  }
+}())
