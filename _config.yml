@@ -18,6 +18,17 @@ keywords: "Hexo,next"
 # Set rss to specific value if you have burned your feed already.
 rss:
 
+# Custom Logo with options:
+#   replace: [true/false] - Replace with specific image
+#   image: url-of-image   - Images's url
+#   image_shape: [square/circle]
+custom_logo:
+  replace: false
+  image:
+  image_shape: square
+
+menu_icons: true
+
 # Icon fonts
 # Place your font into next/source/fonts, specify directory-name and font-name here
 # Avialable: default | linecons | fifty-shades | feather
@@ -44,9 +55,11 @@ mathjax: true
 #  - post    expand on posts automatically. Default.
 #  - always  expand for all pages automatically
 #  - hide    expand only when click on the sidebar toggle icon.
+#  - remove  Totally remove sidebar including sidebar toggle icon.
 sidebar: post
 #sidebar: always
 #sidebar: hide
+#sidebar: remove
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
