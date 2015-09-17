@@ -184,7 +184,7 @@ $(document).ready(function () {
     shadowAnchor.id = heading.id;
     shadowAnchor.style.display = 'block';
     shadowAnchor.style.position = 'relative';
-    shadowAnchor.style.top = '-' + headerHeight + 'px';
+    shadowAnchor.style.top = '-' + (headerHeight * 1.5) + 'px';
     shadowAnchor.visibility = 'hidden';
 
     heading.removeAttribute('id');
