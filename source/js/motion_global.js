@@ -7,7 +7,7 @@ $(document).ready(function () {
   var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
   var sidebar = $('.sidebar');
 
-  var SIDEBAR_WIDTH = '320px';
+  var SIDEBAR_WIDTH = '200px';
   var SIDEBAR_DISPLAY_DURATION = 300;
 
   var sidebarToggleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
