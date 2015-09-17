@@ -37,14 +37,13 @@
         </div>
 
         <div class='post-tags'>
-          <ul>
             {% for tag in post.tags %}
-            <li class='post-tag-item'>
+            <div class='post-tag-item'>
               <a href={{'/tags/'+ tag.name.replace(':', '-')}}
                  class='anchor-tag'>
                 {{tag.name}}
                 </a>
-            </li>
+            </div>
             {% endfor %}
           </ul>
         </div>
