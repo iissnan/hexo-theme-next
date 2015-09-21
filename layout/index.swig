@@ -20,6 +20,7 @@
   </section>
 
   {% include '_partials/pagination.swig' %}
+  {% include '_scripts/home_script.swig' %}
 {% endblock %}
 
 {% block sidebar %}
