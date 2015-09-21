@@ -199,6 +199,7 @@ $(document).ready(function () {
   var i, node;
   var videoDOMNodes = document.getElementsByTagName('video');
   for (i = 0; i < videoDOMNodes.length; i += 1) {
+    node =videoDOMNodes[i];
     node.addEventListener('click', function(event) {
       console.log('click captured')
       event.target.paused ?
