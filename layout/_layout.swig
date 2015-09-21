@@ -49,9 +49,7 @@
       {% block sidebar %}{% endblock %}
     </main>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner"> {% include '_partials/footer.swig' %} </div>
-    </footer>
+    {% include '_partials/footer.swig' %}
 
     <div class="back-to-top"></div>
   </div>
