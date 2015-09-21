@@ -192,4 +192,17 @@ $(document).ready(function () {
 
     heading.parentNode.insertBefore(shadowAnchor, heading);
   }
+}());
+
+// Add click-to-play for videos
+(function() {
+  var i, node;
+  var videoDOMNodes = document.getElementsByTagName('video');
+  for (i = 0; i < videoDOMNodes.length; i += 1) {
+    node.addEventListener('click', function(event) {
+      console.log('click captured')
+      event.target.paused ?
+        event.target.play() : event.target.pause();
+    });
+  }
 }())
