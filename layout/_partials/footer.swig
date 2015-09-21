@@ -1,7 +1,7 @@
 <footer id='page-footer'>
     <div id="mc_embed_signup">
-      <form action="//initiumlab.us11.list-manage.com/subscribe/post?u=0af72d56ccd0f8ef2d17e12a2&amp;id=64252e9209"
-            method="post"
+      <form action=""
+            method=""
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
             class="validate" target="_blank"
@@ -14,8 +14,10 @@
           </div>
           <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg"></div>
           <div id='subscriptionNotice'></div>
-          <div id="rssButton">© Initium Lab. All rights reserved 2015. &nbsp; &nbsp; &nbsp;<a href="/blog/feed"><span><image src="images/rssButton.png"/></span><span id="rssText">&nbsp; RSS &nbsp; &nbsp; </span></a></div>
+          <div id="rssButton">© Initium Lab. All rights reserved 2015. <a href="/blog/feed"><span id="rssText">&nbsp; RSS &nbsp; &nbsp; </span></a></div>
         </div>
       </form>
     </div>
 </footer>
+
+{% include '../_scripts/email_setting.swig' %}
