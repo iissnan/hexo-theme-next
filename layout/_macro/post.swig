@@ -39,7 +39,7 @@
         <div class='post-tags'>
             {% for tag in post.tags %}
             <div class='post-tag-item'>
-              <a href={{'/tags/'+ tag.name.replace(':', '-') + '/'}}
+              <a href={{'"' + '/tags/'+ tag.name.replace(':', '-') + '/' + '"'}}
                  class='anchor-tag'>
                 {{tag.name}}
                 </a>
