@@ -2,10 +2,6 @@
 
 (function(window, document) {
 
-  window.xdomain.slaves({
-    "http://s.init.im:8081": "/proxy.html"
-  });
-
   function post(keyToPost, valueToPost) {
     var url = "http://s.init.im:8081/remember/initiumlabSubscription/";
     var request = new XMLHttpRequest();
@@ -36,6 +32,10 @@
   btnSubscribe.onclick = function(event){
     event.preventDefault();
     var message;
+
+    window.xdomain.slaves({
+      "http://s.init.im:8081": "/proxy.html"
+    });
 
     if (isEmailAddressValid(inputEmail.value)) {
       post('subscribe', inputEmail.value);
