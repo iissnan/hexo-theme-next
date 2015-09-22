@@ -2,8 +2,6 @@
 
 (function(window, document) {
 
-  console.log($);
-
   window.xdomain.slaves({
     "http://s.init.im:8081": "/proxy.html"
   });
