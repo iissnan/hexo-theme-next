@@ -174,8 +174,9 @@ $(document).ready(function () {
 (function(){
   var realHeadings = document.querySelectorAll('h2'); // Use querySelector to get static list, to avoid infinite loop.
   var header = document.getElementsByClassName('site-nav')[0];
-  var headerHeight = parseInt(window.getComputedStyle(header).height, 10);
+  var headerHeight = Number(header.offsetHeight);
   var i, heading, shadowAnchor;
+  var ratio = 1.1; // Controls how much additional height is compensated for.
 
   for (i = 0; i < realHeadings.length; i += 1) {
     heading = realHeadings[i];
@@ -190,5 +191,19 @@ $(document).ready(function () {
     heading.removeAttribute('id');
 
     heading.parentNode.insertBefore(shadowAnchor, heading);
+  }
+}());
+
+// Add click-to-play for videos
+(function() {
+  var i, node;
+  var videoDOMNodes = document.getElementsByTagName('video');
+  for (i = 0; i < videoDOMNodes.length; i += 1) {
+    node =videoDOMNodes[i];
+    node.addEventListener('click', function(event) {
+      console.log('click captured')
+      event.target.paused ?
+        event.target.play() : event.target.pause();
+    });
   }
 }())

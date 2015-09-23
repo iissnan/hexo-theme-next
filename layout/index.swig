@@ -9,13 +9,23 @@
 {% endblock %}
 
 {% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+  {% include '_partials/logo.swig' %}
+  {% include '_partials/quote.swig' %}
+  {% include '_macro/showcase.swig' %}
+
+  <div id='posts-homepage-wrapper'>
+    <section id="posts" class="posts-expand">
+      <div class='subtitle' id='titleBlogs'>
+        >> Recent blogs
+      </div>
+      {% for post in page.posts %}
+        {{ post_template.render(post, true) }}
+      {% endfor %}
+    </section>
+  </div>
 
   {% include '_partials/pagination.swig' %}
+  {% include '_scripts/home_script.swig' %}
 {% endblock %}
 
 {% block sidebar %}
