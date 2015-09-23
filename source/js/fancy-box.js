@@ -1,6 +1,12 @@
 $(document).ready(function() {
   $('.content img').each(function () {
     var $image = $(this);
+
+    // Disable fancybox for elements of class 'no-fancy'
+    if ($image.attr('class').indexOf('no-fancy') !== -1) {
+      return;
+    };
+
     var $imageWrapLink = $image.parent('a');
 
     if ($imageWrapLink.size() < 1) {
