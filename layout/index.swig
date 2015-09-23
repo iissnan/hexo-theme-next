@@ -13,12 +13,11 @@
   {% include '_partials/quote.swig' %}
   {% include '_macro/showcase.swig' %}
 
-  <div class='subtitle' id='titleBlogs'>
-    >> Recent blogs
-  </div>
-
   <div id='posts-homepage-wrapper'>
     <section id="posts" class="posts-expand">
+      <div class='subtitle' id='titleBlogs'>
+        >> Recent blogs
+      </div>
       {% for post in page.posts %}
         {{ post_template.render(post, true) }}
       {% endfor %}
