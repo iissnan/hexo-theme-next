@@ -3,8 +3,9 @@ $(document).ready(function() {
     var $image = $(this);
 
     // Disable fancybox for elements of class 'no-fancy'
-    if ($image.attr('class').indexOf('no-fancy') !== -1) {
-      return;
+    try {
+      if ($image.attr('class').indexOf('no-fancy') !== -1) { return; }
+    } catch (error) {
     };
 
     var $imageWrapLink = $image.parent('a');
