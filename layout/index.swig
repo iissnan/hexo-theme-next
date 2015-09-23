@@ -17,11 +17,13 @@
     >> Recent blogs
   </div>
 
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+  <div id='posts-homepage-wrapper'>
+    <section id="posts" class="posts-expand">
+      {% for post in page.posts %}
+        {{ post_template.render(post, true) }}
+      {% endfor %}
+    </section>
+  </div>
 
   {% include '_partials/pagination.swig' %}
   {% include '_scripts/home_script.swig' %}
