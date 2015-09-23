@@ -338,11 +338,13 @@ div.clear {
 .lightbox-innerBox {
   margin: 0 auto;
   width: 800px;
+  max-width: 100%;
 }
 
 .lightbox-btnClose {
   font-size: 3.5em;
   width: 800px;
+  max-width: 100%;
   margin: 50px auto;
   color: white;
   text-align: center;
@@ -397,6 +399,11 @@ div.clear {
 
 
 @media screen and (max-width: 1024px) {
+
+    .lightbox {
+      padding: 0.5em;
+      box-sizing: border-box;
+    }
 
     #quoteBox {
       width:80%;
@@ -466,6 +473,22 @@ div.clear {
 
     #mc_embed_signup {
       width: 100%;
+    }
+
+    .lightbox-btnClose {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .lightbox time {
+      display: block;
+      margin-left: 0;
+    }
+
+    .lightbox img {
+      width: auto;
+      max-width: none;
     }
 
 }
