@@ -13,6 +13,10 @@
   {% include '_partials/quote.swig' %}
   {% include '_macro/showcase.swig' %}
 
+  <div class='subtitle' id='titleBlogs'>
+    >> Recent blogs
+  </div>
+
   <section id="posts" class="posts-expand">
     {% for post in page.posts %}
       {{ post_template.render(post, true) }}
