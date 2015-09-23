@@ -46,6 +46,16 @@
   /* Add lightbox effects */
 
   var currentLightbox = null;
+  var projects = [];
+
+  function closeLightbox(lightbox) {
+    lightbox.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+
+    // Clear hash
+    window.location.hash = '';
+    window.history.pushState("", document.title, window.location.pathname + window.location.search);
+  }
 
   function configLightbox(project){
     var anchor = document.getElementById('anchor-'+project);
@@ -56,26 +66,43 @@
       event.preventDefault();
       lightbox.style.display = 'block';
       document.body.classList.add('no-scroll');
+      window.location.hash = event.target.parentNode.id.replace('anchor-', '');
       currentLightbox = lightbox;
     });
 
     btnClose.addEventListener('click', function(){
-      lightbox.style.display = 'none';
-      document.body.classList.remove('no-scroll');
+      closeLightbox(lightbox);
     });
+
+    projects.push([project, lightbox]);
   }
 
   document.onkeydown = function(event){
     if (event.keyCode === 27) {
       // Esc key
-      currentLightbox.style.display = 'none';
-      document.body.classList.remove('no-scroll');
+      closeLightbox(currentLightbox);
     }
-  }
+  };
 
   configLightbox('legco');
   configLightbox('wasted');
   configLightbox('media-tech');
   configLightbox('database');
+
+  // Open lightbox if location includes hashtags pointing to a case
+  var hash = window.location.hash;
+  var i, projectName, lightbox;
+  if (hash != '') {
+    for (i = 0; i < projects.length; i += 1) {
+      projectName = projects[i][0];
+      lightbox = projects[i][1];
+      if (hash.slice(1) === projectName) {
+        lightbox.style.display = 'block';
+        document.body.classList.add('no-scroll');
+        currentLightbox = lightbox;
+      }
+    }
+  }
+
 
 }(window, window.document, window.xdomain));
