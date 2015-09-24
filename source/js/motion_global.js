@@ -196,17 +196,12 @@ $(document).ready(function () {
 
 // Add click-to-play for videos
 (function() {
-  var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-  if (is_firefox) {
-    // Firefox has built-in click-to-play; This function would break firefox video playing.
-    return
-  }
   var i, node;
   var videoDOMNodes = document.getElementsByTagName('video');
   for (i = 0; i < videoDOMNodes.length; i += 1) {
     node =videoDOMNodes[i];
     node.addEventListener('click', function(event) {
-      console.log('click captured');
+      event.preventDefault(); // Prevent built-in click-to-play of Firefox
       event.target.paused ?
         event.target.play() : event.target.pause();
     });
