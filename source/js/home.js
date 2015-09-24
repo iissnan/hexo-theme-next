@@ -56,6 +56,9 @@
     // Clear hash
     window.location.hash = '';
     window.history.pushState("", document.title, window.location.pathname + window.location.search);
+    console.log(lightbox)
+
+    ga('send', 'lightbox', 'close', lightbox.id);
   }
 
   function configLightbox(project){
@@ -64,11 +67,17 @@
     var lightbox = document.getElementById('lightbox-'+project);
 
     anchor.addEventListener('click', function(event){
+
+      // Open Lightbox
+
       event.preventDefault();
       lightbox.style.display = 'block';
       document.body.classList.add('no-scroll');
       window.location.hash = event.target.parentNode.id.replace('anchor-', '');
       window.currentLightbox = lightbox;
+
+      ga('send', 'lightbox', 'open', lightbox.id);
+
     });
 
     btnClose.addEventListener('click', function(){
@@ -101,6 +110,8 @@
         lightbox.style.display = 'block';
         document.body.classList.add('no-scroll');
         window.currentLightbox = lightbox;
+
+        ga('send', 'lightbox', 'url-direct-open', lightbox.id);
       }
     }
   }
