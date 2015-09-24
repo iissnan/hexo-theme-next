@@ -81,7 +81,7 @@ $(document).ready(function () {
     b2top.on('click', function () {
 
       if (window.currentLightbox) {
-        // Lightbox is on-  scroll lightbox
+        // Lightbox is on - scroll lightbox
         $(window.currentLightbox).animate({
           scrollTop: 0
         }, "fast");
