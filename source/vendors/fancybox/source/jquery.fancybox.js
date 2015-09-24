@@ -1367,6 +1367,7 @@
       if (width <= 307) {
         width -= 50;
       }
+      height = width / ratio;
 
 			inner.width( width ).height( height );
 
