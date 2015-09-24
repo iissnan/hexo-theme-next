@@ -45,12 +45,13 @@
 
   /* Add lightbox effects */
 
-  var currentLightbox = null;
+  window.currentLightbox = null;
   var projects = [];
 
   function closeLightbox(lightbox) {
     lightbox.style.display = 'none';
     document.body.classList.remove('no-scroll');
+    window.currentLightbox = null;
 
     // Clear hash
     window.location.hash = '';
@@ -67,7 +68,7 @@
       lightbox.style.display = 'block';
       document.body.classList.add('no-scroll');
       window.location.hash = event.target.parentNode.id.replace('anchor-', '');
-      currentLightbox = lightbox;
+      window.currentLightbox = lightbox;
     });
 
     btnClose.addEventListener('click', function(){
@@ -80,7 +81,7 @@
   document.onkeydown = function(event){
     if (event.keyCode === 27) {
       // Esc key
-      closeLightbox(currentLightbox);
+      closeLightbox(window.currentLightbox);
     }
   };
 
@@ -99,7 +100,7 @@
       if (hash.slice(1) === projectName) {
         lightbox.style.display = 'block';
         document.body.classList.add('no-scroll');
-        currentLightbox = lightbox;
+        window.currentLightbox = lightbox;
       }
     }
   }

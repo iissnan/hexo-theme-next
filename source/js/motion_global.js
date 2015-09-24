@@ -79,7 +79,17 @@ $(document).ready(function () {
   function backToTopMotion () {
     var b2top = $('.back-to-top');
     b2top.on('click', function () {
-      body.velocity('scroll');
+
+      if (window.currentLightbox) {
+        // Lightbox is on-  scroll lightbox
+        $(window.currentLightbox).animate({
+          scrollTop: 0
+        }, "fast");
+      } else {
+        // Lightbox is off - scroll body
+        body.velocity('scroll');
+      }
+
     });
   }
 
