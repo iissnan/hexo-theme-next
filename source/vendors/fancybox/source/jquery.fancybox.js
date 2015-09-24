@@ -1790,7 +1790,6 @@
 
 		update : function () {
 			var width = '100%', offsetWidth;
-      console.log('widthJ=', width)
 
 			// Reset width/height so it will not mess
 			this.overlay.width(width).height('100%');
