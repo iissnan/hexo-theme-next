@@ -98,6 +98,7 @@
   configLightbox('wasted');
   configLightbox('media-tech');
   configLightbox('database');
+  configLightbox('salary360');
 
   // Open lightbox if location includes hashtags pointing to a case
   var hash = window.location.hash;

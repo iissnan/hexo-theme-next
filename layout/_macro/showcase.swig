@@ -212,6 +212,46 @@
       </div>
     </div>
 
+    <div class="caseEntry">
+      <a id='anchor-salary360' href='http://initiumlab.com/'>
+        <img class="caseCover" src="images/casecover_salary360.png"
+             alt="Cover page of salary360" />
+        <h2  class="caseHeading">Salary360 App</h2>
+      </a>
+    </div>
+
+    <div class="lightbox" id="lightbox-salary360">
+      <div class="lightbox-btnClose" id="btnClose-salary360">
+        ╳
+      </div>
+      <div class="lightbox-innerBox">
+        <h1>Salary 360 Web Application</h1>
+        <time>Since June 2015</time>
+        <div class="lightbox-description">
+          <p>
+          While it's definitely not polite to ask about others' monthly income, people are curious to know their income ranking among friends, collegues, or neighbourhood. 
+          </p>
+
+          <p>
+          Based on Census data of 2011, Initiumlab provided you with a convenient tool to quickly pivot yourself in  scope of district, region or area. Are you satisfied with your social economical income position? Don't be too optimistic. The 2016 census dataset on the way.
+          </p>
+        </div>
+        <div class="lightbox-projectLink">
+          <p>
+            <a href="http://salary360wechat.initiumlab.com/#/">Project website (Chinese) >></a>
+          </p>
+        </div>
+        <div class="imageBox">
+          <img src="images/salary360-caseshow-man.jpg"
+               alt="sreen capture of the online app 1" />
+          <img src="images/salary360-caseshow-woman.jpg"
+               alt="sreen capture of the online app 2" />
+          <img src="images/salary360-caseshow-all.jpg"
+               alt="sreen capture of the online app 3" />
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </section>
