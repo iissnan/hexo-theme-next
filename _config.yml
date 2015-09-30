@@ -85,6 +85,7 @@ duoshuo_info:
   ua_enable: true
   admin_enable: false
   user_id: 0
+  #admin_nickname: ROOT
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING

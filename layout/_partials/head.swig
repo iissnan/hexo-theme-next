@@ -14,6 +14,10 @@
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
 {% endif %}
 
+{% if theme.baidu_site_verification %}
+  <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
+{% endif %}
+
 {% if theme.qihu_site_verification %}
   <meta name="360-site-verification" content="{{ theme.qihu_site_verification }}" />
 {% endif %}
@@ -32,7 +36,9 @@
     <meta name="description" content="{{ config.description }}" />
 {% endif %}
 
-{% if page.tags and page.tags.length %}
+{% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}" />
+{% elif page.tags and page.tags.length %}
   <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }},{% endfor %}" />
 {% elif theme.keywords %}
   <meta name="keywords" content="{{ theme.keywords }}" />
