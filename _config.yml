@@ -104,4 +104,7 @@ images: images
 # Theme version
 version: 0.4.5.1
 
+# Social sharing
+jiathis: true
+
 swiftype_key: QeHtBnDaxF-gAE_HkMTY
