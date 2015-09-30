@@ -1,6 +1,14 @@
-.posts-expand .group-pictures {
-  img { border: none; }
+.posts-expand .group-picture {
+  img {
+    padding: 0 3px;
+    border: none;
+  }
 }
-.posts-expand .group-pictures-item {
-  display: table-cell;
+
+.posts-expand .group-picture-row {
+  overflow: hidden;
+  margin-top: 6px;
+  &:first-child { margin-top: 0; }
 }
+
+.posts-expand .group-picture-column { float: left; }
