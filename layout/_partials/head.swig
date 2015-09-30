@@ -50,7 +50,8 @@
   twitter_id: theme.twitter,
   google_plus: theme.google_plus,
   fb_admins: theme.fb_admins,
-  fb_app_id: theme.fb_app_id}) }}
+  fb_app_id: theme.fb_app_id,
+  url: url.replace('/blog/blog', '/blog')}) }}
 
 {# HEXO CONFIGURATIONS #}
 <script type="text/javascript" id="hexo.configuration">
