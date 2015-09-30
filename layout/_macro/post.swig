@@ -1,4 +1,4 @@
-{% macro render(post, is_index, post_extra_class) %}
+{% macro render(post, is_index, post_extra_class, force_auto_excerpt) %}
 
   <article class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -93,14 +93,21 @@
       {% endif %}
 
       {% if is_index %}
-        {% if post.description %}
+        {% if force_auto_excerpt %}
+          {{ post.excerpt }}
+          <div class="post-more-link text-center">
+            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}{% endif %}" rel="contents">
+              {{ __('post.read_more') }} &raquo;
+            </a>
+          </div>
+        {% elif post.description %}
           <span itemprop="description">{{ post.description }}</span>
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
-        {% elif post.excerpt  %}
+        {% elif post.excerpt %}
           {{ post.excerpt }}
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}{% endif %}" rel="contents">
