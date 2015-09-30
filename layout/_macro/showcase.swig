@@ -47,6 +47,8 @@
           <img src="/images/legco-showcase/image2.png"
                alt="3D model of Legco Matrix" />
         </div>
+
+        {% include '../_partials/share/jiathis.swig' %}
       </div>
     </div>
 
@@ -100,6 +102,8 @@
           <img src="images/young_rubbish_db.png"
                alt="A sample view of the database from the Young Rubbish survey" />
         </div>
+
+      {% include '../_partials/share/jiathis.swig' %}
       </div>
     </div>
 
@@ -170,6 +174,8 @@
           <img src="images/smartpaper-interaction.png"
                alt="An phone over the large paper, with the screen of the phone showing relevant information about the spot it covers." />
         </div>
+
+      {% include '../_partials/share/jiathis.swig' %}
       </div>
     </div>
 
@@ -209,6 +215,8 @@
         <!--</div>-->
 <!--                 <div class="imageBox">
         </div> -->
+
+      {% include '../_partials/share/jiathis.swig' %}
       </div>
     </div>
 
@@ -249,6 +257,7 @@
           <img src="images/salary360-caseshow-all.jpg"
                alt="sreen capture of the online app 3" />
         </div>
+      {% include '../_partials/share/jiathis.swig' %}
       </div>
     </div>
 
