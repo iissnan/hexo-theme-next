@@ -3,7 +3,6 @@
   <a class="jiathis_button_fb"></a>
   <a class="jiathis_button_twitter"></a>
   <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_weixin"></a>
   <a class="jiathis_button_cqq"></a>
   <a class="jiathis_counter_style"></a>
 </div>
