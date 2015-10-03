@@ -93,7 +93,7 @@
       </section>
 
       {% if is_post %}
-        <section class="post-toc-wrap sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel-active">
           <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
             {% set toc = toc(page.content, {"class": "nav", list_number: theme.toc_list_number}) %}

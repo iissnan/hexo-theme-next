@@ -79,6 +79,8 @@
       if (isMobile()) {
         FastClick.attach(document.body);
       }
+
+      motionIntegrator.bootstrap();
     });
   </script>
 
