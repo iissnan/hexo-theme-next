@@ -280,7 +280,7 @@
         <time>Since July 2015</time>
         <div class="lightbox-description">
           <p>
-          Only if data is properly organized and presented, information can be clearly and efficiently delivered. Data is beautiful, hence design is important.
+          Only if data is properly organized and presented, information can be clearly and efficiently delivered. Data is beautiful. Hence design is important.
           </p>
           <p>
           Initium Lab aims at finding out the best solution for data visualization and information communication. We are interested in exploring the intersection part of art and algorithm.
