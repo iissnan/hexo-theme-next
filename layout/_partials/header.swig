@@ -22,21 +22,21 @@
   {% if theme.menu %}
       <a href="/">
         <div class="navLink">
-          <img src="/images/home_icon.png"
+          <img src="/images/home_icon.svg"
                alt="Home page" />
           <div>Home</div>
         </div>
       </a>
       <a href="/about">
         <div class="navLink">
-          <img src="/images/about_icon.png"
+          <img src="/images/about_icon.svg"
                alt="about" />
           <div>About</div>
         </div>
       </a>
       <a href="/blog">
         <div class="navLink">
-          <img src="/images/blog_icon.png"
+          <img src="/images/blog_icon.svg"
                alt="blogs">
           <div>Blog</div>
         </div>
