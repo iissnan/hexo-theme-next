@@ -9,6 +9,7 @@
 {# #238, Disable Baidu tranformation #}
 <meta http-equiv="Cache-Control" content="no-transform" />
 <meta http-equiv="Cache-Control" content="no-siteapp" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 {% if theme.google_site_verification %}
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
