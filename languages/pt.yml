@@ -1,0 +1,67 @@
+title:
+  archive: Arquivo
+  category: Categoria
+  tag: Tag
+
+menu:
+  home: Home
+  archives: Arquivos
+  categories: Categorias
+  tags: Tags
+  about: Sobre
+  search: Pesquisa
+
+sidebar:
+  overview: Visão Geral
+  toc: Tabela de Conteúdo
+
+post:
+  posted: Postado em
+  in: Em
+  read_more: Ler mais
+  untitled: Sem título
+  toc_empty: Esta publicação não possui uma tabela de conteúdo
+
+page:
+  totally: Totalmente
+  tags: tags
+
+footer:
+  powered: "Desenvolvido com amor com %s"
+  theme: Tema
+
+counter:
+  tag_cloud:
+    zero: Sem tags
+    one: 1 tag no total
+    other: "%d tags no total"
+
+  categories:
+    zero: Sem categorias
+    one: 1 categoria no total
+    other: "%d categorias no total"
+
+  archive_posts:
+    zero: Sem publicações.
+    one: 1 post.
+    other: "%d publicações no total."
+
+state:
+  posts: publicações
+  pages: páginas
+  tags: tags
+  categories: categorias
+
+cheers:
+  um: Um..
+  ok: OK
+  nice: Legal
+  good: Bom
+  great: Grandioso
+  excellent: Excelente
+
+keep_on: Mantenha-se publicando!
+
+symbol:
+  comma: ', '
+  period: '. '
