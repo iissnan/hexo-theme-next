@@ -9,9 +9,9 @@ $(document).ready(function() {
     }
     $imageWrapLink.addClass('fancybox');
     $imageWrapLink.attr('rel', 'group');
-    if ($image.attr("alt")) {
-      $imageWrapLink.append('<div class="pic-title"><span>' + $image.attr("alt") + '</span></div>');
-      $imageWrapLink.attr("title",$image.attr("alt")); //make sure img title tag will show correctly in fancybox
+    if ($image.attr("title")) {
+      $imageWrapLink.append('<div class="pic-title"><span>' + $image.attr("title") + '</span></div>');
+      $imageWrapLink.attr("title",$image.attr("title")); //make sure img title tag will show correctly in fancybox
     };
   });
 });
