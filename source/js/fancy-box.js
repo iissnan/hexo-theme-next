@@ -10,11 +10,11 @@ $(document).ready(function() {
 
     $imageWrapLink.addClass('fancybox');
 
-    if ($image.attr("alt")) {
-      $imageWrapLink.append('<div class="pic-title"><span>' + $image.attr("alt") + '</span></div>');
+    if ($image.attr("title")) {
+      $imageWrapLink.append('<div class="pic-title"><span>' + $image.attr("title") + '</span></div>');
 
       //make sure img title tag will show correctly in fancybox
-      $imageWrapLink.attr("title", $image.attr("alt"));
+      $imageWrapLink.attr("title", $image.attr("title"));
     }
   });
 });
