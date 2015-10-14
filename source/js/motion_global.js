@@ -7,6 +7,14 @@ $(document).ready(function () {
   var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
   var sidebar = $('.sidebar');
 
+  var isNavbarVisible = false;
+  var navbarToggle = $('.site-nav-toggle');
+  var navbar = $('.site-nav');
+  var navbarItem = navbar.find('.menu-item');
+
+  var NAVBAR_HEIGHT = '200px';
+  var NAVBAR_DISPLAY_DURATION = 300;
+
   var SIDEBAR_WIDTH = '320px';
   var SIDEBAR_DISPLAY_DURATION = 300;
 
@@ -28,6 +36,7 @@ $(document).ready(function () {
   sidebarToggleMotion();
   postsListMotion();
   backToTopMotion();
+  navbarToggleMotion();
 
   //add motion effect to toc
   $('.sidebar-nav-toc') && $('.post-toc-wrap').addClass('motion-element');
@@ -165,6 +174,46 @@ $(document).ready(function () {
       sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
       sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
       sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
+    });
+  }
+
+  function navbarShowContentMotion() {
+    navbarItem.velocity('stop').velocity('transition.slideDownIn',{
+      stagger: 50,
+      drag: true
+    });
+  }
+  
+  function navbarHideContentMotion(){
+    navbarItem.velocity('stop').velocity('transition.slideUpOut',{
+      stagger: 50,
+      drag: true
+    });
+  }
+
+  function navbarShowMotion() {
+    navbar.velocity('stop').velocity({height: NAVBAR_HEIGHT}, {
+      display: 'block',
+      duration: NAVBAR_DISPLAY_DURATION,
+      begin: function(e) {
+        navbarShowContentMotion();
+      }
+    });
+  }
+
+  function navbarHideMotion() {
+    navbar.velocity('stop').velocity({height: 0}, {
+      display: 'none',
+      begin: function(){
+        navbarHideContentMotion();
+      }
+    });
+  }
+
+  function navbarToggleMotion() {
+    navbarToggle.on('click', function(){
+      isNavbarVisible ? navbarHideMotion() : navbarShowMotion();
+      isNavbarVisible = !isNavbarVisible;
     });
   }
 });
