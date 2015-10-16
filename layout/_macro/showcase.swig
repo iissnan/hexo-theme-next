@@ -358,6 +358,42 @@
         </div>
       </div>
     </div>
+<!--qrcode caseentry-->
+    <div class="caseEntry">
+      <a id='anchor-qrcode' href='http://initiumlab.com/'>
+        <img class="caseCover" src="images/initiumqrcode.png"
+             alt="Initium Ring and hand drawing qrcode" />
+        <h2  class="caseHeading">Creative Collection</h2>
+      </a>
+    </div>
+    <div class="lightbox" id="lightbox-qrcode">
+      <div class="lightbox-btnClose" id="btnClose-qrcode">
+        ╳
+      </div>
+      <div class="lightbox-innerBox">
+        <h1>CREATIVE PRODUCTS COLLECTION OF INITIUMLAB</h1>
+        <time>Since July 2015</time>
+        <div class="lightbox-description">
+          <p>
+          Do you know how to draw a qrcode by hand?
+          </p>
+        </div>
+        <div class="imageBox">
+          <img src="images/initiumqrcode-innerpage.jpg"
+               alt="hand drawing qrcode" />
+        </div>
+        <div class="lightbox-description">
+          <p>
+          When Initium Logo is printed into a solid 3D product, it's wearable. We call it Initium ring.
+          </p>
+        </div>
+        <div class="imageBox">
+          <img src="images/initiumRing.jpg"
+               alt="initium logo 3d printed into an initium ring" />
+        </div>
+      {% include '../_partials/share/jiathis.swig' %}
+      </div>
+    </div>
 
   </div>
 

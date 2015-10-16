@@ -100,6 +100,7 @@
   configLightbox('database');
   configLightbox('salary360');
   configLightbox('designCollection');
+  configLightbox('qrcode');
 
   // Open lightbox if location includes hashtags pointing to a case
   var hash = window.location.hash;
