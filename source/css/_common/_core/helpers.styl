@@ -32,9 +32,12 @@
 }
 
 
-// Expand image to 126% with nagative margin-left/right.
+// Expand image to 126% with nagative margin-left/right on Desktop.
 .full-image.full-image.full-image {
   border: none;
+  max-width: 100%;
+  width: auto;
+  margin: 0;
   +desktop() {
     max-width: none;
     width: 126%;

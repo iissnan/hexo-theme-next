@@ -201,9 +201,23 @@ ul li { list-style: circle; }
   }
 
   .post-title {
+    position: relative;
     font-size: 28px;
-    font-weight: 300;
+    font-weight: $font-weight-bolder;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      left: -10px;
+      top: 25%;
+      width: 3px;
+      height: 50%;
+      background: $grey-dark;
+      transition-property: background-color;
+      the-transition();
+    }
   }
+  .post-title:hover:before { background: $black-deep; }
 
   .post-body img { margin: 0; }
 
@@ -243,6 +257,8 @@ ul li { list-style: circle; }
   .post-title,
   .post-meta { text-align: center; }
 
+  .post-title:before { display: none; }
+
   .post-meta { margin-bottom: 60px; }
 }
 
@@ -276,8 +292,3 @@ ul li { list-style: circle; }
 
 // Helpers
 // --------------------------------------------------
-.full-image.full-image.full-image {
-  max-width: 100%;
-  width: auto;
-  margin: 0;
-}
