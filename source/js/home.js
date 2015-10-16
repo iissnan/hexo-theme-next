@@ -113,7 +113,7 @@
         document.body.classList.add('no-scroll');
         window.currentLightbox = lightbox;
 
-        ga('send', 'lightbox', 'url-direct-open', lightbox.id);
+        ga('send', 'event', 'lightbox', 'url-direct-open', lightbox.id);
       }
     }
   }
