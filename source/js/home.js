@@ -58,7 +58,7 @@
     window.history.pushState("", document.title, window.location.pathname + window.location.search);
     console.log(lightbox)
 
-    ga('send', 'lightbox', 'close', lightbox.id);
+    ga('send', 'event', 'lightbox', 'close', lightbox.id);
   }
 
   function configLightbox(project){
@@ -76,7 +76,7 @@
       window.location.hash = event.target.parentNode.id.replace('anchor-', '');
       window.currentLightbox = lightbox;
 
-      ga('send', 'lightbox', 'open', lightbox.id);
+      ga('send', 'event', 'lightbox', 'open', lightbox.id);
 
     });
 
