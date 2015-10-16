@@ -11,6 +11,9 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ config.language }}">
 
+  {% if page.layout === partial %}
+    PARITAL LAYOUT!
+  {% endif %}
   {% include '_partials/old-browsers.swig' %}
   {% include '_scripts/analytics.swig' %}
 
