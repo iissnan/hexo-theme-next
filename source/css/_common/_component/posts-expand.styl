@@ -51,6 +51,8 @@
     visibility: visible;
     transform: scaleX(1);
   }
+
+  .fa { font-size: 16px; }
 }
 
 .posts-expand .post-meta {
@@ -69,8 +71,13 @@
   }
 }
 
+.posts-expand .post-comments-count {
+  +mobile() { display: none; }
+}
+
 .posts-expand .post-body {
-  text-align: justify;
+  +desktop() { text-align: justify; }
+
 
   h2, h3, h4, h5, h6 {
     padding-top: 10px;

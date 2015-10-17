@@ -205,6 +205,7 @@ ul li { list-style: circle; }
     position: relative;
     font-size: 28px;
     font-weight: $font-weight-bolder;
+    +mobile() { font-size: 22px; }
 
     &:before {
       content: " ";
@@ -216,6 +217,7 @@ ul li { list-style: circle; }
       background: $grey-dark;
       transition-property: background-color;
       the-transition();
+      +mobile() { display: none; }
     }
   }
   .post-title:hover:before { background: $black-deep; }
