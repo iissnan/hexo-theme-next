@@ -1,0 +1,53 @@
+// Menu
+// --------------------------------------------------
+.site-nav-toggle {
+  position: static;
+  float: right;
+}
+
+
+.menu {
+  float: right;
+  margin: 8px 0 0 20px;
+  padding: 0 20px;
+
+  +mobile() {
+    margin: 0;
+    padding: 0;
+  }
+
+  br { display: none; }
+
+  .menu-item {
+    margin: 0;
+    +mobile() { display: block; }
+  }
+
+  .menu-item a {
+    padding: 5px 10px;
+    background: none;
+    border: none;
+    transition-property: background;
+
+    +mobile() {
+      text-align: left;
+    }
+
+    &:hover { background: #e1e1e1; }
+  }
+
+  a::before {
+      display: none;
+
+      +mobile() { display: block; }
+    }
+
+  +mobile() { float: none; }
+}
+
+.menu-left {
+  float: left;
+  +mobile() { float: none; }
+}
+
+.menu-item-icon { display: none; }

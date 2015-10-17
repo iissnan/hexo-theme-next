@@ -32,7 +32,7 @@ $blue-deep    = #262a30
 $text-color                   = $black-light
 
 // Global link color.
-$link-color                   = $black-deep
+$link-color                   = $black-light
 $link-hover-color             = $black-deep
 $link-decoration-color        = $grey-light
 $link-decoration-hover-color  = $black-deep
@@ -52,10 +52,10 @@ $body-bg-color                = white
 // Font families.
 $font-family-sans-serif   = "Avenir Next", Avenir, Tahoma, Vendana, sans-serif
 $font-family-serif        = "PT Serif", Cambria, Georgia, "Times New Roman", serif
-$font-family-monospace    = "PT Mono", Consolas, Monaco, Menlo, monospace
-$font-family-chinese      = "Microsoft Jhenghei", "PingFang SC", "Microsoft YaHei"
+$font-family-monospace    = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
+$font-family-chinese      = "PingFang SC", "Microsoft YaHei"
 $font-family-base         = Lato, $font-family-chinese, sans-serif
-$font-family-headings     = Cambria, Georgia, $font-family-chinese, "Times New Roman", serif
+$font-family-headings     = Lato, $font-family-chinese, sans-serif
 $font-family-posts        = $font-family-base
 $font-family-icons        = 'FontAwesome'
 
@@ -68,17 +68,22 @@ $font-weight-bolder       = 700;
 
 
 // Font size
-$font-size-base           = 16px
+$font-size-base           = 14px
 $font-size-small          = $font-size-base - 2px
 $font-size-smaller        = $font-size-base - 4px
 $font-size-large          = $font-size-base + 2px
+$font-size-larger         = $font-size-base + 4px
 
 // Headings font size
-$font-size-headings-base  = 28px
-$font-size-headings-step  = 2px
+$font-size-headings-step    = 2px
+$font-size-headings-base    = 24px
+$font-size-headings-small   = $font-size-headings-base - $font-size-headings-step;
+$font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step;
+$font-size-headings-large   = $font-size-headings-base + $font-size-headings-step;
+$font-size-headings-larger  = $font-size-headings-large + $font-size-headings-step;
 
 // Global line height
-$line-height-base         = 1.7
+$line-height-base         = 2
 $line-height-code-block   = 1.6
 
 
@@ -155,7 +160,9 @@ $pagination-active-border       = $grey-light
 // --------------------------------------------------
 
 $main-desktop                   = 960px
+$main-desktop                   = 1200px
 $content-desktop                = 700px
+$content-desktop-large          = 900px
 $sidebar-desktop                = 240px
 $content-desktop-padding        = 40px
 $footer-height                  = 50px
