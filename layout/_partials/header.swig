@@ -14,9 +14,6 @@
   {% else %}
     <span class="logo-line-before"><i></i></span>
     <a href="{{ config.root }}" class="brand" rel="start">
-          <span class="logo">
-            <i class="icon-next-logo"></i>
-          </span>
       <span class="site-title">{{ config.title }}</span>
     </a>
     <span class="logo-line-after"><i></i></span>
@@ -40,8 +37,8 @@
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
           <a href="{{ url_for(path) }}" rel="section">
-            {% if theme.menu_icons %}
-              <i class="menu-item-icon icon-next-{{ itemName }}"></i> <br />
+            {% if theme.menu_icons.enable %}
+              <i class="menu-item-icon fa fa-{{theme.menu_icons[itemName] || 'question-circle'}}"></i> <br />
             {% endif %}
             {{ __('menu.' + itemName) }}
           </a>
@@ -52,8 +49,8 @@
       {% if not theme.scheme and theme.swiftype_key %}
         <li class="menu-item menu-item-search">
           <a href="#" class="st-search-show-outputs">
-            {% if theme.menu_icons %}
-              <i class="menu-item-icon icon-next-search"></i> <br />
+            {% if theme.menu_icons.enable %}
+              <i class="menu-item-icon fa fa-search icon-next-search"></i> <br />
             {% endif %}
             {{ __('menu.search') }}
           </a>

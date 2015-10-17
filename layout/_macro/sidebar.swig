@@ -64,7 +64,9 @@
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank">{{ name }}</a>
+                <a href="{{ link }}" target="_blank">
+                  <i class="fa fa-{{ name | lower }}"></i> {{ name }}
+                </a>
               </span>
             {% endfor %}
           {% endif %}
@@ -84,7 +86,7 @@
             <p class="site-author-name">{{ theme.links_title }}</p>
             {% for name, link in theme.links %}
               <span class="links-of-author-item">
-              <a href="{{ link }}" target="_blank">{{ name }}</a>
+                <a href="{{ link }}" target="_blank">{{ name }}</a>
               </span>
             {% endfor %}
           {% endif %}

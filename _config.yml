@@ -7,6 +7,23 @@ menu:
   tags: /tags
   #commonweal: /404.html
 
+
+# Enable/Disable menu icons.
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of menu item and value is the name of FontAwsome icon.
+#   When an question mask icon presenting up means that the item has no mapping icon.
+menu_icons:
+  enable: true
+  # Icon Mapping.
+  home: home
+  about: user
+  categories: th
+  tags: tags
+  archives: archive
+  commonweal: heartbeat
+
+
 # Place your favicon.ico to /source directory.
 favicon: /favicon.ico
 
@@ -27,15 +44,7 @@ custom_logo:
   image:
   image_shape: square
 
-menu_icons: true
 
-# Icon fonts
-# Place your font into next/source/fonts, specify directory-name and font-name here
-# Avialable: default | linecons | fifty-shades | feather
-icon_font: default
-#icon_font: fifty-shades
-#icon_font: feather
-#icon_font: linecons
 
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
@@ -87,8 +96,11 @@ duoshuo_info:
   user_id: 0
   #admin_nickname: ROOT
 
+
+
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING
+
 
 # Use velocity to animate everything.
 use_motion: true

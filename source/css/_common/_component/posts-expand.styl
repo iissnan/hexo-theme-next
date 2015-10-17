@@ -118,7 +118,6 @@
 
     &:hover {
       color: $black-deep;
-      font-weight: bold;
       border-bottom: none;
     }
 
@@ -126,41 +125,14 @@
       top: 2px;
     }
 
-    &:before, &:after {
-      display: inline-block;
-      width: 16px;
-      height: 25px;
-      vertical-align: top;
-      opacity: 0.4;
-      background-size: 16px;
-    }
+    i { font-size: 12px; }
   }
 
 }
 
-.post-nav-prev {
-  a:before {
-    content: ' ';
-    background: url($chevron-left) no-repeat 0 50%;
-    background-size: 8px;
-  }
-  a:hover:before {
-    opacity: 1;
-  }
-}
+.post-nav-prev {}
 
-.post-nav-next {
-  text-align: right;
-
-  a:after {
-    content: ' ';
-    background: url($chevron-right) no-repeat 100% 50%;
-    background-size: 8px;
-  }
-  a:hover:after {
-    opacity: 1;
-  }
-}
+.post-nav-next { text-align: right; }
 
 .posts-expand {
   .post-eof {

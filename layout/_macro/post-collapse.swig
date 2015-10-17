@@ -7,7 +7,7 @@
         {% if post.link %}{# Link posts #}
           <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
             {{ post.title or post.link }}
-            <i class="icon-next-external-link"></i>
+            <i class="fa fa-external-link-square"></i>
           </a>
         {% else %}
             <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
