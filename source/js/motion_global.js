@@ -175,14 +175,48 @@ $(document).ready(function () {
 
   var motionMiddleWares = {
     logo: function (integrator) {
-      var sequence = [
-        {
-          e: $('.brand'),
-          p: {opacity: 1},
-          o: {duration: 100}
-        }
-      ];
-      var getMistLineSettings = function (element, translateX) {
+      var sequence = [];
+      var $brand = $('.brand');
+      var $title = $('.site-title');
+      var $subtitle = $('.site-subtitle');
+      var $logoLineTop = $('.logo-line-before i');
+      var $logoLineBottom = $('.logo-line-after i');
+
+      $brand.size() > 0 && sequence.push({
+        e: $brand,
+        p: {opacity: 1},
+        o: {duration: 100}
+      });
+
+      isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
+      sequence.push(
+        getMistLineSettings($logoLineTop, "100%"),
+        getMistLineSettings($logoLineBottom, "-100%")
+      );
+
+      hasElement($title) && sequence.push({
+        e: $title,
+        p: {opacity: 1, top: 0},
+        o: { duration: 200 }
+      });
+
+      hasElement($subtitle) && sequence.push({
+        e: $subtitle,
+        p: {opacity: 1, top: 0},
+        o: {duration: 100}
+      });
+
+      if (sequence.length > 0) {
+        sequence[sequence.length - 1].o.complete = function () {
+          integrator.next();
+        };
+        $.Velocity.RunSequence(sequence);
+      } else {
+        integrator.next();
+      }
+
+
+      function getMistLineSettings (element, translateX) {
         return {
           e: $(element),
           p: {translateX: translateX},
@@ -191,25 +225,19 @@ $(document).ready(function () {
             sequenceQueue: false
           }
         };
-      };
+      }
 
-      isMist() && sequence.push(
-        getMistLineSettings('.logo-line-before i', "100%"),
-        getMistLineSettings('.logo-line-after i', "-100%")
-      );
-
-      sequence.push({
-        e: $('.site-title'),
-        p: {opacity: 1, top: 0},
-        o: {
-          duration: 200,
-          complete: function () {
-            integrator.next();
-          }
-        }
-      });
-
-      $.Velocity.RunSequence(sequence);
+      /**
+       * Check if $elements exist.
+       * @param {jQuery|Array} $elements
+       * @returns {boolean}
+       */
+      function hasElement ($elements) {
+        $elements = Array.isArray($elements) ? $elements : [$elements];
+        return $elements.every(function ($element) {
+          return $.isFunction($element.size) && $element.size() > 0;
+        });
+      }
     },
 
     menu: function (integrator) {

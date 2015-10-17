@@ -1,22 +1,21 @@
 .custom-logo {
   .site-meta-headline { text-align: center; }
+
+  .brand { background: none; }
+
+  .site-title {
+    margin: 10px auto 0;
+    font-size: 24px;
+    color: $black-deep;
+    a { border: none; }
+  }
+
+
 }
 
 .custom-logo-image {
   margin: 0 auto;
   padding: 5px;
-  max-width: 100px;
-  border-radius: hexo-config('custom_logo.image_shape') == 'circle' ? 50% : 0;
+  max-width: 150px;
   background: white;
-}
-
-.custom-logo-site-title {
-  margin: 10px auto 0;
-  font-size: 24px;
-  a { border: none; }
-}
-
-.custom-logo-site-subtitle {
-  font-size: 13px;
-  color: $grey-dark;
 }

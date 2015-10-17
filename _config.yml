@@ -35,14 +35,14 @@ keywords: "Hexo,next"
 # Set rss to specific value if you have burned your feed already.
 rss:
 
-# Custom Logo with options:
-#   replace: [true/false] - Replace with specific image
+# Custom Logo.
+# !!Only available for Default Scheme currently.
+# Options:
+#   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
-#   image_shape: [square/circle]
 custom_logo:
-  replace: false
+  enabled: false
   image:
-  image_shape: square
 
 
 
