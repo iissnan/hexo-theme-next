@@ -6,3 +6,5 @@ node_modules/
 # Ignore unused verdors' files
 source/vendors/fancybox/*
 !source/vendors/fancybox/source/
+source/vendors/font-awesome/less/
+source/vendors/font-awesome/scss/
