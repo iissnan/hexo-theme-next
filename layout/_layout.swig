@@ -42,7 +42,9 @@
         {% endif %}
       </div>
 
-      {% block sidebar %}{% endblock %}
+      {% if theme.sidebar !== 'remove' %}
+        {% block sidebar %}{% endblock %}
+      {% endif %}
     </main>
 
     <footer id="footer" class="footer">
@@ -77,9 +79,12 @@
       if (isMobile()) {
         FastClick.attach(document.body);
       }
+
+      motionIntegrator.bootstrap();
     });
   </script>
 
+  {% include '_scripts/tinysou.swig' %}
   {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
   {% include '_scripts/baidushare.swig' %}

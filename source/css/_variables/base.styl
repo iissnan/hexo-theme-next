@@ -32,7 +32,7 @@ $blue-deep    = #262a30
 $text-color                   = $black-light
 
 // Global link color.
-$link-color                   = $black-deep
+$link-color                   = $black-light
 $link-hover-color             = $black-deep
 $link-decoration-color        = $grey-light
 $link-decoration-hover-color  = $black-deep
@@ -52,25 +52,39 @@ $body-bg-color                = white
 // Font families.
 $font-family-sans-serif   = "Avenir Next", Avenir, Tahoma, Vendana, sans-serif
 $font-family-serif        = "PT Serif", Cambria, Georgia, "Times New Roman", serif
-$font-family-monospace    = "PT Mono", Consolas, Monaco, Menlo, monospace
-$font-family-chinese      = "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei"
+$font-family-monospace    = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
+$font-family-chinese      = "PingFang SC", "Microsoft YaHei"
 $font-family-base         = Lato, $font-family-chinese, sans-serif
-$font-family-headings     = Cambria, Georgia, $font-family-chinese, "Times New Roman", serif
+$font-family-headings     = Lato, $font-family-chinese, sans-serif
 $font-family-posts        = $font-family-base
+$font-family-icons        = 'FontAwesome'
+
+
+// Font Weight
+$font-weight-lighter      = 200;
+$font-weight-light        = 300;
+$font-weight-bold         = 600;
+$font-weight-bolder       = 700;
+
 
 // Font size
-$font-size-base           = 16px
+$font-size-base           = 14px
 $font-size-small          = $font-size-base - 2px
 $font-size-smaller        = $font-size-base - 4px
 $font-size-large          = $font-size-base + 2px
+$font-size-larger         = $font-size-base + 4px
 
 // Headings font size
-$font-size-headings-base  = 28px
-$font-size-headings-step  = 2px
+$font-size-headings-step    = 2px
+$font-size-headings-base    = 24px
+$font-size-headings-small   = $font-size-headings-base - $font-size-headings-step;
+$font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step;
+$font-size-headings-large   = $font-size-headings-base + $font-size-headings-step;
+$font-size-headings-larger  = $font-size-headings-large + $font-size-headings-step;
 
 // Global line height
-$line-height-base         = 1.7
-$line-height-code-block   = 1.6
+$line-height-base         = 2
+$line-height-code-block   = 1.6  // Can't be less than 1.3
 
 
 
@@ -99,6 +113,13 @@ $table-cell-border-right-color  = $gainsboro
 $table-cell-border-bottom-color = $gray-lighter
 $table-row-odd-bg-color         = #f9f9f9
 $table-row-hover-bg-color       = $whitesmoke
+
+
+
+// Code Blocks
+// --------------------------------------------------
+$code-font-family = $font-family-monospace
+$code-font-size = 13px
 
 
 
@@ -139,7 +160,9 @@ $pagination-active-border       = $grey-light
 // --------------------------------------------------
 
 $main-desktop                   = 960px
+$main-desktop                   = 1200px
 $content-desktop                = 700px
+$content-desktop-large          = 900px
 $sidebar-desktop                = 240px
 $content-desktop-padding        = 40px
 $footer-height                  = 50px
@@ -191,11 +214,7 @@ $sidebar-highlight      = $blue-bright
 // --------------------------------------------------
 
 // blockquote-center icon
-$blockquoteCenterIcon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDM0aDZsNC04di0xMmgtMTJ2MTJoNnptMTYgMGg2bDQtOHYtMTJoLTEydjEyaDZ6Ii8+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+"
-
-// chevrons
-$chevron-right = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5IDEyIiB3aWR0aD0iOXB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlLz48ZGVzYy8+PGRlZnMvPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiPjxnIGZpbGw9IiMwMDAwMDAiIGlkPSJDb3JlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYwLjAwMDAwMCwgLTkwLjAwMDAwMCkiPjxnIGlkPSJjaGV2cm9uLXJpZ2h0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjAuNTAwMDAwLCA5MC4wMDAwMDApIj48cGF0aCBkPSJNMSwwIEwtMC40LDEuNCBMNC4yLDYgTC0wLjQsMTAuNiBMMSwxMiBMNyw2IEwxLDAgWiIgaWQ9IlNoYXBlIi8+PC9nPjwvZz48L2c+PC9zdmc+"
-$chevron-left = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5IDEyIiB3aWR0aD0iOXB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlLz48ZGVzYy8+PGRlZnMvPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiPjxnIGZpbGw9IiMwMDAwMDAiIGlkPSJDb3JlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjE4LjAwMDAwMCwgLTkwLjAwMDAwMCkiPjxnIGlkPSJjaGV2cm9uLWxlZnQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxOC41MDAwMDAsIDkwLjAwMDAwMCkiPjxwYXRoIGQ9Ik03LjQsMS40IEw2LDAgTC04Ljg4MTc4NDJlLTE2LDYgTDYsMTIgTDcuNCwxMC42IEwyLjgsNiBMNy40LDEuNCBaIiBpZD0iU2hhcGUiLz48L2c+PC9nPjwvZz48L3N2Zz4="
+$center-quote-right = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDM0aDZsNC04di0xMmgtMTJ2MTJoNnptMTYgMGg2bDQtOHYtMTJoLTEydjEyaDZ6Ii8+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+"
 
 // Indicator for post toc
 $post-toc-indicator-top = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI2IDI2IiBoZWlnaHQ9IjI2cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNiAyNiIgd2lkdGg9IjI2cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMC4wNDYsMjQuNDE4IDIuMTMsMjYuNTAyIDEyLjk2NywxNS42NjYgMjMuODAzLDI2LjUwMiAyNS44ODcsMjQuNDE4IDEyLjk2NywxMS40OTggICIvPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMC4wNDYsMTMuNDE4IDIuMTMsMTUuNTAyIDEyLjk2Nyw0LjY2NiAyMy44MDMsMTUuNTAyIDI1Ljg4NywxMy40MTggMTIuOTY3LDAuNDk4ICAiLz48L2c+PC9zdmc+"

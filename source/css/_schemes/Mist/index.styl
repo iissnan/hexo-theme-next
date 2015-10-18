@@ -2,22 +2,11 @@
 // Mist scheme
 // =================================================
 
-.test { border: 10px; }
-
-// Tags
-// --------------------------------------------------
-h1, h2, h3, h4, h5, h6 { margin: 20px 0 10px; }
-
-p { margin: 0 0 25px 0; }
-
-a { border-bottom-color: $grey-light; }
-
-hr {
-  margin: 20px 0;
-  height: 2px;
-}
-
-ul li { list-style: circle; }
+@import "_base";
+@import "_header";
+@import "_logo";
+@import "_menu";
+@import "_posts-expanded";
 
 
 // Components
@@ -29,128 +18,6 @@ ul li { list-style: circle; }
 }
 
 .headband { display: none; }
-
-
-// Header
-// --------------------------------------------------
-.header { background: $whitesmoke; }
-.header-inner {
-  margin-bottom: 80px;
-  padding: 40px 0;
-  clearfix();
-
-  +mobile() {
-    margin-bottom: 50px;
-    padding: 10px;
-  }
-}
-
-.site-meta {
-  float: left;
-  margin-left: -20px;
-
-  +mobile() {
-    margin-left: 10px;
-  }
-
-  .brand {
-    padding: 2px 1px;
-    color: $black-deep;
-    background: none;
-
-    +mobile() { display: block; }
-  }
-
-  .logo { display: none; }
-
-  .site-title {
-    font-size: 22px;
-    font-weight: bolder;
-
-    +mobile() { line-height: 34px; }
-  }
-}
-
-
-.logo-line-before,
-.logo-line-after {
-  display: block;
-  overflow: hidden;
-  margin: 0 auto;
-  width: 75%;
-
-  +mobile() { display: none; }
-
-  i {
-    position: relative;
-    display: block;
-    height: 2px;
-    background: $black-deep;
-    +mobile() { height: 3px; }
-  }
-}
-
-.use-motion {
-  .logo-line-before i { left: -100%; }
-  .logo-line-after i { right: -100%; }
-}
-
-
-
-// Menu
-// --------------------------------------------------
-.site-nav-toggle {
-  position: static;
-  float: right;
-}
-
-
-.menu {
-  float: right;
-  margin: 8px 0 0 20px;
-  padding: 0 20px;
-
-  +mobile() {
-    margin: 0;
-    padding: 0;
-  }
-
-  br { display: none; }
-
-  .menu-item {
-    margin-left: 0;
-    +mobile() { display: block; }
-  }
-
-  .menu-item a {
-    padding: 5px 10px;
-    background: none;
-    border: none;
-    transition-property: background;
-
-    +mobile() {
-      text-align: left;
-    }
-
-    &:hover { background: #e1e1e1; }
-  }
-
-  a::before {
-      display: none;
-
-      +mobile() { display: block; }
-    }
-
-  +mobile() { float: none; }
-}
-
-.menu-left {
-  float: left;
-  +mobile() { float: none; }
-}
-
-.menu-item-icon { display: none; }
-
 
 
 // Search
@@ -180,68 +47,13 @@ ul li { list-style: circle; }
 }
 
 
-// Post Expanded
-// --------------------------------------------------
-.posts-expand {
-  padding-top: 0;
-
-  .post-title,
-  .post-meta {
-    text-align: $site-meta-text-align;
-    +mobile() { text-align: center; }
-  }
-  .post-eof { display: none; }
-
-  .post { margin-top: 80px; }
-  .post:first-child { margin-top: 0; }
-
-  .post-meta {
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
-
-  .post-title {
-    font-size: 28px;
-    font-weight: 300;
-  }
-
-  .post-body img { margin: 0; }
-
-  .post-tags {
-    text-align: left;
-    a {
-      padding: 1px 5px;
-      background: $whitesmoke;
-      border-bottom: none;
-    }
-    a:hover { background: $grey-light; }
-  }
-  .post-nav { margin-top: 40px; }
-}
-
-.post-more-link {
-  margin-top: 20px;
-  text-align: left;
-
-  a {
-    padding: 0;
-    font-size: 16px;
-    color: $grey-dim;
-    background: none;
-    border: none;
-    border-bottom: 2px solid $grey-dim;
-    transition-property: border;
-
-    &:hover { border-bottom-color: $black-deep; }
-  }
-}
-
-
 // Page - Post details
 // --------------------------------------------------
 .page-post-detail {
   .post-title,
   .post-meta { text-align: center; }
+
+  .post-title:before { display: none; }
 
   .post-meta { margin-bottom: 60px; }
 }
@@ -250,7 +62,7 @@ ul li { list-style: circle; }
 // Pagination
 // --------------------------------------------------
 .pagination {
-  margin: 80px 0 0;
+  margin: 120px 0 0;
   text-align: left;
 
   +mobile() {
@@ -276,8 +88,3 @@ ul li { list-style: circle; }
 
 // Helpers
 // --------------------------------------------------
-.full-image.full-image.full-image {
-  max-width: 100%;
-  width: auto;
-  margin: 0;
-}

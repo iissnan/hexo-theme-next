@@ -32,9 +32,12 @@
 }
 
 
-// Expand image to 126% with nagative margin-left/right.
+// Expand image to 126% with nagative margin-left/right on Desktop.
 .full-image.full-image.full-image {
   border: none;
+  max-width: 100%;
+  width: auto;
+  margin: 0;
   +desktop() {
     max-width: none;
     width: 126%;
@@ -58,7 +61,8 @@
     width: 100%;
     height: 24px;
     opacity: 0.2;
-    background: url($blockquoteCenterIcon) no-repeat;
+    background-image: url($center-quote-right);
+    background-repeat: no-repeat;
     background-position: 0 -7px;
     background-size: 24px 24px;
   }

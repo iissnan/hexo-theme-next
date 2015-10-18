@@ -1,170 +1,293 @@
 $(document).ready(function () {
-  var body = $('body');
-  var isSidebarVisible = false;
-  var sidebarToggle = $('.sidebar-toggle');
-  var sidebarToggleLine1st = $('.sidebar-toggle-line-first');
-  var sidebarToggleLine2nd = $('.sidebar-toggle-line-middle');
-  var sidebarToggleLine3rd = $('.sidebar-toggle-line-last');
-  var sidebar = $('.sidebar');
+  var motionIntegrator = {
+    queue: [],
+    cursor: -1,
+    add: function (fn) {
+      this.queue.push(fn);
+      return this;
+    },
+    next: function () {
+      this.cursor++;
+      var fn = this.queue[this.cursor];
+      $.isFunction(fn) && fn(motionIntegrator);
+    },
+    bootstrap: function () {
+      this.next();
+    }
+  };
+
+  var sidebarToggleLines = {
+    lines: [],
+    push: function (line) {
+      this.lines.push(line);
+    },
+    init: function () {
+      this.lines.forEach(function (line) {
+        line.init();
+      });
+    },
+    arrow: function () {
+      this.lines.forEach(function (line) {
+        line.arrow();
+      });
+    },
+    close: function () {
+      this.lines.forEach(function (line) {
+        line.close();
+      });
+    }
+  };
+
+  function SidebarToggleLine(settings) {
+    this.el = $(settings.el);
+    this.status = $.extend({}, {
+      init: {
+        width: '100%',
+        opacity: 1,
+        left: 0,
+        rotateZ: 0,
+        top: 0
+      }
+    }, settings.status);
+  }
+
+  SidebarToggleLine.prototype.init = function () {
+    this.transform('init');
+  };
+  SidebarToggleLine.prototype.arrow = function () {
+    this.transform('arrow');
+  };
+  SidebarToggleLine.prototype.close = function () {
+    this.transform('close');
+  };
+  SidebarToggleLine.prototype.transform = function (status) {
+    this.el.velocity('stop').velocity(this.status[status]);
+  };
+
+  var sidebarToggleLine1st = new SidebarToggleLine({
+    el: '.sidebar-toggle-line-first',
+    status: {
+      arrow: {width: '50%', rotateZ: '-45deg', top: '2px'},
+      close: {width: '100%', rotateZ: '-45deg', top: '5px'}
+    }
+  });
+  var sidebarToggleLine2nd = new SidebarToggleLine({
+    el: '.sidebar-toggle-line-middle',
+    status: {
+      arrow: {width: '90%'},
+      close: {opacity: 0}
+    }
+  });
+  var sidebarToggleLine3rd = new SidebarToggleLine({
+    el: '.sidebar-toggle-line-last',
+    status: {
+      arrow: {width: '50%', rotateZ: '45deg', top: '-2px'},
+      close: {width: '100%', rotateZ: '45deg', top: '-5px'}
+    }
+  });
+
+  sidebarToggleLines.push(sidebarToggleLine1st);
+  sidebarToggleLines.push(sidebarToggleLine2nd);
+  sidebarToggleLines.push(sidebarToggleLine3rd);
 
   var SIDEBAR_WIDTH = '320px';
   var SIDEBAR_DISPLAY_DURATION = 300;
 
-  var sidebarToggleLineStatusInit = {width: '100%', opacity: 1, left: 0, rotateZ: 0, top: 0};
+  var sidebarToggleMotion = {
+    toggleEl: $('.sidebar-toggle'),
+    sidebarEl: $('.sidebar'),
+    isSidebarVisible: false,
+    init: function () {
+      this.toggleEl.on('click', this.clickHandler.bind(this));
+      this.toggleEl.on('mouseenter', this.mouseEnterHandler.bind(this));
+      this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
 
-  var sidebarToggleLine1stStatusInit = sidebarToggleLineStatusInit;
-  var sidebarToggleLine1stStatusArrow = {width: '50%', rotateZ: '-45deg', top: '2px'};
-  var sidebarToggleLine1stStatusClose = {width: '100%', rotateZ: '-45deg', top: '5px'};
+      $(document)
+        .on('sidebar.isShowing', function () {
+          isDesktop() && $('body').velocity('stop').velocity(
+            {paddingRight: SIDEBAR_WIDTH},
+            SIDEBAR_DISPLAY_DURATION
+          );
+        })
+        .on('sidebar.isHiding', function () {
+        });
+    },
+    clickHandler: function () {
+      this.isSidebarVisible ? this.hideSidebar() : this.showSidebar();
+      this.isSidebarVisible = !this.isSidebarVisible;
+    },
+    mouseEnterHandler: function () {
+      if (this.isSidebarVisible) {
+        return;
+      }
+      sidebarToggleLines.arrow();
+    },
+    mouseLeaveHandler: function () {
+      if (this.isSidebarVisible) {
+        return;
+      }
+      sidebarToggleLines.init();
+    },
+    showSidebar: function () {
+      var self = this;
 
-  var sidebarToggleLine2ndStatusInit = sidebarToggleLineStatusInit;
-  var sidebarToggleLine2ndStatusArrow = {width: '90%'};
-  var sidebarToggleLine2ndStatusClose = {opacity: 0};
+      sidebarToggleLines.close();
 
-  var sidebarToggleLine3rdStatusInit = sidebarToggleLineStatusInit;
-  var sidebarToggleLine3rdStatusArrow = {width: '50%', rotateZ: '45deg', top: '-2px'};
-  var sidebarToggleLine3rdStatusClose = {width: '100%', rotateZ: '45deg', top: '-5px'};
+      this.sidebarEl.velocity('stop').velocity({
+          width: SIDEBAR_WIDTH
+        }, {
+          display: 'block',
+          duration: SIDEBAR_DISPLAY_DURATION,
+          begin: function () {
+            $('.sidebar .motion-element').velocity(
+              'transition.slideRightIn',
+              {stagger: 50, drag: true}
+            );
+          },
+          complete: function () {
+            self.sidebarEl.addClass('sidebar-active');
+            self.sidebarEl.trigger('sidebar.didShow');
+          }
+        }
+      );
 
-  LogoAndMenuMotion();
-  sidebarToggleMotion();
-  postsListMotion();
-  backToTopMotion();
+      this.sidebarEl.trigger('sidebar.isShowing');
+    },
+    hideSidebar: function () {
+      isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});
+      this.sidebarEl.find('.motion-element').velocity('stop').css('display', 'none');
+      this.sidebarEl.velocity('stop').velocity({width: 0}, {display: 'none'});
 
-  //add motion effect to toc
-  $('.sidebar-nav-toc') && $('.post-toc-wrap').addClass('motion-element');
+      sidebarToggleLines.init();
 
+      this.sidebarEl.removeClass('sidebar-active');
+      this.sidebarEl.trigger('sidebar.isHiding');
 
-  //当前选择的是目录列表时添加 class 'motion-element'
-  sidebar.bind('click', function(e){
-    if(!!$('.sidebar-nav-toc') && e.target == $('.sidebar-nav-toc')[0]){
-      $('.post-toc-wrap').addClass('motion-element');
-    }});
-
-  //防止 humberger 被选择导致 sidebar 上方出现高亮
-  document.onselectstart = function(e) {
-    if((e.target == sidebarToggle[0]) || (e.target == $('.sidebar-toggle-line-wrap')[0]) || (e.target == sidebarToggleLine1st[0]) || (e.target == sidebarToggleLine2nd[0]) || (e.target == sidebarToggleLine3rd[0])){
-      e.preventDefault();
+      //在 post 页面下按下隐藏 sidebar 时如果当前选中的是“站点概览”，将 toc 去除 motion 效果
+      //防止再次打开时会出现在“站点概览”下的 bug
+      if (!!$('.post-toc-wrap')) {
+        if ($('.site-overview').css('display') === 'block') {
+          $('.post-toc-wrap').removeClass('motion-element');
+        }
+      }
     }
   };
 
-  $(document)
-    .on('sidebar.isShowing', function () {
-      //添加 “.velocity('stop')” 用以中止动画
-      isDesktop() && body.velocity('stop').velocity(
-        {paddingRight: SIDEBAR_WIDTH},
-        SIDEBAR_DISPLAY_DURATION
+  var motionMiddleWares = {
+    logo: function (integrator) {
+      var sequence = [];
+      var $brand = $('.brand');
+      var $title = $('.site-title');
+      var $subtitle = $('.site-subtitle');
+      var $logoLineTop = $('.logo-line-before i');
+      var $logoLineBottom = $('.logo-line-after i');
+
+      $brand.size() > 0 && sequence.push({
+        e: $brand,
+        p: {opacity: 1},
+        o: {duration: 100}
+      });
+
+      isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
+      sequence.push(
+        getMistLineSettings($logoLineTop, "100%"),
+        getMistLineSettings($logoLineBottom, "-100%")
       );
-      // sidebar 内容的效果应该在sidebarsidebarShowMotion内触发
-      // sidebarContentMotion();
-    })
-    .on('sidebar.isHiding', function () {});
 
-  function LogoAndMenuMotion() {
-    var sequence = [
-      { e: $('.brand'), p: { opacity: 1 }, o: { duration: 100 } },
-      { e: $('.logo'), p: { opacity: 1, top: 0 }, o: { duration: 50} }
-    ];
+      hasElement($title) && sequence.push({
+        e: $title,
+        p: {opacity: 1, top: 0},
+        o: { duration: 200 }
+      });
 
-    isMist() && sequence.push(
-        { e: $('.logo-line-before i'), p: { translateX: "100%" }, o: { duration: 500, sequenceQueue: false } },
-        { e: $('.logo-line-after i'), p: { translateX: "-100%" }, o: { duration: 500, sequenceQueue: false } }
-    );
+      hasElement($subtitle) && sequence.push({
+        e: $subtitle,
+        p: {opacity: 1, top: 0},
+        o: {duration: 100}
+      });
 
-    sequence.push({ e: $('.site-title'), p: { opacity: 1, top: 0 }, o: { duration: 200 } });
-
-    $.Velocity.RunSequence(sequence);
-    $('.menu-item').velocity('transition.slideDownIn', {display: null});
-  }
-
-
-  function backToTopMotion () {
-    var b2top = $('.back-to-top');
-    b2top.on('click', function () {
-      body.velocity('scroll');
-    });
-  }
-
-  function sidebarShowMotion () {
-
-    sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusClose);
-    sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusClose);
-    sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusClose);
-
-    //添加 “.velocity('stop')” 用以中止动画
-    sidebar.velocity('stop').velocity({width: SIDEBAR_WIDTH}, {
-      display: 'block',
-      duration: SIDEBAR_DISPLAY_DURATION,
-      //将 sidebar 内容动画效果函数移动到这里
-      begin: function(e) {
-        sidebarContentMotion();
-      },
-      complete: function () {
-        sidebar.addClass('sidebar-active');
-        sidebar.trigger('sidebar.didShow');
+      if (sequence.length > 0) {
+        sequence[sequence.length - 1].o.complete = function () {
+          integrator.next();
+        };
+        $.Velocity.RunSequence(sequence);
+      } else {
+        integrator.next();
       }
-    });
-    sidebar.trigger('sidebar.isShowing');
-  }
 
-  function sidebarHideMotion () {
-    //添加 “.velocity('stop')” 用以中止动画
-    isDesktop() && body.velocity('stop').velocity({paddingRight: 0});
-    // sidebar 内容动画中止和隐藏
-    $('.sidebar .motion-element').velocity('stop').css('display','none');;
-    // sidebar 动画中止和隐藏
-    sidebar.velocity('stop').velocity({width: 0}, {display: 'none'});
 
-    sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
-    sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
-    sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
-
-    sidebar.removeClass('sidebar-active');
-    sidebar.trigger('sidebar.isHiding');
-
-    //在 post 页面下按下隐藏 sidebar 时如果当前选中的是“站点概览”，将 toc 去除 motion 效果
-    //防止再次打开时会出现在“站点概览”下的 bug
-    if(!!$('.post-toc-wrap')){
-      if($('.site-overview').css('display') == 'block'){
-        $('.post-toc-wrap').removeClass('motion-element');
+      function getMistLineSettings (element, translateX) {
+        return {
+          e: $(element),
+          p: {translateX: translateX},
+          o: {
+            duration: 500,
+            sequenceQueue: false
+          }
+        };
       }
-      // else {
-      //   $('.post-toc-wrap').addClass('motion-element');
-      // }
-    }
-  }
 
-  function sidebarContentMotion () {
-    $('.sidebar .motion-element')
-      .velocity('transition.slideRightIn',{
-        stagger: 50,
-        drag: true,
+      /**
+       * Check if $elements exist.
+       * @param {jQuery|Array} $elements
+       * @returns {boolean}
+       */
+      function hasElement ($elements) {
+        $elements = Array.isArray($elements) ? $elements : [$elements];
+        return $elements.every(function ($element) {
+          return $.isFunction($element.size) && $element.size() > 0;
+        });
+      }
+    },
+
+    menu: function (integrator) {
+      $('.menu-item').velocity('transition.slideDownIn', {
+        display: null,
         complete: function () {
-          sidebar.trigger('sidebar.motion.complete');
+          integrator.next();
         }
+      });
+    },
+
+    postList: function (integrator) {
+      var $post = $('.post');
+      var hasPost = $post.size() > 0;
+
+      hasPost ? postMotion() : integrator.next();
+
+      function postMotion () {
+        var postMotionOptions = window.postMotionOptions || {
+            stagger: 300,
+            drag: true
+          };
+        postMotionOptions.complete = function () {
+          integrator.next();
+        };
+
+        $post.velocity('transition.slideDownIn', postMotionOptions);
       }
-    );
-  }
+    },
 
-  function postsListMotion () {
-    var postMotionOptions = window.postMotionOptions || {stagger: 300, drag: true};
-    $('.post').velocity('transition.slideDownIn', postMotionOptions);
-  }
+    backToTop: function (integrator) {
+      var b2top = $('.back-to-top');
+      b2top.on('click', function () {
+        $('body').velocity('scroll');
+      });
+      integrator.next();
+    },
 
-  function sidebarToggleMotion () {
-    sidebarToggle.on('click', function () {
-      isSidebarVisible ? sidebarHideMotion() : sidebarShowMotion();
-      isSidebarVisible = !isSidebarVisible;
-    });
+    sidebarToggle: function (integrator) {
+      sidebarToggleMotion.init();
+      integrator.next();
+    }
+  };
 
-    sidebarToggle.hover(function () {
-      if (isSidebarVisible) {return}
-      sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusArrow);
-      sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusArrow);
-      sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusArrow);
-    }, function () {
-      if (isSidebarVisible) {return}
-      sidebarToggleLine1st.velocity('stop').velocity(sidebarToggleLine1stStatusInit);
-      sidebarToggleLine2nd.velocity('stop').velocity(sidebarToggleLine2ndStatusInit);
-      sidebarToggleLine3rd.velocity('stop').velocity(sidebarToggleLine3rdStatusInit);
-    });
-  }
+  motionIntegrator
+    .add(motionMiddleWares.logo)
+    .add(motionMiddleWares.menu)
+    .add(motionMiddleWares.sidebarToggle)
+    .add(motionMiddleWares.backToTop)
+    .add(motionMiddleWares.postList);
+
+  window.motionIntegrator = motionIntegrator;
 });

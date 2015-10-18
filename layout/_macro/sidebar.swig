@@ -64,7 +64,9 @@
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank">{{ name }}</a>
+                <a href="{{ link }}" target="_blank">
+                  <i class="fa fa-{{ name | lower }}"></i> {{ name }}
+                </a>
               </span>
             {% endfor %}
           {% endif %}
@@ -84,7 +86,7 @@
             <p class="site-author-name">{{ theme.links_title }}</p>
             {% for name, link in theme.links %}
               <span class="links-of-author-item">
-              <a href="{{ link }}" target="_blank">{{ name }}</a>
+                <a href="{{ link }}" target="_blank">{{ name }}</a>
               </span>
             {% endfor %}
           {% endif %}
@@ -93,7 +95,7 @@
       </section>
 
       {% if is_post %}
-        <section class="post-toc-wrap sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel-active">
           <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
             {% set toc = toc(page.content, {"class": "nav", list_number: theme.toc_list_number}) %}

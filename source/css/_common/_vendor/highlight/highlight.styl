@@ -7,7 +7,7 @@ $code-block
   margin: 20px 0
   padding: 15px
   overflow: auto
-  font-size 13px
+  font-size $code-font-size
   color: highlight-foreground
   line-height:  $line-height-code-block
 
@@ -16,8 +16,9 @@ $line-numbers
 
 .post
   pre, code
-    font-family: $font-family-monospace
+    font-family: $code-font-family
   code
+    word-break: break-all;
     background: $gainsboro
     text-shadow: 0 1px #fff
     padding: 0 0.3em
@@ -32,7 +33,7 @@ $line-numbers
     pre
       border: none
       margin: 0
-      padding: 0
+      padding: 1px
     table
       margin: 0
       width: auto

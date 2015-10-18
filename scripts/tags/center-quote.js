@@ -1,5 +1,6 @@
 /* global hexo */
 // Usage: {% centerquote %} Something {% endcenterquote %}
+// Alias: {% cq %} Something {% endcq %}
 
 function centerQuote (args, content) {
   return '<blockquote class="blockquote-center">' +
@@ -8,3 +9,4 @@ function centerQuote (args, content) {
 }
 
 hexo.extend.tag.register('centerquote', centerQuote, {ends: true});
+hexo.extend.tag.register('cq', centerQuote, {ends: true});

@@ -9,10 +9,10 @@
 
   .post-body {
     pre, .highlight {
-      margin 0 -20px
-      padding 10px 20px
+      margin: 0 -20px;
+      padding: 10px 20px;
       .gutter pre {
-        padding-right 10px
+        padding-right: 10px;
       }
     }
   }
@@ -21,6 +21,7 @@
 .posts-expand .post-title {
   font-size: 26px;
   text-align: center;
+  word-break: break-word;
 
   +mobile() {
     font-size: 22px;
@@ -48,9 +49,11 @@
   }
 
   &:hover::before {
-    visibility: visible
+    visibility: visible;
     transform: scaleX(1);
   }
+
+  .fa { font-size: 16px; }
 }
 
 .posts-expand .post-meta {
@@ -60,17 +63,22 @@
   text-align: center;
 
   .post-category-list {
-    display inline-block
-    margin 0
-    padding 3px
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
   }
   .post-category-list-link {
     color: $grey-dark;
   }
 }
 
+.posts-expand .post-comments-count {
+  +mobile() { display: none; }
+}
+
 .posts-expand .post-body {
-  text-align: justify;
+  +desktop() { text-align: justify; }
+
 
   h2, h3, h4, h5, h6 {
     padding-top: 10px;
@@ -89,9 +97,9 @@
   text-align: center;
 
   a {
-    display inline-block
-    margin-right 10px
-    font-size: 13px
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 13px;
   }
 }
 
@@ -118,7 +126,6 @@
 
     &:hover {
       color: $black-deep;
-      font-weight: bold;
       border-bottom: none;
     }
 
@@ -126,53 +133,26 @@
       top: 2px;
     }
 
-    &:before, &:after {
-      display: inline-block;
-      width: 16px;
-      height: 25px;
-      vertical-align: top;
-      opacity: 0.4;
-      background-size: 16px;
-    }
+    i { font-size: 12px; }
   }
 
 }
 
-.post-nav-prev {
-  a:before {
-    content: ' ';
-    background: url($chevron-left) no-repeat 0 50%;
-    background-size: 8px;
-  }
-  a:hover:before {
-    opacity: 1;
-  }
-}
+.post-nav-prev {}
 
-.post-nav-next {
-  text-align: right;
-
-  a:after {
-    content: ' ';
-    background: url($chevron-right) no-repeat 100% 50%;
-    background-size: 8px;
-  }
-  a:hover:after {
-    opacity: 1;
-  }
-}
+.post-nav-next { text-align: right; }
 
 .posts-expand {
   .post-eof {
     display: block;
-    margin 160px auto 120px
-    width 8%
-    height 1px
-    background $grey-light
-    text-align center
+    margin: 160px auto 120px;
+    width: 8%;
+    height: 1px;
+    background: $grey-light;
+    text-align: center;
   }
 }
 
-.post-more-link {
-  margin-top: 50px;
-}
+.post-more-link { margin-top: 50px; }
+
+.posts-expand .fancybox img { margin: 0 auto; }
