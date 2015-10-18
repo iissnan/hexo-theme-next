@@ -1,0 +1,45 @@
+.header {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+}
+
+.header-inner {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  width: 240px;
+  height: 290px;
+  background: white;
+
+  +desktop-large() {
+    .container & { width: 240px; }
+  }
+}
+
+.main {
+  clearfix();
+}
+
+.container .main-inner { width: $main-desktop; }
+.content-wrap {
+  float: right;
+  box-sizing: border-box;
+  margin-top: 30px;
+  padding: 0 $content-desktop-padding $content-desktop-padding;
+  width: $content-desktop;
+  background: white;
+}
+
+.sidebar {
+  position: static;
+  float: left;
+  margin-top: 300px;
+  width: $sidebar-desktop;
+  background: white;
+  box-shadow: none;
+}
+
+.sidebar-toggle { display: none; }
+
+.back-to-top { bottom: 40px; }

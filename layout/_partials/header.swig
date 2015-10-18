@@ -44,7 +44,7 @@
       {% endfor %}
 
       {# Search icon for default scheme #}
-      {% if not theme.scheme and theme.swiftype_key %}
+      {% if (not theme.scheme or theme.scheme === 'Pisces') and theme.swiftype_key %}
         <li class="menu-item menu-item-search">
           <a href="#" class="st-search-show-outputs">
             {% if theme.menu_icons.enable %}
