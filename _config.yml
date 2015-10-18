@@ -95,6 +95,14 @@ duoshuo_info:
   user_id: 0
   #admin_nickname: ROOT
 
+# Facebook SDK Support.
+# https://github.com/iissnan/hexo-theme-next/pull/410
+facebook_sdk:
+  enable: false
+  app_id:       #<app_id>
+  fb_admin:     #<user_id>
+  like_button:  #true
+  webmaster:    #true
 
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
