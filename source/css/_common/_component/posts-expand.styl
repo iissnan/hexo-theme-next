@@ -248,3 +248,41 @@
     text-align center
   }
 }
+
+/*style of about*/
+
+.photo_thumb {
+  display: inline-block; 
+  width: 24%; 
+  height: 120px;
+  overflow-y: hidden;
+  margin-right: 5px;
+  padding: 0;
+}
+
+.photo_thumb img {
+  width: 100%;
+  position: relative;
+}
+
+.arrow {
+  width: 10px;
+  display: inline-block;
+}
+
+#photo_gallery {
+  width: 760px;
+  display: inline-block;
+}
+
+
+@media screen and (max-width: 800px) {
+  .photo_thumb {
+  display: inline-block; 
+  width: 40%; 
+  height: 200px;
+  overflow-y: hidden;
+  margin-right: 5px;
+  padding: 0;
+}
+}
