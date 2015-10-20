@@ -1,7 +1,7 @@
 if (typeof DUOSHUO !== 'undefined') {
 	hook_duoshuo_templates();
 } else {
-	$('[src="http://static.duoshuo.com/embed.js"]')[0].onload = hook_duoshuo_templates;
+	$('#duoshuo-script')[0].onload = hook_duoshuo_templates;
 }
 var is_hook_duoshuo = false;
 
