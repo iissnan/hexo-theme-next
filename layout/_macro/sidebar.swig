@@ -10,7 +10,9 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
-      {% if is_post %}
+      {% set display_toc = is_post and theme.toc.enable %}
+
+      {% if display_toc %}
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             {{ __('sidebar.toc') }}
@@ -21,7 +23,7 @@
         </ul>
       {% endif %}
 
-      <section class="site-overview">
+      <section class="site-overview sidebar-panel {% if not display_toc %} sidebar-panel-active {% endif %}">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}" alt="{{ theme.author }}" itemprop="image"/>
           <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
@@ -94,11 +96,11 @@
 
       </section>
 
-      {% if is_post %}
-        <section class="post-toc-wrap motion-element sidebar-panel-active">
+      {% if display_toc %}
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
-            {% set toc = toc(page.content, {"class": "nav", list_number: theme.toc_list_number}) %}
+            {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
             {% if toc.length <= 1 %}
               <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
             {% else %}

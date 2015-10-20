@@ -75,8 +75,13 @@ sidebar: post
 scroll_to_more: true
 
 
-# Automatically add list number to toc.
-toc_list_number: true
+# TOC in the Sidebar
+toc:
+  enable: true
+
+  # Automatically add list number to toc.
+  number: true
+
 
 # Automatically Excerpt
 auto_excerpt:
