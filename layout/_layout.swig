@@ -84,6 +84,15 @@
         FastClick.attach(document.body);
       }
 
+      // TODO: Isolate Scheme-oriented scripts.
+      if (isPisces()) {
+        var $sidebar = $('#sidebar');
+        var headerHeight = $('.header-inner').height();
+        $sidebar
+          .css({ 'margin-top': headerHeight + 10 })
+          .show();
+      }
+
       motionIntegrator.bootstrap();
     });
   </script>
