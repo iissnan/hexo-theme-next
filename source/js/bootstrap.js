@@ -1,4 +1,16 @@
 $(document).ready(function () {
+  if (CONFIG.sidebar === 'always') {
+    displaySidebar();
+  }
+  if (isMobile()) {
+    FastClick.attach(document.body);
+  }
+
+  $("#posts").find('img').lazyload({
+    placeholder: "{{ url_for(theme.images) }}/loading.gif",
+    effect: "fadeIn"
+  });
+
   $('.site-nav-toggle button').on('click', function () {
     var $siteNav = $('.site-nav');
     var ON_CLASS_NAME = 'site-nav-on';
@@ -10,4 +22,6 @@ $(document).ready(function () {
       $siteNav[animateCallback](ON_CLASS_NAME);
     });
   });
+
+  motionIntegrator.bootstrap();
 });
