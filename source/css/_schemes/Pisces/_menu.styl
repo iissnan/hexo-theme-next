@@ -4,16 +4,35 @@
   list-style: none;
 
   a {
+    position: relative;
     box-sizing: border-box;
     padding: 5px 20px;
     text-align: left;
     line-height: inherit;
     &:hover {
-      background: $gainsboro;
+      background: #f9f9f9;
       border-bottom-color: white;
     }
   }
 
   br { display: none; }
-  .fa {margin-right: 5px; }
+  .fa { margin-right: 5px; }
 }
+
+.menu-item-active a {
+  @extend .menu .menu-item a:hover;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $grey;
+  }
+
+}
+

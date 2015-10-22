@@ -27,8 +27,8 @@
                src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}"
                alt="{{ theme.author }}" />
           <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
+          <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
         </div>
-        <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="{{ url_for(theme.menu.archives) }}">
@@ -56,7 +56,7 @@
         {% if theme.rss %}
           <div class="feed-link motion-element">
             <a href="{{ url_for(theme.rss) }}" rel="alternate">
-              <i class="menu-item-icon icon-next-feed"></i>
+              <i class="fa fa-rss"></i>
               RSS
             </a>
           </div>
@@ -67,7 +67,9 @@
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank">
-                  <i class="fa fa-{{ name | lower }}"></i> {{ name }}
+                  {% if theme.social_icons.enable %}
+                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i> {{ name }}
+                  {% endif %}
                 </a>
               </span>
             {% endfor %}

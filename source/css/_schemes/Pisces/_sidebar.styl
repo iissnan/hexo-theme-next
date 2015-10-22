@@ -2,12 +2,26 @@
 
 .sidebar { display: none; }
 
-.sidebar-inner { color: $text-color; }
+.sidebar-inner {
+  text-align: left;
+  color: $text-color;
+}
 
 .site-overview { margin: 0 10px; }
 
-.site-author-image { border-color: $gainsboro; }
-.site-author-name { color: $black-deep; }
+.site-author-image {
+  float: left;
+  margin-right: 10px;
+  max-width: 64px;
+  border-width: 1px;
+  border-color: $gainsboro;
+}
+.site-author-name {
+  text-align: left;
+  font-weight: $font-weight-bold;
+}
+
+.site-description { text-align: left; }
 
 .sidebar a {
   color: $black-light;
@@ -22,9 +36,39 @@
   }
 }
 
+
+.feed-link {
+  border-top: 1px dotted $grey-light;
+  border-bottom: 1px dotted $grey-light;
+  text-align: center;
+}
+
+$orange = #fc6423;
 .feed-link a {
-  color: #fc6423;
-  &:hover { color: white; }
+  display: block;
+  color: $orange;
+  border: none;
+
+  &:hover {
+    background: none;
+    color: darken($orange, 20%);
+
+    i { color: darken($orange, 20%); }
+  }
+}
+
+.links-of-author-item {
+  display: inline-block;
+  width: 48%;
+  a {
+    display: block;
+    text-decoration: none;
+  }
+  .fa {
+    margin-right: 5px;
+    font-size: 16px;
+  }
+  .fa-globe { font-size: 15px; }
 }
 
 .post-toc ol { padding: 0 20px 10px; }

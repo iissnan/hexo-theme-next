@@ -78,13 +78,13 @@
 
 .site-author-name {
   margin: 5px 0 0;
-  color: $whitesmoke;
+  color: $site-author-name-color;
 }
 
 .site-description {
   margin-top: 5px;
-  font-size: 14px;
-  color: $black-light;
+  font-size: $site-description-font-size;
+  color: $site-description-color;
 }
 
 .site-state {
@@ -97,22 +97,21 @@
   padding: 0 15px;
   border-left: 1px solid $site-state-item-border-color;
 
-  &:first-child {
-    border-left: none;
-  }
+  &:first-child { border-left: none; }
 
-  a {
-    border-bottom: none;
-  }
+  a { border-bottom: none; }
 }
 .site-state-item-count {
   display: block;
   text-align: center;
-  font-size: 18px;
+  color: $site-state-item-count-color;
+  font-weight: $font-weight-bold;
+  font-size: $site-state-item-count-font-size;
 }
 
 .site-state-item-name {
-  font-size: 13px;
+  font-size: $site-state-item-name-font-size;
+  color: $site-state-item-name-color;
 }
 
 .feed-link {

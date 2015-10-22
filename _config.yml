@@ -81,6 +81,12 @@ sidebar:
   #display: remove
 
 
+social_icons:
+  enable: true
+  # Icon Mappings
+  GitHub: github
+  Twitter: twitter
+  Weibo: weibo
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
