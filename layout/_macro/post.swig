@@ -78,7 +78,11 @@
             &nbsp; | &nbsp;
             <div class="fb-like" data-layout="button_count" data-share="true"></div>
           {% endif %}
-
+		  {% if theme.leancloud_visitors.enable %}
+		  	 <span id="{{ url_for(post.path) }}"class="leancloud_visitors"  data-flag-title="{{ post.title }}">
+            &nbsp; | &nbsp; {{__('post.visitors')}}
+            </span>
+		  {% endif %}
         </div>
       </header>
     {% endif %}

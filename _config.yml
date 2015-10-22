@@ -105,6 +105,13 @@ facebook_sdk:
   like_button:  #true
   webmaster:    #true
 
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: false
+  app_id: #<app_id>
+  app_key: #<app_key>
+
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING
