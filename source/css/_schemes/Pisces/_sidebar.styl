@@ -2,12 +2,16 @@
 
 .sidebar { display: none; }
 
-.sidebar-inner {
+.sidebar-inner { color: $text-color; }
+
+.site-overview {
+  margin: 0 10px;
   text-align: left;
-  color: $text-color;
 }
 
-.site-overview { margin: 0 10px; }
+.site-author {
+  clearfix();
+}
 
 .site-author-image {
   float: left;
@@ -17,11 +21,14 @@
   border-color: $gainsboro;
 }
 .site-author-name {
-  text-align: left;
+  margin: 0;
   font-weight: $font-weight-bold;
 }
 
-.site-description { text-align: left; }
+.site-description {
+  margin-top: 0;
+  line-height: 1.6;
+}
 
 .sidebar a {
   color: $black-light;
