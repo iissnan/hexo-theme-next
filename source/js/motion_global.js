@@ -172,6 +172,7 @@ $(document).ready(function () {
       }
     }
   };
+  sidebarToggleMotion.init();
 
   var motionMiddleWares = {
     logo: function (integrator) {
@@ -268,26 +269,22 @@ $(document).ready(function () {
       }
     },
 
-    backToTop: function (integrator) {
-      var b2top = $('.back-to-top');
-      b2top.on('click', function () {
-        $('body').velocity('scroll');
-      });
+    sidebar: function (integrator) {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
       integrator.next();
     },
 
-    sidebarToggle: function (integrator) {
-      sidebarToggleMotion.init();
+    backToTop: function (integrator) {
+      var $b2top = $('.back-to-top');
+      $b2top.on('click', function () {
+        $('body').velocity('scroll');
+      });
       integrator.next();
     }
   };
 
-  motionIntegrator
-    .add(motionMiddleWares.logo)
-    .add(motionMiddleWares.menu)
-    .add(motionMiddleWares.sidebarToggle)
-    .add(motionMiddleWares.backToTop)
-    .add(motionMiddleWares.postList);
-
+  window.motionMiddleWares = motionMiddleWares;
   window.motionIntegrator = motionIntegrator;
 });
