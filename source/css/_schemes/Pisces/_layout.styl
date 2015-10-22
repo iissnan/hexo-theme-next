@@ -6,6 +6,7 @@
 
 .header-inner {
   position: absolute;
+  top: 0;
   overflow: hidden;
   padding: 0;
   width: 240px;
@@ -41,4 +42,8 @@
 
 .sidebar-toggle { display: none; }
 
-.back-to-top { bottom: 40px; }
+.sidebar-position-right {
+  .header-inner { right: 0; }
+  .content-wrap { float: left; }
+  .sidebar { float: right; }
+}

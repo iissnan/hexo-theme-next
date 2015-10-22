@@ -1,5 +1,14 @@
 <!doctype html>
-<html class="theme-next {% if theme.use_motion %}use-motion{% endif %} {% if theme.scheme %}theme-next-{{ theme.scheme | lower }}{% endif %}">
+
+{% set html_class = 'theme-next ' %}
+{% if theme.use_motion %}
+  {% set html_class = html_class + 'use-motion ' %}
+{% endif %}
+{% if theme.scheme %}
+  {% set html_class = html_class + 'theme-next-' + theme.scheme %}
+{% endif %}
+
+<html class="{{ html_class | lower }}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
@@ -10,7 +19,12 @@
   {% include '_partials/old-browsers.swig' %}
   {% include '_scripts/analytics.swig' %}
 
-  <div class="container one-column {% block page_class %}{% endblock %}">
+  {% set container_class = "container one-collumn " %}
+  {% if theme.sidebar.position %}
+    {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
+  {% endif %}
+
+  <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -38,7 +52,10 @@
                 </div>
               {% elseif theme.disqus_shortname %}
                 <div id="disqus_thread">
-                  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                  <noscript>
+                    Please enable JavaScript to view the
+                    <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                  </noscript>
                 </div>
               {% endif %}
             </div>

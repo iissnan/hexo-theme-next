@@ -68,7 +68,7 @@
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
-    sidebar: '{{ theme.sidebar }}'
+    sidebar: '{{ theme.sidebar.display || theme.sidebar }}'
   };
 </script>
 

@@ -61,15 +61,26 @@ mathjax:
 #scheme: Pisces
 
 
-# Sidebar, available value:
-#  - post    expand on posts automatically. Default.
-#  - always  expand for all pages automatically
-#  - hide    expand only when click on the sidebar toggle icon.
-#  - remove  Totally remove sidebar including sidebar toggle icon.
-sidebar: post
-#sidebar: always
-#sidebar: hide
-#sidebar: remove
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+sidebar:
+  # Sidebar Position, available value: left | right
+  position: left
+  #position: right
+
+  # Sidebar Display, available value:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggle icon.
+  display: post
+  #display: always
+  #display: hide
+  #display: remove
+
+
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
