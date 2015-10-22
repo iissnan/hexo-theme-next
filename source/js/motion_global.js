@@ -91,7 +91,7 @@ $(document).ready(function () {
   sidebarToggleLines.push(sidebarToggleLine3rd);
 
   var SIDEBAR_WIDTH = '320px';
-  var SIDEBAR_DISPLAY_DURATION = 300;
+  var SIDEBAR_DISPLAY_DURATION = 200;
 
   var sidebarToggleMotion = {
     toggleEl: $('.sidebar-toggle'),
@@ -186,7 +186,7 @@ $(document).ready(function () {
       $brand.size() > 0 && sequence.push({
         e: $brand,
         p: {opacity: 1},
-        o: {duration: 100}
+        o: {duration: 200}
       });
 
       isMist() && hasElement([$logoLineTop, $logoLineBottom]) &&
@@ -204,7 +204,7 @@ $(document).ready(function () {
       hasElement($subtitle) && sequence.push({
         e: $subtitle,
         p: {opacity: 1, top: 0},
-        o: {duration: 100}
+        o: {duration: 200}
       });
 
       if (sequence.length > 0) {
@@ -244,6 +244,7 @@ $(document).ready(function () {
     menu: function (integrator) {
       $('.menu-item').velocity('transition.slideDownIn', {
         display: null,
+        duration: 200,
         complete: function () {
           integrator.next();
         }
@@ -258,7 +259,7 @@ $(document).ready(function () {
 
       function postMotion () {
         var postMotionOptions = window.postMotionOptions || {
-            stagger: 300,
+            stagger: 100,
             drag: true
           };
         postMotionOptions.complete = function () {
