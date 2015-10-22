@@ -56,7 +56,6 @@ function addCount(Counter) {
 				newcounter.set("time", 1);
 				newcounter.save(null, {
 					success: function(newcounter) {
-					    console.log("newcounter.get('time')="+newcounter.get('time'));
 						var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
 						$(document.getElementById(url)).text(content);
 					},
