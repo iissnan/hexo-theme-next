@@ -10,14 +10,14 @@ function showTime(Counter) {
 		query.find({
 			success: function(results) {
 				if (results.length == 0) {
-					var content = $(document.getElementById(object.get('url'))).text() + ': 0';
+					var content = $(document.getElementById(url)).text() + ': 0';
 					$(document.getElementById(url)).text(content);
 					return;
 				}
 				for (var i = 0; i < results.length; i++) {
 					var object = results[i];
-					var content = $(document.getElementById(object.get('url'))).text() + ': ' + object.get('time');
-					$(document.getElementById(object.get('url'))).text(content);
+					var content = $(document.getElementById(url)).text() + ': ' + object.get('time');
+					$(document.getElementById(url)).text(content);
 				}
 			},
 			error: function(object, error) {
@@ -56,7 +56,8 @@ function addCount(Counter) {
 				newcounter.set("time", 1);
 				newcounter.save(null, {
 					success: function(newcounter) {
-						var content = $(document.getElementById(url)).text() + ': ' + counter.get('time');
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = $(document.getElementById(url)).text() + ': ' + newcounter.get('time');
 						$(document.getElementById(url)).text(content);
 					},
 					error: function(newcounter, error) {
