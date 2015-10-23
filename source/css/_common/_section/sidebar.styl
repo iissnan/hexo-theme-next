@@ -30,9 +30,7 @@
   background: white;
   margin-top: 3px;
 
-  &:first-child {
-    margin-top: 0;
-  }
+  &:first-child { margin-top: 0; }
 }
 
 .sidebar {
@@ -133,16 +131,12 @@
       color:white;
       background: rgb(252, 100, 35);
 
-      i {
-        color: white;
-      }
+      i { color: white; }
     }
   }
 }
 
-.links-of-author {
-  margin-top: 20px;
-}
+.links-of-author { margin-top: 20px; }
 
 .links-of-author a {
   display: inline-block;
@@ -167,7 +161,7 @@
 // Sidebar Navigation
 
 .sidebar-nav {
-  margin: 0;
+  margin: 0 0 20px;
   padding-left: 0;
 }
 .sidebar-nav li {
@@ -177,26 +171,22 @@
   font-size: 14px;
   color: $sidebar-nav-color;
 
-  &:hover {
-    color: $sidebar-nav-hover-color;
-  }
-}
-.page-post-detail .sidebar-nav-toc {
-  padding: 0 5px;
+  &:hover { color: $sidebar-nav-hover-color; }
 }
 
-.page-post-detail .sidebar-nav-overview {
-  margin-left: 10px;
-}
+.page-post-detail .sidebar-nav-toc { padding: 0 5px; }
+
+.page-post-detail .sidebar-nav-overview { margin-left: 10px; }
 
 .sidebar-nav .sidebar-nav-active {
   color: $sidebar-highlight;
   border-bottom-color: $sidebar-highlight;
 
-  &:hover {
-    color: $sidebar-highlight;
-  }
+  &:hover { color: $sidebar-highlight; }
 }
+
+.sidebar-panel { display: none; }
+.sidebar-panel-active { display: block; }
 
 
 .post-toc {
@@ -225,17 +215,11 @@
   }
 }
 
-.post-toc .nav .nav-child {
-  display: none;
-}
+.post-toc .nav .nav-child { display: none; }
 
-.post-toc .nav .active .nav-child {
-  display: block;
-}
+.post-toc .nav .active .nav-child { display: block; }
 
-.post-toc .nav .active > a {
-  color: $grey-light;
-}
+.post-toc .nav .active > a { color: $grey-light; }
 
 .post-toc .nav .active-current > a {
   color: $sidebar-highlight;

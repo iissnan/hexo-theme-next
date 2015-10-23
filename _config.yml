@@ -1,4 +1,30 @@
-# when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -> "archives" )
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Place your favicon.ico to /source directory.
+favicon: /favicon.ico
+
+# Set default keywords (Use a comma to separate)
+keywords: "Hexo, NexT"
+
+# Set rss to false to disable feed link.
+# Leave rss as empty to use site's feed link.
+# Set rss to specific value if you have burned your feed already.
+rss:
+
+# Specify the date when the site was setup
+#since: 2015
+
+
+
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# When running hexo in a subdirectory (e.g. domain.tld/blog)
+# Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
   #categories: /categories
@@ -24,46 +50,56 @@ menu_icons:
   commonweal: heartbeat
 
 
-# Place your favicon.ico to /source directory.
-favicon: /favicon.ico
-
-# Set default keywords (Use a comma to separate)
-keywords: "Hexo,next"
-
-# Set rss to false to disable feed link.
-# Leave rss as empty to use site's feed link.
-# Set rss to specific value if you have burned your feed already.
-rss:
-
-# Custom Logo.
-# !!Only available for Default Scheme currently.
-# Options:
-#   enabled: [true/false] - Replace with specific image
-#   image: url-of-image   - Images's url
-custom_logo:
-  enabled: false
-  image:
 
 
-
-# Code Highlight theme
-# Available value: normal | night | night eighties | night blue | night bright
-# https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
-
-
-# MathJax Support
-mathjax:
-
+# ---------------------------------------------------------------
+# Scheme Settings
+# ---------------------------------------------------------------
 
 # Schemes
 #scheme: Mist
 #scheme: Pisces
 
 
+
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
+
+# Sidebar, available value:
+#  - post    expand on posts automatically. Default.
+#  - always  expand for all pages automatically
+#  - hide    expand only when click on the sidebar toggle icon.
+#  - remove  Totally remove sidebar including sidebar toggle icon.
+sidebar: post
+#sidebar: always
+#sidebar: hide
+#sidebar: remove
+
+
+# Sidebar Avatar
+#avatar:
+
+
+# Social links
+# social:
+  #GitHub:
+  #Others:
+
+
+# TOC in the Sidebar
+toc:
+  enable: true
+
+  # Automatically add list number to toc.
+  number: true
+
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+#creative_commons: by-nc-sa
+#creative_commons:
 
 sidebar:
   # Sidebar Position, available value: left | right
@@ -89,12 +125,29 @@ social_icons:
   Weibo: weibo
 
 
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Custom Logo.
+# !!Only available for Default Scheme currently.
+# Options:
+#   enabled: [true/false] - Replace with specific image
+#   image: url-of-image   - Images's url
+custom_logo:
+  enabled: false
+  image:
+
+
+# Code Highlight theme
+# Available value:
+#    normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
+
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
-
-
-# Automatically add list number to toc.
-toc_list_number: true
 
 # Automatically Excerpt
 auto_excerpt:
@@ -104,6 +157,43 @@ auto_excerpt:
 # Use Lato font
 use_font_lato: true
 
+
+
+# ---------------------------------------------------------------
+# Third Party Services Settings
+# ---------------------------------------------------------------
+
+# MathJax Support
+mathjax:
+
+
+# Swiftype Search API Key
+#swiftype_key:
+
+# Baidu Analytics ID
+#baidu_analytics:
+
+# Duoshuo ShortName
+#duoshuo_shortname:
+
+# Disqus
+#disqus_shortname:
+
+# Share
+#jiathis:
+
+# Share
+#duoshuo_share: true
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+#google_site_verification:
+
+
+# Google Analytics
+#google_analytics:
+
+
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
@@ -112,6 +202,7 @@ duoshuo_info:
   admin_enable: false
   user_id: 0
   #admin_nickname: ROOT
+
 
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
@@ -130,11 +221,19 @@ leancloud_visitors:
   app_key: #<app_key>
 
 
-## DO NOT EDIT THE FOLLOWING SETTINGS
-## UNLESS YOU KNOW WHAT YOU ARE DOING
 
 
-# Use velocity to animate everything.
+
+
+
+
+
+#! ---------------------------------------------------------------
+#! DO NOT EDIT THE FOLLOWING SETTINGS
+#! UNLESS YOU KNOW WHAT YOU ARE DOING
+#! ---------------------------------------------------------------
+
+# Motion
 use_motion: true
 
 # Fancybox
@@ -147,4 +246,4 @@ js: js
 images: images
 
 # Theme version
-version: 0.4.5.2
+version: 5.0.0
