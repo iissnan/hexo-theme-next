@@ -67,7 +67,7 @@
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank">
-                  <i class="fa fa-{{ name | lower }}"></i> {{ name }}
+                  <i class="fa fa-{{ name | lower }} fa-fw"></i> {{ name }}
                 </a>
               </span>
             {% endfor %}
