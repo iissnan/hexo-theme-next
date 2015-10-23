@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-since: 2015
+#since: 2015
 
 
 
@@ -78,7 +78,7 @@ sidebar: post
 
 
 # Sidebar Avatar
-avatar:
+#avatar:
 
 
 # Social links
@@ -99,7 +99,7 @@ toc:
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 #creative_commons: by-nc-sa
-creative_commons:
+#creative_commons:
 
 
 
@@ -119,7 +119,8 @@ custom_logo:
 
 
 # Code Highlight theme
-# Available value: normal | night | night eighties | night blue | night bright
+# Available value:
+#    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
@@ -145,30 +146,30 @@ mathjax:
 
 
 # Swiftype Search API Key
-swiftype_key:
+#swiftype_key:
 
 # Baidu Analytics ID
-baidu_analytics:
+#baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname:
+#duoshuo_shortname:
 
 # Disqus
-disqus_shortname:
+#disqus_shortname:
 
 # Share
-jiathis:
+#jiathis:
 
 # Share
-duoshuo_share: true
+#duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-google_site_verification:
+#google_site_verification:
 
 
 # Google Analytics
-google_analytics:
+#google_analytics:
 
 
 # Make duoshuo show UA
