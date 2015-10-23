@@ -204,8 +204,7 @@ facebook_sdk:
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! ---------------------------------------------------------------
 
-
-# Use velocity to animate everything.
+# Motion
 use_motion: true
 
 # Fancybox

@@ -275,14 +275,6 @@ $(document).ready(function () {
         displaySidebar();
       }
       integrator.next();
-    },
-
-    backToTop: function (integrator) {
-      var $b2top = $('.back-to-top');
-      $b2top.on('click', function () {
-        $('body').velocity('scroll');
-      });
-      integrator.next();
     }
   };
 
