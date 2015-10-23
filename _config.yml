@@ -113,6 +113,9 @@ facebook_sdk:
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING
 
+# Motion
+use_motion: true
+
 # Fancybox
 fancybox: true
 

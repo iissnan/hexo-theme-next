@@ -268,14 +268,6 @@ $(document).ready(function () {
       }
     },
 
-    backToTop: function (integrator) {
-      var b2top = $('.back-to-top');
-      b2top.on('click', function () {
-        $('body').velocity('scroll');
-      });
-      integrator.next();
-    },
-
     sidebarToggle: function (integrator) {
       sidebarToggleMotion.init();
       integrator.next();
@@ -286,7 +278,6 @@ $(document).ready(function () {
     .add(motionMiddleWares.logo)
     .add(motionMiddleWares.menu)
     .add(motionMiddleWares.sidebarToggle)
-    .add(motionMiddleWares.backToTop)
     .add(motionMiddleWares.postList);
 
   window.motionIntegrator = motionIntegrator;

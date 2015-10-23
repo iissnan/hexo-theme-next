@@ -11,6 +11,10 @@ $(document).ready(function () {
     effect: "fadeIn"
   });
 
+  $('.back-to-top').on('click', function () {
+    $('body').velocity('scroll');
+  });
+
   $('.site-nav-toggle button').on('click', function () {
     var $siteNav = $('.site-nav');
     var ON_CLASS_NAME = 'site-nav-on';
@@ -23,5 +27,5 @@ $(document).ready(function () {
     });
   });
 
-  motionIntegrator.bootstrap();
+  CONFIG.motion && motionIntegrator.bootstrap();
 });
