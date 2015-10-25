@@ -6,14 +6,26 @@
   </button>
 </div>
 <script>
-   $(window).scroll(function() {    
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 100) {
+        $(".navLink").addClass("fade-out");
+        $(".logoLink").removeClass("fade-out");
+    } else {
+        $(".navLink").removeClass("fade-out");
+        $(".logoLink").addClass("fade-out");
+    }
+  }); 
+
+  $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
     if (scroll >= 100) {
         $(".navLink").addClass("fade-out");
     } else {
         $(".navLink").removeClass("fade-out");
     }
-}); 
+  }); 
+
 </script>
 
 <nav class="site-nav">
@@ -41,6 +53,10 @@
           <div>Blog</div>
         </div>
       </a>
+        <div class="logoLink fade-out">
+          <img src="/images/logo_icon.png"
+               alt="logo">
+        </div>
     
   {% endif %}
 
