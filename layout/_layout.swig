@@ -1,11 +1,8 @@
 <!doctype html>
 
-{% set html_class = 'theme-next ' %}
+{% set html_class = 'theme-next ' + theme.scheme %}
 {% if theme.use_motion %}
-  {% set html_class = html_class + 'use-motion ' %}
-{% endif %}
-{% if theme.scheme %}
-  {% set html_class = html_class + 'theme-next-' + theme.scheme %}
+  {% set html_class = html_class + ' use-motion' %}
 {% endif %}
 
 <html class="{{ html_class | lower }}">
@@ -58,10 +55,8 @@
   {% include '_scripts/vendors.swig' %}
   {% include '_scripts/commons.swig' %}
 
-  {% if theme.scheme %}
-    {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
-    {% include scheme_script %}
-  {% endif %}
+  {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
+  {% include scheme_script %}
 
   {% block script_extra %}{% endblock %}
 

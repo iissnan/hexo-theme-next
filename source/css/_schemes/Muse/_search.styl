@@ -10,23 +10,10 @@
 }
 
 .site-search form {
-  position: relative;
-  vertical-align: top;
-  background: $black-deep;
-  height: 30px;
-  z-index: 10;
+  display: none;
 
   +mobile() {
     background: none;
-  }
-
-  input {
-    border: none;
-    color: $grey-light;
-    background: transparent url(/images/searchicon.png) no-repeat 10px 40%;
-    background-size: 15px 15px;
-
-    +mobile() { color: $black-deep; }
   }
 }
 
