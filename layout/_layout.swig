@@ -17,7 +17,7 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ config.language }}">
 
   {% include '_partials/old-browsers.swig' %}
-  {% include '_scripts/analytics.swig' %}
+  {% include '_scripts/third-party/analytics.swig' %}
 
   {% set container_class = "container one-collumn " %}
   {% if theme.sidebar.position %}
@@ -55,34 +55,23 @@
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/index.js?v=2.1.3"></script>
+  {% include '_scripts/vendors.swig' %}
+  {% include '_scripts/commons.swig' %}
 
-  {# This block is used to set options before any other scripts run #}
-  {% block script_extra_before %}{% endblock %}
-
-  {% block comment_system %}
-    {% include '_scripts/comments/duoshuo.swig' %}
-    {% include '_scripts/comments/disqus.swig' %}
-  {% endblock %}
-
-  {% include '_scripts/fancy-box.swig' %}
-  {% include '_scripts/helpers.swig' %}
-  {% include '_scripts/motion.swig' %}
-
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  {% if theme.scheme %}
+    {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
+    {% include scheme_script %}
+  {% endif %}
 
   {% block script_extra %}{% endblock %}
 
-  <script type="text/javascript" src="{{ url_for(theme.js) }}/bootstrap.js"></script>
+  {% include '_scripts/boostrap.swig' %}
 
-  {% include '_scripts/tinysou.swig' %}
-  {% include '_scripts/mathjax.swig' %}
-  {% block comment_system %}{% endblock %}
-  {% include '_scripts/baidushare.swig' %}
+  {% include '_scripts/third-party/comments.swig' %}
+  {% include '_scripts/third-party/tinysou.swig' %}
+  {% include '_scripts/third-party/mathjax.swig' %}
+  {% include '_scripts/third-party/baidushare.swig' %}
+  {% include '_scripts/third-party/lean-analytics.swig' %}
 
-  {% if theme.leancloud_visitors.enable %}
-    {% include '_scripts/lean-analytics.swig' %}
-  {%  endif %}
 </body>
 </html>

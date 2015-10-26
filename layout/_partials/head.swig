@@ -90,6 +90,7 @@
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
     sidebar: '{{ theme.sidebar }}',
+    fancybox: {{ theme.fancybox }},
     motion: {{ theme.use_motion }}
   };
 </script>

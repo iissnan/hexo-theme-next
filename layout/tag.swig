@@ -25,11 +25,3 @@
 {% block sidebar %}
   {{ sidebar_template.render(false) }}
 {% endblock %}
-
-{% block script_extra_before %}
-  {% if theme.use_motion %}
-    <script type="text/javascript">
-      postMotionOptions = {stagger: 100, drag: true};
-    </script>
-  {% endif %}
-{% endblock %}
