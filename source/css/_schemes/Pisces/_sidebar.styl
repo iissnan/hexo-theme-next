@@ -1,8 +1,20 @@
 .use-motion .sidebar .motion-element { opacity: 1; }
 
-.sidebar { display: none; }
+.sidebar {
+  display: none;
+  right: auto;
+  bottom: auto;
+  -webkit-transform: none
+}
 
-.sidebar-inner { color: $text-color; }
+
+.sidebar-inner {
+  box-sizing: border-box;
+  width: 240px;
+  color: $text-color;
+  background: white;
+  &.affix { top: 20px; }
+}
 
 .site-overview {
   margin: 0 10px;

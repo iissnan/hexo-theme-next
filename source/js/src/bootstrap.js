@@ -63,14 +63,7 @@ $(document).ready(function () {
     $('.menu-item a[href="' + path + '"]').parent().addClass('menu-item-active');
   }
 
-  // TODO: Isolate Scheme-oriented scripts.
-  if (isPisces()) {
-    var $sidebar = $('#sidebar');
-    var headerHeight = $('.header-inner').height();
-    $sidebar
-      .css({ 'margin-top': headerHeight + 10 })
-      .show();
-  }
+
 
   // Define Motion Sequence.
   motionIntegrator
