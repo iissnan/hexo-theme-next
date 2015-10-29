@@ -18,6 +18,7 @@ sidebar:
   toc: 文章目录
 
 post:
+  sticky: 置顶
   posted: 发表于
   in: 分类于
   read_more: 阅读全文

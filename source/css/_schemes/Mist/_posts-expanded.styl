@@ -24,19 +24,6 @@
     font-weight: 400;
     +mobile() { font-size: $font-size-headings-smaller; }
     +desktop-large() { font-size: $font-size-headings-large; }
-
-    &:before {
-      content: " ";
-      position: absolute;
-      left: -10px;
-      top: 25%;
-      width: 3px;
-      height: 50%;
-      background: $grey-dark;
-      transition-property: background-color;
-      the-transition();
-      +mobile() { display: none; }
-    }
   }
   .post-title:hover:before { background: $black-deep; }
 

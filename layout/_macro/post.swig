@@ -3,7 +3,13 @@
   {% set headlessPost = Array.prototype.indexOf.call(['quote', 'picture'], post.type) > -1 %}
   {% set navlessPost = headlessPost %}
 
-  <article class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
+  {% set post_class = 'post post-type-' + post.type | default('normal') %}
+  {% set post_class = post_class + ' ' + post_extra_class | default('') %}
+  {% if post.sticky > 0 %}
+    {% set post_class = post_class + ' ' + 'post-sticky' %}
+  {% endif %}
+
+  <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
 
     {% if not headlessPost %}
       <header class="post-header">
@@ -13,12 +19,23 @@
           <h1 class="post-title" itemprop="name headline">
             {# Link posts #}
             {% if post.link %}
+              {% if post.sticky > 0 %}
+                {{ post.sticky }}
+                <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
+                  <i class="fa fa-thumb-tack"></i>
+                </span>
+              {% endif %}
               <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
                 {{ post.title or post.link }}
-                <i class="fa fa-external-link-square"></i>
+                <i class="fa fa-external-link"></i>
               </a>
             {% else %}
               {% if is_index %}
+                {% if post.sticky > 0 %}
+                  <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
+                    <i class="fa fa-thumb-tack"></i>
+                  </span>
+                {% endif %}
                 <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
                   {{ post.title | default(__('post.untitled'))}}
                 </a>

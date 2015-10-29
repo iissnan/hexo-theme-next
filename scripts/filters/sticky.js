@@ -1,18 +1,14 @@
 /* global hexo */
 
-hexo.on('generateBefore', function () {
-  var posts = this.locals.get('posts');
+hexo.extend.filter.register('before_generate', function () {
+  if (this.locals.invalidate && this.locals.get) {
+    this.locals.invalidate();
 
-  this.locals.set('posts', function () {
+    var posts = this.locals.get('posts');
     posts.forEach(function (post) {
-      post.sticky = post.sticky ? Number(post.sticky) : 0;
+      var sticky = Number(post.sticky);
+      post.sticky = isNaN(sticky) ? 0 : sticky;
     });
-    return posts;
-  });
-});
-
-hexo.extend.filter.register('template_locals', function (locals) {
-  if (locals.posts) {
-    locals.posts = locals.posts.sort('-sticky');
+    this.locals.set('posts', posts);
   }
 });

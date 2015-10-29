@@ -10,9 +10,21 @@
 
 {% block content %}
   <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
+
+    {# Extract sticky posts. #}
+    {% if page.current === 1 %}
+      {% set posts_sticky = site.posts.find({sticky: { '$gt': 0 }}) %}
+      {% set posts_sticky = posts_sticky.sort('-sticky') %}
+      {% for post in posts_sticky %}
+        {{ post_template.render(post, true) }}
+      {% endfor %}
+    {% endif %}
+
+    {% set posts_normal = page.posts.find({sticky: 0}) %}
+    {% for post in posts_normal %}
       {{ post_template.render(post, true) }}
     {% endfor %}
+
   </section>
 
   {% include '_partials/pagination.swig' %}
