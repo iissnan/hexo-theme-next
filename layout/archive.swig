@@ -54,13 +54,17 @@
 {% endblock %}
 
 {% block script_extra_before %}
-  <script type="text/javascript">
-    postMotionOptions = {stagger: 100, drag: true};
-  </script>
+  {% if theme.use_motion %}
+    <script type="text/javascript">
+      postMotionOptions = {stagger: 100, drag: true};
+    </script>
+  {% endif %}
 {% endblock %}
 
 {% block script_extra %}
-  <script type="text/javascript" id="motion.page.archive">
-    $('.archive-year').velocity('transition.slideLeftIn');
-  </script>
+  {% if theme.use_motion %}
+    <script type="text/javascript" id="motion.page.archive">
+      $('.archive-year').velocity('transition.slideLeftIn');
+    </script>
+  {% endif %}
 {% endblock %}

@@ -23,9 +23,10 @@ function escapeSelector (selector) {
 }
 
 function displaySidebar () {
-  setTimeout(function () {
-    $('.sidebar-toggle').trigger('click');
-  }, 800);
+  if (!isDesktop()) {
+    return;
+  }
+  $('.sidebar-toggle').trigger('click');
 }
 
 function isMist () {

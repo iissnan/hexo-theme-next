@@ -5,8 +5,10 @@
  * Note: configs in _data/next.yml will override configs in hexo.theme.config.
  */
 hexo.on('generateBefore', function () {
-  var data = hexo.locals.get('data');
-  data && data.next && assign(hexo.theme.config, data.next);
+  if (hexo.locals.get) {
+    var data = hexo.locals.get('data');
+    data && data.next && assign(hexo.theme.config, data.next);
+  }
 });
 
 

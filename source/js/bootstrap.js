@@ -1,10 +1,6 @@
 $(document).ready(function () {
-  if (CONFIG.sidebar === 'always') {
-    displaySidebar();
-  }
-  if (isMobile()) {
-    FastClick.attach(document.body);
-  }
+
+  isMobile() && FastClick.attach(document.body);
 
   $("#posts").find('img').lazyload({
     placeholder: "{{ url_for(theme.images) }}/loading.gif",
@@ -27,5 +23,13 @@ $(document).ready(function () {
     });
   });
 
+  // Define Motion Sequence.
+  motionIntegrator
+    .add(motionMiddleWares.logo)
+    .add(motionMiddleWares.menu)
+    .add(motionMiddleWares.postList)
+    .add(motionMiddleWares.sidebar);
+
+  // Bootstrap Motion.
   CONFIG.motion && motionIntegrator.bootstrap();
 });

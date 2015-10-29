@@ -6,20 +6,15 @@
   cursor: -webkit-zoom-in;
 }
 
-.post-body .pic-title {
-  margin: 0 auto;
+.post-body .image-caption {
+  margin: 10px auto 15px;
   text-align: center;
-}
-
-.post-body .pic-title span {
-  display: inline-block;
-  min-width: 10%;
-  min-height: 20px;
-  margin: 10px auto 0;
-  padding: 2px 0;
-  border-bottom: 1px solid $grey-dark;
   font-size: $font-size-base;
   color: $grey-dark;
   font-weight: bold;
   line-height: 1;
+}
+
+.post-body .figure .caption {
+  @extend .post-body .image-caption;
 }

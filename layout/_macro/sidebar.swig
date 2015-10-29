@@ -56,7 +56,7 @@
         {% if theme.rss %}
           <div class="feed-link motion-element">
             <a href="{{ url_for(theme.rss) }}" rel="alternate">
-              <i class="menu-item-icon icon-next-feed"></i>
+              <i class="fa fa-rss"></i>
               RSS
             </a>
           </div>
@@ -67,7 +67,9 @@
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank">
-                  <i class="fa fa-{{ name | lower }}"></i> {{ name }}
+                  {% if theme.social_icons.enable %}
+                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i> {{ name }}
+                  {% endif %}
                 </a>
               </span>
             {% endfor %}
@@ -100,7 +102,11 @@
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc-indicator-top post-toc-indicator"></div>
           <div class="post-toc">
-            {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
+            {% if page.toc_number === undefine %}
+              {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
+            {% else %}
+              {% set toc = toc(page.content, {"class": "nav", list_number: page.toc_number}) %}
+            {% endif %}
             {% if toc.length <= 1 %}
               <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
             {% else %}
