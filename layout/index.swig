@@ -14,7 +14,7 @@
     {% set posts_normal = page.posts %}
 
     {# Compatible with Hexo 2.* #}
-    {% if page.posts.first().sticky >= 0 %}
+
       {# Extract sticky posts. #}
       {% if page.current === 1 %}
         {% set posts_sticky = site.posts.find({sticky: { '$gt': 0 }}) %}
@@ -25,7 +25,7 @@
       {% endif %}
 
       {% set posts_normal = page.posts.find({sticky: 0}) %}
-    {% endif %}
+
 
     {% for post in posts_normal %}
       {{ post_template.render(post, true) }}
