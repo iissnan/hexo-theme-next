@@ -78,6 +78,20 @@ sidebar: post
 #sidebar: remove
 
 
+# Social links
+# social:
+  #GitHub:
+  #Others:
+
+# Social Icons
+social_icons:
+  enable: true
+  # Icon Mappings
+  GitHub: github
+  Twitter: twitter
+  Weibo: weibo
+
+
 # Sidebar Avatar
 #avatar:
 

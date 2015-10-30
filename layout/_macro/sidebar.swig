@@ -102,16 +102,24 @@
 
       {% if display_toc %}
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
           <div class="post-toc">
-            {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
+            {% if page.toc_number === undefine %}
+              {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
+            {% else %}
+              {% set toc = toc(page.content, {"class": "nav", list_number: page.toc_number}) %}
+            {% endif %}
             {% if toc.length <= 1 %}
               <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
             {% else %}
               <div class="post-toc-content">{{ toc }}</div>
             {% endif %}
           </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
         </section>
       {% endif %}
 
