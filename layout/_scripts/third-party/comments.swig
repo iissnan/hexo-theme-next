@@ -1,4 +1,4 @@
-{% if page.comments %}
-  {% include '_scripts/comments/duoshuo.swig' %}
-  {% include '_scripts/comments/disqus.swig' %}
-{% endif %}
+{% if page.comments || is_home() %}
+    {% include 'comments/duoshuo.swig' %}
+    {% include 'comments/disqus.swig' %}
+{% endif%}
