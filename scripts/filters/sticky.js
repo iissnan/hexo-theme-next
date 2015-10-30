@@ -1,14 +1,13 @@
 /* global hexo */
 
-hexo.extend.filter.register('before_generate', function () {
-  if (this.locals.invalidate && this.locals.get) {
-    this.locals.invalidate();
+var PRIORITY_AFTER_BUILTIN_FILTER = 11;
 
-    var posts = this.locals.get('posts');
-    posts.forEach(function (post) {
-      var sticky = Number(post.sticky);
-      post.sticky = isNaN(sticky) ? 0 : sticky;
-    });
-    this.locals.set('posts', posts);
-  }
-});
+hexo.extend.filter.register('before_generate', function () {
+
+  this.model('Post').toArray().map(function (post) {
+    var sticky = Number(post.sticky);
+    post.sticky = isNaN(sticky) ? 0 : sticky;
+    post.save();
+  });
+
+}, PRIORITY_AFTER_BUILTIN_FILTER);
