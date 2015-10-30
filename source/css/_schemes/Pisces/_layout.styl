@@ -2,6 +2,10 @@
   position: relative;
   margin: 0 auto;
   width: 960px;
+
+  +mobile() {
+    width: auto;
+  }
 }
 
 .header-inner {
@@ -15,13 +19,25 @@
   +desktop-large() {
     .container & { width: 240px; }
   }
+  +mobile() {
+    position: relative;
+    width: auto;
+  }
 }
 
 .main {
   clearfix();
+  +mobile() {
+    padding-bottom: 100px;
+  }
 }
 
-.container .main-inner { width: $main-desktop; }
+.container .main-inner {
+  width: $main-desktop;
+  +mobile() {
+    width: auto;
+  }
+}
 
 .content-wrap {
   float: right;
@@ -29,6 +45,11 @@
   padding: $content-desktop-padding;
   width: $content-desktop;
   background: white;
+
+  +mobile() {
+    width: auto;
+    padding: 20px;
+  }
 }
 
 .sidebar {
@@ -38,6 +59,10 @@
   width: $sidebar-desktop;
   background: white;
   box-shadow: none;
+
+  +mobile() {
+    display: none;
+  }
 }
 
 .sidebar-toggle { display: none; }

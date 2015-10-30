@@ -6,9 +6,6 @@ function hasMobileUA () {
   return pa.test(ua);
 }
 
-function isDesktop () {
-  return screen.width > 991 && !hasMobileUA();
-}
 
 function isTablet () {
   return screen.width < 992 && screen.width > 767 && hasMobileUA();
@@ -16,6 +13,10 @@ function isTablet () {
 
 function isMobile () {
   return screen.width < 767 && hasMobileUA();
+}
+
+function isDesktop () {
+  return !isTablet() && !isMobile();
 }
 
 function escapeSelector (selector) {

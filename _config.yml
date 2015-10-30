@@ -67,16 +67,6 @@ scheme: Muse
 # Sidebar Settings
 # ---------------------------------------------------------------
 
-# Sidebar, available value:
-#  - post    expand on posts automatically. Default.
-#  - always  expand for all pages automatically
-#  - hide    expand only when click on the sidebar toggle icon.
-#  - remove  Totally remove sidebar including sidebar toggle icon.
-sidebar: post
-#sidebar: always
-#sidebar: hide
-#sidebar: remove
-
 
 # Social links
 # social:
@@ -94,12 +84,6 @@ social_icons:
 
 # Sidebar Avatar
 #avatar:
-
-
-# Social links
-# social:
-  #GitHub:
-  #Others:
 
 
 # TOC in the Sidebar
@@ -130,14 +114,6 @@ sidebar:
   #display: always
   #display: hide
   #display: remove
-
-
-social_icons:
-  enable: true
-  # Icon Mappings
-  GitHub: github
-  Twitter: twitter
-  Weibo: weibo
 
 
 
@@ -227,6 +203,7 @@ facebook_sdk:
   fb_admin:     #<user_id>
   like_button:  #true
   webmaster:    #true
+
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
