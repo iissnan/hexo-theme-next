@@ -79,7 +79,7 @@
 
     function tocOverflowIndicator (indicator, action) {
       var $indicator = $(indicator);
-      var opacity = action === 'show' ? 0.4 : 0;
+      var opacity = action === 'show' ? 1 : 0;
       $indicator.velocity ?
         $indicator.velocity('stop').velocity({
           opacity: opacity

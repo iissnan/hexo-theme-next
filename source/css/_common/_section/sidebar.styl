@@ -210,7 +210,12 @@
 
 .post-toc .nav .nav-child { display: none; }
 
-.post-toc .nav .active .nav-child { display: block; }
+.post-toc .nav .active > .nav-child { display: block; }
+
+.post-toc .nav .active-current > .nav-child {
+  display: block;
+  & > .nav-item { display: block; }
+}
 
 .post-toc .nav .active > a { color: $grey-light; }
 
@@ -223,18 +228,16 @@
 
 .post-toc-indicator {
   height: 20px;
-  opacity: 0.4;
-  background: no-repeat 10px 50%;
-  background-size: 10px 12px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
 }
 
 .post-toc-indicator-top {
   opacity: 0;
   margin-top: 10px;
-  background-image: url($post-toc-indicator-top);
 }
 .post-toc-indicator-bottom {
   position: absolute;
   width: 100%;
-  background-image: url($post-toc-indicator-bottom);
 }
