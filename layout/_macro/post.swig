@@ -95,17 +95,19 @@
             &nbsp; | &nbsp;
             <div class="fb-like" data-layout="button_count" data-share="true"></div>
           {% endif %}
-		  {% if theme.leancloud_visitors.enable %}
-		  	 <span id="{{ url_for(post.path) }}"class="leancloud_visitors"  data-flag-title="{{ post.title }}">
-            &nbsp; | &nbsp; {{__('post.visitors')}}
-            </span>
-		  {% endif %}
+
+          {# LeanCould PageView #}
+          {% if theme.leancloud_visitors.enable %}
+             <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+                &nbsp; | &nbsp; {{__('post.visitors')}}
+              </span>
+          {% endif %}
         </div>
       </header>
     {% endif %}
 
 
-    <div class="post-body">
+    <div class="post-body" itemprop="articleBody">
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
@@ -128,7 +130,7 @@
 
       {% if is_index %}
         {% if post.description %}
-          <span itemprop="description">{{ post.description }}</span>
+          {{ post.description }}
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}">
               {{ __('post.read_more') }} &raquo;
@@ -142,27 +144,24 @@
             </a>
           </div>
         {% elif theme.auto_excerpt.enable %}
-          <span itemprop="articleBody">
-            {% set content = post.content | striptags %}
-            {{ content.substring(0, theme.auto_excerpt.length) }}
-            {% if content.length > theme.auto_excerpt.length %}...{% endif %}
-          </span>
+          {% set content = post.content | striptags %}
+          {{ content.substring(0, theme.auto_excerpt.length) }}
+          {% if content.length > theme.auto_excerpt.length %}...{% endif %}
+
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}" rel="contents">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
         {% else %}
-          <span itemprop="articleBody">
-            {% if post.type === 'picture' %}
-              <a href="{{ url_for(post.path) }}">{{ post.content }}</a>
-            {% else %}
-              {{ post.content }}
-            {% endif %}
-          </span>
+          {% if post.type === 'picture' %}
+            <a href="{{ url_for(post.path) }}">{{ post.content }}</a>
+          {% else %}
+            {{ post.content }}
+          {% endif %}
         {% endif %}
       {% else %}
-        <span itemprop="articleBody">{{ post.content }}</span>
+        {{ post.content }}
       {% endif  %}
     </div>
 
