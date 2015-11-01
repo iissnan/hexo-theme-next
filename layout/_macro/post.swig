@@ -48,7 +48,10 @@
 
         <div class="post-meta">
           <span class="post-time">
-            {{ __('post.posted') }}
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">{{ __('post.posted') }}</span>
             <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
               {{ date(post.date, config.date_format) }}
             </time>
@@ -56,7 +59,11 @@
 
           {% if post.categories and post.categories.length %}
             <span class="post-category" >
-              &nbsp; | &nbsp; {{ __('post.in') }}
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">{{ __('post.in') }}</span>
               {% for cat in post.categories %}
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
@@ -83,11 +90,11 @@
               </span>
             {% elseif theme.disqus_shortname %}
               <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>
-              </a>
-            </span>
+                &nbsp; | &nbsp;
+                <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>
+                </a>
+              </span>
             {% endif %}
           {% endif %}
 
@@ -99,7 +106,11 @@
           {# LeanCould PageView #}
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
-                &nbsp; | &nbsp; {{__('post.visitors')}}
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">{{__('post.visitors')}}</span>
               </span>
           {% endif %}
         </div>
