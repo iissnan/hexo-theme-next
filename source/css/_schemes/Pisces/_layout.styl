@@ -3,6 +3,9 @@
   margin: 0 auto;
   width: 960px;
 
+  +tablet() {
+    width: auto;
+  }
   +mobile() {
     width: auto;
   }
@@ -19,6 +22,9 @@
   +desktop-large() {
     .container & { width: 240px; }
   }
+  +tablet() {
+    width: auto;
+  }
   +mobile() {
     position: relative;
     width: auto;
@@ -34,6 +40,10 @@
 
 .container .main-inner {
   width: $main-desktop;
+
+  +tablet() {
+    width: auto;
+  }
   +mobile() {
     width: auto;
   }
@@ -46,8 +56,12 @@
   width: $content-desktop;
   background: white;
 
+  +tablet() {
+    width: 100%;
+    padding: 20px;
+  }
   +mobile() {
-    width: auto;
+    width: 100%;
     padding: 20px;
   }
 }
@@ -60,6 +74,9 @@
   background: white;
   box-shadow: none;
 
+  +tablet() {
+    display: none;
+  }
   +mobile() {
     display: none;
   }
