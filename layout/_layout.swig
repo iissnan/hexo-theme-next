@@ -13,7 +13,6 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ config.language }}">
 
-  {% include '_partials/old-browsers.swig' %}
   {% include '_scripts/third-party/analytics.swig' %}
 
   {% set container_class = "container one-collumn " %}
