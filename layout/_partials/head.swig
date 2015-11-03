@@ -81,6 +81,7 @@
 
 {# Export some HEXO Configurations to Front-End #}
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
     sidebar: '{{ theme.sidebar }}',

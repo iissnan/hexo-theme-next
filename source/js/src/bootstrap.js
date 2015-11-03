@@ -1,3 +1,5 @@
+/* global NexT: true */
+
 $(document).ready(function () {
 
   isMobile() && FastClick.attach(document.body);
@@ -24,45 +26,9 @@ $(document).ready(function () {
   });
 
 
-  CONFIG.fancybox && addFancyBox();
-
-  addActiveClassToMenuItem();
-
-  function addFancyBox () {
-    $('.content img').not('.group-picture img').each(function () {
-
-      var $image = $(this);
-      var imageTitle = $image.attr('title');
-      var $imageWrapLink = $image.parent('a');
-
-      if ($imageWrapLink.size() < 1) {
-        $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
-      }
-
-      $imageWrapLink.addClass('fancybox');
-      $imageWrapLink.attr('rel', 'group');
-
-      if (imageTitle) {
-        $imageWrapLink.append('<p class="image-caption">' + imageTitle + '</p>');
-        $imageWrapLink.attr("title", imageTitle); //make sure img title tag will show correctly in fancybox
-      }
-    });
-
-    $('.fancybox').fancybox({
-      helpers: {
-        overlay: {
-          locked: false
-        }
-      }
-    });
-  }
-
-  function addActiveClassToMenuItem () {
-    var path = location.pathname;
-    path = path === '/' ? path : path.substring(0, path.length - 1);
-    $('.menu-item a[href="' + path + '"]').parent().addClass('menu-item-active');
-  }
-
+  CONFIG.fancybox && NexT.utils.wrapImageWithFancyBox();
+  NexT.utils.embeddedVideoTransformer();
+  NexT.utils.addActiveClassToMenuItem();
 
 
   // Define Motion Sequence.
