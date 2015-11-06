@@ -58,10 +58,8 @@ function showUa(string) {
     if (browserName.match(/safari/i)) browserIco = '<i class="fa fa-safari"></i>&nbsp;';
     if (browserName.match(/ie/i)) browserIco = '<i class="fa fa-internet-explorer"></i>&nbsp;';
 
-    return br + '<span class="platform ' + sua.os.name + '">'
-        + osIco + sua.os.name + ' ' + sua.os.version + '</span>'
-        + br + '<span class="browser ' + sua.browser.name + '">'
-        + browserIco + sua.browser.name + '|'
-        + sua.browser.version
-        + '</span>';
+    return br + '<span class="platform ' + sua.os.name + '">' + osIco +
+        sua.os.name + ' ' + sua.os.version + '</span>' + br +
+        '<span class="browser ' + sua.browser.name + '">' + browserIco +
+        sua.browser.name + '|' + sua.browser.version + '</span>';
 }
