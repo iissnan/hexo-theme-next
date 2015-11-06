@@ -2,34 +2,31 @@ if (typeof DUOSHUO !== 'undefined') hookDUOSHUO_tp();
 else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload = hookDUOSHUO_tp;
 
 function hookDUOSHUO_tp() {
-        var _D_post = DUOSHUO.templates.post
-        DUOSHUO.templates.post = function(e, t) {
-            var rs = _D_post(e, t);
-            var agent = e.post.agent;
-            var is_admin;
-            console.log('-2');
-            if (typeof duoshuo_user_ID !== 'undefined') {
-                console.log('-1');
-                if (e.post.author.user_id && (e.post.author.user_id == duoshuo_user_ID)) {
-                    console.log('0');
-                    if (duoshuo_admin_nickname) {
-                        is_admin = '<span class="fa">' + duoshuo_admin_nickname + '</span>'
-                    } else {
-                        is_admin = '<span class="fa">博主</span>'
-                    }
+    var _D_post = DUOSHUO.templates.post
+    DUOSHUO.templates.post = function (e, t) {
+        var rs = _D_post(e, t);
+        var agent = e.post.agent;
+        var isAdmin;
+        if (typeof duoshuo_user_ID !== 'undefined') {
+            if (e.post.author.user_id && (e.post.author.user_id == duoshuo_user_ID)) {
+                if (duoshuo_admin_nickname) {
+                    isAdmin = '<span class="fa">' + duoshuo_admin_nickname + '</span>';
                 } else {
-                    is_admin = '';
+                    isAdmin = '<span class="fa">博主</span>';
                 }
             } else {
-                is_admin = '';
+                isAdmin = '';
             }
-            if (agent && /^Mozilla/.test(agent)) rs = rs.replace(/<\/div><p>/, is_admin + show_ua(agent) + '</div><p>');
-            return rs;
+        } else {
+            isAdmin = '';
         }
+        if (agent && /^Mozilla/.test(agent)) rs = rs.replace(/<\/div><p>/, isAdmin + showUa(agent) + '</div><p>');
+        return rs;
     }
-    //移动客户端判断
+}
+//移动客户端判断
 function checkMobile() {
-    var isiPad = navigator.userAgent.match(/iPad/i) != null;
+    var isiPad = navigator.userAgent.match(/iPad/i) !== null;
     if (isiPad) {
         return false;
     }
@@ -40,8 +37,7 @@ function checkMobile() {
     return false;
 }
 
-function show_ua(string) {
-    //console.log(string)
+function showUa(string) {
     $.ua.set(string);
     var sua = $.ua;
     var br = '&nbsp;&nbsp;';
@@ -62,6 +58,10 @@ function show_ua(string) {
     if (browserName.match(/safari/i)) browserIco = '<i class="fa fa-safari"></i>&nbsp;';
     if (browserName.match(/ie/i)) browserIco = '<i class="fa fa-internet-explorer"></i>&nbsp;';
 
-    //return '<span class="this_ua platform '+sua.os.name+'">'+osIco+sua.os.name+' '+sua.os.version+'</span><span class="this_ua browser '+sua.browser.name+'"><i class="fa fa-globe"></i>&nbsp;'+sua.browser.name+'|'+sua.browser.version+'</span>';
-    return br + '<span class="platform ' + sua.os.name + '">' + osIco + sua.os.name + ' ' + sua.os.version + '</span>' + br + '<span class="browser ' + sua.browser.name + '">' + browserIco + sua.browser.name + '|' + sua.browser.version + '</span>';
+    return br + '<span class="platform ' + sua.os.name + '">'
+        + osIco + sua.os.name + ' ' + sua.os.version + '</span>'
+        + br + '<span class="browser ' + sua.browser.name + '">'
+        + browserIco + sua.browser.name + '|'
+        + sua.browser.version
+        + '</span>';
 }
