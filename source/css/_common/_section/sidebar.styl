@@ -64,7 +64,7 @@
   color: $grey-dark;
   text-align: center;
 }
-
+/* 修改侧栏 */
 .site-author-image {
   display: block;
   margin: 0 auto;
@@ -72,7 +72,23 @@
   height: auto;
   border: 2px solid #333;
   padding: 2px;
+  /*头像圆形*/
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  box-shadow: inset 0 -1px 0 #333sf;
+  -webkit-transition: 0.4s;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  -moz-transition: -moz-transform 0.4s ease-out;
+
 }
+
+img:hover { 
+    transform: rotateZ(360deg);/*图像旋转360度*/  
+    -webkit-transform: rotateZ(360deg);   
+    -moz-transform: rotateZ(360deg);   
+  }
 
 .site-author-name {
   margin: 5px 0 0;
@@ -139,15 +155,15 @@
   margin-right: 10px;
   margin-bottom: 10px;
   border-bottom-color: $black-light;
-  font-size: 13px;
+  font-size: 15px;
 
   &:before {
     display: inline-block;
     vertical-align: middle;
     margin-right: 3px;
     content: " ";
-    width: 4px;
-    height: 4px;
+ /*   width: 4px;
+    height: 4px;*/
     border-radius: 50%;
     background: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
   }
