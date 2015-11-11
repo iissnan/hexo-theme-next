@@ -20,7 +20,7 @@
   </script>
     {% if theme.duoshuo_info.ua_enable %}
      {% if theme.duoshuo_info.admin_enable %}
-     {% if theme.duoshuo_info.admin_nickname %}
+     {% if theme.duoshuo_info.user_id %}
   	  <script type="text/javascript">
   		var duoshuo_user_ID = {{theme.duoshuo_info.user_id}}
       var duoshuo_admin_nickname="{{theme.duoshuo_info.admin_nickname}}"
