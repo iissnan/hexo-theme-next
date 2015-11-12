@@ -1,5 +1,5 @@
 if (typeof DUOSHUO !== 'undefined') hookDUOSHUO_tp();
-else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload = hookDUOSHUO_tp;
+else $('#duoshuo-script')[0].onload = hookDUOSHUO_tp;
 
 function hookDUOSHUO_tp() {
     var _D_post = DUOSHUO.templates.post
