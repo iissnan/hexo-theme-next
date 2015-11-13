@@ -1,5 +1,7 @@
 //
 // Layout
+// Note: Must name this file "outline" instead of "layout"
+//       Or Hexo will use it as template layout.
 // =================================================
 
 
@@ -28,7 +30,7 @@ html, body { height: 100%; }
 .main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
 .main-inner {
   margin: 0 auto;
-  width: $content-desktop;;
+  width: $content-desktop;
 
   +desktop-large() {
     .container & { width: $content-desktop-large; }
