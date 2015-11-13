@@ -24,33 +24,16 @@ for $mixin in $mixins
 // Common Layer
 // --------------------------------------------------
 
-
-// Reset using normalize.
-@import "_common/_core/normalize";
-
-
-// Core CSS
-@import "_common/_core/scaffolding";
-@import "_common/_core/base";
-@import "_common/_core/tables";
-@import "_common/_core/helpers";
-
-
-
-// Vendors
-@import "_common/_vendor/highlight/highlight";
-
+// Scaffolding
+@import "_common/scaffolding";
 
 // Sections
 @import "_common/_section/layout";
-@import "_common/_section/header";
-@import "_common/_section/body";
-@import "_common/_section/sidebar";
-@import "_common/_section/footer";
 @import "_common/_section/media";
 
 
 // Components
+@import "_common/_component/highlight";
 @import "_common/_component/tags";
 
 @import "_common/_component/buttons";
@@ -58,15 +41,16 @@ for $mixin in $mixins
 @import "_common/_component/comments";
 @import "_common/_component/tag-cloud";
 @import "_common/_component/back-to-top";
-@import "_common/_component/affix";
 
+@import "_common/_component/header";
 @import "_common/_component/post";
+@import "_common/_component/sidebar";
+@import "_common/_component/footer";
 @import "_common/_component/third-party";
 
 
 
 // Page specific styles
-@import "_common/_page/home";
 @import "_common/_page/archive";
 @import "_common/_page/post-detail";
 @import "_common/_page/categories";

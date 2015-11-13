@@ -1,0 +1,60 @@
+
+.post-toc {
+  overflow: hidden;
+  position: relative;
+}
+
+.post-toc-empty {
+  font-size: 14px;
+  color: $grey-dim;
+}
+
+.post-toc ol {
+  overflow: auto;
+  margin: 0;
+  padding: 0 10px 10px;
+  text-align: left;
+  list-style: none;
+  font-size: 14px;
+
+  a {
+    color: $post-toc-color;
+    &:hover {
+      color: $post-toc-hover-color;
+    }
+  }
+}
+
+.post-toc .nav .nav-child { display: none; }
+
+.post-toc .nav .active > .nav-child { display: block; }
+
+.post-toc .nav .active-current > .nav-child {
+  display: block;
+  & > .nav-item { display: block; }
+}
+
+.post-toc .nav .active > a { color: $grey-light; }
+
+.post-toc .nav .active-current > a {
+  color: $sidebar-highlight;
+  &:hover {
+    color: $sidebar-highlight;
+  }
+}
+
+.post-toc-indicator {
+  height: 20px;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+}
+
+.post-toc-indicator-top {
+  opacity: 0;
+  margin-top: 10px;
+}
+.post-toc-indicator-bottom {
+  position: absolute;
+  width: 100%;
+}
