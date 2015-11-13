@@ -29,7 +29,7 @@
         </script>
       {% endif %}
 
-      <script src="{{ url_for(theme.js) }}/src/ua-parser.min.js"></script>
+      <script src="{{ url_for(theme.vendors) }}/ua-parser-js/dist/ua-parser.min.js"></script>
       <script src="{{ url_for(theme.js) }}/src/hook-duoshuo.js"></script>
     {% endif %}
 
