@@ -1,4 +1,16 @@
-.site-nav { border-top: none; }
+.site-nav {
+  border-top: none;
+
+  +tablet() {
+    display: none !important;
+  }
+}
+
+.site-nav-on {
+  +tablet() {
+    display: block !important;
+  }
+}
 
 .menu .menu-item {
   display: block;
@@ -47,4 +59,8 @@
 .site-nav-toggle {
   top: 20px;
   left: 20px;
+
+  +tablet() {
+    display: block;
+  }
 }

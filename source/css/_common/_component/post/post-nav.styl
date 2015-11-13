@@ -1,0 +1,36 @@
+.post-nav {
+  overflow: hidden;
+  margin-top: 60px;
+  padding: 10px;
+  white-space: nowrap;
+  border-top: 1px solid $gainsboro;
+}
+
+.post-nav-item {
+  display: inline-block;
+  width: 50%;
+  white-space: normal;
+
+  a {
+    position: relative;
+    display: inline-block;
+    line-height: 25px;
+    font-size: 14px;
+    color: $link-color;
+    border-bottom: none;
+
+    &:hover {
+      color: $link-hover-color;
+      border-bottom: none;
+    }
+
+    &:active { top: 2px; }
+
+    i { font-size: 12px; }
+  }
+
+}
+
+.post-nav-next {}
+
+.post-nav-prev { text-align: right; }

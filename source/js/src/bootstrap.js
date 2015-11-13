@@ -2,6 +2,8 @@
 
 $(document).ready(function () {
 
+  $(document).trigger('bootstrap:before');
+
   isMobile() && FastClick.attach(document.body);
 
   $("#posts").find('img').lazyload({
@@ -38,6 +40,10 @@ $(document).ready(function () {
     .add(motionMiddleWares.postList)
     .add(motionMiddleWares.sidebar);
 
+  $(document).trigger('motion:before');
+
   // Bootstrap Motion.
   CONFIG.motion && motionIntegrator.bootstrap();
+
+  $(document).trigger('bootstrap:after');
 });

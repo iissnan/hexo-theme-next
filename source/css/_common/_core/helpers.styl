@@ -31,19 +31,45 @@
   clearfix();
 }
 
-
-// Expand image to 126% with nagative margin-left/right on Desktop.
-.full-image.full-image.full-image {
-  border: none;
-  max-width: 100%;
-  width: auto;
-  margin: 20px 0;
-  +desktop() {
-    max-width: none;
-    width: 126%;
-    margin: 0 -13%;
+.pullquote {
+  width: 45%;
+  &.left {
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  &.right {
+    float: right;
+    margin-left: 10px;
+    margin-right: 5px;
   }
 }
 
+.highlight table, .gist table {
+  width: auto;
+
+  td { border: none; }
+}
+.highlight, .gist {
+  a {
+    color: $link-hover-color !important;
+    text-decoration: none !important;
+  }
+}
+
+.video-container {
+  position: relative;
+  padding-top: 60%;
+  height: 0;
+  overflow: hidden;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .use-motion .motion-element { opacity: 0; }

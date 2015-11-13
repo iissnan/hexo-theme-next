@@ -23,6 +23,7 @@
     .container & { width: 240px; }
   }
   +tablet() {
+    position: relative;
     width: auto;
   }
   +mobile() {
@@ -88,4 +89,18 @@
   .header-inner { right: 0; }
   .content-wrap { float: left; }
   .sidebar { float: right; }
+}
+
+
+.footer-inner {
+  padding-left: 260px;
+
+  +tablet() {
+  padding-left: 0;
+    width: auto;
+  }
+  +mobile() {
+    padding-left: 0;
+    width: auto;
+  }
 }
