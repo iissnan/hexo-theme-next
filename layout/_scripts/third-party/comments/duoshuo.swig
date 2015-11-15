@@ -21,18 +21,13 @@
 
   {% if theme.duoshuo_info.ua_enable %}
     {% if theme.duoshuo_info.admin_enable %}
-
-      {% if theme.duoshuo_info.admin_nickname %}
-        <script type="text/javascript">
-          var duoshuo_user_ID = {{theme.duoshuo_info.user_id}};
-          var duoshuo_admin_nickname="{{theme.duoshuo_info.admin_nickname}}";
-        </script>
-      {% endif %}
-
+      <script type="text/javascript">
+        var duoshuo_user_ID = {{theme.duoshuo_info.user_id}};
+        var duoshuo_admin_nickname = "{{theme.duoshuo_info.admin_nickname | default(__('author'))}}";
+      </script>
       <script src="{{ url_for(theme.vendors) }}/ua-parser-js/dist/ua-parser.min.js"></script>
       <script src="{{ url_for(theme.js) }}/src/hook-duoshuo.js"></script>
     {% endif %}
-
   {% endif %}
 
 {% endif %}
