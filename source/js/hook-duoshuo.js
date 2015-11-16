@@ -47,7 +47,7 @@ function showUa(string) {
     var browserName = sua.browser.name;
     if (checkMobile()) br = '<br><br>';
 
-    if (osName == 'Android') osIco = '<i class="fa fa-android"></i>&nbsp;';
+    if (osName.match(/Android/i)) osIco = '<i class="fa fa-android"></i>&nbsp;';
     if (osName.match(/linux/i)) osIco = '<i class="fa fa-linux"></i>&nbsp;';
     if (osName.match(/mac os|ios/i)) osIco = '<i class="fa fa-apple"></i>&nbsp;';
     if (sua.os.version == 'x86_64') sua.os.version = 'x64';
@@ -57,6 +57,8 @@ function showUa(string) {
     if (browserName.match(/opera/i)) browserIco = '<i class="fa fa-opera"></i>&nbsp;';
     if (browserName.match(/safari/i)) browserIco = '<i class="fa fa-safari"></i>&nbsp;';
     if (browserName.match(/ie/i)) browserIco = '<i class="fa fa-internet-explorer"></i>&nbsp;';
+    if (browserName.match(/WeChat/i)) browserIco = '<i class="fa fa-wechat"></i>&nbsp;';
+    if (browserName.match(/QQBrowser/i)) browserIco = '<i class="fa fa-qq"></i>&nbsp;';
 
     return br + '<span class="platform ' + sua.os.name + '">' + osIco +
         sua.os.name + ' ' + sua.os.version + '</span>' + br +
