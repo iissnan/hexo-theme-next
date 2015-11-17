@@ -29,11 +29,7 @@
 
 
 {% if theme.use_font_lato %}
-  {% if config.language === 'zh-Hans' %}
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  {% else %}
     <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  {% endif %}
 {% endif %}
 
 
