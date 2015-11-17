@@ -34,6 +34,9 @@
 
 .main {
   clearfix();
+  +tablet() {
+    padding-bottom: 100px;
+  }
   +mobile() {
     padding-bottom: 100px;
   }
@@ -85,22 +88,36 @@
 
 .sidebar-toggle { display: none; }
 
+
+.footer-inner {
+  width: $main-desktop;
+
+  &:before {
+    content: " ";
+    float: left;
+    width: 260px;
+    min-height: 50px;
+  }
+
+  +tablet() {
+    width: auto;
+
+    &:before { display: none; }
+  }
+  +mobile() {
+    width: auto;
+
+    &:before { display: none; }
+  }
+}
+
+
+
 .sidebar-position-right {
   .header-inner { right: 0; }
   .content-wrap { float: left; }
   .sidebar { float: right; }
+
+  .footer-inner:before { float: right; }
 }
 
-
-.footer-inner {
-  padding-left: 260px;
-
-  +tablet() {
-  padding-left: 0;
-    width: auto;
-  }
-  +mobile() {
-    padding-left: 0;
-    width: auto;
-  }
-}
