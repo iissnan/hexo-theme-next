@@ -8,7 +8,7 @@ $(document).ready(function () {
     .css({ 'margin-top': sidebarTop })
     .show();
 
-  isDesktop() && $('.page-post-detail .sidebar-inner').affix({
+  NexT.utils.isDesktop() && $('.page-post-detail .sidebar-inner').affix({
     offset: {
       top: sidebarTop,
       bottom: footerOffset

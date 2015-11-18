@@ -1,5 +1,3 @@
-/* global NexT: true */
-
 NexT.utils = NexT.$u = {
   /**
    * Wrap images with fancybox support.
@@ -20,7 +18,7 @@ NexT.utils = NexT.$u = {
 
       if (imageTitle) {
         $imageWrapLink.append('<p class="image-caption">' + imageTitle + '</p>');
-        $imageWrapLink.attr("title", imageTitle); //make sure img title tag will show correctly in fancybox
+        $imageWrapLink.attr('title', imageTitle); //make sure img title tag will show correctly in fancybox
       }
     });
 
@@ -63,7 +61,9 @@ NexT.utils = NexT.$u = {
         var videoRatio = ( $iframe.height() / $iframe.width() ) * 100;
 
         // Add height for 163 music.
-        (this.src.search('music.163.com') > 0) && (videoRatio += 10);
+        if (this.src.search('music.163.com') > 0) {
+          videoRatio += 10;
+        }
 
         /*
          * Replace the iframe's dimensions and position
@@ -105,48 +105,53 @@ NexT.utils = NexT.$u = {
    * via comparing location.path with menu item's href.
    */
   addActiveClassToMenuItem: function () {
-    var path = location.pathname;
+    var path = window.location.pathname;
     path = path === '/' ? path : path.substring(0, path.length - 1);
     $('.menu-item a[href="' + path + '"]').parent().addClass('menu-item-active');
+  },
+
+  hasMobileUA: function () {
+    var nav = window.navigator;
+    var ua = nav.userAgent;
+    var pa = /iPad|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g;
+
+    return pa.test(ua);
+  },
+
+  isTablet: function () {
+    return window.screen.width < 992 && window.screen.width > 767 && this.hasMobileUA();
+  },
+
+  isMobile: function () {
+    return window.screen.width < 767 && this.hasMobileUA();
+  },
+
+  isDesktop: function () {
+    return !this.isTablet() && !this.isMobile();
+  },
+
+  /**
+   * Escape meta symbols in jQuery selectors.
+   *
+   * @param selector
+   * @returns {string|void|XML|*}
+   */
+  escapeSelector: function (selector) {
+    return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, '\\$&');
+  },
+
+  displaySidebar: function () {
+    if (!this.isDesktop()) {
+      return;
+    }
+    $('.sidebar-toggle').trigger('click');
+  },
+
+  isMist: function () {
+    return CONFIG.scheme === 'Mist';
+  },
+
+  isPisces: function () {
+    return CONFIG.scheme === 'Pisces';
   }
 };
-
-function hasMobileUA () {
-  var nav = window.navigator;
-  var ua = nav.userAgent;
-  var pa = /iPad|iPhone|Android|Opera Mini|BlackBerry|webOS|UCWEB|Blazer|PSP|IEMobile|Symbian/g;
-
-  return pa.test(ua);
-}
-
-
-function isTablet () {
-  return screen.width < 992 && screen.width > 767 && hasMobileUA();
-}
-
-function isMobile () {
-  return screen.width < 767 && hasMobileUA();
-}
-
-function isDesktop () {
-  return !isTablet() && !isMobile();
-}
-
-function escapeSelector (selector) {
-  return selector.replace(/[!"$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, "\\$&")
-}
-
-function displaySidebar () {
-  if (!isDesktop()) {
-    return;
-  }
-  $('.sidebar-toggle').trigger('click');
-}
-
-function isMist () {
-  return CONFIG.scheme === 'Mist';
-}
-
-function isPisces () {
-  return CONFIG.scheme === 'Pisces';
-}

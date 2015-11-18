@@ -4,11 +4,11 @@ $(document).ready(function () {
 
   $(document).trigger('bootstrap:before');
 
-  isMobile() && FastClick.attach(document.body);
+  NexT.utils.isMobile() && window.FastClick.attach(document.body);
 
-  $("#posts").find('img').lazyload({
-    placeholder: "/images/loading.gif",
-    effect: "fadeIn"
+  $('#posts').find('img').lazyload({
+    placeholder: '/images/loading.gif',
+    effect: 'fadeIn'
   });
 
   $('.back-to-top').on('click', function () {
@@ -34,16 +34,16 @@ $(document).ready(function () {
 
 
   // Define Motion Sequence.
-  motionIntegrator
-    .add(motionMiddleWares.logo)
-    .add(motionMiddleWares.menu)
-    .add(motionMiddleWares.postList)
-    .add(motionMiddleWares.sidebar);
+  NexT.motion.integrator
+    .add(NexT.motion.middleWares.logo)
+    .add(NexT.motion.middleWares.menu)
+    .add(NexT.motion.middleWares.postList)
+    .add(NexT.motion.middleWares.sidebar);
 
   $(document).trigger('motion:before');
 
   // Bootstrap Motion.
-  CONFIG.motion && motionIntegrator.bootstrap();
+  CONFIG.motion && NexT.motion.integrator.bootstrap();
 
   $(document).trigger('bootstrap:after');
 });

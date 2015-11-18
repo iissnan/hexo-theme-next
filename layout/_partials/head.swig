@@ -86,6 +86,10 @@
     scheme: '{{ theme.scheme }}',
     sidebar: '{{ theme.sidebar }}',
     fancybox: {{ theme.fancybox }},
-    motion: {{ theme.use_motion }}
+    motion: {{ theme.use_motion }},
+    duoshuo: {
+      userId: {{ theme.duoshuo_info.user_id }},
+      author: '{{ theme.duoshuo_info.admin_nickname | default(__('author'))}}'
+    }
   };
 </script>
