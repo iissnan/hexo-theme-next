@@ -47,17 +47,19 @@ function getAgentInfo(string) {
       unknown : 'desktop'
     },
     browser: {
-      chrome : 'chrome',
-      'chromium': 'chrome',
-      firefox: 'firefox',
-      opera  : 'opera',
-      safari : 'safari',
-      ie     : 'internet-explorer',
-      unknown: 'globe'
+      chrome   : 'chrome',
+      chromium : 'chrome',
+      firefox  : 'firefox',
+      opera    : 'opera',
+      safari   : 'safari',
+      ie       : 'internet-explorer',
+      wechat   : 'wechat',
+      qq       : 'qq',
+      unknown  : 'globe'
     }
   };
   var osIcon = iconMapping.os[osName.toLowerCase()];
-  var browserIcon =  iconMapping.browser[browserName.toLowerCase()];
+  var browserIcon =  iconMapping.browser[getBrowserKey()];
 
   return separator +
     '<span class="duoshuo-ua-platform duoshuo-ua-platform-' + osName.toLowerCase() + '">' +
@@ -68,6 +70,20 @@ function getAgentInfo(string) {
       '<i class="fa fa-' + browserIcon + '"></i>' +
       browserName + ' ' + browserVersion +
     '</span>';
+
+  function getBrowserKey () {
+    var key = browserName.toLowerCase();
+
+    if (key.match(/WeChat/i)) {
+      return 'wechat';
+    }
+
+    if (key.match(/QQBrowser/i)) {
+      return 'qq';
+    }
+
+    return key;
+  }
 
   function isMobile() {
     var userAgent = window.navigator.userAgent;
