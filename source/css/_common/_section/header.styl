@@ -78,7 +78,6 @@
   +mobile() {
     display: none;
     margin: 0 -10px;
-    padding: 0 0;
     clear: both;
     border-top: 1px solid $gray-lighter;
   }
@@ -90,8 +89,11 @@
 // Menu
 // --------------------------------------------------
 .menu {
+  +mobile() {
+    padding-left: 10px;
+  }
   margin-top: 20px;
-  padding-left: 20px;
+  padding-left: 0;
   text-align: center;
 }
 
