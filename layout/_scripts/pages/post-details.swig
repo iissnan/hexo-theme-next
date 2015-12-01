@@ -148,7 +148,7 @@
     // Expand sidebar on post detail page by default, when post has a toc.
     motionMiddleWares.sidebar = function () {
       var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
+      if (CONFIG.sidebar === 'post' || CONFIG.sidebar === 'always') {
         if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
           displaySidebar();
         }
