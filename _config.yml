@@ -1,10 +1,10 @@
 # when running hexo in a subdirectory (e.g. domain.tld/blog), remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  #categories: /categories
-  #about: /about
+  # categories: /categories
   archives: /archives
   tags: /tags
+  about: /about
   #commonweal: /404.html
 
 # Place your favicon.ico to /source directory.
@@ -29,7 +29,7 @@ icon_font: default
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 
 # MathJax Support
@@ -37,7 +37,7 @@ mathjax:
 
 
 # Schemes
-#scheme: Mist
+scheme: Mist
 
 
 # Sidebar, available value:
@@ -58,7 +58,7 @@ toc_list_number: true
 
 # Automatically Excerpt
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Use Lato font
@@ -72,6 +72,20 @@ duoshuo_info:
   ua_enable: true
   admin_enable: false
   user_id: 0
+
+# share server
+# JiaThis share
+jiathis: false
+
+# duoshuo share
+duoshuo_share: true
+
+# baidu share
+baidushare: false
+
+# duoshuo hot artical
+duoshuo_hotartical: true
+
 
 ## DO NOT EDIT THE FOLLOWING SETTINGS
 ## UNLESS YOU KNOW WHAT YOU ARE DOING
