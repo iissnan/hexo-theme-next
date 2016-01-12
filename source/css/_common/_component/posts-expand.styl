@@ -82,6 +82,22 @@
 
   h2, h3, h4, h5, h6 {
     padding-top: 10px;
+
+    .header-anchor{
+      float: right;
+      margin-left: 10px;
+      color: $grey-light;
+      border-bottom-style: none;
+      visibility: hidden;
+
+      &:hover{
+        color: inherit;
+      }
+    }
+
+    &:hover .header-anchor{
+      visibility: visible;
+    }
   }
 
   img {
