@@ -80,7 +80,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
-    sidebar: '{{ theme.sidebar }}',
+    sidebar: {{ theme.sidebar | json_encode }},
     fancybox: {{ theme.fancybox }},
     motion: {{ theme.use_motion }},
     duoshuo: {
