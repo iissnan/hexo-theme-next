@@ -16,6 +16,7 @@ $grey         = #bbb
 $grey-dark    = #999
 $grey-dim     = #666
 $black-light  = #555
+$black-dim    = #333
 $black-deep   = #222
 $red          = #ff2a2a
 $blue-bright  = #87daff
@@ -43,6 +44,10 @@ $border-color                 = $grey-light
 // Background color for <body>
 $body-bg-color                = white
 
+// Selection
+$selection-bg                 = $blue-deep
+$selection-color              = white
+
 
 
 // Typography
@@ -61,10 +66,11 @@ $font-family-icons        = 'FontAwesome'
 
 
 // Font Weight
-$font-weight-lighter      = 200;
-$font-weight-light        = 300;
-$font-weight-bold         = 600;
-$font-weight-bolder       = 700;
+$font-weight-lighter      = 200
+$font-weight-light        = 300
+$font-weight-normal       = 400
+$font-weight-bold         = 600
+$font-weight-bolder       = 700
 
 
 // Font size
@@ -128,9 +134,12 @@ $code-font-size = 13px
 
 $btn-font-weight =  normal
 
+$btn-default-radius              = 0
 $btn-default-bg                  = $black-deep
 $btn-default-color               = white
-$btn-default-border              = $black-deep
+$btn-default-font-size           = 14px
+$btn-default-border-width        = 2px
+$btn-default-border-color        = $black-deep
 $btn-default-hover-bg            = white
 $btn-default-hover-color         = $black-deep
 $btn-default-hover-border-color  = $black-deep
@@ -160,19 +169,24 @@ $pagination-active-border       = $grey-light
 // --------------------------------------------------
 
 $main-desktop                   = 960px
-$main-desktop                   = 1200px
+$main-desktop-large             = 1200px
+
 $content-desktop                = 700px
 $content-desktop-large          = 900px
-$sidebar-desktop                = 240px
 $content-desktop-padding        = 40px
+
+$sidebar-desktop                = 240px
+
 $footer-height                  = 50px
+
 $gap-between-main-and-footer    = 100px
 
 
 
 // Headband
 // --------------------------------------------------
-$headband-bg = $black-deep
+$headband-height = 3px
+$headband-bg     = $black-deep
 
 
 
@@ -190,9 +204,13 @@ $brand-bg               = $black-deep
 $brand-font-family      = $font-family-base
 $site-subtitle-color    = $grey-dark
 
+$subtitle-font-size     = 13px
+$subtitle-color         = $grey-dark
+
 // Menu
 $menu-link-border       = transparent
 $menu-link-hover-border = $black-deep
+
 
 
 
@@ -201,15 +219,52 @@ $menu-link-hover-border = $black-deep
 $posts-collapse-left        = 55px
 $posts-collapse-left-mobile = 5px
 
+$read-more-color          = white
+$read-more-font-size      = 14px
+$read-more-bg-color       = $black-deep
+$read-more-border-radius  = 0
 
 
-// Section Sidebar
+
+
+// Sidebar
 // Variables for sidebar section elements.
 // --------------------------------------------------
-$site-author-name-color = $whitesmoke
-$site-description-color = $black-light
-$sidebar-highlight      = $blue-bright
+$sidebar-nav-color                = $black-light
+$sidebar-nav-hover-color          = $whitesmoke
+$sidebar-highlight                = $blue-bright
 
+$site-author-name-color           = $whitesmoke
+
+$site-description-font-size       = 14px
+$site-description-color           = $black-light
+
+$site-state-item-count-font-size  = 18px
+$site-state-item-count-color      = inherit
+$site-state-item-name-font-size   = 13px
+$site-state-item-name-color       = inherit
+$site-state-item-border-color     = $black-dim
+
+$post-toc-color                   = $grey-dark
+$post-toc-hover-color             = $grey-light
+
+
+// Components
+// --------------------------------------------------
+
+// Back to top
+$b2t-position-bottom          = 19px
+$b2t-position-right           = 50px
+$b2t-width                    = 15px
+$b2t-height                   = 13px
+$b2t-color                    = white
+$b2t-bg-color                 = $black-deep
+
+
+//  .post-expand .post-eof
+//  In the default (Mist) scheme, margin above and below the post separator
+$post-eof-margin-top    = 80px  //  or 160px for more white space
+$post-eof-margin-bottom = 60px  //  or 120px for less white space
 
 
 // Iconography

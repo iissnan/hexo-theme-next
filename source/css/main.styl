@@ -2,7 +2,7 @@
 
 
 
-$scheme    = hexo-config('scheme') ? hexo-config('scheme') : 'default';
+$scheme    = hexo-config('scheme') ? hexo-config('scheme') : 'Muse';
 $variables = base $scheme custom;
 $mixins    = base $scheme custom;
 
@@ -24,56 +24,14 @@ for $mixin in $mixins
 // Common Layer
 // --------------------------------------------------
 
+// Scaffolding
+@import "_common/scaffolding";
 
-// Reset using normalize.
-@import "_common/_core/normalize";
-
-
-// Core CSS
-@import "_common/_core/scaffolding";
-@import "_common/_core/base";
-@import "_common/_core/tables";
-@import "_common/_core/helpers";
-
-
-
-// Vendors
-@import "_common/_vendor/highlight/highlight";
-
-
-// Sections
-@import "_common/_section/layout";
-@import "_common/_section/header";
-@import "_common/_section/body";
-@import "_common/_section/sidebar";
-@import "_common/_section/footer";
-@import "_common/_section/media";
-
+// Layout
+@import "_common/outline";
 
 // Components
-@import "_common/_component/blockquote-center";
-@import "_common/_component/buttons";
-@import "_common/_component/posts";
-@import "_common/_component/posts-expand";
-@import "_common/_component/posts-collapse";
-@import "_common/_component/posts-type";
-@import "_common/_component/pagination";
-@import "_common/_component/comments";
-@import "_common/_component/tag-cloud";
-@import "_common/_component/gallery";
-@import "_common/_component/group-pictures";
-@import "_common/_component/back-to-top";
-@import "_common/_component/duoshuo";
-@import "_common/_component/jiathis";
-
-
-
-// Page specific styles
-@import "_common/_page/home";
-@import "_common/_page/archive";
-@import "_common/_page/post-detail";
-@import "_common/_page/categories";
-
+@import "_common/components";
 
 
 // Schemes Layer

@@ -1,20 +1,27 @@
 {
+  "asi": false,
+  "bitwise": true,
+  "browser": true,
+  "camelcase": true,
   "curly": true,
-  "eqnull": true,
-  "eqeqeq": true,
-  "undef": true,
+  "forin": true,
+  "immed": true,
+  "latedef": "nofunc",
+  "maxlen": 120,
   "newcap": true,
+  "noarg": true,
+  "noempty": true,
+  "nonew": true,
+  "predef": [
+    "$",
+    "jQuery",
+    "NexT",
+    "CONFIG"
+  ],
+  "quotmark": true,
+  "trailing": true,
   "undef": true,
   "unused": true,
-  "laxcomma": false,
-  "asi": false,
-  "expr": true,
-  "loopfunc": false,
-  "strict": false,
 
-  "globals": {
-    "$": true,
-    "window": true,
-    "document": true
-  }
+  "expr": true
 }

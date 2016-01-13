@@ -1,5 +1,11 @@
 <!doctype html>
-<html class="theme-next {% if theme.use_motion %}  use-motion {% endif %}">
+
+{% set html_class = 'theme-next ' + theme.scheme %}
+{% if theme.use_motion %}
+  {% set html_class = html_class + ' use-motion' %}
+{% endif %}
+
+<html class="{{ html_class | lower }}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
@@ -7,10 +13,14 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ config.language }}">
 
-  {% include '_partials/old-browsers.swig' %}
-  {% include '_scripts/analytics.swig' %}
+  {% include '_scripts/third-party/analytics.swig' %}
 
-  <div class="container one-column {% block page_class %}{% endblock %}">
+  {% set container_class = "container one-collumn " %}
+  {% if theme.sidebar.position %}
+    {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
+  {% endif %}
+
+  <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -19,17 +29,17 @@
 
     <main id="main" class="main">
       <div class="main-inner">
-        <div id="content" class="content">
-          {% block content %}{% endblock %}
+        <div class="content-wrap">
+          <div id="content" class="content">
+            {% block content %}{% endblock %}
+          </div>
+          {% include '_partials/duoshuo-hot-articles.swig' %}
+          {% include '_partials/comments.swig' %}
         </div>
-
-        {% include '_partials/duoshuo-hot-articles.swig' %}
-        {% include '_partials/comments.swig' %}
+        {% if theme.sidebar !== 'remove' %}
+          {% block sidebar %}{% endblock %}
+        {% endif %}
       </div>
-
-      {% if theme.sidebar !== 'remove' %}
-        {% block sidebar %}{% endblock %}
-      {% endif %}
     </main>
 
     <footer id="footer" class="footer">
@@ -41,31 +51,21 @@
     <div class="back-to-top"></div>
   </div>
 
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery/index.js?v=2.1.3"></script>
+  {% include '_scripts/vendors.swig' %}
+  {% include '_scripts/commons.swig' %}
 
-  {# This block is used to set options before any other scripts run #}
-  {% block script_extra_before %}{% endblock %}
-
-  {% block comment_system %}
-    {% include '_scripts/comments/duoshuo.swig' %}
-    {% include '_scripts/comments/disqus.swig' %}
-  {% endblock %}
-
-  {% include '_scripts/fancy-box.swig' %}
-  {% include '_scripts/helpers.swig' %}
-  {% include '_scripts/motion.swig' %}
-
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
+  {% include scheme_script %}
 
   {% block script_extra %}{% endblock %}
 
-  <script type="text/javascript" src="{{ url_for(theme.js) }}/bootstrap.js"></script>
+  {% include '_scripts/boostrap.swig' %}
 
-  {% include '_scripts/tinysou.swig' %}
-  {% include '_scripts/mathjax.swig' %}
-  {% block comment_system %}{% endblock %}
-  {% include '_scripts/baidushare.swig' %}
+  {% include '_scripts/third-party/comments.swig' %}
+  {% include '_scripts/third-party/tinysou.swig' %}
+  {% include '_scripts/third-party/mathjax.swig' %}
+  {% include '_scripts/third-party/baidushare.swig' %}
+  {% include '_scripts/third-party/lean-analytics.swig' %}
 
 </body>
 </html>

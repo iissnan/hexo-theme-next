@@ -1,0 +1,31 @@
+.back-to-top {
+  position: fixed;
+  bottom: $b2t-position-bottom;
+  right: $b2t-position-right;
+  z-index: $zindex-5;
+  width: $b2t-width;
+  height: $b2t-height;
+  padding: 5px;
+  background: $b2t-bg-color;
+  color: $b2t-color;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+
+  +mobile() {
+    display: none;
+  }
+  +tablet() {
+    display: none;
+  }
+
+  &:before {
+    display: block;
+    content: " ";
+    margin-top: 2px;
+    width: 0;
+    height: 0;
+    border-width: 0 7px 8px 7px;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+  }
+}

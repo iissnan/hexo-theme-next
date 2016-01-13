@@ -1,0 +1,23 @@
+// Search
+// --------------------------------------------------
+.site-search {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+
+  +mobile() { position: static; }
+}
+
+.site-search form {
+  display: none;
+
+  +mobile() {
+    background: none;
+  }
+}
+
+.use-motion .site-search form {
+  top: -50px;
+  +mobile() { top: 0 !important; }
+}

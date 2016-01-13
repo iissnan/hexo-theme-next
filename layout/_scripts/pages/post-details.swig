@@ -1,5 +1,5 @@
 
-{% include '../bootstrap.scrollspy.swig' %}
+<script type="text/javascript" src="{{ url_for(theme.js) }}/src/scrollspy.js?v={{ theme.version }}"></script>
 
 <script type="text/javascript" id="sidebar.toc.highlight">
   $(document).ready(function () {
@@ -133,7 +133,7 @@
 
     $('.post-toc a').on('click', function (e) {
       e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
       var offset = $(targetSelector).offset().top;
       hasVelocity ?
         html.velocity('stop').velocity('scroll', {
@@ -146,11 +146,12 @@
     });
 
     // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
+    NexT.motion.middleWares.sidebar = function () {
       var $tocContent = $('.post-toc-content');
+
       if (CONFIG.sidebar === 'post') {
         if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
+          NexT.utils.displaySidebar();
         }
       }
     };

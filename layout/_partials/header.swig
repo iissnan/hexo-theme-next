@@ -1,5 +1,5 @@
 <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
-  {% if theme.custom_logo.image and not theme.scheme %}
+  {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
     <div class="site-meta-headline">
       <a>
         <img class="custom-logo-image" src="{{ theme.custom_logo.image }}"
@@ -44,7 +44,8 @@
       {% endfor %}
 
       {# Search icon for default scheme #}
-      {% if not theme.scheme and theme.swiftype_key %}
+      {% set use_search_icon = theme.scheme === 'Muse' or theme.scheme === 'Pisces' %}
+      {% if use_search_icon and theme.swiftype_key %}
         <li class="menu-item menu-item-search">
           <a href="#" class="st-search-show-outputs">
             {% if theme.menu_icons.enable %}

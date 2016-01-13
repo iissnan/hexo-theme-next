@@ -1,0 +1,32 @@
+// Menu
+// --------------------------------------------------
+.menu {
+  +mobile() {
+    padding-left: 10px;
+  }
+  margin-top: 20px;
+  padding-left: 0;
+  text-align: center;
+}
+
+.menu .menu-item {
+  display: inline-block;
+  margin: 0 10px;
+  @media screen and (max-width: 767px) {
+    margin-top: 10px;
+  }
+
+  a {
+    display: block;
+    font-size: 13px;
+    text-transform: capitalize;
+    line-height: 1.5;
+    border-bottom: 1px solid $menu-link-border;
+    transition-property: border-color;
+    the-transition();
+
+    &:hover { border-bottom-color: $menu-link-hover-border; }
+  }
+}
+
+.use-motion .menu-item { opacity: 0; }
