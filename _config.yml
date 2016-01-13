@@ -83,6 +83,9 @@ social_icons:
 
 
 # Sidebar Avatar
+# in theme directory(source/images): /images/avatar.jpg
+# in site  directory(source/uploads): /uploads/avatar.jpg
+# default : /images/default_avatar.jpg
 #avatar:
 
 
@@ -238,4 +241,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.0.0
+version: 0.5.0
