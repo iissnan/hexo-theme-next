@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "JavaScript,JS,Web Develop,Front end,前端开发,Kisnows"
+keywords: "Hexo, NexT"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -149,7 +149,7 @@ auto_excerpt:
   length: 500
 
 # Use Lato font
-use_font_lato: false
+use_font_lato: true
 
 
 
@@ -212,8 +212,8 @@ facebook_sdk:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: true
-  app_id: i94Fztq8fCCVeVdaAsj5QJFA-gzGzoHsz
-  app_key: qaPHXx9ykQRH0XhF1DawhWN1
+  app_id: #<app_id>
+  pp_key: #<app_key>
 
 
 #! ---------------------------------------------------------------
@@ -222,10 +222,10 @@ leancloud_visitors:
 #! ---------------------------------------------------------------
 
 # Motion
-use_motion: false
+use_motion: true
 
 # Fancybox
-fancybox: false
+fancybox: true
 
 # Static files
 vendors: vendors
