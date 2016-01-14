@@ -216,7 +216,8 @@ leancloud_visitors:
   app_key: #<app_key>
 
 
-
+# Tencent analytics ID
+# tencent_analytics:
 
 
 
