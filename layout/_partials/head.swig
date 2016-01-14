@@ -80,11 +80,11 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
-    sidebar: '{{ theme.sidebar }}',
+    sidebar: {{ theme.sidebar | json_encode }},
     fancybox: {{ theme.fancybox }},
     motion: {{ theme.use_motion }},
     duoshuo: {
-      userId: {{ theme.duoshuo_info.user_id }},
+      userId: {{ theme.duoshuo_info.user_id | default() }},
       author: '{{ theme.duoshuo_info.admin_nickname | default(__('author'))}}'
     }
   };
