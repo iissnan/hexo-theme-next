@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "zzbd,flashlab,个人博客"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2009
 
 
 
@@ -28,9 +28,10 @@ rss:
 menu:
   home: /
   #categories: /categories
-  #about: /about
+  sam: /sam
   archives: /archives
   tags: /tags
+  about: /about
   #commonweal: /404.html
 
 
@@ -57,8 +58,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -69,9 +70,13 @@ scheme: Muse
 
 
 # Social links
-# social:
-  #GitHub:
-  #Others:
+social:
+  GitHub: https://github.com/flashlab
+#   Twitter: your-twitter-url
+  Weibo: http://weibo.com/shengke
+#   DouBan: your-douban-url
+#   ZhiHu: your-zhihu-url
+  E-mail: mailto:zhengjuefei25@163.com
 
 # Social Icons
 social_icons:
@@ -80,6 +85,7 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  E-mail: envelope
 
 
 # Sidebar Avatar
@@ -94,19 +100,19 @@ toc:
   enable: true
 
   # Automatically add list number to toc.
-  number: true
+  # number: true
 
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
+creative_commons: by-nc-sa
 #creative_commons:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
-  #position: right
+  #position: left
+  position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
@@ -138,7 +144,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night bright
 
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
@@ -233,7 +239,7 @@ leancloud_visitors:
 use_motion: true
 
 # Fancybox
-fancybox: true
+fancybox: false
 
 # Static files
 vendors: vendors
