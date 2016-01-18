@@ -18,7 +18,7 @@ html, body { height: 100%; }
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: $content-desktop;
+  max-width: $content-desktop;
 
   +desktop-large() {
     .container & { width: $content-desktop-large; }
@@ -30,7 +30,7 @@ html, body { height: 100%; }
 .main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
 .main-inner {
   margin: 0 auto;
-  width: $content-desktop;
+  max-width: $content-desktop;
 
   +desktop-large() {
     .container & { width: $content-desktop-large; }
@@ -50,7 +50,7 @@ html, body { height: 100%; }
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: $content-desktop;
+  max-width: $content-desktop;
 
   +desktop-large() {
     .container & { width: $content-desktop-large; }
