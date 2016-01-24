@@ -26,7 +26,7 @@ since: 2009
 # When running hexo in a subdirectory (e.g. domain.tld/blog)
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
-  home: /
+  #home: /
   #categories: /categories
   sam: /sam
   archives: /archives
@@ -41,7 +41,7 @@ menu:
 #   Key is the name of menu item and value is the name of FontAwsome icon.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
-  enable: true
+  enable: false
   # Icon Mapping.
   home: home
   about: user
@@ -169,6 +169,7 @@ mathjax:
 
 # Swiftype Search API Key
 #swiftype_key:
+tinysou_Key: 8f161c3c682b516f1d39
 
 # Baidu Analytics ID
 #baidu_analytics:
