@@ -80,7 +80,7 @@
             </span>
           {% endif %}
 
-          {% if post.comments %}
+          {% if page.comments and page.comments_show %}
             {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
