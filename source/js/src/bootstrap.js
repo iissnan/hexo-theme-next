@@ -4,8 +4,6 @@ $(document).ready(function () {
 
   $(document).trigger('bootstrap:before');
 
-  NexT.utils.isMobile() && window.FastClick.attach(document.body);
-
   $('#posts').find('img').lazyload({
     placeholder: '/images/loading.gif',
     effect: 'fadeIn'

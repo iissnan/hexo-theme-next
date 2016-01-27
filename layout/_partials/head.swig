@@ -65,14 +65,14 @@
 {% endif %}
 
 
-{{
+{#{
   open_graph({
     twitter_id: theme.twitter,
     google_plus: theme.google_plus,
     fb_admins: theme.fb_admins,
     fb_app_id: theme.fb_app_id
   })
-}}
+}#}
 
 
 {# Export some HEXO Configurations to Front-End #}
