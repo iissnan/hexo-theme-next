@@ -38,20 +38,24 @@
               <span class="site-state-item-name">{{ __('state.posts') }}</span>
             </a>
           </div>
-
-          <div class="site-state-item site-state-categories">
-            {% if theme.menu.categories %}<a href="{{ url_for(theme.menu.categories) }}">{% endif %}
-              <span class="site-state-item-count">{{ site.categories.length }}</span>
-              <span class="site-state-item-name">{{ __('state.categories') }}</span>
+          
+          {% if site.categories.length > 0 %}
+            <div class="site-state-item site-state-categories">
+              {% if theme.menu.categories %}<a href="{{ url_for(theme.menu.categories) }}">{% endif %}
+                <span class="site-state-item-count">{{ site.categories.length }}</span>
+                <span class="site-state-item-name">{{ __('state.categories') }}</span>
               {% if theme.menu.categories %}</a>{% endif %}
-          </div>
+            </div>
+          {% endif %}
 
-          <div class="site-state-item site-state-tags">
-            {% if theme.menu.tags %}<a href="{{ url_for(theme.menu.tags) }}">{% endif %}
-              <span class="site-state-item-count">{{ site.tags.length }}</span>
-              <span class="site-state-item-name">{{ __('state.tags') }}</span>
+          {% if site.tags.length > 0 %}
+            <div class="site-state-item site-state-tags">
+              {% if theme.menu.tags %}<a href="{{ url_for(theme.menu.tags) }}">{% endif %}
+                <span class="site-state-item-count">{{ site.tags.length }}</span>
+                <span class="site-state-item-name">{{ __('state.tags') }}</span>
               {% if theme.menu.tags %}</a>{% endif %}
-          </div>
+            </div>
+          {% endif %}
 
         </nav>
 
