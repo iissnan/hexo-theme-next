@@ -28,10 +28,10 @@ since: 2009
 menu:
   #home: /
   #categories: /categories
-  sam: /sam
-  archives: /archives
-  tags: /tags
-  about: /about
+  sam: sam
+  archives: archives
+  tags: tag
+  about: about
   #commonweal: /404.html
 
 
