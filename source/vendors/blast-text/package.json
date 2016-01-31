@@ -1,0 +1,60 @@
+{
+  "name": "blast-text",
+  "version": "2.0.0",
+  "description": "Blast text apart to make it manipulable.",
+  "homepage": "http://julian.com/research/blast",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Julian Shapiro",
+      "url": "http://julian.com/"
+    }
+  ],
+  "main": "jquery.blast.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/julianshapiro/blast"
+  },
+  "keywords": [
+    "text",
+    "parse",
+    "typography",
+    "search",
+    "animation",
+    "jquery",
+    "zepto",
+    "character",
+    "word",
+    "sentence"
+  ],
+  "files": [
+    "jquery.blast.js",
+    "jquery.blast.min.js"
+  ],
+  "dependencies": {
+    "jquery": ">= 1.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/julianshapiro/blast/issues"
+  },
+  "_id": "blast-text@2.0.0",
+  "_shasum": "429db78bf63938e573fe9493bd7517800484f4cf",
+  "_from": "blast-text@*",
+  "_npmVersion": "1.4.10",
+  "_npmUser": {
+    "name": "julianshapiro",
+    "email": "julian@julianshapiro.com"
+  },
+  "maintainers": [
+    {
+      "name": "julianshapiro",
+      "email": "julian@julianshapiro.com"
+    }
+  ],
+  "dist": {
+    "shasum": "429db78bf63938e573fe9493bd7517800484f4cf",
+    "tarball": "http://registry.npmjs.org/blast-text/-/blast-text-2.0.0.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/blast-text/-/blast-text-2.0.0.tgz"
+}
