@@ -27,7 +27,7 @@
 </div>
 
 <nav class="site-nav">
-  {% set hasSearch = theme.swiftype_key || theme.tinysou_Key %}
+  {% set hasSearch = theme.swiftype_key || theme.tinysou_Key || config.search %}
 
   {% if theme.menu %}
     <ul id="menu" class="menu {{ hasSearch and 'menu-left' }}">
