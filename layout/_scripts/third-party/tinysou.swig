@@ -1,11 +1,11 @@
-{% if config.tinysou_Key %}
+{% if theme.tinysou_Key %}
   <script>
     var customRenderActFunction = function(item) {
       var out = '<p class="title">' + item['document']['title'].split(" // ")[0] + '</p>';
       return out;
     };
     var option = {
-      engineKey: '{{ config.tinysou_Key }}',
+      engineKey: '{{ theme.tinysou_Key }}',
       renderActFunction: customRenderActFunction
     };
     (function(w,d,t,u,n,s,e){
