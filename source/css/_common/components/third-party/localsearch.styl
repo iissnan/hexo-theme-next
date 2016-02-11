@@ -14,9 +14,6 @@ a.search-result-title {
 a.search-result {
   border-bottom: transparent;
 }
-p.search-result {
-  color=#555;
-}
 .search-keyword {
   border-bottom: 1px dashed #4088b8;
   font-weight: bold;
@@ -33,14 +30,16 @@ p.search-result {
   z-index: 999;
 }
 #local-search-result {
-  scroll:auto;
-  overflow:auto;
-  max-height:3in;
+  overflow: auto;
+  max-height: 3in;
+}
+.site-search-form {
+  background: $whitesmoke;
 }
 
 .popup {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 100px;
   left: 50%;
   width: 700px;
@@ -58,15 +57,15 @@ p.search-result {
   width: 50%;
 }
 .popup-mobile {
-  position: relative;
+  padding: 0px 0px;
   top: 0;
   left: 0;
-  margin: 30px 0 0;
-  width: inherit;
+  margin: 0px 0 0;
+  width: 100%;
 }
 .popup-btn-close {
   position: absolute;
-  top: 8px;
+  top: 5px;
   right: 14px;
   color: #4EBD79;
   font-size: 14px;

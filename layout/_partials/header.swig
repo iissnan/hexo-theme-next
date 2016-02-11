@@ -45,9 +45,9 @@
 
       {# Search icon for default scheme #}
       {% set use_search_icon = theme.scheme === 'Muse' or theme.scheme === 'Pisces' %}
-      {% if use_search_icon and theme.swiftype_key %}
+      {% if use_search_icon and hasSearch %}
         <li class="menu-item menu-item-search">
-          <a href="#" class="st-search-show-outputs">
+          <a href="#" class="popup-trigger">
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             {% endif %}
