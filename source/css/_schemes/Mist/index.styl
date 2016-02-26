@@ -47,6 +47,13 @@
 }
 
 
+// Page - Container
+// --------------------------------------------------
+.container .main-inner {
+  +mobile() { width: auto; }
+}
+
+
 // Page - Post details
 // --------------------------------------------------
 .page-post-detail {
@@ -83,7 +90,10 @@
   margin: 0 auto;
   text-align: left;
 
-  +mobile() { text-align: center; }
+  +mobile() {
+    width: auto;
+    text-align: center;
+  }
 }
 
 // Helpers
