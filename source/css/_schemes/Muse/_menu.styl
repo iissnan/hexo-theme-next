@@ -5,6 +5,7 @@
     top: 52px;
     margin: 0;
     width: 100%;
+    padding: 0;
     background: white;
     border-bottom: 1px solid $gray-lighter;
   }
@@ -16,17 +17,17 @@
 .menu .menu-item {
   +mobile() {
     display: block;
-    margin-left: 0;
+    margin: 0 10px;
     vertical-align: top;
   }
 
   br {
     +mobile() { display: none; }
   }
-}
-
-.menu .menu-item-icon {
-  +mobile() {
-    font-size: 15px;
+  
+  a {
+    +mobile() { padding: 5px 10px; }
   }
+  
+  .fa { margin-right: 5px; }
 }
