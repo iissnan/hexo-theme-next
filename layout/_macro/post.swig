@@ -114,6 +114,7 @@
                <span class="leancloud-visitors-count"></span>
               </span>
           {% endif %}
+
         </div>
       </header>
     {% endif %}
@@ -175,6 +176,12 @@
       {% else %}
         {{ post.content }}
       {% endif  %}
+    </div>
+
+    <div>
+      {% if ! is_index %}
+        {% include 'reward.swig' %}
+      {% endif %}
     </div>
 
     <footer class="post-footer">
