@@ -28,7 +28,6 @@ NexT is built for easily use with elegant appearance. First things first, always
 
 ## [开发历史 Changelog](https://github.com/iissnan/hexo-theme-next/wiki/Changelog)
 
-[![views](https://sourcegraph.com/api/repos/github.com/iissnan/hexo-theme-next/.counters/views.svg)](https://sourcegraph.com/github.com/iissnan/hexo-theme-next)
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
 [![jquery-image]][jquery-url]
