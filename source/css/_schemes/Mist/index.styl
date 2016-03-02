@@ -23,26 +23,13 @@
 // Search
 // --------------------------------------------------
 .site-search {
+  position: relative;
   float: right;
   margin-top: 8px;
 
   +mobile() {
     float: none;
     padding: 0 10px;
-  }
-
-  input {
-    padding: 3px;
-    border: none;
-    padding-left: 18px;
-    border-radius: 0;
-    width: 140px;
-    background: url($search-icon) no-repeat 0 50%;
-    background-size: 12px 12px;
-    outline: none;
-    border-bottom: 1px solid $grey-dark;
-    opacity: 0.5;
-    &:focus { opacity: 1; }
   }
 }
 
