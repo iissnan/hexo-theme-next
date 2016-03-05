@@ -16,6 +16,8 @@
     <div class="post-spread">
       {% if theme.jiathis %}
         {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
       {% elseif theme.add_this_id %}
         {% include '_partials/share/add-this.swig' %}
       {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
