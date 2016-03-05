@@ -173,6 +173,12 @@ mathjax:
 # Disqus
 #disqus_shortname:
 
+# Baidu Share
+# Available value:
+#    button | slide
+#baidushare:
+##  type: button
+
 # Share
 #jiathis:
 #add_this_id:
