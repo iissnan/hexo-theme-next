@@ -180,6 +180,12 @@ tinysou_Key:
 # Disqus
 disqus_shortname: flashlab
 
+# Baidu Share
+# Available value:
+#    button | slide
+#baidushare:
+##  type: button
+
 # Share
 #jiathis:
 #add_this_id:

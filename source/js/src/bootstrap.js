@@ -4,14 +4,11 @@ $(document).ready(function () {
 
   $(document).trigger('bootstrap:before');
 
-  $('#posts').find('img').lazyload({
-    placeholder: '/images/loading.gif',
-    effect: 'fadeIn'
-  });
+  NexT.utils.isMobile() && window.FastClick.attach(document.body);
 
-  $('.back-to-top').on('click', function () {
-    $('body').velocity('scroll');
-  });
+  NexT.utils.lazyLoadPostsImages();
+
+  NexT.utils.registerBackToTop();
 
   $('.site-nav-toggle button').on('click', function () {
     var $siteNav = $('.site-nav');

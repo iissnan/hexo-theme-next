@@ -48,7 +48,9 @@
       </div>
     </footer>
 
-    <div class="back-to-top"></div>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
   </div>
 
   {% include '_scripts/vendors.swig' %}
@@ -66,7 +68,6 @@
   {% include '_scripts/third-party/tinysou.swig' %}
   {% include '_scripts/third-party/localsearch.swig' %}
   {% include '_scripts/third-party/mathjax.swig' %}
-  {% include '_scripts/third-party/baidushare.swig' %}
   {% include '_scripts/third-party/lean-analytics.swig' %}
 
 </body>
