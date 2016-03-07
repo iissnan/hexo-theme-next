@@ -27,11 +27,11 @@ since: 2009
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   #home: /
-  #categories: /categories
-  sam: sam
-  archives: archives
-  tags: tag
-  about: about
+  #categories: categories/
+  sam: sam/
+  archives: archives/
+  tags: tags/
+  about: about/
   #commonweal: /404.html
 
 
