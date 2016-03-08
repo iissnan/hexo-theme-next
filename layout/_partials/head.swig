@@ -47,7 +47,7 @@
 
 
 {% if theme.rss === '' and config.feed and config.feed.path %}
-  {% set theme.rss = config.root + config.feed.path %}
+  {% set theme.rss = config.feed.path %}
 {% endif %}
 {% if theme.rss %}
   <link rel="alternate" href="{{ url_for(theme.rss) }}" title="{{ config.title }}" type="application/atom+xml" />
