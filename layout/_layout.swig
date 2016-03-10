@@ -67,7 +67,6 @@
   {% include '_scripts/third-party/mathjax.swig' %}
   {% include '_scripts/third-party/baidushare.swig' %}
   {% include '_scripts/third-party/lean-analytics.swig' %}
-  {% include '_scripts/third-party/cnzz-count.swig' %}
 
 </body>
 </html>
