@@ -201,6 +201,9 @@ disqus_shortname: flashlab
 # Google Analytics
 #google_analytics:
 
+# CNZZ count
+#cnzz_siteid:
+
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
