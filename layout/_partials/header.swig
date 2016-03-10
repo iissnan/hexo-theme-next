@@ -28,9 +28,10 @@
 
 <nav class="site-nav">
   {% set hasSearch = theme.swiftype_key || theme.tinysou_Key || config.search %}
+  {% set isMist = theme.scheme === 'Mist'%}
 
   {% if theme.menu %}
-    <ul id="menu" class="menu">
+    <ul id="menu" class="menu {{ hasSearch and 'menu-left' }}">
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
@@ -43,7 +44,7 @@
         </li>
       {% endfor %}
 
-      {% if hasSearch %}
+      {% if not isMist and hasSearch %}
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
             <a href="#" class="st-search-show-outputs">
