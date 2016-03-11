@@ -1,18 +1,20 @@
-.search-result-list li{
-  list-style-type: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 ul.search-result-list {
   padding-left: 0px;
-  margin: 0px 0px 0px 12px;
+  margin: 0px 5px 0px 8px;
+}
+p.search-result {
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
 }
 a.search-result-title {
   font-weight: bold;
 }
 a.search-result {
   border-bottom: transparent;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .search-keyword {
   border-bottom: 1px dashed #4088b8;
@@ -21,7 +23,7 @@ a.search-result {
 #search-result {
   display: none;
   position: absolute;
-  width: 158px;
+  width: 146px;
   border: 1px solid #ccc;
   background: #fff;
   cursor: default;
@@ -30,8 +32,8 @@ a.search-result {
   z-index: 999;
 }
 #local-search-result {
+  height: 90%;
   overflow: auto;
-  max-height: 3in;
 }
 .site-search-form {
   background: $whitesmoke;
@@ -40,36 +42,57 @@ a.search-result {
 .popup {
   display: none;
   position: fixed;
-  top: 100px;
+  top: 10%;
   left: 50%;
   width: 700px;
-  min-height: 300px;
+  height: 80%;
   margin-left: -350px;
-  padding: 0px 10px;
+  padding: 3px 0 0 10px;
   background: #fff;
   color: #333;
   z-index: 9999;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
-  box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
+  +mobile() { 
+    padding: 3px;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+  }
+//  box-shadow: 0 0 0 9999px rgba(0,0,0,0.5);
 }
+
+.popoverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 2080;
+  background-color: rgba(0,0,0,0.3);
+}
+
 #local-search-input {
+  margin-bottom: 10px;
   width: 50%;
 }
-.popup-mobile {
-  padding: 0px 0px;
-  top: 0;
-  left: 0;
-  margin: 0px 0 0;
-  width: 100%;
-}
+
 .popup-btn-close {
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: 14px;
   color: #4EBD79;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+#no-result {
+  position: absolute;
+  left: 44%;
+  top: 42%;
+  color: #ccc;
 }
