@@ -38,7 +38,7 @@
               <span class="site-state-item-name">{{ __('state.posts') }}</span>
             </a>
           </div>
-          
+
           {% if site.categories.length > 0 %}
             <div class="site-state-item site-state-categories">
               {% if theme.menu.categories %}<a href="{{ url_for(theme.menu.categories) }}">{% endif %}
@@ -91,14 +91,17 @@
           </div>
         {% endif %}
 
-        <div class="links-of-author motion-element">
+        {# Blogroll #}
+        <div class="links-of-blogroll motion-element">
           {% if theme.links %}
-            <p class="site-author-name">{{ theme.links_title }}</p>
-            {% for name, link in theme.links %}
-              <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank">{{ name }}</a>
-              </span>
-            {% endfor %}
+            <div class="links-of-blogroll-title">{{ theme.links_title }}</div>
+            <ul class="links-of-blogroll-list">
+              {% for name, link in theme.links %}
+                <li class="links-of-blogroll-item">
+                  <a href="{{ link }}" target="_blank">{{ name }}</a>
+                </li>
+              {% endfor %}
+            </ul>
           {% endif %}
         </div>
 
