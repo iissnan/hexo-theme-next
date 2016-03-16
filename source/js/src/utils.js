@@ -163,7 +163,7 @@ NexT.utils = NexT.$u = {
   },
 
   displaySidebar: function () {
-    if (!this.isDesktop()) {
+    if (!this.isDesktop() || this.isPisces()) {
       return;
     }
     $('.sidebar-toggle').trigger('click');
