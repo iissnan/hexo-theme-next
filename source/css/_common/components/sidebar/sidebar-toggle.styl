@@ -23,7 +23,7 @@
 
 .sidebar-toggle-line {
   position: relative;
-  display: inline-block;
+  display: block;
   vertical-align: top;
   height: 2px;
   width: 100%;
@@ -31,4 +31,11 @@
   margin-top: 3px;
 
   &:first-child { margin-top: 0; }
+  +mobile() {
+    width: 22px;
+    height: 2px;
+    background: $text-color;
+    border-radius: 1px;
+    margin-top: 4px;
+  }
 }
