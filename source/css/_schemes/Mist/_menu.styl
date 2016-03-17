@@ -36,6 +36,22 @@
     &:hover { background: #e1e1e1; }
   }
 
+  .menu-item-active a {
+    background: $gainsboro;
+    +mobile() {
+      &:after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        margin-top: -3px;
+        right: 15px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $grey;
+      }
+    }
+  }
   a::before {
       display: none;
 
