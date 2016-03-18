@@ -54,44 +54,6 @@ pre
     padding-right: 20px
   .line
     height: 20px
-.gist
-  margin: 20px 0
-  border-style: solid
-  border-color: $border-color
-  border-width: 1px 0
-  background: highlight-background
-  padding: 15px $content-desktop-padding 15px 15px
-  .gist-file
-    border: none
-    font-family: $font-family-monospace
-    margin: 0
-    .gist-data
-      background: none
-      border: none
-      .line-numbers
-        @extend $line-numbers
-        background: none
-        border: none
-        padding: 0 20px 0 0
-      .line-data
-        padding: 0 !important
-    .highlight
-      margin: 0
-      padding: 0
-      border: none
-    .gist-meta
-      background: highlight-background
-      color: highlight-comment
-      font: 13px $font-family-base
-      text-shadow: 0 0
-      padding: 0
-      margin-top: 1em
-      margin-left: $content-desktop-padding
-      a
-        color: color-link
-        font-weight: normal
-        &:hover
-          text-decoration: underline
 
 pre
   .comment
@@ -115,6 +77,7 @@ pre
   .literal
   .params
   .constant
+  .command
     color: highlight-orange
   .ruby .class .title
   .css .rules .attribute
@@ -125,6 +88,9 @@ pre
   .header
   .ruby .symbol
   .xml .cdata
+  .special
+  .number
+  .formula
     color: highlight-green
   .title
   .css .hexcolor
