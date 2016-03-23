@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2016
 
 
 
@@ -27,7 +27,7 @@ rss:
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  #categories: /categories
+  categories: /categories
   #about: /about
   archives: /archives
   tags: /tags
@@ -69,8 +69,8 @@ scheme: Mist
 
 
 # Social links
-# social:
-  #GitHub:
+social:
+  GitHub: https://github.com/zzyhappyzzy
   #Others:
 
 # Social Icons
