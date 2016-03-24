@@ -4,7 +4,13 @@
   display: none;
   right: auto;
   bottom: auto;
-  -webkit-transform: none
+  overflow: visible;
+  overflow-style: scrollbar;
+  -ms-overflow-style: scrollbar;
+  -moz-overflow-style: scrollbar;
+  -webkit-transform: none;
+
+  &::-webkit-scrollbar { display: block; }
 }
 
 
@@ -13,7 +19,11 @@
   width: 240px;
   color: $text-color;
   background: white;
-  &.affix { top: 0px; position: fixed; }
+
+  &.affix {
+    position: fixed;
+    top: 0;
+  }
 }
 
 .site-overview {
@@ -44,6 +54,7 @@
 
 .sidebar a {
   color: $black-light;
+
   &:hover { color: $black-deep; }
 }
 
@@ -62,7 +73,6 @@
   text-align: center;
 }
 
-$orange = #fc6423;
 .feed-link a {
   display: block;
   color: $orange;
@@ -97,4 +107,12 @@ $orange = #fc6423;
   .fa-globe { font-size: 15px; }
 }
 
-.post-toc ol { padding: 0 20px 10px; }
+.post-toc {
+  overflow: scroll;
+  overflow: -moz-scrollbars-none;
+  overflow-style: none;
+  -ms-overflow-style: none;
+  -moz-overflow-style: none;
+
+  &::-webkit-scrollbar { display: none; }
+}
