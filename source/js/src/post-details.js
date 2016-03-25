@@ -4,6 +4,8 @@ $(document).ready(function () {
   var tocSelector = '.post-toc';
   var $tocElement = $(tocSelector);
   var activeCurrentSelector = '.active-current';
+  var scrollIntoViewTimer;
+  var updateTOCWrapperHeighttimer;
 
   $tocElement
     .on('activate.bs.scrollspy', function () {
@@ -12,8 +14,13 @@ $(document).ready(function () {
       removeCurrentActiveClass();
       $currentActiveElement.addClass('active-current');
 
-      $currentActiveElement.scrollintoview();
-      //$tocElement[0].scrollTop = $currentActiveElement.position().top;
+      if (scrollIntoViewTimer) {
+        clearTimeout(scrollIntoViewTimer);
+      }
+
+      scrollIntoViewTimer = setTimeout(function () {
+        $currentActiveElement.scrollintoview();
+      }, 0);
     })
     .on('clear.bs.scrollspy', function () {
       removeCurrentActiveClass();
@@ -26,6 +33,24 @@ $(document).ready(function () {
 
   $('body').scrollspy({ target: tocSelector });
 
+  !NexT.utils.isPisces() && function () {
+    $(window).on('resize', function () {
+      if (updateTOCWrapperHeighttimer) {
+        clearTimeout(updateTOCWrapperHeighttimer);
+      }
+
+      updateTOCWrapperHeighttimer = setTimeout(function () {
+        updateTOCWrapperHeight(document.body.clientHeight - 70);
+      }, 0);
+    });
+  }();
+
+  updateTOCWrapperHeight(document.body.clientHeight - 70);
+
+  function updateTOCWrapperHeight (height) {
+    height = height || 'auto';
+    $('.post-toc').css('max-height', height);
+  }
 });
 
 $(document).ready(function () {
