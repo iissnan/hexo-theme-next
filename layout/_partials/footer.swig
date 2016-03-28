@@ -15,6 +15,7 @@
 <div class="powered-by">
   {{ __('footer.powered', '<a class="theme-link" href="http://hexo.io">Hexo</a>') }}
 </div>
+
 <!--
 <div class="theme-info">
   {{ __('footer.theme') }} -
@@ -23,7 +24,9 @@
   </a>
 </div>
 -->
-<div class="theme-info">Don't touch
+
+<div class="theme-info">
+Total visit&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;times
   <a class="theme-link" href='javascript:(
     function go() {
     var songs = [
@@ -195,8 +198,10 @@
         }
     }
     })()'>
-     me
+     Amazing!
   </a>
 </div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 {% block footer %}{% endblock %}
