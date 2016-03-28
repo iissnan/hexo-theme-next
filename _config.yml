@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "isudox, sudoz"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2015
 
 
 
@@ -27,10 +27,10 @@ rss:
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  #categories: /categories
-  #about: /about
   archives: /archives
+  categories: /categories
   tags: /tags
+  about: /about
   #commonweal: /404.html
 
 
@@ -57,8 +57,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+# scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -69,9 +69,10 @@ scheme: Muse
 
 
 # Social links
-# social:
-  #GitHub:
-  #Others:
+social:
+  Github: https://github.com/isudox
+  Twitter: https://twitter.com/isudox
+  StackOverflow: https://stackoverflow.com/users/4305743/sudoz
 
 # Social Icons
 social_icons:
@@ -79,6 +80,7 @@ social_icons:
   # Icon Mappings
   GitHub: github
   Twitter: twitter
+  StackOverflow: stack-overflow
   Weibo: weibo
 
 
@@ -138,7 +140,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
@@ -151,6 +153,17 @@ auto_excerpt:
 # Use Lato font
 use_font_lato: true
 
+# Links, chinese available
+links_title: Links
+# links
+links:
+  Git Book: http://git-scm.com/book/
+  LeetCode: https://leetcode.com/problemset/algorithms/
+  Guava Wiki: https://github.com/google/guava/wiki/
+  Markdown Syntax: https://daringfireball.net/projects/markdown/syntax/
+  JavaScript Garden: https://bonsaiden.github.io/JavaScript-Garden/
+  Django Documentation: https://docs.djangoproject.com/en/1.9/
+
 
 
 # ---------------------------------------------------------------
@@ -158,7 +171,7 @@ use_font_lato: true
 # ---------------------------------------------------------------
 
 # MathJax Support
-mathjax:
+mathjax: false
 
 
 # Swiftype Search API Key

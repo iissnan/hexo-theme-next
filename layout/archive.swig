@@ -11,6 +11,7 @@
   <section id="posts" class="posts-collapse">
     <span class="archive-move-on"></span>
 
+<!--
     <span class="archive-page-counter">
       {% set cheers %}
       {% set posts_length = site.posts.length %}
@@ -23,6 +24,10 @@
         {% set cheers = 'um' %}
       {% endif %}
       {{ __('cheers.' + cheers) }}! {{ _p("counter.archive_posts", site.posts.length) }} {{ __('keep_on') }}
+    </span>
+-->
+    <span class="archive-page-counter">
+      <h2 style:"font-family: Helvetica;">Timeline</h2>
     </span>
 
     {% for post in page.posts %}
