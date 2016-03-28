@@ -26,7 +26,9 @@
 -->
 
 <div class="theme-info">
-Total visit&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;times
+<span id="busuanzi_container_site_pv" style='display:none'>Total view&nbsp;<span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span>&nbsp;</span>
+<span id="busuanzi_container_site_uv" style='display:none'>Total visitor&nbsp;<span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>&nbsp;</span>
+<span id="busuanzi_container_page_pv" style='display:none'>Page view&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span></span>
   <a class="theme-link" href='javascript:(
     function go() {
     var songs = [
