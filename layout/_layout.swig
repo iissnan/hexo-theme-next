@@ -36,7 +36,7 @@
           {% include '_partials/duoshuo-hot-articles.swig' %}
           {% include '_partials/comments.swig' %}
         </div>
-        {% if theme.sidebar !== 'remove' %}
+        {% if theme.sidebar.display !== 'remove' %}
           {% block sidebar %}{% endblock %}
         {% endif %}
       </div>
