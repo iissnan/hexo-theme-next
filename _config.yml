@@ -78,7 +78,7 @@ social:
 social_icons:
   enable: true
   # Icon Mappings
-  GitHub: github
+  Github: github
   Twitter: twitter
   StackOverflow: stack-overflow
   Weibo: weibo
