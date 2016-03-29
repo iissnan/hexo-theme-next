@@ -4,14 +4,11 @@
   color: $grey-dim;
 }
 
-.post-toc-wrap {
-  overflow: hidden;
-  width: 220px;
-}
+.post-toc-wrap { overflow: hidden; }
 
 .post-toc {
   overflow: auto;
-  width: 240px;
+  width: calc(100% + 18px);
 }
 
 .post-toc ol {
@@ -20,6 +17,8 @@
   text-align: left;
   list-style: none;
   font-size: 14px;
+
+  & > ol { padding-left: 0; }
 
   a {
     the-transition();

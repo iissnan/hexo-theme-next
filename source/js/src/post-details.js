@@ -1,56 +1,79 @@
 /* global NexT: true */
 
 $(document).ready(function () {
-  var tocSelector = '.post-toc';
-  var $tocElement = $(tocSelector);
-  var activeCurrentSelector = '.active-current';
-  var scrollIntoViewTimer;
-  var updateTOCWrapperHeighttimer;
 
-  $tocElement
-    .on('activate.bs.scrollspy', function () {
-      var $currentActiveElement = $(tocSelector + ' .active').last();
+  initScrollSpy();
+  NexT.utils.needAffix() && initAffix();
+  initTOCHeight();
 
-      removeCurrentActiveClass();
-      $currentActiveElement.addClass('active-current');
+  function initScrollSpy () {
+    var tocSelector = '.post-toc';
+    var $tocElement = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
 
-      if (scrollIntoViewTimer) {
-        clearTimeout(scrollIntoViewTimer);
-      }
+    $tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
 
-      scrollIntoViewTimer = setTimeout(function () {
-        $currentActiveElement.scrollintoview();
-      }, 0);
-    })
-    .on('clear.bs.scrollspy', function () {
-      removeCurrentActiveClass();
-    });
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+      })
+      .on('clear.bs.scrollspy', removeCurrentActiveClass);
 
-  function removeCurrentActiveClass () {
-    $(tocSelector + ' ' + activeCurrentSelector)
-      .removeClass(activeCurrentSelector.substring(1));
+    $('body').scrollspy({ target: tocSelector });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
   }
 
-  $('body').scrollspy({ target: tocSelector });
+  function initAffix () {
+    var headerHeight = $('.header-inner').height();
+    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var sidebarTop = headerHeight + 10;
 
-  !NexT.utils.isPisces() && function () {
-    $(window).on('resize', function () {
-      if (updateTOCWrapperHeighttimer) {
-        clearTimeout(updateTOCWrapperHeighttimer);
+    $('.sidebar-inner').affix({
+      offset: {
+        top: sidebarTop,
+        bottom: footerOffset
       }
+    });
 
-      updateTOCWrapperHeighttimer = setTimeout(function () {
-        updateTOCWrapperHeight(document.body.clientHeight - 70);
+    $(document)
+      .on('affixed.bs.affix', updateTOCHeight.bind(null, document.body.clientHeight - 100))
+      .on('affixed-top.bs.affix', updateTOCHeight);
+  }
+
+  function initTOCHeight () {
+    var updateTOCHeightTimer;
+
+    $(window).on('resize', function () {
+      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
+
+      updateTOCHeightTimer = setTimeout(function () {
+        var tocWrapperHeight;
+        var availableHeight = document.body.clientHeight - 100;
+
+        if ( NexT.utils.needAffix() ) {
+          tocWrapperHeight = $('.sidebar-inner').hasClass('affix') ? availableHeight : 'auto';
+        } else {
+          tocWrapperHeight = availableHeight;
+        }
+
+        updateTOCHeight(tocWrapperHeight);
       }, 0);
     });
-  }();
 
-  updateTOCWrapperHeight(document.body.clientHeight - 70);
+    // Initialize TOC Height.
+    updateTOCHeight(document.body.clientHeight - 100);
+  }
 
-  function updateTOCWrapperHeight (height) {
+  function updateTOCHeight (height) {
     height = height || 'auto';
     $('.post-toc').css('max-height', height);
   }
+
 });
 
 $(document).ready(function () {

@@ -175,5 +175,14 @@ NexT.utils = NexT.$u = {
 
   isPisces: function () {
     return CONFIG.scheme === 'Pisces';
+  },
+
+  /**
+   * Affix behaviour for Sidebar.
+   *
+   * @returns {Boolean}
+   */
+  needAffix: function () {
+    return this.isPisces();
   }
 };
