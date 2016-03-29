@@ -27,8 +27,8 @@ rss:
 # Remove leading slashes ( "/archives" -> "archives" )
 menu:
   home: /
-  #categories: /categories
-  #about: /about
+  categories: /categories
+  about: /about
   archives: /archives
   tags: /tags
   #commonweal: /404.html
@@ -57,8 +57,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-#scheme: Mist
-
+#scheme: Pisces
+scheme: Mist # 默认有效的
+#scheme: Muse
 
 
 
@@ -71,16 +72,25 @@ menu_icons:
 #  - always  expand for all pages automatically
 #  - hide    expand only when click on the sidebar toggle icon.
 #  - remove  Totally remove sidebar including sidebar toggle icon.
-sidebar: post
-#sidebar: always
-#sidebar: hide
+# sidebar: post
+# sidebar: always
+sidebar: hide
 #sidebar: remove
 
 
 # Social links
-# social:
-  #GitHub:
+social:
+    GitHub: http://awanke.github.com
+    Twitter: https://twitter.com/XXX
+    Weibo: http://weibo.com/XXX
+    Facebook: https://www.facebook.com/XXX
+    JianShu: http://www.jianshu.com/XXX
   #Others:
+# title
+links_title: Links
+links:
+    MacTalk: http://macshuo.com/
+    local: http://localhost:4000/
 
 # Social Icons
 social_icons:
@@ -165,6 +175,8 @@ mathjax:
 # Baidu Analytics ID
 #baidu_analytics:
 
+tencent_analytics: 34865691
+
 # Duoshuo ShortName
 #duoshuo_shortname:
 
@@ -172,10 +184,10 @@ mathjax:
 #disqus_shortname:
 
 # Share
-#jiathis:
+jiathis: true
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
