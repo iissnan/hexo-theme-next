@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   initScrollSpy();
   NexT.utils.needAffix() && initAffix();
-  initTOCHeight();
+  initTOCDimension();
 
   function initScrollSpy () {
     var tocSelector = '.post-toc';
@@ -45,7 +45,7 @@ $(document).ready(function () {
       .on('affixed-top.bs.affix', updateTOCHeight);
   }
 
-  function initTOCHeight () {
+  function initTOCDimension () {
     var updateTOCHeightTimer;
 
     $(window).on('resize', function () {
@@ -67,6 +67,10 @@ $(document).ready(function () {
 
     // Initialize TOC Height.
     updateTOCHeight(document.body.clientHeight - 100);
+
+    // Initialize TOC Width.
+    var scrollbarWidth = NexT.utils.getScrollbarWidth();
+    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
   }
 
   function updateTOCHeight (height) {
