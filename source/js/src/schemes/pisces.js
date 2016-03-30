@@ -1,9 +1,5 @@
-/* global NexT: true */
-
 $(document).ready(function () {
-  var $sidebar = $('#sidebar');
-  var headerHeight = $('.header-inner').height();
-  var sidebarTop = headerHeight + 10;
+  var sidebarTop = $('.header-inner').height() + 10;
 
-  $sidebar.css({ 'margin-top': sidebarTop }).show();
+  $('#sidebar').css({ 'margin-top': sidebarTop }).show();
 });
