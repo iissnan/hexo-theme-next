@@ -41,8 +41,9 @@ $(document).ready(function () {
     });
 
     $(document)
-      .on('affixed.bs.affix', updateTOCHeight.bind(null, document.body.clientHeight - 100))
-      .on('affixed-top.bs.affix', updateTOCHeight);
+      .on('affixed.bs.affix', function () {
+        updateTOCHeight(document.body.clientHeight - 100)
+      });
   }
 
   function initTOCDimension () {
@@ -52,14 +53,7 @@ $(document).ready(function () {
       updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
 
       updateTOCHeightTimer = setTimeout(function () {
-        var tocWrapperHeight;
-        var availableHeight = document.body.clientHeight - 100;
-
-        if ( NexT.utils.needAffix() ) {
-          tocWrapperHeight = $('.sidebar-inner').hasClass('affix') ? availableHeight : 'auto';
-        } else {
-          tocWrapperHeight = availableHeight;
-        }
+        var tocWrapperHeight = document.body.clientHeight - 100;
 
         updateTOCHeight(tocWrapperHeight);
       }, 0);
