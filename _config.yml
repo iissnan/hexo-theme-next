@@ -80,7 +80,7 @@ sidebar: hide
 
 # Social links
 social:
-    GitHub: http://awanke.github.com
+    GitHub: http://github.com/awanke
     Twitter: https://twitter.com/XXX
     Weibo: http://weibo.com/XXX
     Facebook: https://www.facebook.com/XXX
@@ -90,6 +90,7 @@ social:
 links_title: Links
 links:
     MacTalk: http://macshuo.com/
+    git-blog: http://awanke.github.com
     local: http://localhost:4000/
 
 # Social Icons
