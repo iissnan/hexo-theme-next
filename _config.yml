@@ -2,7 +2,7 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 
-# Place your favicon.ico to /source directory.
+# Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
@@ -23,8 +23,7 @@ rss:
 # Menu Settings
 # ---------------------------------------------------------------
 
-# When running hexo in a subdirectory (e.g. domain.tld/blog)
-# Remove leading slashes ( "/archives" -> "archives" )
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
   #categories: /categories
@@ -37,11 +36,11 @@ menu:
 # Enable/Disable menu icons.
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of menu item and value is the name of FontAwsome icon.
+#   Key is the name of menu item and value is the name of FontAwsome icon. Key is case-senstive.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  # Icon Mapping.
+  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
   categories: th
@@ -68,15 +67,22 @@ scheme: Muse
 # ---------------------------------------------------------------
 
 
-# Social links
-# social:
-  #GitHub:
-  #Others:
+# Social Links
+# Key is the link label showing to end users.
+# Value is the target link (E.g. GitHub: https://github.com/iissnan)
+#social:
+  #LinkLabel: Link
 
-# Social Icons
+
+# Social Links Icons
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of the item and value is the name of FontAwsome icon. Key is case-senstive.
+#   When an globe mask icon presenting up means that the item has no mapping icon.
 social_icons:
   enable: true
-  # Icon Mappings
+  # Icon Mappings.
+  # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
   Weibo: weibo
@@ -85,11 +91,10 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-# default : /images/default_avatar.jpg
 #avatar:
 
 
-# TOC in the Sidebar
+# Table Of Ccontents in the Sidebar
 toc:
   enable: true
 
@@ -103,6 +108,7 @@ toc:
 #creative_commons: by-nc-sa
 #creative_commons:
 
+
 sidebar:
   # Sidebar Position, available value: left | right
   position: left
@@ -112,7 +118,7 @@ sidebar:
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
-  #  - remove  Totally remove sidebar including sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggler.
   display: post
   #display: always
   #display: hide
@@ -140,13 +146,17 @@ custom_logo:
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
 
+
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
 
-# Automatically Excerpt
+
+# Automatically Excerpt. Not recommand.
+# Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: false
   length: 150
+
 
 # Use Lato font
 use_font_lato: true
@@ -205,7 +215,7 @@ duoshuo_info:
   ua_enable: true
   admin_enable: false
   user_id: 0
-  #admin_nickname: ROOT
+  #admin_nickname: Author
 
 
 # Facebook SDK Support.
