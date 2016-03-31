@@ -74,8 +74,9 @@
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank">
                   {% if theme.social_icons.enable %}
-                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i> {{ name }}
+                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i>
                   {% endif %}
+                  {{ name }}
                 </a>
               </span>
             {% endfor %}
