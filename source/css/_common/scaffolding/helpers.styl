@@ -1,0 +1,94 @@
+//
+// Helpers
+// =================================================
+
+
+
+// Alignment
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }
+.text-nowrap  { white-space: nowrap; }
+
+
+// Transformation
+.text-lowercase  { text-transform: lowercase; }
+.text-uppercase  { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+
+// Center-align a block level element.
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Clearfix. http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix {
+  clearfix();
+}
+
+.pullquote {
+  width: 45%;
+  &.left {
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+  }
+  &.right {
+    float: right;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+}
+
+.highlight table, .gist table {
+  width: auto;
+
+  td { border: none; }
+}
+.highlight, .gist {
+  a {
+    color: $link-hover-color !important;
+    text-decoration: none !important;
+  }
+}
+
+.affix.affix.affix { position: fixed; }
+
+.translation {
+  margin-top: -20px;
+  font-size: 14px;
+  color: $grey-dark;
+}
+
+// https://davidwalsh.name/detect-scrollbar-width
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+}
+
+.use-motion .motion-element { opacity: 0; }
+
+#local-search-input {
+  padding: 3px;
+  border: none;
+  text-indent: 14px;
+  border-radius: 0;
+  width: 140px;
+  outline: none;
+  border-bottom: 1px solid $grey-dark;
+  background: inherit;
+  opacity: 0.5;
+  &:focus { opacity: 1; }
+};
+.search-icon {
+  position: absolute;
+  top: 9px;
+}

@@ -16,11 +16,13 @@ $grey         = #bbb
 $grey-dark    = #999
 $grey-dim     = #666
 $black-light  = #555
+$black-dim    = #333
 $black-deep   = #222
 $red          = #ff2a2a
 $blue-bright  = #87daff
 $blue         = #0684bd
 $blue-deep    = #262a30
+$orange       = #fc6423
 
 
 
@@ -32,7 +34,7 @@ $blue-deep    = #262a30
 $text-color                   = $black-light
 
 // Global link color.
-$link-color                   = $black-deep
+$link-color                   = $black-light
 $link-hover-color             = $black-deep
 $link-decoration-color        = $grey-light
 $link-decoration-hover-color  = $black-deep
@@ -43,6 +45,10 @@ $border-color                 = $grey-light
 // Background color for <body>
 $body-bg-color                = white
 
+// Selection
+$selection-bg                 = $blue-deep
+$selection-color              = white
+
 
 
 // Typography
@@ -52,25 +58,40 @@ $body-bg-color                = white
 // Font families.
 $font-family-sans-serif   = "Avenir Next", Avenir, Tahoma, Vendana, sans-serif
 $font-family-serif        = "PT Serif", Cambria, Georgia, "Times New Roman", serif
-$font-family-monospace    = "PT Mono", Consolas, Monaco, Menlo, monospace
-$font-family-chinese      = "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei"
+$font-family-monospace    = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
+$font-family-chinese      = "PingFang SC", "Microsoft YaHei"
 $font-family-base         = Lato, $font-family-chinese, sans-serif
-$font-family-headings     = Cambria, Georgia, $font-family-chinese, "Times New Roman", serif
+$font-family-headings     = Lato, $font-family-chinese, sans-serif
 $font-family-posts        = $font-family-base
+$font-family-icons        = 'FontAwesome'
+
+
+// Font Weight
+$font-weight-lighter      = 200
+$font-weight-light        = 300
+$font-weight-normal       = 400
+$font-weight-bold         = 600
+$font-weight-bolder       = 700
+
 
 // Font size
-$font-size-base           = 16px
+$font-size-base           = 14px
 $font-size-small          = $font-size-base - 2px
 $font-size-smaller        = $font-size-base - 4px
 $font-size-large          = $font-size-base + 2px
+$font-size-larger         = $font-size-base + 4px
 
 // Headings font size
-$font-size-headings-base  = 28px
-$font-size-headings-step  = 2px
+$font-size-headings-step    = 2px
+$font-size-headings-base    = 24px
+$font-size-headings-small   = $font-size-headings-base - $font-size-headings-step;
+$font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step;
+$font-size-headings-large   = $font-size-headings-base + $font-size-headings-step;
+$font-size-headings-larger  = $font-size-headings-large + $font-size-headings-step;
 
 // Global line height
-$line-height-base         = 1.7
-$line-height-code-block   = 1.2
+$line-height-base         = 2
+$line-height-code-block   = 1.6  // Can't be less than 1.3
 
 
 
@@ -102,14 +123,24 @@ $table-row-hover-bg-color       = $whitesmoke
 
 
 
+// Code Blocks
+// --------------------------------------------------
+$code-font-family = $font-family-monospace
+$code-font-size = 13px
+
+
+
 // Buttons
 // --------------------------------------------------
 
 $btn-font-weight =  normal
 
+$btn-default-radius              = 0
 $btn-default-bg                  = $black-deep
 $btn-default-color               = white
-$btn-default-border              = $black-deep
+$btn-default-font-size           = 14px
+$btn-default-border-width        = 2px
+$btn-default-border-color        = $black-deep
 $btn-default-hover-bg            = white
 $btn-default-hover-color         = $black-deep
 $btn-default-hover-border-color  = $black-deep
@@ -139,17 +170,24 @@ $pagination-active-border       = $grey-light
 // --------------------------------------------------
 
 $main-desktop                   = 960px
+$main-desktop-large             = 1200px
+
 $content-desktop                = 700px
-$sidebar-desktop                = 240px
+$content-desktop-large          = 900px
 $content-desktop-padding        = 40px
+
+$sidebar-desktop                = 240px
+
 $footer-height                  = 50px
+
 $gap-between-main-and-footer    = 100px
 
 
 
 // Headband
 // --------------------------------------------------
-$headband-bg = $black-deep
+$headband-height = 3px
+$headband-bg     = $black-deep
 
 
 
@@ -162,8 +200,13 @@ $head-bg                = white
 // Site Meta
 $site-meta-text-align   = center
 $brand-color            = white
+$brand-hover-color      = white
 $brand-bg               = $black-deep
 $brand-font-family      = $font-family-base
+$site-subtitle-color    = $grey-dark
+
+$subtitle-font-size     = 13px
+$subtitle-color         = $grey-dark
 
 // Menu
 $menu-link-border       = transparent
@@ -171,19 +214,65 @@ $menu-link-hover-border = $black-deep
 
 
 
+
 // Posts Collpase
 // --------------------------------------------------
-$posts-collpase-left        = 55px
-$posts-collpase-left-mobile = 5px
+$posts-collapse-left        = 55px
+$posts-collapse-left-mobile = 5px
+
+$read-more-color          = white
+$read-more-font-size      = 14px
+$read-more-bg-color       = $black-deep
+$read-more-border-radius  = 0
 
 
 
-// Section Sidebar
+
+// Sidebar
 // Variables for sidebar section elements.
 // --------------------------------------------------
+$sidebar-nav-color                = $black-light
+$sidebar-nav-hover-color          = $whitesmoke
+$sidebar-highlight                = $blue-bright
 
-$sidebar-highlight      = $blue-bright
+$site-author-name-color           = $whitesmoke
 
+$site-description-font-size       = 14px
+$site-description-color           = $black-light
+
+$site-state-item-count-font-size  = 18px
+$site-state-item-count-color      = inherit
+$site-state-item-name-font-size   = 13px
+$site-state-item-name-color       = inherit
+$site-state-item-border-color     = $black-dim
+
+$toc-link-color                       = $grey-dark
+$toc-link-border-color                = $black-light
+$toc-link-hover-color                 = $grey-light
+$toc-link-hover-border-color          = $grey-light
+$toc-link-active-color                = $sidebar-highlight
+$toc-link-active-border-color         = $sidebar-highlight
+$toc-link-active-current-color        = $sidebar-highlight
+$toc-link-active-current-border-color = $sidebar-highlight
+
+
+// Components
+// --------------------------------------------------
+
+// Back to top
+$b2t-opacity                  = 1
+$b2t-position-bottom          = -100px
+$b2t-position-bottom-on       = 19px
+$b2t-position-right           = 50px
+$b2t-font-size                = 12px
+$b2t-color                    = white
+$b2t-bg-color                 = $black-deep
+
+
+//  .post-expand .post-eof
+//  In the default (Mist) scheme, margin above and below the post separator
+$post-eof-margin-top    = 80px  //  or 160px for more white space
+$post-eof-margin-bottom = 60px  //  or 120px for less white space
 
 
 // Iconography
@@ -191,15 +280,8 @@ $sidebar-highlight      = $blue-bright
 // --------------------------------------------------
 
 // blockquote-center icon
-$blockquoteCenterIcon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEyIDM0aDZsNC04di0xMmgtMTJ2MTJoNnptMTYgMGg2bDQtOHYtMTJoLTEydjEyaDZ6Ii8+PHBhdGggZD0iTTAgMGg0OHY0OGgtNDh6IiBmaWxsPSJub25lIi8+PC9zdmc+"
-
-// chevrons
-$chevron-right = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5IDEyIiB3aWR0aD0iOXB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlLz48ZGVzYy8+PGRlZnMvPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiPjxnIGZpbGw9IiMwMDAwMDAiIGlkPSJDb3JlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYwLjAwMDAwMCwgLTkwLjAwMDAwMCkiPjxnIGlkPSJjaGV2cm9uLXJpZ2h0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNjAuNTAwMDAwLCA5MC4wMDAwMDApIj48cGF0aCBkPSJNMSwwIEwtMC40LDEuNCBMNC4yLDYgTC0wLjQsMTAuNiBMMSwxMiBMNyw2IEwxLDAgWiIgaWQ9IlNoYXBlIi8+PC9nPjwvZz48L2c+PC9zdmc+"
-$chevron-left = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIxMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA5IDEyIiB3aWR0aD0iOXB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlLz48ZGVzYy8+PGRlZnMvPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiPjxnIGZpbGw9IiMwMDAwMDAiIGlkPSJDb3JlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjE4LjAwMDAwMCwgLTkwLjAwMDAwMCkiPjxnIGlkPSJjaGV2cm9uLWxlZnQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxOC41MDAwMDAsIDkwLjAwMDAwMCkiPjxwYXRoIGQ9Ik03LjQsMS40IEw2LDAgTC04Ljg4MTc4NDJlLTE2LDYgTDYsMTIgTDcuNCwxMC42IEwyLjgsNiBMNy40LDEuNCBaIiBpZD0iU2hhcGUiLz48L2c+PC9nPjwvZz48L3N2Zz4="
-
-// Indicator for post toc
-$post-toc-indicator-top = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI2IDI2IiBoZWlnaHQ9IjI2cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNiAyNiIgd2lkdGg9IjI2cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMC4wNDYsMjQuNDE4IDIuMTMsMjYuNTAyIDEyLjk2NywxNS42NjYgMjMuODAzLDI2LjUwMiAyNS44ODcsMjQuNDE4IDEyLjk2NywxMS40OTggICIvPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMC4wNDYsMTMuNDE4IDIuMTMsMTUuNTAyIDEyLjk2Nyw0LjY2NiAyMy44MDMsMTUuNTAyIDI1Ljg4NywxMy40MTggMTIuOTY3LDAuNDk4ICAiLz48L2c+PC9zdmc+"
-$post-toc-indicator-bottom = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI2IDI2IiBoZWlnaHQ9IjI2cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAyNiAyNiIgd2lkdGg9IjI2cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMC4wNDYsMi41ODIgMi4xMywwLjQ5OCAxMi45NjcsMTEuMzM0IDIzLjgwMywwLjQ5OCAyNS44ODcsMi41ODIgMTIuOTY3LDE1LjUwMiAgIi8+PHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIwLjA0NiwxMy41ODIgMi4xMywxMS40OTggMTIuOTY3LDIyLjMzNCAyMy44MDMsMTEuNDk4IDI1Ljg4NywxMy41ODIgMTIuOTY3LDI2LjUwMiAgIi8+PC9nPjwvc3ZnPg=="
+$center-quote-left  = '../images/quote-l.svg'
+$center-quote-right = '../images/quote-r.svg'
 
 // search icon
 $search-icon = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMTZweCIgaWQ9IkxheWVyXzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE2IDE2OyIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIwIDAgMTYgMTYiIHdpZHRoPSIxNnB4IiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNMTUuNywxNC4zbC0zLjEwNS0zLjEwNUMxMy40NzMsMTAuMDI0LDE0LDguNTc2LDE0LDdjMC0zLjg2Ni0zLjEzNC03LTctN1MwLDMuMTM0LDAsN3MzLjEzNCw3LDcsNyAgYzEuNTc2LDAsMy4wMjQtMC41MjcsNC4xOTQtMS40MDVMMTQuMywxNS43YzAuMTg0LDAuMTg0LDAuMzgsMC4zLDAuNywwLjNjMC41NTMsMCwxLTAuNDQ3LDEtMUMxNiwxNC43ODEsMTUuOTQ2LDE0LjU0NiwxNS43LDE0LjN6ICAgTTIsN2MwLTIuNzYyLDIuMjM4LTUsNS01czUsMi4yMzgsNSw1cy0yLjIzOCw1LTUsNVMyLDkuNzYyLDIsN3oiLz48L3N2Zz4="

@@ -1,0 +1,109 @@
+.use-motion .sidebar .motion-element { opacity: 1; }
+
+.sidebar {
+  display: none;
+  right: auto;
+  bottom: auto;
+
+  // Do NOT delete this line
+  // or Affix (position: fixed) will not work in Google Chrome.
+  -webkit-transform: none;
+}
+
+
+.sidebar-inner {
+  box-sizing: border-box;
+  width: 240px;
+  color: $text-color;
+  background: white;
+
+  &.affix {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.site-overview {
+  margin: 0 10px;
+  text-align: left;
+}
+
+.site-author {
+  clearfix();
+}
+
+.site-author-image {
+  float: left;
+  margin-right: 10px;
+  max-width: 64px;
+  border-width: 1px;
+  border-color: $gainsboro;
+}
+.site-author-name {
+  margin: 0;
+  font-weight: $font-weight-bold;
+}
+
+.site-description {
+  margin-top: 0;
+  line-height: 1.6;
+}
+
+.sidebar a {
+  color: $black-light;
+
+  &:hover { color: $black-deep; }
+}
+
+.links-of-author-item {
+  a:before { display: none; }
+  a {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+}
+
+.site-state {
+  text-align: center;
+}
+
+.feed-link {
+  border-top: 1px dotted $grey-light;
+  border-bottom: 1px dotted $grey-light;
+  text-align: center;
+}
+
+.feed-link a {
+  display: block;
+  color: $orange;
+  border: none;
+
+  &:hover {
+    background: none;
+    color: darken($orange, 20%);
+
+    i { color: darken($orange, 20%); }
+  }
+}
+
+.links-of-author-item {
+  display: inline-block;
+  width: 48%;
+  a {
+    box-sizing: border-box;
+    display: block;
+    margin-right: 0;
+    padding: 0 5px;
+    text-decoration: none;
+    &:hover {
+      border-radius: 4px;
+      background: $gainsboro;
+    }
+  }
+  .fa {
+    margin-right: 4px;
+    font-size: 16px;
+  }
+  .fa-globe { font-size: 15px; }
+}
+

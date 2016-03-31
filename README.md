@@ -4,6 +4,7 @@
 
 <a href="http://notes.iissnan.com" target="_blank">在线预览 Preview</a> | <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.en.md)
 
+[![Join the chat at https://gitter.im/iissnan/hexo-theme-next](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/iissnan/hexo-theme-next?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
 
@@ -27,7 +28,6 @@ NexT is built for easily use with elegant appearance. First things first, always
 
 ## [开发历史 Changelog](https://github.com/iissnan/hexo-theme-next/wiki/Changelog)
 
-[![views](https://sourcegraph.com/api/repos/github.com/iissnan/hexo-theme-next/.counters/views.svg)](https://sourcegraph.com/github.com/iissnan/hexo-theme-next)
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
 [![jquery-image]][jquery-url]

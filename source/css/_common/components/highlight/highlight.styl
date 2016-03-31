@@ -1,0 +1,138 @@
+// https://github.com/chriskempson/tomorrow-theme
+
+@require "theme"
+
+// Placeholder: $code-block
+$code-block {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 15px;
+  font-size $code-font-size;
+  color: $highlight-foreground;
+  background: $highlight-background;
+  line-height: $line-height-code-block;
+}
+
+pre, code { font-family: $code-font-family; }
+
+code {
+  word-break: break-all;
+  background: $highlight-background;
+  text-shadow: 0 1px white;
+  padding: 0 0.3em;
+}
+
+pre {
+  @extend $code-block;
+
+  code {
+    padding: 0;
+    background: none;
+    text-shadow: none;
+  }
+}
+
+.highlight {
+  @extend $code-block;
+
+  pre {
+    border: none;
+    margin: 0;
+    padding: 1px;
+  }
+
+  table {
+    margin: 0;
+    width: auto;
+    border: none;
+  }
+
+  td {
+    border: none;
+    padding: 0;
+  }
+
+  figcaption {
+    clearfix();
+    font-size: 0.85em;
+    color: $highlight-comment;
+    line-height: 1em;
+    margin-bottom: 1em;
+
+    a { float: right; }
+  }
+
+  .gutter pre {
+    color: $grey-dim;
+    text-align: right;
+    padding-right: 20px;
+  }
+
+  .line { height: 20px; }
+}
+
+pre {
+
+  .comment { color: $highlight-comment; }
+
+  .variable
+  .attribute
+  .tag
+  .regexp
+  .ruby .constant
+  .xml .tag .title
+  .xml .pi
+  .xml .doctype
+  .html .doctype
+  .css .id
+  .css .class
+  .css .pseudo {
+    color: $highlight-red;
+  }
+
+  .number
+  .preprocessor
+  .built_in
+  .literal
+  .params
+  .constant
+  .command {
+    color: $highlight-orange;
+  }
+
+  .ruby .class .title
+  .css .rules .attribute
+  .string
+  .value
+  .inheritance
+  .header
+  .ruby .symbol
+  .xml .cdata
+  .special
+  .number
+  .formula {
+    color: $highlight-green;
+  }
+
+  .title
+  .css .hexcolor {
+    color: $highlight-aqua;
+  }
+
+  .function
+  .python .decorator
+  .python .title
+  .ruby .function .title
+  .ruby .title .keyword
+  .perl .sub
+  .javascript .title
+  .coffeescript .title {
+    color: $highlight-blue;
+  }
+
+  .keyword
+  .javascript .function {
+    color: $highlight-purple;
+  }
+
+}

@@ -1,0 +1,39 @@
+.posts-expand .post-meta {
+  margin: 3px 0 60px 0;
+  color: $grey-dark;
+  font-size: 12px;
+  text-align: center;
+
+  .post-category-list {
+    display: inline-block;
+    margin: 0;
+    padding: 3px;
+  }
+  .post-category-list-link {
+    color: $grey-dark;
+  }
+}
+
+
+.post-meta-item-icon {
+  display: none;
+  margin-right: 3px;
+  +tablet() {
+    display: inline-block;
+  }
+  +mobile() {
+    display: inline-block;
+  }
+}
+.post-meta-item-text {
+  +tablet() {
+    display: none;
+  }
+  +mobile() {
+    display: none;
+  }
+}
+
+.posts-expand .post-comments-count {
+  +mobile() { display: none; }
+}

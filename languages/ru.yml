@@ -3,6 +3,8 @@ title:
   category: Категория
   tag: Тэг
 
+author: Author
+
 menu:
   home: Домой
   archives: Архив
@@ -16,6 +18,7 @@ sidebar:
   toc: Содержание
 
 post:
+  sticky: Sticky
   posted: отправлено
   in: в
   read_more: Читать дальше
