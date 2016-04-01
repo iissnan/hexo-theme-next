@@ -18,5 +18,5 @@
       </div>
     {% endif %}
   </div>
-<div>
+</div>
 {% endif %}
