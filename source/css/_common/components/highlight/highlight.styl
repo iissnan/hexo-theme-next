@@ -16,10 +16,12 @@ $code-block {
 pre, code { font-family: $code-font-family; }
 
 code {
+  padding: 2px 4px;
   word-break: break-all;
-  background: $highlight-background;
-  text-shadow: 0 1px white;
-  padding: 0 0.3em;
+  color: $code-foreground;
+  background: $code-background;
+  border-radius: $code-border-radius;
+  font-size $code-font-size;
 }
 
 pre {
