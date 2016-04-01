@@ -61,6 +61,51 @@ scheme: Muse
 #scheme: Pisces
 
 
+# ---------------------------------------------------------------
+# Font Settings
+# - Find fonts on Google Fonts (https://www.google.com/fonts)
+# - All fonts set here will have the following styles:
+#     light, light italic, normal, normal intalic, bold, bold italic
+# - Be aware that setting too much fonts will cause site running slowly
+# - Introduce in 5.1.0
+# ---------------------------------------------------------------
+font:
+  enable: true
+
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  host:
+
+  # Global font settings used on <body> element.
+  global:
+    # external: true will load this font family from host.
+    external: true
+    family: Lato
+
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family:
+
+  # Font settings for posts
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo
+  # Fallback to `global` font settings.
+  logo:
+    external: true
+    family:
+
+  # Font settings for <code> and code blocks.
+  code:
+    external: true
+    family:
+
+
+
 
 # ---------------------------------------------------------------
 # Sidebar Settings
@@ -299,4 +344,4 @@ js: js
 images: images
 
 # Theme version
-version: 0.5.0
+version: 5.1.0

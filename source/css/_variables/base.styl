@@ -55,14 +55,19 @@ $selection-color              = white
 // Font, line-height, and elements colors.
 // --------------------------------------------------
 
+
+get_font_family(config) {
+  custom_family = hexo-config(config)
+  return custom_family is a 'string' ? custom_family : ''
+}
+
 // Font families.
-$font-family-sans-serif   = "Avenir Next", Avenir, Tahoma, Vendana, sans-serif
-$font-family-serif        = "PT Serif", Cambria, Georgia, "Times New Roman", serif
-$font-family-monospace    = "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace
 $font-family-chinese      = "PingFang SC", "Microsoft YaHei"
-$font-family-base         = Lato, $font-family-chinese, sans-serif
-$font-family-headings     = Lato, $font-family-chinese, sans-serif
-$font-family-posts        = $font-family-base
+$font-family-base         = get_font_family('font.global.family') , $font-family-chinese, sans-serif
+$font-family-logo         = get_font_family('font.logo.family')   , $font-family-base
+$font-family-headings     = get_font_family('font.heading.family'), $font-family-base
+$font-family-posts        = get_font_family('font.posts.family')  , $font-family-base
+$font-family-monospace    = get_font_family('font.code.family')   , consolas, Menlo, $font-family-chinese, monospace
 $font-family-icons        = 'FontAwesome'
 
 
@@ -80,6 +85,7 @@ $font-size-small          = $font-size-base - 2px
 $font-size-smaller        = $font-size-base - 4px
 $font-size-large          = $font-size-base + 2px
 $font-size-larger         = $font-size-base + 4px
+
 
 // Headings font size
 $font-size-headings-step    = 2px
@@ -205,7 +211,6 @@ $site-meta-text-align   = center
 $brand-color            = white
 $brand-hover-color      = white
 $brand-bg               = $black-deep
-$brand-font-family      = $font-family-base
 $site-subtitle-color    = $grey-dark
 
 $subtitle-font-size     = 13px
