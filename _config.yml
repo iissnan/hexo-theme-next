@@ -161,7 +161,11 @@ auto_excerpt:
 # Use Lato font
 use_font_lato: true
 
-
+# Wechat Subscriber
+#wechat_subscriber: 
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
