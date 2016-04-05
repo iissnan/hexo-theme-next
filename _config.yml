@@ -261,8 +261,39 @@ use_motion: true
 # Fancybox
 fancybox: true
 
-# Static files
-vendors: vendors
+
+# Script Vendors.
+# Set a CDN address for the vendor you want to customize.
+# For example
+#    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+# Be aware that you should use the same version as internal ones to avoid potential problems.
+vendors:
+  # Internal path prefix. Please do not edit it.
+  _internal: vendors
+
+  # Internal version: 2.1.3
+  jquery:
+
+  # Internal version: 2.1.5
+  fancybox:
+
+  # Internal version: 1.0.6
+  fastclick:
+
+  # Internal version: 1.9.7
+  lazyload:
+
+  # Internal version: 1.2.1
+  velocity:
+
+  # Internal version: 1.2.1
+  velocity_ui:
+
+  # Internal version: 0.7.9
+  ua_parser:
+
+
+# Assets
 css: css
 js: js
 images: images
