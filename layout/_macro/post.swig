@@ -178,11 +178,13 @@
       {% endif  %}
     </div>
 
+<!--
     <div>
       {% if ! is_index %}
         {% include 'reward.swig' %}
       {% endif %}
     </div>
+-->
 
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
@@ -217,7 +219,15 @@
       {% if is_index and not isLast %}
         <div class="post-eof"></div>
       {% endif %}
+
     </footer>
+
+    <div>
+      {% if ! is_index %}
+        {% include 'reward.swig' %}
+      {% endif %}
+    </div>
+
   </article>
 
 {% endmacro %}

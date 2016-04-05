@@ -238,6 +238,11 @@ leancloud_visitors:
   app_id: 2apzMnyHrI7f76EHeamQjLII-gzGzoHsz
   app_key: Idinj01IR02KEjJaNu5krE0H
 
+# Donate links
+# reward_comment:
+wechatpay: /images/wx_donate_min.png
+# alipay:
+
 
 # Tencent analytics ID
 # tencent_analytics:
