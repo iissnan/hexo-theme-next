@@ -10,23 +10,23 @@
     {% set font_found = true %}
   {% endif %}
 
-  {% if font_config.headings.family and font_config.headings.external %}
+  {% if font_config.heading.family and font_config.heading.external %}
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
 
-    {% set font_families += font_config.headings.family + font_styles %}
+    {% set font_families += font_config.heading.family + font_styles %}
   {% endif %}
 
-  {% if font_config.posts.family and font_config.headings.external %}
+  {% if font_config.post.family and font_config.post.external %}
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
 
-    {% set font_families += font_config.posts.family + font_styles %}
+    {% set font_families += font_config.post.family + font_styles %}
   {% endif %}
 
-  {% if font_config.logo.family and font_config.headings.external %}
+  {% if font_config.logo.family and font_config.logo.external %}
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}
@@ -34,7 +34,7 @@
     {% set font_families += font_config.logo.family + font_styles %}
   {% endif %}
 
-  {% if font_config.code.family and font_config.headings.external %}
+  {% if font_config.code.family and font_config.code.external %}
     {% if font_found %}
       {% set font_families += '|' %}
     {% endif %}

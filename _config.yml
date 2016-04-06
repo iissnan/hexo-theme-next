@@ -95,9 +95,11 @@ font:
 
   # Font settings for Logo
   # Fallback to `global` font settings.
+  # The `size` option use `px` as unit
   logo:
     external: true
     family:
+    size:
 
   # Font settings for <code> and code blocks.
   code:

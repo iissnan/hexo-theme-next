@@ -57,17 +57,28 @@ $selection-color              = white
 
 
 get_font_family(config) {
-  custom_family = hexo-config(config)
-  return custom_family is a 'string' ? custom_family : ''
+  custom_family = hexo-config('font.' + config + '.family')
+  return custom_family is a 'string' ? custom_family : null
 }
 
 // Font families.
 $font-family-chinese      = "PingFang SC", "Microsoft YaHei"
-$font-family-base         = get_font_family('font.global.family') , $font-family-chinese, sans-serif
-$font-family-logo         = get_font_family('font.logo.family')   , $font-family-base
-$font-family-headings     = get_font_family('font.heading.family'), $font-family-base
-$font-family-posts        = get_font_family('font.posts.family')  , $font-family-base
-$font-family-monospace    = get_font_family('font.code.family')   , consolas, Menlo, $font-family-chinese, monospace
+
+$font-family-base         = $font-family-chinese, sans-serif
+$font-family-base         = get_font_family('global'), $font-family-chinese, sans-serif if get_font_family('global')
+
+$font-family-logo         = $font-family-base
+$font-family-logo         = get_font_family('logo'), $font-family-base if get_font_family('logo')
+
+$font-family-headings     = $font-family-base
+$font-family-headings     = get_font_family('heading'), $font-family-base if get_font_family('heading')
+
+$font-family-posts        = $font-family-base
+$font-family-posts        = get_font_family('post'), $font-family-base if get_font_family('post')
+
+$font-family-monospace    = consolas, Menlo, $font-family-chinese, monospace
+$font-family-monospace    = get_font_family('code'), consolas, Menlo, $font-family-chinese, monospace if get_font_family('code')
+
 $font-family-icons        = 'FontAwesome'
 
 
@@ -211,8 +222,11 @@ $site-meta-text-align   = center
 $brand-color            = white
 $brand-hover-color      = white
 $brand-bg               = $black-deep
-$site-subtitle-color    = $grey-dark
 
+$logo-font-size         = 20px
+$logo-font-size         = unit(hexo-config('font.logo.size'), px) if hexo-config('font.logo.size') is a 'unit'
+
+$site-subtitle-color    = $grey-dark
 $subtitle-font-size     = 13px
 $subtitle-color         = $grey-dark
 
