@@ -1,15 +1,15 @@
 {%
   set js_vendors = [
-    'jquery/index.js?v=2.1.3',
-    'fastclick/lib/fastclick.min.js?v=1.0.6',
-    'jquery_lazyload/jquery.lazyload.js?v=1.9.7',
-    'velocity/velocity.min.js',
-    'velocity/velocity.ui.min.js'
+    '//cdn.staticfile.org/jquery/1.11.3/jquery.min.js',
+    '//cdn.staticfile.org/fastclick/1.0.6/fastclick.min.js',
+    '//cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js',
+    '//cdn.staticfile.org/velocity/1.2.3/velocity.min.js',
+    '//cdn.staticfile.org/velocity/1.2.3/velocity.ui.min.js'
   ]
 %}
 
 {% if theme.fancybox %}
-  {% set js_vendors[js_vendors.length] = 'fancybox/source/jquery.fancybox.pack.js' %}
+  {% set js_vendors[js_vendors.length] = '//cdn.staticfile.org/fancybox/2.1.5/jquery.fancybox.pack.js' %}
 {% endif %}
 
 {# Reset `window.Promise` when it was not a function. #}
@@ -21,5 +21,5 @@
 </script>
 
 {% for vendor in js_vendors %}
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/{{ vendor }}"></script>
+  <script type="text/javascript" src="{{ vendor }}"></script>
 {% endfor %}
