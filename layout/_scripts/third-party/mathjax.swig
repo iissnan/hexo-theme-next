@@ -19,8 +19,8 @@
   </script>
 
   {% if config.language === 'zh-Hans' %}
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/MathJax.js"></script>
-    <script type="text/javascript" src="http://cdn.staticfile.org/mathjax/2.4.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
+    <script type="text/javascript" src="//cdn.staticfile.org/mathjax/2.5.0/MathJax.js"></script>
+    <script type="text/javascript" src="//cdn.staticfile.org/mathjax/2.5.0/config/TeX-AMS-MML_HTMLorMML.js"></script>
   {% else %}
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   {% endif %}

@@ -21,7 +21,7 @@
 
   {% if theme.duoshuo_info.ua_enable %}
     {% if theme.duoshuo_info.admin_enable %}
-      <script src="{{ url_for(theme.vendors) }}/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="//cdn.staticfile.org/UAParser.js/0.7.10/ua-parser.min.js"></script>
       <script src="{{ url_for(theme.js) }}/src/hook-duoshuo.js"></script>
     {% endif %}
   {% endif %}
