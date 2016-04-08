@@ -212,7 +212,7 @@ auto_excerpt:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 
-  
+
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
@@ -288,6 +288,9 @@ leancloud_visitors:
   app_id: #<app_id>
   app_key: #<app_key>
 
+# Busuanzi page views http://busuanzi.ibruce.info/
+busuanzi:
+  enable: true
 
 # Tencent analytics ID
 # tencent_analytics:
