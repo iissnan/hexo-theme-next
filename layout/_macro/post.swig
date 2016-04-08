@@ -115,6 +115,13 @@
               </span>
           {% endif %}
 
+          {# busuanzi PageView #}
+          {% if theme.busuanzi.enable %}
+             <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+             &nbsp; | &nbsp;
+             <span id="busuanzi_value_page_pv"></i></span> &nbsp; Views
+          {% endif %}
+          
         </div>
       </header>
     {% endif %}
@@ -177,7 +184,7 @@
         {{ post.content }}
       {% endif  %}
     </div>
-    
+
     <div>
       {% if ! is_index %}
         {% include 'wechat-subscriber.swig' %}
