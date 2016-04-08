@@ -67,7 +67,7 @@ scheme: Muse
 # - All fonts set here will have the following styles:
 #     light, light italic, normal, normal intalic, bold, bold italic
 # - Be aware that setting too much fonts will cause site running slowly
-# - Introduce in 5.1.0
+# - Introduce in 5.0.1
 # ---------------------------------------------------------------
 font:
   enable: true
@@ -205,14 +205,14 @@ auto_excerpt:
   length: 150
 
 
-# Use Lato font
-use_font_lato: true
-
 # Wechat Subscriber
 #wechat_subscriber:
   #enabled: true
   #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
   #description: ex. subscribe to my blog by scanning my public wechat account
+
+
+  
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
@@ -346,4 +346,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.0
+version: 5.0.1
