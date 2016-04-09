@@ -24,14 +24,15 @@
   }
 }
 
-.busuanzi-count {
-  &:before {
-    content: " ";
-    float: left;
-    width: 260px;
-    min-height: 25px;
+if hexo-config("scheme") == Pisces
+  .busuanzi-count {
+    &:before {
+      content: " ";
+      float: left;
+      width: 260px;
+      min-height: 25px;
+    }
   }
-}
 
 .site-uv,
 .site-pv,
