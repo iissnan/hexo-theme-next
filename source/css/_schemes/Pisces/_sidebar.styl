@@ -4,7 +4,10 @@
   display: none;
   right: auto;
   bottom: auto;
-  -webkit-transform: none
+
+  // Do NOT delete this line
+  // or Affix (position: fixed) will not work in Google Chrome.
+  -webkit-transform: none;
 }
 
 
@@ -13,7 +16,11 @@
   width: 240px;
   color: $text-color;
   background: white;
-  &.affix { top: 0px; position: fixed; }
+
+  &.affix {
+    position: fixed;
+    top: 0;
+  }
 }
 
 .site-overview {
@@ -44,6 +51,7 @@
 
 .sidebar a {
   color: $black-light;
+
   &:hover { color: $black-deep; }
 }
 
@@ -55,6 +63,9 @@
   }
 }
 
+.site-state {
+  text-align: center;
+}
 
 .feed-link {
   border-top: 1px dotted $grey-light;
@@ -62,7 +73,6 @@
   text-align: center;
 }
 
-$orange = #fc6423;
 .feed-link a {
   display: block;
   color: $orange;
@@ -97,4 +107,3 @@ $orange = #fc6423;
   .fa-globe { font-size: 15px; }
 }
 
-.post-toc ol { padding: 0 20px 10px; }

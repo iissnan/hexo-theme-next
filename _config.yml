@@ -63,6 +63,52 @@ scheme: Mist
 #scheme: Pisces
 
 
+# ---------------------------------------------------------------
+# Font Settings
+# - Find fonts on Google Fonts (https://www.google.com/fonts)
+# - All fonts set here will have the following styles:
+#     light, light italic, normal, normal intalic, bold, bold italic
+# - Be aware that setting too much fonts will cause site running slowly
+# - Introduce in 5.0.1
+# ---------------------------------------------------------------
+font:
+  enable: true
+
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  host:
+
+  # Global font settings used on <body> element.
+  global:
+    # external: true will load this font family from host.
+    external: true
+    family: Galdeano
+
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family:
+
+  # Font settings for posts
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo
+  # Fallback to `global` font settings.
+  # The `size` option use `px` as unit
+  logo:
+    external: true
+    family:
+    size:
+
+  # Font settings for <code> and code blocks.
+  code:
+    external: true
+    family:
+
+
 
 # ---------------------------------------------------------------
 # Sidebar Settings
@@ -154,9 +200,6 @@ auto_excerpt:
   enable: false
   length: 150
 
-# Use Lato font
-use_font_lato: true
-
 
 
 # ---------------------------------------------------------------
@@ -165,11 +208,13 @@ use_font_lato: true
 
 # MathJax Support
 mathjax:
+  enable: false
+  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
-# Swiftype Search API Key
+# Search API Key
 #swiftype_key:
-tinysou_Key: 
+#tinysou_Key: 
 
 # Baidu Analytics ID
 #baidu_analytics:
@@ -236,8 +281,8 @@ leancloud_visitors:
 # Tencent analytics ID
 # tencent_analytics:
 
-
-
+# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
+baidu_push: false
 
 
 
@@ -252,11 +297,41 @@ use_motion: true
 # Fancybox
 fancybox: false
 
-# Static files
-vendors: vendors
+# Script Vendors.
+# Set a CDN address for the vendor you want to customize.
+# For example
+#    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+# Be aware that you should use the same version as internal ones to avoid potential problems.
+vendors:
+  # Internal path prefix. Please do not edit it.
+  _internal: vendors
+
+  # Internal version: 2.1.3
+  jquery:
+
+  # Internal version: 2.1.5
+  fancybox:
+
+  # Internal version: 1.0.6
+  fastclick:
+
+  # Internal version: 1.9.7
+  lazyload:
+
+  # Internal version: 1.2.1
+  velocity:
+
+  # Internal version: 1.2.1
+  velocity_ui:
+
+  # Internal version: 0.7.9
+  ua_parser:
+
+
+# Assets
 css: css
 js: js
 images: images
 
 # Theme version
-version: 0.5.0
+version: 5.0.1

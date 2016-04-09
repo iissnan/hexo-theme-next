@@ -74,8 +74,9 @@
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank">
                   {% if theme.social_icons.enable %}
-                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i> {{ name }}
+                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i>
                   {% endif %}
+                  {{ name }}
                 </a>
               </span>
             {% endfor %}
@@ -109,9 +110,6 @@
 
       {% if display_toc %}
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             {% if page.toc_number === undefine %}
               {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
@@ -123,9 +121,6 @@
             {% else %}
               <div class="post-toc-content">{{ toc }}</div>
             {% endif %}
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
           </div>
         </section>
       {% endif %}

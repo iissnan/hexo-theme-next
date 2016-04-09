@@ -52,7 +52,7 @@
 }
 .highlight, .gist {
   a {
-    color: $blue !important;
+    color: $link-hover-color !important;
     text-decoration: none !important;
   }
 }
@@ -63,6 +63,15 @@
   margin-top: -20px;
   font-size: 14px;
   color: $grey-dark;
+}
+
+// https://davidwalsh.name/detect-scrollbar-width
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
 }
 
 .use-motion .motion-element { opacity: 0; }

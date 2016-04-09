@@ -1,6 +1,6 @@
 {# Custom Script #}
 {% if page.js_blast %}
-  <script type="text/javascript" src="{{ url_for(theme.vendors) }}/blast-text/jquery.blast.min.js"></script>
+  <script type="text/javascript" src="{{ url_for(theme.vendors._internal) }}/blast-text/jquery.blast.min.js"></script>
   <script type="text/javascript">
     var $my = $("#motto").blast({
         delimiter: "character"
