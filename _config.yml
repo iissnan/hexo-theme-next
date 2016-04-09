@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "一张假钞, 大数据"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2015
 
 
 
@@ -56,8 +56,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -138,7 +138,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /uploads/avatar.jpg
 
 
 # Table Of Ccontents in the Sidebar
@@ -166,8 +166,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggler.
-  display: post
-  #display: always
+  #display: post
+  display: always
   #display: hide
   #display: remove
 
@@ -201,7 +201,7 @@ scroll_to_more: true
 # Automatically Excerpt. Not recommand.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 
@@ -228,10 +228,10 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 94b1e62b5b593fa5e1e026e280b9db7e
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: zhangjc
 
 # Disqus
 #disqus_shortname:
@@ -247,7 +247,7 @@ mathjax:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
