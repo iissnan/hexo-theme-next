@@ -93,8 +93,8 @@
         {% endif %}
 
         {# Blogroll #}
-        <div class="links-of-blogroll motion-element">
-          {% if theme.links %}
+        {% if theme.links %}
+          <div class="links-of-blogroll motion-element">
             <div class="links-of-blogroll-title">{{ theme.links_title }}</div>
             <ul class="links-of-blogroll-list">
               {% for name, link in theme.links %}
@@ -103,8 +103,8 @@
                 </li>
               {% endfor %}
             </ul>
-          {% endif %}
-        </div>
+          </div>
+        {% endif %}
 
       </section>
 
