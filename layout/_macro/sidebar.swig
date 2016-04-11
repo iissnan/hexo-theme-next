@@ -72,7 +72,7 @@
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank">
+                <a href="{{ link }}" target="_blank" title="{{ name }}">
                   {% if theme.social_icons.enable %}
                     <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i>
                   {% endif %}
@@ -93,18 +93,18 @@
         {% endif %}
 
         {# Blogroll #}
-        <div class="links-of-blogroll motion-element">
-          {% if theme.links %}
+        {% if theme.links %}
+          <div class="links-of-blogroll motion-element">
             <div class="links-of-blogroll-title">{{ theme.links_title }}</div>
             <ul class="links-of-blogroll-list">
               {% for name, link in theme.links %}
                 <li class="links-of-blogroll-item">
-                  <a href="{{ link }}" target="_blank">{{ name }}</a>
+                  <a href="{{ link }}" title="{{ name }}" target="_blank">{{ name }}</a>
                 </li>
               {% endfor %}
             </ul>
-          {% endif %}
-        </div>
+          </div>
+        {% endif %}
 
       </section>
 
