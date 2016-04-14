@@ -95,7 +95,10 @@
         {# Blogroll #}
         {% if theme.links %}
           <div class="links-of-blogroll motion-element">
-            <div class="links-of-blogroll-title">{{ theme.links_title }}</div>
+            <div class="links-of-blogroll-title">
+              <i class="fa fa-{{ theme.links_icon || 'globe' }} fa-fw"></i>
+              {{ theme.links_title }}
+            </div>
             <ul class="links-of-blogroll-list">
               {% for name, link in theme.links %}
                 <li class="links-of-blogroll-item">
