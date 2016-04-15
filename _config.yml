@@ -29,7 +29,7 @@ menu:
   #categories: /categories
   #about: /about
   archives: /archives
-  tags: /tags
+  #tags: /tags
   #commonweal: /404.html
 
 
@@ -56,9 +56,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
