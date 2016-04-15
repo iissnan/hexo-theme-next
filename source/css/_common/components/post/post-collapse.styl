@@ -13,6 +13,20 @@
 }
 
 .posts-collapse {
+  position: relative;
+  z-index: $zindex-1;
+  
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin-left: -2px;
+    width: 4px;
+    height: 100%;
+    background: $whitesmoke;
+    z-index: $zindex-bottom;
+  }
 
   margin-left: $posts-collapse-left;
   +mobile() { margin: 0 20px; }
@@ -82,7 +96,6 @@
     margin-left: 60px;
     font-size: 16px;
     font-weight: normal;
-    font-family: $font-family-posts;
     line-height: inherit;
 
     &::after {

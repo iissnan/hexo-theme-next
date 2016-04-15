@@ -115,6 +115,12 @@
               </span>
           {% endif %}
 
+          {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}
+              &nbsp; | &nbsp;
+              <span class="page-pv">{{ theme.busuanzi_count.page_pv_header }}
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>{{ theme.busuanzi_count.page_pv_footer }}
+              </span>
+          {% endif %}
         </div>
       </header>
     {% endif %}
@@ -176,6 +182,12 @@
       {% else %}
         {{ post.content }}
       {% endif  %}
+    </div>
+    
+    <div>
+      {% if ! is_index %}
+        {% include 'wechat-subscriber.swig' %}
+      {% endif %}
     </div>
 
     <div>
