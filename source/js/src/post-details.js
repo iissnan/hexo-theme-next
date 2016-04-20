@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     $(document)
       .on('affixed.bs.affix', function () {
-        updateTOCHeight(document.body.clientHeight - 100)
+        updateTOCHeight(document.body.clientHeight - 100);
       });
   }
 
