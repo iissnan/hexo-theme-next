@@ -154,7 +154,7 @@ auto_excerpt:
 use_font_lato: true
 
 # Links, chinese available
-links_title: Links
+links_title: 书签
 # links
 links:
   Git Book: http://git-scm.com/book/
