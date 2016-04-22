@@ -24,7 +24,7 @@
         </h3>
         {{ project.description }}
         {% for img in project.imgs %}
-          <img src="{{ img }}">
+          <img data-src="{{ img }}" class="lazyload" />
         {% endfor %}
         <div class="post-eof"></div>
       {% endfor %}
