@@ -172,6 +172,13 @@ sidebar:
   #display: remove
 
 
+# Blogrolls
+#links_title: Links
+#links_layout: block
+#links_layout: inline
+#links:
+  #Title: http://example.com/
+
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -212,7 +219,7 @@ auto_excerpt:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 
-  
+
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
@@ -296,15 +303,15 @@ busuanzi_count:
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer: 
+  site_uv_footer:
   # custom pv span for the whole site
   site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer: 
+  site_pv_footer:
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer: 
+  page_pv_footer:
 
 # Tencent analytics ID
 # tencent_analytics:
