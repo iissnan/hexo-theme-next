@@ -26,7 +26,7 @@ rss:
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
+  categories: /categories
   #about: /about
   archives: /archives
   tags: /tags
@@ -50,15 +50,14 @@ menu_icons:
 
 
 
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -117,10 +116,11 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
-
-
+  GitHub: https://github.com/chenchunyong
+  Twitter: https://twitter.com/windavidking
+  Zhihu: https://www.zhihu.com/people/chen-feng-xie
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -129,16 +129,16 @@ font:
 social_icons:
   enable: true
   # Icon Mappings.
-  # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
+  #KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  Twitter: twitter 
+  Zhihu: globe
 
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /images/avatar.png
 
 
 # Table Of Contents in the Sidebar
@@ -191,7 +191,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
