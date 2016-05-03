@@ -49,15 +49,11 @@
     -webkit-animation: roll 0.1s infinite linear;
     -moz-animation: roll 0.1s infinite linear;
 }
-@keyframes roll{
-    from{-webkit-transform:rotateZ(30deg)}
-    to{-webkit-transform:rotateZ(-30deg)}
-}
-@-webkit-keyframes roll{
-    from{-webkit-transform:rotateZ(30deg)}
-    to{-webkit-transform:rotateZ(-30deg)}
-}
-@-moz-keyframes roll{
-    from{-webkit-transform:rotateZ(30deg)}
-    to{-webkit-transform:rotateZ(-30deg)}
+@keyframes roll {
+    from {
+      transform(rotateZ(30deg));
+    }
+    to {
+      transform(rotateZ(-30deg));
+    }
 }
