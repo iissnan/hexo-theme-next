@@ -346,22 +346,33 @@ vendors:
   jquery:
 
   # Internal version: 2.1.5
+  # http://fancyapps.com/fancybox/
   fancybox:
+  fancybox_css:
 
   # Internal version: 1.0.6
+  # https://github.com/ftlabs/fastclick
   fastclick:
 
   # Internal version: 1.9.7
+  # https://github.com/tuupola/jquery_lazyload
   lazyload:
 
   # Internal version: 1.2.1
+  # http://VelocityJS.org
   velocity:
 
   # Internal version: 1.2.1
+  # http://VelocityJS.org
   velocity_ui:
 
   # Internal version: 0.7.9
+  # https://faisalman.github.io/ua-parser-js/
   ua_parser:
+
+  # Internal version: 4.4.0
+  # http://fontawesome.io/
+  fontawesome:
 
 
 # Assets
