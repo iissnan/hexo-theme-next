@@ -14,6 +14,10 @@ if $highlight_theme == "normal"
   $highlight-aqua         = #3e999f
   $highlight-blue         = #4271ae
   $highlight-purple       = #8959a8
+  $highlight-gutter       = {
+    color: #869194,
+    bg-color: #eff2f3
+  }
 
 if $highlight_theme == "night"
   $highlight-background   = #1d1f21
@@ -28,6 +32,10 @@ if $highlight_theme == "night"
   $highlight-aqua         = #8abeb7
   $highlight-blue         = #81a2be
   $highlight-purple       = #b294bb
+  $highlight-gutter       = {
+    color: lighten($highlight-background, 50%),
+    bg-color: darken($highlight-background, 100%)
+  }
 
 if $highlight_theme == "night eighties"
   $highlight-background   = #2d2d2d
@@ -42,6 +50,10 @@ if $highlight_theme == "night eighties"
   $highlight-aqua         = #66cccc
   $highlight-blue         = #6699cc
   $highlight-purple       = #cc99cc
+  $highlight-gutter       = {
+    color: $highlight-comment,
+    bg-color: darken($highlight-background, 40%)
+  }
 
 if $highlight_theme == "night blue"
   $highlight-background   = #002451
@@ -56,6 +68,10 @@ if $highlight_theme == "night blue"
   $highlight-aqua         = #99ffff
   $highlight-blue         = #bbdaff
   $highlight-purple       = #ebbbff
+  $highlight-gutter       = {
+    color: $highlight-comment,
+    bg-color: darken($highlight-background, 60%)
+  }
 
 if $highlight_theme == "night bright"
   $highlight-background   = #000000
@@ -70,3 +86,7 @@ if $highlight_theme == "night bright"
   $highlight-aqua         = #70c0b1
   $highlight-blue         = #7aa6da
   $highlight-purple       = #c397d8
+  $highlight-gutter       = {
+    color: lighten($highlight-background, 40%),
+    bg-color: lighten($highlight-background, 16%)
+  }
