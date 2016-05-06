@@ -319,7 +319,11 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
 
-
+# Algolia Search
+algolia_search:
+  enable: true
+  input:
+    placeholder: Search for Posts
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -373,6 +377,12 @@ vendors:
   # Internal version: 4.4.0
   # http://fontawesome.io/
   fontawesome:
+
+  # Internal version: 1
+  # https://www.algolia.com
+  algolia_instant_js:
+  algolia_instant_css:
+
 
 
 # Assets

@@ -1,0 +1,25 @@
+.algolia-search
+  height: 40px
+
+.algolia-results
+  position: relative
+  overflow: auto
+  height: calc(100% - 40px)
+
+
+#algolia-pagination
+  position: absolute
+  bottom: 0
+  width: 100%
+
+  .pagination
+    padding: 0
+  .pagination-item
+    display: inline-block
+
+  .current .page-number
+    @extend .pagination .page-number.current
+
+  .disabled-item
+    visibility: hidden
+
