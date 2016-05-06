@@ -8,18 +8,20 @@
 
   {% raw %}
   <script type="text/html" id="algolia-hit-template">
-    <div class="hit">
-      <div class="hit-content">
-        <h3 class="hit-title">
-          <a href="/{{ path }}">{{{ _highlightResult.title.value }}}</a>
-        </h3>
-      </div>
-    </div>
+    <a href="/{{ path }}" class="algolia-hit-item-link">
+      {{{ _highlightResult.title.value }}}
+    </a>
+  </script>
+  <script type="text/html" id="algolia-stats-template">
+    {{ nbHits }} results found in {{ processingTimeMS }}ms by
+    <span class="algolia-powered">
+      <img src="/images/algolia_logo.svg" alt="Algolia" />
+    </span>
+    <hr />
   </script>
   <script type="text/html" id="algolia-no-results-template">
     <div id="no-results-message">
       <p>We didn't find any results for the search <em>"{{query}}"</em>.</p>
-      <a href="." class='clear-all'>Clear search</a>
     </div>
   </script>
   {% endraw %}
@@ -56,11 +58,17 @@
           templates: {
             item: getTemplate('hit'),
             empty: getTemplate('no-results')
+          },
+          cssClasses: {
+            item: 'algolia-hit-item'
           }
         }),
 
         instantsearch.widgets.stats({
-          container: '#algolia-stats'
+          container: '#algolia-stats',
+          templates: {
+            body: getTemplate('stats')
+          }
         }),
 
         instantsearch.widgets.pagination({
@@ -93,6 +101,7 @@
         e.stopPropagation();
         $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
         $('.popup').toggle();
+        $('#algolia-search-input').find('input').focus();
       });
 
       $('.popup-btn-close').click(function(){
