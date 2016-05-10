@@ -31,6 +31,7 @@ menu:
   categories: /categories
   tags: /tags
   about: /about
+  donors: /donors
   #commonweal: /404.html
 
 
@@ -48,6 +49,7 @@ menu_icons:
   tags: tags
   archives: archive
   commonweal: heartbeat
+  donors: heart
 
 
 
