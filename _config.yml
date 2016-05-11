@@ -31,8 +31,8 @@ menu:
   categories: /categories
   tags: /tags
   about: /about
-  donors: /donors
-  #commonweal: /404.html
+  # donors: /donors
+  # commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -159,10 +159,10 @@ use_font_lato: true
 links_title: 书签
 # links
 links:
-  Git Book: http://git-scm.com/book/
+  # Git Book: http://git-scm.com/book/
   LeetCode: https://leetcode.com/problemset/algorithms/
   Guava Wiki: https://github.com/google/guava/wiki/
-  Markdown Syntax: https://daringfireball.net/projects/markdown/syntax/
+  # Markdown Syntax: https://daringfireball.net/projects/markdown/syntax/
   JavaScript Garden: https://bonsaiden.github.io/JavaScript-Garden/
   Django Documentation: https://docs.djangoproject.com/en/1.9/
 
@@ -248,6 +248,7 @@ wechatpay: https://o70e8d1kb.qnssl.com/wx_donate_min.png
 donors:
   title: 捐赠名单
   link: /donors
+  icon: heart
 
 
 # Tencent analytics ID

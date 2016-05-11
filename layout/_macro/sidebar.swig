@@ -104,6 +104,20 @@
             </ul>
           {% endif %}
         </div>
+        
+        {# Donors #}
+        <div class="links-of-blogroll motion-element">
+          {% if theme.links %}
+            <div class="links-of-blogroll-title">
+              <a href="{{ url_for(theme.donors.link) }}">
+                {% if theme.donors.icon %}
+                  <i class="fa fa-{{ theme.donors.icon || 'globe' }}"></i>
+                {% endif %}
+                {{ theme.donors.title }}
+              </a>
+            </div>
+          {% endif %}
+        </div>
 
       </section>
 
