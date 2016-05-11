@@ -4,7 +4,10 @@
   display: none;
   right: auto;
   bottom: auto;
-  -webkit-transform: none
+
+  // Do NOT delete this line
+  // or Affix (position: fixed) will not work in Google Chrome.
+  -webkit-transform: none;
 }
 
 
@@ -13,11 +16,15 @@
   width: 240px;
   color: $text-color;
   background: white;
-  &.affix { top: 0px; position: fixed; }
+
+  &.affix {
+    position: fixed;
+    top: 0;
+  }
 }
 
 .site-overview {
-  margin: 0 10px;
+  margin: 0 2px;
   text-align: left;
 }
 
@@ -25,25 +32,9 @@
   clearfix();
 }
 
-.site-author-image {
-  float: left;
-  margin-right: 10px;
-  max-width: 64px;
-  border-width: 1px;
-  border-color: $gainsboro;
-}
-.site-author-name {
-  margin: 0;
-  font-weight: $font-weight-bold;
-}
-
-.site-description {
-  margin-top: 0;
-  line-height: 1.6;
-}
-
 .sidebar a {
   color: $black-light;
+
   &:hover { color: $black-deep; }
 }
 
@@ -55,17 +46,12 @@
   }
 }
 
-.site-state {
-  text-align: center;
-}
-
 .feed-link {
   border-top: 1px dotted $grey-light;
   border-bottom: 1px dotted $grey-light;
   text-align: center;
 }
 
-$orange = #fc6423;
 .feed-link a {
   display: block;
   color: $orange;
@@ -79,25 +65,41 @@ $orange = #fc6423;
   }
 }
 
+.links-of-author {
+  clearfix();
+}
 .links-of-author-item {
-  display: inline-block;
-  width: 48%;
+  sidebar-inline-links-item();
+
   a {
-    box-sizing: border-box;
     display: block;
-    margin-right: 0;
-    padding: 0 5px;
     text-decoration: none;
+
     &:hover {
       border-radius: 4px;
       background: $gainsboro;
     }
   }
+
   .fa {
-    margin-right: 4px;
+    margin-right: 2px;
     font-size: 16px;
   }
   .fa-globe { font-size: 15px; }
 }
 
-.post-toc ol { padding: 0 20px 10px; }
+
+.links-of-blogroll {
+  margin-top: 20px;
+  padding: 3px 0 0;
+  border-top: 1px dotted $grey-light;
+}
+.links-of-blogroll-title { margin-top: 0; }
+.links-of-blogroll-item { padding: 0; }
+.links-of-blogroll-inline {
+  clearfix();
+
+  .links-of-blogroll-item {
+    sidebar-inline-links-item();
+  }
+}

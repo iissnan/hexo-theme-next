@@ -33,27 +33,17 @@
 
 .pullquote {
   width: 45%;
+
   &.left {
     float: left;
     margin-left: 5px;
     margin-right: 10px;
   }
+
   &.right {
     float: right;
     margin-left: 10px;
     margin-right: 5px;
-  }
-}
-
-.highlight table, .gist table {
-  width: auto;
-
-  td { border: none; }
-}
-.highlight, .gist {
-  a {
-    color: $link-hover-color !important;
-    text-decoration: none !important;
   }
 }
 
@@ -63,6 +53,15 @@
   margin-top: -20px;
   font-size: 14px;
   color: $grey-dark;
+}
+
+// https://davidwalsh.name/detect-scrollbar-width
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
 }
 
 .use-motion .motion-element { opacity: 0; }
@@ -78,7 +77,8 @@
   background: inherit;
   opacity: 0.5;
   &:focus { opacity: 1; }
-};
+}
+
 .search-icon {
   position: absolute;
   top: 9px;

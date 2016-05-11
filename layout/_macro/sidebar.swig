@@ -26,7 +26,7 @@
       <section class="site-overview sidebar-panel {% if not display_toc %} sidebar-panel-active {% endif %}">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}"
+               src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
                alt="{{ theme.author }}" />
           <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
           <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
@@ -72,10 +72,11 @@
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank">
+                <a href="{{ link }}" target="_blank" title="{{ name }}">
                   {% if theme.social_icons.enable %}
-                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i> {{ name }}
+                    <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
                   {% endif %}
+                  {{ name }}
                 </a>
               </span>
             {% endfor %}
@@ -92,27 +93,28 @@
         {% endif %}
 
         {# Blogroll #}
-        <div class="links-of-blogroll motion-element">
-          {% if theme.links %}
-            <div class="links-of-blogroll-title">{{ theme.links_title }}</div>
+        {% if theme.links %}
+          <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-{{ theme.links_icon | default('globe') | lower }}"></i>
+              {{ theme.links_title }}
+            </div>
             <ul class="links-of-blogroll-list">
               {% for name, link in theme.links %}
                 <li class="links-of-blogroll-item">
-                  <a href="{{ link }}" target="_blank">{{ name }}</a>
+                  <a href="{{ link }}" title="{{ name }}" target="_blank">{{ name }}</a>
                 </li>
               {% endfor %}
             </ul>
-          {% endif %}
-        </div>
-        
+          </div>
+        {% endif %}
+
         {# Donors #}
         <div class="links-of-blogroll motion-element">
           {% if theme.links %}
             <div class="links-of-blogroll-title">
               <a href="{{ url_for(theme.donors.link) }}">
-                {% if theme.donors.icon %}
-                  <i class="fa fa-{{ theme.donors.icon || 'globe' }}"></i>
-                {% endif %}
+                <i class="fa  fa-fw fa-{{ theme.donors.icon | default('globe') | lower }}"></i>
                 {{ theme.donors.title }}
               </a>
             </div>
@@ -123,9 +125,6 @@
 
       {% if display_toc %}
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
           <div class="post-toc">
             {% if page.toc_number === undefine %}
               {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
@@ -137,9 +136,6 @@
             {% else %}
               <div class="post-toc-content">{{ toc }}</div>
             {% endif %}
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
           </div>
         </section>
       {% endif %}

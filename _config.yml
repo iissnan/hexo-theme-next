@@ -2,7 +2,7 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 
-# Place your favicon.ico to /source directory.
+# Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
@@ -23,8 +23,7 @@ since: 2015
 # Menu Settings
 # ---------------------------------------------------------------
 
-# When running hexo in a subdirectory (e.g. domain.tld/blog)
-# Remove leading slashes ( "/archives" -> "archives" )
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
   archives: /archives
@@ -38,11 +37,11 @@ menu:
 # Enable/Disable menu icons.
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of menu item and value is the name of FontAwsome icon.
+#   Key is the name of menu item and value is the name of FontAwsome icon. Key is case-senstive.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  # Icon Mapping.
+  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
   categories: th
@@ -64,22 +63,80 @@ scheme: Mist
 # scheme: Pisces
 
 
+# ---------------------------------------------------------------
+# Font Settings
+# - Find fonts on Google Fonts (https://www.google.com/fonts)
+# - All fonts set here will have the following styles:
+#     light, light italic, normal, normal intalic, bold, bold italic
+# - Be aware that setting too much fonts will cause site running slowly
+# - Introduce in 5.0.1
+# ---------------------------------------------------------------
+font:
+  enable: true
+
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  host:
+
+  # Global font settings used on <body> element.
+  global:
+    # external: true will load this font family from host.
+    external: true
+    family: Lato
+
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family:
+
+  # Font settings for posts
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo
+  # Fallback to `global` font settings.
+  # The `size` option use `px` as unit
+  logo:
+    external: true
+    family:
+    size:
+
+  # Font settings for <code> and code blocks.
+  codes:
+    external: true
+    family:
+
+
+
 
 # ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
 
 
+# Social Links
+# Key is the link label showing to end users.
+# Value is the target link (E.g. GitHub: https://github.com/iissnan)
+#social:
+  #LinkLabel: Link
 # Social links
 social:
   Github: https://github.com/isudox
   Twitter: https://twitter.com/isudox
   StackOverflow: https://stackoverflow.com/users/4305743/sudoz
 
-# Social Icons
+
+# Social Links Icons
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of the item and value is the name of FontAwsome icon. Key is case-senstive.
+#   When an globe mask icon presenting up means that the item has no mapping icon.
 social_icons:
   enable: true
-  # Icon Mappings
+  # Icon Mappings.
+  # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   Github: github
   Twitter: twitter
   StackOverflow: stack-overflow
@@ -89,11 +146,10 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-# default : /images/default_avatar.jpg
 #avatar:
 
 
-# TOC in the Sidebar
+# Table Of Contents in the Sidebar
 toc:
   enable: true
 
@@ -107,6 +163,7 @@ toc:
 #creative_commons: by-nc-sa
 #creative_commons:
 
+
 sidebar:
   # Sidebar Position, available value: left | right
   position: left
@@ -116,12 +173,25 @@ sidebar:
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
-  #  - remove  Totally remove sidebar including sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggler.
   display: post
   #display: always
   #display: hide
   #display: remove
 
+
+# Blogrolls
+links_title: 书签
+links_layout: block
+#links_layout: inline
+links_icon: bookmark
+links:
+  # Git Book: http://git-scm.com/book/
+  LeetCode: https://leetcode.com/problemset/algorithms/
+  # Guava Wiki: https://github.com/google/guava/wiki/
+  # Markdown Syntax: https://daringfireball.net/projects/markdown/syntax/
+  JavaScript Garden: https://bonsaiden.github.io/JavaScript-Garden/
+  Django Documentation: https://docs.djangoproject.com/en/1.9/
 
 
 # ---------------------------------------------------------------
@@ -144,27 +214,23 @@ custom_logo:
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: night
 
+
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
 
-# Automatically Excerpt
+
+# Automatically Excerpt. Not recommand.
+# Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: false
   length: 150
 
-# Use Lato font
-use_font_lato: true
 
-# Links, chinese available
-links_title: 书签
-# links
-links:
-  # Git Book: http://git-scm.com/book/
-  LeetCode: https://leetcode.com/problemset/algorithms/
-  Guava Wiki: https://github.com/google/guava/wiki/
-  # Markdown Syntax: https://daringfireball.net/projects/markdown/syntax/
-  JavaScript Garden: https://bonsaiden.github.io/JavaScript-Garden/
-  Django Documentation: https://docs.djangoproject.com/en/1.9/
+# Wechat Subscriber
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
 
 
 # ---------------------------------------------------------------
@@ -172,7 +238,9 @@ links:
 # ---------------------------------------------------------------
 
 # MathJax Support
-mathjax: false
+mathjax:
+  enable: false
+  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
 # Swiftype Search API Key
@@ -219,7 +287,7 @@ duoshuo_info:
   ua_enable: true
   admin_enable: false
   user_id: 0
-  #admin_nickname: ROOT
+  #admin_nickname: Author
 
 
 # Facebook SDK Support.
@@ -246,10 +314,27 @@ wechatpay: https://o70e8d1kb.qnssl.com/wx_donate_min.png
 
 # Donors, gratitude
 donors:
-  title: 捐赠名单
+  title: 致谢
   link: /donors
   icon: heart
 
+# Show PV/UV of the website/page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi/
+busuanzi_count:
+  # count values only if the other configs are false
+  enable: false
+  # custom uv span for the whole site
+  site_uv: true
+  site_uv_header: <i class="fa fa-user"></i>
+  site_uv_footer:
+  # custom pv span for the whole site
+  site_pv: true
+  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv_footer:
+  # custom pv span for one page only
+  page_pv: true
+  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_footer:
 
 # Tencent analytics ID
 # tencent_analytics:
@@ -270,11 +355,53 @@ use_motion: true
 # Fancybox
 fancybox: true
 
-# Static files
-vendors: vendors
+
+# Script Vendors.
+# Set a CDN address for the vendor you want to customize.
+# For example
+#    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+# Be aware that you should use the same version as internal ones to avoid potential problems.
+vendors:
+  # Internal path prefix. Please do not edit it.
+  _internal: vendors
+
+  # Internal version: 2.1.3
+  jquery:
+
+  # Internal version: 2.1.5
+  # http://fancyapps.com/fancybox/
+  fancybox:
+  fancybox_css:
+
+  # Internal version: 1.0.6
+  # https://github.com/ftlabs/fastclick
+  fastclick:
+
+  # Internal version: 1.9.7
+  # https://github.com/tuupola/jquery_lazyload
+  lazyload:
+
+  # Internal version: 1.2.1
+  # http://VelocityJS.org
+  velocity:
+
+  # Internal version: 1.2.1
+  # http://VelocityJS.org
+  velocity_ui:
+
+  # Internal version: 0.7.9
+  # https://faisalman.github.io/ua-parser-js/
+  ua_parser:
+
+  # Internal version: 4.4.0
+  # http://fontawesome.io/
+  fontawesome:
+
+
+# Assets
 css: css
 js: js
 images: images
 
 # Theme version
-version: 0.5.0
+version: 5.0.1

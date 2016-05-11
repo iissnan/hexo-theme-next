@@ -1,13 +1,13 @@
 {
   "name": "hexo-theme-next",
-  "version": "0.5.0",
+  "version": "5.0.0",
   "description": "Elegant theme for Hexo",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
