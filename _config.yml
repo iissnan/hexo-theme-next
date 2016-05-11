@@ -61,7 +61,7 @@ menu_icons:
 # Schemes
 # scheme: Muse
 scheme: Mist
-#scheme: Pisces
+# scheme: Pisces
 
 
 
@@ -167,7 +167,6 @@ links:
   Django Documentation: https://docs.djangoproject.com/en/1.9/
 
 
-
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
@@ -242,8 +241,13 @@ leancloud_visitors:
 
 # Donate links
 # reward_comment:
-wechatpay: /images/wx_donate_min.png
+wechatpay: https://o70e8d1kb.qnssl.com/wx_donate_min.png
 # alipay:
+
+# Donors, gratitude
+donors:
+  title: 捐赠名单
+  link: /donors
 
 
 # Tencent analytics ID

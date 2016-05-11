@@ -14,10 +14,10 @@
       <a class="theme-link" href='javascript:(
         function go() {
         var songs = [
-            "http://7xs161.com1.z0.glb.clouddn.com/music-final-countdown.mp3",
-            "http://7xs161.com1.z0.glb.clouddn.com/music-zombie.mp3",
-            "http://7xs161.com1.z0.glb.clouddn.com/music-fade.mp3",
-            "http://7xs161.com1.z0.glb.clouddn.com/music-antik.mp3"
+            "https://o70e8d1kb.qnssl.com/music-final-countdown.mp3",
+            "https://o70e8d1kb.qnssl.com/music-zombie.mp3",
+            "https://o70e8d1kb.qnssl.com/music-fade.mp3",
+            "https://o70e8d1kb.qnssl.com/music-antik.mp3"
         ];
         function c() {
             var e = document.createElement("link");
