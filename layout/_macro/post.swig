@@ -1,7 +1,6 @@
 {% macro render(post, is_index, post_extra_class) %}
 
   {% set headlessPost = Array.prototype.indexOf.call(['quote', 'picture'], post.type) > -1 %}
-  {% set navlessPost = headlessPost %}
 
   {% set post_class = 'post post-type-' + post.type | default('normal') %}
   {% set post_class = post_class + ' ' + post_extra_class | default('') %}
@@ -196,16 +195,17 @@
       {% endif %}
     </div>
 
+
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag">#{{ tag.name }}</a>
+            <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
           {% endfor %}
         </div>
       {% endif %}
 
-      {% if not is_index and (post.prev or post.next) and not navlessPost %}
+      {% if not is_index and (post.prev or post.next) %}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             {% if post.next %}
@@ -215,10 +215,12 @@
             {% endif %}
           </div>
 
+          <span class="post-nav-divider"></span>
+
           <div class="post-nav-prev post-nav-item">
             {% if post.prev %}
               <a href="{{ url_for(post.prev.path) }}" rel="prev" title="{{ post.prev.title }}">
-                {{post.prev.title}} <i class="fa fa-chevron-right"></i>
+                {{ post.prev.title }} <i class="fa fa-chevron-right"></i>
               </a>
             {% endif %}
           </div>
