@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-next",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "description": "Elegant theme for Hexo",
   "main": "index.js",
   "directories": {
@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/iissnan/hexo-theme-next/issues"
   },
-  "homepage": "https://github.com/iissnan/hexo-theme-next#readme",
+  "homepage": "https://theme-next.iissnan.com",
   "devDependencies": {
     "coffee-script": "^1.10.0",
     "gulp": "^3.9.0",

@@ -1,11 +1,11 @@
 {
   "name": "isn-next",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "homepage": "https://github.com/iissnan/hexo-theme-next",
   "authors": [
     "iissnan <iissnan@gmail.com>"
   ],
-  "description": "High quality and elegant theme for Hexo",
+  "description": "Elegant theme for Hexo",
   "repository": "https://github.com/iissnan/hexo-theme-next",
   "keywords": [
     "hexo",
