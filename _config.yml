@@ -383,7 +383,7 @@ vendors:
   # https://faisalman.github.io/ua-parser-js/
   ua_parser:
 
-  # Internal version: 4.4.0
+  # Internal version: 4.6.2
   # http://fontawesome.io/
   fontawesome:
 
