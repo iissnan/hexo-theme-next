@@ -93,3 +93,5 @@
     }
   };
 </script>
+
+{% include 'head/custom-head.swig' %}
