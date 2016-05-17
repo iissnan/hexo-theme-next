@@ -26,7 +26,7 @@
       <section class="site-overview sidebar-panel {% if not display_toc %} sidebar-panel-active {% endif %}">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="{{ theme.avatar or url_for(theme.images) + '/default_avatar.jpg' }}"
+               src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
                alt="{{ theme.author }}" />
           <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
           <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
@@ -74,7 +74,7 @@
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank" title="{{ name }}">
                   {% if theme.social_icons.enable %}
-                    <i class="fa fa-{{ theme.social_icons[name] || 'globe' }}"></i>
+                    <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
                   {% endif %}
                   {{ name }}
                 </a>
@@ -94,9 +94,9 @@
 
         {# Blogroll #}
         {% if theme.links %}
-          <div class="links-of-blogroll motion-element">
+          <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">
             <div class="links-of-blogroll-title">
-              <i class="fa fa-{{ theme.links_icon || 'globe' }} fa-fw"></i>
+              <i class="fa  fa-fw fa-{{ theme.links_icon | default('globe') | lower }}"></i>
               {{ theme.links_title }}
             </div>
             <ul class="links-of-blogroll-list">

@@ -32,6 +32,15 @@ circle() {
   border-radius: 50%;
 }
 
+transform() {
+  -webkit-transform: arguments
+  -moz-transform: arguments
+  -ms-transform: arguments
+  -o-transform: arguments
+  transform: arguments
+}
+
+
 random-color($min, $max) {
   return floor(math(0, 'random') * ($max - $min + 1) + $min);
 }

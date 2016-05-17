@@ -57,12 +57,17 @@ pre {
 
   figcaption {
     clearfix();
-    font-size: 0.85em;
-    color: $highlight-comment;
+    font-size: 1em;
+    color: $highlight-foreground;
     line-height: 1em;
     margin-bottom: 1em;
 
-    a { float: right; }
+    a {
+      float: right;
+      color: $highlight-foreground;
+
+      &:hover { border-bottom-color: $highlight-foreground; }
+    }
   }
 
   .gutter pre {
@@ -72,6 +77,13 @@ pre {
   }
 
   .line { height: 20px; }
+}
+
+
+.gist table {
+  width: auto;
+
+  td { border: none; }
 }
 
 pre {
