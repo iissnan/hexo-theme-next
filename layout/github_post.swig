@@ -14,20 +14,32 @@
 
     {% set real_content = "<script src='//cdn.bootcss.com/lazysizes/1.4.0/lazysizes.min.js'></script>";%}
     {% for data_item in page.data_github %}
+      {# 分类 #}
       {% set real_content +=  "<h2 id='" + data_item.keywords + "' style='text-align: center;'>" + data_item.keywords + "</h2>";%}
       {% set is_first_in_data_github = loop.first;%}
       {% for project in data_item.projects %}
+        {# 标题 #}
         {% set real_content +=  "<h3 id='" + project.repo + "'>";%}
         {% set real_content +=  "<a href='//github.com/" + project.user + "/" + project.repo + "' target='_blank'>" + project.repo + "</a>";%}
         {% set real_content +=  "<iframe data-src='https://ghbtns.com/github-btn.html?user=" + project.user + "&repo=" + project.repo + "&type=star&count=true' frameborder='0' scrolling='0' width='120px' height='20px' class='lazyload'></iframe>";%}
         {% set real_content +=  "</h3>";%}
-        {% set real_content +=  project.description;%}
+        {# 描述 #}
+        {% set real_content +=  "<p>" + project.description + "</p>";%}
+        {# 教程 #}
+        {% set real_content +=  "<p>教程：</p><ul>";%}
+        {% for wiki in project.wiki %}
+          {% set real_content +=  "<li><p><a href='" + wiki.link + "' target='_blank' rel='external'>" + wiki.title + "</a></p></li>";%}
+        {% endfor %}
+        {% set real_content +=  "</ul>";%}
+        {# 图片 #}
         {% for img in project.imgs %}
           {% set real_content +=  "<img data-src='" + img  +"' class='lazyload' />";%}
         {% endfor %}
+        {# more #}
         {% if loop.first && is_first_in_data_github%}
           {% set real_content +=  "<!-- more -->";%}
         {% endif %}
+        {# 底部分割线 #}
         {% set real_content +=  "<div class='post-eof'></div>";%}
       {% endfor %}
     {% endfor %}
