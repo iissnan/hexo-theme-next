@@ -26,7 +26,7 @@
         {# 描述 #}
         {% set real_content +=  "<p>" + project.description + "</p>";%}
         {# 教程 #}
-        {% set real_content +=  "<p>教程：</p><ul>";%}
+        {% set real_content +=  "<ul>";%}
         {% for wiki in project.wiki %}
           {% set real_content +=  "<li><p><a href='" + wiki.link + "' target='_blank' rel='external'>" + wiki.title + "</a></p></li>";%}
         {% endfor %}
