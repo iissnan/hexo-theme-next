@@ -31,9 +31,13 @@
         {% endfor %}
         {% set real_content +=  "</ul>";%}
         {# 图片 #}
+        {% set real_content +=  "<div>";%}
         {% for img in project.imgs %}
-          {% set real_content +=  "<img data-src='" + img  +"' class='lazyload' />";%}
+          {% set real_content +=  "<div style='height:150px;width:100%'>";%}
+          {% set real_content +=  "<img data-src='" + img  +"' class='lazyload' style='height:100%'/>";%}
+          {% set real_content +=  "</div>";%}
         {% endfor %}
+        {% set real_content +=  "</div>";%}
         {# more #}
         {% if loop.first && is_first_in_data_github%}
           {% set real_content +=  "<!-- more -->";%}

@@ -12,10 +12,6 @@
 {# github 自定义 #}
 {# 懒加载 #}
 <script src='//cdn.bootcss.com/lazysizes/1.4.0/lazysizes.min.js'></script>
-{# Bootstrap #}
-<link rel='stylesheet' href='//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<script src='//cdn.bootcss.com/jquery/1.11.3/jquery.min.js'></script>
-<script src='//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
 
 
 {% if theme.google_site_verification %}
