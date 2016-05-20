@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2015
 
 
 
@@ -26,10 +26,11 @@ rss:
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
+  read: /categories/Reading
   archives: /archives
-  tags: /tags
+  categories: /categories
+  #tags: /tags
+  about: /about
   #commonweal: /404.html
 
 
@@ -42,6 +43,7 @@ menu_icons:
   enable: true
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
+  read: book
   about: user
   categories: th
   tags: tags
@@ -56,8 +58,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+#scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -117,8 +119,8 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+  GitHub: https://github.com/zerosrat
 
 
 # Social Links Icons
@@ -234,14 +236,15 @@ mathjax:
 # Swiftype Search API Key
 #swiftype_key:
 
-# Baidu Analytics ID
-#baidu_analytics:
+# Google & Baidu Analytics ID
+google_analytics: UA-77951400-1
+baidu_analytics: a5c9002fdce3fad3f14ba17eae778ce8
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: zerosrat
 
 # Disqus
-#disqus_shortname:
+#disqus_shortname: zero
 
 # Baidu Share
 # Available value:
@@ -273,8 +276,8 @@ mathjax:
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
   ua_enable: true
-  admin_enable: false
-  user_id: 0
+  admin_enable: true
+  user_id: 6284078761897887000
   #admin_nickname: Author
 
 
