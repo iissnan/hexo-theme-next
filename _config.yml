@@ -121,7 +121,7 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/zerosrat
-
+  Email: mailto:zero@zerosrat.com
 
 # Social Links Icons
 # Icon Mapping:
@@ -133,6 +133,7 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
+  Email: envelope
   Twitter: twitter
   Weibo: weibo
 
@@ -140,7 +141,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /images/avatar.png
 
 
 # Table Of Contents in the Sidebar
