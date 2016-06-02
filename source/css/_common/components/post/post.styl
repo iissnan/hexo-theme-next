@@ -1,6 +1,7 @@
 .post-body {
+  font-family: $font-family-posts;
   +mobile() {
-    word-break: break-all;
+    word-break: break-word;
   }
 }
 
@@ -35,12 +36,11 @@
 @import "post-expand";
 @import "post-collapse";
 @import "post-type";
-
 @import "post-title";
 @import "post-meta";
 @import "post-more-link";
 @import "post-tags";
 @import "post-nav";
 @import "post-eof";
-
 @import "post-gallery";
+@import "post-reward" if hexo-config('alipay') or hexo-config('wechatpay');

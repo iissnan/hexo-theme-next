@@ -1,0 +1,38 @@
+if hexo-config("scheme") == Pisces
+  .busuanzi-count {
+    &:before {
+      content: " ";
+      float: left;
+      width: 260px;
+      min-height: 25px;
+    }
+    +tablet() {
+      width: auto;
+      &:before { display: none; }
+    }
+    +mobile() {
+      width: auto;
+      &:before { display: none; }
+    }
+  }
+
+.site-uv,
+.site-pv,
+.page-pv {
+  display: inline-block;
+
+  .busuanzi-value {
+    margin: 0 5px;
+  }
+}
+
+if hexo-config("busuanzi_count.site_pv") and hexo-config("busuanzi_count.site_uv")
+  .site-uv
+  {
+    margin-right: 10px;
+
+    &::after {
+      content: "|";
+      padding-left: 10px;
+    }
+  }
