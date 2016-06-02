@@ -287,6 +287,13 @@ facebook_sdk:
   like_button:  #true
   webmaster:    #true
 
+# Facebook comments plugin
+# This plugin depends on Facebook SDK.
+# If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
+facebook_comments_plugin:
+  enable: false
+  num_of_posts: 10
+
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
