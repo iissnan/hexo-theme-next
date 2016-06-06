@@ -34,8 +34,9 @@
           for(var i = 0; i < entries.length; i++) {
             var url = entries[i];
             var element = document.getElementById(url);
-            if( $(element).find(COUNT_CONTAINER_REF).text() == '') {
-              $(element).find(COUNT_CONTAINER_REF).text(0);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
             }
           }
         })
