@@ -11,6 +11,11 @@
 {% block content %}
 
   <div id="posts" class="posts-expand">
+    {% set real_content = "<p><a href='https://github.com/623637646/hexo-blog/blob/master/source/_posts/" + page.title + ".md' target='_blank' rel='external'>在Github上修改这篇文章</a></p>";%}
+    {% if page.content|replace(real_content, '') == page.content %}
+      {% set real_content += page.content;%}
+      {% set page.content = real_content%}
+    {% endif %}
     {{ post_template.render(page) }}
 
     <div class="post-spread">

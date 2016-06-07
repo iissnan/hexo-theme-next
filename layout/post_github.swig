@@ -11,7 +11,7 @@
 {% block content %}
 
   <div id="posts" class="posts-expand">
-    {% set real_content =  "";%}
+    {% set real_content =  "<p><a href='https://github.com/623637646/hexo-blog/blob/master/source/_posts/" + page.title + ".md' target='_blank' rel='external'>在Github上修改这篇文章</a></p>";%}
     {% for data_item in page.data_github %}
       {# 分类 #}
       {% set real_content +=  "<h2 id='" + data_item.keywords + "' style='text-align: center;'>" + data_item.keywords + "</h2>";%}
