@@ -5,7 +5,7 @@
   {% if theme.vendors.algolia_instant_css %}
     {% set algolia_instant_css = theme.vendors.algolia_instant_css %}
   {% endif %}
-  <link rel="stylesheet" href="{{ theme.vendors.algolia_instant_css }}">
+  <link rel="stylesheet" href="{{ algolia_instant_css }}">
 
   {% set algolia_instant_js = url_for(theme.vendors._internal + '/algolia-instant-search/instantsearch.min.js') %}
   {% if theme.vendors.algolia_instant_js %}
