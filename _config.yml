@@ -120,6 +120,7 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
+# Email link(E.g maito:example@gmail.com
 #social:
   #LinkLabel: Link
 
