@@ -74,15 +74,24 @@
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank" title="{{ name }}">
                   {% if theme.social_icons.enable %}
-                    <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
+                      {% if String(theme.social_icons[name]).startsWith('http') || String(theme.social_icons[name]).startsWith('/images/') %}
+                          <i title="title="{{name}}""><img src="{{theme.social_icons[name]}}" alt="title="{{name}}""/></i>
+                      {% else %}
+                        <i title="{{name}}" class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
+                      {% endif %}
+
                   {% endif %}
-                  {{ name }}
+
                 </a>
               </span>
             {% endfor %}
           {% endif %}
         </div>
-
+        {% if config.email %}
+            <div class="">
+                <a class="email" href="mailto:{{ config.email }}">{{ config.email }}<a/>
+            </div>
+        {% endif %}
         {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
         {% if theme.creative_commons in cc %}
           <div class="cc-license motion-element" itemprop="license">
