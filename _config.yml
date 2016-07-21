@@ -240,7 +240,7 @@ mathjax:
 #baidu_analytics:
 
 # Duoshuo ShortName
-duoshuo_shortname: chenwl
+#duoshuo_shortname:
 
 # Disqus
 #disqus_shortname:
@@ -276,7 +276,7 @@ duoshuo_shortname: chenwl
 duoshuo_info:
   ua_enable: true
   admin_enable: false
-  user_id: 13227815
+  user_id: 0
   #admin_nickname: Author
 
 
