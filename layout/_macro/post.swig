@@ -47,6 +47,7 @@
         {% endif %}
 
         <div class="post-meta">
+          <span class="post-author">{{ post.author }}</span>
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
