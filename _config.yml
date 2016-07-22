@@ -76,7 +76,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host: //fonts.useso.com
+  host: //fonts.lug.ustc.edu.cn
 
   # Global font settings used on <body> element.
   global:
