@@ -2,6 +2,7 @@ title:
   archive: 归档
   category: 分类
   tag: 标签
+  author: 作者
 
 author: 博主
 
@@ -13,6 +14,7 @@ menu:
   about: 关于
   search: 搜索
   commonweal: 公益404
+  authors: 作者
 
 
 sidebar:
@@ -47,6 +49,11 @@ counter:
     zero: 暂无分类
     one: 目前共计 1 个分类
     other: "目前共计 %d 个分类"
+
+  authors:
+    zero: 暂无作者
+    one: 目前共计 1 个作者
+    other: "目前共计 %d 个作者"
 
   archive_posts:
     zero: 暂无日志。

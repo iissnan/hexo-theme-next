@@ -1,0 +1,27 @@
+.author-all-page {
+  .author-all-title { text-align: center; }
+
+  .author-all { margin-top: 20px; }
+
+  .author-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .author-list-item { margin: 5px 10px; }
+
+  .author-list-count {
+    color: $grey;
+    &:before {
+      display: inline;
+      content: " ("
+    }
+    &:after {
+      display: inline;
+      content: ") "
+    }
+  }
+
+  .author-list-child { padding-left: 10px; }
+}
