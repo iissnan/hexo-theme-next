@@ -47,7 +47,11 @@
         {% endif %}
 
         <div class="post-meta">
-          <span class="post-author">{{ post.author }}</span>
+          <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+            <a href="/authors/{{ post.author }}" itemprop="url" rel="index">
+              <span itemprop="name">{{ post.author }}</span>
+            </a>
+          </span>
           <span class="post-time">
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
