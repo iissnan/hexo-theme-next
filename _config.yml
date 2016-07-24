@@ -29,7 +29,7 @@ menu:
   read: /categories/Reading
   archives: /archives
   categories: /categories
-  #tags: /tags
+  tags: /tags
   about: /about
   #commonweal: /404.html
 
@@ -121,8 +121,9 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
   GitHub: https://github.com/zerosrat
+  Twitter: https://twitter.com/zerosrat
+  Douban: https://www.douban.com/people/75950874/
   Email: mailto:zero@zerosrat.com
-
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
@@ -136,6 +137,7 @@ social_icons:
   Email: envelope
   Twitter: twitter
   Weibo: weibo
+  Douban: globe
 
 
 # Sidebar Avatar
@@ -245,7 +247,7 @@ baidu_analytics: a5c9002fdce3fad3f14ba17eae778ce8
 duoshuo_shortname: zerosrat
 
 # Disqus
-#disqus_shortname: zero
+#disqus_shortname: disqus_5bfqQkhONV
 
 # Baidu Share
 # Available value:
@@ -295,7 +297,7 @@ facebook_sdk:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: MfuwisoDld02d4cQY7PxhvnC-gzGzoHsz
   app_key: 5lRtulNmMxYBQvYIeJagNQYc
 
