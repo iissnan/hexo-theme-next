@@ -5,7 +5,14 @@
 @import "pagination";
 @import "comments";
 @import "tag-cloud";
-@import "back-to-top";
+
+$pos = hexo-config('sidebar.position');
+$pos = !$pos?'left':$pos;
+if $pos in ('left')
+  @import "back-to-top";
+else if $pos in ('right')
+  @import "back-to-top-right";
+
 
 @import "header";
 @import "post";

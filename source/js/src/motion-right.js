@@ -1,4 +1,4 @@
-﻿/* global NexT: true */
+/* global NexT: true */
 
 $(document).ready(function () {
   NexT.motion = {};
@@ -54,8 +54,8 @@ $(document).ready(function () {
   var sidebarToggleLine1st = new SidebarToggleLine({
     el: '.sidebar-toggle-line-first',
     status: {
-      arrow: {width: '50%', rotateZ: '45deg',left:'6px', top: '2px'},
-      close: {width: '100%', rotateZ: '45deg',left:'0px', top: '5px'}
+      arrow: {width: '50%', rotateZ: '-45deg', top: '2px'},
+      close: {width: '100%', rotateZ: '-45deg', top: '5px'}
     }
   });
   var sidebarToggleLine2nd = new SidebarToggleLine({
@@ -68,8 +68,8 @@ $(document).ready(function () {
   var sidebarToggleLine3rd = new SidebarToggleLine({
     el: '.sidebar-toggle-line-last',
     status: {
-      arrow: {width: '50%', rotateZ: '-45deg',left:'6px', top: '-2px'},
-      close: {width: '100%', rotateZ: '-45deg',left:'0px', top: '-5px'}
+      arrow: {width: '50%', rotateZ: '45deg', top: '-2px'},
+      close: {width: '100%', rotateZ: '45deg', top: '-5px'}
     }
   });
 
@@ -85,9 +85,6 @@ $(document).ready(function () {
     sidebarEl: $('.sidebar'),
     isSidebarVisible: false,
     init: function () {
-      this.sidebarEl.css('left',0);
-      this.toggleEl.css('left','50px');
-      $('.back-to-top').css('left','50px');
       this.toggleEl.on('click', this.clickHandler.bind(this));
       this.toggleEl.on('mouseenter', this.mouseEnterHandler.bind(this));
       this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
@@ -95,7 +92,7 @@ $(document).ready(function () {
       $(document)
         .on('sidebar.isShowing', function () {
           NexT.utils.isDesktop() && $('body').velocity('stop').velocity(
-            {paddingLeft: SIDEBAR_WIDTH},
+            {paddingRight: SIDEBAR_WIDTH},
             SIDEBAR_DISPLAY_DURATION
           );
         })
@@ -130,7 +127,7 @@ $(document).ready(function () {
           duration: SIDEBAR_DISPLAY_DURATION,
           begin: function () {
             $('.sidebar .motion-element').velocity(
-              'transition.slideLeftIn',
+              'transition.slideRightIn',
               {
                 stagger: 50,
                 drag: true,
@@ -150,7 +147,7 @@ $(document).ready(function () {
       this.sidebarEl.trigger('sidebar.isShowing');
     },
     hideSidebar: function () {
-      NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingLeft: 0});
+      NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});
       this.sidebarEl.find('.motion-element').velocity('stop').css('display', 'none');
       this.sidebarEl.velocity('stop').velocity({width: 0}, {display: 'none'});
 
