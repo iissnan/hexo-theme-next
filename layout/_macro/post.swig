@@ -209,7 +209,7 @@
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.length and not is_index %}
+      {% if post.tags and post.tags.length %}
         <div class="post-tags">
           {% for tag in post.tags %}
             <a href="{{ url_for(tag.path) }}" rel="tag">#{{ tag.name }}</a>
