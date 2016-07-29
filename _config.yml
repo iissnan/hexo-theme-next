@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Just Normal"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -29,11 +29,12 @@ canonical: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
+  categories: /categories
+  about: /about
   archives: /archives
   tags: /tags
   #commonweal: /404.html
+  guestbook: /guestbook
 
 
 # Enable/Disable menu icons.
@@ -59,8 +60,8 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
+# scheme: Muse
+scheme: Mist
 #scheme: Pisces
 
 
@@ -201,7 +202,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
@@ -235,7 +236,7 @@ mathjax:
 
 
 # Swiftype Search API Key
-#swiftype_key:
+# swiftype_key:
 
 # Baidu Analytics ID
 #baidu_analytics:
@@ -278,7 +279,7 @@ duoshuo_info:
   ua_enable: true
   admin_enable: false
   user_id: 0
-  #admin_nickname: Author
+  admin_nickname: normalhh
 
 
 # Facebook SDK Support.
