@@ -9,6 +9,7 @@
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
+  {% block css_extra%}{% endblock %}
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ config.language }}">
@@ -62,6 +63,7 @@
   {% include scheme_script %}
 
   {% block script_extra %}{% endblock %}
+{% block script_extra %}{% endblock %}
 
   {% include '_scripts/boostrap.swig' %}
 
