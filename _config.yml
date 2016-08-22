@@ -242,6 +242,10 @@ mathjax:
 
 # Duoshuo ShortName
 #duoshuo_shortname:
+duoshuo:
+ shortname:
+ hotartical: true
+ recent_visitors: true
 
 # Disqus
 #disqus_shortname:
