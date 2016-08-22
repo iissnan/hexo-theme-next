@@ -37,7 +37,7 @@
                   </span>
                 {% endif %}
                 <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">
-                  {{ post.title | default(__('post.untitled'))}}
+                  #{{ post.title | default(__('post.untitled'))}}
                 </a>
               {% else %}
                 {{ post.title }}
@@ -55,6 +55,11 @@
             <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
               {{ date(post.date, config.date_format) }}
             </time>
+            {% if post.tags and post.tags.length %}
+                {% for tag in post.tags %}
+                  <a class="post-tag" href="{{ url_for(tag.path) }}" rel="tag">{{ tag.name }}</a>
+                {% endfor %}
+            {% endif %}
           </span>
 
           {% if post.categories and post.categories.length %}
@@ -66,7 +71,7 @@
               <span class="post-meta-item-text">{{ __('post.in') }}</span>
               {% for cat in post.categories %}
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
+                  <a class="post-category-item" href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
                     <span itemprop="name">{{ cat.name }}</span>
                   </a>
                 </span>
@@ -204,13 +209,6 @@
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.length and not is_index %}
-        <div class="post-tags">
-          {% for tag in post.tags %}
-            <a href="{{ url_for(tag.path) }}" rel="tag">#{{ tag.name }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
 
       {% if not is_index and (post.prev or post.next) and not navlessPost %}
         <div class="post-nav">

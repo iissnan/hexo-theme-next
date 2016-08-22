@@ -9,10 +9,21 @@
     list-style: none;
   }
 
-  .category-list-item { margin: 5px 10px; }
+  .category-list-item {
+      margin: 5px 10px;
+      display: inline-block;
+      background-color $category-bg-color;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 3px;
+      a, a:hover{
+          color: #fff;
+          border-bottom: none;
+      }
+  }
 
   .category-list-count {
-    color: $grey;
+    color: #fff;
     &:before {
       display: inline;
       content: " ("

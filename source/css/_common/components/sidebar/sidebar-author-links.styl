@@ -1,21 +1,28 @@
-.links-of-author { margin-top: 20px; }
-
+.links-of-author {
+    margin-top: 40px;
+    text-align: center;
+}
+.links-of-author .links-of-author-item {
+    display: inline-block;;
+}
 .links-of-author a {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-bottom-color: $black-light;
-  font-size: 13px;
+  border: none;
 
-  &:before {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 3px;
-    content: " ";
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgb(random-color(0, 255) - 50%, random-color(0, 255) - 50%, random-color(0, 255) - 50%);
+  i, i img{
+      width: $site-author-socail-item-size;
+      height: $site-author-socail-item-size;
+      font-size: $site-author-socail-item-size;
+      transition: all .5s ease-in-out;
+  }
+  i img {
+      opacity: 0.6;
+      margin-top: 4px;
+      &:hover {
+          opacity: 1;
+      }
   }
 }
