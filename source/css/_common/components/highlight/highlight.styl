@@ -79,6 +79,16 @@ pre {
   .line { height: 20px; }
 }
 
+// For diff highlight
+pre .deletion {
+  background: #fdd;
+}
+pre .addition {
+  background: #dfd;
+}
+pre .meta {
+  background: #ddf;
+}
 
 .gist table {
   width: auto;
@@ -87,7 +97,7 @@ pre {
 }
 
 pre {
-
+  .meta
   .comment { color: $highlight-comment; }
 
   .variable
