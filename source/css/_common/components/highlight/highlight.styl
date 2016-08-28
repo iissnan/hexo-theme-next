@@ -1,6 +1,7 @@
 // https://github.com/chriskempson/tomorrow-theme
 
 @require "theme"
+@require "diff"
 
 // Placeholder: $code-block
 $code-block {
@@ -88,15 +89,9 @@ pre {
 }
 
 // For diff highlight
-pre .deletion {
-  background: #fdd;
-}
-pre .addition {
-  background: #dfd;
-}
-pre .meta {
-  color: $highlight-purple;
-}
+pre .deletion { background: $highlight-deletion; }
+pre .addition { background: $highlight-addition; }
+pre .meta     { color: $highlight-purple; }
   
 pre {
 
