@@ -86,8 +86,19 @@ pre {
   td { border: none; }
 }
 
+// For diff highlight
+pre .deletion {
+  background: #fdd;
+}
+pre .addition {
+  background: #dfd;
+}
+pre .meta {
+  background: #ddf;
+}
+  
 pre {
-
+  .meta
   .comment { color: $highlight-comment; }
 
   .variable
