@@ -117,7 +117,7 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  z-index: 10000;
+  z-index: 10;
 }
 
 .slider {
@@ -206,10 +206,10 @@
   -webkit-transform: scale(1.5) rotate(-360deg);
   -moz-transform: scale(1.5) rotate(-360deg);
   -o-transform: scale(1.5) rotate(-360deg);
-  z-index: 2;
+  z-index: 20;
 }
 .tab-content .card {
-  background-size: contain!important;
+  background-size: cover!important;
 }
 
 /*endregion*/

@@ -12,17 +12,17 @@
 <div class="tab-content">
   <div id="tab-content-1">
     {% for card in theme.study.readed %}
-      <div  class="card f" style="background: url({{ card.url }})"></div>
+      <div  class="card f" style="background: url({{ card.url }}) no-repeat"></div>
     {% endfor %}
   </div>
   <div id="tab-content-2">
     {% for card in theme.study.reading %}
-      <div  class="card f" style="background: url({{ card.url }})"></div>
+      <div  class="card f" style="background: url({{ card.url }})  no-repeat"></div>
     {% endfor %}
   </div>
   <div id="tab-content-3">
     {% for card in theme.study.want %}
-      <div  class="card f" style="background: url({{ card.url }})"></div>
+      <div  class="card f" style="background: url({{ card.url }})  no-repeat"></div>
     {% endfor %}
   </div>
 </div>
