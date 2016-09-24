@@ -1,14 +1,27 @@
 // Menu
 // --------------------------------------------------
 .site-nav-toggle {
-  position: static;
-  float: right;
+  //position: static;
+  //float: right;
+
+  display: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.site-nav {
+  display: block !important;
 }
 
 
 .menu {
+  //float: right;
+  //margin: 8px 0 0 0;
+
   float: left;
-  margin: 8px 0 0 0;
+  margin: 8px 0 0 20px;
+  padding: 0 20px;
 
   +mobile() {
     margin: 20px 0 0 0;
@@ -43,4 +56,8 @@
     }
 
   +mobile() { float: none; }
+}
+
+.menu-left {
+  float: left;
 }
