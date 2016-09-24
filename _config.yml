@@ -142,7 +142,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: http://upload.jianshu.io/users/upload_avatars/2830009/b27f3800ab63?imageMogr/thumbnail/104x104/quality/100
 
 
 # Table Of Contents in the Sidebar
