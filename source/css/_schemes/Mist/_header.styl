@@ -2,9 +2,7 @@
 // --------------------------------------------------
 .header { background: $whitesmoke; }
 .header-inner {
-  margin-bottom: 50px;
-  padding: 40px 0;
-  //padding: 25px 0 20px;
+  padding: 25px 0 20px;
   clearfix();
 
   +mobile() {
@@ -15,26 +13,17 @@
 }
 
 .site-meta {
-  //float: left;
-  //margin-left: -20px;
-  //line-height: normal;
-  margin: 0;
-  text-align: left;
+  float: left;
+  margin-left: -20px;
+  line-height: normal;
 
   +mobile() {
     margin-left: 10px;
   }
 
   .brand {
-    //padding: 2px 1px;
+    padding: 2px 1px;
     background: none;
-
-    position: relative;
-    display: inline-block;
-    padding: 0 40px;
-    color: #222;
-    //background: #222;
-    border-bottom: none;
 
     +mobile() { display: block; }
   }
