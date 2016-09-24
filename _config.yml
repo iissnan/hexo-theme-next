@@ -170,9 +170,9 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggler.
-  display: post
+  #display: post
   #display: always
-  #display: hide
+  display: hide
   #display: remove
 
 
@@ -212,8 +212,8 @@ scroll_to_more: true
 # Automatically Excerpt. Not recommand.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: true
-  length: 150
+  enable: false
+  length: 300
 
 
 # Wechat Subscriber
