@@ -38,9 +38,6 @@
     {% else %}
       {{ page.content }}
     {% endif %}
-
-
-
   </div>
 
 {% endblock %}
