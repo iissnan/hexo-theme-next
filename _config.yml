@@ -202,7 +202,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
@@ -276,10 +276,10 @@ cnzz_siteid: 1260463056
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: true
   user_id: 6334516688775561986
-  admin_nickname: 半夏alvin
+  admin_nickname: 半夏
 
 
 # Facebook SDK Support.
