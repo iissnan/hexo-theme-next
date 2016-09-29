@@ -304,7 +304,7 @@ facebook_comments_plugin:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
+  enable: true
   app_id: ygTY6wvjKgmM1XaRmGTK89T4-gzGzoHsz
   app_key: qyDOT4HD6Rfxdz7LGrAoSydy
 
