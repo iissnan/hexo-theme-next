@@ -277,9 +277,9 @@ cnzz_siteid: 1260463056
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
   ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+  admin_enable: true
+  user_id: 6334516688775561986
+  admin_nickname: 半夏alvin
 
 
 # Facebook SDK Support.
