@@ -48,7 +48,7 @@
 
         <div class="post-meta">
           <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-            <a href="/authors/{{ post.author }}" itemprop="url" rel="index">
+            <a href="/authors/{{ author_to_url(post.author) }}" itemprop="url" rel="index">
               <span itemprop="name">{{ post.author }}</span>
             </a>
           </span>
