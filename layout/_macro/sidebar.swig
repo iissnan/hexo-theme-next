@@ -24,7 +24,7 @@
       {% endif %}
 
       <section class="site-overview sidebar-panel {% if not display_toc %} sidebar-panel-active {% endif %}">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
                alt="{{ theme.author }}" />

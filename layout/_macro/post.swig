@@ -9,7 +9,7 @@
     {% set post_class = post_class + ' ' + 'post-sticky' %}
   {% endif %}
 
-  <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
+  <article class="{{ post_class }}" itemscope itemtype="//schema.org/Article">
 
     {% if not headlessPost %}
       <header class="post-header">
@@ -137,13 +137,13 @@
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <div class="post-gallery" itemscope itemtype="//schema.org/ImageGallery">
           {% set COLUMN_NUMBER = 3 %}
           {% for photo in post.photos %}
             {% if loop.index0 % COLUMN_NUMBER === 0 %}<div class="post-gallery-row">{% endif %}
               <a class="post-gallery-img fancybox"
                  href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+                 itemscope itemtype="//schema.org/ImageObject" itemprop="url">
                 <img src="{{ url_for(photo) }}" itemprop="contentUrl"/>
               </a>
             {% if loop.index0 % COLUMN_NUMBER === 2 %}</div>{% endif %}

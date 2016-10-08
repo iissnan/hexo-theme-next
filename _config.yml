@@ -249,11 +249,13 @@ mathjax:
 # Baidu Share
 # Available value:
 #    button | slide
+# Warning: Baidu Share does not support https.
 #baidushare:
 ##  type: button
 
 # Share
 #jiathis:
+# Warning: JiaThis does not support https.
 #add_this_id:
 
 # Share
@@ -350,6 +352,7 @@ fancybox: true
 # For example
 #    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
 # Be aware that you should use the same version as internal ones to avoid potential problems.
+# Please use the https protocol of CDN files when you enable https on your site.
 vendors:
   # Internal path prefix. Please do not edit it.
   _internal: vendors
@@ -358,32 +361,32 @@ vendors:
   jquery:
 
   # Internal version: 2.1.5
-  # http://fancyapps.com/fancybox/
+  # See: http://fancyapps.com/fancybox/
   fancybox:
   fancybox_css:
 
   # Internal version: 1.0.6
-  # https://github.com/ftlabs/fastclick
+  # See: https://github.com/ftlabs/fastclick
   fastclick:
 
   # Internal version: 1.9.7
-  # https://github.com/tuupola/jquery_lazyload
+  # See: https://github.com/tuupola/jquery_lazyload
   lazyload:
 
   # Internal version: 1.2.1
-  # http://VelocityJS.org
+  # See: http://VelocityJS.org
   velocity:
 
   # Internal version: 1.2.1
-  # http://VelocityJS.org
+  # See: http://VelocityJS.org
   velocity_ui:
 
   # Internal version: 0.7.9
-  # https://faisalman.github.io/ua-parser-js/
+  # See: https://faisalman.github.io/ua-parser-js/
   ua_parser:
 
   # Internal version: 4.4.0
-  # http://fontawesome.io/
+  # See: http://fontawesome.io/
   fontawesome:
 
 
@@ -393,4 +396,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.0.1
+version: 5.0.2
