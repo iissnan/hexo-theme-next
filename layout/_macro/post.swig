@@ -94,6 +94,18 @@
                   <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentsCount"></span>
                 </a>
               </span>
+            {% elseif theme.hypercomments_id %}
+            <!--noindex-->
+              <span class="post-comments-count">
+                &nbsp;|&nbsp;
+                  <span class="post-meta-item-icon">
+                    <i class="fa fa-comment-o"></i>
+                    <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+                      <span class="post-comments-count hc-comment-count" data-xid="{{ post.path }}" itemprop="commentsCount"></span>
+                    </a>
+                  </span>
+              </span>
+              <!--/noindex-->
             {% endif %}
           {% endif %}
 

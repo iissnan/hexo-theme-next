@@ -244,6 +244,9 @@ mathjax:
 # Disqus
 #disqus_shortname:
 
+# Hypercomments
+#hypercomments_id: 
+
 # Baidu Share
 # Available value:
 #    button | slide
