@@ -79,11 +79,21 @@ pre {
   .line { height: 20px; }
 }
 
-
 .gist table {
   width: auto;
 
   td { border: none; }
+}
+
+// For diff highlight
+pre .deletion {
+  background: #fdd;
+}
+pre .addition {
+  background: #dfd;
+}
+pre .meta {
+  color: $highlight-purple;
 }
 
 pre {
