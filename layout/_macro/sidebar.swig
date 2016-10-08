@@ -14,16 +14,16 @@
 
       {% if display_toc %}
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            {{ __('sidebar.toc') }}
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview sidebar-nav-active" data-target="site-overview">
             {{ __('sidebar.overview') }}
+          </li>
+          <li class="sidebar-nav-toc" data-target="post-toc-wrap" >
+            {{ __('sidebar.toc') }}
           </li>
         </ul>
       {% endif %}
 
-      <section class="site-overview sidebar-panel {% if not display_toc %} sidebar-panel-active {% endif %}">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
@@ -112,7 +112,7 @@
       </section>
 
       {% if display_toc %}
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <section class="post-toc-wrap motion-element sidebar-panel ">
           <div class="post-toc">
             {% if page.toc_number === undefine %}
               {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
