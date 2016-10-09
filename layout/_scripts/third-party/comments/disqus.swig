@@ -5,7 +5,9 @@
     <script type="text/javascript">
       var disqus_shortname = '{{theme.disqus_shortname}}';
       var disqus_identifier = '{{ page.path }}';
-      var disqus_title = '{{ page.title }}';
+
+      var disqus_title = "{{ page.title|addslashes }}";
+
 
       function run_disqus_script(disqus_script) {
         var dsq = document.createElement('script');
@@ -23,5 +25,4 @@
 
     </script>
   {% endif %}
-
 {% endif %}
