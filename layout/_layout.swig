@@ -11,16 +11,16 @@
   <title>{% block title %}{% endblock %}</title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="{{ config.language }}">
+<body lang="{{ config.language }}" itemscope itemtype="//schema.org/WebPage">
 
   {% include '_scripts/third-party/analytics.swig' %}
 
-  {% set container_class = "container one-collumn " %}
+  {% set container_class = "container" %}
   {% if theme.sidebar.position %}
-    {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
+    {% set container_class = container_class + ' sidebar-position-' + theme.sidebar.position %}
   {% endif %}
 
-  <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
+  <div class="{{ container_class }} {% block page_class %}{% endblock %}">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">

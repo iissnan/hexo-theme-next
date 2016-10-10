@@ -13,3 +13,6 @@ source/vendors/font-awesome/scss/
 
 source/vendors/ua-parser-js/*
 !source/vendors/ua-parser-js/dist/
+
+source/vendors/jeet/*
+!source/vendors/jeet/stylus

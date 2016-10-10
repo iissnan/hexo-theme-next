@@ -11,6 +11,8 @@ body {
   line-height: $line-height-base;
   color: $text-color;
   background: $body-bg-color;
+  background-image: url($body-bg-image) if $body-bg-image is defined;
+  background-repeat: $body-bg-repeat if $body-bg-repeat is defined;
 
   +mobile() { padding-right: 0 !important; }
   +tablet() { padding-right: 0 !important; }

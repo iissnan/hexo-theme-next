@@ -1,7 +1,13 @@
-.header { background: $head-bg; }
+.header {
+  color: $header-color;
+  background: $header-bg;
+}
 
-.header-inner { position: relative; }
-
+.header-inner {
+  position: relative;
+  margin: $header-inner-margin;
+  padding: $header-inner-padding;
+}
 
 @import "headerband";
 @import "site-meta";

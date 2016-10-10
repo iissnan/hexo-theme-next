@@ -1,31 +1,39 @@
 // Menu
 // --------------------------------------------------
 .menu {
-  margin-top: 20px;
+  margin: $menu-margin;
   padding-left: 0;
-  text-align: center;
+  text-align: $menu-text-align;
 }
 
 .menu .menu-item {
   display: inline-block;
-  margin: 0 10px;
+  margin: $menu-item-margin;
   @media screen and (max-width: 767px) {
     margin-top: 10px;
   }
 
   a {
     display: block;
-    font-size: 13px;
+    color: $menu-link-color;
+    font-size: $menu-link-font-size;
     text-transform: capitalize;
     line-height: inherit;
     border-bottom: 1px solid $menu-link-border;
     transition-property: border-color;
     the-transition();
 
-    &:hover { border-bottom-color: $menu-link-hover-border; }
+    &:hover {
+      color: $menu-link-hover-color;
+      border-bottom-color: $menu-link-hover-border;
+    }
   }
 
-  .fa { margin-right: 5px; }
+  .fa {
+    margin-right: $menu-link-icon-gap;
+  }
 }
 
-.use-motion .menu-item { opacity: 0; }
+.use-motion .menu-item {
+  opacity: 0;
+}

@@ -1,5 +1,5 @@
 .site-meta {
-  margin: 0;
+  margin: $site-meta-margin;
   text-align: $site-meta-text-align;
 
   +mobile() { text-align: center; }
@@ -8,11 +8,14 @@
 .brand {
   position: relative;
   display: inline-block;
-  padding: 0 40px;
+  padding: $brand-padding;
   color: $brand-color;
   background: $brand-bg;
   border-bottom: none;
-  &:hover { color: $brand-hover-color; }
+
+  &:hover {
+    color: $brand-hover-color;
+  }
 }
 
 .logo {
@@ -32,9 +35,10 @@
 }
 
 .site-subtitle {
-  margin-top: 10px;
+  margin: $subtitle-margin;
   font-size: $subtitle-font-size;
   color: $subtitle-color;
+  line-height: $subtitle-line-height;
 }
 
 .use-motion {
