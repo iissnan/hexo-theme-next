@@ -1,7 +1,7 @@
 //
 // Layout
 // Note: Must name this file "outline" instead of "layout"
-//       Or Hexo will use it as template layout.
+//       Or Hexo will use it as the template layout.
 // =================================================
 
 
@@ -16,8 +16,6 @@ html, body { height: 100%; }
 // Header Section
 // --------------------------------------------------
 .header-inner {
-  margin: 0 auto;
-  padding: 100px 0 70px;
   width: $content-desktop;
 
   +desktop-large() {
@@ -31,10 +29,14 @@ html, body { height: 100%; }
 .main-inner {
   margin: 0 auto;
   width: $content-desktop;
+  background: $main-inner-bg-color;
 
   +desktop-large() {
     .container & { width: $content-desktop-large; }
   }
+}
+.content-wrap {
+  padding: $content-wrap-padding;
 }
 
 

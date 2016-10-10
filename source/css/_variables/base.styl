@@ -44,6 +44,8 @@ $border-color                 = $grey-light
 
 // Background color for <body>
 $body-bg-color                = white
+$body-bg-image                = null
+$body-bg-repeat               = repeat
 
 // Selection
 $selection-bg                 = $blue-deep
@@ -200,7 +202,8 @@ $footer-height                  = 50px
 
 $gap-between-main-and-footer    = 100px
 
-
+$main-inner-bg-color            = trasparent
+$content-wrap-padding           = 40px 0 0
 
 // Headband
 // --------------------------------------------------
@@ -213,10 +216,16 @@ $headband-bg                    = $black-deep
 // Variables for header section elements.
 // --------------------------------------------------
 
-$head-bg                        = white
+$header-color                   = $black-deep
+$header-bg                      = white
+$header-inner-margin            = 0 auto
+$header-inner-padding           = 100px 0 70px
 
 // Site Meta
+$site-meta-margin               = 0
 $site-meta-text-align           = center
+
+$brand-padding                  = 0 40px
 $brand-color                    = white
 $brand-hover-color              = white
 $brand-bg                       = $black-deep
@@ -224,11 +233,21 @@ $brand-bg                       = $black-deep
 $logo-font-size                 = 20px
 $logo-font-size                 = unit(hexo-config('font.logo.size'), px) if hexo-config('font.logo.size') is a 'unit'
 
-$site-subtitle-color            = $grey-dark
+$subtitle-margin                = 10px 0 0 0
 $subtitle-font-size             = 13px
 $subtitle-color                 = $grey-dark
+$subtitle-line-height           = 1
 
 // Menu
+$menu-margin                    = 20px 0 0 0
+$menu-text-align                = center
+
+$menu-item-margin               = 0 10px
+
+$menu-link-font-size            = 13px
+$menu-link-icon-gap             = 5px
+$menu-link-color                = $black-deep
+$menu-link-hover-color          = $whitesmoke
 $menu-link-border               = transparent
 $menu-link-hover-border         = $black-deep
 
@@ -290,6 +309,16 @@ $toc-link-active-color                = $sidebar-highlight
 $toc-link-active-border-color         = $sidebar-highlight
 $toc-link-active-current-color        = $sidebar-highlight
 $toc-link-active-current-border-color = $sidebar-highlight
+
+
+
+// Footer
+// --------------------------------------------------
+$foot-color                   = $grey-dark
+$foot-font-size               = 14px
+
+$foot-link-color              = $link-color
+$foot-link-hover-color        = $link-hover-color
 
 
 // Components
