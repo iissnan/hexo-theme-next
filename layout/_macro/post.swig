@@ -9,6 +9,7 @@
   {% endif %}
 
   <article class="{{ post_class }}" itemscope itemtype="//schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
     {% if not headlessPost %}
       <header class="post-header">
