@@ -9,7 +9,8 @@ gulp.task 'lint', ->
     './source/js/src/hook-duoshuo.js',
     './source/js/src/bootstrap.js',
     './source/js/src/post-details.js',
-    './source/js/src/schemes/pisces.js'
+    './source/js/src/schemes/pisces.js',
+    './source/js/src/schemes/servant.js'
   ]).pipe jshint()
     .pipe jshint.reporter(stylish)
 

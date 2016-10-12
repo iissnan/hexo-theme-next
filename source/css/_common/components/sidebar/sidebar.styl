@@ -1,15 +1,6 @@
 .sidebar {
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-
-  width: 0;
-  z-index: $zindex-4;
-  box-shadow: inset 0 2px 6px black;
-  background: $black-deep;
-  -webkit-transform: translateZ(0); // http://stackoverflow.com/questions/17079857/position-fixed-broken-in-chrome-with-flash-behind
-
+  background-color: $sidebar-bg-color;
+  
   a {
     color: $grey-dark;
     border-bottom-color: $black-light;
@@ -23,12 +14,26 @@
     display: none !important;
   }
 }
+  
+.sidebar-fixed {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  
+  width: 0;
+  z-index: $zindex-4;
+  box-shadow: inset 0 2px 6px black;
+  background: $black-deep;
+  // http://stackoverflow.com/questions/17079857/position-fixed-broken-in-chrome-with-flash-behind
+  -webkit-transform: translateZ(0);
+}
 
 .sidebar-inner {
   position: relative;
-  padding: 20px 10px;
-  color: $grey-dark;
-  text-align: center;
+  padding: $sidebar-inner-padding;
+  color: $sidebar-inner-color;
+  text-align: $sidebar-inner-text-align;
 }
 
 @import "sidebar-toggle";
