@@ -1,4 +1,7 @@
 {% macro render(is_post) %}
+  {% set is_sidebar_fixed = theme.scheme in ['Muse', 'Mist'] %}
+
+  {% if is_sidebar_fixed %}
   <div class="sidebar-toggle">
     <div class="sidebar-toggle-line-wrap">
       <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -6,8 +9,14 @@
       <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
+  {% endif %}
 
-  <aside id="sidebar" class="sidebar">
+  {% set sidebar_class = 'sidebar' %}
+  {% if is_sidebar_fixed %}
+    {% set sidebar_class = sidebar_class + ' sidebar-fixed' %}
+  {% endif %}
+
+  <aside id="sidebar" class="{{ sidebar_class }}">
     <div class="sidebar-inner">
 
       {% set display_toc = is_post and theme.toc.enable %}

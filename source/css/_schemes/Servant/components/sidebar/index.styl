@@ -1,0 +1,24 @@
+.sidebar-inner {
+  box-sizing: border-box;
+  color: $text-color;
+  background: white;
+  
+  &.affix {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.sidebar a {
+  color: $black-light;
+  
+  &:hover {
+    color: $black-deep;
+  }
+}
+
+@import "sidebar-author";
+@import "site-state";
+@import "sidebar-blogroll";
+@import "sidebar-feed-link";
+@import "sidebar-author-links";
