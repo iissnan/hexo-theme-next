@@ -1,0 +1,152 @@
+$content-column-radio = 11.8 / 16
+$sidebar-column-radio = 4.2 / 16
+
+.header {
+  position: relative;
+  center($main-desktop);
+  
+  +tablet() {
+    width: auto;
+  }
+  +mobile() {
+    width: auto;
+  }
+}
+
+.header-inner {
+  column($sidebar-column-radio);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  padding: 0;
+  background: white;
+  
+  +tablet() {
+    position: relative;
+    column(1);
+  }
+  +mobile() {
+    position: relative;
+    column(1);
+  }
+}
+
+
+.main {
+  clearfix();
+  +tablet() {
+    padding-bottom: 100px;
+  }
+  +mobile() {
+    padding-bottom: 100px;
+  }
+}
+
+.container .main-inner {
+  center($main-desktop);
+  
+  +tablet() {
+    width: auto;
+  }
+  +mobile() {
+    width: auto;
+  }
+}
+
+.content-wrap {
+  column($content-column-radio);
+  shift($sidebar-column-radio);
+  box-sizing: border-box;
+  padding: $content-desktop-padding;
+  background: white;
+  min-height: 700px;
+  
+  +tablet() {
+    width: 100%;
+    padding: 20px;
+  }
+  +mobile() {
+    width: 100%;
+    padding: 20px;
+    min-height: auto;
+  }
+}
+
+.sidebar {
+  column($sidebar-column-radio);
+  shift(0 - $content-column-radio);
+  margin-top: 300px;
+  background: white;
+  box-shadow: none;
+  
+  +tablet() {
+    display: none;
+  }
+  +mobile() {
+    display: none;
+  }
+}
+
+.footer-inner {
+  center($main-desktop);
+  
+  +tablet() {
+    width: auto;
+  }
+  +mobile() {
+    width: auto;
+  }
+}
+  
+.footer-inner:before {
+  content: " ";
+  column($sidebar-column-radio);
+  min-height: 50px;
+  
+  +tablet() {
+    display: none;
+  }
+  +mobile() {
+    display: none;
+  }
+}
+
+.footer-content {
+  column($content-column-radio);
+}
+
+  
+// Sidebar Position
+// --------------------------------------------------
+.sidebar-position-right {
+  .header-inner {
+    right: 0;
+  }
+  .content-wrap {
+    unshift();
+  }
+  .sidebar {
+    unshift();
+  }
+  
+  .footer-inner:before {
+    shift($content-column-radio);
+  }
+  .footer-content {
+    shift(0 - $sidebar-column-radio);
+  }
+}
+  
+.sidebar-position-left,
+.sidebar-position-right {
+  .footer-content {
+    +tablet() {
+      unshift();
+      column(1);
+    }
+    +mobile() {
+      unshift();
+      column(1);
+    }
+  }
+}

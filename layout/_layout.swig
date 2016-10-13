@@ -17,7 +17,8 @@
 
   {% set container_class = "container" %}
   {% if theme.sidebar.position %}
-    {% set container_class = container_class + ' sidebar-position-' + theme.sidebar.position %}
+    {% set sidebar_position_class = 'sidebar-position-' + theme.sidebar.position %}
+    {% set container_class = [container_class, sidebar_position_class] | join(' ') %}
   {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">

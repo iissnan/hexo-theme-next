@@ -182,7 +182,7 @@ $(document).ready(function () {
         try{
           fn(NexT.motion.integrator);
         } catch(e) {
-          console.warn(e);
+          window.console.warn(e);
           this.next();
         }
       }
