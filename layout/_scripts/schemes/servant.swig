@@ -1,8 +1,8 @@
 {%
-set scripts = [
-  'src/affix.js',
-  'src/schemes/servant.js'
-]
+  set scripts = [
+    'src/affix.js',
+    'src/schemes/servant.js'
+  ]
 %}
 
 {% for script in scripts %}
