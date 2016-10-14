@@ -54,6 +54,8 @@ if (timeZone) {
   request_url = request_url + '&' + FIELD_TIMEZONE + '=' + timeZone;
 }
 
+var prevStart; // use this variable to decide where to insert an <hr>
+
 // Send query
 $.ajax({
   dataType: 'json',
@@ -63,42 +65,56 @@ $.ajax({
     data['items'].forEach((item) => {
 
       // parse data
-      var start     = new Date(item.start.dateTime);
-      var end       = new Date(item.end.dateTime);
-      var classNow  = "";
+      var start         = new Date(item.start.dateTime);
+      var end           = new Date(item.end.dateTime);
+      var nowFlag       = false;
+      var classNow      = "";
+      var relativeTime  = "";
 
-      if (start < now && now < end) { classNow = "now"}
+      relativeTime = calcTime(now, start);
 
-      $('#schedule #event-list').append('<li>' +
-      '<h2 class="event-summary ' + classNow + '">' +
+      if (start < now && now < end) {
+        classNow = "event-now";
+        nowFlag = true;
+        relativeTime = "NOW";
+      }
+      else {
+        if (prevStart < now && start > now) {
+          $('#schedule #event-list').append('<hr>');
+        }
+      }
+
+      $('#schedule #event-list').append('<li class="event ' + classNow + '">' +
+      '<h2 class="event-summary">' +
 
       // summary
       item['summary']
 
-      + '</h2>' +
-      '<span class="event-start">' +
+      + '<span class="event-start">' +
 
-      // start-time
-      timeDifference(now, start)
+      // relative time or NOW if the event is on going
+      relativeTime
 
       + '</span>' +
-      '<br>' +
+      '</h2>' +
       {% if theme.calendar.showLocation %}
-      '<span class="event-location">' +
+      (( item['location'] &&
+        ('<span class="event-location">' +
 
-      // location
-      (item['location'] || "")
+        // location
+        item['location']
 
-      + '</span>' +
+        + '</span>')
+      ) || "") +
       {% endif %}
       '</li>');
 
-
+      prevStart = start;
     });
   }
 });
 
-function timeDifference(current, previous) {
+function calcTime(current, previous) {
 
     var msPerMinute = 60 * 1000;
     var msPerHour = msPerMinute * 60;

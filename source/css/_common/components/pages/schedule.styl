@@ -1,0 +1,67 @@
+#schedule {
+  ul#event-list {
+    padding-left: 30px
+    hr {
+      margin: 20px 0 45px 0!important
+      background: #222
+        &:after {
+          display: inline-block
+          content: 'NOW'
+          background: #222
+          color: #FFF
+          font-weight:bold
+          text-align: right
+          padding: 0 5px
+        }
+    }
+    li.event {
+      margin: 20px 0px
+      background: #F9F9F9
+      padding-left: 10px
+      min-height: 40px
+      h2.event-summary {
+        margin:0
+        &:before {
+          display: inline-block
+          font-family: FontAwesome
+          font-size: 8px
+          content: '\f111'
+          vertical-align: middle
+          margin-right: 25px
+          color: #bbb
+        }
+      }
+      span.event-start {
+        display: inline-block
+        font-size: 12px
+        font-weight: 400
+        padding-left: 12px
+        color: #bbb
+      }
+      span.event-location {
+        color: #bbb
+        &:before {
+          display: inline-block
+          font-family: FontAwesome
+          content: '\f041'
+          margin-right: 9px
+          margin-left: 32px
+          color: #bbb
+        }
+      }
+    }
+    li.event-now {
+      background: #222
+      color: #FFF
+      h2.event-summary {
+        &:before {
+          color: #FFF
+        }
+      }
+      * {
+        color: #FFF!important
+      }
+    }
+  }
+}
+
