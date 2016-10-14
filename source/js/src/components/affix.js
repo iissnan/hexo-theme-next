@@ -1,6 +1,6 @@
 /* global NexT: true */
 
-(function () {
+$(document).ready(function () {
   var $sidebarInner = $('.sidebar-inner');
   var sidebarPristinePaddingTop = $sidebarInner.css('padding-top');
 
@@ -30,5 +30,4 @@
         .width('auto')
         .css({'padding-top': sidebarPristinePaddingTop});
     });
-}());
-
+});

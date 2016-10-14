@@ -56,22 +56,7 @@
     </div>
   </div>
 
-  {% include '_scripts/vendors.swig' %}
-  {% include '_scripts/commons.swig' %}
-
-  {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
-  {% include scheme_script %}
-
+  {% include '_scripts/index.swig' %}
   {% block script_extra %}{% endblock %}
-
-  {% include '_scripts/boostrap.swig' %}
-
-  {% include '_scripts/third-party/comments.swig' %}
-  {% include '_scripts/third-party/tinysou.swig' %}
-  {% include '_scripts/third-party/localsearch.swig' %}
-  {% include '_scripts/third-party/mathjax.swig' %}
-  {% include '_scripts/third-party/lean-analytics.swig' %}
-  {% include '_scripts/baidu-push.swig' %}
-
 </body>
 </html>
