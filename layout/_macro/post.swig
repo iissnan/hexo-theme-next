@@ -11,6 +11,19 @@
   <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="{{ theme.author }}">
+    <meta itemprop="description" content="{{ theme.signature }}">
+    <meta itemprop="image" content="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="{{ config.title }}">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="{{ config.title }}" src="{{ theme.custom_logo.image }}">
+    </span>
+  </span>
+
     {% if not headlessPost %}
       <header class="post-header">
 
@@ -52,9 +65,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">{{ __('post.posted') }}</span>
-            <time itemprop="dateCreated" datetime="{{ moment(post.date).format() }}" content="{{ date(post.date, config.date_format) }}">
+            <time title="{{ __('post.created') }}" itemprop="dateCreated datePublished" datetime="{{ moment(post.date).format() }}">
               {{ date(post.date, config.date_format) }}
             </time>
+
+            &nbsp;|&nbsp;
+
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-check-o"></i>
+            </span>
+            <time title="{{ __('post.modified') }}" itemprop="dateModified" datetime="{{ moment(post.updated).format() }}">
+              {{ date(post.updated, config.date_format) }}
+            </time>
+            
           </span>
 
           {% if post.categories and post.categories.length %}
