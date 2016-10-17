@@ -5,7 +5,7 @@
   {% set html_class = html_class + ' use-motion' %}
 {% endif %}
 
-<html class="{{ html_class | lower }}">
+<html class="{{ html_class | lower }}" lang="{{ config.language }}">
 <head>
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
