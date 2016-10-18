@@ -132,10 +132,10 @@ function buildEventDOM(tense, event) {
       tenseClass = "event-now";
       break;
     case 1 : // future
-      tenseClass = "event-past";
+      tenseClass = "event-future";
       break;
     case -1: // past
-      tenseClass = "event-future";
+      tenseClass = "event-past";
       break;
     default:
       throw "Time data error";
