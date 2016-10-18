@@ -16,7 +16,8 @@ var timeMin = new Date();
 var calId           = _n('{{ theme.calendar.calendar_id  }}')                ;
 var apiKey          = _n('{{ theme.calendar.api_key      }}')                ;
 var orderBy         = _n('{{ theme.calendar.ordarBy      }}')  || 'startTime';
-var offsetMax       = _n( {{ theme.calendar.offsetMax    }} )  || 24         ;
+var showLocation    = _n('{{ theme.calendar.showLocation }}')  || 'false'    ;
+var offsetMax       = _n( {{ theme.calendar.offsetMax    }} )  || 72         ;
 var offsetMin       = _n( {{ theme.calendar.offsetMin    }} )  || 4          ;
 var timeZone        = _n( {{ theme.calendar.timeZone     }} )  || void 0     ;
 var showDeleted     = _n( {{ theme.calendar.showDeleted  }} )  || 'false'    ;
@@ -37,7 +38,6 @@ FIELD_SHOWDELETED   = 'showDeleted';
 FIELD_SINGLEEVENTS  = 'singleEvents';
 FIELD_MAXRESULTS    = 'maxResults';
 
-key                 = 'AIzaSyCjcukcNCAjWnIlI8MNatepeUX0038HRTU';
 timeMaxISO          = timeMax.toISOString();
 timeMinISO          = timeMin.toISOString();
 
@@ -54,104 +54,129 @@ if (timeZone) {
   request_url = request_url + '&' + FIELD_TIMEZONE + '=' + timeZone;
 }
 
-var prevStart; // use this variable to decide where to insert an <hr>
+fetchData();
+var queryLoop = setInterval(fetchData, 60000);
 
-// Send query
-$.ajax({
-  dataType: 'json',
-  url: request_url,
-  success: function(data) {
-    cal_data = data;
-    data['items'].forEach((item) => {
+function fetchData() {
+  $.ajax({
+    dataType: 'json',
+    url: request_url,
+    success: function(data) {
 
-      // parse data
-      var start         = new Date(item.start.dateTime);
-      var end           = new Date(item.end.dateTime);
-      var nowFlag       = false;
-      var classNow      = "";
-      var relativeTime  = "";
+      $eventList = $('#schedule #event-list');
 
-      relativeTime = calcTime(now, start);
+      // clean the event list
+      $eventList.html("");
+      var prevEnd = 0; // used to decide where to insert an <hr>
 
-      if (start < now && now < end) {
-        classNow = "event-now";
-        nowFlag = true;
-        relativeTime = "NOW";
-      }
-      else {
-        if (prevStart < now && start > now) {
-          $('#schedule #event-list').append('<hr>');
-        }
-      }
+      data['items'].forEach((event) => {
 
-      $('#schedule #event-list').append('<li class="event ' + classNow + '">' +
-      '<h2 class="event-summary">' +
+        // parse data
+        var start = new Date(event.start.dateTime);
+        var end   = new Date(event.end.dateTime);
 
-      // summary
-      item['summary']
+        tense = judgeTense(now, start, end); // 0:now 1:future -1:past
 
-      + '<span class="event-start">' +
+        if (tense == 1 && prevEnd < now) $eventList.append('<hr>');
 
-      // relative time or NOW if the event is on going
-      relativeTime
+        eventDOM = buildEventDOM(tense, event);
+        $eventList.append(eventDOM);
 
-      + '</span>' +
-      '</h2>' +
-      {% if theme.calendar.showLocation %}
-      (( item['location'] &&
-        ('<span class="event-location">' +
+        prevEnd = end;
+      });
+    }
+  });
+}
 
-        // location
-        item['location']
+function getRelativeTime(current, previous) {
+  var msPerMinute = 60 * 1000;
+  var msPerHour = msPerMinute * 60;
+  var msPerDay = msPerHour * 24;
+  var msPerMonth = msPerDay * 30;
+  var msPerYear = msPerDay * 365;
 
-        + '</span>')
-      ) || "") +
-      {% endif %}
-      '</li>');
+  var elapsed = current - previous;
+  var tense = elapsed > 0 ? "ago" : "later";
 
-      prevStart = start;
-    });
+  elapsed = Math.abs(elapsed);
+
+  if      ( elapsed < msPerHour  ) {
+    return Math.round(elapsed/msPerMinute) + ' minutes ' + tense;
   }
-});
+  else if ( elapsed < msPerDay   ) {
+    return Math.round(elapsed/msPerHour) + ' hours ' + tense;
+  }
+  else if ( elapsed < msPerMonth ) {
+    return 'about ' + Math.round(elapsed/msPerDay) + ' days ' + tense;
+  }
+  else if ( elapsed < msPerYear  ) {
+    return 'about ' + Math.round(elapsed/msPerMonth) + ' months ' + tense;
+  }
+  else {
+    return 'about' + Math.round(elapsed/msPerYear) + ' years' + tense;
+  }
+}
 
-function calcTime(current, previous) {
+function judgeTense(now, eventStart, eventEnd) {
+  if      (eventEnd   < now)  { return -1; }
+  else if (eventStart > now)  { return  1; }
+  else                        { return  0; }
+}
 
-    var msPerMinute = 60 * 1000;
-    var msPerHour = msPerMinute * 60;
-    var msPerDay = msPerHour * 24;
-    var msPerMonth = msPerDay * 30;
-    var msPerYear = msPerDay * 365;
+function buildEventDOM(tense, event) {
+  var tenseClass = "";
+  var start      = new Date(event.start.dateTime);
+  var end        = new Date(event.end.dateTime);
+  switch(tense) {
+    case 0 : // now
+      tenseClass = "event-now";
+      break;
+    case 1 : // future
+      tenseClass = "event-past";
+      break;
+    case -1: // past
+      tenseClass = "event-future";
+      break;
+    default:
+      throw "Time data error";
+  }
+  durationFormat = {
+    weekday: 'short',
+    hour: '2-digit',
+    minute:'2-digit'
+  };
+  relativeTimeStr = (tense == 0) ? "NOW" : getRelativeTime(now, start);
+  durationStr = start.toLocaleTimeString([], durationFormat) + " - " +
+                end.toLocaleTimeString([], durationFormat);
 
-    var elapsed = current - previous;
+  liOpen                = `<li class="event ${tenseClass}">`;
+  liClose               = `</li>`;
+  h2Open                = `<h2 class="event-summary">`;
+  h2Close               = `</h2>`;
 
-    var tense = elapsed > 0 ? "ago" : "later";
+  locationDOM     = "";
+  if (showLocation && event['location']) {
+    locationDOM   = `<span class="event-location event-details">
+                      ${event['location']}
+                     </span>`;
+  }
+  relativeTimeDOM = `<span class="event-relative-time">
+                      ${relativeTimeStr}
+                     </span>`;
+  durationDOM     = `<span class="event-duration event-details">
+                      ${durationStr}
+                     </span>`;
 
-    elapsed = Math.abs(elapsed);
-
-    if (elapsed < msPerMinute) {
-         return Math.round(elapsed/1000) + ' seconds ' + tense;
-    }
-
-    else if (elapsed < msPerHour) {
-         return Math.round(elapsed/msPerMinute) + ' minutes ' + tense;
-    }
-
-    else if (elapsed < msPerDay ) {
-         return Math.round(elapsed/msPerHour ) + ' hours ' + tense;
-    }
-
-    else if (elapsed < msPerMonth) {
-        return 'approximately ' + Math.round(elapsed/msPerDay) + ' days ' + tense;
-    }
-
-    else if (elapsed < msPerYear) {
-        return 'approximately ' + Math.round(elapsed/msPerMonth) + ' months ' + tense;
-    }
-
-    else {
-        return 'approximately ' + Math.round(elapsed/msPerYear ) + ' years' +
-        tense;
-    }
+  eventContent =
+    liOpen +
+      h2Open +
+        event['summary'] +
+        relativeTimeDOM+
+      h2Close +
+      locationDOM +
+      durationDOM +
+    liClose;
+  return eventContent;
 }
 
 </script>
