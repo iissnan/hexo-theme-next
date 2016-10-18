@@ -1,6 +1,7 @@
 title:
   archive: 归档
   category: 分类
+  schedule: 日程
   tag: 标签
 
 author: 博主
@@ -9,6 +10,7 @@ menu:
   home: 首页
   archives: 归档
   categories: 分类
+  schedule: 日程
   tags: 标签
   about: 关于
   search: 搜索
