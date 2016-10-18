@@ -38,7 +38,11 @@
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i> <br />
             {% endif %}
-            {{ __('menu.' + itemName) }}
+            {% if theme.prepend_menu %}
+              {{ __('menu.' + itemName) }}
+            {% else %}
+              {{ __(itemName) }}
+            {% endif %}
           </a>
         </li>
       {% endfor %}
@@ -66,4 +70,3 @@
     </div>
   {% endif %}
 </nav>
-
