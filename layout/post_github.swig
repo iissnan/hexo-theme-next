@@ -18,7 +18,7 @@
       {% set is_first_in_data_github = loop.first;%}
       {% for project in data_item.projects %}
         {# 标题 #}
-        {% set real_content +=  "<h3 id='" + project.repo + "'>";%}
+        {% set real_content +=  "<h3 id='" + project.user + '/' + project.repo + "'>";%}
         {% set real_content +=  "<a href='//github.com/" + project.user + "/" + project.repo + "' target='_blank'>" + project.repo + "</a>";%}
         {% set real_content +=  "<iframe data-src='https://ghbtns.com/github-btn.html?user=" + project.user + "&repo=" + project.repo + "&type=star&count=true' frameborder='0' scrolling='0' width='120px' height='20px' class='lazyload'></iframe>";%}
         {% set real_content +=  "</h3>";%}
