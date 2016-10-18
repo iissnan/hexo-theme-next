@@ -3,7 +3,7 @@
 
 {% block title %} {{ __('title.schedule') }} | {{ config.title }} {% endblock %}
 
-{% block page_class %}page-post-detail{% endblock %}
+{% block page_calendar %}page-post-detail{% endblock %}
 
 {% block content %}
 

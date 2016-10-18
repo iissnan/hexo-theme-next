@@ -43,12 +43,12 @@ menu:
 #   Key is the name of menu item and value is the name of FontAwsome icon. Key is case-senstive.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
-  enable: true
+  enable: false
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
   categories: th
-  #schedule: calendar
+  schedule: calendar
   tags: tags
   archives: archive
   commonweal: heartbeat
@@ -342,15 +342,15 @@ baidu_push: false
 # https://developers.google.com/google-apps/calendar/v3/reference/events/list
 calendar:
   enable: false
-#  calendar_id: <required>
-#  api_key: <required>
-#  orderBy: startTime
-#  offsetMax: 24
-#  offsetMin: 4
-#  timeZone:
-#  showDeleted: false
-#  singleEvents: true
-#  maxResults: 250
+  calendar_id: <required>
+  api_key: <required>
+  orderBy: startTime
+  offsetMax: 24
+  offsetMin: 4
+  timeZone:
+  showDeleted: false
+  singleEvents: true
+  maxResults: 250
 
 
 #! ---------------------------------------------------------------
