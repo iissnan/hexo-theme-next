@@ -212,6 +212,8 @@ highlight_theme: normal
 # Automatically scroll page to section which is under <!-- more --> mark.
 scroll_to_more: true
 
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
 
 # Automatically Excerpt. Not recommand.
 # Please use <!-- more --> in the post to control excerpt accurately.
