@@ -18,6 +18,11 @@
 
       run_disqus_script('count.js');
       {% if page.comments %}
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
         run_disqus_script('embed.js');
       {% endif %}
     </script>
