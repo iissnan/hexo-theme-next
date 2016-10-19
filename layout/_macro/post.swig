@@ -199,13 +199,13 @@
       {% if is_index %}
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
-           <!--noindex-->
-           <div class="post-more-link text-center">
-             <a class="btn" href="{{ url_for(post.path) }}">
-               {{ __('post.read_more') }} &raquo;
-             </a>
-           </div>
-           <!--/noindex-->
+          <!--noindex-->
+          <div class="post-more-link text-center">
+            <a class="btn" href="{{ url_for(post.path) }}">
+              {{ __('post.read_more') }} &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         {% elif post.excerpt  %}
           {{ post.excerpt }}
           <!--noindex-->
