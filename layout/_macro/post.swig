@@ -164,7 +164,7 @@
               </span>
           {% endif %}
           
-          {% if post.description %}
+          {% if post.description and not theme.excerpt_description %}
               <div class="post-description">
                   {{ post.description }}
               </div>
@@ -197,7 +197,16 @@
       {% endif %}
 
       {% if is_index %}
-        {% if post.excerpt  %}
+        {% if post.description and theme.excerpt_description %}
+          {{ post.description }}
+           <!--noindex-->
+           <div class="post-more-link text-center">
+             <a class="btn" href="{{ url_for(post.path) }}">
+               {{ __('post.read_more') }} &raquo;
+             </a>
+           </div>
+           <!--/noindex-->
+        {% elif post.excerpt  %}
           {{ post.excerpt }}
           <!--noindex-->
           <div class="post-more-link text-center">
