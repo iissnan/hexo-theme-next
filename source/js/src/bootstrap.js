@@ -13,6 +13,14 @@ $(document).ready(function () {
   NexT.utils.embeddedVideoTransformer();
   NexT.utils.addActiveClassToMenuItem();
 
+  // Initialize Components
+  ['fixedSidebarToggle', 'affix'].forEach(function (name) {
+    var component = NexT.components[name];
+    var couldInit = component && $.isFunction(component.init);
+
+    couldInit && component.init();
+  });
+
   $(document).trigger('motion:before');
 
   // Define Motion Sequence.

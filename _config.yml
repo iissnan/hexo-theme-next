@@ -380,6 +380,7 @@ assets:
     commons:
       - src: js/src/utils.js
       - src: js/src/motion.js
+      - src: js/src/components/sidebar-elements-motion.js
 
     components:
       affix:
@@ -388,6 +389,10 @@ assets:
 
       scrollspy:
         - src: js/src/lib/scrollspy.js
+
+      fixed_sidebar:
+        - src: js/src/components/sidebar-fixed-motion.js
+        - src: js/src/components/sidebar-fixed-toggle.js
 
     bootstrap:
       - src: js/src/bootstrap.js

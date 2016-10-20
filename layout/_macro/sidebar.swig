@@ -1,5 +1,6 @@
 {% macro render(is_post) %}
-  {% set is_sidebar_fixed = theme[theme.scheme | lower].sidebar.fixed %}
+  {% set scheme_settings = theme[theme.scheme | lower] %}
+  {% set is_sidebar_fixed = scheme_settings.sidebar.fixed %}
 
   {% if is_sidebar_fixed %}
   <div class="sidebar-toggle">
@@ -32,15 +33,15 @@
         </ul>
       {% endif %}
 
-      <section class="site-overview sidebar-panel {% if not display_toc %} sidebar-panel-active {% endif %}">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+      <section class="site-overview sidebar-panel motion-element {% if not display_toc %} sidebar-panel-active {% endif %}">
+        <div class="site-author" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
                alt="{{ theme.author }}" />
           <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
-          <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
+          <p class="site-description" itemprop="description">{{ theme.description }}</p>
         </div>
-        <nav class="site-state motion-element">
+        <nav class="site-state">
           <div class="site-state-item site-state-posts">
             <a href="{{ url_for(theme.menu.archives) }}">
               <span class="site-state-item-count">{{ site.posts.length }}</span>
@@ -69,7 +70,7 @@
         </nav>
 
         {% if theme.rss %}
-          <div class="feed-link motion-element">
+          <div class="feed-link">
             <a href="{{ url_for(theme.rss) }}" rel="alternate">
               <i class="fa fa-rss"></i>
               RSS
@@ -77,7 +78,7 @@
           </div>
         {% endif %}
 
-        <div class="links-of-author motion-element">
+        <div class="links-of-author">
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
@@ -94,7 +95,7 @@
 
         {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
         {% if theme.creative_commons in cc %}
-          <div class="cc-license motion-element" itemprop="license">
+          <div class="cc-license" itemprop="license">
             <a href="https://creativecommons.org/{% if theme.creative_commons === 'zero' %}publicdomain/zero/1.0{% else %}licenses/{{ theme.creative_commons }}/4.0{% endif %}/" class="cc-opacity" target="_blank">
               <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
             </a>
