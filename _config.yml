@@ -346,6 +346,7 @@ use_motion: true
 # Fancybox
 fancybox: true
 
+# Site Assets
 assets:
   vendors:
     static:
@@ -396,6 +397,14 @@ assets:
 
 
 # Scheme Settings
+muse:
+  sidebar:
+    fixed: true
+
+mist:
+  sidebar:
+    fixed: true
+
 pisces:
   sidebar:
     affix: true

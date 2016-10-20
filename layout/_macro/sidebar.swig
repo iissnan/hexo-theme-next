@@ -1,5 +1,5 @@
 {% macro render(is_post) %}
-  {% set is_sidebar_fixed = theme.scheme in ['Muse', 'Mist'] %}
+  {% set is_sidebar_fixed = theme[theme.scheme | lower].sidebar.fixed %}
 
   {% if is_sidebar_fixed %}
   <div class="sidebar-toggle">

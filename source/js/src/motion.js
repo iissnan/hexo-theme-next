@@ -13,9 +13,9 @@ $(document).ready(function () {
         line.init();
       });
     },
-    arrow: function () {
+    arrow: function (direction) {
       this.lines.forEach(function (line) {
-        line.arrow();
+        line.arrow(direction);
       });
     },
     close: function () {
@@ -41,8 +41,9 @@ $(document).ready(function () {
   SidebarToggleLine.prototype.init = function () {
     this.transform('init');
   };
-  SidebarToggleLine.prototype.arrow = function () {
-    this.transform('arrow');
+  SidebarToggleLine.prototype.arrow = function (direction) {
+    var status = direction === 'right' ? 'arrowRight' : 'arrow';
+    this.transform(status);
   };
   SidebarToggleLine.prototype.close = function () {
     this.transform('close');
@@ -55,6 +56,7 @@ $(document).ready(function () {
     el: '.sidebar-toggle-line-first',
     status: {
       arrow: {width: '50%', rotateZ: '-45deg', top: '2px'},
+      arrowRight: {width: '50%', rotateZ: '45deg', top: '2px', left: '6px'},
       close: {width: '100%', rotateZ: '-45deg', top: '5px'}
     }
   });
@@ -62,6 +64,7 @@ $(document).ready(function () {
     el: '.sidebar-toggle-line-middle',
     status: {
       arrow: {width: '90%'},
+      arrowRight: {width: '90%'},
       close: {opacity: 0}
     }
   });
@@ -69,6 +72,7 @@ $(document).ready(function () {
     el: '.sidebar-toggle-line-last',
     status: {
       arrow: {width: '50%', rotateZ: '45deg', top: '-2px'},
+      arrowRight: {width: '50%', rotateZ: '-45deg', top: '-2px', left: '6px'},
       close: {width: '100%', rotateZ: '45deg', top: '-5px'}
     }
   });
@@ -84,19 +88,23 @@ $(document).ready(function () {
     toggleEl: $('.sidebar-toggle'),
     sidebarEl: $('.sidebar'),
     isSidebarVisible: false,
+    isSidebarPositionLeft: $('.container').hasClass('sidebar-position-left'),
     init: function () {
+      var self = this;
       this.toggleEl.on('click', this.clickHandler.bind(this));
       this.toggleEl.on('mouseenter', this.mouseEnterHandler.bind(this));
       this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
 
       $(document)
         .on('sidebar.isShowing', function () {
-          NexT.utils.isDesktop() && $('body').velocity('stop').velocity(
-            {paddingRight: SIDEBAR_WIDTH},
-            SIDEBAR_DISPLAY_DURATION
-          );
-        })
-        .on('sidebar.isHiding', function () {
+          var paddingDirection = self.isSidebarPositionLeft ?
+            'padding-left' :
+            'padding-right';
+          var animateProps = {};
+
+          animateProps[paddingDirection] = SIDEBAR_WIDTH;
+          NexT.utils.isDesktop() && $('body').velocity('stop')
+            .velocity(animateProps, SIDEBAR_DISPLAY_DURATION);
         });
     },
     clickHandler: function () {
@@ -107,7 +115,8 @@ $(document).ready(function () {
       if (this.isSidebarVisible) {
         return;
       }
-      sidebarToggleLines.arrow();
+      var arrowDirection = this.isSidebarPositionLeft ? 'right' : 'left';
+      sidebarToggleLines.arrow(arrowDirection);
     },
     mouseLeaveHandler: function () {
       if (this.isSidebarVisible) {
@@ -126,9 +135,19 @@ $(document).ready(function () {
           display: 'block',
           duration: SIDEBAR_DISPLAY_DURATION,
           begin: function () {
-            $('.sidebar .motion-element').velocity(
-              'transition.slideRightIn',
-              {
+            var contentEffect = self.isSidebarPositionLeft ?
+              'transition.slideLeftIn' :
+              'transition.slideRightIn';
+            var toggleDirection = self.isSidebarPositionLeft ?
+              'left' : 'right';
+            var toggleAnimateProps = {};
+            toggleAnimateProps[toggleDirection] = 325;
+
+            $('.sidebar-toggle')
+              .velocity('stop')
+              .velocity(toggleAnimateProps);
+
+            $('.sidebar .motion-element').velocity(contentEffect, {
                 stagger: 50,
                 drag: true,
                 complete: function () {
@@ -147,12 +166,22 @@ $(document).ready(function () {
       this.sidebarEl.trigger('sidebar.isShowing');
     },
     hideSidebar: function () {
-      NexT.utils.isDesktop() && $('body').velocity('stop').velocity({paddingRight: 0});
+      var isSidebarPositionLeft = this.isSidebarPositionLeft;
+      var bodyPadding = isSidebarPositionLeft ? 'padding-left' : 'padding-right';
+      var toggleDirection = isSidebarPositionLeft ? 'left' : 'right';
+      var animateProps = {};
+      var toggleAnimateProps = {};
+
+      toggleAnimateProps[toggleDirection] = 50;
+      animateProps[bodyPadding] = 0;
+      NexT.utils.isDesktop() && $('body').velocity('stop').velocity(animateProps);
       this.sidebarEl.find('.motion-element').velocity('stop').css('display', 'none');
-      this.sidebarEl.velocity('stop').velocity({width: 0}, {display: 'none'});
-
-      sidebarToggleLines.init();
-
+      this.sidebarEl.velocity('stop').velocity({ width: 0 }, { display: 'none' });
+      this.toggleEl.velocity('stop').velocity(toggleAnimateProps, {
+        complete: function () {
+          sidebarToggleLines.init();
+        }
+      });
       this.sidebarEl.removeClass('sidebar-active');
       this.sidebarEl.trigger('sidebar.isHiding');
 
@@ -165,6 +194,7 @@ $(document).ready(function () {
       }
     }
   };
+
   sidebarToggleMotion.init();
 
   NexT.motion.integrator = {
@@ -179,9 +209,9 @@ $(document).ready(function () {
       var fn = this.queue[this.cursor];
 
       if ($.isFunction(fn)) {
-        try{
+        try {
           fn(NexT.motion.integrator);
-        } catch(e) {
+        } catch (e) {
           window.console.warn(e);
           this.next();
         }
@@ -192,7 +222,7 @@ $(document).ready(function () {
     }
   };
 
-  NexT.motion.middleWares =  {
+  NexT.motion.middleWares = {
     logo: function (integrator) {
       var sequence = [];
       var $brand = $('.brand');
@@ -216,7 +246,7 @@ $(document).ready(function () {
       hasElement($title) && sequence.push({
         e: $title,
         p: {opacity: 1, top: 0},
-        o: { duration: 200 }
+        o: {duration: 200}
       });
 
       hasElement($subtitle) && sequence.push({
@@ -235,7 +265,7 @@ $(document).ready(function () {
       }
 
 
-      function getMistLineSettings (element, translateX) {
+      function getMistLineSettings(element, translateX) {
         return {
           e: $(element),
           p: {translateX: translateX},
@@ -251,7 +281,7 @@ $(document).ready(function () {
        * @param {jQuery|Array} $elements
        * @returns {boolean}
        */
-      function hasElement ($elements) {
+      function hasElement($elements) {
         $elements = Array.isArray($elements) ? $elements : [$elements];
         return $elements.every(function ($element) {
           return $.isFunction($element.size) && $element.size() > 0;
@@ -275,7 +305,7 @@ $(document).ready(function () {
 
       hasPost ? postMotion() : integrator.next();
 
-      function postMotion () {
+      function postMotion() {
         var postMotionOptions = window.postMotionOptions || {
             stagger: 100,
             drag: true
