@@ -163,6 +163,13 @@
               <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>{{ theme.busuanzi_count.page_pv_footer }}
               </span>
           {% endif %}
+          
+          {% if post.description and (not theme.excerpt_description or not is_index) %}
+              <div class="post-description">
+                  {{ post.description }}
+              </div>
+          {% endif %}
+
         </div>
       </header>
     {% endif %}
@@ -190,30 +197,35 @@
       {% endif %}
 
       {% if is_index %}
-        {% if post.description %}
+        {% if post.description and theme.excerpt_description %}
           {{ post.description }}
+          <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
+          <!--/noindex-->
         {% elif post.excerpt  %}
           {{ post.excerpt }}
+          <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}" rel="contents">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
+          <!--/noindex-->
         {% elif theme.auto_excerpt.enable %}
           {% set content = post.content | striptags %}
           {{ content.substring(0, theme.auto_excerpt.length) }}
           {% if content.length > theme.auto_excerpt.length %}...{% endif %}
-
+          <!--noindex-->
           <div class="post-more-link text-center">
             <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}" rel="contents">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
+          <!--/noindex-->
         {% else %}
           {% if post.type === 'picture' %}
             <a href="{{ url_for(post.path) }}">{{ post.content }}</a>
