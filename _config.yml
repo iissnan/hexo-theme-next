@@ -36,6 +36,8 @@ menu:
   schedule: /schedule
   #commonweal: /404.html
 
+# By default, non default menu names have "menu." prepend to them.
+prepend_menu: true
 
 # Enable/Disable menu icons.
 # Icon Mapping:
