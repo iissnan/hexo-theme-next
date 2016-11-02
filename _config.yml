@@ -26,7 +26,7 @@ since: 2015
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  read: /categories/Reading
+#  read: /categories/Reading
   archives: /archives
   categories: /categories
   tags: /tags
@@ -43,7 +43,7 @@ menu_icons:
   enable: true
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
-  read: book
+#  read: book
   about: user
   categories: th
   tags: tags
@@ -75,7 +75,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host: http://fonts.useso.com
+  host: http://fonts.gmirror.org
 
   # Global font settings used on <body> element.
   global:
@@ -247,7 +247,7 @@ baidu_analytics: a5c9002fdce3fad3f14ba17eae778ce8
 duoshuo_shortname: zerosrat
 
 # Disqus
-#disqus_shortname: disqus_5bfqQkhONV
+#disqus_shortname: zerosrat
 
 # Baidu Share
 # Available value:
