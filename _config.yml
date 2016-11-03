@@ -185,6 +185,11 @@ sidebar:
 #links:
   #Title: http://example.com/
 
+# Simplified/Traditional Chinese language swich
+language_switch:
+  enable: true
+  # swith_to default setting is Traditional, it means that the website default language simplified
+  switch_to: 繁體 
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
