@@ -36,6 +36,12 @@
         </div>
       </div>
     {% else %}
+      {% elif page.type === 'study' %}
+      {% if theme.study.enable %}
+        {% include 'extensions/study/study.swig' %}
+      {% else %}
+        <div style="text-align: center;color: #dddddd">信息：可能你需要在配置文件中设置study: enable:true</div>
+      {% endif %}
       {{ page.content }}
     {% endif %}
   </div>
@@ -45,3 +51,19 @@
 {% block sidebar %}
   {{ sidebar_template.render(false) }}
 {% endblock %}
+
+  {% block css_extra %}
+    {% if theme.study.enable and page.type === 'study' %}
+      <link href='{{ url_for(theme.extensions) }}/study/study.css?v={{ theme.version }}'
+            rel="stylesheet"
+            type="text/css">
+    {% endif %}
+  {% endblock %}
+
+  {% block script_extra %}
+    {% if theme.study.enable and page.type === 'study' %}
+      <script src='{{ url_for(theme.extensions) }}/study/study.js?v={{ theme.version }}'
+              type="text/javascript"></script>
+    {% endif %}
+  {% endblock %}
+

@@ -35,6 +35,7 @@ menu:
   tags: /tags
   schedule: /schedule
   #commonweal: /404.html
+  study: study
 
 
 # Enable/Disable menu icons.
@@ -52,6 +53,33 @@ menu_icons:
   tags: tags
   archives: archive
   commonweal: heartbeat
+  study: graduation-cap
+
+# ---------------------------------------------------------------
+# extensions feature Settings
+# ---------------------------------------------------------------
+# study 读书页面
+study:
+ enable: true
+ readed:
+  我的第一本漫画炒股书:
+    url: https://img3.doubanio.com/lpic/s26717372.jpg
+  ASP.NET 4.0 动态网站开发实用教程:
+    url: https://img3.doubanio.com/lpic/s9078940.jpg
+  HTML5+CSS3精致范例辞典:
+    url: https://img1.doubanio.com/lpic/s24559317.jpg
+  番茄工作法图解:
+    url: https://img3.doubanio.com/lpic/s4599081.jpg
+ reading:
+  nodejs深入浅出:
+       url: https://img3.doubanio.com/lpic/s27269296.jpg
+  JavaScript:
+    url: https://img3.doubanio.com/lpic/s8958650.jpg
+  从你的全世界路过:
+    url: https://img3.doubanio.com/lpic/s27102925.jpg
+ want:
+  四步创业法:
+    url: https://img3.doubanio.com/lpic/s11171520.jpg
 
 
 
