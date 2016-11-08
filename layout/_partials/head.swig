@@ -24,20 +24,20 @@
 
 
 {% if theme.fancybox %}
-  <link href="{{ url_for(theme.vendors) }}/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
-{% endif %}
-
-
-{% if theme.use_font_lato %}
-  {% if config.language === 'zh-Hans' %}
-    <link href='//fonts.lug.ustc.edu.cn/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  {% else %}
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  {% set fancybox_css_uri = url_for(theme.vendors._internal + '/fancybox/source/jquery.fancybox.css?v=2.1.5') %}
+  {% if theme.vendors.fancybox_css %}
+    {% set fancybox_css_uri = theme.vendors.fancybox_css %}
   {% endif %}
+  <link href="{{ fancybox_css_uri }}" rel="stylesheet" type="text/css" />
 {% endif %}
 
+{% include "./head/external-fonts.swig" %}
 
-<link href="{{ url_for(theme.vendors) }}/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+{% set font_awesome_uri = url_for(theme.vendors._internal + '/font-awesome/css/font-awesome.min.css?v=4.4.0') %}
+{% if theme.vendors.fontawesome %}
+  {% set font_awesome_uri = theme.vendors.fontawesome %}
+{% endif %}
+<link href="{{ font_awesome_uri }}" rel="stylesheet" type="text/css" />
 
 <link href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}" rel="stylesheet" type="text/css" />
 
@@ -51,7 +51,7 @@
 
 
 {% if theme.rss === '' and config.feed and config.feed.path %}
-  {% set theme.rss = config.root + config.feed.path %}
+  {% set theme.rss = config.feed.path %}
 {% endif %}
 {% if theme.rss %}
   <link rel="alternate" href="{{ url_for(theme.rss) }}" title="{{ config.title }}" type="application/atom+xml" />
@@ -81,9 +81,21 @@
 
 {# Export some HEXO Configurations to Front-End #}
 <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
   var CONFIG = {
     scheme: '{{ theme.scheme }}',
-    sidebar: '{{ theme.sidebar }}',
-    motion: {{ theme.use_motion }}
+    sidebar: {{ theme.sidebar | json_encode }},
+    fancybox: {{ theme.fancybox }},
+    motion: {{ theme.use_motion }},
+    duoshuo: {
+      userId: '{{ theme.duoshuo_info.user_id | default() }}',
+      author: '{{ theme.duoshuo_info.admin_nickname | default(__('author'))}}'
+    }
   };
 </script>
+
+
+{# Canonical, good for google search engine (SEO) : https://support.google.com/webmasters/answer/139066 #}
+{% if theme.canonical %}
+  <link rel="canonical" href="{{ config.url }}/{{ page.canonical_path.replace('index.html', '') }}"/>
+{% endif %}

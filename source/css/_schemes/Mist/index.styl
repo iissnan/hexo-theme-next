@@ -3,10 +3,13 @@
 // =================================================
 
 @import "_base";
+@import "outline/outline";
 @import "_header";
 @import "_logo";
 @import "_menu";
+@import "_search.styl";
 @import "_posts-expanded";
+@import "sidebar/sidebar-blogroll";
 
 
 // Components
@@ -23,27 +26,22 @@
 // Search
 // --------------------------------------------------
 .site-search {
+  position: relative;
   float: right;
-  margin-top: 8px;
+  margin-top: 5px;
+  padding-top: 3px;
 
   +mobile() {
     float: none;
     padding: 0 10px;
   }
+}
 
-  input {
-    padding: 3px;
-    border: none;
-    padding-left: 18px;
-    border-radius: 0;
-    width: 140px;
-    background: url($search-icon) no-repeat 0 50%;
-    background-size: 12px 12px;
-    outline: none;
-    border-bottom: 1px solid $grey-dark;
-    opacity: 0.5;
-    &:focus { opacity: 1; }
-  }
+
+// Page - Container
+// --------------------------------------------------
+.container .main-inner {
+  +mobile() { width: auto; }
 }
 
 
@@ -83,7 +81,10 @@
   margin: 0 auto;
   text-align: left;
 
-  +mobile() { text-align: center; }
+  +mobile() {
+    width: auto;
+    text-align: center;
+  }
 }
 
 // Helpers

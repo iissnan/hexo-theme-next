@@ -1,6 +1,6 @@
 {
   "name": "isn-next",
-  "version": "0.3.0",
+  "version": "5.0.0",
   "homepage": "https://github.com/iissnan/hexo-theme-next",
   "authors": [
     "iissnan <iissnan@gmail.com>"
@@ -19,7 +19,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "source/vendors",
+    "source/lib",
     "test",
     "tests",
     "screenshots"
@@ -30,6 +30,7 @@
     "jquery": "http://code.jquery.com/jquery-2.1.3.min.js",
     "fastclick": "~1.0.6",
     "font-awesome": "fontawesome#~4.4.0",
-    "jquery_lazyload": "jquery.lazyload#~1.9.7"
+    "jquery_lazyload": "jquery.lazyload#~1.9.7",
+    "ua-parser-js": "~0.7.9"
   }
 }

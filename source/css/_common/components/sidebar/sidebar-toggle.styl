@@ -1,0 +1,34 @@
+.sidebar-toggle {
+  position: fixed;
+  right: 50px;
+  bottom: 45px;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  background: $black-deep;
+  line-height: 0;
+  z-index: $zindex-5;
+  cursor: pointer;
+  -webkit-transform: translateZ(0);
+
+  +tablet() {
+    display: none;
+  }
+  +mobile() {
+    display: none;
+  }
+}
+
+
+
+.sidebar-toggle-line {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 2px;
+  width: 100%;
+  background: white;
+  margin-top: 3px;
+
+  &:first-child { margin-top: 0; }
+}

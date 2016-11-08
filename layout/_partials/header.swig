@@ -1,5 +1,5 @@
 <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
-  {% if theme.custom_logo.image and not theme.scheme %}
+  {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
     <div class="site-meta-headline">
       <a>
         <img class="custom-logo-image" src="{{ theme.custom_logo.image }}"
@@ -27,28 +27,31 @@
 </div>
 
 <nav class="site-nav">
-  {% set hasSearch = theme.swiftype_key || theme.tinysou_Key %}
+  {% set hasSearch = theme.swiftype_key || theme.tinysou_Key || config.search %}
 
   {% if theme.menu %}
-    <ul id="menu" class="menu {{ hasSearch and 'menu-left' }}">
+    <ul id="menu" class="menu">
       {% for name, path in theme.menu %}
         {% set itemName = name.toLowerCase() %}
         <li class="menu-item menu-item-{{ itemName }}">
           <a href="{{ url_for(path) }}" rel="section">
             {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-{{theme.menu_icons[itemName] || 'question-circle'}} fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-{{theme.menu_icons[itemName] | default('question-circle') | lower }}"></i> <br />
             {% endif %}
             {{ __('menu.' + itemName) }}
           </a>
         </li>
       {% endfor %}
 
-      {# Search icon for default scheme #}
-      {% if not theme.scheme and theme.swiftype_key %}
+      {% if hasSearch %}
         <li class="menu-item menu-item-search">
-          <a href="#" class="st-search-show-outputs">
+          {% if theme.swiftype_key %}
+            <a href="javascript:;" class="st-search-show-outputs">
+          {% elseif config.search %}
+            <a href="javascript:;" class="popup-trigger">
+          {% endif %}
             {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-search icon-next-search"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             {% endif %}
             {{ __('menu.search') }}
           </a>

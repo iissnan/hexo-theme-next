@@ -1,12 +1,16 @@
 title:
   archive: 归档
   category: 分类
+  schedule: 日程
   tag: 标签
+
+author: 博主
 
 menu:
   home: 首页
   archives: 归档
   categories: 分类
+  schedule: 日程
   tags: 标签
   about: 关于
   search: 搜索
@@ -21,6 +25,7 @@ post:
   sticky: 置顶
   posted: 发表于
   in: 分类于
+  visitors: 阅读次数
   read_more: 阅读全文
   untitled: 未命名
   toc_empty: 此文章未包含目录

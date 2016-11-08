@@ -1,10 +1,15 @@
 .DS_Store
 .idea/
 *.log
+*.iml
 node_modules/
 
 # Ignore unused verdors' files
-source/vendors/fancybox/*
-!source/vendors/fancybox/source/
-source/vendors/font-awesome/less/
-source/vendors/font-awesome/scss/
+source/lib/fancybox/*
+!source/lib/fancybox/source/
+
+source/lib/font-awesome/less/
+source/lib/font-awesome/scss/
+
+source/lib/ua-parser-js/*
+!source/lib/ua-parser-js/dist/

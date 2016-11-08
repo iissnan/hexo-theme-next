@@ -8,11 +8,10 @@
 
 .menu {
   float: right;
-  margin: 8px 0 0 20px;
-  padding: 0 20px;
+  margin: 8px 0 0 0;
 
   +mobile() {
-    margin: 0;
+    margin: 20px 0 0 0;
     padding: 0;
   }
 
@@ -24,9 +23,10 @@
   }
 
   .menu-item a {
-    padding: 5px 10px;
+    padding: 0 10px;
     background: none;
     border: none;
+    border-radius: 2px;
     transition-property: background;
 
     +mobile() {
@@ -44,10 +44,3 @@
 
   +mobile() { float: none; }
 }
-
-.menu-left {
-  float: left;
-  +mobile() { float: none; }
-}
-
-.menu-item-icon { display: none; }
