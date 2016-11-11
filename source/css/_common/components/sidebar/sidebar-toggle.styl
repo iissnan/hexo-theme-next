@@ -1,16 +1,23 @@
 .sidebar-toggle {
   position: fixed;
-  right: 50px;
-  bottom: 45px;
-  width: 15px;
-  height: 15px;
-  padding: 5px;
-  background: $black-deep;
+  box-sizing: border-box;
+  top: $sidebar-toggle-top;
+  width: $sidebar-toggle-width;
+  height: $sidebar-toggle-height;
+  padding: $sidebar-toggle-padding;
+  background: $sidebar-toggle-bg-color;
   line-height: 0;
   z-index: $zindex-5;
   cursor: pointer;
   -webkit-transform: translateZ(0);
-
+  
+  .sidebar-position-left  & {
+    left: $sidebar-toggle-left;
+  }
+  .sidebar-position-right & {
+    right: $sidebar-toggle-right;
+  }
+  
   +tablet() {
     display: none;
   }
@@ -20,15 +27,18 @@
 }
 
 
-
 .sidebar-toggle-line {
   position: relative;
   display: inline-block;
-  vertical-align: top;
-  height: 2px;
-  width: 100%;
-  background: white;
   margin-top: 3px;
+  vertical-align: top;
+  height: $sidebar-toggle-line-height;
+  width: 100%;
+  background: $sidebar-toggle-line-bg-color;
 
   &:first-child { margin-top: 0; }
+    
+  .page-post-detail & {
+    background: $sidebar-toggle-line-active-bg-color;
+  }
 }

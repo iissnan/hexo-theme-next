@@ -12,12 +12,12 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
-
   {% include '_scripts/third-party/analytics.swig' %}
 
   {% set container_class = "container" %}
   {% if theme.sidebar.position %}
-    {% set container_class = container_class + ' sidebar-position-' + theme.sidebar.position %}
+    {% set sidebar_position_class = 'sidebar-position-' + theme.sidebar.position %}
+    {% set container_class = [container_class, sidebar_position_class] | join(' ') %}
   {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">
@@ -55,23 +55,7 @@
     </div>
   </div>
 
-  {% include '_scripts/vendors.swig' %}
-  {% include '_scripts/commons.swig' %}
-
-  {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
-  {% include scheme_script %}
-
+  {% include '_scripts/index.swig' %}
   {% block script_extra %}{% endblock %}
-
-  {% include '_scripts/boostrap.swig' %}
-
-  {% include '_scripts/third-party/comments.swig' %}
-  {% include '_scripts/third-party/tinysou.swig' %}
-  {% include '_scripts/third-party/localsearch.swig' %}
-  {% include '_scripts/third-party/mathjax.swig' %}
-  {% include '_scripts/third-party/lean-analytics.swig' %}
-  {% include '_scripts/baidu-push.swig' %}
-  {% include '_components/algolia-search/assets.swig' %}
-
 </body>
 </html>

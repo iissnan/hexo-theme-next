@@ -1,0 +1,64 @@
+/**
+ * Get  percentage from a given ratio.
+ * @param {number} [ratio=1] - The column ratio of the element.
+ * @returns {number} - The percentage value.
+ */
+jeet-get-span(ratio = 1)
+  return ratio * 100
+
+/**
+ * Work out the column widths based on the ratio and gutter sizes.
+ * @param {number} [ratios=1] - The column ratio of the element.
+ * @param {number} [gutter=jeet.gutter] - The gutter for the column.
+ * @returns {list} width gutter - A list containing the with and gutter for the element.
+ */
+jeet-get-column(ratios = 1, gutter = jeet.gutter)
+  ratios = jeet-reverse(ratios) unless jeet.parent-first is true
+  width = 100
+
+  for ratio in ratios
+    gutter = gutter / width * 100
+    width = 100 * ratio - gutter + ratio * gutter
+
+  return width gutter
+
+/**
+ * Get the set layout direction for the project.
+ * @returns {string} result - The layout direction.
+ */
+jeet-get-layout-direction()
+  jeet.layout-direction == RTL ? result = right : result = left
+
+  return result
+
+/**
+ * Replace a specified list value with a new value.
+ * @param {list} list - The list of values you want to alter.
+ * @param {number} index - The index of the list item you want to replace.
+ * @param {*} value - The value you want to replace $index with.
+ * @returns {list} result - The list with the value replaced.
+ */
+jeet-replace-nth(list, index, value)
+  result = ()
+  index = length(list) + index if index < 0
+
+  for i in (0..(length(list) - 1))
+    if i == index
+      append(result, value)
+    else
+      append(result, list[i])
+
+  return result
+
+/**
+ * Reverse a list.
+ * @param {list} list - The list of values you want to reverse.
+ * @returns {list} result - The reversed list.
+ */
+jeet-reverse(list)
+  result = ()
+
+  for item in list
+    prepend(result, item)
+
+  return result

@@ -388,6 +388,78 @@ use_motion: true
 # Fancybox
 fancybox: true
 
+# Site Assets
+assets:
+  vendors:
+    static:
+      jquery:
+        src: vendors/jquery/index.js
+        dst: vendors/jquery/index.js
+        version: 2.1.3
+      fastclick:
+        src: vendors/fastclick/lib/fastclick.js
+        dst: vendors/fastclick/lib/fastclick.min.js
+        version: 1.0.6
+      lazyload:
+        src: vendors/jquery_lazyload/jquery.lazyload.js
+        dst: vendors/jquery_lazyload/jquery.lazyload.js
+        version: 1.9.7
+      velocity:
+        src: vendors/velocity/velocity.js
+        dst: vendors/velocity/velocity.min.js
+        version: 1.2.1
+      velocity UI:
+        src: vendors/velocity/velocity.ui.js
+        dst: vendors/velocity/velocity.ui.min.js
+        version: 1.2.1
+    dynamic:
+      fancybox:
+        src: vendors/fancybox/source/jquery.fancybox.js
+        dst: vendors/fancybox/source/jquery.fancybox.pack.js
+        version: 2.1.5
+
+  js:
+    commons:
+      - src: js/src/utils.js
+      - src: js/src/motion.js
+      - src: js/src/components/sidebar-elements-motion.js
+
+    components:
+      affix:
+        - src: js/src/lib/affix.js
+        - src: js/src/components/affix.js
+
+      scrollspy:
+        - src: js/src/lib/scrollspy.js
+
+      fixed_sidebar:
+        - src: js/src/components/sidebar-fixed-motion.js
+        - src: js/src/components/sidebar-fixed-toggle.js
+
+    bootstrap:
+      - src: js/src/bootstrap.js
+
+    pisces:
+      - src: js/src/schemes/pisces.js
+
+
+# Scheme Settings
+muse:
+  sidebar:
+    fixed: true
+
+mist:
+  sidebar:
+    fixed: true
+
+pisces:
+  sidebar:
+    affix: true
+
+servant:
+  sidebar:
+    affix: true
+
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
