@@ -51,6 +51,7 @@ menu_icons:
   home: home
   about: user
   categories: th
+  schedule: calendar
   tags: tags
   archives: archive
   sitemap: sitemap
@@ -113,6 +114,7 @@ font:
   codes:
     external: true
     family:
+    size:
 
 
 
@@ -255,7 +257,7 @@ mathjax:
 #disqus_shortname:
 
 # Hypercomments
-#hypercomments_id: 
+#hypercomments_id:
 
 # Baidu Share
 # Available value:
@@ -346,6 +348,22 @@ busuanzi_count:
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
 
+# Google Calendar
+# Share your recent schedule to others via calendar page
+#
+# API Documentation:
+# https://developers.google.com/google-apps/calendar/v3/reference/events/list
+calendar:
+  enable: false
+  calendar_id: <required>
+  api_key: <required>
+  orderBy: startTime
+  offsetMax: 24
+  offsetMin: 4
+  timeZone:
+  showDeleted: false
+  singleEvents: true
+  maxResults: 250
 
 # Algolia Search
 algolia_search:

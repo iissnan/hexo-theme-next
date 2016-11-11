@@ -1,6 +1,7 @@
 title:
   archive: Archive
   category: Category
+  schedule: Schedule
   tag: Tag
 
 author: Author
@@ -9,6 +10,7 @@ menu:
   home: Home
   archives: Archives
   categories: Categories
+  schedule: Schedule
   tags: Tags
   about: About
   search: Search
