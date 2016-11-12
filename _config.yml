@@ -397,7 +397,7 @@ fancybox: true
 # Please use the https protocol of CDN files when you enable https on your site.
 vendors:
   # Internal path prefix. Please do not edit it.
-  _internal: vendors
+  _internal: lib
 
   # Internal version: 2.1.3
   jquery:
