@@ -285,6 +285,9 @@ mathjax:
 # CNZZ count
 #cnzz_siteid:
 
+# Application Insights
+# See https://azure.microsoft.com/en-us/services/application-insights/
+# application_insights:
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
