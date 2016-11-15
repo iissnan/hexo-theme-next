@@ -12,7 +12,7 @@
 
       {% set display_toc = is_post and theme.toc.enable %}
 
-      {% if display_toc %}
+      {% if display_toc and toc(page.content).length > 1 %}
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
             {{ __('sidebar.toc') }}
@@ -23,7 +23,7 @@
         </ul>
       {% endif %}
 
-      <section class="site-overview sidebar-panel {% if not display_toc %} sidebar-panel-active {% endif %}">
+      <section class="site-overview sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
@@ -86,7 +86,7 @@
         {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
         {% if theme.creative_commons in cc %}
           <div class="cc-license motion-element" itemprop="license">
-            <a href="http://creativecommons.org/licenses/{{ theme.creative_commons }}/4.0" class="cc-opacity" target="_blank">
+            <a href="https://creativecommons.org/{% if theme.creative_commons === 'zero' %}publicdomain/zero/1.0{% else %}licenses/{{ theme.creative_commons }}/4.0{% endif %}/" class="cc-opacity" target="_blank">
               <img src="{{ url_for(theme.images) }}/cc-{{ theme.creative_commons }}.svg" alt="Creative Commons" />
             </a>
           </div>
@@ -109,23 +109,30 @@
           </div>
         {% endif %}
 
+        {% include '../_custom/sidebar.swig' %}
+
       </section>
 
-      {% if display_toc %}
+      {% if display_toc and toc(page.content).length > 1 %}
+      <!--noindex-->
         <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
-            {% if page.toc_number === undefine %}
+
+            {% if page.toc_number === undefined %}
               {% set toc = toc(page.content, { "class": "nav", list_number: theme.toc.number }) %}
             {% else %}
-              {% set toc = toc(page.content, {"class": "nav", list_number: page.toc_number}) %}
+              {% set toc = toc(page.content, { "class": "nav", list_number: page.toc_number }) %}
             {% endif %}
+
             {% if toc.length <= 1 %}
               <p class="post-toc-empty">{{ __('post.toc_empty') }}</p>
             {% else %}
               <div class="post-toc-content">{{ toc }}</div>
             {% endif %}
+
           </div>
         </section>
+      <!--/noindex-->
       {% endif %}
 
     </div>

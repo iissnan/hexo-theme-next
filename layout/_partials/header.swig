@@ -27,7 +27,7 @@
 </div>
 
 <nav class="site-nav">
-  {% set hasSearch = theme.swiftype_key || theme.tinysou_Key || config.search %}
+  {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || config.search %}
 
   {% if theme.menu %}
     <ul id="menu" class="menu">
@@ -46,9 +46,9 @@
       {% if hasSearch %}
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
-            <a href="#" class="st-search-show-outputs">
+            <a href="javascript:;" class="st-search-show-outputs">
           {% elseif config.search %}
-            <a href="#" class="popup-trigger">
+            <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -67,3 +67,4 @@
   {% endif %}
 </nav>
 
+{% include '../_custom/header.swig' %}

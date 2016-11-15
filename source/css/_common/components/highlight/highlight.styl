@@ -1,12 +1,13 @@
 // https://github.com/chriskempson/tomorrow-theme
 
 @require "theme"
+@require "diff"
 
 // Placeholder: $code-block
 $code-block {
   overflow: auto;
   margin: 20px 0;
-  padding: 15px;
+  padding: 0;
   font-size $code-font-size;
   color: $highlight-foreground;
   background: $highlight-background;
@@ -17,9 +18,9 @@ pre, code { font-family: $code-font-family; }
 
 code {
   padding: 2px 4px;
-  word-break: break-all;
-  color: $code-foreground;
-  background: $code-background;
+  word-wrap: break-word;
+  color: $highlight-foreground;
+  background: $highlight-background;
   border-radius: $code-border-radius;
   font-size $code-font-size;
 }
@@ -37,11 +38,12 @@ pre {
 
 .highlight {
   @extend $code-block;
+  border-radius: 1px
 
   pre {
     border: none;
     margin: 0;
-    padding: 1px;
+    padding: 10px 0;
   }
 
   table {
@@ -71,20 +73,40 @@ pre {
   }
 
   .gutter pre {
-    color: $grey-dim;
-    text-align: right;
-    padding-right: 20px;
+    padding-left: 10px
+    padding-right: 10px
+    color: $highlight-gutter.color
+    text-align: right
+    background-color: $highlight-gutter.bg-color
+  }
+
+  .code pre {
+    padding-left: 10px
+    padding-right: 10px
+    background-color: $highlight-background
   }
 
   .line { height: 20px; }
 }
 
-
+  
+.gutter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+  
 .gist table {
   width: auto;
 
   td { border: none; }
 }
+
+// For diff highlight
+pre .deletion { background: $highlight-deletion; }
+pre .addition { background: $highlight-addition; }
+pre .meta     { color: $highlight-purple; }
 
 pre {
 
