@@ -12,18 +12,22 @@ menu:
   tags: Tags
   about: About
   search: Search
+  sitemap: Sitemap
 
 sidebar:
   overview: Overview
   toc: Table of Contents
 
 post:
+  created: Post created
+  modified: Post modified
   sticky: Sticky
   posted: Posted on
   in: In
   read_more: Read more
   untitled: Untitled
   toc_empty: This post does not have a Table of Contents
+  visitors: Visitors
 
 page:
   totally: Totally

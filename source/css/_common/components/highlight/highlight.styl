@@ -7,7 +7,7 @@
 $code-block {
   overflow: auto;
   margin: 20px 0;
-  padding: 15px;
+  padding: 0;
   font-size $code-font-size;
   color: $highlight-foreground;
   background: $highlight-background;
@@ -18,7 +18,7 @@ pre, code { font-family: $code-font-family; }
 
 code {
   padding: 2px 4px;
-  word-wrap: break-all;
+  word-wrap: break-word;
   color: $highlight-foreground;
   background: $highlight-background;
   border-radius: $code-border-radius;
@@ -38,11 +38,12 @@ pre {
 
 .highlight {
   @extend $code-block;
+  border-radius: 1px
 
   pre {
     border: none;
     margin: 0;
-    padding: 1px;
+    padding: 10px 0;
   }
 
   table {
@@ -72,9 +73,17 @@ pre {
   }
 
   .gutter pre {
-    color: $grey-dim;
-    text-align: right;
-    padding-right: 20px;
+    padding-left: 10px
+    padding-right: 10px
+    color: $highlight-gutter.color
+    text-align: right
+    background-color: $highlight-gutter.bg-color
+  }
+
+  .code pre {
+    padding-left: 10px
+    padding-right: 10px
+    background-color: $highlight-background
   }
 
   .line { height: 20px; }

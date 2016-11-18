@@ -16,6 +16,9 @@ rss:
 # Specify the date when the site was setup
 #since: 2015
 
+# Footer `powered-by` and `theme-info` copyright
+copyright: true
+
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
@@ -33,7 +36,7 @@ menu:
   #about: /about
   archives: /archives
   tags: /tags
-  schedule: /schedule
+  #sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -43,7 +46,7 @@ menu:
 #   Key is the name of menu item and value is the name of FontAwsome icon. Key is case-senstive.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
-  enable: false
+  enable: true
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
@@ -51,6 +54,7 @@ menu_icons:
   schedule: calendar
   tags: tags
   archives: archive
+  sitemap: sitemap
   commonweal: heartbeat
 
 
@@ -187,6 +191,37 @@ sidebar:
 
 
 # ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
+
+# Automatically Excerpt. Not recommand.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+
+# Post meta display settings
+post_meta:
+  created_at: true
+  updated_at: false
+  categories: true
+
+
+# Wechat Subscriber
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
+
+
+
+# ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
 
@@ -207,26 +242,6 @@ custom_logo:
 highlight_theme: normal
 
 
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
-
-
-# Automatically Excerpt. Not recommand.
-# Please use <!-- more --> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
-  length: 150
-
-
-# Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
-
-
-
-
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
@@ -234,6 +249,7 @@ auto_excerpt:
 # MathJax Support
 mathjax:
   enable: false
+  per_page: false
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
@@ -248,6 +264,9 @@ mathjax:
 
 # Disqus
 #disqus_shortname:
+
+# Hypercomments
+#hypercomments_id:
 
 # Baidu Share
 # Available value:
@@ -275,6 +294,9 @@ mathjax:
 # CNZZ count
 #cnzz_siteid:
 
+# Application Insights
+# See https://azure.microsoft.com/en-us/services/application-insights/
+# application_insights:
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
@@ -330,8 +352,10 @@ busuanzi_count:
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
+
 # Tencent analytics ID
 # tencent_analytics:
+
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
@@ -352,6 +376,17 @@ calendar:
   showDeleted: false
   singleEvents: true
   maxResults: 250
+
+# Algolia Search
+algolia_search:
+  enable: false
+  hits:
+    per_page: 10
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}"
+    hits_stats: "${hits} results found in ${time} ms"
+
 
 
 #! ---------------------------------------------------------------
@@ -404,9 +439,15 @@ vendors:
   # See: https://faisalman.github.io/ua-parser-js/
   ua_parser:
 
-  # Internal version: 4.4.0
+  # Internal version: 4.6.2
   # See: http://fontawesome.io/
   fontawesome:
+
+  # Internal version: 1
+  # https://www.algolia.com
+  algolia_instant_js:
+  algolia_instant_css:
+
 
 
 # Assets
@@ -415,4 +456,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.0.2
+version: 5.1.0
