@@ -142,6 +142,13 @@
                 </span>
               </span>
               <!--/noindex-->
+            {% elseif is_post() and theme.gentie_productKey %}
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <a class="cloud-tie-join-count" href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
+                </a>
+              </span>
             {% endif %}
           {% endif %}
 
