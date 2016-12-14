@@ -88,7 +88,9 @@
 
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
             <span class="post-category" >
+            {% if theme.post_meta.created_at or theme.post_meta.updated_at %}
               <span class="post-meta-divider">|</span>
+            {% endif %}
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
