@@ -1,6 +1,7 @@
 title:
   archive: Archive
   category: Category
+  schedule: Schedule
   tag: Tag
 
 author: Author
@@ -9,22 +10,26 @@ menu:
   home: Home
   archives: Archives
   categories: Categories
+  schedule: Schedule
   tags: Tags
   about: About
   search: Search
+  sitemap: Sitemap
 
 sidebar:
   overview: Overview
   toc: Table of Contents
 
 post:
+  created: Post created
+  modified: Post modified
   sticky: Sticky
   posted: Posted on
   in: In
   read_more: Read more
   untitled: Untitled
   toc_empty: This post does not have a Table of Contents
-  visitors: visitors
+  visitors: Visitors
 
 page:
   totally: Totally

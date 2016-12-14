@@ -6,24 +6,28 @@ title:
 author: Author
 
 menu:
-  home: Домой
+  home: Главная
   archives: Архив
   categories: Категории
   tags: Тэги
   about: О сайте
-  search: поиск
+  search: Поиск
+  sitemap: Карта сайта
 
 sidebar:
   overview: Обзор
   toc: Содержание
 
 post:
-  sticky: Sticky
-  posted: отправлено
-  in: в
-  read_more: Читать дальше
+  created: Дата создания записи
+  modified: Дата обновления записи
+  sticky: Ссылка
+  posted: Размещено
+  in: в категории
+  read_more: Читать полностью
   untitled: Без имени
-  toc_empty: Этот пост не имеет оглавления
+  toc_empty: Эта запись без оглавления
+  visitors: Просмотров
 
 page:
   totally: Всего
@@ -35,20 +39,20 @@ footer:
 
 counter:
   tag_cloud:
-    zero: Нет тэгов
-    one: 1 тэг
-    two: "%d тэга всего"
-    three: "%d тэга всего"
-    four: "%d тэга всего"
-    other: "%d тэгов всего"
+    zero: Нет тэгов.
+    one: 1 тэг.
+    two: "%d тэга всего."
+    three: "%d тэга всего."
+    four: "%d тэга всего."
+    other: "%d тэгов всего."
 
   categories:
-    zero: Нет категорий
-    one: 1 категория
-    two: "%d категории всего"
-    three: "%d категории всего"
-    four: "%d категории всего"
-    other: "%d категорий всего"
+    zero: Нет категорий.
+    one: 1 категория.
+    two: "%d категории всего."
+    three: "%d категории всего."
+    four: "%d категории всего."
+    other: "%d категорий всего."
 
   archive_posts:
     zero: Нет записей.
@@ -59,10 +63,10 @@ counter:
     other: "%d записей всего."
 
 state:
-  posts: записи
-  pages: страницы
-  tags: тэги
-  categories: категории
+  posts: Архив
+  pages: Страницы
+  tags: Тэги
+  categories: Категории
 
 cheers:
   um: Эм..
