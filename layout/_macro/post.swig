@@ -29,7 +29,7 @@
 
         {# Not to show title for quote posts that do not have a title #}
         {% if not (is_index and post.type === 'quote' and not post.title) %}
-          <h1 class="post-title" itemprop="name headline">
+          <{% if theme.seo %}h2{% else %}h1{% endif %} class="post-title" itemprop="name headline">
             {# Link posts #}
             {% if post.link %}
               {% if post.sticky > 0 %}
@@ -56,7 +56,7 @@
                 {{ post.title }}
               {% endif %}
             {% endif %}
-          </h1>
+          </{% if theme.seo %}h2{% else %}h1{% endif %}>
         {% endif %}
 
         <div class="post-meta">
