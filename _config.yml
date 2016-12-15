@@ -213,6 +213,7 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
+  item_text: true
   created_at: true
   updated_at: false
   categories: true
