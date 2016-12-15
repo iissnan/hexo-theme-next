@@ -15,7 +15,11 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">{{ config.subtitle }}</p>
+    {% if theme.seo %}
+      <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
+    {% else %}
+      <p class="site-subtitle">{{ config.subtitle }}</p>
+    {% endif %}
 </div>
 
 <div class="site-nav-toggle">
