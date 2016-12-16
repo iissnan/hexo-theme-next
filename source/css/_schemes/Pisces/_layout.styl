@@ -19,6 +19,7 @@
   width: 240px;
   background: white;
   box-shadow: $box-shadow-inner;
+  border-radius: $border-radius-inner;
 
   +desktop-large() {
     .container & { width: 240px; }
@@ -26,10 +27,12 @@
   +tablet() {
     position: relative;
     width: auto;
+    border-radius: initial;
   }
   +mobile() {
     position: relative;
     width: auto;
+    border-radius: initial;
   }
 }
 
@@ -62,15 +65,18 @@
   background: white;
   min-height: 700px;
   box-shadow: $box-shadow-inner;
+  border-radius: $border-radius-inner;
 
   +tablet() {
     width: 100%;
     padding: 20px;
+    border-radius: initial;
   }
   +mobile() {
     width: 100%;
     padding: 20px;
     min-height: auto;
+    border-radius: initial;
   }
 }
 
@@ -79,7 +85,7 @@
   float: left;
   margin-top: 300px;
   width: $sidebar-desktop;
-  background: white;
+  background: $body-bg-color;
   box-shadow: none;
 
   +tablet() {
