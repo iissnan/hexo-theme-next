@@ -29,7 +29,7 @@
 
         {# Not to show title for quote posts that do not have a title #}
         {% if not (is_index and post.type === 'quote' and not post.title) %}
-          <h1 class="post-title" itemprop="name headline">
+          <{% if theme.seo %}h2{% else %}h1{% endif %} class="post-title" itemprop="name headline">
             {# Link posts #}
             {% if post.link %}
               {% if post.sticky > 0 %}
@@ -56,7 +56,7 @@
                 {{ post.title }}
               {% endif %}
             {% endif %}
-          </h1>
+          </{% if theme.seo %}h2{% else %}h1{% endif %}>
         {% endif %}
 
         <div class="post-meta">
@@ -65,7 +65,9 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">{{ __('post.posted') }}</span>
+              {% if theme.post_meta.item_text %}
+                <span class="post-meta-item-text">{{ __('post.posted') }}</span>
+              {% endif %}
               <time title="{{ __('post.created') }}" itemprop="dateCreated datePublished" datetime="{{ moment(post.date).format() }}">
                 {{ date(post.date, config.date_format) }}
               </time>
@@ -79,7 +81,9 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-check-o"></i>
               </span>
-              <span class="post-meta-item-text">{{ __('post.modified') }}</span>
+              {% if theme.post_meta.item_text %}
+                <span class="post-meta-item-text">{{ __('post.modified') }}</span>
+              {% endif %}
               <time title="{{ __('post.modified') }}" itemprop="dateModified" datetime="{{ moment(post.updated).format() }}">
                 {{ date(post.updated, config.date_format) }}
               </time>
@@ -88,11 +92,15 @@
 
           {% if post.categories and post.categories.length and theme.post_meta.categories %}
             <span class="post-category" >
+            {% if theme.post_meta.created_at or theme.post_meta.updated_at %}
               <span class="post-meta-divider">|</span>
+            {% endif %}
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">{{ __('post.in') }}</span>
+              {% if theme.post_meta.item_text %}
+                <span class="post-meta-item-text">{{ __('post.in') }}</span>
+              {% endif %}
               {% for cat in post.categories %}
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="{{ url_for(cat.path) }}" itemprop="url" rel="index">
@@ -176,9 +184,11 @@
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <span class="post-meta-item-text">{{__('post.visitors')}} </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
+               {% if theme.post_meta.item_text %}
+                 <span class="post-meta-item-text">{{__('post.visitors')}} </span>
+               {% endif %}
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           {% endif %}
 
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}

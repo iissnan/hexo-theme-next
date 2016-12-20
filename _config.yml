@@ -27,6 +27,8 @@ copyright: true
 # Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
+seo: false
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -211,6 +213,7 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
+  item_text: true
   created_at: true
   updated_at: false
   categories: true
