@@ -54,7 +54,6 @@ language: en
 # language: zh-hk
 # language: zh-tw
 # language: ru
-# language: ru
 # language: de
 ```
 
