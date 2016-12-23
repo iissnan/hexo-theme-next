@@ -277,6 +277,9 @@ mathjax:
 # Gentie productKey
 #gentie_productKey:
 
+# youyan uid
+#youyan_uid: 
+
 # Baidu Share
 # Available value:
 #    button | slide
