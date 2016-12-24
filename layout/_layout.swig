@@ -31,8 +31,7 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-            {% block content %}{% endblock %}
-            {% include '_scripts/third-party/comments.swig' %}
+            {% block content %}{% endblock %}          
           </div>
           {% include '_partials/duoshuo-hot-articles.swig' %}
           {% include '_partials/comments.swig' %}
@@ -66,7 +65,7 @@
 
   {% include '_scripts/boostrap.swig' %}
 
-  
+  {% include '_scripts/third-party/comments.swig' %}
   {% include '_scripts/third-party/tinysou.swig' %}
   {% include '_scripts/third-party/localsearch.swig' %}
   {% include '_scripts/third-party/mathjax.swig' %}
