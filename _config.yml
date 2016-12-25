@@ -121,6 +121,14 @@ font:
     family:
     size:
 
+# --------------------------------------------------------------
+# background settings
+# --------------------------------------------------------------
+
+
+# see detail from https://github.com/hustcc/canvas-nest.js
+# issues 想给博客添加canvas-nest.js的效果，但是不知道该怎么添加 #1325
+#canvas_nest: true
 
 
 
@@ -276,6 +284,9 @@ mathjax:
 
 # Gentie productKey
 #gentie_productKey:
+
+# youyan uid
+#youyan_uid:
 
 # Baidu Share
 # Available value:
