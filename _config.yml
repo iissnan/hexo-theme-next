@@ -274,6 +274,9 @@ mathjax:
 # Hypercomments
 #hypercomments_id:
 
+# Gentie productKey
+#gentie_productKey:
+
 # Baidu Share
 # Available value:
 #    button | slide
