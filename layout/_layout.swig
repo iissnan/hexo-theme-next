@@ -31,7 +31,7 @@
       <div class="main-inner">
         <div class="content-wrap">
           <div id="content" class="content">
-            {% block content %}{% endblock %}          
+            {% block content %}{% endblock %}
           </div>
           {% include '_partials/duoshuo-hot-articles.swig' %}
           {% include '_partials/comments.swig' %}
@@ -72,6 +72,8 @@
   {% include '_scripts/third-party/lean-analytics.swig' %}
   {% include '_scripts/baidu-push.swig' %}
   {% include '_components/algolia-search/assets.swig' %}
-
+  {% if theme.canvas_nest %}
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  {% endif %}
 </body>
 </html>
