@@ -277,9 +277,8 @@ mathjax:
 # Gentie productKey
 #gentie_productKey:
 
-# support youyan comments,
-# you can regist and get your uid from http://www.uyan.cc
-# youyan uid, like youyan_id=2343223
+# Support for youyan comments system.
+# You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
 
 # Baidu Share
