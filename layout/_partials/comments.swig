@@ -23,7 +23,7 @@
     {% elseif theme.gentie_productKey %}
       <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
     {% elseif theme.youyan_uid %}
-         <div id="uyan_frame"></div> 
+      <div id="uyan_frame"></div>
     {% endif %}
   </div>
 {% endif %}
