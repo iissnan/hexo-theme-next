@@ -1,0 +1,29 @@
+.site-home {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 5px 20px;
+    border: none;
+
+    +tablet() {
+        font-size: 50px;
+        line-height: 110px;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: white 1px solid;
+        transform: scaleX(0);
+        transition-duration: 200ms;
+    }
+
+    &:hover {
+        color: white;
+
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}

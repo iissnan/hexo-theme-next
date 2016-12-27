@@ -1,0 +1,15 @@
+{
+  "name": "jquery",
+  "_cacheHeaders": {
+    "ETag": "\"5492efef-14960\"",
+    "Last-Modified": "Thu, 18 Dec 2014 15:17:03 GMT",
+    "Content-Length": "84320",
+    "Content-Type": "application/x-javascript"
+  },
+  "_release": "e-tag:5492efef-",
+  "main": "index.js",
+  "_source": "http://code.jquery.com/jquery-2.1.3.min.js",
+  "_target": "*",
+  "_originalSource": "http://code.jquery.com/jquery-2.1.3.min.js",
+  "_direct": true
+}

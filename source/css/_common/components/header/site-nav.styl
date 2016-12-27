@@ -6,6 +6,9 @@
   +mobile() {
     display: block;
   }
+  +tablet() {
+    display: none;
+  }
 
   button {
     margin-top: 2px;
@@ -16,13 +19,48 @@
 }
 
 .site-nav {
+  position: absolute;
+  top: 0;
+  right: 20px;
+
   +mobile() {
-    display: none;
-    margin: 0 -10px;
-    padding: 0 10px;
-    clear: both;
-    border-top: 1px solid $gray-lighter;
+    right: 16px;
+    top: 40px;
   }
-  +tablet() { display: block !important; }
+
+/*   +mobile() {
+    top: 35px;
+    right: 16px;
+    position: fixed;
+    top: 0;
+    right: -25%;
+    bottom: 0;
+    display: block; !important;
+    background-color: #212121;
+    z-index: 999;
+    padding: 0 10px;
+    transform-origin: right;
+    transform: scaleX(.8) translateX(-100%);
+  
+    &.show {
+      transform: scaleX(1.25) translateX(0);
+    }
+  
+    &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      left: -999px;
+      background: black;
+      opacity: .6;
+    }
+  }
+   */
+  +tablet() {
+    top: 5px;
+    display: block !important;
+  }
   +desktop() { display: block !important; }
 }

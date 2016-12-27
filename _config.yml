@@ -5,6 +5,19 @@
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
 
+# Page covers for follow pages, whom height is greater than 400px.
+# Home cover is required, which is default cover for other pages.
+cover:
+  home: /images/home_bg.jpg
+  tag: /images/tag_bg.jpg
+  archive: /images/archive_bg.jpg
+  category: /images/category_bg.jpg
+  # post: 
+  # about: 
+  # pages: 
+
+
+
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
 
@@ -14,21 +27,13 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
-
-# icon between year and author @Footer
-authoricon: heart
-
-# Footer `powered-by` and `theme-info` copyright
-copyright: true
+since: 2015
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -36,12 +41,11 @@ seo: false
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
-  home: /
-  #categories: /categories
-  #about: /about
+  # home: /
+  categories: /categories
   archives: /archives
   tags: /tags
-  #sitemap: /sitemap.xml
+  #about: /about
   #commonweal: /404.html
 
 
@@ -56,10 +60,8 @@ menu_icons:
   home: home
   about: user
   categories: th
-  schedule: calendar
   tags: tags
   archives: archive
-  sitemap: sitemap
   commonweal: heartbeat
 
 
@@ -69,10 +71,8 @@ menu_icons:
 # Scheme Settings
 # ---------------------------------------------------------------
 
-# Schemes
-scheme: Muse
-#scheme: Mist
-#scheme: Pisces
+# NexTD is based on NexT.Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -84,10 +84,10 @@ scheme: Muse
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
 font:
-  enable: true
+  enable: false
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  host: //fonts.useso.com
 
   # Global font settings used on <body> element.
   global:
@@ -119,7 +119,6 @@ font:
   codes:
     external: true
     family:
-    size:
 
 
 
@@ -132,9 +131,11 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
-
+social:
+  GitHub: https://github.com/HiDino9
+  Instagram: http://www.instagram.com/HiDino9
+  微博: http://weibo.com/lookime
+  知乎: http://www.zhihu.com/people/HiDino9
 
 # Social Links Icons
 # Icon Mapping:
@@ -146,14 +147,16 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
+  Instagram: instagram
   Twitter: twitter
-  Weibo: weibo
+  微博: weibo
+  知乎: globe
 
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /images/avatar.png
 
 
 # Table Of Contents in the Sidebar
@@ -173,8 +176,8 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
-  #position: right
+  # position: left
+  position: right
 
   # Sidebar Display, available value:
   #  - post    expand on posts automatically. Default.
@@ -196,38 +199,6 @@ sidebar:
 
 
 # ---------------------------------------------------------------
-# Post Settings
-# ---------------------------------------------------------------
-
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
-
-# Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
-
-# Automatically Excerpt. Not recommand.
-# Please use <!-- more --> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
-  length: 150
-
-# Post meta display settings
-post_meta:
-  item_text: true
-  created_at: true
-  updated_at: false
-  categories: true
-
-
-# Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
-
-
-
-# ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
 
@@ -245,7 +216,27 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night bright
+
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+
+# Automatically Excerpt. Not recommand.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+
+
+# Wechat Subscriber
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
+
+
 
 
 # ---------------------------------------------------------------
@@ -255,7 +246,6 @@ highlight_theme: normal
 # MathJax Support
 mathjax:
   enable: false
-  per_page: false
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
@@ -271,22 +261,14 @@ mathjax:
 # Disqus
 #disqus_shortname:
 
-# Hypercomments
-#hypercomments_id:
-
-# Gentie productKey
-#gentie_productKey:
-
 # Baidu Share
 # Available value:
 #    button | slide
-# Warning: Baidu Share does not support https.
 #baidushare:
 ##  type: button
 
 # Share
-#jiathis:
-# Warning: JiaThis does not support https.
+jiathis: true
 #add_this_id:
 
 # Share
@@ -301,19 +283,16 @@ mathjax:
 #google_analytics:
 
 # CNZZ count
-#cnzz_siteid:
+cnzz_siteid: 1261020784
 
-# Application Insights
-# See https://azure.microsoft.com/en-us/services/application-insights/
-# application_insights:
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
   ua_enable: true
-  admin_enable: false
-  user_id: 0
+  admin_enable: true
+  user_id: 7566230
   #admin_nickname: Author
 
 
@@ -331,9 +310,7 @@ facebook_sdk:
 # If facebook_sdk.enable is false, Facebook comments plugin is unavailable.
 facebook_comments_plugin:
   enable: false
-  num_of_posts: 10  # min posts num is 1
-  width: 100%       # default width is 550px
-  scheme: light     # default scheme is light (light or dark)
+  num_of_posts: 10
 
 
 # Show number of visitors to each article.
@@ -361,40 +338,11 @@ busuanzi_count:
   page_pv_header: <i class="fa fa-file-o"></i>
   page_pv_footer:
 
-
 # Tencent analytics ID
 # tencent_analytics:
 
-
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
-
-# Google Calendar
-# Share your recent schedule to others via calendar page
-#
-# API Documentation:
-# https://developers.google.com/google-apps/calendar/v3/reference/events/list
-calendar:
-  enable: false
-  calendar_id: <required>
-  api_key: <required>
-  orderBy: startTime
-  offsetMax: 24
-  offsetMin: 4
-  timeZone:
-  showDeleted: false
-  singleEvents: true
-  maxResults: 250
-
-# Algolia Search
-algolia_search:
-  enable: false
-  hits:
-    per_page: 10
-  labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+baidu_push: true
 
 
 
@@ -415,48 +363,41 @@ fancybox: true
 # For example
 #    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
 # Be aware that you should use the same version as internal ones to avoid potential problems.
-# Please use the https protocol of CDN files when you enable https on your site.
 vendors:
   # Internal path prefix. Please do not edit it.
-  _internal: lib
+  _internal: vendors
 
   # Internal version: 2.1.3
   jquery:
 
   # Internal version: 2.1.5
-  # See: http://fancyapps.com/fancybox/
+  # http://fancyapps.com/fancybox/
   fancybox:
   fancybox_css:
 
   # Internal version: 1.0.6
-  # See: https://github.com/ftlabs/fastclick
+  # https://github.com/ftlabs/fastclick
   fastclick:
 
   # Internal version: 1.9.7
-  # See: https://github.com/tuupola/jquery_lazyload
+  # https://github.com/tuupola/jquery_lazyload
   lazyload:
 
   # Internal version: 1.2.1
-  # See: http://VelocityJS.org
+  # http://VelocityJS.org
   velocity:
 
   # Internal version: 1.2.1
-  # See: http://VelocityJS.org
+  # http://VelocityJS.org
   velocity_ui:
 
   # Internal version: 0.7.9
-  # See: https://faisalman.github.io/ua-parser-js/
+  # https://faisalman.github.io/ua-parser-js/
   ua_parser:
 
-  # Internal version: 4.6.2
-  # See: http://fontawesome.io/
+  # Internal version: 4.4.0
+  # http://fontawesome.io/
   fontawesome:
-
-  # Internal version: 1
-  # https://www.algolia.com
-  algolia_instant_js:
-  algolia_instant_css:
-
 
 
 # Assets
@@ -465,4 +406,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.0
+version: 5.0.1

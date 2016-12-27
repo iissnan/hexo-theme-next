@@ -1,13 +1,10 @@
 .site-meta {
   padding: 20px 0;
   color: white;
-  background: $black-deep;
+  /* background: $black-deep; */
 
   +tablet() {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
-  }
-  +mobile() {
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    display: none;
   }
 }
 
@@ -19,9 +16,6 @@
   &:hover { color: white; }
 }
 
-.site-subtitle {
-  margin: 10px 10px 0;
-  font-family: monospace;
-}
+.site-subtitle { margin: 0; }
 
 .site-search form { display: none; }

@@ -1,25 +1,28 @@
 .header {
   position: relative;
   margin: 0 auto;
-  width: $main-desktop;
+  width: 100%;
+  background: no-repeat center center;
+  background-color: gray;
+  background-attachment: scroll;
+  background-size: cover;
+  min-height: 400px;
 
   +tablet() {
     width: auto;
+    min-height: 130px;
   }
   +mobile() {
     width: auto;
+    min-height: 80px;
   }
 }
 
 .header-inner {
-  position: absolute;
   top: 0;
   overflow: hidden;
   padding: 0;
-  width: 240px;
-  background: white;
-  box-shadow: $box-shadow-inner;
-  border-radius: $border-radius-inner;
+  width: inherit;
 
   +desktop-large() {
     .container & { width: 240px; }
@@ -27,12 +30,11 @@
   +tablet() {
     position: relative;
     width: auto;
-    border-radius: initial;
   }
   +mobile() {
     position: relative;
     width: auto;
-    border-radius: initial;
+    overflow: visible;
   }
 }
 
@@ -64,19 +66,15 @@
   width: $content-desktop;
   background: white;
   min-height: 700px;
-  box-shadow: $box-shadow-inner;
-  border-radius: $border-radius-inner;
 
   +tablet() {
     width: 100%;
     padding: 20px;
-    border-radius: initial;
   }
   +mobile() {
     width: 100%;
     padding: 20px;
     min-height: auto;
-    border-radius: initial;
   }
 }
 
@@ -85,7 +83,7 @@
   float: left;
   margin-top: 300px;
   width: $sidebar-desktop;
-  background: $body-bg-color;
+  background: white;
   box-shadow: none;
 
   +tablet() {

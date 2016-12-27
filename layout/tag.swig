@@ -4,6 +4,14 @@
 
 {% block title %} {{ __('title.tag') }}: {{ page.tag }} | {{ config.title }} {% endblock %}
 
+{% block page_class %} page-tag {% endblock %}
+
+{% block header %}
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image: url('{{ url_for( theme.cover.tag || theme.cover.home ) }}');">
+      <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
+    </header>
+{% endblock %}
+
 {% block content %}
 
   <div id="posts" class="posts-collapse">

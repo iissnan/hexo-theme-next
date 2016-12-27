@@ -1,17 +1,15 @@
 title:
-  archive: 归档
+  archive: 博文归档
   category: 分类
-  schedule: 日程
-  tag: 标签
+  tag: 标签云
 
 author: 博主
 
 menu:
   home: 首页
-  archives: 归档
+  archives: 博文归档
   categories: 分类
-  schedule: 日程
-  tags: 标签
+  tags: 标签云
   about: 关于
   search: 搜索
   commonweal: 公益404
@@ -24,7 +22,6 @@ sidebar:
 post:
   sticky: 置顶
   posted: 发表于
-  modified: 更新于
   in: 分类于
   visitors: 阅读次数
   read_more: 阅读全文
@@ -33,7 +30,7 @@ post:
 
 page:
   totally: 共有
-  tags: 标签
+  tags: 标签云
 
 footer:
   powered: "由 %s 强力驱动"
@@ -42,9 +39,9 @@ footer:
 
 counter:
   tag_cloud:
-    zero: 暂无标签
-    one: 目前共计 1 个标签
-    other: "目前共计 %d 个标签"
+    zero: 暂无标签云
+    one: 目前共计 1 个标签云
+    other: "目前共计 %d 个标签云"
 
   categories:
     zero: 暂无分类
@@ -59,7 +56,7 @@ counter:
 state:
   posts: 日志
   pages: 页面
-  tags: 标签
+  tags: 标签云
   categories: 分类
 
 cheers:

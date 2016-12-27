@@ -17,7 +17,7 @@ $(document).ready(function () {
     var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
     var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
 
-    $siteNav.stop()[animateAction]('fast', function () {
+    $siteNav.stop()[animateAction]('normal', function () {
       $siteNav[animateCallback](ON_CLASS_NAME);
     });
   });

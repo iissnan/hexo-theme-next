@@ -23,9 +23,21 @@
     the-transition();
 
     &:hover { border-bottom-color: $menu-link-hover-border; }
+
+    +mobile() {
+      text-align: right !important;
+    }
   }
 
-  .fa { margin-right: 5px; }
+  .fa {
+    margin-right: 5px;
+
+    +mobile() {
+      margin: 0 0 0 5px;
+      line-height: 27px;
+      float: right;
+    }
+  }
 }
 
 .use-motion .menu-item { opacity: 0; }

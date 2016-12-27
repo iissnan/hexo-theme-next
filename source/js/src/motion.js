@@ -226,6 +226,9 @@ $(document).ready(function () {
         integrator.next();
       }
 
+      setTimeout(function() {
+        $title.addClass('show');
+      }, 1000);
 
       function getMistLineSettings (element, translateX) {
         return {

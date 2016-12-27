@@ -29,9 +29,9 @@ $(document).ready(function () {
   }
 
   function initAffix () {
-    var headerHeight = $('.header-inner').height();
+    var headerHeight = $('.header').height();
     var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
-    var sidebarTop = headerHeight + 10;
+    var sidebarTop = headerHeight;
 
     $('.sidebar-inner').affix({
       offset: {

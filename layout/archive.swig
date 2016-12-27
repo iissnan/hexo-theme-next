@@ -6,6 +6,12 @@
 
 {% block page_class %} page-archive {% endblock %}
 
+{% block header %}
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image: url('{{ url_for( theme.cover.archive || theme.cover.home ) }}');">
+      <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
+    </header>
+{% endblock %}
+
 {% block content %}
 
   <section id="posts" class="posts-collapse">
