@@ -11,18 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HiDino9/hexo-theme-nextd.git"
+    "url": "git+https://github.com/BearD01001/hexo-theme-nextd.git"
   },
   "keywords": [
     "NexTD",
     "Hexo"
   ],
-  "author": "熊D01001（HiDino9） <dino@tail.cc>",
+  "author": "熊D01001（BearD01001） <dino@tail.cc>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HiDino9/hexo-theme-nextd/issues"
+    "url": "https://github.com/BearD01001/hexo-theme-nextd/issues"
   },
-  "homepage": "https://github.com/HiDino9/hexo-theme-nextd#readme",
+  "homepage": "https://github.com/BearD01001/hexo-theme-nextd#readme",
   "devDependencies": {
     "coffee-script": "^1.10.0",
     "gulp": "^3.9.0",
