@@ -32,15 +32,12 @@
           <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
         </div>
         <nav class="site-state motion-element">
-        
-          {% if config.archive_dir != '/' %}
-            <div class="site-state-item site-state-posts">
-              <a href="{{ url_for(theme.menu.archives) }}">
-                <span class="site-state-item-count">{{ site.posts.length }}</span>
-                <span class="site-state-item-name">{{ __('state.posts') }}</span>
-              </a>
-            </div>
-          {% endif %}
+          <div class="site-state-item site-state-posts">
+            <a href="{{ url_for(theme.menu.archives) }}">
+              <span class="site-state-item-count">{{ site.posts.length }}</span>
+              <span class="site-state-item-name">{{ __('state.posts') }}</span>
+            </a>
+          </div>
 
           {% if site.categories.length > 0 %}
             <div class="site-state-item site-state-categories">
