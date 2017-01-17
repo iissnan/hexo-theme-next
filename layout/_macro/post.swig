@@ -177,6 +177,13 @@
             <div class="fb-like" data-layout="button_count" data-share="true"></div>
           {% endif %}
 
+          {% if not is_index and theme.vkontakte_api.enable and theme.vkontakte_api.like %}
+            {% if post.categories and post.categories.length and theme.post_meta.categories %}
+              <span class="post-meta-divider">|</span>
+            {% endif %}
+            <div id="vk_like"></div>
+          {% endif %}
+
           {# LeanCould PageView #}
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
