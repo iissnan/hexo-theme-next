@@ -56,8 +56,12 @@
 }
 
 .site-nav-toggle {
-  top: 20px;
   left: 20px;
+  top: 50%;
+  top: calc(50% - 3px);
+
+  -webkit-transform:  translateY(-50%);
+  transform:  translateY(-50%);
 
   +tablet() {
     display: block;

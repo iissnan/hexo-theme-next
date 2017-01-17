@@ -51,7 +51,7 @@
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
             <a href="javascript:;" class="st-search-show-outputs">
-          {% elseif config.search %}
+          {% elseif config.search || theme.algolia_search.enable %}
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}

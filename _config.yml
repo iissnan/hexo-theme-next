@@ -277,6 +277,10 @@ mathjax:
 # Gentie productKey
 #gentie_productKey:
 
+# Support for youyan comments system.
+# You can get your uid from http://www.uyan.cc
+#youyan_uid: your uid
+
 # Baidu Share
 # Available value:
 #    button | slide
@@ -409,6 +413,8 @@ use_motion: true
 # Fancybox
 fancybox: true
 
+# Canvas-nest
+canvas_nest: false
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -456,6 +462,10 @@ vendors:
   # https://www.algolia.com
   algolia_instant_js:
   algolia_instant_css:
+
+  # Internal version: 1.0.0
+  # https://github.com/hustcc/canvas-nest.js
+  canvas_nest:
 
 
 
