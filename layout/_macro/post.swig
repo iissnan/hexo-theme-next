@@ -172,18 +172,6 @@
             {% endif %}
           {% endif %}
 
-          {% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
-            <span class="post-meta-divider">|</span>
-            <div class="fb-like" data-layout="button_count" data-share="true"></div>
-          {% endif %}
-
-          {% if not is_index and theme.vkontakte_api.enable and theme.vkontakte_api.like %}
-            {% if post.categories and post.categories.length and theme.post_meta.categories %}
-              <span class="post-meta-divider">|</span>
-            {% endif %}
-            <div id="vk_like"></div>
-          {% endif %}
-
           {# LeanCould PageView #}
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
@@ -298,6 +286,20 @@
           {% for tag in post.tags %}
             <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
           {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
+        <div class="social-like">
+          {% if not is_index and theme.vkontakte_api.enable and theme.vkontakte_api.like %}
+            <div class="vk_like">
+              <span id="vk_like"></span>
+            </div>
+          {% endif %}
+
+          {% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
+            <div class="fb-like" data-layout="button_count" data-share="true"></div>
+          {% endif %}
         </div>
       {% endif %}
 
