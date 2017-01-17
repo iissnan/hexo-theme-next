@@ -11,6 +11,8 @@
            data-width="{{ theme.facebook_comments_plugin.width }}"
            data-colorscheme="{{ theme.facebook_comments_plugin.scheme }}">
       </div>
+    {% elseif theme.vkontakte_api.enable and theme.vkontakte_api.comments %}
+      <div id="vk_comments"></div>
     {% elseif theme.disqus_shortname %}
       <div id="disqus_thread">
         <noscript>
