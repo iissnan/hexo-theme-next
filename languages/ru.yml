@@ -2,6 +2,7 @@ title:
   archive: Архив
   category: Категория
   tag: Тэг
+  schedule: Календарь
 
 author: Author
 
@@ -12,6 +13,7 @@ menu:
   tags: Тэги
   about: О сайте
   search: Поиск
+  schedule: Календарь
   sitemap: Карта сайта
 
 sidebar:
@@ -28,6 +30,8 @@ post:
   untitled: Без имени
   toc_empty: Эта запись без оглавления
   visitors: Просмотров
+  wordcount: Кол-во слов в статье
+  min2read: Время чтения в минутах
 
 page:
   totally: Всего
