@@ -289,20 +289,22 @@
         </div>
       {% endif %}
 
-      {% if (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
-        <div class="social-like">
-          {% if not is_index and theme.vkontakte_api.enable and theme.vkontakte_api.like %}
-            <div class="vk_like">
-              <span id="vk_like"></span>
-            </div>
-          {% endif %}
+      {% if not is_index %}
+        {% if (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
+          <div class="social-like">
+            {% if theme.vkontakte_api.enable and theme.vkontakte_api.like %}
+              <div class="vk_like">
+                <span id="vk_like"></span>
+              </div>
+            {% endif %}
 
-          {% if not is_index and theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
-            <div class="fb_like">
-              <div class="fb-like" data-layout="button_count" data-share="true"></div>
-            </div>
-          {% endif %}
-        </div>
+            {% if theme.facebook_sdk.enable and theme.facebook_sdk.like_button %}
+              <div class="fb_like">
+                <div class="fb-like" data-layout="button_count" data-share="true"></div>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
       {% endif %}
 
       {% if not is_index and (post.prev or post.next) %}
