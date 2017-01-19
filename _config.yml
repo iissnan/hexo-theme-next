@@ -16,7 +16,8 @@ cover:
   # about: 
   # pages: 
 
-
+# Post footer will be added to the end of each post body.
+post_footer: "所有文章非特别说明皆为原创。技术更迭迅猛，部分内容可能会作修改，为保证信息与源同步，转载时请务必注明文章出处！谢谢合作 :-)"
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"

@@ -189,6 +189,7 @@
         {% endif %}
       {% else %}
         {{ post.content }}
+        {{ theme.post_footer }}
       {% endif  %}
     </div>
 
