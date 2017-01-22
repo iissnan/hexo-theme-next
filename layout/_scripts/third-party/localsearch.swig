@@ -12,7 +12,7 @@
 
     function proceedsearch() {
       $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
-      $('.popup').toggle();
+      $('.popup').fadeToggle();
 
     }
     // search function;
@@ -71,7 +71,7 @@
                     // show search results
                     if (isMatch) {
                         matchcounts += 1;
-                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        str += "<li><a href='"+ decodeURIComponent(data_url) +"' class='search-result-title'>"+ data_title +"</a>";
                         var content = data.content.trim().replace(/<[^>]+>/g,"");
                         if (first_occur >= 0) {
                             // cut out 100 characters
@@ -119,9 +119,10 @@
     });
 
     $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
+      $('.popup').fadeOut(function() {
+          $(".popoverlay").remove();
+          $('body').css('overflow', '');
+      });
     });
     $('.popup').click(function(e){
       e.stopPropagation();

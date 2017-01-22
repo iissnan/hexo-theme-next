@@ -67,19 +67,30 @@
 .use-motion .motion-element { opacity: 0; }
 
 #local-search-input {
-  padding: 3px;
+  padding: 5px;
   border: none;
-  text-indent: 14px;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.5em;
+  text-indent: 1.5em;
   border-radius: 0;
   width: 140px;
   outline: none;
   border-bottom: 1px solid $grey-dark;
   background: inherit;
   opacity: 0.5;
+  transition-duration: 200ms;
   &:focus { opacity: 1; }
+  &:focus + .search-icon { opacity: 1; }
 }
 
 .search-icon {
   position: absolute;
-  top: 9px;
+  top: 16px;
+  left: 15px;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #333;
+  opacity: .5;
+  transition-duration: 200ms;
 }
