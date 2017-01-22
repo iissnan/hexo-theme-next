@@ -264,7 +264,7 @@ $(document).ready(function () {
     },
 
     menu: function (integrator) {
-      $('.menu-item, .site-home').velocity('transition.slideDownIn', {
+      $('.menu-item, .site-home, .site-nav-toggle').velocity('transition.slideDownIn', {
         display: null,
         duration: 200,
         complete: function () {
