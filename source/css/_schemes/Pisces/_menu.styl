@@ -3,6 +3,19 @@
 
   +mobile() {
     display: none;
+    z-index: 9;
+    overflow: visible !important;
+    &:before {
+      content: '';
+      position: absolute;
+      top: -41px;
+      right: -16px;
+      width: calc(100% + 16px);
+      height: calc(100% + 35px);
+      background: black;
+      opacity: 0.5;
+      pointer-events: none;
+    }
   }
 }
 
