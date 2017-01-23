@@ -17,13 +17,11 @@ a.search-result {
   text-overflow: ellipsis;
 }
 .search-keyword {
-  border-bottom: 1px dashed #f00;
-  font-size: 14px;
+  border-bottom: 1px dashed #4088b8;
   font-weight: bold;
-  color: #f00;
 }
 #local-search-result {
-  height: 88%;
+  height: 90%;
   overflow: auto;
 }
 .popup {
@@ -34,7 +32,7 @@ a.search-result {
   width: 700px;
   height: 80%;
   margin-left: -350px;
-  padding: 3px 0 0 10px;
+  padding: 3px 10px 0;
   background: #fff;
   color: #333;
   z-index: 9999;
@@ -63,22 +61,23 @@ a.search-result {
 
 #local-search-input {
   margin-bottom: 10px;
-  padding: 10px;
-  width: 97%;
-  font-size: 18px
+  width: calc(100% - 10px);
 }
-
-.popup .fa-search{padding-top:8px;}
 
 .popup-btn-close {
   position: absolute;
-  top: 6px;
+  top: 10px;
   right: 14px;
   color: #4EBD79;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
+  transition-duration: 200ms;
+
+  &:hover {
+    color: #9cce28;
+  }
 }
 
 #no-result {

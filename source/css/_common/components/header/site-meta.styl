@@ -1,8 +1,11 @@
 .site-meta {
-  margin: 0;
+  margin: 80px 0 0;
   text-align: $site-meta-text-align;
 
-  +mobile() { text-align: center; }
+  +mobile() {
+    text-align: center;
+
+  }
 }
 
 .brand {
@@ -25,16 +28,49 @@
 .site-title {
   display: inline-block;
   vertical-align: top;
-  line-height: 36px;
-  font-size: $logo-font-size;
-  font-weight: normal;
+  font-size: 80px;
+  font-weight: 700;
   font-family: $font-family-logo;
+  line-height: 100px;
+
+  &:before, &:after {
+    content: '';
+    width: 100%;
+    border-top: 5px solid white;
+    display: block;
+    transform-origin: left;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transform: scaleX(0);
+  }
+  &:after {
+    transform-origin: right;
+  }
+
+  &.show {
+    &:before, &:after {
+      transform: scaleX(1);
+    }
+  }
+  +mobile() {
+    font-size: 60px;
+
+    &:before, &:after {
+      border-width: 3px;
+    }
+  }
+
 }
 
 .site-subtitle {
   margin-top: 10px;
-  font-size: $subtitle-font-size;
-  color: $subtitle-color;
+  font-size: 18px;
+  font-weight: 300;
+  color: white;
+
+  +mobile() {
+    font-size: 16px;
+  }
 }
 
 .use-motion {

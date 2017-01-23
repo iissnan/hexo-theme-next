@@ -4,19 +4,26 @@
 {% block title %}
   {% set page_title_suffix = ' | ' + config.title %}
 
-  {% if page.type === "categories" and not page.title  %}
+  {% if page.type === "categories" %}
     {{ __('title.category') + page_title_suffix }}
-  {% elif page.type === "tags" and not page.title  %}
+    {% set page_type = 'category' %}
+  {% elif page.type === "tags" %}
     {{ __('title.tag') + page_title_suffix }}
+    {% set page_type = 'tag' %}
   {% else %}
     {{ page.title + page_title_suffix }}
   {% endif %}
 {% endblock %}
 
+{% block header %}
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader" style="background-image: url('{{ url_for( theme.cover[page_type] || theme.cover.home ) }}');">
+      <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
+    </header>
+{% endblock %}
+
 {% block content %}
 
   <div id="posts" class="posts-expand">
-  {% include '_partials/page-header.swig' %}
     {# tagcloud page support #}
     {% if page.type === "tags" %}
       <div class="tag-cloud">

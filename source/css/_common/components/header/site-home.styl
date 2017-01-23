@@ -1,0 +1,32 @@
+.site-home {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 5px 20px;
+    border: none;
+    opacity: 0;
+
+    +tablet() {
+        font-size: 50px;
+        line-height: 110px;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        border-bottom: white 1px solid;
+        transform: scaleX(0);
+        transition-duration: 200ms;
+    }
+
+    &:hover {
+        color: white;
+
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}

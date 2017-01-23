@@ -190,6 +190,9 @@ $(document).ready(function () {
       var $brand = $('.brand');
       var $title = $('.site-title');
       var $subtitle = $('.site-subtitle');
+
+      var $postheader = $('.post-header');
+
       var $logoLineTop = $('.logo-line-before i');
       var $logoLineBottom = $('.logo-line-after i');
 
@@ -208,11 +211,17 @@ $(document).ready(function () {
       hasElement($title) && sequence.push({
         e: $title,
         p: {opacity: 1, top: 0},
-        o: { duration: 200 }
+        o: {duration: 200}
       });
 
       hasElement($subtitle) && sequence.push({
         e: $subtitle,
+        p: {opacity: 1, top: 0},
+        o: {duration: 200}
+      });
+
+      hasElement($postheader) && sequence.push({
+        e: $postheader,
         p: {opacity: 1, top: 0},
         o: {duration: 200}
       });
@@ -226,6 +235,9 @@ $(document).ready(function () {
         integrator.next();
       }
 
+      setTimeout(function() {
+        $title.addClass('show');
+      }, 1000);
 
       function getMistLineSettings (element, translateX) {
         return {
@@ -252,7 +264,7 @@ $(document).ready(function () {
     },
 
     menu: function (integrator) {
-      $('.menu-item').velocity('transition.slideDownIn', {
+      $('.menu-item, .site-home, .site-nav-toggle').velocity('transition.slideDownIn', {
         display: null,
         duration: 200,
         complete: function () {
