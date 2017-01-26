@@ -20,6 +20,10 @@
       </div>
     {% elseif theme.hypercomments_id %}
       <div id="hypercomments_widget"></div>
+    {% elseif theme.gentie_productKey %}
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    {% elseif theme.youyan_uid %}
+      <div id="uyan_frame"></div>
     {% endif %}
   </div>
 {% endif %}

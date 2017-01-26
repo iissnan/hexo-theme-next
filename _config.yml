@@ -16,6 +16,9 @@ rss: /atom.xml
 # Specify the date when the site was setup
 since: 2016
 
+# icon between year and author @Footer
+authoricon: heart
+
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
 
@@ -24,6 +27,8 @@ copyright: true
 # Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
+seo: false
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -194,7 +199,7 @@ sidebar:
 
 
 # ---------------------------------------------------------------
-# Misc Theme Settings
+# Post Settings
 # ---------------------------------------------------------------
 
 # Custom Logo.
@@ -226,6 +231,13 @@ auto_excerpt:
   enable: false
   length: 150
 
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: false
+  categories: true
+
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -237,6 +249,26 @@ auto_excerpt:
 reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
 wechatpay: http://ogl5vjc1c.bkt.clouddn.com/image/pay/wechat_pay.png
 #alipay: /path/to/alipay-reward-image
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Custom Logo.
+# !!Only available for Default Scheme currently.
+# Options:
+#   enabled: [true/false] - Replace with specific image
+#   image: url-of-image   - Images's url
+custom_logo:
+  enabled: false
+  image:
+
+
+# Code Highlight theme
+# Available value:
+#    normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
 
 
 # ---------------------------------------------------------------
@@ -265,6 +297,13 @@ mathjax:
 # Hypercomments
 #hypercomments_id:
 
+# Gentie productKey
+#gentie_productKey:
+
+# Support for youyan comments system.
+# You can get your uid from http://www.uyan.cc
+#youyan_uid: your uid
+
 # Baidu Share
 # Available value:
 #    button | slide
@@ -291,6 +330,9 @@ duoshuo_share: true
 # CNZZ count
 #cnzz_siteid:
 
+# Application Insights
+# See https://azure.microsoft.com/en-us/services/application-insights/
+# application_insights:
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
@@ -394,6 +436,8 @@ use_motion: true
 # Fancybox
 fancybox: true
 
+# Canvas-nest
+canvas_nest: false
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -441,6 +485,10 @@ vendors:
   # https://www.algolia.com
   algolia_instant_js:
   algolia_instant_css:
+
+  # Internal version: 1.0.0
+  # https://github.com/hustcc/canvas-nest.js
+  canvas_nest:
 
 
 

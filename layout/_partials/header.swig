@@ -15,7 +15,11 @@
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
-  <p class="site-subtitle">{{ config.subtitle }}</p>
+    {% if theme.seo %}
+      <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
+    {% else %}
+      <p class="site-subtitle">{{ config.subtitle }}</p>
+    {% endif %}
 </div>
 
 <div class="site-nav-toggle">
@@ -47,7 +51,7 @@
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
             <a href="javascript:;" class="st-search-show-outputs">
-          {% elseif config.search %}
+          {% elseif config.search || theme.algolia_search.enable %}
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}
