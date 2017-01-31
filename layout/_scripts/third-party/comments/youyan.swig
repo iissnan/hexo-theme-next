@@ -5,13 +5,13 @@
   and not theme.gentie_productKey %}
 
   {% if theme.youyan_uid %}
-      {% set uid = theme.youyan_uid %}
-  {% endif %}
+    {% set uid = theme.youyan_uid %}
 
-  {% if page.comments %}
+    {% if page.comments %}
       <!-- UY BEGIN -->
       <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={{uid}}"></script>
       <!-- UY END -->
+    {% endif %}
   {% endif %}
 
 {% endif %}
