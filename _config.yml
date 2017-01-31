@@ -306,9 +306,12 @@ mathjax:
 # See: https://www.google.com/webmasters/
 #google_site_verification:
 
-
 # Google Analytics
 #google_analytics:
+
+# Yandex Webmaster tools verification setting
+# See: https://webmaster.yandex.ru/
+#yandex_site_verification:
 
 # CNZZ count
 #cnzz_siteid:
