@@ -37,7 +37,7 @@
 ## Update
 
 ```shell
-cd theme/next
+cd themes/next
 git pull
 ```
 
