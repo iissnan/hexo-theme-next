@@ -2,6 +2,7 @@ title:
   archive: Archive
   category: Category
   tag: Tag
+  schedule: Schedule
 
 author: Author
 
@@ -12,6 +13,7 @@ menu:
   tags: Tags
   about: About
   search: Search
+  schedule: Schedule
   sitemap: Sitemap
 
 sidebar:
@@ -28,6 +30,8 @@ post:
   untitled: Untitled
   toc_empty: This post does not have a Table of Contents
   visitors: Visitors
+  wordcount: Words count in article
+  min2read: Reading time
 
 page:
   totally: Totally

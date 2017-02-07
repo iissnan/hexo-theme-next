@@ -217,7 +217,13 @@ post_meta:
   created_at: true
   updated_at: false
   categories: true
-
+  
+# Post wordcount display settings
+# Dependies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: false
+  min2read: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -300,9 +306,12 @@ mathjax:
 # See: https://www.google.com/webmasters/
 #google_site_verification:
 
-
 # Google Analytics
 #google_analytics:
+
+# Yandex Webmaster tools verification setting
+# See: https://webmaster.yandex.ru/
+#yandex_site_verification:
 
 # CNZZ count
 #cnzz_siteid:
@@ -338,6 +347,15 @@ facebook_comments_plugin:
   num_of_posts: 10  # min posts num is 1
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
+
+# VKontakte API Support.
+# To get your AppID visit https://vk.com/editapp?act=create
+vkontakte_api:
+  enable: false
+  app_id:       #<app_id>
+  like:         true
+  comments:     true
+  num_of_posts: 10
 
 
 # Show number of visitors to each article.
