@@ -287,6 +287,10 @@ mathjax:
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
 
+# Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+#livere_uid: your uid
+
 # Baidu Share
 # Available value:
 #    button | slide
