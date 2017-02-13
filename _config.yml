@@ -25,7 +25,7 @@ keywords: "Hexo, NexT"
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /rss2.xml
 
 # Specify the date when the site was setup
 since: 2015
@@ -171,8 +171,7 @@ toc:
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
-#creative_commons:
+creative_commons: by-nc-sa
 
 
 sidebar:
@@ -304,7 +303,7 @@ duoshuo_info:
   ua_enable: true
   admin_enable: true
   user_id: 7566230
-  #admin_nickname: Author
+  admin_nickname: Author
 
 
 # Facebook SDK Support.
