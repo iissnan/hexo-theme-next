@@ -7,7 +7,7 @@
 				apiId: {{ theme.vkontakte_api.app_id }}
 			});
 
-			{% if theme.vkontakte_api.like %}
+			{% if not is_home() and theme.vkontakte_api.like %}
 				VK.Widgets.Like("vk_like", {type: "mini", height: 20});
 			{% endif %}
 
