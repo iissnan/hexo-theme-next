@@ -73,5 +73,9 @@
   {% include '_scripts/baidu-push.swig' %}
   {% include '_components/algolia-search/assets.swig' %}
 
+  {% if theme.exturl %}
+    {% include '_scripts/third-party/exturl.swig' %}
+  {% endif %}
+
 </body>
 </html>
