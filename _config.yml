@@ -425,6 +425,11 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
+# External URL with BASE64 encrypt & decrypt
+# Usage: {% exturl text url "title" %}
+# Alias: {% extlink text url "title" %}
+exturl: false
+
 
 
 #! ---------------------------------------------------------------
