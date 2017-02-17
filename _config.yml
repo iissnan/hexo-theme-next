@@ -287,6 +287,10 @@ mathjax:
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
 
+# Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+#livere_uid: your uid
+
 # Baidu Share
 # Available value:
 #    button | slide
@@ -386,6 +390,9 @@ busuanzi_count:
 
 # Tencent analytics ID
 # tencent_analytics:
+
+# Tencent MTA ID
+# tencent_mta: 
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
