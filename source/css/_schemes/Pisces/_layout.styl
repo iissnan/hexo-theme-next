@@ -102,12 +102,7 @@
 .footer-inner {
   width: $main-desktop;
 
-  &:before {
-    content: " ";
-    float: left;
-    width: 260px;
-    min-height: 50px;
-  }
+  padding-left: 260px;
 
   +tablet() {
     width: auto;
@@ -117,7 +112,7 @@
   +mobile() {
     width: auto;
 
-    &:before { display: none; }
+    padding-left: 0;
   }
 }
 
