@@ -101,17 +101,14 @@
 
 .footer-inner {
   width: $main-desktop;
-
   padding-left: 260px;
 
   +tablet() {
     width: auto;
-
-    &:before { display: none; }
+    padding-left: 0;
   }
   +mobile() {
     width: auto;
-
     padding-left: 0;
   }
 }
