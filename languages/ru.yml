@@ -72,6 +72,9 @@ state:
   tags: Тэги
   categories: Категории
 
+search:
+  placeholder: Поиск...
+
 cheers:
   um: Эм..
   ok: OK

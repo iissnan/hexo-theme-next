@@ -1,8 +1,8 @@
 title:
   archive: 归档
   category: 分类
-  schedule: 日程
   tag: 标签
+  schedule: 日程表
 
 author: 博主
 
@@ -10,14 +10,12 @@ menu:
   home: 首页
   archives: 归档
   categories: 分类
-  schedule: 日程
   tags: 标签
   about: 关于
   search: 搜索
-  schedule: 日程
+  schedule: 日程表
   sitemap: 站点地图
   commonweal: 公益404
-
 
 sidebar:
   overview: 站点概览
@@ -44,7 +42,6 @@ footer:
   powered: "由 %s 强力驱动"
   theme: 主题
 
-
 counter:
   tag_cloud:
     zero: 暂无标签
@@ -66,6 +63,9 @@ state:
   pages: 页面
   tags: 标签
   categories: 分类
+
+search:
+  placeholder: 搜索...
 
 cheers:
   um: 嗯..

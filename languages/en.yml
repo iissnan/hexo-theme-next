@@ -15,6 +15,7 @@ menu:
   search: Search
   schedule: Schedule
   sitemap: Sitemap
+  commonweal: Commonweal 404
 
 sidebar:
   overview: Overview
@@ -62,6 +63,9 @@ state:
   pages: pages
   tags: tags
   categories: categories
+
+search:
+  placeholder: Searching...
 
 cheers:
   um: Um..
