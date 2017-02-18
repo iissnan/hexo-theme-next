@@ -185,6 +185,11 @@ sidebar:
   #display: always
   #display: hide
   #display: remove
+  
+  # Sidebar offset from top in pixels.
+  # For offset top of sidebar affix, need to set
+  # `$sidebar-offset` var in `source/css/_variables/Pisces.styl`
+  offset: 12
 
 
 # Blogrolls
