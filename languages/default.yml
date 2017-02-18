@@ -64,6 +64,9 @@ state:
   tags: tags
   categories: categories
 
+search:
+  placeholder: Searching...
+
 cheers:
   um: Um..
   ok: OK

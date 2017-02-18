@@ -64,6 +64,9 @@ state:
   tags: 標籤
   categories: 分類
 
+search:
+  placeholder: 搜索...
+
 cheers:
   um: 嗯..
   ok: OK
