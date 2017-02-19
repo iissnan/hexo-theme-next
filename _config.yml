@@ -3,18 +3,18 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: http://ogl5vjc1c.bkt.clouddn.com/image/logo/master_studio_big.png
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Android, ReactNative, WechatApp"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
 # Set rss to specific value if you have burned your feed already.
-rss:
+rss: /atom.xml
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2016
 
 # icon between year and author @Footer
 authoricon: heart
@@ -28,7 +28,7 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -37,8 +37,8 @@ seo: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
+  categories: /categories
+  about: /about
   archives: /archives
   tags: /tags
   #sitemap: /sitemap.xml
@@ -70,9 +70,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -118,7 +118,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: consolas
     size:
 
 
@@ -132,9 +132,11 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
-
+  GitHub: https://github.com/MasterStudio
+  QQ: 597081117
+  WeChat: wyf10211006
 
 # Social Links Icons
 # Icon Mapping:
@@ -147,8 +149,9 @@ social_icons:
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
-  Weibo: weibo
-
+  Weibo: weibo  
+  QQ: qq
+  WeChat: wechat
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -181,8 +184,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggler.
-  display: post
-  #display: always
+  #display: post
+  display: always
   #display: hide
   #display: remove
 
@@ -197,44 +200,6 @@ sidebar:
 
 # ---------------------------------------------------------------
 # Post Settings
-# ---------------------------------------------------------------
-
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
-
-# Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
-
-# Automatically Excerpt. Not recommand.
-# Please use <!-- more --> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
-  length: 150
-
-# Post meta display settings
-post_meta:
-  item_text: true
-  created_at: true
-  updated_at: false
-  categories: true
-  
-# Post wordcount display settings
-# Dependies: https://github.com/willin/hexo-wordcount
-post_wordcount:
-  item_text: true
-  wordcount: false
-  min2read: false
-
-# Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
-
-
-
-# ---------------------------------------------------------------
-# Misc Theme Settings
 # ---------------------------------------------------------------
 
 # Custom Logo.
@@ -252,6 +217,44 @@ custom_logo:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
+
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
+
+# Automatically Excerpt. Not recommand.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: true
+  categories: true
+  
+# Post wordcount display settings
+# Dependies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: false
+  min2read: false
+
+# Wechat Subscriber
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
+
+# Pay
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: http://ogl5vjc1c.bkt.clouddn.com/image/pay/wechat_pay.png
+#alipay: /path/to/alipay-reward-image
 
 
 # ---------------------------------------------------------------
@@ -304,7 +307,7 @@ mathjax:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -330,8 +333,8 @@ mathjax:
 duoshuo_info:
   ua_enable: true
   admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+  user_id: 6352501560630576000
+  admin_nickname: 博主
 
 
 # Facebook SDK Support.
@@ -365,9 +368,9 @@ vkontakte_api:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: 95zhSm4X3RDwboWVB5mMNnWr-gzGzoHsz
+  app_key: nPspJ9eonJLvajUuJ1z0T33X
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
@@ -396,7 +399,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -439,7 +442,7 @@ use_motion: true
 fancybox: true
 
 # Canvas-nest
-canvas_nest: false
+canvas_nest: true
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
