@@ -201,6 +201,9 @@ sidebar:
 
   # Back to top in sidebar
   b2t: false
+  
+  # Scroll percent label in b2t button
+  scrollpercent: false
 
 
 # ---------------------------------------------------------------
