@@ -1,18 +1,10 @@
 if hexo-config("scheme") == Pisces
   .busuanzi-count {
-    &:before {
-      content: " ";
-      float: left;
-      width: 260px;
-      min-height: 25px;
-    }
     +tablet() {
       width: auto;
-      &:before { display: none; }
     }
     +mobile() {
       width: auto;
-      &:before { display: none; }
     }
   }
 

@@ -16,6 +16,9 @@ rss:
 # Specify the date when the site was setup
 #since: 2015
 
+# icon between year and author @Footer
+authoricon: heart
+
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
 
@@ -24,6 +27,8 @@ copyright: true
 # Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
+# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
+seo: false
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -191,6 +196,44 @@ sidebar:
 
 
 # ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
+
+# Automatically Excerpt. Not recommand.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: false
+  categories: true
+
+# Post wordcount display settings
+# Dependies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: false
+  min2read: false
+
+# Wechat Subscriber
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
+
+
+
+# ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
 
@@ -209,28 +252,6 @@ custom_logo:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
-
-
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
-
-# Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
-
-# Automatically Excerpt. Not recommand.
-# Please use <!-- more --> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
-  length: 150
-
-
-# Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
-
-
 
 
 # ---------------------------------------------------------------
@@ -259,6 +280,17 @@ mathjax:
 # Hypercomments
 #hypercomments_id:
 
+# Gentie productKey
+#gentie_productKey:
+
+# Support for youyan comments system.
+# You can get your uid from http://www.uyan.cc
+#youyan_uid: your uid
+
+# Support for LiveRe comments system.
+# You can get your uid from https://livere.com/insight/myCode (General web site)
+#livere_uid: your uid
+
 # Baidu Share
 # Available value:
 #    button | slide
@@ -278,13 +310,19 @@ mathjax:
 # See: https://www.google.com/webmasters/
 #google_site_verification:
 
-
 # Google Analytics
 #google_analytics:
+
+# Yandex Webmaster tools verification setting
+# See: https://webmaster.yandex.ru/
+#yandex_site_verification:
 
 # CNZZ count
 #cnzz_siteid:
 
+# Application Insights
+# See https://azure.microsoft.com/en-us/services/application-insights/
+# application_insights:
 
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
@@ -313,6 +351,15 @@ facebook_comments_plugin:
   num_of_posts: 10  # min posts num is 1
   width: 100%       # default width is 550px
   scheme: light     # default scheme is light (light or dark)
+
+# VKontakte API Support.
+# To get your AppID visit https://vk.com/editapp?act=create
+vkontakte_api:
+  enable: false
+  app_id:       #<app_id>
+  like:         true
+  comments:     true
+  num_of_posts: 10
 
 
 # Show number of visitors to each article.
@@ -343,6 +390,9 @@ busuanzi_count:
 
 # Tencent analytics ID
 # tencent_analytics:
+
+# Tencent MTA ID
+# tencent_mta:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
@@ -388,35 +438,60 @@ use_motion: true
 # Fancybox
 fancybox: true
 
+# Canvas-nest
+canvas_nest: false
+
+# Scheme Settings
+muse:
+  sidebar:
+    fixed: true
+
+mist:
+  sidebar:
+    fixed: true
+
+pisces:
+  sidebar:
+    affix: true
+
+servant:
+  sidebar:
+    affix: true
+
+
 # Site Assets
 assets:
   vendors:
     static:
       jquery:
-        src: vendors/jquery/index.js
-        dst: vendors/jquery/index.js
+        src: lib/jquery/index.js
+        dst: lib/jquery/index.js
         version: 2.1.3
       fastclick:
-        src: vendors/fastclick/lib/fastclick.js
-        dst: vendors/fastclick/lib/fastclick.min.js
+        src: lib/fastclick/lib/fastclick.js
+        dst: lib/fastclick/lib/fastclick.min.js
         version: 1.0.6
       lazyload:
-        src: vendors/jquery_lazyload/jquery.lazyload.js
-        dst: vendors/jquery_lazyload/jquery.lazyload.js
+        src: lib/jquery_lazyload/jquery.lazyload.js
+        dst: lib/jquery_lazyload/jquery.lazyload.js
         version: 1.9.7
       velocity:
-        src: vendors/velocity/velocity.js
-        dst: vendors/velocity/velocity.min.js
+        src: lib/velocity/velocity.js
+        dst: lib/velocity/velocity.min.js
         version: 1.2.1
       velocity UI:
-        src: vendors/velocity/velocity.ui.js
-        dst: vendors/velocity/velocity.ui.min.js
+        src: lib/velocity/velocity.ui.js
+        dst: lib/velocity/velocity.ui.min.js
         version: 1.2.1
     dynamic:
       fancybox:
-        src: vendors/fancybox/source/jquery.fancybox.js
-        dst: vendors/fancybox/source/jquery.fancybox.pack.js
+        src: lib/fancybox/source/jquery.fancybox.js
+        dst: lib/fancybox/source/jquery.fancybox.pack.js
         version: 2.1.5
+      canvas_nest:
+        src: lib/canvas-nest/canvas-nest.min.js
+        dist: lib/canvas-nest/canvas-nest.min.js
+        version: 1.0.0
 
   js:
     commons:
@@ -443,24 +518,6 @@ assets:
       - src: js/src/schemes/pisces.js
 
 
-# Scheme Settings
-muse:
-  sidebar:
-    fixed: true
-
-mist:
-  sidebar:
-    fixed: true
-
-pisces:
-  sidebar:
-    affix: true
-
-servant:
-  sidebar:
-    affix: true
-
-
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
 # For example
@@ -469,7 +526,7 @@ servant:
 # Please use the https protocol of CDN files when you enable https on your site.
 vendors:
   # Internal path prefix. Please do not edit it.
-  _internal: vendors
+  _internal: lib
 
   # Internal version: 2.1.3
   jquery:
@@ -507,6 +564,10 @@ vendors:
   # https://www.algolia.com
   algolia_instant_js:
   algolia_instant_css:
+
+  # Internal version: 1.0.0
+  # https://github.com/hustcc/canvas-nest.js
+  canvas_nest:
 
 
 

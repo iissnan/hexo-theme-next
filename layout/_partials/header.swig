@@ -1,29 +1,35 @@
-<div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
-  {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
-    <div class="site-meta-headline">
-      <a>
-        <img class="custom-logo-image" src="{{ theme.custom_logo.image }}"
-             alt="{{ config.title }}"/>
+<div class="site-brand-wrapper">
+  <div class="site-meta {% if theme.custom_logo.enabled %}custom-logo{% endif %}">
+    {% if theme.custom_logo.image and theme.scheme === 'Muse' %}
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="{{ theme.custom_logo.image }}"
+               alt="{{ config.title }}"/>
+        </a>
+      </div>
+    {% endif %}
+
+    <div class="custom-logo-site-title">
+      <a href="{{ config.root }}"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">{{ config.title }}</span>
+        <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-  {% endif %}
-
-  <div class="custom-logo-site-title">
-    <a href="{{ config.root }}"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">{{ config.title }}</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+      {% if theme.seo %}
+        <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
+      {% else %}
+        <p class="site-subtitle">{{ config.subtitle }}</p>
+      {% endif %}
   </div>
-  <p class="site-subtitle">{{ config.subtitle }}</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -47,7 +53,7 @@
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
             <a href="javascript:;" class="st-search-show-outputs">
-          {% elseif config.search %}
+          {% elseif config.search || theme.algolia_search.enable %}
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}

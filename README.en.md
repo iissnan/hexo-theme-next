@@ -37,7 +37,7 @@
 ## Update
 
 ```shell
-cd theme/next
+cd themes/next
 git pull
 ```
 
@@ -53,7 +53,6 @@ language: en
 # language: fr-FR
 # language: zh-hk
 # language: zh-tw
-# language: ru
 # language: ru
 # language: de
 ```
@@ -79,9 +78,7 @@ duoshuo:
 OR
 
 ```yml
-disqus:
-   enable: true
-   shortname: your-disqus-shortname
+disqus_shortname: your-disqus-shortname
 ```
 
 ### Tags page.
@@ -104,7 +101,7 @@ disqus:
           home: /
           archives: /archives
           tags: /tags
-          
+
 ### Categories page.
 
 > Add a categories page contains all categories in your site.
@@ -137,7 +134,7 @@ social:
   Weibo: your-weibo-url
   DouBan: your-douban-url
   ZhiHu: your-zhihu-url
-``` 
+```
 
 ### Feed link.
 

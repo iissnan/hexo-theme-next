@@ -15,4 +15,7 @@
 {% if theme.fancybox %}
   {% set assets_vendors.fancybox = theme.assets.vendors.dynamic.fancybox %}
 {% endif %}
+{% if theme.canvas_nest %}
+  {% set assets_vendors.canvas_nest = theme.assets.vendors.dynamic.canvas_nest %}
+{% endif %}
 {{ assets_render.scripts(assets_vendors) }}
