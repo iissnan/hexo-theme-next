@@ -50,9 +50,11 @@
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    {% if not theme.sidebar.b2t %}
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+      </div>
+    {% endif %}
   </div>
 
   {% include '_scripts/vendors.swig' %}
