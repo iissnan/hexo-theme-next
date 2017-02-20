@@ -1,4 +1,4 @@
-{% if config.search.path %}
+{% if theme.local_search.enable %}
   <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
