@@ -217,7 +217,7 @@ post_meta:
   created_at: true
   updated_at: false
   categories: true
-  
+
 # Post wordcount display settings
 # Dependies: https://github.com/willin/hexo-wordcount
 post_wordcount:
@@ -392,7 +392,7 @@ busuanzi_count:
 # tencent_analytics:
 
 # Tencent MTA ID
-# tencent_mta: 
+# tencent_mta:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
@@ -425,7 +425,9 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-
+# Local search
+local_search:
+  enable: false
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
