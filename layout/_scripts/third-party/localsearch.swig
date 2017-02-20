@@ -1,4 +1,4 @@
-{% if config.search.path %}
+{% if theme.local_search.enable %}
   <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
@@ -11,7 +11,7 @@
     // monitor main search box;
 
     function proceedsearch() {
-      $("body").append('<div class="local-search-pop-overlay">').css('overflow', 'hidden');
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
       $('.popup').toggle();
     }
     // search function;
@@ -115,7 +115,7 @@
 
     $('.popup-btn-close').click(function(e){
       $('.popup').hide();
-      $(".local-search-pop-overlay").remove();
+      $(".popoverlay").remove();
       $('body').css('overflow', '');
     });
     $('.popup').click(function(e){
