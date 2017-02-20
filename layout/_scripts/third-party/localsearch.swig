@@ -11,7 +11,7 @@
     // monitor main search box;
 
     function proceedsearch() {
-      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $("body").append('<div class="local-search-pop-overlay">').css('overflow', 'hidden');
       $('.popup').toggle();
     }
     // search function;
@@ -115,7 +115,7 @@
 
     $('.popup-btn-close').click(function(e){
       $('.popup').hide();
-      $(".popoverlay").remove();
+      $(".local-search-pop-overlay").remove();
       $('body').css('overflow', '');
     });
     $('.popup').click(function(e){
