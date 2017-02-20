@@ -185,6 +185,10 @@ sidebar:
   #display: always
   #display: hide
   #display: remove
+  
+  # Sidebar offset from top menubar in pixels.
+  offset: 12
+  offset_float: 0
 
 
 # Blog rolls
@@ -193,6 +197,13 @@ sidebar:
 #links_layout: inline
 #links:
   #Title: http://example.com/
+
+
+  # Back to top in sidebar
+  b2t: false
+  
+  # Scroll percent label in b2t button
+  scrollpercent: false
 
 
 # ---------------------------------------------------------------
@@ -424,6 +435,11 @@ algolia_search:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
+
+# External URL with BASE64 encrypt & decrypt
+# Usage: {% exturl text url "title" %}
+# Alias: {% extlink text url "title" %}
+exturl: false
 
 
 
