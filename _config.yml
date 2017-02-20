@@ -177,11 +177,12 @@ sidebar:
 
 
 # Blogrolls
-#links_title: Links
+links_title: 友链
 #links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  alvin's blog : http://donge.me
+  Felix's Blog: https://blog.zlf.me/
 
 
 # ---------------------------------------------------------------
