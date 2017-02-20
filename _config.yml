@@ -24,7 +24,7 @@ copyright: true
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
-# Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
+# Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
@@ -48,7 +48,7 @@ menu:
 # Enable/Disable menu icons.
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of menu item and value is the name of FontAwsome icon. Key is case-senstive.
+#   Key is the name of menu item and value is the name of FontAwesome icon. Key is case-senstive.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
@@ -79,7 +79,7 @@ scheme: Muse
 # Font Settings
 # - Find fonts on Google Fonts (https://www.google.com/fonts)
 # - All fonts set here will have the following styles:
-#     light, light italic, normal, normal intalic, bold, bold italic
+#     light, light italic, normal, normal italic, bold, bold italic
 # - Be aware that setting too much fonts will cause site running slowly
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
@@ -139,12 +139,12 @@ font:
 # Social Links Icons
 # Icon Mapping:
 #   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of the item and value is the name of FontAwsome icon. Key is case-senstive.
+#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
 #   When an globe mask icon presenting up means that the item has no mapping icon.
 social_icons:
   enable: true
   # Icon Mappings.
-  # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
+  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
   Twitter: twitter
   Weibo: weibo
@@ -180,19 +180,30 @@ sidebar:
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
-  #  - remove  Totally remove sidebar including sidebar toggler.
+  #  - remove  Totally remove sidebar including sidebar toggle.
   display: post
   #display: always
   #display: hide
   #display: remove
+  
+  # Sidebar offset from top menubar in pixels.
+  offset: 12
+  offset_float: 0
 
 
-# Blogrolls
+# Blog rolls
 #links_title: Links
 #links_layout: block
 #links_layout: inline
 #links:
   #Title: http://example.com/
+
+
+  # Back to top in sidebar
+  b2t: false
+  
+  # Scroll percent label in b2t button
+  scrollpercent: false
 
 
 # ---------------------------------------------------------------
@@ -205,7 +216,7 @@ scroll_to_more: true
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
 
-# Automatically Excerpt. Not recommand.
+# Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: false
@@ -219,7 +230,7 @@ post_meta:
   categories: true
 
 # Post wordcount display settings
-# Dependies: https://github.com/willin/hexo-wordcount
+# Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
   wordcount: false
@@ -425,9 +436,16 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
+
 # Local search
 local_search:
   enable: false
+
+# External URL with BASE64 encrypt & decrypt
+# Usage: {% exturl text url "title" %}
+# Alias: {% extlink text url "title" %}
+exturl: false
+
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS

@@ -28,10 +28,11 @@ $(document).ready(function () {
     }
   }
 
+  // Sidebar float
   function initAffix () {
     var headerHeight = $('.header-inner').height();
     var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
-    var sidebarTop = headerHeight + 10;
+    var sidebarTop = (CONFIG.sidebar.offset_float === 0) ? headerHeight + CONFIG.sidebar.offset : headerHeight;
 
     $('.sidebar-inner').affix({
       offset: {
