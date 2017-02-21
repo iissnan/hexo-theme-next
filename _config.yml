@@ -347,6 +347,12 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
+algolia:
+  applicationID: 'K8G7QZC9ID'
+  apiKey: '772f00521b3eb47b6a88ada0a5e2141a'
+  adminApiKey: '9d522a546b3682ad7d136b74fd407daa'
+  indexName: 'ilbba_blog_index'
+  chunkSize: 5000
 
 
 #! ---------------------------------------------------------------
