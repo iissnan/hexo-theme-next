@@ -2,6 +2,7 @@ title:
   archive: 歸檔
   category: 分類
   tag: 標籤
+  schedule: 日程表
 
 author: 博主
 
@@ -12,21 +13,26 @@ menu:
   tags: 標籤
   about: 關於
   search: 檢索
-
+  schedule: 日程表
+  sitemap: 站點地圖
+  commonweal: 公益404
 
 sidebar:
   overview: 本站概覽
   toc: 文章目錄
 
 post:
+  created: 創建於
+  modified: 更新於
   sticky: 置頂
   posted: 發表於
-  modified: 更新於
   in: 分類於
-  visitors: 閱讀次數
   read_more: 閱讀全文
   untitled: 未命名
   toc_empty: 此文章未包含目錄
+  visitors: 閱讀次數
+  wordcount: 字數統計
+  min2read: 閱讀時長
 
 page:
   totally: 共有
@@ -35,7 +41,6 @@ page:
 footer:
   powered: "由 %s 強力驅動"
   theme: 主題
-
 
 counter:
   tag_cloud:
@@ -58,6 +63,9 @@ state:
   pages: 頁面
   tags: 標籤
   categories: 分類
+
+search:
+  placeholder: 搜索...
 
 cheers:
   um: 嗯..
