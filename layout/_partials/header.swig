@@ -44,11 +44,12 @@
       {% endfor %}
 
       {% if hasSearch %}
+        <!--
         <li class="menu-item menu-item-search">
           {% if theme.swiftype_key %}
-            <a href="#" class="st-search-show-outputs">
+            <a href="javascript:;" class="st-search-show-outputs">
           {% elseif config.search %}
-            <a href="#" class="popup-trigger">
+            <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
@@ -56,6 +57,7 @@
             {{ __('menu.search') }}
           </a>
         </li>
+        -->
       {% endif %}
     </ul>
   {% endif %}
