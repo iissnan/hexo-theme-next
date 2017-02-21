@@ -185,10 +185,16 @@ sidebar:
   #display: always
   #display: hide
   #display: remove
-  
+
   # Sidebar offset from top menubar in pixels.
   offset: 12
   offset_float: 0
+
+  # Back to top in sidebar
+  b2t: false
+
+  # Scroll percent label in b2t button
+  scrollpercent: false
 
 
 # Blog rolls
@@ -197,13 +203,6 @@ sidebar:
 #links_layout: inline
 #links:
   #Title: http://example.com/
-
-
-  # Back to top in sidebar
-  b2t: false
-  
-  # Scroll percent label in b2t button
-  scrollpercent: false
 
 
 # ---------------------------------------------------------------
