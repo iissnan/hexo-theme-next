@@ -9,20 +9,17 @@
   {% endif %}
 
   <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
+    <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="{{ theme.author }}">
-    <meta itemprop="description" content="{{ theme.signature }}">
-    <meta itemprop="image" content="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="{{ config.title }}">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="{{ config.title }}" src="{{ theme.custom_logo.image }}">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="{{ theme.author }}">
+      <meta itemprop="description" content="{{ theme.signature }}">
+      <meta itemprop="image" content="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="{{ config.title }}">
+    </span>
 
     {% if not headlessPost %}
       <header class="post-header">
