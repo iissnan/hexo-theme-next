@@ -3,6 +3,7 @@ path = require('path')
 gulp = require('gulp')
 jshint = require('gulp-jshint')
 stylish = require('jshint-stylish')
+shell   = require('gulp-shell')
 yaml = require('js-yaml')
 
 gulp.task 'lint', ->
@@ -16,6 +17,10 @@ gulp.task 'lint', ->
     './source/js/src/schemes/pisces.js'
   ]).pipe jshint()
     .pipe jshint.reporter(stylish)
+
+gulp.task 'lint:stylus', shell.task [
+  '"./node_modules/.bin/stylint" ./source/css/'
+]
 
 gulp.task 'validate:config', (cb) ->
   themeConfig = fs.readFileSync path.join(__dirname, '_config.yml')
