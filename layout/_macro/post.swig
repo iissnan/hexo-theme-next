@@ -196,12 +196,12 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
-                  {% if theme.post_wordcount.item_text %}
-                    <span class="post-meta-item-text">{{ __('post.wordcount') }}</span>
-                  {% endif %}
-                    <span title="{{ __('post.wordcount') }}" }}">
-                      {{ wordcount(post.content) }}
-                    </span>
+                {% if theme.post_wordcount.item_text %}
+                  <span class="post-meta-item-text">{{ __('post.wordcount') }}</span>
+                {% endif %}
+                <span title="{{ __('post.wordcount') }}">
+                  {{ wordcount(post.content) }}
+                </span>
               {% endif %}
 
               {% if theme.post_wordcount.wordcount and theme.post_wordcount.min2read %}
@@ -212,12 +212,12 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-clock-o"></i>
                 </span>
-                  {% if theme.post_wordcount.item_text %}
-                    <span class="post-meta-item-text">{{ __('post.min2read') }}</span>
-                  {% endif %}
-                    <span title="{{ __('post.min2read') }}" }}">
-                      {{ min2read(post.content) }}
-                    </span>
+                {% if theme.post_wordcount.item_text %}
+                  <span class="post-meta-item-text">{{ __('post.min2read') }}</span>
+                {% endif %}
+                <span title="{{ __('post.min2read') }}" }}">
+                  {{ min2read(post.content) }}
+                </span>
               {% endif %}
             </div>
           {% endif %}
