@@ -22,6 +22,12 @@ authoricon: heart
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
 
+postcopyright:
+  enable: true
+  license: CC BY-NC-SA 3.0 CN
+  license_url: http://creativecommons.org/licenses/by-nc-sa/3.0/cn/
+
+
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
