@@ -8,6 +8,8 @@ $(document).ready(function () {
 
   NexT.utils.lazyLoadPostsImages();
 
+  NexT.utils.registerESCKeyEvent();
+
   NexT.utils.registerBackToTop();
 
   $('.site-nav-toggle button').on('click', function () {

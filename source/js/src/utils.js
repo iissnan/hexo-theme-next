@@ -5,24 +5,28 @@ NexT.utils = NexT.$u = {
    * Wrap images with fancybox support.
    */
   wrapImageWithFancyBox: function () {
-    $('.content img').not('.group-picture img, .post-gallery img').each(function () {
+    $('.content img')
+      .not('[hidden]')
+      .not('.group-picture img, .post-gallery img')
+      .each(function () {
+        var $image = $(this);
+        var imageTitle = $image.attr('title');
+        var $imageWrapLink = $image.parent('a');
 
-      var $image = $(this);
-      var imageTitle = $image.attr('title');
-      var $imageWrapLink = $image.parent('a');
+        if ($imageWrapLink.size() < 1) {
+          $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
+        }
 
-      if ($imageWrapLink.size() < 1) {
-        $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
-      }
+        $imageWrapLink.addClass('fancybox fancybox.image');
+        $imageWrapLink.attr('rel', 'group');
 
-      $imageWrapLink.addClass('fancybox fancybox.image');
-      $imageWrapLink.attr('rel', 'group');
+        if (imageTitle) {
+          $imageWrapLink.append('<p class="image-caption">' + imageTitle + '</p>');
 
-      if (imageTitle) {
-        $imageWrapLink.append('<p class="image-caption">' + imageTitle + '</p>');
-        $imageWrapLink.attr('title', imageTitle); //make sure img title tag will show correctly in fancybox
-      }
-    });
+          //make sure img title tag will show correctly in fancybox
+          $imageWrapLink.attr('title', imageTitle);
+        }
+      });
 
     $('.fancybox').fancybox({
       helpers: {
@@ -40,13 +44,25 @@ NexT.utils = NexT.$u = {
     });
   },
 
+  registerESCKeyEvent: function () {
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        $('.search-popup').hide();
+        $('.search-popup-overlay').remove();
+        $('body').css('overflow', '');
+      }
+    });
+  },
+
   registerBackToTop: function () {
     var THRESHOLD = 50;
     var $top = $('.back-to-top');
 
     $(window).on('scroll', function () {
       $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
-      
+
       var scrollTop = $(window).scrollTop();
       var docHeight = $(document).height();
       var winHeight = $(window).height();
