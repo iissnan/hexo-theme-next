@@ -33,6 +33,12 @@ post:
   visitors: Просмотров
   wordcount: Кол-во слов в статье
   min2read: Время чтения в минутах
+  copyright:
+    author: Post author
+    link: Post link
+    license_title: Copyright Notice
+    license_content: 'All articles in this blog are licensed under
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
 
 page:
   totally: Всего
@@ -89,3 +95,4 @@ keep_on: Продолжаю писать.
 symbol:
   comma: ', '
   period: '. '
+  colon: ':'

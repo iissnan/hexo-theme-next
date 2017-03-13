@@ -26,6 +26,14 @@ post:
   untitled: Sem título
   toc_empty: Este post não possui tabela de conteúdo
   visitors: Visitantes
+  wordcount: Words count in article
+  min2read: Reading time
+  copyright:
+    author: Post author
+    link: Post link
+    license_title: Copyright Notice
+    license_content: 'All articles in this blog are licensed under
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
 
 page:
   totally: Totalmente
@@ -70,3 +78,4 @@ keep_on: Continuar no post.
 symbol:
   comma: '. '
   period: ', '
+  colon: ':'

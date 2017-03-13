@@ -310,7 +310,7 @@
 
     <div>
       {% if not is_index %}
-        {% include 'post-copyright.swig' %}
+        {% include 'post-copyright.swig' with { post: post } %}
       {% endif %}
     </div>
 
