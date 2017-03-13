@@ -5,10 +5,9 @@
 'use strict';
 
 /*jshint camelcase: false */
-var util = require(hexo.base_dir + 'node_modules/hexo/node_modules/hexo-util');
+var util = require(hexo.base_dir + 'node_modules/hexo-util');
 /*jshint camelcase: true */
 var htmlTag = util.htmlTag;
-//console.log(util);
 
 var rUrl = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[.\!\/\\w]*))?)/;
 
