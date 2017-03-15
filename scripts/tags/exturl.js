@@ -5,7 +5,7 @@
 'use strict';
 
 /*jshint camelcase: false */
-var util = require(hexo.base_dir + 'node_modules/hexo-util');
+var util = require('hexo-util');
 /*jshint camelcase: true */
 var htmlTag = util.htmlTag;
 
