@@ -1,8 +1,8 @@
 .DS_Store
 .idea/
 *.log
-*.iml
 node_modules/
+dist/
 
 # Ignore unused verdors' files
 source/lib/fancybox/*

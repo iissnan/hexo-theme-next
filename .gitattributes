@@ -1,2 +1,3 @@
 source/lib/* linguist-vendored
 scripts/merge.js linguist-vendored
+layout/**/.swig linguist-language=HTML+Django
