@@ -301,8 +301,10 @@ mathjax:
 #gentie_productKey:
 
 # changyan
-changyan_appid: 
-changyan_appkey:
+changyan:
+  enable: false
+  appid:
+  appkey:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
