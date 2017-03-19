@@ -9,20 +9,17 @@
   {% endif %}
 
   <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
+    <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="{{ theme.author }}">
-    <meta itemprop="description" content="{{ theme.signature }}">
-    <meta itemprop="image" content="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="{{ config.title }}">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="{{ config.title }}" src="{{ theme.custom_logo.image }}">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="{{ theme.author }}">
+      <meta itemprop="description" content="{{ theme.signature }}">
+      <meta itemprop="image" content="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}">
     </span>
-  </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="{{ config.title }}">
+    </span>
 
     {% if not headlessPost %}
       <header class="post-header">
@@ -199,12 +196,12 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
-                  {% if theme.post_wordcount.item_text %}
-                    <span class="post-meta-item-text">{{ __('post.wordcount') }}</span>
-                  {% endif %}
-                    <span title="{{ __('post.wordcount') }}" }}">
-                      {{ wordcount(post.content) }}
-                    </span>
+                {% if theme.post_wordcount.item_text %}
+                  <span class="post-meta-item-text">{{ __('post.wordcount') }}</span>
+                {% endif %}
+                <span title="{{ __('post.wordcount') }}">
+                  {{ wordcount(post.content) }}
+                </span>
               {% endif %}
 
               {% if theme.post_wordcount.wordcount and theme.post_wordcount.min2read %}
@@ -215,12 +212,12 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-clock-o"></i>
                 </span>
-                  {% if theme.post_wordcount.item_text %}
-                    <span class="post-meta-item-text">{{ __('post.min2read') }}</span>
-                  {% endif %}
-                    <span title="{{ __('post.min2read') }}" }}">
-                      {{ min2read(post.content) }}
-                    </span>
+                {% if theme.post_wordcount.item_text %}
+                  <span class="post-meta-item-text">{{ __('post.min2read') }}</span>
+                {% endif %}
+                <span title="{{ __('post.min2read') }}">
+                  {{ min2read(post.content) }}
+                </span>
               {% endif %}
             </div>
           {% endif %}
@@ -271,7 +268,7 @@
           {{ post.excerpt }}
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}" rel="contents">
+            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
@@ -282,7 +279,7 @@
           {% if content.length > theme.auto_excerpt.length %}...{% endif %}
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#more{% endif %}" rel="contents">
+            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
@@ -311,6 +308,11 @@
       {% endif %}
     </div>
 
+    <div>
+      {% if not is_index %}
+        {% include 'post-copyright.swig' with { post: post } %}
+      {% endif %}
+    </div>
 
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}

@@ -8,6 +8,7 @@ $(document).ready(function () {
   CONFIG.fancybox && NexT.utils.wrapImageWithFancyBox();
 
   NexT.utils.lazyLoadPostsImages();
+  NexT.utils.registerESCKeyEvent();
   NexT.utils.registerBackToTop();
   NexT.utils.registerNavToggle();
   NexT.utils.embeddedVideoTransformer();

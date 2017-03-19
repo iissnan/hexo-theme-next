@@ -2,7 +2,7 @@ $(document).ready(function () {
   var $headerInner = $('.header-inner');
   var $sidebar = $('#sidebar');
   var getSidebarTop = function(){
-    return $headerInner.height() + 10;
+    return $headerInner.height() + CONFIG.sidebar.offset;
   };
   var setSidebarMarginTop = function(sidebarTop){
     return $sidebar.css({ 'margin-top': sidebarTop });

@@ -99,14 +99,16 @@ $(document).ready(function () {
 
   $('.popup-trigger').on('click', function(e) {
     e.stopPropagation();
-    $('body').append('<div class="popoverlay">').css('overflow', 'hidden');
+    $('body')
+      .append('<div class="search-popup-overlay algolia-pop-overlay"></div>')
+      .css('overflow', 'hidden');
     $('.popup').toggle();
     $('#algolia-search-input').find('input').focus();
   });
 
   $('.popup-btn-close').click(function(){
     $('.popup').hide();
-    $('.popoverlay').remove();
+    $('.algolia-pop-overlay').remove();
     $('body').css('overflow', '');
   });
 

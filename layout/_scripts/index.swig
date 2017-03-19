@@ -9,3 +9,8 @@
 {% include './third-party/mathjax.swig' %}
 {% include './third-party/lean-analytics.swig' %}
 {% include './third-party/baidu-push.swig' %}
+{% include '_components/algolia-search/assets.swig' %}
+
+{% if theme.exturl %}
+    {% include '_scripts/third-party/exturl.swig' %}
+{% endif %}
