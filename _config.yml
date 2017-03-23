@@ -359,7 +359,8 @@ duoshuo_info:
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
-
+# 多说热评文章功能
+#duoshuo_hotartical: true 
 
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
