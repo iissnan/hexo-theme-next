@@ -301,7 +301,7 @@ mathjax:
 #gentie_productKey:
 
 # Gentie hot article
-# ugentie_productKey must NOT be null when gentie_hotartical is true!
+# gentie_productKey must NOT be null when gentie_hotartical is true!
 #gentie_hotartical: true
 
 # changyan
