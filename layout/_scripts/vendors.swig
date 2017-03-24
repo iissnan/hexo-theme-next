@@ -20,6 +20,11 @@
   {% set js_vendors.canvas_nest  = 'canvas-nest/canvas-nest.min.js' %}
 {% endif %}
 
+{% if theme.three_waves %}
+  {% set js_vendors.three  = 'three/three.min.js' %}
+  {% set js_vendors.three_waves  = 'three/three-waves.min.js' %}
+{% endif %}
+
 {% for name, internal in js_vendors %}
   {% set internal_script = url_for(theme.vendors._internal) + '/' + internal %}
   <script type="text/javascript" src="{{ theme.vendors[name] | default(internal_script) }}"></script>
