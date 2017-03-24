@@ -1,33 +1,23 @@
 {% if not (theme.duoshuo and theme.duoshuo.shortname) and not theme.duoshuo_shortname %}
+  {% if theme.disqus.enable %}
 
-  {% if theme.disqus_shortname %}
+    {% if theme.disqus.count  %}
+      <script id="dsq-count-scr" src="https://{{theme.disqus.shortname}}.disqus.com/count.js" async></script>
+    {% endif %}
 
-    <script type="text/javascript">
-      var disqus_shortname = '{{theme.disqus_shortname}}';
-      var disqus_identifier = '{{ page.path }}';
-
-      var disqus_title = "{{ page.title|addslashes }}";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      {% if page.comments %}
+    {% if page.comments %}
+      <script type="text/javascript">
         var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
+          this.page.url = '{{ page.permalink }}';
+          this.page.identifier = '{{ page.path }}';
+          this.page.title = '{{ page.title| addslashes }}';
         };
-        run_disqus_script('embed.js');
-      {% endif %}
+        var d = document, s = d.createElement('script');
+        s.src = 'https://{{theme.disqus.shortname}}.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    {% endif %}
 
-    </script>
   {% endif %}
 {% endif %}

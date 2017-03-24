@@ -13,11 +13,11 @@
       </div>
     {% elseif theme.vkontakte_api.enable and theme.vkontakte_api.comments %}
       <div id="vk_comments"></div>
-    {% elseif theme.disqus_shortname %}
+    {% elseif theme.disqus.enable %}
       <div id="disqus_thread">
         <noscript>
           Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
         </noscript>
       </div>
     {% elseif theme.hypercomments_id %}
