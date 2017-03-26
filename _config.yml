@@ -150,6 +150,7 @@ social_icons:
   Twitter: twitter
   Weibo: weibo
 
+
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
@@ -529,6 +530,9 @@ vendors:
   #three
   three:
   three_waves:
+
+
+
 # Assets
 css: css
 js: js
