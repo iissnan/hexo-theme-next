@@ -16,6 +16,9 @@ rss:
 # Specify the date when the site was setup
 #since: 2015
 
+# if true,will add site-subtitle to index page
+index_withsubtitle: true
+
 # icon between year and author @Footer
 authoricon: heart
 
