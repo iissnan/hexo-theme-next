@@ -1,0 +1,35 @@
+{
+  "name": "hexo-theme-next",
+  "version": "5.1.0",
+  "description": "Elegant theme for Hexo",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iissnan/hexo-theme-next.git"
+  },
+  "keywords": [
+    "NexT",
+    "Hexo"
+  ],
+  "author": "iissnan <iissnan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iissnan/hexo-theme-next/issues"
+  },
+  "homepage": "https://theme-next.iissnan.com",
+  "devDependencies": {
+    "coffee-script": "^1.10.0",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-shell": "^0.6.1",
+    "js-yaml": "^3.8.1",
+    "jshint-stylish": "^2.1.0",
+    "stylint": "^1.5.9"
+  }
+}

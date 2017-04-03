@@ -1,0 +1,81 @@
+title:
+  archive: アーカイブ
+  category: カテゴリ
+  tag: タグ
+
+author: Author
+
+menu:
+  home: ホーム
+  archives: アーカイブ
+  categories: カテゴリ
+  tags: タグ
+  about: About
+  search: 検索
+
+sidebar:
+  overview: 概要
+  toc: 見出し
+
+post:
+  sticky: 固定
+  posted: 投稿日
+  modified: Updated at
+  in: In
+  read_more: 続きを読む
+  untitled: 無題
+  toc_empty: 見出しがありません
+  visitors: Visitors
+  wordcount: Words count in article
+  min2read: Reading time
+  copyright:
+    author: Post author
+    link: Post link
+    license_title: Copyright Notice
+    license_content: 'All articles in this blog are licensed under
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
+
+page:
+  totally: 全ページ
+  tags: タグ
+
+footer:
+  powered: "Powered by %s"
+  theme: Theme
+
+counter:
+  tag_cloud:
+    zero: タグなし
+    one: "全 1 タグ"
+    other: "全 %d タグ"
+
+  categories:
+    zero: カテゴリなし
+    one: "全 1 カテゴリ"
+    other: "全 %d カテゴリ"
+
+  archive_posts:
+    zero: ポストなし
+    one: "全 1 ポスト"
+    other: "全 %d ポスト"
+
+state:
+  posts: ポスト
+  pages: ページ
+  tags: タグ
+  categories: カテゴリ
+
+cheers:
+  um: うーん
+  ok: OK
+  nice: まあまあ
+  good: いいね
+  great: すごい
+  excellent: 最高
+
+keep_on: もっと書こう！
+
+symbol:
+  comma: ', '
+  period: '. '
+  colon: ':'

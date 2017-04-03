@@ -4,9 +4,9 @@
 {% block title %}
   {% set page_title_suffix = ' | ' + config.title %}
 
-  {% if page.type === "categories" %}
+  {% if page.type === "categories" and not page.title  %}
     {{ __('title.category') + page_title_suffix }}
-  {% elif page.type === "tags" %}
+  {% elif page.type === "tags" and not page.title  %}
     {{ __('title.tag') + page_title_suffix }}
   {% else %}
     {{ page.title + page_title_suffix }}
@@ -16,6 +16,7 @@
 {% block content %}
 
   <div id="posts" class="posts-expand">
+  {% include '_partials/page-header.swig' %}
     {# tagcloud page support #}
     {% if page.type === "tags" %}
       <div class="tag-cloud">
