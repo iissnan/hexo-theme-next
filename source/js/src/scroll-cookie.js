@@ -9,7 +9,7 @@ $(document).ready(function() {
   $(window).on("scroll", function() {
     clearTimeout(timeout);
     timeout = setTimeout(function () {
-      Cookies.set("scroll-cookie", ($(window).scrollTop() + '|' + rpath), { path: '' });
+      Cookies.set("scroll-cookie", ($(window).scrollTop() + "|" + rpath), { path: '' });
     }, 250);
   });
 
