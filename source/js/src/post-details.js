@@ -134,13 +134,14 @@ $(document).ready(function () {
   });
 
   // Expand sidebar on post detail page by default, when post has a toc.
-  NexT.motion.middleWares.sidebar = function () {
-    var $tocContent = $('.post-toc-content');
-
-    if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
-      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-        NexT.utils.displaySidebar();
-      }
-    }
-  };
+  var $tocContent = $('.post-toc-content');
+  var isSidebarCouldDisplay = CONFIG.sidebar.display === 'post' ||
+      CONFIG.sidebar.display === 'always';
+  var hasTOC = $tocContent.length > 0 && $tocContent.html().trim().length > 0;
+  if (isSidebarCouldDisplay && hasTOC) {
+    CONFIG.motion ?
+      (NexT.motion.middleWares.sidebar = function () {
+          NexT.utils.displaySidebar();
+      }) : NexT.utils.displaySidebar();
+  }
 });

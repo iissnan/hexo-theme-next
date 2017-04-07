@@ -32,13 +32,18 @@ gulp.task 'validate:config', (cb) ->
     cb new Error(error)
 
 gulp.task 'validate:languages', (cb) ->
-  languages = fs.readdirSync path.join(__dirname, 'languages')
+  languagesPath = path.join __dirname, 'languages'
+  languages = fs.readdirSync languagesPath
   errors = []
+
   for lang in languages
+    languagePath = path.join languagesPath, lang
     try
-      yaml.safeLoad fs.readFileSync path.join(__dirname, 'languages', lang)
+      yaml.safeLoad fs.readFileSync(languagePath), {
+        filename: path.relative(__dirname, languagePath)
+      }
     catch error
-      errors.push(error)
+      errors.push error
 
   if errors.length == 0
     cb()

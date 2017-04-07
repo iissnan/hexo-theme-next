@@ -33,6 +33,12 @@ post:
   visitors: 閱讀次數
   wordcount: 字數統計
   min2read: 閱讀時長
+  copyright:
+    author: Post author
+    link: Post link
+    license_title: Copyright Notice
+    license_content: 'All articles in this blog are licensed under
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
 
 page:
   totally: 共有
@@ -80,3 +86,4 @@ keep_on: 繼續努力。
 symbol:
   comma: '， '
   period: '。 '
+  colon: '：'

@@ -105,11 +105,13 @@
 
   +tablet() {
     width: auto;
-    padding-left: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   +mobile() {
     width: auto;
-    padding-left: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -120,6 +122,9 @@
   .content-wrap { float: left; }
   .sidebar { float: right; }
 
-  .footer-inner:before { float: right; }
+  .footer-inner {
+    padding-left: 0;
+    padding-right: 260px;
+  }
 }
 

@@ -25,6 +25,15 @@ post:
   read_more: 続きを読む
   untitled: 無題
   toc_empty: 見出しがありません
+  visitors: Visitors
+  wordcount: Words count in article
+  min2read: Reading time
+  copyright:
+    author: Post author
+    link: Post link
+    license_title: Copyright Notice
+    license_content: 'All articles in this blog are licensed under
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
 
 page:
   totally: 全ページ
@@ -69,3 +78,4 @@ keep_on: もっと書こう！
 symbol:
   comma: ', '
   period: '. '
+  colon: ':'
