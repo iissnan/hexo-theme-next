@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   // Set relative link path (without domain)
-  // https://stackoverflow.com/questions/3955959/whats-an-easy-way-to-get-the-url-in-the-current-window-minus-the-domain-name
   var rpath = window.location.href.replace(window.location.origin, "");
 
   // Write position in cookie
@@ -9,7 +8,7 @@ $(document).ready(function() {
   $(window).on("scroll", function() {
     clearTimeout(timeout);
     timeout = setTimeout(function () {
-      Cookies.set("scroll-cookie", ($(window).scrollTop() + "|" + rpath), { path: '' });
+      Cookies.set("scroll-cookie", ($(window).scrollTop() + "|" + rpath), { expires: 365, path: '' });
     }, 250);
   });
 
