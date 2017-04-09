@@ -4,7 +4,7 @@ title:
   tag: Тэг
   schedule: Календарь
 
-author: Author
+author: Автор
 
 menu:
   home: Главная
@@ -34,11 +34,11 @@ post:
   wordcount: Кол-во слов в статье
   min2read: Время чтения в минутах
   copyright:
-    author: Post author
-    link: Post link
-    license_title: Copyright Notice
-    license_content: 'All articles in this blog are licensed under
-      <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
+    author: Автор записи
+    link: Ссылка на запись
+    license_title: Информация об авторских правах
+    license_content: 'Все записи на этом сайте защищены лицензией
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> если не указано дополнительно.'
 
 page:
   totally: Всего
