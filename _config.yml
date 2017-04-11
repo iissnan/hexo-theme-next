@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Hexo, NexT, iblogc"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2014
 
 # icon between year and author @Footer
 authoricon: heart
@@ -27,8 +27,6 @@ copyright: true
 # Tips: Before you open this tag, remeber set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
 canonical: true
 
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -37,12 +35,13 @@ seo: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
+  # categories: /categories
   archives: /archives
   tags: /tags
-  #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  guestbook: /guestbook
+  about: /about
+  sitemap: /sitemap.xml
+  commonweal: /404.html
 
 
 # Enable/Disable menu icons.
@@ -59,6 +58,7 @@ menu_icons:
   schedule: calendar
   tags: tags
   archives: archive
+  guestbook: pencil
   sitemap: sitemap
   commonweal: heartbeat
 
@@ -70,9 +70,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -93,13 +93,15 @@ font:
   global:
     # external: true will load this font family from host.
     external: true
-    family: Lato
+    #family: Lato
+    family: Monda
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    #family:
+    family: Roboto Slab
 
   # Font settings for posts
   # Fallback to `global` font settings.
@@ -112,13 +114,15 @@ font:
   # The `size` option use `px` as unit
   logo:
     external: true
-    family:
-    size:
+    #family:
+    #size:
+    family: Lobster Two
+    size: 24
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: PT Mono
     size:
 
 
@@ -132,8 +136,10 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+  GitHub: https://github.com/iblogc
+  #Others:
+
 
 
 # Social Links Icons
@@ -151,9 +157,7 @@ social_icons:
 
 
 # Sidebar Avatar
-# in theme directory(source/images): /images/avatar.jpg
-# in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /avatar.png
 
 
 # Table Of Contents in the Sidebar
@@ -200,7 +204,7 @@ sidebar:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
+scroll_to_more: false
 
 # Automatically excerpt description in homepage as preamble text.
 excerpt_description: true
@@ -213,7 +217,6 @@ auto_excerpt:
 
 # Post meta display settings
 post_meta:
-  item_text: true
   created_at: true
   updated_at: false
   categories: true
@@ -260,26 +263,19 @@ mathjax:
 
 
 # Swiftype Search API Key
-#swiftype_key:
+swiftype_key: iG9HBtbvs2VW4sX9rFcC
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: dbe5ded201831a4b07cca26d70e498b6
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: iblogc
 
 # Disqus
 #disqus_shortname:
 
 # Hypercomments
 #hypercomments_id:
-
-# Gentie productKey
-#gentie_productKey:
-
-# Support for youyan comments system.
-# You can get your uid from http://www.uyan.cc
-#youyan_uid: your uid
 
 # Baidu Share
 # Available value:
@@ -294,7 +290,8 @@ mathjax:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
+duoshuo_hotartical: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -302,7 +299,7 @@ mathjax:
 
 
 # Google Analytics
-#google_analytics:
+google_analytics: qG7T6aqK8Yc9wkYFQZSYbiHnFjGresFJrmQ3GILJA80
 
 # CNZZ count
 #cnzz_siteid:
@@ -316,9 +313,9 @@ mathjax:
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
   ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+  admin_enable: true
+  user_id: 2739016
+  admin_nickname: ROOT
 
 
 # Facebook SDK Support.
@@ -343,15 +340,15 @@ facebook_comments_plugin:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: iSVaGDh3pvPppn4ATzdswCRj-gzGzoHsz
+  app_key: FneGhBeiPNdFAiN9elNeFAxc
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -371,7 +368,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -392,7 +389,7 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
@@ -400,7 +397,12 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-
+algolia:
+  applicationID: 'PGLEOEFW66'
+  apiKey: '9e021ceac0fcb29be0a75df5b157218b'
+  adminApiKey: '019788a21c858690b41f049cc50867b6'
+  indexName: 'blog'
+  chunkSize: 5000
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -413,8 +415,6 @@ use_motion: true
 # Fancybox
 fancybox: true
 
-# Canvas-nest
-canvas_nest: false
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
@@ -462,10 +462,6 @@ vendors:
   # https://www.algolia.com
   algolia_instant_js:
   algolia_instant_css:
-
-  # Internal version: 1.0.0
-  # https://github.com/hustcc/canvas-nest.js
-  canvas_nest:
 
 
 
