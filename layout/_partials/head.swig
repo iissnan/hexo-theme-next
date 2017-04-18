@@ -4,7 +4,11 @@
 
 
 {% if theme.han %}
-  <link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/Han/3.2.7/han.min.css">
+  {% set Han_uri = url_for(theme.vendors._internal + '/Han/dist/han.min.css?v=3.3') %}
+  {% if theme.vendors.Han %}
+    {% set Han_uri = theme.vendors.Han %}
+  {% endif %}
+  <link rel="stylesheet" media="all" href="{{ Han_uri }}">
 {% endif %}
 
 

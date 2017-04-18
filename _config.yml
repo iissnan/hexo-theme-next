@@ -548,6 +548,10 @@ vendors:
   # https://github.com/zproo/canvas-ribbon
   canvas_ribbon:
 
+  # Internal version: 3.3.0
+  # https://github.com/ethantw/Han
+  han:
+
 
 
 # Assets
