@@ -249,7 +249,7 @@
     {% endif %}
 
 
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}

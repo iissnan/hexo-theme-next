@@ -285,6 +285,9 @@ mathjax:
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 
+# Han Support docs: https://hanzi.pro/
+han: false
+
 # Swiftype Search API Key
 #swiftype_key:
 
@@ -561,6 +564,10 @@ vendors:
   # Internal version: 1.0.0
   # https://github.com/zproo/canvas-ribbon
   canvas_ribbon:
+
+  # Internal version: 3.3.0
+  # https://github.com/ethantw/Han
+  han:
 
 
 
