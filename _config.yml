@@ -35,7 +35,7 @@ canonical: true
 seo: false
 
 # If true, will add site-subtitle to index page, added in main hexo config.
-# subtitle: Subtitile
+# subtitle: Subtitle
 index_with_subtitle: false
 
 # ---------------------------------------------------------------
