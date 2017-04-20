@@ -22,6 +22,9 @@ authoricon: heart
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
 
+# ---------------------------------------------------------------
+# SEO Settings
+# ---------------------------------------------------------------
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
@@ -30,6 +33,10 @@ canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
 seo: false
+
+# If true, will add site-subtitle to index page, added in main hexo config.
+# subtitle: Subtitile
+index_with_subtitle: false
 
 # ---------------------------------------------------------------
 # Menu Settings
