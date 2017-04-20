@@ -13,3 +13,6 @@ source/lib/font-awesome/scss/
 
 source/lib/ua-parser-js/*
 !source/lib/ua-parser-js/dist/
+
+source/lib/Han/*
+!source/lib/Han/dist/

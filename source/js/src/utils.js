@@ -71,7 +71,6 @@ NexT.utils = NexT.$u = {
       var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
       $('#scrollpercent>span').html(scrollPercentMaxed);
     });
-    });
 
     $top.on('click', function () {
       $('body').velocity('scroll');

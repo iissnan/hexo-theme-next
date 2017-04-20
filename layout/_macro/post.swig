@@ -248,8 +248,7 @@
       </header>
     {% endif %}
 
-
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body{% if theme.han %} han-init-context{% endif %}" itemprop="articleBody">
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
