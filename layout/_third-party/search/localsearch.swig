@@ -135,7 +135,13 @@
                   indices_content.sort(function (a, b) {
                     return b[0] - a[0];
                   });
-                  while (indices_content.length != 0) {
+                  var resultUpperBound = parseInt({{ theme.local_search.top_n_per_title }});
+                  var withoutUpperBound = false;
+                  if (resultUpperBound == -1) {
+                    withoutUpperBound = true;
+                  }
+                  var currentResultNum = 0;
+                  while (indices_content.length != 0 && (withoutUpperBound || (currentResultNum < resultUpperBound))) {
                     var indexWithWord = indices_content[indices_content.length - 1];
                     var index = indexWithWord[0];
                     var word = indexWithWord[1];
@@ -154,6 +160,7 @@
                     str += "<a href='" + data_url + "'>" +
                     "<p class=\"search-result\">" + highlightKeyword(content, start, end, indices_content) +
                     "...</p>" + "</a>";
+                    currentResultNum++;
                   }
                   str += "</li>";
                 }
