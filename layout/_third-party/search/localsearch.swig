@@ -76,7 +76,7 @@
                         word = word.toLowerCase();
                       }
                       while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push([position, word]);
+                        index.push({position: position, word: word});
                         startPosition = position + wordLen;
                       }
                       return index;
@@ -97,9 +97,9 @@
                   var resultItem = '';
 
                   function highlightKeyword(text, start, end, index) {
-                    var positionAndWord = index[index.length - 1];
-                    var position = positionAndWord[0];
-                    var word = positionAndWord[1];
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
 
                     var matchText = text.substring(start, end);
                     var matchResult = [];
@@ -118,9 +118,9 @@
                       index.pop();
                       prevEnd = wordEnd;
                       while (index.length != 0) {
-                        positionAndWord = index[index.length - 1];
-                        position = positionAndWord[0];
-                        word = positionAndWord[1];
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
                         if (prevEnd > position - start) {
                           index.pop();
                         } else {
@@ -134,12 +134,12 @@
 
                   // sort index by position of keyword
 
-                  indexOfTitle.sort(function (positionAndWordLeft, positionAndWordRight) {
-                    return positionAndWordRight[0] - positionAndWordLeft[0];
+                  indexOfTitle.sort(function (itemLeft, itemRight) {
+                    return itemRight.position - itemLeft.position;
                   });
 
-                  indexOfContent.sort(function (positionAndWordLeft, positionAndWordRight) {
-                    return positionAndWordRight[0] - positionAndWordLeft[0];
+                  indexOfContent.sort(function (itemLeft, itemRight) {
+                    return itemRight.position - itemLeft.position;
                   });
 
                   // highlight title
@@ -159,9 +159,9 @@
                   }
                   var currentResultNum = 0;
                   while (indexOfContent.length != 0 && (withoutUpperBound || (currentResultNum < resultUpperBound))) {
-                    var positionAndWord = indexOfContent[indexOfContent.length - 1];
-                    var position = positionAndWord[0];
-                    var word = positionAndWord[1];
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
                     // cut out 100 characters
                     var start = position - 20;
                     var end = position + 80;
@@ -180,7 +180,7 @@
                     currentResultNum++;
                   }
                   resultItem += "</li>";
-                  resultItems.push([resultItem, hitCountInArticle, resultItems.length]);
+                  resultItems.push({item: resultItem, hitCount: hitCountInArticle, id: resultItems.length});
                 }
               })
             };
@@ -190,20 +190,15 @@
               $resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
-                var hitCountLeft = resultLeft[1];
-                var hitCountRight = resultRight[1];
-                if (hitCountLeft != hitCountRight) {
-                  return hitCountRight - hitCountLeft;
+                if (resultLeft.hitCount != resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
                 } else {
-                  var resultIdLeft = resultLeft[2];
-                  var resultIdRight = resultRight[2];
-                  return resultIdLeft - resultIdRight;
+                  return resultLeft.id - resultRight.id;
                 }
               });
               var searchResultList = '<ul class=\"search-result-list\">';
               resultItems.forEach(function (result, i) {
-                var item = result[0];
-                searchResultList += item;
+                searchResultList += result.item;
               })
               searchResultList += "</ul>";
               $resultContent.innerHTML = searchResultList;
