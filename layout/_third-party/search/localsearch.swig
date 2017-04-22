@@ -4,7 +4,7 @@
     var isfetched = false;
     // Search DB path;
     var search_path = "{{ config.search.path }}";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
     }
     var path = "{{ config.root }}" + search_path;
@@ -48,127 +48,166 @@
           var $input = document.getElementById(search_id);
           var $resultContent = document.getElementById(content_id);
           $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
             var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
+            var resultItems = [];
             if (this.value.trim().length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var indices_title = [];
-                var indices_content = [];
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
+                var hitCountInArticle = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
                   keywords.forEach(function(keyword, i) {
-                    function getIndicesWithWord(word, str, caseSensitive) {
+                    function getIndexByWord(word, text, caseSensitive) {
                       var wordLen = word.length;
-                      if (wordLen == 0) {
+                      if (wordLen === 0) {
                         return [];
                       }
-                      var startIndex = 0, index, indices = [];
+                      var startPosition = 0, position = [], index = [];
                       if (!caseSensitive) {
-                        str = str.toLowerCase();
+                        text = text.toLowerCase();
                         word = word.toLowerCase();
                       }
-                      while ((index = str.indexOf(word, startIndex)) > -1) {
-                        indices.push([index, word]);
-                        startIndex = index + wordLen;
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push([position, word]);
+                        startPosition = position + wordLen;
                       }
-                      return indices;
+                      return index;
                     }
 
-                    indices_title = indices_title.concat(getIndicesWithWord(keyword, data_title, false));
-                    indices_content = indices_content.concat(getIndicesWithWord(keyword, data_content, false));
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
                   });
-                  if( indices_title.length > 0 || indices_content.length > 0 ){
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
                     isMatch = true;
+                    hitCountInArticle = indexOfTitle.length + indexOfContent.length;
                   }
                 }
+
                 // show search results
+
                 if (isMatch) {
-                  matchcounts += 1;
+                  var resultItem = '';
 
-                  function highlightKeyword(text, start, end, indices) {
-                    var indexWithWord = indices[indices.length - 1];
-                    var index = indexWithWord[0];
-                    var word = indexWithWord[1];
+                  function highlightKeyword(text, start, end, index) {
+                    var positionAndWord = index[index.length - 1];
+                    var position = positionAndWord[0];
+                    var word = positionAndWord[1];
 
-                    var match_text = text.substring(start, end);
-                    var match_result = [];
+                    var matchText = text.substring(start, end);
+                    var matchResult = [];
                     var prevEnd = 0;
-                    while (index + word.length <= end && indices.length != 0) {
-                      // highlight keyword
-                      var wordBegin = index - start;
-                      var wordEnd = index - start + word.length;
-                      match_result.push(match_text.substring(prevEnd, wordBegin));
-                      match_result.push("<b class=\"search-keyword\">" + match_text.substring(wordBegin, wordEnd) + "</b>");
+                    while (position + word.length <= end && index.length != 0) {
 
-                      // move to next keyword
-                      indices.pop();
+                      // highlight keyword
+
+                      var wordBegin = position - start;
+                      var wordEnd = position - start + word.length;
+                      matchResult.push(matchText.substring(prevEnd, wordBegin));
+                      matchResult.push("<b class=\"search-keyword\">" + matchText.substring(wordBegin, wordEnd) + "</b>");
+
+                      // move to next position of hit
+
+                      index.pop();
                       prevEnd = wordEnd;
-                      while (indices.length != 0) {
-                        indexWithWord = indices[indices.length - 1];
-                        index = indexWithWord[0];
-                        word = indexWithWord[1];
-                        if (prevEnd > index - start) {
-                          indices.pop();
+                      while (index.length != 0) {
+                        positionAndWord = index[index.length - 1];
+                        position = positionAndWord[0];
+                        word = positionAndWord[1];
+                        if (prevEnd > position - start) {
+                          index.pop();
                         } else {
                           break;
                         }
                       }
                     }
-                    match_result.push(match_text.substring(prevEnd));
-                    return match_result.join('');
+                    matchResult.push(matchText.substring(prevEnd));
+                    return matchResult.join('');
                   }
 
-                  if (indices_title.length != 0) {
-                    str += "<li><a href='" + data_url + "' class='search-result-title'>" + highlightKeyword(data_title, 0, data_title.length, indices_title) + "</a>";
-                  } else {
-                    str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
-                  }
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  indices_content.sort(function (a, b) {
-                    return b[0] - a[0];
+                  // sort index by position of keyword
+
+                  indexOfTitle.sort(function (positionAndWordLeft, positionAndWordRight) {
+                    return positionAndWordRight[0] - positionAndWordLeft[0];
                   });
-                  var resultUpperBound = parseInt({{ theme.local_search.top_n_per_title }});
+
+                  indexOfContent.sort(function (positionAndWordLeft, positionAndWordRight) {
+                    return positionAndWordRight[0] - positionAndWordLeft[0];
+                  });
+
+                  // highlight title
+
+                  if (indexOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, 0, title.length, indexOfTitle) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  // highlight content
+
+                  var resultUpperBound = parseInt({{ theme.local_search.top_n_per_article }});
                   var withoutUpperBound = false;
-                  if (resultUpperBound == -1) {
+                  if (resultUpperBound === -1) {
                     withoutUpperBound = true;
                   }
                   var currentResultNum = 0;
-                  while (indices_content.length != 0 && (withoutUpperBound || (currentResultNum < resultUpperBound))) {
-                    var indexWithWord = indices_content[indices_content.length - 1];
-                    var index = indexWithWord[0];
-                    var word = indexWithWord[1];
+                  while (indexOfContent.length != 0 && (withoutUpperBound || (currentResultNum < resultUpperBound))) {
+                    var positionAndWord = indexOfContent[indexOfContent.length - 1];
+                    var position = positionAndWord[0];
+                    var word = positionAndWord[1];
                     // cut out 100 characters
-                    var start = index - 20;
-                    var end = index + 80;
+                    var start = position - 20;
+                    var end = position + 80;
                     if(start < 0){
                       start = 0;
                     }
-                    if (end < index + word.length) {
-                      end = index + word.length;
+                    if (end < position + word.length) {
+                      end = position + word.length;
                     }
                     if(end > content.length){
                       end = content.length;
                     }
-                    str += "<a href='" + data_url + "'>" +
-                    "<p class=\"search-result\">" + highlightKeyword(content, start, end, indices_content) +
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                    "<p class=\"search-result\">" + highlightKeyword(content, start, end, indexOfContent) +
                     "...</p>" + "</a>";
                     currentResultNum++;
                   }
-                  str += "</li>";
+                  resultItem += "</li>";
+                  resultItems.push([resultItem, hitCountInArticle, resultItems.length]);
                 }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              $resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              $resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                var hitCountLeft = resultLeft[1];
+                var hitCountRight = resultRight[1];
+                if (hitCountLeft != hitCountRight) {
+                  return hitCountRight - hitCountLeft;
+                } else {
+                  var resultIdLeft = resultLeft[2];
+                  var resultIdRight = resultRight[2];
+                  return resultIdLeft - resultIdRight;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result, i) {
+                var item = result[0];
+                searchResultList += item;
+              })
+              searchResultList += "</ul>";
+              $resultContent.innerHTML = searchResultList;
+            }
           });
           proceedsearch();
         }
@@ -177,7 +216,7 @@
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
-      if (isfetched == false) {
+      if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
         proceedsearch();
