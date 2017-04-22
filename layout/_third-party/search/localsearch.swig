@@ -193,7 +193,7 @@
                 if (resultLeft.hitCount != resultRight.hitCount) {
                   return resultRight.hitCount - resultLeft.hitCount;
                 } else {
-                  return resultLeft.id - resultRight.id;
+                  return resultRight.id - resultLeft.id;
                 }
               });
               var searchResultList = '<ul class=\"search-result-list\">';
