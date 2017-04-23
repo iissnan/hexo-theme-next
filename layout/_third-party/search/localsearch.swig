@@ -45,12 +45,12 @@
               url: $( "url" , this).text()
             };
           }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function(){
+            var keywords = input.value.trim().toLowerCase().split(/[\s\-]+/);
             var resultItems = [];
-            if (this.value.trim().length > 0) {
+            if (input.value.trim().length > 0) {
               // perform local searching
               datas.forEach(function(data) {
                 var isMatch = false;
@@ -152,7 +152,7 @@
 
                   // highlight content
 
-                  var resultUpperBound = parseInt({{ theme.local_search.top_n_per_article }});
+                  var resultUpperBound = parseInt('{{ theme.local_search.top_n_per_article }}');
                   var withoutUpperBound = false;
                   if (resultUpperBound === -1) {
                     withoutUpperBound = true;
@@ -185,9 +185,9 @@
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              $resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
             } else if (resultItems.length === 0) {
-              $resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.hitCount != resultRight.hitCount) {
@@ -201,9 +201,20 @@
                 searchResultList += result.item;
               })
               searchResultList += "</ul>";
-              $resultContent.innerHTML = searchResultList;
+              resultContent.innerHTML = searchResultList;
             }
-          });
+          }
+
+          if ('auto' === '{{ theme.local_search.trigger }}') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
           proceedsearch();
         }
       });}
