@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: /images/ico/favicon.jpg
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -161,7 +161,7 @@ social_icons:
   GitHub: github
   # Twitter: twitter
   微博: weibo
-  博客: feed
+  # 博客: feed
 
 reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
 alipay: /pay/alipay-reward-image.jpg
