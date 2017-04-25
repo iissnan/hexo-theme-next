@@ -6,7 +6,7 @@
 favicon: /images/ico/favicon.jpg
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "博客,前端,front-end,JavaScript,html,css"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -235,7 +235,7 @@ scroll_to_more: true
 save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.

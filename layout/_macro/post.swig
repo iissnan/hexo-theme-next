@@ -239,7 +239,7 @@
             </div>
           {% endif %}
 
-          {% if post.description and (not theme.excerpt_description or not is_index) %}
+          {% if false and post.description and (not theme.excerpt_description or not is_index) %}
               <div class="post-description">
                   {{ post.description }}
               </div>
@@ -284,7 +284,8 @@
           {{ post.excerpt }}
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
+            <a class="btn" href="{{ url_for(post.path) }}" rel="contents">
+            {# <a class="btn" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents"> #}
               {{ __('post.read_more') }} &raquo;
             </a>
           </div>
@@ -319,7 +320,7 @@
     </div>
 
     <div>
-      {% if not is_index %}
+      {% if page.reward and not is_index %}
         {% include 'reward.swig' %}
       {% endif %}
     </div>
@@ -331,7 +332,7 @@
     </div>
 
     <footer class="post-footer">
-      {% if post.tags and post.tags.length and not is_index %}
+      {% if false and post.tags and post.tags.length and not is_index %}
         <div class="post-tags">
           {% for tag in post.tags %}
             <a href="{{ url_for(tag.path) }}" rel="tag"># {{ tag.name }}</a>
