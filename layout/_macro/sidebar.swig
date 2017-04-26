@@ -85,7 +85,11 @@
               <span class="links-of-author-item">
                 <a href="{{ link }}" target="_blank" title="{{ name }}">
                   {% if theme.social_icons.enable %}
-                    <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
+                    {% if theme.social_icons[name] !== 1 %}
+                      <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
+                    {% else %}
+                      <img class="dc-sidebar-ico" src="{{ theme.social_img[name] }}" alt="{{ name }}小图标">
+                    {% endif %}
                   {% endif %}
                   {{ name }}
                 </a>

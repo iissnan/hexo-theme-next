@@ -147,6 +147,7 @@ social:
   GitHub: https://github.com/dclcats/
   博客: https://www.cnblogs.com/dongcanliang/
   微博: http://weibo.com/u/3021649775/
+  简书: http://www.jianshu.com/u/c0952c41735c/
 
 
 # Social Links Icons
@@ -162,6 +163,9 @@ social_icons:
   # Twitter: twitter
   微博: weibo
   # 博客: feed
+  简书: 1
+social_img:
+  简书: /images/jianshu.ico
 
 reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
 alipay: /pay/alipay-reward-image.jpg
