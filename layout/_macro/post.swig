@@ -304,12 +304,15 @@
         {% else %}
           {% if post.type === 'picture' %}
             <a href="{{ url_for(post.path) }}">{{ post.content }}</a>
+            <p><strong>欢迎留言交流，如需转载请注明出处</strong></p>
           {% else %}
             {{ post.content }}
+            <p><strong>欢迎留言交流，如需转载请注明出处</strong></p>
           {% endif %}
         {% endif %}
       {% else %}
         {{ post.content }}
+        <p><strong>欢迎留言交流，如需转载请注明出处</strong></p>
       {% endif  %}
     </div>
 

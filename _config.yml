@@ -311,7 +311,7 @@ mathjax:
 han: false
 
 # Swiftype Search API Key
-#swiftype_key:
+swiftype_key: QbxQ6uZLFMbAupahZ_tz
 
 # Baidu Analytics ID
 #baidu_analytics:
@@ -339,7 +339,7 @@ changyan:
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
-#youyan_uid: your uid
+# youyan_uid: 2131708
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
