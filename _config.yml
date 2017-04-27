@@ -35,7 +35,7 @@ canonical: true
 seo: false
 
 # If true, will add site-subtitle to index page, added in main hexo config.
-# subtitle: Subtitile
+# subtitle: Subtitle
 index_with_subtitle: false
 
 # ---------------------------------------------------------------
@@ -468,6 +468,11 @@ algolia_search:
 # Local search
 local_search:
   enable: false
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
 
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}
@@ -584,4 +589,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.0
+version: 5.1.1
