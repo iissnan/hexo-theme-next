@@ -499,7 +499,7 @@ exturl: false
 #! ---------------------------------------------------------------
 
 # Motion
-use_motion: true
+use_motion: false
 
 # Fancybox
 fancybox: true
@@ -508,7 +508,7 @@ fancybox: true
 canvas_nest: false
 
 # three_waves
-three_waves: true
+three_waves: false
 
 # canvas_lines
 canvas_lines: false
