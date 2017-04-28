@@ -31,6 +31,13 @@
     // search function;
     var searchFunc = function(path, search_id, content_id) {
       'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"><img id="search-loading-img" src="{{ url_for(theme.images + "/search-loading.svg") }}"/></div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-img").css('margin', '20% auto 0 auto');
+
       $.ajax({
         url: path,
         dataType: "xml",
@@ -266,9 +273,15 @@
               }
             });
           }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
           proceedsearch();
         }
-      });}
+      });
+    }
 
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
