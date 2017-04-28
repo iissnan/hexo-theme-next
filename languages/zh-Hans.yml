@@ -87,3 +87,5 @@ symbol:
   comma: '， '
   period: '。 '
   colon: '：'
+
+gitmentbutton: 显示 Gitment 评论

@@ -330,6 +330,16 @@ changyan:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
 
+# Gitment
+# Introduction: https://imsun.net/posts/gitment-introduction/
+gitment:
+  enable: true
+  githubID: # Your Github ID
+  repo: # The repo you use to store Gitment comments
+  ClientID: 
+  ClientSecret: 
+  lazy: false
+
 # Baidu Share
 # Available value:
 #    button | slide
