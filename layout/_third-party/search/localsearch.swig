@@ -5,7 +5,7 @@
     var isXml = true;
     // Search DB path;
     var search_path = "{{ config.search.path }}";
-    if (search_path.length == 0) {
+    if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (search_path.endsWith("json")) {
       isXml = false;
