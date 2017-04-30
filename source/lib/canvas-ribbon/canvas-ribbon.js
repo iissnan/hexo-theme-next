@@ -2,14 +2,26 @@
  * Created by zproo on 2017/4/3.
  */
 ! function() {
+  document.addEventListener("touchstart", (e) => {
+    targetA = true;
+  });
+  document.addEventListener("touchmove", (e) => {
+    targetA = false
+  })
+  document.addEventListener("click", (e) => {
+    targetA = true
+  })
   function e() {
-    for (a.clearRect(0, 0, d, r), i = [{
+    if (targetA) {
+      for (a.clearRect(0, 0, d, r), i = [{
         x: 0,
         y: .7 * r + u
       }, {
         x: 0,
         y: .7 * r - u
       }]; i[1].x < d + u;) t(i[0], i[1])
+      targetA = false
+    }
   }
 
   function t(e, t) {
@@ -26,6 +38,7 @@
     var t = e + (2 * x() - 1.1) * u;
     return t > r || 0 > t ? n(e) : t
   }
+
   var o = document.createElement("canvas");
   o.style.cssText = "position:fixed;top:0;left:0;z-index:-1", document.getElementsByTagName("body")[0].appendChild(o);
   var i, c = o,
@@ -38,8 +51,10 @@
     h = 0,
     m = 2 * f.PI,
     s = f.cos,
-    x = f.random;
-  c.width = d * l, c.height = r * l, a.scale(l, l), a.globalAlpha = .6, document.onclick = e, document.ontouchstart = e, setTimeout(function() {
+    x = f.random,
+    targetA = false;
+  c.width = d * l, c.height = r * l, a.scale(l, l), a.globalAlpha = .6, document.onclick = e, document.ontouchend = e, setTimeout(function() {
     e()
   }, 100)
+
 }();
