@@ -271,6 +271,13 @@ mathjax:
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
 
+# gitment comments system. https://github.com/imsun/gitment
+gitment:
+  owner: BearD01001
+  repo: beard01001.github.io
+  client_id: 7e6796bf4bd74a25333f
+  client_secret: d190223868b2175fbce4094e6485195cef7d3e8a
+
 # Baidu Share
 # Available value:
 #    button | slide
