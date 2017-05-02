@@ -20,7 +20,7 @@ cover:
 post_footer: "所有文章非特别说明皆为原创。技术更迭迅猛，部分内容可能会作修改，为保证信息与源同步，转载时请务必注明文章出处！谢谢合作 :-)"
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Hexo, NexTD"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -299,11 +299,11 @@ cnzz_siteid: 1261020784
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: true
-  user_id: 7566230
-  admin_nickname: Author
+# duoshuo_info:
+#   ua_enable: true
+#   admin_enable: true
+#   user_id: 7566230
+#   admin_nickname: Author
 
 
 # Facebook SDK Support.
