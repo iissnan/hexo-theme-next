@@ -13,6 +13,8 @@
   #}{% endif %}{#
 #}{% endblock %}
 
+{% block page_class %}page-post-detail{% endblock %}
+
 {% block content %}
 
   <div id="posts" class="posts-expand">
@@ -45,4 +47,8 @@
 
 {% block sidebar %}
   {{ sidebar_template.render(false) }}
+{% endblock %}
+
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
 {% endblock %}
