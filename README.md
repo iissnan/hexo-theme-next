@@ -1,4 +1,4 @@
-# NexT
+# NexT - Call Me V God!
 
 > 精于心，简于形
 
