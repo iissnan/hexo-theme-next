@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "浮生一日"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,13 +14,13 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2015
 
 # icon between year and author @Footer
 authoricon: heart
 
 # Footer `powered-by` and `theme-info` copyright
-copyright: true
+copyright: false
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -32,7 +32,7 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -45,11 +45,11 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
+  categories: /categories
   #about: /about
   archives: /archives
   tags: /tags
-  #sitemap: /sitemap.xml
+  sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -78,7 +78,7 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+scheme: Pisces
 #scheme: Mist
 #scheme: Pisces
 
@@ -161,7 +161,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_wechat_avatar.png
 
 
 # Table Of Contents in the Sidebar
@@ -181,7 +181,7 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right
-  position: left
+  position: right
   #position: right
 
   # Sidebar Display, available value:
@@ -195,23 +195,27 @@ sidebar:
   #display: remove
 
   # Sidebar offset from top menubar in pixels.
-  offset: 12
+  offset: 50
   offset_float: 0
 
   # Back to top in sidebar
-  b2t: false
+  b2t: true
 
   # Scroll percent label in b2t button
   scrollpercent: false
 
 
 # Blog rolls
-#links_title: Links
+links_title: Links
 #links_layout: block
-#links_layout: inline
+links_layout: inline
 #links:
   #Title: http://example.com/
-
+links:
+  编程随想: http://program-think.blogspot.com/
+  知笔墨: http://zhibimo.com/
+  keyboard: http://www.typing-lessons.org
+  廖雪峰: http://www.liaoxuefeng.com/
 
 # ---------------------------------------------------------------
 # Post Settings
@@ -229,7 +233,7 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
@@ -247,10 +251,13 @@ post_wordcount:
   min2read: false
 
 # Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
+wechat_subscriber:
+  enabled: false
   #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
+  qcode: /uploads/wechat-qcode-hackhook.jpg
+  description:  慢慢行走，只为实现远在未来的人
+
+wechatpay: http://7wy48o.com1.z0.glb.clouddn.com/2016-11-20_qrcode_wechatpay.jpg
 
 # Declare license on posts
 post_copyright:
@@ -270,15 +277,15 @@ post_copyright:
 #   enabled: [true/false] - Replace with specific image
 #   image: url-of-image   - Images's url
 custom_logo:
-  enabled: false
-  image:
+  enabled: true
+  image: http://7wy48o.com1.z0.glb.clouddn.com/avatar.png
 
 
 # Code Highlight theme
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 
 # ---------------------------------------------------------------
@@ -299,7 +306,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 9164ba92abdd8c94053ab08187ec9906
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -350,7 +357,7 @@ changyan:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-67162812-1
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -367,7 +374,7 @@ changyan:
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
-  ua_enable: true
+  ua_enable: false
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
@@ -404,15 +411,15 @@ vkontakte_api:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: CufWSusQ3WCxpNmvFpfXgFGM-gzGzoHsz
+  app_key: 4Jv8MIKI0VDFWtKEFqCdE38g
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: false
+  enable: true
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
@@ -435,7 +442,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
