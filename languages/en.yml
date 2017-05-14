@@ -37,6 +37,7 @@ post:
   copyright:
     author: Post author
     link: Post link
+    feature: Post feature
     history: Post history
     license_title: Copyright Notice
     license_content: 'All articles in this blog are licensed under

@@ -37,6 +37,7 @@ post:
     author: Автор записи
     link: Ссылка на запись
     history: История сообщений
+    feature: Почтовая функция
     license_title: Информация об авторских правах
     license_content: 'Все записи на этом сайте защищены лицензией
       <a href="%s" rel="external nofollow" target="_blank">%s</a> если не указано дополнительно.'
