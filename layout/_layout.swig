@@ -67,7 +67,9 @@
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
   {% include scheme_script %}
 
-  {% block script_extra %}{% endblock %}
+  {% block script_extra %}
+    {% include '_scripts/pages/post-details.swig' %}
+  {% endblock %}
 
   {% include '_scripts/boostrap.swig' %}
 
