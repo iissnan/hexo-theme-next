@@ -171,6 +171,9 @@ toc:
   # Automatically add list number to toc.
   number: true
 
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+  
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
