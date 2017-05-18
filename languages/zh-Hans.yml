@@ -1,8 +1,8 @@
 title:
   archive: 归档
   category: 分类
-  schedule: 日程
   tag: 标签
+  schedule: 日程表
 
 author: 博主
 
@@ -10,25 +10,35 @@ menu:
   home: 首页
   archives: 归档
   categories: 分类
-  schedule: 日程
   tags: 标签
   about: 关于
   search: 搜索
+  schedule: 日程表
+  sitemap: 站点地图
   commonweal: 公益404
-
 
 sidebar:
   overview: 站点概览
   toc: 文章目录
 
 post:
+  created: 创建于
+  modified: 更新于
   sticky: 置顶
   posted: 发表于
   in: 分类于
-  visitors: 阅读次数
   read_more: 阅读全文
   untitled: 未命名
   toc_empty: 此文章未包含目录
+  visitors: 阅读次数
+  wordcount: 字数统计
+  min2read: 阅读时长
+  copyright:
+    author: 本文作者
+    link: 本文链接
+    license_title: 版权声明
+    license_content: '本博客所有文章除特别声明外，均采用
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> 许可协议。转载请注明出处！'
 
 page:
   totally: 共有
@@ -37,7 +47,6 @@ page:
 footer:
   powered: "由 %s 强力驱动"
   theme: 主题
-
 
 counter:
   tag_cloud:
@@ -61,6 +70,9 @@ state:
   tags: 标签
   categories: 分类
 
+search:
+  placeholder: 搜索...
+
 cheers:
   um: 嗯..
   ok: OK
@@ -74,3 +86,4 @@ keep_on: 继续努力。
 symbol:
   comma: '， '
   period: '。 '
+  colon: '：'

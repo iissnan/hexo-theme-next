@@ -31,6 +31,7 @@
     "fastclick": "~1.0.6",
     "font-awesome": "fontawesome#*",
     "jquery_lazyload": "jquery.lazyload#~1.9.7",
-    "ua-parser-js": "~0.7.9"
+    "ua-parser-js": "~0.7.9",
+    "Han": "^3.3.0"
   }
 }

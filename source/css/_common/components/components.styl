@@ -5,7 +5,7 @@
 @import "pagination";
 @import "comments";
 @import "tag-cloud";
-@import "back-to-top";
+@import hexo-config('sidebar.b2t') ? "back-to-top-sidebar" : "back-to-top";
 
 @import "header";
 @import "post";

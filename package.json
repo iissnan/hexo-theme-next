@@ -27,6 +27,9 @@
     "coffee-script": "^1.10.0",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.12.0",
-    "jshint-stylish": "^2.1.0"
+    "gulp-shell": "^0.6.1",
+    "js-yaml": "^3.8.1",
+    "jshint-stylish": "^2.1.0",
+    "stylint": "^1.5.9"
   }
 }

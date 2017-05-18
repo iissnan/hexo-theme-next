@@ -2,6 +2,7 @@ title:
   archive: Archive
   category: Category
   tag: Tag
+  schedule: Schedule
 
 author: Author
 
@@ -12,7 +13,9 @@ menu:
   tags: Tags
   about: About
   search: Search
+  schedule: Schedule
   sitemap: Sitemap
+  commonweal: Commonweal 404
 
 sidebar:
   overview: Overview
@@ -24,10 +27,21 @@ post:
   sticky: Sticky
   posted: Posted on
   in: In
+  more: more
   read_more: Read more
   untitled: Untitled
   toc_empty: This post does not have a Table of Contents
   visitors: Visitors
+  wordcount: Words count in article
+  min2read: Reading time
+  copyright:
+      author: Post author
+      link: Post link
+      license_title: Copyright Notice
+      license_content: 'All articles in this blog are licensed under
+        <a href="%s" rel="external nofollow" target="_blank">%s</a> unless stating additionally.'
+
+
 
 page:
   totally: Totally
@@ -59,6 +73,9 @@ state:
   tags: tags
   categories: categories
 
+search:
+  placeholder: Searching...
+
 cheers:
   um: Um..
   ok: OK
@@ -72,3 +89,4 @@ keep_on: Keep on posting.
 symbol:
   comma: ', '
   period: '. '
+  colon: ':'

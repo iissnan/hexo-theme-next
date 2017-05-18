@@ -2,8 +2,9 @@ title:
   archive: Архив
   category: Категория
   tag: Тэг
+  schedule: Календарь
 
-author: Author
+author: Автор
 
 menu:
   home: Главная
@@ -12,6 +13,7 @@ menu:
   tags: Тэги
   about: О сайте
   search: Поиск
+  schedule: Календарь
   sitemap: Карта сайта
 
 sidebar:
@@ -24,10 +26,19 @@ post:
   sticky: Ссылка
   posted: Размещено
   in: в категории
+  more: далее
   read_more: Читать полностью
   untitled: Без имени
   toc_empty: Эта запись без оглавления
   visitors: Просмотров
+  wordcount: Кол-во слов в статье
+  min2read: Время чтения в минутах
+  copyright:
+    author: Автор записи
+    link: Ссылка на запись
+    license_title: Информация об авторских правах
+    license_content: 'Все записи на этом сайте защищены лицензией
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> если не указано дополнительно.'
 
 page:
   totally: Всего
@@ -68,6 +79,9 @@ state:
   tags: Тэги
   categories: Категории
 
+search:
+  placeholder: Поиск...
+
 cheers:
   um: Эм..
   ok: OK
@@ -81,3 +95,4 @@ keep_on: Продолжаю писать.
 symbol:
   comma: ', '
   period: '. '
+  colon: ':'

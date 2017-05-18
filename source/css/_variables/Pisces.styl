@@ -1,17 +1,26 @@
+// Scaffolding
+// Settings for some of the most global styles.
+// --------------------------------------------------
+$body-bg-color                = #f5f7f9
+
+
+// Borders
+// --------------------------------------------------
+$box-shadow-inner                 = initial;
+$box-shadow                       = initial;
+
+$border-radius-inner              = initial;
+$border-radius                    = initial;
+
+
 // Header
 // --------------------------------------------------
 $subtitle-color                   = $gray-lighter
 
-
-
-// Posts Expand
-// --------------------------------------------------
-$posts-expand-title-font-weight   = $font-weight-light
-
-
-
 // Sidebar
 // --------------------------------------------------
+$sidebar-offset-float             = unit(hexo-config('sidebar.offset_float'), px) if hexo-config('sidebar.offset_float') is a 'unit'
+
 $sidebar-nav-hover-color          = $orange
 $sidebar-highlight                = $orange
 
@@ -55,8 +64,12 @@ $btn-default-border-color     = $text-color
 $btn-default-hover-color      = white
 $btn-default-hover-bg         = $black-deep
 
+// Full Image Tag
+$full-image-width             = 118%
+$full-image-margin-horizontal = -9%
+$full-image-margin-vertical   = 0
 
 // Back to top
 $b2t-opacity                  = .6
 $b2t-position-bottom          = -100px
-$b2t-position-bottom-on       = 40px
+$b2t-position-bottom-on       = 30px

@@ -1,0 +1,24 @@
+.back-to-top {
+  display: none;
+  margin: 15px -10px -20px;
+  background: $body-bg-color;
+  font-size: $b2t-font-size;
+  opacity: $b2t-opacity;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transform: translateZ(0);
+  transition-property: bottom;
+  the-transition();
+    &:hover { opacity: 0.8; }
+
+  +mobile() {
+    display: none;
+  }
+  +tablet() {
+    display: none;
+  }
+
+  &.back-to-top-on {
+    display: block;
+  }
+}

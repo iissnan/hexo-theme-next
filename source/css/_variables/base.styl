@@ -145,6 +145,8 @@ $code-font-family               = $font-family-monospace
 $code-font-size                 = 13px
 $code-font-size                 = unit(hexo-config('font.codes.size'), px) if hexo-config('font.codes.size') is a 'unit'
 $code-border-radius             = 3px
+$code-foreground                = $black-light
+$code-background                = $gainsboro
 
 
 
@@ -213,7 +215,7 @@ $headband-bg                    = $black-deep
 // Variables for header section elements.
 // --------------------------------------------------
 
-$head-bg                        = white
+$head-bg                        = transparent
 
 // Site Meta
 $site-meta-text-align           = center
@@ -237,6 +239,16 @@ $menu-link-hover-border         = $black-deep
 // Posts Expand
 // --------------------------------------------------
 $posts-expand-title-font-weight = $font-weight-normal
+$post-copyright = {
+  margin: 2em 0 0,
+  padding: .5em 1em,
+  bg: #f9f9f9,
+  border: {
+    width: 3px,
+    style: solid,
+    color: #ff1700
+  }
+}
 
 
 // Posts Collpase
@@ -299,11 +311,15 @@ $toc-link-active-current-border-color = $sidebar-highlight
 $b2t-opacity                  = 1
 $b2t-position-bottom          = -100px
 $b2t-position-bottom-on       = 19px
-$b2t-position-right           = 50px
+$b2t-position-right           = 30px
 $b2t-font-size                = 12px
 $b2t-color                    = white
 $b2t-bg-color                 = $black-deep
 
+// full-image
+$full-image-width             = 110%
+$full-image-margin-horizontal = -5%
+$full-image-margin-vertical   = 25px
 
 //  .post-expand .post-eof
 //  In Muse scheme, margin above and below the post separator
