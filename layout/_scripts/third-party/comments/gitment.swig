@@ -1,6 +1,6 @@
 {% if theme.gitment.owner %}
-    <link rel='stylesheet' href='http://imsun.github.io/gitment/style/default.css'>
-    <script src='http://imsun.github.io/gitment/dist/gitment.browser.js'></script>
+    <link rel='stylesheet' href='https://imsun.github.io/gitment/style/default.css'>
+    <script src='https://imsun.github.io/gitment/dist/gitment.browser.js'></script>
     <script type='text/javascript'>
         (function() {
             var id = '{{theme.gitment.id}}';
