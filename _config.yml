@@ -600,3 +600,22 @@ images: images
 
 # Theme version
 version: 5.1.1
+
+# pace theme 
+# pace_theme list:
+#pace-theme-big-counter
+#pace-theme-bounce
+#pace-theme-barber-shop
+#pace-theme-center-atom
+#pace-theme-center-circle
+#pace-theme-center-radar
+#pace-theme-center-simple
+#pace-theme-corner-indicator
+#pace-theme-fill-left
+#pace-theme-flash
+#pace-theme-loading-bar
+#pace-theme-mac-osx
+#pace-theme-minimal
+# For example
+#    pace_theme: pace-theme-center-simple
+pace_theme: pace-theme-minimal
