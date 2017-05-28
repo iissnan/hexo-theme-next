@@ -491,6 +491,9 @@ use_motion: true
 # Fancybox
 fancybox: true
 
+# Progress bar in the top during page loading.
+pace: true
+
 # Canvas-nest
 canvas_nest: false
 
@@ -582,9 +585,12 @@ vendors:
   han:
 
   # Internal version: 1.0.2
-  # https://github.com/HubSpot/pace/
-  pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
-  pace_css: https://cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
+  # See: https://github.com/HubSpot/pace
+  # Or use direct links below:
+  # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
+  # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
+  pace:
+  pace_css:
 
 
 # Assets
@@ -594,5 +600,3 @@ images: images
 
 # Theme version
 version: 5.1.1
-
-pace: true
