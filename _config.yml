@@ -584,7 +584,7 @@ vendors:
   # Internal version: 1.0.2
   # https://github.com/HubSpot/pace/
   pace: https://cdn.bootcss.com/pace/1.0.2/pace.min.js
-  pace_css: https://cdn.bootcss.com/pace/1.0.2/themes/black/pace-theme-flash.min.css
+  pace_css: https://cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
 
 
 # Assets
