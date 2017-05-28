@@ -7,6 +7,12 @@
 {% set pace_css_uri = url_for(theme.vendors._internal + '/pace/pace-theme-flash.min.css?v=1.0.2') %}
 
 {% set pace_js_uri = url_for(theme.vendors._internal + '/pace/pace.min.js?v=1.0.2') %}
+{% if theme.vendors.pace %}
+    {% set pace_js_uri = theme.vendors.pace %}
+{% endif %}
+{% if theme.vendors.pace_css %}
+    {% set pace_css_uri = theme.vendors.pace_css %}
+  {% endif %}
 
 <script src="{{ pace_js_uri }}"></script>
 

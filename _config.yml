@@ -581,6 +581,10 @@ vendors:
   # https://github.com/ethantw/Han
   han:
 
+  # Internal version: 1.0.2
+  # https://github.com/HubSpot/pace/
+  pace:
+  pace_css:
 
 
 # Assets
