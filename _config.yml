@@ -171,6 +171,9 @@ toc:
   # Automatically add list number to toc.
   number: true
 
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+  
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
@@ -245,6 +248,7 @@ post_wordcount:
   item_text: true
   wordcount: false
   min2read: false
+  separated_meta: true
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -400,6 +404,13 @@ vkontakte_api:
   comments:     true
   num_of_posts: 10
 
+# Star rating support to each article.
+# To get your ID visit https://widgetpack.com
+rating: 
+  enable: false
+  id:     #<app_id>
+  color:  fc6423
+  
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
