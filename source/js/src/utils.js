@@ -10,11 +10,11 @@ NexT.utils = NexT.$u = {
       .not('.group-picture img, .post-gallery img')
       .each(function () {
         var $image = $(this);
-        var imageTitle = $image.parents('article').find('.post-title-link');
+        var imageTitle = $image.parents('article').find('.post-title-link').text();
         if (!imageTitle) {
-          imageTitle = $image.parents('article').find('.post-title');
+          imageTitle = $image.parents('article').find('.post-title').text();
         }
-        imageTitle.text().replace('/(^\s*)|(\s*$)/g', '');
+        imageTitle.replace('/(^\s*)|(\s*$)/g', '');
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
