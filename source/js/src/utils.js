@@ -10,13 +10,16 @@ NexT.utils = NexT.$u = {
       .not('.group-picture img, .post-gallery img')
       .each(function () {
         var $image = $(this);
-        var imageTitle = $image.parents('article').find('.post-title-link').text().replace("/(^\s*)|(\s*$)/g", "");
-        if (!imageTitle)
-          imageTitle = $image.parents('article').find('.post-title').text().replace("/(^\s*)|(\s*$)/g", "");
+        var imageTitle = $image.parents('article').find('.post-title-link');
+        if (!imageTitle) {
+          imageTitle = $image.parents('article').find('.post-title');
+        }
+        imageTitle.text().replace('/(^\s*)|(\s*$)/g', '');
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
-          $imageWrapLink = $image.wrap('<a style="outline: none;" data-fancybox="'+ imageTitle +'" data-type="image" href="'+ this.getAttribute('src')  +'"></a>').parent('a');
+          $imageWrapLink = $image.wrap('<a style="outline: none;" data-fancybox="' + 
+          imageTitle + '" data-type="image" href="' + this.getAttribute('src')  + '"></a>').parent('a');
         }
 
         if (imageTitle) {
@@ -24,7 +27,7 @@ NexT.utils = NexT.$u = {
         }
       });
 
-    $("[data-fancybox]").fancybox({
+    $('[data-fancybox]').fancybox({
       closeClickOutside: true
     });
   },
