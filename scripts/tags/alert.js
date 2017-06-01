@@ -15,23 +15,23 @@ function alertOut(args, content) {
 
 	switch (style) {
 		case 'success':
-			tip = tip.length == 0 ? tip : "Success Message";
+			tip = tip.length == 0 ? "Success Message" : tip;
 			icon = 'fa-lightbulb-o';
 			break;
 		case 'info':
-			tip = tip.length == 0 ? tip : "Info Message";
+			tip = tip.length == 0 ? "Info Message" : tip;
 			icon = 'fa-info';
 			break;
 		case 'warning':
-			tip = tip.length == 0 ? tip : "Warning Message";
+			tip = tip.length == 0 ? "Warning Message" : tip;
 			icon = 'fa-bell';
 			break;
 		case 'danger':
-			tip = tip.length == 0 ? tip : "Danger Message";
+			tip = tip.length == 0 ? "Danger Message" : tip;
 			icon = 'fa-bug';
 			break;
 		default:
-			tip = tip.length == 0 ? tip : "Success Message";
+			tip = tip.length == 0 ? "Success Message" : tip;
 			icon = 'fa-lightbulb-o';
 			break;
 	}
