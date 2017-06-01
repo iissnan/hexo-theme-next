@@ -16,12 +16,7 @@ NexT.utils = NexT.$u = {
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
-<<<<<<< HEAD
           $imageWrapLink = $image.wrap('<a style="outline: none;" data-fancybox="'+ imageTitle +'" data-type="image" href="'+ this.getAttribute('src')  +'"></a>').parent('a');
-=======
-	        var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
-          $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
->>>>>>> 83e32a812c95ddbb9915ded9ba1bd323c865534a
         }
 
         if (imageTitle) {
