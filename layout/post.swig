@@ -3,7 +3,7 @@
 {% import '_macro/sidebar.swig' as sidebar_template %}
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
 {% block page_class %}page-post-detail{% endblock %}
 

@@ -16,7 +16,12 @@ NexT.utils = NexT.$u = {
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
+<<<<<<< HEAD
           $imageWrapLink = $image.wrap('<a style="outline: none;" data-fancybox="'+ imageTitle +'" data-type="image" href="'+ this.getAttribute('src')  +'"></a>').parent('a');
+=======
+	        var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
+          $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
+>>>>>>> 83e32a812c95ddbb9915ded9ba1bd323c865534a
         }
 
         if (imageTitle) {
@@ -31,8 +36,9 @@ NexT.utils = NexT.$u = {
 
   lazyLoadPostsImages: function () {
     $('#posts').find('img').lazyload({
-      placeholder: '/images/loading.gif',
-      effect: 'fadeIn'
+      //placeholder: '/images/loading.gif',
+      effect: 'fadeIn',
+      threshold : 0
     });
   },
 
@@ -58,7 +64,8 @@ NexT.utils = NexT.$u = {
       var scrollTop = $(window).scrollTop();
       var docHeight = $('#content').height();
       var winHeight = $(window).height();
-      var scrollPercent = (scrollTop) / (docHeight - winHeight);
+      var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+      var scrollPercent = (scrollTop) / (contentMath);
       var scrollPercentRounded = Math.round(scrollPercent*100);
       var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
       $('#scrollpercent>span').html(scrollPercentMaxed);

@@ -7,7 +7,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+      <input autocomplete="off"
              placeholder="{{ __('search.placeholder') }}" spellcheck="false"
              type="text" id="local-search-input">
     </div>
