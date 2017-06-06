@@ -20,6 +20,10 @@ for $mixin in $mixins
   @import "_mixins/" + $mixin;
 
 
+// Custom Layer
+// --------------------------------------------------
+@import "_custom/custom";
+
 
 // Common Layer
 // --------------------------------------------------
@@ -33,13 +37,6 @@ for $mixin in $mixins
 // Components
 @import "_common/components";
 
-
 // Schemes Layer
 // --------------------------------------------------
 @import "_schemes/" + $scheme;
-
-
-
-// Custom Layer
-// --------------------------------------------------
-@import "_custom/custom";
