@@ -1,5 +1,6 @@
 @import "full-image";
 @import "blockquote-center";
 @import "group-pictures";
-@import "note";
+@import "note" if hexo-config('note.type') == 'basic';
+@import "note-modern" if hexo-config('note.type') == 'modern';
 @import "exturl" if hexo-config('exturl');
