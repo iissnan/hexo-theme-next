@@ -551,8 +551,8 @@ vendors:
   # Internal version: 2.1.3
   jquery:
 
-  # Internal version: 2.1.5
-  # See: http://fancyapps.com/fancybox/
+  # Internal version: 3.0.47
+  # See: https://github.com/fancyapps/fancybox
   fancybox:
   fancybox_css:
 

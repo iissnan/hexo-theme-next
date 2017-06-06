@@ -10,31 +10,25 @@ NexT.utils = NexT.$u = {
       .not('.group-picture img, .post-gallery img')
       .each(function () {
         var $image = $(this);
-        var imageTitle = $image.attr('title');
+        var imageTitle = $image.parents('article').find('.post-title-link').text();
+        if (!imageTitle) {
+          imageTitle = $image.parents('article').find('.post-title').text();
+        }
+        imageTitle.replace('/(^\s*)|(\s*$)/g', '');
         var $imageWrapLink = $image.parent('a');
 
         if ($imageWrapLink.size() < 1) {
-	        var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
-          $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
+          $imageWrapLink = $image.wrap('<a style="outline: none;" data-fancybox="' + 
+          imageTitle + '" data-type="image" href="' + this.getAttribute('src')  + '"></a>').parent('a');
         }
 
-        $imageWrapLink.addClass('fancybox fancybox.image');
-        $imageWrapLink.attr('rel', 'group');
-
         if (imageTitle) {
-          $imageWrapLink.append('<p class="image-caption">' + imageTitle + '</p>');
-
-          //make sure img title tag will show correctly in fancybox
-          $imageWrapLink.attr('title', imageTitle);
+          $imageWrapLink.attr('data-caption', imageTitle);
         }
       });
 
-    $('.fancybox').fancybox({
-      helpers: {
-        overlay: {
-          locked: false
-        }
-      }
+    $('[data-fancybox]').fancybox({
+      closeClickOutside: true
     });
   },
 
