@@ -78,9 +78,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -142,7 +142,10 @@ font:
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 #social:
   #LinkLabel: Link
-
+social:
+  GitHub: https://github.com/marlonlu
+  Twitter: https://twitter.com/windblueos
+  Zhihu: https://www.zhihu.com/people/marlonlu
 
 # Social Links Icons
 # Icon Mapping:
@@ -162,7 +165,7 @@ social_icons:
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 #avatar:
-
+avatar: /uploads/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
