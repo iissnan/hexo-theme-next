@@ -3,7 +3,7 @@
   <article class="post post-type-{{ post.type | default('normal') }}" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <{% if theme.seo %}h2{% else %}h1{% endif %} class="post-title">
+      <{% if theme.seo %}h3{% else %}h2{% endif %} class="post-title">
         {% if post.link %}{# Link posts #}
           <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
             {{ post.title or post.link }}
@@ -18,7 +18,7 @@
               {% endif %}
             </a>
         {% endif %}
-      </{% if theme.seo %}h2{% else %}h1{% endif %}>
+      </{% if theme.seo %}h3{% else %}h2{% endif %}>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
