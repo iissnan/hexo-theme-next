@@ -8,10 +8,10 @@
 
   <div id="posts" class="posts-collapse">
     <div class="collection-title">
-      <h2 >
-        {{ page.tag }}
-        <small>{{  __('title.tag')  }}</small>
-      </h2>
+      <{% if theme.seo %}h2{% else %}h1{% endif %}>{#
+      #}{{ page.tag }}{#
+      #}<small>{{  __('title.tag')  }}</small>
+      </{% if theme.seo %}h2{% else %}h1{% endif %}>
     </div>
 
     {% for post in page.posts %}

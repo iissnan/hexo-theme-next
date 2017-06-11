@@ -8,10 +8,10 @@
 
   <section id="posts" class="posts-collapse">
     <div class="collection-title">
-      <h2 >
-        {{ page.category }}
-        <small>{{  __('title.category')  }}</small>
-      </h2>
+      <{% if theme.seo %}h2{% else %}h1{% endif %}>{#
+      #}{{ page.category }}{#
+      #}<small>{{  __('title.category')  }}</small>
+      </{% if theme.seo %}h2{% else %}h1{% endif %}>
     </div>
 
     {% for post in page.posts %}
