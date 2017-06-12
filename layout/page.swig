@@ -13,6 +13,8 @@
   #}{% endif %}{#
 #}{% endblock %}
 
+{% block page_class %}page-post-detail{% endblock %}
+
 {% block content %}
 
   <div id="posts" class="posts-expand">

@@ -67,13 +67,16 @@
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
   {% include scheme_script %}
 
-  {% block script_extra %}{% endblock %}
+  {% block script_extra %}
+    {% include '_scripts/pages/post-details.swig' %}
+  {% endblock %}
 
   {% include '_scripts/boostrap.swig' %}
 
   {% include '_third-party/comments/index.swig' %}
   {% include '_third-party/search/index.swig' %}
   {% include '_third-party/seo/baidu-push.swig' %}
+  {% include '_third-party/rating.swig' %}
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}

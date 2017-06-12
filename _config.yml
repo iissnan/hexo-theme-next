@@ -46,9 +46,9 @@ index_with_subtitle: false
 menu:
   home: /
   categories: /categories
-  #about: /about
-  archives: /archives
-  tags: /tags
+  #about: /about/
+  archives: /archives/
+  tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -171,6 +171,9 @@ toc:
   # Automatically add list number to toc.
   number: true
 
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+  
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
@@ -245,6 +248,7 @@ post_wordcount:
   item_text: true
   wordcount: false
   min2read: false
+  separated_meta: true
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -400,6 +404,13 @@ vkontakte_api:
   comments:     true
   num_of_posts: 10
 
+# Star rating support to each article.
+# To get your ID visit https://widgetpack.com
+rating: 
+  enable: false
+  id:     #<app_id>
+  color:  fc6423
+  
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
@@ -491,6 +502,26 @@ use_motion: true
 # Fancybox
 fancybox: true
 
+# Progress bar in the top during page loading.
+pace: false
+# Themes list:
+#pace-theme-big-counter
+#pace-theme-bounce
+#pace-theme-barber-shop
+#pace-theme-center-atom
+#pace-theme-center-circle
+#pace-theme-center-radar
+#pace-theme-center-simple
+#pace-theme-corner-indicator
+#pace-theme-fill-left
+#pace-theme-flash
+#pace-theme-loading-bar
+#pace-theme-mac-osx
+#pace-theme-minimal
+# For example
+# pace_theme: pace-theme-center-simple
+pace_theme: pace-theme-minimal
+
 # Canvas-nest
 canvas_nest: false
 
@@ -553,6 +584,14 @@ vendors:
   # https://www.algolia.com
   algolia_instant_js:
   algolia_instant_css:
+
+  # Internal version: 1.0.2
+  # See: https://github.com/HubSpot/pace
+  # Or use direct links below:
+  # pace: //cdn.bootcss.com/pace/1.0.2/pace.min.js
+  # pace_css: //cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css
+  pace:
+  pace_css:
 
   # Internal version: 1.0.0
   # https://github.com/hustcc/canvas-nest.js
