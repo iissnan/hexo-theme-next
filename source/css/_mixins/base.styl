@@ -40,6 +40,14 @@ transform() {
   transform: arguments
 }
 
+hide() {
+  display: none !important;
+}
+
+fixbutton() {
+  right: 20px;
+  opacity: 0.8;
+}
 
 random-color($min, $max) {
   return floor(math(0, 'random') * ($max - $min + 1) + $min);
