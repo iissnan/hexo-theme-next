@@ -207,6 +207,8 @@ sidebar:
   # Scroll percent label in b2t button
   scrollpercent: false
 
+  onmobile: false
+
 
 # Blog rolls
 #links_title: Links
