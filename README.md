@@ -36,6 +36,8 @@ cover: banner-write-in-es6.jpg
 效果：
 ![博文封面效果](https://github.com/HiDino9/hexo-theme-nextd/blob/master/test/nextd_post_preview.jpg?raw=true)
 
+**如果文章无法查到封面路径，请尝试安装 `hexo-asset-image` 插件**
+
 ***
 
 # NexT
