@@ -151,10 +151,20 @@ font:
 #   When an globe mask icon presenting up means that the item has no mapping icon.
 social_icons:
   enable: true
+  icons_only: false
+  transition: false
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
+  E-Mail: envelope
+  Google: google
   Twitter: twitter
+  FB Page: facebook
+  VK Group: vk
+  Skype: skype
+  YouTube: youtube
+  Instagram: instagram
+  StackOverflow: stack-overflow
   Weibo: weibo
 
 
