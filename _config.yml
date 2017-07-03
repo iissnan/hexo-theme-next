@@ -78,9 +78,9 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
+#scheme: Muse
 #scheme: Mist
-#scheme: Pisces
+scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -140,8 +140,12 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
   #LinkLabel: Link
+  GitHub: https://github.com/GraysonLiu
+  Last.fm: https://www.last.fm/user/GraysonLiu
+  TV Time: https://www.tvtime.com/user/5202212/profile
+  Facebook: https://www.facebook.com/mrgraysonliu
 
 
 # Social Links Icons
@@ -156,12 +160,15 @@ social_icons:
   GitHub: github
   Twitter: twitter
   Weibo: weibo
+  Last.fm: lastfm-square
+  TV Time: television
+  Facebook: facebook-official
 
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /images/avatar.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -282,7 +289,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 
 # ---------------------------------------------------------------
@@ -291,7 +298,7 @@ highlight_theme: normal
 
 # MathJax Support
 mathjax:
-  enable: false
+  enable: true
   per_page: false
   cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
