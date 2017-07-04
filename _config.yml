@@ -45,10 +45,10 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
-  tags: /tags
+  #categories: /categories/
+  #about: /about/
+  archives: /archives/
+  tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
 
@@ -173,7 +173,7 @@ toc:
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
-  
+
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
@@ -405,11 +405,11 @@ vkontakte_api:
 
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
-rating: 
+rating:
   enable: false
   id:     #<app_id>
   color:  fc6423
-  
+
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
