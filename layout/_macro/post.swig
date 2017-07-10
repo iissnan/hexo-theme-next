@@ -207,7 +207,9 @@
           {% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %}
             <div class="post-wordcount">
               {% if theme.post_wordcount.wordcount %}
-                <span class="post-meta-divider">|</span>
+                {% if not theme.post_wordcount.separated_meta %}
+                  <span class="post-meta-divider">|</span>
+                {% endif %}
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -338,6 +340,14 @@
       {% endif %}
 
       {% if not is_index %}
+      {% if theme.rating.enable or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
+        <div class="post-widgets">
+        {% if theme.rating.enable %}
+          <div class="wp_rating">
+            <div id="wpac-rating"></div>
+          </div>
+        {% endif %}
+
         {% if (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) %}
           <div class="social-like">
             {% if theme.vkontakte_api.enable and theme.vkontakte_api.like %}
@@ -353,6 +363,8 @@
             {% endif %}
           </div>
         {% endif %}
+        </div>
+      {% endif %}
       {% endif %}
 
       {% if not is_index and (post.prev or post.next) %}
