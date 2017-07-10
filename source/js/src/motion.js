@@ -82,10 +82,12 @@ $(document).ready(function () {
 
   var sidebarToggleMotion = {
     toggleEl: $('.sidebar-toggle'),
+    dimmerEl: $('#sidebar-dimmer'),
     sidebarEl: $('.sidebar'),
     isSidebarVisible: false,
     init: function () {
       this.toggleEl.on('click', this.clickHandler.bind(this));
+      this.dimmerEl.on('click', this.clickHandler.bind(this));
       this.toggleEl.on('mouseenter', this.mouseEnterHandler.bind(this));
       this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
 

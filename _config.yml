@@ -206,6 +206,8 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
+  # Enable sidebar on narrow view
+  onmobile: false
 
 
 # Blog rolls
