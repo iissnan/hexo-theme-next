@@ -16,11 +16,13 @@
   transition-property: bottom;
   the-transition();
 
-  +mobile() {
-    display: none;
-  }
   +tablet() {
-    display: none;
+    fixbutton() if hexo-config('sidebar.onmobile');
+    hide() if not hexo-config('sidebar.onmobile');
+  }
+  +mobile() {
+    fixbutton() if hexo-config('sidebar.onmobile');
+    hide() if not hexo-config('sidebar.onmobile');
   }
 
   &.back-to-top-on {
