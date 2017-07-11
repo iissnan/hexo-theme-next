@@ -128,8 +128,8 @@ $(document).ready(function () {
     touchendHandler: function(e) {
       var _xPos = e.originalEvent.changedTouches[0].clientX;
       var _yPos = e.originalEvent.changedTouches[0].clientY;
-      if (_xPos-xPos > 30 && _yPos-yPos < 20) {
-          this.hideSidebar();
+      if (_xPos-xPos > 30 && Math.abs(_yPos-yPos) < 20) {
+          this.clickHandler();
       }
     },
     showSidebar: function () {
