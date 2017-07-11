@@ -90,6 +90,9 @@ $(document).ready(function () {
       this.dimmerEl.on('click', this.clickHandler.bind(this));
       this.toggleEl.on('mouseenter', this.mouseEnterHandler.bind(this));
       this.toggleEl.on('mouseleave', this.mouseLeaveHandler.bind(this));
+      this.sidebarEl.on('touchstart', this.touchstartHandler.bind(this));
+      this.sidebarEl.on('touchend', this.touchendHandler.bind(this));
+      this.sidebarEl.on('touchmove', function(e){e.preventDefault();});
 
       $(document)
         .on('sidebar.isShowing', function () {
@@ -116,6 +119,17 @@ $(document).ready(function () {
         return;
       }
       sidebarToggleLines.init();
+    },
+    touchstartHandler: function(e) {
+      xPos = e.originalEvent.touches[0].clientX;
+      yPos = e.originalEvent.touches[0].clientY;
+    },
+    touchendHandler: function(e) {
+      var _xPos = e.originalEvent.changedTouches[0].clientX;
+      var _yPos = e.originalEvent.changedTouches[0].clientY;
+      if (_xPos-xPos > 30 && _yPos-yPos < 20) {
+          this.hideSidebar();
+      }
     },
     showSidebar: function () {
       var self = this;
