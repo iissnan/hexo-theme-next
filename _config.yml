@@ -22,6 +22,7 @@ authoricon: heart
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
 
+
 # ---------------------------------------------------------------
 # SEO Settings
 # ---------------------------------------------------------------
@@ -38,6 +39,7 @@ seo: false
 # subtitle: Subtitle
 index_with_subtitle: false
 
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -51,7 +53,6 @@ menu:
   tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
-
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -71,8 +72,6 @@ menu_icons:
   commonweal: heartbeat
 
 
-
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -82,52 +81,6 @@ scheme: Muse
 #scheme: Mist
 #scheme: Pisces
 
-
-# ---------------------------------------------------------------
-# Font Settings
-# - Find fonts on Google Fonts (https://www.google.com/fonts)
-# - All fonts set here will have the following styles:
-#     light, light italic, normal, normal italic, bold, bold italic
-# - Be aware that setting too much fonts will cause site running slowly
-# - Introduce in 5.0.1
-# ---------------------------------------------------------------
-font:
-  enable: true
-
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
-
-  # Global font settings used on <body> element.
-  global:
-    # external: true will load this font family from host.
-    external: true
-    family: Lato
-
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
-  # Fallback to `global` font settings.
-  headings:
-    external: true
-    family:
-
-  # Font settings for posts
-  # Fallback to `global` font settings.
-  posts:
-    external: true
-    family:
-
-  # Font settings for Logo
-  # Fallback to `global` font settings.
-  # The `size` option use `px` as unit
-  logo:
-    external: true
-    family:
-    size:
-
-  # Font settings for <code> and code blocks.
-  codes:
-    external: true
-    family:
-    size:
 
 
 
@@ -285,6 +238,53 @@ custom_logo:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
 highlight_theme: normal
+
+
+# ---------------------------------------------------------------
+# Font Settings
+# - Find fonts on Google Fonts (https://www.google.com/fonts)
+# - All fonts set here will have the following styles:
+#     light, light italic, normal, normal italic, bold, bold italic
+# - Be aware that setting too much fonts will cause site running slowly
+# - Introduce in 5.0.1
+# ---------------------------------------------------------------
+font:
+  enable: true
+
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  host:
+
+  # Global font settings used on <body> element.
+  global:
+    # external: true will load this font family from host.
+    external: true
+    family: Lato
+
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family:
+
+  # Font settings for posts
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo
+  # Fallback to `global` font settings.
+  # The `size` option use `px` as unit
+  logo:
+    external: true
+    family:
+    size:
+
+  # Font settings for <code> and code blocks.
+  codes:
+    external: true
+    family:
+    size:
 
 
 # ---------------------------------------------------------------
@@ -483,6 +483,10 @@ local_search:
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
 
+
+# ---------------------------------------------------------------
+# Tags Settings
+# ---------------------------------------------------------------
 # External URL with BASE64 encrypt & decrypt
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
