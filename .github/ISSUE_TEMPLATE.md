@@ -1,5 +1,5 @@
 <!-- ATTENTION!
-If you want to fast resolve your issue, WRITE IT IT ENGLISH, please. Not all contributors/collaborators know Chinese language and Google translate can't always give true translates on issues. Thanks!
+If you want to fast resolve your issue, WRITE IT IN ENGLISH, please. Not all contributors/collaborators know Chinese language and Google translate can't always give true translates on issues. Thanks!
 YOU MAY DELETE ALL THIS RECOMENDATIONS AND USE TEMPLATES WHICH PLACED BELOW.
 -->
 
