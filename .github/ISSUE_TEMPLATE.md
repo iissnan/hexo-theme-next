@@ -1,31 +1,28 @@
 <!-- ATTENTION!
-If you want to fast resolve your issue, **write it in English, please**. Not all contributors/collaborators know Chinese language and Google translate can't always give true translates on issues. Thanks!
+If you want to fast resolve your issue, WRITE IT IT ENGLISH, please. Not all contributors/collaborators know Chinese language and Google translate can't always give true translates on issues. Thanks!
 YOU MAY DELETE ALL THIS RECOMENDATIONS AND USE TEMPLATES WHICH PLACED BELOW.
 -->
 
-### Expected behavior (预期行为)
+### Expected behavior <!-- (预期行为) -->
 
 
-### Actual behavior (实际行为)
+### Actual behavior <!-- (实际行为) -->
 
 
-### Steps to reproduce the behavior (重现步骤)
+### Steps to reproduce the behavior <!-- (重现步骤) -->
 
 
-### NexT Information
-
-Add the  ✔  sign before an item which is affected by this behavior.
+### NexT Information <!-- (Check one with "x") -->
 
 NexT Version:
-
-  -  Master
-  -  Latest Release
-  -  Old version - 
+- [ ] Master
+- [ ] Latest Release
+- [ ] Old version - 
 
 NexT Scheme:
-  -  All schemes
-  -  Muse
-  -  Mist
-  -  Pisces
+- [ ] All schemes
+- [ ] Muse
+- [ ] Mist
+- [ ] Pisces
 
-### Other Information (Like Browser, System, Screenshots)
+### Other Information <!-- (Like Browser, System, Screenshots) -->
