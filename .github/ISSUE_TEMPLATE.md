@@ -14,12 +14,12 @@ You may delete this recomendations and use template which is placed below.
 
 ### NexT Information <!-- (Check one with "x") -->
 
-NexT Version:
+**NexT Version:**
 - [ ] Master
 - [ ] Latest Release
 - [ ] Old version - 
 
-NexT Scheme:
+**NexT Scheme:**
 - [ ] All schemes
 - [ ] Muse
 - [ ] Mist
