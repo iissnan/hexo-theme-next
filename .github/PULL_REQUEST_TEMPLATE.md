@@ -2,8 +2,8 @@
 
 1. Please, write pulls readme in English. Not all contributors/collaborators know Chinese language and Google translate can't always give true translates on issues. Thanks!
 
-2. If your pull is short and simple, recommended to use "Usual pull template" only.
-   If your pull is big and include many separated changes, recommended to use "Usual pull template" with "BIG pull template".
+2. If your pull is short and simple, recommended to use "Usual pull template".
+   If your pull is big and include many separated changes, recommended to use "BIG pull template".
 -->
 
 <!-- Usual pull template -->
@@ -18,13 +18,13 @@
 ## PR Type
 **What kind of change does this PR introduce?**  <!-- (Check one with "x") -->
 
-- [ ] Bugfix
-- [ ] Feature
-- [ ] Code style update (formatting, local variables)
-- [ ] Refactoring (no functional changes, no api changes)
-- [ ] Build related changes
-- [ ] CI related changes
-- [ ] Documentation content changes
+- [ ] Bugfix.
+- [ ] Feature.
+- [ ] Code style update (formatting, local variables).
+- [ ] Refactoring (no functional changes, no api changes).
+- [ ] Build related changes.
+- [ ] CI related changes.
+- [ ] Documentation content changes.
 - [ ] Other... Please describe:
 
 ## What is the current behavior?
@@ -36,8 +36,8 @@ Issue Number(s): N/A
 
 
 ## Does this PR introduce a breaking change?
-- [ ] Yes
-- [ ] No
+- [ ] Yes.
+- [ ] No.
 
 <!-- If this PR contains a breaking change, please describe the impact and migration path for existing applications below. -->
 
