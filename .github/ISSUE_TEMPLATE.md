@@ -11,19 +11,23 @@ You may delete this recomendations and use template which is placed below.
 
 ### Steps to reproduce the behavior <!-- (重现步骤) -->
 Link to demo site with this issue: N/A
-Link to source code to generate this site: N/A
+Link(s) to source code or any usefull link(s): N/A
 
 ### NexT Information <!-- (Check one with "x") -->
 
 **NexT Version:**
-- [ ] Master
-- [ ] Latest Release
-- [ ] Old version - 
+```
+[ ] Master
+[ ] Latest Release
+[ ] Old version - 
+```
 
 **NexT Scheme:**
-- [ ] All schemes
-- [ ] Muse
-- [ ] Mist
-- [ ] Pisces
+```
+[ ] All schemes
+[ ] Muse
+[ ] Mist
+[ ] Pisces
+```
 
 ### Other Information <!-- (Like Browser, System, Screenshots) -->
