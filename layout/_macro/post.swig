@@ -249,6 +249,9 @@
       </header>
     {% endif %}
 
+    {#################}
+    {### POST BODY ###}
+    {#################}
     <div class="post-body{% if theme.han %} han-init-context{% endif %}{% if post.direction && post.direction.toLowerCase() === 'rtl' %} rtl{% endif %}" itemprop="articleBody">
 
       {# Gallery support #}
@@ -311,6 +314,9 @@
         {{ post.content }}
       {% endif  %}
     </div>
+    {#####################}
+    {### END POST BODY ###}
+    {#####################}
 
     <div>
       {% if not is_index %}
