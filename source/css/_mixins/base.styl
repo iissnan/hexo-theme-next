@@ -4,6 +4,18 @@ the-transition() {
   transition-delay: 0s;
 }
 
+mobile-smallest() {
+  @media (max-width: 413px) {
+    {block}
+  }
+}
+
+mobile-small() {
+  @media (max-width: 567px) {
+    {block}
+  }
+}
+
 mobile() {
   @media (max-width: 767px) {
     {block}
@@ -42,6 +54,10 @@ transform() {
 
 hide() {
   display: none !important;
+}
+
+show() {
+  display: block !important;
 }
 
 fixbutton() {
