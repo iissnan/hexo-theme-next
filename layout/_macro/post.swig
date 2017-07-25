@@ -324,7 +324,7 @@
       </div>
     {% endif %}
 
-    {% if (theme.alipay or theme.wechatpay) and not is_index %}
+    {% if (theme.alipay or theme.wechatpay or theme.bitcoin) and not is_index %}
       <div>
         {% include 'reward.swig' %}
       </div>
