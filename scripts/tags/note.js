@@ -13,8 +13,6 @@
  *           May be not defined.
  */
 
-'use strict';
-
 function bscallOut (args, content) {
   return '<div class="note ' + args.join(' ') + '">' + hexo.render.renderSync({text: content, engine: 'markdown'}).trim() + '</div>';
 }
