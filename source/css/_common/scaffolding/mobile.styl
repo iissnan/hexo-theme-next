@@ -1,0 +1,27 @@
+// @media (max-width: 413px)
++mobile-smallest() {
+
+  .post-body {
+
+    .video-container .fluid-vids {
+      margin-bottom:  10px !important;
+    }
+
+    .note {
+      padding:        10px !important;
+      margin-bottom:  10px !important;
+
+      if hexo-config('note.icons') {
+        &:not(.no-icon) {
+          padding-left: 35px !important;
+          &:before {
+            top:        8px !important;
+            left:       12px !important;
+          }
+        }
+      }
+    }
+
+  }
+
+}
