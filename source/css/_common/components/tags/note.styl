@@ -1,72 +1,160 @@
-// bs-callout
-// See: http://cpratt.co/twitter-bootstrap-callout-css-styles/
-// ===============================================
-
 .post-body .note {
-  padding:             20px;
-  margin:              20px 0;
-  border:              1px solid $gainsboro;
-  border-left-width:   5px;
-  border-radius:       unit(hexo-config('note.border_radius'), px) if hexo-config('note.border_radius') is a 'unit';
+  note_style = hexo-config('note.style');
+  note_icons = hexo-config('note.icons');
+
+  position:             relative;
+  padding:              15px;
+  margin-bottom:        20px;
+
+  if note_style == 'simple' {
+    border:             1px solid $gainsboro;
+    border-left-width:  5px;
+  }
+  if note_style == 'flat' {
+    border:             initial;
+    border-left:        3px solid $gainsboro;
+    background-color:   lighten($gainsboro, 65%);
+  }
+  border-radius:        unit(hexo-config('note.border_radius'), px) if hexo-config('note.border_radius') is a 'unit';
 
   h2, h3, h4, h5, h6 {
-    margin-top:        0;
-    margin-bottom:     5px;
-    padding-top:       0 !important;
+    if note_icons {
+      margin-top:       3px;
+    } else {
+      margin-top:       0;
+    }
+    margin-bottom:      0;
+    border-bottom:      initial;
+    padding-top:        0 !important;
   }
 
   p, ul, ol, table, pre, blockquote {
     &:first-child {
-      margin-top:      0;
+      margin-top:       0;
     }
     &:last-child {
-      margin-bottom:   0;
+      margin-bottom:    0;
     }
   }
 
-  +.note {
-    margin-top:        -5px;
+  if note_icons {
+    &:not(.no-icon) {
+      padding-left:     45px;
+      &:before {
+        position:       absolute;
+        font-family:    'FontAwesome';
+        font-size:      larger;
+        top:            13px;
+        left:           15px;
+      }
+    }
   }
 
   &.default {
-    border-left-color: #777;
+    if note_style == 'flat' {
+      background-color: $note-default-bg;
+    }
+    border-left-color:  $note-default-border;
     h2, h3, h4, h5, h6 {
-      color:           #777;
+      color:            $note-default-text;
+    }
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:      $note-default-icon;
+          color :       $note-default-text;
+        }
+      }
     }
   }
 
   &.primary {
-    border-left-color: #6f42c1;
+    if note_style == 'flat' {
+      background-color: $note-primary-bg;
+    }
+    border-left-color:  $note-primary-border;
     h2, h3, h4, h5, h6 {
-      color:           #6f42c1;
+      color:            $note-primary-text;
+    }
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:      $note-primary-icon;
+          color :       $note-primary-text;
+        }
+      }
     }
   }
 
   &.info {
-    border-left-color: #428bca;
+    if note_style == 'flat' {
+      background-color: $note-info-bg;
+    }
+    border-left-color:  $note-info-border;
     h2, h3, h4, h5, h6 {
-      color:           #428bca;
+      color:            $note-info-text;
+    }
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:      $note-info-icon;
+          color :       $note-info-text;
+        }
+      }
     }
   }
 
   &.success {
-    border-left-color: #5cb85c;
+    if note_style == 'flat' {
+      background-color: $note-success-bg;
+    }
+    border-left-color:  $note-success-border;
     h2, h3, h4, h5, h6 {
-      color:           #5cb85c;
+      color:            $note-success-text;
+    }
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:      $note-success-icon;
+          color :       $note-success-text;
+        }
+      }
     }
   }
 
   &.warning {
-    border-left-color: #f0ad4e;
+    if note_style == 'flat' {
+      background-color: $note-warning-bg;
+    }
+    border-left-color:  $note-warning-border;
     h2, h3, h4, h5, h6 {
-      color:           #f0ad4e;
+      color:            $note-warning-text;
+    }
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:      $note-warning-icon;
+          color :       $note-warning-text;
+        }
+      }
     }
   }
 
   &.danger {
-    border-left-color: #d9534f;
+    if note_style == 'flat' {
+      background-color: $note-danger-bg;
+    }
+    border-left-color:  $note-danger-border;
     h2, h3, h4, h5, h6 {
-      color:           #d9534f;
+      color:            $note-danger-text;
+    }
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:      $note-danger-icon;
+          color :       $note-danger-text;
+        }
+      }
     }
   }
 
