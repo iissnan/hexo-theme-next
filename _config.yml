@@ -284,9 +284,11 @@ post_copyright:
 # Misc Theme Settings
 # ---------------------------------------------------------------
 
+# Reduce padding / margin indents on devices with narrow width.
+mobile_layout_economy: true
+
 # Android Chrome header panel color ($black-deep).
 android_chrome_color: "#222"
-
 
 # Custom Logo.
 # !!Only available for Default Scheme currently.
@@ -296,7 +298,6 @@ android_chrome_color: "#222"
 custom_logo:
   enabled: false
   image:
-
 
 # Code Highlight theme
 # Available value:
