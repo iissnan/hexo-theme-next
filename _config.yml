@@ -496,7 +496,6 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-
 # Local search
 local_search:
   enable: false
@@ -506,20 +505,23 @@ local_search:
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
 
-# External URL with BASE64 encrypt & decrypt
+# External URL with BASE64 encrypt & decrypt.
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
 exturl: false
 
-
-# Note tag (bs-callout)
+# Note tag (bs-callout).
 note:
-  # Note tag type values:
-  #  - basic     basic bs-callout note tag style. Default.
-  #  - modern    modern note tag style. Support fontawesome icons.
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  type: basic
+  style: simple
+  icons: false
   border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  light_bg_offset: 0
 
 
 #! ---------------------------------------------------------------
