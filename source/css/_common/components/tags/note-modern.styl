@@ -1,14 +1,22 @@
 .post-body .note {
+  note_icons = hexo-config('note.icons');
+
   position:          relative;
   padding:           15px;
   margin-bottom:     20px;
+
   border:            1px solid transparent;
   background-color:  $whitesmoke;
   border-radius:     unit(hexo-config('note.border_radius'), px) if hexo-config('note.border_radius') is a 'unit';
 
   h2, h3, h4, h5, h6 {
-    margin-top:      3px;
-    margin-bottom:   5px;
+    if note_icons {
+      margin-top:    3px;
+    } else {
+      margin-top:    0;
+    }
+    margin-bottom:   0;
+    border-bottom:   initial;
     padding-top:     0 !important;
   }
 
@@ -21,149 +29,141 @@
     }
   }
 
-  +.note {
-    margin-top:      -5px;
-  }
-
-  &:not(.no-icon) {
-    padding-left:    45px;
-    &:before {
-      position:      absolute;
-      font-family:   'FontAwesome';
-      font-size:     larger;
-      top:           13px;
-      left:          15px;
+  if note_icons {
+    &:not(.no-icon) {
+      padding-left:     45px;
+      &:before {
+        position:       absolute;
+        font-family:    'FontAwesome';
+        font-size:      larger;
+        top:            13px;
+        left:           15px;
+      }
     }
   }
 
   &.default {
-    background-color:            #f5f5f5;
-    border-color:                #ddd;
-    color:                       #666;
-
-    &:not(.no-icon) {
-      &:before {
-        content:                 $note-icon-default;
+    background-color:            $note-modern-default-bg;
+    border-color:                $note-modern-default-border;
+    color:                       $note-modern-default-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-default-icon;
+        }
       }
     }
-
     a {
-      color:                     #666;
-      border-bottom:   1px solid #666;
-
+      color:                     $note-modern-default-text;
+      border-bottom:   1px solid $note-modern-default-text;
       &:hover {
-        color:                   #333;
-        border-bottom: 1px solid #333;
+        color:                   $note-modern-default-hover;
+        border-bottom: 1px solid $note-modern-default-hover;
       }
     }
   }
 
   &.primary {
-    background-color:            #f3daff;
-    border-color:                #e6c6df;
-    color:                       #6f42c1;
-
-    &:not(.no-icon) {
-      &:before {
-        content:                 $note-icon-primary;
+    background-color:            $note-modern-primary-bg;
+    border-color:                $note-modern-primary-border;
+    color:                       $note-modern-primary-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-primary-icon;
+        }
       }
     }
-
     a {
-      color:                     #6f42c1;
-      border-bottom:   1px solid #6f42c1;
-
+      color:                     $note-modern-primary-text;
+      border-bottom:   1px solid $note-modern-primary-text;
       &:hover {
-        color:                   #4A217A;
-        border-bottom: 1px solid #4A217A;
+        color:                   $note-modern-primary-hover;
+        border-bottom: 1px solid $note-modern-primary-hover;
       }
     }
   }
 
   &.info {
-    background-color:            #d9edf7;
-    border-color:                #bce8f1;
-    color:                       #31708f;
-
-    &:not(.no-icon) {
-      &:before {
-        content:                 $note-icon-info;
+    background-color:            $note-modern-info-bg;
+    border-color:                $note-modern-info-border;
+    color:                       $note-modern-info-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-info-icon;
+        }
       }
     }
-
     a {
-      color:                     #31708f;
-      border-bottom:   1px solid #31708f;
-
+      color:                     $note-modern-info-text;
+      border-bottom:   1px solid $note-modern-info-text;
       &:hover {
-        color:                   #245269;
-        border-bottom: 1px solid #245269;
+        color:                   $note-modern-info-hover;
+        border-bottom: 1px solid $note-modern-info-hover;
       }
     }
   }
 
   &.success {
-    background-color:            #dff0d8;
-    border-color:                #d6e9c6;
-    color:                       #3c763d;
-
-    &:not(.no-icon) {
-      &:before {
-        content:                 $note-icon-success;
+    background-color:            $note-modern-success-bg;
+    border-color:                $note-modern-success-border;
+    color:                       $note-modern-success-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-success-icon;
+        }
       }
     }
-
     a {
-      color:                     #3c763d;
-      border-bottom:   1px solid #3c763d;
-
+      color:                     $note-modern-success-text;
+      border-bottom:   1px solid $note-modern-success-text;
       &:hover {
-        color:                   #2b542c;
-        border-bottom: 1px solid #2b542c;
+        color:                   $note-modern-success-hover;
+        border-bottom: 1px solid $note-modern-success-hover;
       }
     }
   }
 
   &.warning {
-    background-color:            #fcf8e3;
-    border-color:                #faebcc;
-    color:                       #8a6d3b;
-
-    &:not(.no-icon) {
-      &:before {
-        content:                 $note-icon-warning;
+    background-color:            $note-modern-warning-bg;
+    border-color:                $note-modern-warning-border;
+    color:                       $note-modern-warning-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-warning-icon;
+        }
       }
     }
-
     a {
-      color:                     #8a6d3b;
-      border-bottom:   1px solid #8a6d3b;
-
+      color:                     $note-modern-warning-text;
+      border-bottom:   1px solid $note-modern-warning-text;
       &:hover {
-        color:                   #66512c;
-        border-bottom: 1px solid #66512c;
+        color:                   $note-modern-warning-hover;
+        border-bottom: 1px solid $note-modern-warning-hover;
       }
     }
   }
 
   &.danger {
-    background-color:            #f2dede;
-    border-color:                #ebccd1;
-    color:                       #a94442;
-
-    &:not(.no-icon) {
-      &:before {
-        content:                 $note-icon-danger;
+    background-color:            $note-modern-danger-bg;
+    border-color:                $note-modern-danger-border;
+    color:                       $note-modern-danger-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-danger-icon;
+        }
       }
     }
-
     a {
-      color:                     #a94442;
-      border-bottom:   1px solid #a94442;
-
+      color:                     $note-modern-danger-text;
+      border-bottom:   1px solid $note-modern-danger-text;
       &:hover {
-        color:                   #843534;
-        border-bottom: 1px solid #843534;
+        color:                   $note-modern-danger-hover;
+        border-bottom: 1px solid $note-modern-danger-hover;
       }
     }
   }
