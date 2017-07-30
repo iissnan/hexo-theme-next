@@ -22,6 +22,7 @@ authoricon: heart
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
 
+
 # ---------------------------------------------------------------
 # SEO Settings
 # ---------------------------------------------------------------
@@ -38,6 +39,7 @@ seo: false
 # subtitle: Subtitle
 index_with_subtitle: false
 
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -45,13 +47,12 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
-  tags: /tags
+  #categories: /categories/
+  #about: /about/
+  archives: /archives/
+  tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404.html
-
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -71,8 +72,6 @@ menu_icons:
   commonweal: heartbeat
 
 
-
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -84,65 +83,14 @@ scheme: Muse
 
 
 # ---------------------------------------------------------------
-# Font Settings
-# - Find fonts on Google Fonts (https://www.google.com/fonts)
-# - All fonts set here will have the following styles:
-#     light, light italic, normal, normal italic, bold, bold italic
-# - Be aware that setting too much fonts will cause site running slowly
-# - Introduce in 5.0.1
-# ---------------------------------------------------------------
-font:
-  enable: true
-
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
-
-  # Global font settings used on <body> element.
-  global:
-    # external: true will load this font family from host.
-    external: true
-    family: Lato
-
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
-  # Fallback to `global` font settings.
-  headings:
-    external: true
-    family:
-
-  # Font settings for posts
-  # Fallback to `global` font settings.
-  posts:
-    external: true
-    family:
-
-  # Font settings for Logo
-  # Fallback to `global` font settings.
-  # The `size` option use `px` as unit
-  logo:
-    external: true
-    family:
-    size:
-
-  # Font settings for <code> and code blocks.
-  codes:
-    external: true
-    family:
-    size:
-
-
-
-
-# ---------------------------------------------------------------
 # Sidebar Settings
 # ---------------------------------------------------------------
-
 
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 #social:
   #LinkLabel: Link
-
 
 # Social Links Icons
 # Icon Mapping:
@@ -167,12 +115,17 @@ social_icons:
   StackOverflow: stack-overflow
   Weibo: weibo
 
+# Blog rolls
+#links_title: Links
+#links_layout: block
+#links_layout: inline
+#links:
+  #Title: http://example.com/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 #avatar:
-
 
 # Table Of Contents in the Sidebar
 toc:
@@ -183,14 +136,12 @@ toc:
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
-  
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 #creative_commons: by-nc-sa
 #creative_commons:
-
 
 sidebar:
   # Sidebar Position, available value: left | right
@@ -216,14 +167,9 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-
-
-# Blog rolls
-#links_title: Links
-#links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
+  
+  # Enable sidebar on narrow view
+  onmobile: false
 
 
 # ---------------------------------------------------------------
@@ -279,7 +225,6 @@ post_copyright:
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 
-
 # ---------------------------------------------------------------
 # Misc Theme Settings
 # ---------------------------------------------------------------
@@ -307,6 +252,53 @@ highlight_theme: normal
 
 
 # ---------------------------------------------------------------
+# Font Settings
+# - Find fonts on Google Fonts (https://www.google.com/fonts)
+# - All fonts set here will have the following styles:
+#     light, light italic, normal, normal italic, bold, bold italic
+# - Be aware that setting too much fonts will cause site running slowly
+# - Introduce in 5.0.1
+# ---------------------------------------------------------------
+font:
+  enable: true
+
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  host:
+
+  # Global font settings used on <body> element.
+  global:
+    # external: true will load this font family from host.
+    external: true
+    family: Lato
+
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family:
+
+  # Font settings for posts
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo
+  # Fallback to `global` font settings.
+  # The `size` option use `px` as unit
+  logo:
+    external: true
+    family:
+    size:
+
+  # Font settings for <code> and code blocks.
+  codes:
+    external: true
+    family:
+    size:
+
+
+# ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
 
@@ -314,8 +306,7 @@ highlight_theme: normal
 mathjax:
   enable: false
   per_page: false
-  cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
 han: false
@@ -337,9 +328,6 @@ disqus:
 
 # Hypercomments
 #hypercomments_id:
-
-# Gentie productKey
-#gentie_productKey:
 
 # changyan
 changyan:
@@ -427,11 +415,11 @@ vkontakte_api:
 
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
-rating: 
+rating:
   enable: false
   id:     #<app_id>
   color:  fc6423
-  
+
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
@@ -497,6 +485,7 @@ algolia_search:
     hits_stats: "${hits} results found in ${time} ms"
 
 # Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
   enable: false
   # if auto, trigger search by changing input
@@ -504,6 +493,11 @@ local_search:
   trigger: auto
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
+
+
+# ---------------------------------------------------------------
+# Tags Settings
+# ---------------------------------------------------------------
 
 # External URL with BASE64 encrypt & decrypt.
 # Usage: {% exturl text url "title" %}

@@ -54,7 +54,7 @@
     x = f.random,
     targetA = false;
   c.width = d * l, c.height = r * l, a.scale(l, l), a.globalAlpha = .6, document.onclick = e, document.ontouchend = e, setTimeout(function() {
-    e()
-  }, 100)
-
+    targetA = true;
+    e();
+  }, 100);
 }();
