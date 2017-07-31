@@ -40,7 +40,9 @@
     var tabNav = '';
     var tabContent = '';
 
+    /*jshint camelcase: false */
     !tabName && hexo.log.warn('Tabs block must have unique name!');
+    /*jshint camelcase: true */
 
     while (match = tabBlock.exec(content)) {
       matches.push(match[1]);
@@ -61,12 +63,12 @@
 
       ((tabCaption.length == 0) && (tabIcon.length == 0)) && (tabCaption = tabName + ' ' + tabId);
 
-      var is_onlyicon = (tabIcon.length > 0 && tabCaption.length == 0) ? 'style="text-align: center;' : '';
-      tabIcon.length > 0 && (tabIcon = '<i class="fa fa-' + tabIcon.trim() + '"' + is_onlyicon + '"></i>');
+      var isOnlyicon = (tabIcon.length > 0 && tabCaption.length == 0) ? 'style="text-align: center;' : '';
+      tabIcon.length > 0 && (tabIcon = '<i class="fa fa-' + tabIcon.trim() + '"' + isOnlyicon + '"></i>');
 
-      var is_active = ((tabActive.length > 0 && tabActive == tabId) || (tabActive.length == 0 && tabId == 1)) ? ' active' : '';
-      tabNav += '<li class="tab' + is_active + '"><a href="#' + tabHref + '">' + tabIcon + tabCaption + '</a></li>';
-      tabContent += '<div class="tab-pane' + is_active + '" id="' + tabHref + '">' + postContent + '</div>';
+      var isActive = ((tabActive.length > 0 && tabActive == tabId) || (tabActive.length == 0 && tabId == 1)) ? ' active' : '';
+      tabNav += '<li class="tab' + isActive + '"><a href="#' + tabHref + '">' + tabIcon + tabCaption + '</a></li>';
+      tabContent += '<div class="tab-pane' + isActive + '" id="' + tabHref + '">' + postContent + '</div>';
     }
 
     tabNav = '<ul class="nav-tabs">' + tabNav + '</ul>';
