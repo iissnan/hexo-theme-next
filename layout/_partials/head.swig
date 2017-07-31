@@ -116,6 +116,7 @@
     scheme: '{{ theme.scheme }}',
     sidebar: {{ theme.sidebar | json_encode }},
     fancybox: {{ theme.fancybox }},
+    tabs: {{ theme.tabs.enable }},
     motion: {{ theme.use_motion }},
     duoshuo: {
       userId: '{{ theme.duoshuo_info.user_id | default() }}',
