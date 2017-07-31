@@ -230,7 +230,7 @@ post_copyright:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: true
+mobile_layout_economy: false
 
 # Android Chrome header panel color ($black-deep).
 android_chrome_color: "#222"
@@ -516,6 +516,14 @@ note:
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   light_bg_offset: 0
+
+# Tabs tag.
+tabs:
+  enable: true
+  transition:
+    tabs: false
+    labels: true
+  border_radius: 3
 
 
 #! ---------------------------------------------------------------
