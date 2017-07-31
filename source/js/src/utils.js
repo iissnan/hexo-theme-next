@@ -51,13 +51,12 @@ NexT.utils = NexT.$u = {
    */
   registerTabsTag: function () {
     var tNav = '.tabs ul.nav-tabs ';
-    var tContent = '.tabs .tab-content .tab-pane';
 
     // Binding `nav-tabs` & `tab-content` by real time permalink changing.
     $(function() {
       $(window).bind('hashchange', function() {
         var tHash = location.hash;
-        if (tHash != '') {
+        if (tHash !== '') {
           $(tNav + 'li:has(a[href="' + tHash + '"])').addClass('active').siblings().removeClass('active');
           $(tHash).addClass('active').siblings().removeClass('active');
         }
@@ -75,8 +74,8 @@ NexT.utils = NexT.$u = {
         $(tActive).addClass('active').siblings().removeClass('active');
 
         // Clear location hash in browser if #permalink exists.
-        if (location.hash != '') {
-          history.pushState("", document.title, window.location.pathname + window.location.search);
+        if (location.hash !== '') {
+          history.pushState('', document.title, window.location.pathname + window.location.search);
         }
       }
     });
@@ -164,7 +163,7 @@ NexT.utils = NexT.$u = {
         wrap.style.width = '100%';
         wrap.style.paddingTop = videoRatio + '%';
         // Fix for appear inside tabs tag.
-        (wrap.style.paddingTop == '') && (wrap.style.paddingTop = '50%');
+        (wrap.style.paddingTop === '') && (wrap.style.paddingTop = '50%');
 
         // Add the iframe inside our newly created <div>
         var iframeParent = iframe.parentNode;
