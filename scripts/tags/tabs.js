@@ -28,7 +28,9 @@
 'use strict';
 
   function postTabs (args, content) {
+    /*jshint camelcase: false */
     var tab_block = /<!--\s*tab (.*?)\s*-->\n([\w\W\s\S]*?)<!--\s*endtab\s*-->/g;
+    /*jshint camelcase: true */
 
     var args = args.join(' ').split(',');
     /*jshint camelcase: false */
@@ -52,11 +54,13 @@
     }
 
     for (var i = 0; i < matches.length; i += 2) {
+      /*jshint camelcase: false */
       var tab_parameters = matches[i].split('@');
       var post_content = matches[i + 1];
       var tab_caption = tab_parameters[0] || '';
       var tab_icon = tab_parameters[1] || '';
       var tab_href =  '';
+      /*jshint camelcase: true */
 
       post_content = hexo.render.renderSync({text: post_content, engine: 'markdown'});
 
