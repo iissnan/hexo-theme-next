@@ -28,59 +28,51 @@
 'use strict';
 
   function postTabs (args, content) {
-    /*jshint camelcase: false */
-    var tab_block = /<!--\s*tab (.*?)\s*-->\n([\w\W\s\S]*?)<!--\s*endtab\s*-->/g;
-    /*jshint camelcase: true */
+    var tabBlock = /<!--\s*tab (.*?)\s*-->\n([\w\W\s\S]*?)<!--\s*endtab\s*-->/g;
 
     var args = args.join(' ').split(',');
-    /*jshint camelcase: false */
-    var tab_name = args[0];
-    var tab_active = args[1] || '';
-    /*jshint camelcase: true */
+    var tabName = args[0];
+    var tabActive = args[1] || '';
 
     var matches = [];
     var match;
-    /*jshint camelcase: false */
-    var tab_id = 0;
-    var tab_nav = '';
-    var tab_content = '';
-    /*jshint camelcase: true */
+    var tabId = 0;
+    var tabNav = '';
+    var tabContent = '';
 
-    !tab_name && hexo.log.warn('Tabs block must have unique name!');
+    !tabName && hexo.log.warn('Tabs block must have unique name!');
 
-    while (match = tab_block.exec(content)) {
+    while (match = tabBlock.exec(content)) {
       matches.push(match[1]);
       matches.push(match[2]);
     }
 
     for (var i = 0; i < matches.length; i += 2) {
-      /*jshint camelcase: false */
-      var tab_parameters = matches[i].split('@');
-      var post_content = matches[i + 1];
-      var tab_caption = tab_parameters[0] || '';
-      var tab_icon = tab_parameters[1] || '';
-      var tab_href =  '';
-      /*jshint camelcase: true */
+      var tabParameters = matches[i].split('@');
+      var postContent = matches[i + 1];
+      var tabCaption = tabParameters[0] || '';
+      var tabIcon = tabParameters[1] || '';
+      var tabHref =  '';
 
-      post_content = hexo.render.renderSync({text: post_content, engine: 'markdown'});
+      postContent = hexo.render.renderSync({text: postContent, engine: 'markdown'});
 
-      tab_id += 1;
-      tab_href = (tab_name + ' ' + tab_id).toLowerCase().split(' ').join('-');
+      tabId += 1;
+      tabHref = (tabName + ' ' + tabId).toLowerCase().split(' ').join('-');
 
-      ((tab_caption.length == 0) && (tab_icon.length == 0)) && (tab_caption = tab_name + ' ' + tab_id);
+      ((tabCaption.length == 0) && (tabIcon.length == 0)) && (tabCaption = tabName + ' ' + tabId);
 
-      var is_onlyicon = (tab_icon.length > 0 && tab_caption.length == 0) ? 'style="text-align: center;' : '';
-      tab_icon.length > 0 && (tab_icon = '<i class="fa fa-' + tab_icon.trim() + '"' + is_onlyicon + '"></i>');
+      var is_onlyicon = (tabIcon.length > 0 && tabCaption.length == 0) ? 'style="text-align: center;' : '';
+      tabIcon.length > 0 && (tabIcon = '<i class="fa fa-' + tabIcon.trim() + '"' + is_onlyicon + '"></i>');
 
-      var is_active = ((tab_active.length > 0 && tab_active == tab_id) || (tab_active.length == 0 && tab_id == 1)) ? ' active' : '';
-      tab_nav += '<li class="tab' + is_active + '"><a href="#' + tab_href + '">' + tab_icon + tab_caption + '</a></li>';
-      tab_content += '<div class="tab-pane' + is_active + '" id="' + tab_href + '">' + post_content + '</div>';
+      var is_active = ((tabActive.length > 0 && tabActive == tabId) || (tabActive.length == 0 && tabId == 1)) ? ' active' : '';
+      tabNav += '<li class="tab' + is_active + '"><a href="#' + tabHref + '">' + tabIcon + tabCaption + '</a></li>';
+      tabContent += '<div class="tab-pane' + is_active + '" id="' + tabHref + '">' + postContent + '</div>';
     }
 
-    tab_nav = '<ul class="nav-tabs">' + tab_nav + '</ul>';
-    tab_content = '<div class="tab-content">' + tab_content + '</div>';
+    tabNav = '<ul class="nav-tabs">' + tabNav + '</ul>';
+    tabContent = '<div class="tab-content">' + tabContent + '</div>';
 
-    return '<div class="tabs" id="' + tab_name.toLowerCase().split(' ').join('-') + '">' + tab_nav + tab_content + '</div>';
+    return '<div class="tabs" id="' + tabName.toLowerCase().split(' ').join('-') + '">' + tabNav + tabContent + '</div>';
   }
 
   hexo.extend.tag.register('tabs', postTabs, {ends: true});
