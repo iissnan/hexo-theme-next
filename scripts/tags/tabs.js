@@ -31,14 +31,18 @@
     var tab_block = /<!--\s*tab (.*?)\s*-->\n([\w\W\s\S]*?)<!--\s*endtab\s*-->/g;
 
     var args = args.join(' ').split(',');
+    /*jshint camelcase: false */
     var tab_name = args[0];
     var tab_active = args[1] || '';
+    /*jshint camelcase: true */
 
     var matches = [];
     var match;
+    /*jshint camelcase: false */
     var tab_id = 0;
     var tab_nav = '';
     var tab_content = '';
+    /*jshint camelcase: true */
 
     !tab_name && hexo.log.warn('Tabs block must have unique name!');
 
