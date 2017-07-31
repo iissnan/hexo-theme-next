@@ -523,7 +523,7 @@ tabs:
   transition:
     tabs: false
     labels: true
-  border_radius: 3
+  border_radius: 0
 
 
 #! ---------------------------------------------------------------
