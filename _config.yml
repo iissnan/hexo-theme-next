@@ -161,7 +161,7 @@ sidebar:
 
   # Sidebar offset from top menubar in pixels.
   offset: 12
-  offset_float: 0
+  offset_float: 12
 
   # Back to top in sidebar
   b2t: false
