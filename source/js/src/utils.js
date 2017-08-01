@@ -237,7 +237,7 @@ NexT.utils = NexT.$u = {
   },
 
   displaySidebar: function () {
-    if (!this.isDesktop() || this.isPisces()) {
+    if (!this.isDesktop() || this.isPisces() || this.isGemini()) {
       return;
     }
     $('.sidebar-toggle').trigger('click');
@@ -249,6 +249,10 @@ NexT.utils = NexT.$u = {
 
   isPisces: function () {
     return CONFIG.scheme === 'Pisces';
+  },
+
+  isGemini: function () {
+    return CONFIG.scheme === 'Gemini';
   },
 
   getScrollbarWidth: function () {
@@ -267,6 +271,6 @@ NexT.utils = NexT.$u = {
    * @returns {Boolean}
    */
   needAffix: function () {
-    return this.isPisces();
+    return this.isPisces() || this.isGemini();
   }
 };
