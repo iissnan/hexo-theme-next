@@ -11,6 +11,10 @@
   {% endif %}
 
   <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
+  {##################}
+  {### POST BLOCK ###}
+  {##################}
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -392,6 +396,10 @@
         <div class="post-eof"></div>
       {% endif %}
     </footer>
+  </div>
+  {######################}
+  {### END POST BLOCK ###}
+  {######################}
   </article>
 
 {% endmacro %}
