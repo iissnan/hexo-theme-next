@@ -331,6 +331,7 @@ changyan:
 
 # Share
 #jiathis:
+  ##uid: Get this uid from http://www.jiathis.com/
 # Warning: JiaThis does not support https.
 #add_this_id:
 
