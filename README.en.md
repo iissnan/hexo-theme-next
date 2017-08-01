@@ -53,11 +53,11 @@ In order to resolve this issue, NexT will take advantage of Hexo [Data files](ht
 
 If you prefer Hexo 2.x, you can still use the old approach for configurations. NexT is still compatible with Hexo 2.x.
 
-### Benefits
+#### Benefits
 
 With this feature, now you can put all your configurations into one place (`source/_data/next.yml`), you don't need to touch `next/_config.yml`. If there are any new options in new releases, you just need to copy those options from `next/_config.yml`, paste into `_data/next.yml` and set their values to whatever you want.
 
-### How to use this feature
+#### How to use this feature
 
 1. Please ensure you are using Hexo 3 (or above)
 2. Create an file named `next.yml` in site's `source/_data` directory (create `_data` directory if it did not exist)
