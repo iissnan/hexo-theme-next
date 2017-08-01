@@ -18,6 +18,6 @@ function postLabel (args) {
   !text && hexo.log.warn('Label text must be defined!');
 
   return '<span class="label ' + classes + '">' + text + '</span>';
-};
+}
 
 hexo.extend.tag.register('label', postLabel, { ends: false });
