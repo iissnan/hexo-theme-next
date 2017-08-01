@@ -43,7 +43,8 @@
 @import "post-nav";
 @import "post-eof";
 @import "post-gallery";
-@import "post-reward" if hexo-config('alipay') or hexo-config('wechatpay');
+@import "post-reward" if hexo-config('alipay') or hexo-config('wechatpay') or hexo-config('bitcoin');
 @import "post-copyright" if hexo-config('post_copyright.enable');
 @import "post-wordcount" if !hexo-config('post_wordcount.separated_meta');
 @import "post-widgets" if (hexo-config('facebook_sdk.enable') and hexo-config('facebook_sdk.like_button')) or (hexo-config('vkontakte_api.enable') and hexo-config('vkontakte_api.like')) or hexo-config('rating.enable');
+@import "post-rtl";
