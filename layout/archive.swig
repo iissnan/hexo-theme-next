@@ -12,7 +12,7 @@
   {### ARCHIVE BLOCK ###}
   {#####################}
   <div class="post-block archive">
-    <section id="posts" class="posts-collapse">
+    <div id="posts" class="posts-collapse">
       <span class="archive-move-on"></span>
 
       <span class="archive-page-counter">
@@ -47,7 +47,7 @@
 
       {% endfor %}
 
-    </section>
+    </div>
   </div>
   {#########################}
   {### END ARCHIVE BLOCK ###}
