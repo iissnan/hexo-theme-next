@@ -52,7 +52,7 @@ menu:
   archives: /archives/
   tags: /tags/
   #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  #commonweal: /404/
 
 # Enable/Disable menu icons.
 # Icon Mapping:
