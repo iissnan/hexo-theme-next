@@ -18,7 +18,10 @@
 {% block content %}
 
   <div id="posts" class="posts-expand">
-    <div class="post page">
+    {##################}
+    {### PAGE BLOCK ###}
+    {##################}
+    <div class="post-block page">
       {% include '_partials/page-header.swig' %}
       {#################}
       {### PAGE BODY ###}
@@ -51,6 +54,9 @@
       {### END PAGE BODY ###}
       {#####################}
     </div>
+    {######################}
+    {### END PAGE BLOCK ###}
+    {######################}
   </div>
 
 {% endblock %}
