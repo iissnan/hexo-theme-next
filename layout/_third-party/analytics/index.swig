@@ -1,3 +1,4 @@
+{% include 'busuanzi-counter.swig' %}
 {% include 'facebook-sdk.swig' %}
 {% include 'vkontakte-api.swig' %}
 {% include 'google-analytics.swig' %}
