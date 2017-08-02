@@ -18,7 +18,7 @@ NexT.utils = NexT.$u = {
           $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
         }
 
-        $imageWrapLink.addClass('fancybox fancybox.image');
+        $imageWrapLink.addClass('fancybox');
         $imageWrapLink.attr('rel', 'group');
 
         if (imageTitle) {
