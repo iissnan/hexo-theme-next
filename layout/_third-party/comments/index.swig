@@ -4,3 +4,4 @@
 {% include 'youyan.swig' %}
 {% include 'livere.swig' %}
 {% include 'changyan.swig' %}
+{% include 'valine.swig' %}
