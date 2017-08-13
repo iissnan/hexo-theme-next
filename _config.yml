@@ -336,6 +336,18 @@ changyan:
   appid:
   appkey:
 
+    
+# Valine. 
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://github.com/xCss/Valine
+valine:
+  enable: false
+  appid:  # your leancloud application appid
+  appkey:  # your leancloud application appkey
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Comment input placeholder
+
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
@@ -388,6 +400,7 @@ duoshuo_info:
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
+
 
 
 # Facebook SDK Support.
