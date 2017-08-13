@@ -6,11 +6,11 @@
     new Valine({
         av: AV,
         el: '#vcomments' ,
-        // verify: true,
-        // notify: true,
+        verify: {{ theme.valine.verify }},
+        notify: {{ theme.valine.notify }},
         app_id: '{{ theme.valine.appid }}',
         app_key: '{{ theme.valine.appkey }}',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+        placeholder: '{{ theme.valine.placeholder }}'
     });
   </script>
 {% endif %}
