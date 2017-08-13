@@ -344,6 +344,9 @@ valine:
   enable: false
   appid:  # your leancloud application appid
   appkey:  # your leancloud application appkey
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: ヾﾉ≧∀≦)o来啊，快活啊! # comment input placeholder
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
