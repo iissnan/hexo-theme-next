@@ -22,8 +22,12 @@ You may delete this recomendations and use template which is placed below.
 
 
 ### Steps to reproduce the behavior <!-- (重现步骤) -->
-Link to demo site with this issue: N/A
-Link(s) to source code or any usefull link(s): N/A
+1. N/A
+2. N/A
+3. N/A
+
+* Link to demo site with this issue: N/A
+* Link(s) to source code or any usefull link(s): N/A
 
 ### NexT Information
 
