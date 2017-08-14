@@ -19,7 +19,7 @@
 }
 
 .post-wordcount {
-  display: inline-block;
+  if !hexo-config('post_wordcount.separated_meta') { display: inline-block; }
 }
 
 .post-meta-divider {
