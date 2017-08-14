@@ -168,7 +168,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-  
+
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -337,8 +337,8 @@ changyan:
   appid:
   appkey:
 
-    
-# Valine. 
+
+# Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
@@ -356,6 +356,17 @@ valine:
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
+
+# Gitalk
+# more info please open https://github.com/gitalk/gitalk
+gitalk:
+  enable: false
+  clientID:
+  clientSecret:
+  repo:
+  owner:
+  admin: # support multiple admins split with comma, e.g. foo,bar
+  pagerDirection: first
 
 # Baidu Share
 # Available value:
