@@ -33,8 +33,7 @@
 Issue Number(s): N/A
 
 ## What is the new behavior?
-1. 
-2. 
+Description about this pull, in several words...
 
 * Screens with this changes: N/A
 * Link to demo site with this changes: N/A
