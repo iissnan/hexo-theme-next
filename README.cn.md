@@ -22,6 +22,11 @@
 
 Any types of contribution are welcome. Thanks.
 
+**ATTENTION! Contributors on Chinese docs needed!**\
+Need to translate from [English docs](README.md) to Chinese docs.\
+Any help wanted!\
+Thank's a lot!
+
 ## 开发 Development
 
 NexT 主旨在于简洁优雅且易于使用，所以首先要尽量确保 NexT 的简洁易用性。
