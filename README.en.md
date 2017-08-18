@@ -1,10 +1,17 @@
 # NexT
 
-> NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
+NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
 [![gitter-image]][gitter-url]
 
-[Live Preview](http://notes.iissnan.com)
+<!--[Live Preview](http://notes.iissnan.com)-->
+
+## Live Preview
+
+* Muse scheme: [XiaMo](https://notes.wanghao.work) | [OAwan](https://oawan.me) | [Hui Wang](http://hui-wang.info)
+* Mist scheme: [Jeff](https://blog.zzbd.org) | [uchuhimo](http://uchuhimo.me) | [xirong](http://www.ixirong.com)
+* Pisces scheme: [Vi](http://notes.iissnan.com) | [Acris](https://blog.mrx.one) | [Rainy](https://rainylog.com)
+* Gemini scheme: [Ivan.Nginx](https://almostover.ru) | [Alynx](http://sh.alynx.xyz) | [Raincal](https://raincal.top)
 
 <!--
 ## Screenshots
