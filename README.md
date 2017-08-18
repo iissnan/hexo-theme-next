@@ -29,7 +29,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
 **2.** Get theme from GitHub.
 
-1. Get **[tagged release version](../../tags)** from GitHub (you can use any version you want):
+1. Get [tagged release version](../../tags) from GitHub (you can choose any version you want):
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
@@ -39,7 +39,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
 -->
-2. Get latest **master branch** (may be **unstable**):
+2. Get latest [master branch](../../archive/master.zip) (may be **unstable**):
 
        $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
