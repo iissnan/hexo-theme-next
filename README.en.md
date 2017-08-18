@@ -26,7 +26,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
 **2.** Get theme from GitHub.
 
-1. Get latest **[release version](../../releases)** from GitHub (at most cases stable **stable**):
+1. Get latest **[release version](../../releases)** from GitHub (at most cases **stable**):
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
@@ -47,7 +47,7 @@ $ cd themes/next
 $ git pull
 ```
 
-### Theme configurations using Hexo data files [#328](https://github.com/iissnan/hexo-theme-next/issues/328)
+### Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
 
 Currently, it is not smooth to update NexT theme from pulling or downloading new releases. It is quite often running into conflict status when updating NexT theme via `git pull`, or need to merge configurations manually when upgrading to new releases.
 
