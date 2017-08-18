@@ -27,19 +27,22 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
    _config.yml  node_modules  package.json  public  scaffolds  source  themes
    ```
 
-**2.** Get theme from GitHub.
+**2.** Get theme from GitHub. There are several variants to do it:
 
-1. Download [tagged release version](../../tags) from GitHub (you can choose any version you want):
+1. Download [tagged release version](../../tags).\
+   You can choose any version you want.
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
 <!--
-2. Get **[latest release version](../../releases/latest)** from GitHub (at most cases **stable**):
+2. Get [latest release version](../../releases/latest).\
+   At most cases **stable**, recommended for beginners.
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
 -->
-2. Download [latest master branch](../../archive/master.zip) (may be **unstable**):
+2. Download [latest master branch](../../archive/master.zip).\
+   May be **unstable**, recommended for developers.
 
        $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
