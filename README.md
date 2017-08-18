@@ -40,6 +40,10 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 2. Download [tagged release version](../../releases).\
    You must define version. Replace `v5.1.2` with any version from [tags list](../../tags).
 
+   [![git-image]][git-url]
+
+       $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
+
    [![curl-tar-image]][curl-tar-url]
 
        $ mkdir themes/next
