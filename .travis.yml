@@ -1,5 +1,10 @@
 language: node_js
 node_js: node
+
+ignore:
+  - *.md
+  - docs/*
+
 cache:
   directories:
     - node_modules
