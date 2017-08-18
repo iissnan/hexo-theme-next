@@ -32,7 +32,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 1. Download [latest release version](../../releases/latest).\
    At most cases **stable**. Recommended for most users.
 
-   ![curl-tar-wget](https://img.shields.io/badge/install%20dependencies-curl%20%7C%20tar%20%7C%20wget-blue.svg)
+   [![curl-tar-wget-image]][curl-tar-wget-url]
 
        $ mkdir themes/next
        $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
@@ -40,7 +40,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 2. Download [tagged release version](../../releases).\
    You must define version. Replace `v5.1.2` with any version from [tags list](../../tags).
 
-   ![curl-tar](https://img.shields.io/badge/install%20dependencies-curl%20%7C%20tar-blue.svg)
+   [![curl-tar-image]][curl-tar-url]
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
@@ -48,9 +48,14 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 3. Download [latest master branch](../../archive/master.zip).\
    May be **unstable**, but includes latest features. Recommended for developers.
 
-   ![git](https://img.shields.io/badge/install%20dependencies-git-blue.svg)
+   [![git-image]][git-url]
 
        $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+
+   [![curl-tar-image]][curl-tar-url]
+
+       $ mkdir themes/next
+       $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
 
 **3\.** Set theme in main **hexo root config** `_config.yml` file:
 
@@ -273,3 +278,10 @@ Contribution is welcome, feel free to open an issue and fork. Waiting for your p
 [rel-image]: https://img.shields.io/github/release/iissnan/hexo-theme-next.svg
 <!--[lic-image]: https://img.shields.io/npm/l/hexo-theme-next.svg-->
 [lic-image]: https://img.shields.io/dub/l/vibe-d.svg
+
+[git-image]: https://img.shields.io/badge/install%20with%20-git-blue.svg
+[curl-tar-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar-blue.svg
+[curl-tar-wget-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar%20%7C%20wget-blue.svg
+[git-url]: http://lmgtfy.com/?q=linux+git+install
+[curl-tar-url]: http://lmgtfy.com/?q=linux+curl+tar+install 
+[curl-tar-wget-url]: http://lmgtfy.com/?q=linux+curl+tar+wget+install
