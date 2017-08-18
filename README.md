@@ -20,7 +20,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
 ## Installation
 
-**1\.** Change dir to **hexo root** directory. There must be `node_modules`, `source`, `themes` and other directories:
+**1.** Change dir to **hexo root** directory. There must be `node_modules`, `source`, `themes` and other directories:
    ```sh
    $ cd hexo
    $ ls
@@ -29,44 +29,54 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
 **2.** Get theme from GitHub. There are several variants to do it:
 
-1. Download [latest release version](../../releases/latest).\
+### Download [latest release version](../../releases/latest).
    At most cases **stable**. Recommended for most users.
 
    [![curl-tar-wget-image]][curl-tar-wget-url]
 
-       $ mkdir themes/next
-       $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
+   ```sh
+   $ mkdir themes/next
+   $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
+   ```
 
-2. Download [tagged release version](../../releases).\
+### Download [tagged release version](../../releases).
    You must define version. Replace `v5.1.2` with any version from [tags list](../../tags).
 
    [![curl-tar-image]][curl-tar-url]
 
-       $ mkdir themes/next
-       $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
+   ```sh
+   $ mkdir themes/next
+   $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
+   ```
 
    [![git-image]][git-url]
 
-       $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
+   ```sh
+   $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
+   ```
 
-3. Download [latest master branch](../../archive/master.zip).\
+### Download [latest master branch](../../archive/master.zip).
    May be **unstable**, but includes latest features. Recommended for developers.
 
    [![curl-tar-image]][curl-tar-url]
 
-       $ mkdir themes/next
-       $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
+   ```sh
+   $ mkdir themes/next
+   $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
+   ```
 
    [![git-image]][git-url]
 
-       $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+   ```sh
+   $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+   ```
 
    Clone command will give you the **whole repository**. And in any time you can switch to any tagged release.\
    Get tags list:
 
-       $ cd themes/next
-       $ git tag -l
-   ```
+   ```sh
+   $ cd themes/next
+   $ git tag -l
    …
    v5.0.0
    v5.0.1
@@ -77,12 +87,20 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
    For example, you want to switch on `v5.1.0` [tagged release version](../../tags). Input the following command:
 
-       $ git checkout tags/v5.1.0
-   ```
+   ```sh
+   $ git checkout tags/v5.1.0
+   Note: checking out 'tags/v5.1.0'.
+   …
    HEAD now on 1f72f68... CSS: Remove global list-style setting of ul
    ```
 
-**3\.** Set theme in main **hexo root config** `_config.yml` file:
+   And if you want to switch back on [master branch](../../commits/master), input this command:
+
+   ```sh
+   $ git checkout master
+   ```
+
+**3.** Set theme in main **hexo root config** `_config.yml` file:
 
     theme: next
 
