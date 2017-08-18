@@ -3,8 +3,10 @@
 NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
 [![gitter-image]][gitter-url]
-
-<!--[Live Preview](http://notes.iissnan.com)-->
+[![travis-image]][travis-url]
+[![mnt-image]](../../commits/master)
+[![hexo-image]][hexo-url]
+[![lic-image]](LICENSE)
 
 ## Live Preview
 
@@ -13,41 +15,36 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 * Pisces scheme: [Vi](http://notes.iissnan.com) | [Acris](https://blog.mrx.one) | [Rainy](https://rainylog.com)
 * Gemini scheme: [Ivan.Nginx](https://almostover.ru) | [Alynx](http://sh.alynx.xyz) | [Raincal](https://raincal.top)
 
-<!--
-## Screenshots
-
-* Desktop
-![Desktop Preview](http://iissnan.com/nexus/next/desktop-preview.png)
-
-* Sidebar
-
-![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-preview.png)
-
-* Sidebar (Post details page)
-
-![Desktop Sidebar Preview](http://iissnan.com/nexus/next/desktop-sidebar-toc.png)
-
-* Mobile
-
-![Mobile Preview](http://iissnan.com/nexus/next/mobile.png)
--->
-
 ## Installation
 
-1. Get it from GitHub
+**1\.** Change dir to **hexo root** directory. There must be `node_modules`, `source`, `themes` and other directories:
+   ```sh
+   $ cd hexo
+   $ ls
+   _config.yml  node_modules  package.json  public  scaffolds  source  themes
+   ```
 
-        $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+**2.** Get theme from GitHub.
 
-2. Add it to `_config.yml`
+1. Get latest **[release version](../../releases)** from GitHub (at most cases stable **stable**):
 
-        theme: next
+       $ mkdir themes/next
+       $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
+
+2. Get latest **master branch** (may be **unstable**):
+
+       $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+
+**3\.** Set theme in main **hexo root config** `_config.yml` file:
+
+    theme: next
 
 
 ## Update
 
-```shell
-cd themes/next
-git pull
+```sh
+$ cd themes/next
+$ git pull
 ```
 
 ### Theme configurations using Hexo data files [#328](https://github.com/iissnan/hexo-theme-next/issues/328)
@@ -230,7 +227,7 @@ since: 2013
 ## Contributing
 
 Contribution is welcome, feel free to open an issue and fork. Waiting for your pull request.
-
+<!--
 [![hexo-image]][hexo-url]
 [![bower-image]][bower-url]
 [![jquery-image]][jquery-url]
@@ -241,8 +238,20 @@ Contribution is welcome, feel free to open an issue and fork. Waiting for your p
 [bower-url]: http://bower.io
 [jquery-image]: https://img.shields.io/badge/jquery-1.9-blue.svg?style=flat-square
 [jquery-url]: http://jquery.com/
+-->
 
 [browser-image]: https://img.shields.io/badge/browser-%20chrome%20%7C%20firefox%20%7C%20opera%20%7C%20safari%20%7C%20ie%20%3E%3D%209-lightgrey.svg
 [browser-url]: https://www.browserstack.com
+
 [gitter-image]: https://badges.gitter.im/Join%20Chat.svg
 [gitter-url]: https://gitter.im/iissnan/hexo-theme-next?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+[travis-image]: https://travis-ci.org/iissnan/hexo-theme-next.svg?branch=master
+[travis-url]: https://travis-ci.org/iissnan/hexo-theme-next?branch=master "Travis CI"
+
+[hexo-image]: https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg
+[hexo-url]: http://hexo.io
+
+[mnt-image]: https://img.shields.io/maintenance/yes/2017.svg
+<!--[lic-image]: https://img.shields.io/npm/l/hexo-theme-next.svg-->
+[lic-image]: https://img.shields.io/dub/l/vibe-d.svg
