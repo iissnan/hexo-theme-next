@@ -40,26 +40,47 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 2. Download [tagged release version](../../releases).\
    You must define version. Replace `v5.1.2` with any version from [tags list](../../tags).
 
-   [![git-image]][git-url]
-
-       $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
-
    [![curl-tar-image]][curl-tar-url]
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
 
-3. Download [latest master branch](../../archive/master.zip).\
-   May be **unstable**, but includes latest features. Recommended for developers.
-
    [![git-image]][git-url]
 
-       $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+       $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
+
+3. Download [latest master branch](../../archive/master.zip).\
+   May be **unstable**, but includes latest features. Recommended for developers.
 
    [![curl-tar-image]][curl-tar-url]
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
+
+   [![git-image]][git-url]
+
+       $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+
+   Clone command will give you the **whole repository**. And in any time you can switch to any tagged release.\
+   Get tags list:
+
+       $ cd themes/next
+       $ git tag -l
+   ```
+   …
+   v5.0.0
+   v5.0.1
+   v5.1.0
+   v5.1.1
+   v5.1.2
+   ```
+
+   For example, you want to switch on `v5.1.0` [tagged release version](../../tags). Input the following command:
+
+       $ git checkout tags/v5.1.0
+   ```
+   HEAD now on 1f72f68... CSS: Remove global list-style setting of ul
+   ```
 
 **3\.** Set theme in main **hexo root config** `_config.yml` file:
 
