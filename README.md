@@ -3,8 +3,9 @@
 NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
 [![gitter-image]][gitter-url]
-[![travis-image]][travis-url]
 [![mnt-image]](../../commits/master)
+[![travis-image]][travis-url]
+[![rel-image]](../../releases)
 [![hexo-image]][hexo-url]
 [![lic-image]](LICENSE)
 
@@ -255,5 +256,6 @@ Contribution is welcome, feel free to open an issue and fork. Waiting for your p
 [hexo-url]: http://hexo.io
 
 [mnt-image]: https://img.shields.io/maintenance/yes/2017.svg
+[rel-image]: https://img.shields.io/github/release/iissnan/hexo-theme-next.svg
 <!--[lic-image]: https://img.shields.io/npm/l/hexo-theme-next.svg-->
 [lic-image]: https://img.shields.io/dub/l/vibe-d.svg
