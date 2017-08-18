@@ -32,7 +32,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 1. Download [latest release version](../../releases/latest).\
    At most cases **stable**. Recommended for most users.
 
-   ![curl-tar-wget](https://img.shields.io/badge/dependencies-curl%20%7C%20tar%20%7C%20wget-blue.svg)
+   ![curl-tar-wget](https://img.shields.io/badge/install%20dependencies-curl%20%7C%20tar%20%7C%20wget-blue.svg)
 
        $ mkdir themes/next
        $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
@@ -40,7 +40,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 2. Download [tagged release version](../../releases).\
    You must define version. Replace `v5.1.2` with any version from [tags list](../../tags).
 
-   ![curl-tar](https://img.shields.io/badge/dependencies-curl%20%7C%20tar-blue.svg)
+   ![curl-tar](https://img.shields.io/badge/install%20dependencies-curl%20%7C%20tar-blue.svg)
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
@@ -48,7 +48,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 3. Download [latest master branch](../../archive/master.zip).\
    May be **unstable**, but includes latest features. Recommended for developers.
 
-   ![git](https://img.shields.io/badge/dependencies-git-blue.svg)
+   ![git](https://img.shields.io/badge/install%20dependencies-git-blue.svg)
 
        $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
