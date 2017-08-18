@@ -29,20 +29,20 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
 **2.** Get theme from GitHub. There are several variants to do it:
 
-1. Download [tagged release version](../../tags).\
-   You can choose any version you want.
+1. Download [latest release version](../../releases/latest).\
+   At most cases **stable**. Recommended for most users.
+
+       $ mkdir themes/next
+       $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
+
+2. Download [tagged release version](../../releases).\
+   You must define version. Replace `v5.1.2` with any version from [tags list](../../tags).
 
        $ mkdir themes/next
        $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball/v5.1.2 | tar -zxv -C themes/next --strip-components=1
-<!--
-2. Get [latest release version](../../releases/latest).\
-   At most cases **stable**, recommended for beginners.
 
-       $ mkdir themes/next
-       $ curl -L https://api.github.com/repos/iissnan/hexo-theme-next/tarball | tar -zxv -C themes/next --strip-components=1
--->
-2. Download [latest master branch](../../archive/master.zip).\
-   May be **unstable**, recommended for developers.
+3. Download [latest master branch](../../archive/master.zip).\
+   May be **unstable**, but includes latest features. Recommended for developers.
 
        $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
