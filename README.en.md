@@ -2,6 +2,7 @@
 
 > NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
+[![gitter-image]][gitter-url]
 
 [Live Preview](http://notes.iissnan.com)
 
@@ -236,3 +237,5 @@ Contribution is welcome, feel free to open an issue and fork. Waiting for your p
 
 [browser-image]: https://img.shields.io/badge/browser-%20chrome%20%7C%20firefox%20%7C%20opera%20%7C%20safari%20%7C%20ie%20%3E%3D%209-lightgrey.svg
 [browser-url]: https://www.browserstack.com
+[gitter-image]: https://badges.gitter.im/Join%20Chat.svg
+[gitter-url]: https://gitter.im/iissnan/hexo-theme-next?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
