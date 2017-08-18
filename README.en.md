@@ -5,6 +5,7 @@
 
 [Live Preview](http://notes.iissnan.com)
 
+<!--
 ## Screenshots
 
 * Desktop
@@ -21,7 +22,7 @@
 * Mobile
 
 ![Mobile Preview](http://iissnan.com/nexus/next/mobile.png)
-
+-->
 
 ## Installation
 
@@ -213,8 +214,10 @@ since: 2013
 
 ## Browser support
 
-![Browser support](http://iissnan.com/nexus/next/browser-support.png)
+[![browser-image]][browser-url]
 
+[![Browser Stack](.github/browserstack_logo.png)](https://www.browserstack.com/)
+>**BrowserStack** is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
 
 ## Contributing
 
@@ -230,3 +233,6 @@ Contribution is welcome, feel free to open an issue and fork. Waiting for your p
 [bower-url]: http://bower.io
 [jquery-image]: https://img.shields.io/badge/jquery-1.9-blue.svg?style=flat-square
 [jquery-url]: http://jquery.com/
+
+[browser-image]: https://img.shields.io/badge/browser-%20chrome%20%7C%20firefox%20%7C%20opera%20%7C%20safari%20%7C%20ie%20%3E%3D%209-lightgrey.svg
+[browser-url]: https://www.browserstack.com
