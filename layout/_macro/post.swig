@@ -3,12 +3,18 @@
   {% set headlessPost = Array.prototype.indexOf.call(['quote', 'picture'], post.type) > -1 %}
 
   {% set post_class = 'post post-type-' + post.type | default('normal') %}
-  {% set post_class = post_class + ' ' + post_extra_class | default('') %}
+  {% if post_extra_class > 0 %}
+    {% set post_class = post_class + ' ' + post_extra_class | default('') %}
+  {% endif %}
   {% if post.sticky > 0 %}
     {% set post_class = post_class + ' ' + 'post-sticky' %}
   {% endif %}
 
   <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
+  {##################}
+  {### POST BLOCK ###}
+  {##################}
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -26,7 +32,7 @@
 
         {# Not to show title for quote posts that do not have a title #}
         {% if not (is_index and post.type === 'quote' and not post.title) %}
-          <{% if theme.seo %}h2{% else %}h1{% endif %} class="post-title" itemprop="name headline">{#
+          <{% if theme.seo %}h2{% else %}h1{% endif %} class="post-title{% if post.direction && post.direction.toLowerCase() === 'rtl' %} rtl{% endif %}" itemprop="name headline">{#
           #}{# Link posts #}{#
           #}{% if post.link %}
               {% if post.sticky > 0 %}
@@ -77,7 +83,7 @@
                 <i class="fa fa-calendar-check-o"></i>
               </span>
               {% if theme.post_meta.item_text %}
-                <span class="post-meta-item-text">{{ __('post.modified') }}</span>
+                <span class="post-meta-item-text">{{ __('post.modified') }}&#58;</span>
               {% endif %}
               <time title="{{ __('post.modified') }}" itemprop="dateModified" datetime="{{ moment(post.updated).format() }}">
                 {{ date(post.updated, config.date_format) }}
@@ -155,16 +161,6 @@
                 </a>
               </span>
               <!--/noindex-->
-            {% elseif is_post() and theme.gentie_productKey %}
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a class="cloud-tie-join-count" href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count join-count" itemprop="commentCount"></span>
-                </a>
-              </span>
             {% elseif theme.changyan.enable and theme.changyan.appid and theme.changyan.appkey %}
               <span class="post-comments-count">
               <span class="post-meta-divider">|</span>
@@ -191,7 +187,7 @@
                  <i class="fa fa-eye"></i>
                </span>
                {% if theme.post_meta.item_text %}
-                 <span class="post-meta-item-text">{{__('post.visitors')}} </span>
+                 <span class="post-meta-item-text">{{__('post.visitors')}}&#58;</span>
                {% endif %}
                  <span class="leancloud-visitors-count"></span>
              </span>
@@ -214,7 +210,7 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 {% if theme.post_wordcount.item_text %}
-                  <span class="post-meta-item-text">{{ __('post.wordcount') }}</span>
+                  <span class="post-meta-item-text">{{ __('post.wordcount') }}&#58;</span>
                 {% endif %}
                 <span title="{{ __('post.wordcount') }}">
                   {{ wordcount(post.content) }}
@@ -230,7 +226,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 {% if theme.post_wordcount.item_text %}
-                  <span class="post-meta-item-text">{{ __('post.min2read') }}</span>
+                  <span class="post-meta-item-text">{{ __('post.min2read') }} &asymp;</span>
                 {% endif %}
                 <span title="{{ __('post.min2read') }}">
                   {{ min2read(post.content) }}
@@ -249,7 +245,10 @@
       </header>
     {% endif %}
 
-    <div class="post-body{% if theme.han %} han-init-context{% endif %}" itemprop="articleBody">
+    {#################}
+    {### POST BODY ###}
+    {#################}
+    <div class="post-body{% if theme.han %} han-init-context{% endif %}{% if post.direction && post.direction.toLowerCase() === 'rtl' %} rtl{% endif %}" itemprop="articleBody">
 
       {# Gallery support #}
       {% if post.photos and post.photos.length %}
@@ -311,24 +310,27 @@
         {{ post.content }}
       {% endif  %}
     </div>
+    {#####################}
+    {### END POST BODY ###}
+    {#####################}
 
-    <div>
-      {% if not is_index %}
+    {% if theme.wechat_subscriber.enabled and not is_index %}
+      <div>
         {% include 'wechat-subscriber.swig' %}
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
 
-    <div>
-      {% if not is_index %}
+    {% if (theme.alipay or theme.wechatpay or theme.bitcoin) and not is_index %}
+      <div>
         {% include 'reward.swig' %}
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
 
-    <div>
-      {% if not is_index %}
+    {% if theme.post_copyright.enable and not is_index %}
+      <div>
         {% include 'post-copyright.swig' with { post: post } %}
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
 
     <footer class="post-footer">
       {% if post.tags and post.tags.length and not is_index %}
@@ -394,6 +396,10 @@
         <div class="post-eof"></div>
       {% endif %}
     </footer>
+  </div>
+  {######################}
+  {### END POST BLOCK ###}
+  {######################}
   </article>
 
 {% endmacro %}

@@ -1,6 +1,7 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="{{ theme.android_chrome_color }}">
 
 
 {% if theme.pace %}
@@ -115,6 +116,7 @@
     scheme: '{{ theme.scheme }}',
     sidebar: {{ theme.sidebar | json_encode }},
     fancybox: {{ theme.fancybox }},
+    tabs: {{ theme.tabs.enable }},
     motion: {{ theme.use_motion }},
     duoshuo: {
       userId: '{{ theme.duoshuo_info.user_id | default() }}',
