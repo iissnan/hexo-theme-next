@@ -1,0 +1,40 @@
+@import "../Pisces/_layout";
+@import "../Pisces/_brand";
+@import "../Pisces/_menu";
+@import "../Pisces/_sidebar";
+@import "../Pisces/_posts";
+
+// Rewrite _layout.styl
+// =================================================
+// For post blocks.
+.content-wrap {
+  padding: initial;
+  background: initial;
+  box-shadow: initial;
+  border-radius: initial;
+}
+
+.post-block {
+  margin-bottom: 12px;
+
+  background: white;
+  padding: $content-desktop-padding;
+  box-shadow: $box-shadow-inner;
+  border-radius: $border-radius-inner;
+}
+
+.posts-expand {
+  padding-top: initial;
+}
+
+.post-eof {
+  hide();
+}
+
+// For footer top alignment.
+.main {
+  padding-bottom: initial;
+}
+.footer {
+  bottom: auto;
+}

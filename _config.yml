@@ -22,6 +22,7 @@ authoricon: heart
 # Footer `powered-by` and `theme-info` copyright
 copyright: true
 
+
 # ---------------------------------------------------------------
 # SEO Settings
 # ---------------------------------------------------------------
@@ -38,6 +39,7 @@ seo: false
 # subtitle: Subtitle
 index_with_subtitle: false
 
+
 # ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
@@ -45,13 +47,12 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
-  tags: /tags
+  #categories: /categories/
+  #about: /about/
+  archives: /archives/
+  tags: /tags/
   #sitemap: /sitemap.xml
-  #commonweal: /404.html
-
+  #commonweal: /404/
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -71,8 +72,6 @@ menu_icons:
   commonweal: heartbeat
 
 
-
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -81,6 +80,184 @@ menu_icons:
 #scheme: Muse
 #scheme: Mist
 scheme: Pisces
+#scheme: Gemini
+
+
+# ---------------------------------------------------------------
+# Sidebar Settings
+# ---------------------------------------------------------------
+
+# Social Links
+# Key is the link label showing to end users.
+# Value is the target link (E.g. GitHub: https://github.com/iissnan)
+social:
+  #LinkLabel: Link
+  GitHub: https://github.com/GraysonLiu
+  Last.fm: https://www.last.fm/user/GraysonLiu
+  TV Time: https://www.tvtime.com/user/5202212/profile
+  Facebook: https://www.facebook.com/mrgraysonliu
+
+# Social Links Icons
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
+#   When an globe mask icon presenting up means that the item has no mapping icon.
+social_icons:
+  enable: true
+  icons_only: false
+  transition: false
+  # Icon Mappings.
+  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
+  GitHub: github
+  E-Mail: envelope
+  Google: google
+  Twitter: twitter
+  FB Page: facebook
+  VK Group: vk
+  Skype: skype
+  YouTube: youtube
+  Instagram: instagram
+  StackOverflow: stack-overflow
+  Weibo: weibo
+  Last.fm: lastfm-square
+  TV Time: television
+  Facebook: facebook-official
+
+# Blog rolls
+#links_title: Links
+#links_layout: block
+#links_layout: inline
+#links:
+  #Title: http://example.com/
+
+# Sidebar Avatar
+# in theme directory(source/images): /images/avatar.jpg
+# in site  directory(source/uploads): /uploads/avatar.jpg
+avatar: /images/avatar.jpg
+
+# Table Of Contents in the Sidebar
+toc:
+  enable: true
+
+  # Automatically add list number to toc.
+  number: true
+
+  # If true, all words will placed on next lines if header width longer then sidebar width.
+  wrap: false
+
+# Creative Commons 4.0 International License.
+# http://creativecommons.org/
+# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
+#creative_commons: by-nc-sa
+#creative_commons:
+
+sidebar:
+  # Sidebar Position, available value: left | right
+  position: left
+  #position: right
+
+  # Sidebar Display, available value:
+  #  - post    expand on posts automatically. Default.
+  #  - always  expand for all pages automatically
+  #  - hide    expand only when click on the sidebar toggle icon.
+  #  - remove  Totally remove sidebar including sidebar toggle.
+  display: post
+  #display: always
+  #display: hide
+  #display: remove
+
+  # Sidebar offset from top menubar in pixels.
+  offset: 12
+  offset_float: 12
+
+  # Back to top in sidebar
+  b2t: false
+
+  # Scroll percent label in b2t button
+  scrollpercent: false
+  
+  # Enable sidebar on narrow view
+  onmobile: false
+
+
+# ---------------------------------------------------------------
+# Post Settings
+# ---------------------------------------------------------------
+
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically saving scroll position on each post/page in cookies.
+save_scroll: false
+
+# Automatically excerpt description in homepage as preamble text.
+excerpt_description: true
+
+# Automatically Excerpt. Not recommend.
+# Please use <!-- more --> in the post to control excerpt accurately.
+auto_excerpt:
+  enable: false
+  length: 150
+
+# Post meta display settings
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: false
+  categories: true
+
+# Post wordcount display settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: false
+  min2read: false
+  totalcount: false
+  separated_meta: true
+
+# Wechat Subscriber
+#wechat_subscriber:
+  #enabled: true
+  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
+  #description: ex. subscribe to my blog by scanning my public wechat account
+
+# Reward
+#reward_comment: Donate comment here
+#wechatpay: /images/wechatpay.jpg
+#alipay: /images/alipay.jpg
+#bitcoin: /images/bitcoin.png
+
+# Declare license on posts
+post_copyright:
+  enable: false
+  license: CC BY-NC-SA 3.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+
+
+# ---------------------------------------------------------------
+# Misc Theme Settings
+# ---------------------------------------------------------------
+
+# Reduce padding / margin indents on devices with narrow width.
+mobile_layout_economy: false
+
+# Android Chrome header panel color ($black-deep).
+android_chrome_color: "#222"
+
+# Custom Logo.
+# !!Only available for Default Scheme currently.
+# Options:
+#   enabled: [true/false] - Replace with specific image
+#   image: url-of-image   - Images's url
+custom_logo:
+  enabled: false
+  image:
+
+# Code Highlight theme
+# Available value:
+#    normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: night
 
 
 # ---------------------------------------------------------------
@@ -130,168 +307,6 @@ font:
     size:
 
 
-
-
-# ---------------------------------------------------------------
-# Sidebar Settings
-# ---------------------------------------------------------------
-
-
-# Social Links
-# Key is the link label showing to end users.
-# Value is the target link (E.g. GitHub: https://github.com/iissnan)
-social:
-  #LinkLabel: Link
-  GitHub: https://github.com/GraysonLiu
-  Last.fm: https://www.last.fm/user/GraysonLiu
-  TV Time: https://www.tvtime.com/user/5202212/profile
-  Facebook: https://www.facebook.com/mrgraysonliu
-
-
-# Social Links Icons
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an globe mask icon presenting up means that the item has no mapping icon.
-social_icons:
-  enable: true
-  # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  Twitter: twitter
-  Weibo: weibo
-  Last.fm: lastfm-square
-  TV Time: television
-  Facebook: facebook-official
-
-
-# Sidebar Avatar
-# in theme directory(source/images): /images/avatar.jpg
-# in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: /images/avatar.jpg
-
-
-# Table Of Contents in the Sidebar
-toc:
-  enable: true
-
-  # Automatically add list number to toc.
-  number: true
-
-  # If true, all words will placed on next lines if header width longer then sidebar width.
-  wrap: false
-  
-
-# Creative Commons 4.0 International License.
-# http://creativecommons.org/
-# Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
-#creative_commons:
-
-
-sidebar:
-  # Sidebar Position, available value: left | right
-  position: left
-  #position: right
-
-  # Sidebar Display, available value:
-  #  - post    expand on posts automatically. Default.
-  #  - always  expand for all pages automatically
-  #  - hide    expand only when click on the sidebar toggle icon.
-  #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
-  #display: always
-  #display: hide
-  #display: remove
-
-  # Sidebar offset from top menubar in pixels.
-  offset: 12
-  offset_float: 0
-
-  # Back to top in sidebar
-  b2t: false
-
-  # Scroll percent label in b2t button
-  scrollpercent: false
-
-
-# Blog rolls
-#links_title: Links
-#links_layout: block
-#links_layout: inline
-#links:
-  #Title: http://example.com/
-
-
-# ---------------------------------------------------------------
-# Post Settings
-# ---------------------------------------------------------------
-
-# Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
-
-# Automatically saving scroll position on each post/page in cookies.
-save_scroll: false
-
-# Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
-
-# Automatically Excerpt. Not recommend.
-# Please use <!-- more --> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
-  length: 150
-
-# Post meta display settings
-post_meta:
-  item_text: true
-  created_at: true
-  updated_at: false
-  categories: true
-
-# Post wordcount display settings
-# Dependencies: https://github.com/willin/hexo-wordcount
-post_wordcount:
-  item_text: true
-  wordcount: false
-  min2read: false
-  separated_meta: true
-
-# Wechat Subscriber
-#wechat_subscriber:
-  #enabled: true
-  #qcode: /path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg
-  #description: ex. subscribe to my blog by scanning my public wechat account
-
-# Declare license on posts
-post_copyright:
-  enable: false
-  license: CC BY-NC-SA 3.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
-
-
-
-# ---------------------------------------------------------------
-# Misc Theme Settings
-# ---------------------------------------------------------------
-
-# Custom Logo.
-# !!Only available for Default Scheme currently.
-# Options:
-#   enabled: [true/false] - Replace with specific image
-#   image: url-of-image   - Images's url
-custom_logo:
-  enabled: false
-  image:
-
-
-# Code Highlight theme
-# Available value:
-#    normal | night | night eighties | night blue | night bright
-# https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night
-
-
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------
@@ -323,14 +338,23 @@ disqus:
 # Hypercomments
 #hypercomments_id:
 
-# Gentie productKey
-#gentie_productKey:
-
 # changyan
 changyan:
   enable: false
   appid:
   appkey:
+
+    
+# Valine. 
+# You can get your appid and appkey from https://leancloud.cn
+# more info please open https://github.com/xCss/Valine
+valine:
+  enable: false
+  appid:  # your leancloud application appid
+  appkey:  # your leancloud application appkey
+  notify: false # mail notifier , https://github.com/xCss/Valine/wiki
+  verify: false # Verification code
+  placeholder: Comment input placeholder
 
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
@@ -348,8 +372,11 @@ changyan:
 ##  type: button
 
 # Share
-#jiathis:
+# This plugin is more useful in China, make sure you known how to use it.
+# And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
+#jiathis:
+  ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
 # Share
@@ -383,6 +410,7 @@ duoshuo_info:
   #admin_nickname: Author
 
 
+
 # Facebook SDK Support.
 # https://github.com/iissnan/hexo-theme-next/pull/410
 facebook_sdk:
@@ -412,11 +440,11 @@ vkontakte_api:
 
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
-rating: 
+rating:
   enable: false
   id:     #<app_id>
   color:  fc6423
-  
+
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
@@ -481,8 +509,8 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-
 # Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
   enable: false
   # if auto, trigger search by changing input
@@ -491,10 +519,40 @@ local_search:
   # show top n results per article, show all results by setting to -1
   top_n_per_article: 1
 
-# External URL with BASE64 encrypt & decrypt
+
+# ---------------------------------------------------------------
+# Tags Settings
+# ---------------------------------------------------------------
+
+# External URL with BASE64 encrypt & decrypt.
 # Usage: {% exturl text url "title" %}
 # Alias: {% extlink text url "title" %}
 exturl: false
+
+# Note tag (bs-callout).
+note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: simple
+  icons: false
+  border_radius: 3
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+
+# Label tag.
+label: true
+
+# Tabs tag.
+tabs:
+  enable: true
+  transition:
+    tabs: false
+    labels: true
+  border_radius: 0
 
 
 #! ---------------------------------------------------------------
@@ -633,4 +691,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.1
+version: 5.1.2

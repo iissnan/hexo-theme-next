@@ -12,10 +12,12 @@
   -webkit-transform: translateZ(0);
 
   +tablet() {
-    display: none;
+    fixbutton() if hexo-config('sidebar.onmobile');
+    hide() if not hexo-config('sidebar.onmobile');
   }
   +mobile() {
-    display: none;
+    fixbutton() if hexo-config('sidebar.onmobile');
+    hide() if not hexo-config('sidebar.onmobile');
   }
 }
 

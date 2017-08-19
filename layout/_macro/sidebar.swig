@@ -8,6 +8,9 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    {% if theme.sidebar.onmobile %}
+      <div id="sidebar-dimmer"></div>
+    {% endif %}
     <div class="sidebar-inner">
 
       {% set display_toc = is_post and theme.toc.enable or is_page and theme.toc.enable %}
@@ -87,7 +90,9 @@
                   {% if theme.social_icons.enable %}
                     <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
                   {% endif %}
-                  {{ name }}
+                    {% if not theme.social_icons.icons_only %}
+                      {{ name }}
+                    {% endif %}
                 </a>
               </span>
             {% endfor %}
