@@ -40,7 +40,7 @@
         </div>
         <nav class="site-state motion-element">
 
-          {% if config.archive_dir != '/' %}
+          {% if config.archive_dir != '/' and site.posts.length > 0 %}
             <div class="site-state-item site-state-posts">
               <a href="{{ url_for(theme.menu.archives) }}">
                 <span class="site-state-item-count">{{ site.posts.length }}</span>
