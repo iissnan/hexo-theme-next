@@ -46,6 +46,7 @@ You may delete this recomendations and use template which is placed below.
 [ ] Muse
 [ ] Mist
 [ ] Pisces
+[ ] Gemini
 ```
 
 ### Other Information <!-- (Like Browser, System, Screenshots) -->
