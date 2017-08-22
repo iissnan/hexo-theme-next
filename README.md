@@ -104,6 +104,11 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
     theme: next
 
+### Bugs
+For those who also encounter **Error: Cannot find module 'hexo-util'** [issue](../../issues/1490), please check your NPM version. 
+
+- `> 3`: Still not work. Please remove `node_modules` directory and reinstall using `npm install`.
+- `< 3`: Please add `hexo-util` explicitly via `npm install --save-dev hexo-util` to you site package deps.
 
 ## Update
 
