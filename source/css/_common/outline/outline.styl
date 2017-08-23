@@ -28,7 +28,7 @@ html, body { height: 100%; }
 // Main Section
 // --------------------------------------------------
 .main {
-  padding-bottom: initial;
+  padding-bottom: $gap-between-main-and-footer + $footer-height;
 }
 .main-inner {
   margin: 0 auto;
@@ -45,9 +45,9 @@ html, body { height: 100%; }
 .footer {
   position: absolute;
   // left: 0;
-  bottom: auto;
+  bottom: 0;
   width: 100%;
-  // min-height: $footer-height;
+  min-height: $footer-height;
 }
 .footer-inner {
   box-sizing: border-box;
