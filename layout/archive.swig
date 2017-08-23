@@ -63,6 +63,7 @@
 
 
 {% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
   {% if theme.use_motion %}
     <script type="text/javascript" id="motion.page.archive">
       $('.archive-year').velocity('transition.slideLeftIn');
