@@ -19,7 +19,7 @@
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
   {% endif %}
 
-  <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
+  <div class="{{ container_class }} {% block page_class %}{% endblock %}">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">

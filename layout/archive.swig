@@ -4,7 +4,7 @@
 
 {% block title %}{{ __('title.archive') }} | {{ config.title }}{% endblock %}
 
-{% block page_class %} page-archive {% endblock %}
+{% block page_class %}page-archive{% endblock %}
 
 {% block content %}
 
@@ -63,6 +63,7 @@
 
 
 {% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
   {% if theme.use_motion %}
     <script type="text/javascript" id="motion.page.archive">
       $('.archive-year').velocity('transition.slideLeftIn');
