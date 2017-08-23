@@ -49,8 +49,8 @@ menu:
   home: /
   #categories: /categories/
   #about: /about/
-  archives: /archives/
-  tags: /tags/
+  #archives: /archives/
+  #tags: /tags/
   #sitemap: /sitemap.xml
   #commonweal: /404/
 
@@ -205,6 +205,7 @@ post_wordcount:
   item_text: true
   wordcount: false
   min2read: false
+  totalcount: false
   separated_meta: true
 
 # Wechat Subscriber

@@ -33,7 +33,10 @@
 Issue Number(s): N/A
 
 ## What is the new behavior?
+Description about this pull, in several words...
 
+* Screens with this changes: N/A
+* Link to demo site with this changes: N/A
 
 ## Does this PR introduce a breaking change?
 - [ ] Yes.
