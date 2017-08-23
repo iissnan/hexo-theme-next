@@ -138,6 +138,8 @@ With this feature, now you can put all your configurations into one place (`sour
 1. Please ensure you are using Hexo 3 (or above)
 2. Create an file named `next.yml` in site's `source/_data` directory (create `_data` directory if it did not exist)
 3. Copy NexT theme options both in site's `_config.yml` and theme's `_config.yml` into `next.yml`.
+4. Use `--config source/_data/next.yml` parameter to start server, generate or deploy.\
+   For example: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`.
 
 ## Features
 
