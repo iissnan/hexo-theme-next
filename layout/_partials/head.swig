@@ -121,7 +121,7 @@
     sidebar: {{ theme.sidebar | json_encode }},
     fancybox: {{ theme.fancybox }},
     tabs: {{ theme.tabs.enable }},
-    motion: {{ theme.use_motion }},
+    motion: {{ theme.motion | json_encode }},
     duoshuo: {
       userId: '{{ theme.duoshuo_info.user_id | default() }}',
       author: '{{ theme.duoshuo_info.admin_nickname | default(__('author'))}}'
