@@ -38,7 +38,7 @@
         {% if post.year !== year %}
           {% set year = post.year %}
           <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-{{ year }}">{{ year }}</h2>
+            <{% if theme.seo %}h2{% else %}h1{% endif %} class="archive-year" id="archive-year-{{ year }}">{{ year }}</{% if theme.seo %}h2{% else %}h1{% endif %}>
           </div>
         {% endif %}
         {# endshow #}
@@ -59,14 +59,4 @@
 
 {% block sidebar %}
   {{ sidebar_template.render(false) }}
-{% endblock %}
-
-
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-  {% if theme.use_motion %}
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  {% endif %}
 {% endblock %}

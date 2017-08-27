@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 {% set html_class = 'theme-next ' + theme.scheme %}
-{% if theme.use_motion %}
+{% if theme.motion.enable %}
   {% set html_class = html_class + ' use-motion' %}
 {% endif %}
 
@@ -66,9 +66,9 @@
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
   {% include scheme_script %}
 
-  {% block script_extra %}
-    {% include '_scripts/pages/post-details.swig' %}
-  {% endblock %}
+  {% include '_scripts/pages/post-details.swig' %}
+
+  {% block script_extra %}{% endblock %}
 
   {% include '_scripts/boostrap.swig' %}
 
