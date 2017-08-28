@@ -44,32 +44,24 @@ index_with_subtitle: false
 # Menu Settings
 # ---------------------------------------------------------------
 
-# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /
-  #categories: /categories/
-  #about: /about/
-  #archives: /archives/
-  #tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404/
+  home: / || home
+  #about: /about/ || user
+  #tags: /tags/ || tags
+  #categories: /categories/ || th
+  #archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of menu item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
-  home: home
-  about: user
-  categories: th
-  schedule: calendar
-  tags: tags
-  archives: archive
-  sitemap: sitemap
-  commonweal: heartbeat
 
 
 # ---------------------------------------------------------------
@@ -87,34 +79,27 @@ scheme: Muse
 # Sidebar Settings
 # ---------------------------------------------------------------
 
-# Social Links
+# Social Links.
+# Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
-# Value is the target link (E.g. GitHub: https://github.com/iissnan)
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 #social:
-  #LinkLabel: Link
+  #GitHub: https://github.com/yourname || github
+  #E-Mail: mailto:yourname@gmail.com || envelope
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
 
-# Social Links Icons
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an globe mask icon presenting up means that the item has no mapping icon.
 social_icons:
   enable: true
   icons_only: false
   transition: false
-  # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  E-Mail: envelope
-  Google: google
-  Twitter: twitter
-  FB Page: facebook
-  VK Group: vk
-  Skype: skype
-  YouTube: youtube
-  Instagram: instagram
-  StackOverflow: stack-overflow
-  Weibo: weibo
 
 # Blog rolls
 #links_title: Links
