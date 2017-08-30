@@ -34,8 +34,8 @@ You may delete this recomendations and use template which is placed below.
 **NexT Version:**
 <!-- Check one with "x" (使用 "x" 选择) -->
 ```
-[] Master
-[] Latest Release
+[] Latest Master branch.
+[] Latest Release version.
 [] Old version - 
 ```
 
