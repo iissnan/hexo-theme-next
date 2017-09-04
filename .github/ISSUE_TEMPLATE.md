@@ -36,7 +36,7 @@ You may delete this recomendations and use template which is placed below.
 ```
 [] Latest Master branch.
 [] Latest Release version.
-[] Old version - v5.?.?
+[] Old version - 
 ```
 
 **NexT Scheme:**
