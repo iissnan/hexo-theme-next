@@ -102,10 +102,8 @@ NexT.utils = NexT.$u = {
       $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
 
       var scrollTop = $(window).scrollTop();
-      var docHeight = $('#content').height();
-      var winHeight = $(window).height();
-      var contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
-      var scrollPercent = (scrollTop) / (contentMath);
+      var contentHeight = NexT.utils.getContentHeight();
+      var scrollPercent = (scrollTop) / (contentHeight);
       var scrollPercentRounded = Math.round(scrollPercent*100);
       var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
       $('#scrollpercent>span').html(scrollPercentMaxed);
@@ -265,6 +263,14 @@ NexT.utils = NexT.$u = {
     return scrollbarWidth;
   },
 
+  getContentHeight: function () {
+    var docHeight = $('#content').height(),
+        winHeight = $(window).height(),
+        contentHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+
+    return contentHeight;
+  },
+  
   /**
    * Affix behaviour for Sidebar.
    *
