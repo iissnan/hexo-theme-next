@@ -30,8 +30,10 @@ $(document).ready(function () {
 
   // Sidebar float
   function initAffix () {
-    var headerHeight = $('.header-inner').height();
-    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var headerHeight = $('.header-inner').height(),
+        sidebarHeight = $('.sidebar-inner').outerHeight(),
+        contentHeight = $('#content').height(),
+        footerOffset = $('.footer').height();
 
     /*jshint camelcase: false */
     var sidebarTop = (CONFIG.sidebar.offset_float === 0) ?
@@ -39,12 +41,14 @@ $(document).ready(function () {
       headerHeight;
     /*jshint camelcase: true */
 
+  if (sidebarTop + sidebarHeight < contentHeight) {
     $('.sidebar-inner').affix({
       offset: {
         top: sidebarTop,
         bottom: footerOffset
       }
     });
+  }
 
     $(document)
       .on('affixed.bs.affix', function () {
