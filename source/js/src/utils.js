@@ -102,8 +102,8 @@ NexT.utils = NexT.$u = {
       $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
 
       var scrollTop = $(window).scrollTop();
-      var contentHeight = NexT.utils.getContentHeight();
-      var scrollPercent = (scrollTop) / (contentHeight);
+      var contentVisibilityHeight = NexT.utils.getContentVisibilityHeight();
+      var scrollPercent = (scrollTop) / (contentVisibilityHeight);
       var scrollPercentRounded = Math.round(scrollPercent*100);
       var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
       $('#scrollpercent>span').html(scrollPercentMaxed);
@@ -263,12 +263,12 @@ NexT.utils = NexT.$u = {
     return scrollbarWidth;
   },
 
-  getContentHeight: function () {
+  getContentVisibilityHeight: function () {
     var docHeight = $('#content').height(),
         winHeight = $(window).height(),
-        contentHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+        contentVisibilityHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
 
-    return contentHeight;
+    return contentVisibilityHeight;
   },
   
   /**
