@@ -161,7 +161,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-  
+
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -264,32 +264,46 @@ font:
   global:
     # external: true will load this font family from host.
     external: true
+    # family: the font family
     family: Lato
+    # size: the font size. Use `px` as unit
+    size:
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
   headings:
+    # external: true will load this font family from host.
     external: true
+    # family: the font family
     family:
+    # size: the font size. Use `px` as unit
+    size:
 
   # Font settings for posts
   # Fallback to `global` font settings.
   posts:
+    # external: true will load this font family from host.
     external: true
+    # family: the font family
     family:
 
   # Font settings for Logo
   # Fallback to `global` font settings.
-  # The `size` option use `px` as unit
   logo:
+    # external: true will load this font family from host.
     external: true
+    # family: the font family
     family:
+    # size: the font size. Use `px` as unit
     size:
 
   # Font settings for <code> and code blocks.
   codes:
+    # external: true will load this font family from host.
     external: true
+    # family: the font family
     family:
+    # size: the font size. Use `px` as unit
     size:
 
 
@@ -330,8 +344,8 @@ changyan:
   appid:
   appkey:
 
-    
-# Valine. 
+
+# Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
