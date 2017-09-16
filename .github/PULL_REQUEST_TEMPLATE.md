@@ -4,6 +4,8 @@
 
 2. If your pull is short and simple, recommended to use "Usual pull template".
    If your pull is big and include many separated changes, recommended to use "BIG pull template".
+
+3. Always remember what NexT include 4 schemes. And if on one of them all worked fine after changes, on another scheme this changes can be broken. Muse and Mist have similar structure, but Pisces is very difference from them. Gemini is a mirror of Pisces with some styles and layouts remakes. So, please, make the tests at least on two schemes (Muse or Mist and Pisces or Gemini).
 -->
 
 <!-- Usual pull template -->
@@ -13,6 +15,8 @@
 
 - [ ] The commit message follows [our guidelines](https://github.com/iissnan/hexo-theme-next/blob/master/.github/CONTRIBUTING.md).
 - [ ] Tests for the changes have been added (for bug fixes / features).
+   - [ ] Muse | Mist have been tested.
+   - [ ] Pisces | Gemini have been tested.
 - [ ] Docs have been added / updated (for bug fixes / features).
 
 ## PR Type
