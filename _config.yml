@@ -254,56 +254,51 @@ highlight_theme: normal
 # - Be aware that setting too much fonts will cause site running slowly
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
+# CAUTION! Safari Version 10.1.2 bug: https://github.com/iissnan/hexo-theme-next/issues/1844
+# To avoid space between header and sidebar in Pisces / Gemini themes recommended to use Web Safe fonts for `global` (and `logo`):
+# Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
+# ---------------------------------------------------------------
 font:
-  enable: true
+  enable: false
 
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
+
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: xx`. Use `px` as unit.
 
   # Global font settings used on <body> element.
   global:
-    # external: true will load this font family from host.
     external: true
-    # family: the font family
     family: Lato
-    # size: the font size. Use `px` as unit
     size:
 
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
   # Fallback to `global` font settings.
   headings:
-    # external: true will load this font family from host.
     external: true
-    # family: the font family
     family:
-    # size: the font size. Use `px` as unit
     size:
 
-  # Font settings for posts
+  # Font settings for posts.
   # Fallback to `global` font settings.
   posts:
-    # external: true will load this font family from host.
     external: true
-    # family: the font family
     family:
 
-  # Font settings for Logo
+  # Font settings for Logo.
   # Fallback to `global` font settings.
   logo:
-    # external: true will load this font family from host.
     external: true
-    # family: the font family
     family:
-    # size: the font size. Use `px` as unit
     size:
 
   # Font settings for <code> and code blocks.
   codes:
-    # external: true will load this font family from host.
     external: true
-    # family: the font family
     family:
-    # size: the font size. Use `px` as unit
     size:
 
 
