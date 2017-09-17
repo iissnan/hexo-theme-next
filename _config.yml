@@ -21,15 +21,23 @@ keywords: "Hexo, NexT"
 # Set rss to specific value if you have burned your feed already.
 rss:
 
-# Specify the date when the site was setup
-#since: 2015
+footer:
+  # Specify the date when the site was setup.
+  #since: 2015
 
-# icon between year and author @Footer
-authoricon: heart
+  # Icon between year and copyright info.
+  icon: heart
 
-# Footer `powered-by` and `theme-info` copyright
-copyright: true
+  # Hexo link (Powered by Hexo).
+  powered: true
 
+  # Theme & scheme info link (Theme - NexT.scheme).
+  theme: true
+
+  # NexT version info (vX.X.X).
+  version: true
+
+  #custom_text:
 
 # ---------------------------------------------------------------
 # SEO Settings
