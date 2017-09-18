@@ -37,6 +37,9 @@ footer:
   # NexT version info (vX.X.X).
   version: true
 
+  # If value not defined, will be used `author` from Hexo main config.
+  copyright:
+
   #custom_text:
 
 # ---------------------------------------------------------------
