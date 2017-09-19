@@ -267,10 +267,6 @@ mathjax:
 # Gentie productKey
 #gentie_productKey:
 
-# Support for youyan comments system.
-# You can get your uid from http://www.uyan.cc
-#youyan_uid: your uid
-
 # gitment comments system. https://github.com/imsun/gitment
 gitment:
   owner: BearD01001
