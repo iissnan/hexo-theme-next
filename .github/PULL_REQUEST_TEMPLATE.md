@@ -70,6 +70,10 @@ Issue Number(s): #xxxx.
 2.	Short description of modified file [2].			xxxxxxx
 3.	Short description of modified file [3].			xxxxxxx
 
+### Global code changes:
+* ADD: `newFunction` in `utils.js`.
+* DEL: `oldFunction` from `utils.js`
+
 ### How it looks?
 ![image](https://user-images.githubusercontent.com/xxxxxxxx/xxxxxxxx-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx.png)
 
