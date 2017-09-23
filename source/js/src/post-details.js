@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
   initScrollSpy();
-  NexT.utils.needAffix() && initAffix();
+//  NexT.utils.needAffix() && initAffix();
   initTOCDimension();
 
   function initScrollSpy () {
@@ -31,58 +31,33 @@ $(document).ready(function () {
     }
   }
 
-  // Sidebar float
-  function initAffix () {
-    var headerHeight = $('.header-inner').height(),
-        sidebarHeight = $('.sidebar-inner').outerHeight(),
-        contentHeight = $('#content').height(),
-        footerOffset = $('.footer').height();
-
-    /*jshint camelcase: false */
-    var sidebarTop = (CONFIG.sidebar.offset_float === 0) ?
-      headerHeight + CONFIG.sidebar.offset :
-      headerHeight;
-    /*jshint camelcase: true */
-
-  if (sidebarTop + sidebarHeight < contentHeight) {
-    $('.sidebar-inner').affix({
-      offset: {
-        top: sidebarTop,
-        bottom: footerOffset
-      }
-    });
-  }
-
-    $(document)
-      .on('affixed.bs.affix', function () {
-        updateTOCHeight(document.body.clientHeight - 100);
-      });
-  }
-
   function initTOCDimension () {
-    var updateTOCHeightTimer;
+    var updateTOCHeightTimer,
+        sidebarSchemePadding = NexT.utils.getSidebarSchemePadding();
 
     $(window).on('resize', function () {
       updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
 
       updateTOCHeightTimer = setTimeout(function () {
-        var tocWrapperHeight = document.body.clientHeight - 100;
+        var tocWrapperHeight = document.body.clientHeight - sidebarSchemePadding;
 
         updateTOCHeight(tocWrapperHeight);
       }, 0);
     });
 
     // Initialize TOC Height.
-    updateTOCHeight(document.body.clientHeight - 100);
+    updateTOCHeight(document.body.clientHeight - sidebarSchemePadding);
 
     // Initialize TOC Width.
     var scrollbarWidth = NexT.utils.getScrollbarWidth();
     $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+    $('.site-overview').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
   }
 
   function updateTOCHeight (height) {
     height = height || 'auto';
     $('.post-toc').css('max-height', height);
+    $('.site-overview').css('max-height', height);
   }
 
 });
