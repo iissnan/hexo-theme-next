@@ -20,7 +20,7 @@ $(document).ready(function () {
   }
 
   function resizeListener () {
-    var mql = window.matchMedia('(min-width: 991px)')
+    var mql = window.matchMedia('(min-width: 991px)');
     mql.addListener(function(e){
       if(e.matches){
         recalculateAffixPosition();
