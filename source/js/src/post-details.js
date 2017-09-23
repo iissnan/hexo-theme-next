@@ -32,21 +32,20 @@ $(document).ready(function () {
   }
 
   function initTOCDimension () {
-    var updateTOCHeightTimer,
-        sidebarSchemePadding = NexT.utils.getSidebarSchemePadding();
+    var updateTOCHeightTimer;
 
     $(window).on('resize', function () {
       updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
 
       updateTOCHeightTimer = setTimeout(function () {
-        var tocWrapperHeight = document.body.clientHeight - sidebarSchemePadding;
+        var tocWrapperHeight = document.body.clientHeight - NexT.utils.getSidebarSchemePadding();
 
         updateTOCHeight(tocWrapperHeight);
       }, 0);
     });
 
     // Initialize TOC Height.
-    updateTOCHeight(document.body.clientHeight - sidebarSchemePadding);
+    updateTOCHeight(document.body.clientHeight - NexT.utils.getSidebarSchemePadding());
 
     // Initialize TOC Width.
     var scrollbarWidth = NexT.utils.getScrollbarWidth();
