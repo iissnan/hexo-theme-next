@@ -44,8 +44,8 @@ $(document).ready(function () {
   }
 
   function recalculateAffixPosition () {
-    $(window).off('.affix')
-    sidebarInner.removeData('bs.affix').removeClass('affix affix-top affix-bottom')
+    $(window).off('.affix');
+    sidebarInner.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
     initAffix();
   }
 
