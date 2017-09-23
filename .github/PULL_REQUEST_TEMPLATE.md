@@ -63,6 +63,8 @@ In NexT `_config.yml`:
 ## PART X. Title of fixes and/or enhancements.
 Short description in several words here.
 
+Issue Number(s): #xxxx.
+
 ### Files modified:
 1.	Short description of modified file [1].			xxxxxxx
 2.	Short description of modified file [2].			xxxxxxx
