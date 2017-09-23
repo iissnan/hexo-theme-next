@@ -267,16 +267,26 @@ NexT.utils = NexT.$u = {
     var docHeight = $('#content').height(),
         winHeight = $(window).height(),
         contentVisibilityHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
-
     return contentVisibilityHeight;
   },
-  
+
+  getSidebarSchemePadding: function () {
+    var sidebarb2tHeight = ($('.back-to-top').css('display') == 'block') ? 0 : $('.back-to-top').height(),
+        sidebarNavHeight = ($('.sidebar-nav').css('display') == 'block') ? $('.sidebar-nav').outerHeight(true) : 0,
+        sidebarInner = $('.sidebar-inner'),
+        sidebarPadding = sidebarInner.innerWidth() - sidebarInner.width(),
+        sidebarSchemePadding = this.isPisces() || this.isGemini() ?
+          ((sidebarPadding * 2) + sidebarNavHeight + (CONFIG.sidebar.offset * 2) + sidebarb2tHeight) :
+          ((sidebarPadding * 2) + (sidebarNavHeight / 2));
+    return sidebarSchemePadding;
+  },
+
   /**
    * Affix behaviour for Sidebar.
    *
    * @returns {Boolean}
    */
-  needAffix: function () {
-    return this.isPisces() || this.isGemini();
-  }
+//  needAffix: function () {
+//    return this.isPisces() || this.isGemini();
+//  }
 };
