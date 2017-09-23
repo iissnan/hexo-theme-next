@@ -271,7 +271,7 @@ NexT.utils = NexT.$u = {
   },
 
   getSidebarSchemePadding: function () {
-    var sidebarb2tHeight = ($('.back-to-top').css('display') == 'block') ? 0 : $('.back-to-top').height(),
+    var sidebarb2tHeight = (CONFIG.sidebar.b2t) ? $('.back-to-top').height() : 0,
         sidebarNavHeight = ($('.sidebar-nav').css('display') == 'block') ? $('.sidebar-nav').outerHeight(true) : 0,
         sidebarInner = $('.sidebar-inner'),
         sidebarPadding = sidebarInner.innerWidth() - sidebarInner.width(),
@@ -279,7 +279,7 @@ NexT.utils = NexT.$u = {
           ((sidebarPadding * 2) + sidebarNavHeight + (CONFIG.sidebar.offset * 2) + sidebarb2tHeight) :
           ((sidebarPadding * 2) + (sidebarNavHeight / 2));
     return sidebarSchemePadding;
-  },
+  }
 
   /**
    * Affix behaviour for Sidebar.
