@@ -147,7 +147,7 @@ $(document).ready(function () {
       CONFIG.sidebar.display === 'always';
   var hasTOC = $tocContent.length > 0 && $tocContent.html().trim().length > 0;
   if (isSidebarCouldDisplay && hasTOC) {
-    CONFIG.motion ?
+    CONFIG.motion.enable ?
       (NexT.motion.middleWares.sidebar = function () {
           NexT.utils.displaySidebar();
       }) : NexT.utils.displaySidebar();
