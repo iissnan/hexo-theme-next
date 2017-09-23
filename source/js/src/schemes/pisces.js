@@ -3,9 +3,7 @@ $(document).ready(function () {
   initAffix();
 
   function initAffix () {
-    var headerHeight = $('.header-inner').height(),
-        headerOffset = (headerHeight + CONFIG.sidebar.offset)
-
+    var headerOffset = $('.header-inner').height() + CONFIG.sidebar.offset,
         footerInner = $('.footer-inner'),
         footerMargin = footerInner.outerHeight(true) - footerInner.outerHeight(),
         footerOffset = footerInner.outerHeight(true) + footerMargin;
