@@ -1,17 +1,22 @@
 $(document).ready(function () {
-  var $headerInner = $('.header-inner');
-  var $sidebar = $('#sidebar');
-  var getSidebarTop = function(){
-    return $headerInner.height() + CONFIG.sidebar.offset;
-  };
-  var setSidebarMarginTop = function(sidebarTop){
-    return $sidebar.css({ 'margin-top': sidebarTop });
-  };
-  var mql = window.matchMedia('(min-width: 991px)');
-  setSidebarMarginTop(getSidebarTop()).show();
-  mql.addListener(function(e){
-    if(e.matches){
-      setSidebarMarginTop(getSidebarTop());
-    }
-  });
+
+  initAffix();
+
+  function initAffix () {
+    var headerHeight = $('.header-inner').height(),
+        headerOffset = (headerHeight + CONFIG.sidebar.offset)
+
+        footerInner = $('.footer-inner'),
+        footerMargin = footerInner.outerHeight(true) - footerInner.outerHeight(),
+        footerOffset = footerInner.outerHeight(true) + footerMargin;
+
+    $('.sidebar-inner').affix({
+      offset: {
+        top: headerOffset - CONFIG.sidebar.offset,
+        bottom: footerOffset
+      }
+    });
+
+    $('#sidebar').css({ 'margin-top': headerOffset + 'px' }).show();
+  }
 });
