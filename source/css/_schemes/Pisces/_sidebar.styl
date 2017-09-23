@@ -12,6 +12,7 @@
 
 
 .sidebar-inner {
+//padding: 20px 10px 0;
   box-sizing: border-box;
   width: 240px;
   color: $text-color;
@@ -21,8 +22,13 @@
 
   &.affix {
     position: fixed;
-    top: $sidebar-offset-float;
+    top: $sidebar-offset;
   }
+
+  &.affix-bottom {
+    position: absolute;
+  }
+
 }
 
 .site-overview {
