@@ -18,6 +18,8 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 * Pisces scheme: [Vi](http://notes.iissnan.com) | [Acris](https://blog.mrx.one) | [Rainy](https://rainylog.com)
 * Gemini scheme: [Ivan.Nginx](https://almostover.ru) | [Alynx](http://sh.alynx.xyz) | [Raincal](https://raincal.top)
 
+More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119).
+
 ## Installation
 
 **1.** Change dir to **hexo root** directory. There must be `node_modules`, `source`, `themes` and other directories:
@@ -29,7 +31,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
 **2.** Get theme from GitHub. There are several variants to do it:
 
-### Download [latest release version](../../releases/latest).
+### Download [latest release version](https://github.com/iissnan/hexo-theme-next/releases/latest).
    At most cases **stable**. Recommended for most users.
 
    [![curl-tar-wget-image]][curl-tar-wget-url]
@@ -39,8 +41,8 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
    $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
    ```
 
-### Download [tagged release version](../../releases).
-   You must define version. Replace `v5.1.2` with any version from [tags list](../../tags).
+### Download [tagged release version](https://github.com/iissnan/hexo-theme-next/releases).
+   You must define version. Replace `v5.1.2` with any version from [tags list](https://github.com/iissnan/hexo-theme-next/tags).
 
    [![curl-tar-image]][curl-tar-url]
 
@@ -55,7 +57,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
    $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
    ```
 
-### Download [latest master branch](../../archive/master.zip).
+### Download [latest master branch](https://github.com/iissnan/hexo-theme-next/archive/master.zip).
    May be **unstable**, but includes latest features. Recommended for developers.
 
    [![curl-tar-image]][curl-tar-url]
@@ -85,7 +87,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
    v5.1.2
    ```
 
-   For example, you want to switch on `v5.1.0` [tagged release version](../../tags). Input the following command:
+   For example, you want to switch on `v5.1.0` [tagged release version](https://github.com/iissnan/hexo-theme-next/tags). Input the following command:
 
    ```sh
    $ git checkout tags/v5.1.0
@@ -94,7 +96,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
    HEAD now on 1f72f68... CSS: Remove global list-style setting of ul
    ```
 
-   And if you want to switch back on [master branch](../../commits/master), input this command:
+   And if you want to switch back on [master branch](https://github.com/iissnan/hexo-theme-next/commits/master), input this command:
 
    ```sh
    $ git checkout master
@@ -105,7 +107,7 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
     theme: next
 
 ### Bugs
-For those who also encounter **Error: Cannot find module 'hexo-util'** [issue](../../issues/1490), please check your NPM version. 
+For those who also encounter **Error: Cannot find module 'hexo-util'** [issue](https://github.com/iissnan/hexo-theme-next/issues/1490), please check your NPM version. 
 
 - `> 3`: Still not work. Please remove `node_modules` directory and reinstall using `npm install`.
 - `< 3`: Please add `hexo-util` explicitly via `npm install --save-dev hexo-util` to you site package deps.
