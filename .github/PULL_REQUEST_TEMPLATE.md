@@ -81,7 +81,7 @@ Live demo [here](http://site.com/).
 
 ### How to use?
 In Next `_config.yml`:
-```
+```yml
 ...
 ```
 -->
