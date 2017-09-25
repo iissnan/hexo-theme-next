@@ -28,22 +28,27 @@
 
       <section class="site-overview sidebar-panel{% if not display_toc or toc(page.content).length <= 1 or page.no_index %} sidebar-panel-active{% endif %}">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
-               alt="{{ theme.author }}" />
-          <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
-           {% if theme.seo %}
-              <p class="site-description motion-element" itemprop="description">{{ theme.signature }}</p>
-           {% else %}
-              <p class="site-description motion-element" itemprop="description">{{ theme.description }}</p>
+          {% if theme.avatar %}
+            <img class="site-author-image" itemprop="image"
+              src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
+              alt="{{ theme.author }}" />
           {% endif %}
+            <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
+            <p class="site-description motion-element" itemprop="description">{#
+          #}{% if theme.seo %}{#
+            #}{{ theme.signature }}{#
+          #}{% else %}{#
+            #}{{ theme.description }}{#
+          #}{% endif %}{#
+          #}</p>
         </div>
+
         <nav class="site-state motion-element">
 
           {% if config.archive_dir != '/' and site.posts.length > 0 %}
             <div class="site-state-item site-state-posts">
             {% if theme.menu.archives %}
-              <a href="{{ url_for(theme.menu.archives) }}">
+              <a href="{{ url_for(theme.menu.archives).split('||')[0] | trim }}">
             {% else %}
               <a href="{{ url_for(config.archive_dir) }}">
             {% endif %}
@@ -90,14 +95,14 @@
           {% if theme.social %}
             {% for name, link in theme.social %}
               <span class="links-of-author-item">
-                <a href="{{ link }}" target="_blank" title="{{ name }}">
+                <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}">
                   {% if theme.social_icons.enable %}
-                    <i class="fa fa-fw fa-{{ theme.social_icons[name] | default('globe') | lower }}"></i>
-                  {% endif %}
-                    {% if not theme.social_icons.icons_only %}
-                      {{ name }}
-                    {% endif %}
-                </a>
+                    <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>{#
+                #}{% endif %}{#
+                  #}{% if not theme.social_icons.icons_only %}{#
+                    #}{{ name }}{#
+                  #}{% endif %}{#
+              #}</a>
               </span>
             {% endfor %}
           {% endif %}

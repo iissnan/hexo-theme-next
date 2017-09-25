@@ -14,7 +14,7 @@
 }
 
 .post-body .image-caption {
-  margin: 10px auto 15px;
+  margin: -20px auto 15px;
   text-align: center;
   font-size: $font-size-base;
   color: $grey-dark;
@@ -31,6 +31,13 @@
   font-size: 16px;
   -ms-transform: rotate(30deg);
   transform: rotate(30deg);
+}
+
+.use-motion {
+  if hexo-config('motion.transition.post_block') { .post-block { opacity: 0; } }
+  if hexo-config('motion.transition.post_header') { .post-header { opacity: 0; } }
+  if hexo-config('motion.transition.post_body') { .post-body { opacity: 0; } }
+  if hexo-config('motion.transition.coll_header') { .collection-title { opacity: 0; } }
 }
 
 @import "post-expand";

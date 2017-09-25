@@ -1,4 +1,12 @@
 # ---------------------------------------------------------------
+# Theme Core Configuration Settings
+# ---------------------------------------------------------------
+
+# Set to true, if you want to fully override the default configuration.
+# Useful if you don't want to inherit the theme _config.yml configurations.
+override: false
+
+# ---------------------------------------------------------------
 # Site Information Settings
 # ---------------------------------------------------------------
 
@@ -44,32 +52,24 @@ index_with_subtitle: false
 # Menu Settings
 # ---------------------------------------------------------------
 
-# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
+# When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -> archives).
+# Usage: `Key: /link/ || icon`
+# Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
+# Value before `||` delimeter is the target link.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: /
-  #categories: /categories/
-  #about: /about/
-  #archives: /archives/
-  #tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404/
+  home: / || home
+  #about: /about/ || user
+  #tags: /tags/ || tags
+  #categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  #sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
 
 # Enable/Disable menu icons.
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of menu item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
-  home: home
-  about: user
-  categories: th
-  schedule: calendar
-  tags: tags
-  archives: archive
-  sitemap: sitemap
-  commonweal: heartbeat
 
 
 # ---------------------------------------------------------------
@@ -87,41 +87,30 @@ scheme: Gemini
 # Sidebar Settings
 # ---------------------------------------------------------------
 
-# Social Links
+# Social Links.
+# Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
-# Value is the target link (E.g. GitHub: https://github.com/iissnan)
+# Value before `||` delimeter is the target permalink.
+# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  #LinkLabel: Link
-  GitHub: https://github.com/GraysonLiu
-  Last.fm: https://www.last.fm/user/GraysonLiu
-  TV Time: https://www.tvtime.com/user/5202212/profile
-  Facebook: https://www.facebook.com/mrgraysonliu
+  GitHub: https://github.com/yourname || github
+  Last.fm: https://www.last.fm/user/GraysonLiu || lastfm-square
+  TV Time: https://www.tvtime.com/user/5202212/profile || television
+  Facebook: https://www.facebook.com/mrgraysonliu || facebook-official
+  #E-Mail: mailto:yourname@gmail.com || envelope
+  #Google: https://plus.google.com/yourname || google
+  #Twitter: https://twitter.com/yourname || twitter
+  #FB Page: https://www.facebook.com/yourname || facebook
+  #VK Group: https://vk.com/yourname || vk
+  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
+  #YouTube: https://youtube.com/yourname || youtube
+  #Instagram: https://instagram.com/yourname || instagram
+  #Skype: skype:yourname?call|chat || skype
 
-# Social Links Icons
-# Icon Mapping:
-#   Map a menu item to a specific FontAwesome icon name.
-#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
-#   When an globe mask icon presenting up means that the item has no mapping icon.
 social_icons:
   enable: true
   icons_only: false
   transition: false
-  # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  E-Mail: envelope
-  Google: google
-  Twitter: twitter
-  FB Page: facebook
-  VK Group: vk
-  Skype: skype
-  YouTube: youtube
-  Instagram: instagram
-  StackOverflow: stack-overflow
-  Weibo: weibo
-  Last.fm: lastfm-square
-  TV Time: television
-  Facebook: facebook-official
 
 # Blog rolls
 #links_title: Links
@@ -175,7 +164,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: false
-  
+
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -268,33 +257,42 @@ highlight_theme: normal
 # - Be aware that setting too much fonts will cause site running slowly
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
+# CAUTION! Safari Version 10.1.2 bug: https://github.com/iissnan/hexo-theme-next/issues/1844
+# To avoid space between header and sidebar in Pisces / Gemini themes recommended to use Web Safe fonts for `global` (and `logo`):
+# Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
+# ---------------------------------------------------------------
 font:
-  enable: true
+  enable: false
 
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
+
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: xx`. Use `px` as unit.
 
   # Global font settings used on <body> element.
   global:
-    # external: true will load this font family from host.
     external: true
     family: Lato
+    size:
 
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
   # Fallback to `global` font settings.
   headings:
     external: true
     family:
+    size:
 
-  # Font settings for posts
+  # Font settings for posts.
   # Fallback to `global` font settings.
   posts:
     external: true
     family:
 
-  # Font settings for Logo
+  # Font settings for Logo.
   # Fallback to `global` font settings.
-  # The `size` option use `px` as unit
   logo:
     external: true
     family:
@@ -344,8 +342,8 @@ changyan:
   appid:
   appkey:
 
-    
-# Valine. 
+
+# Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
@@ -565,7 +563,21 @@ tabs:
 #! ---------------------------------------------------------------
 
 # Motion
-use_motion: true
+motion:
+  enable: true
+  async: false
+  transition:
+    # Transition variants:
+    # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
+    # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut
+    # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut
+    # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
+    # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
+    # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
+    post_block: fadeIn
+    post_header: slideDownIn
+    post_body: slideDownIn
+    coll_header: slideLeftIn
 
 # Fancybox
 fancybox: true

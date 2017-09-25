@@ -46,7 +46,7 @@ $(document).ready(function () {
   $(document).trigger('motion:before');
 
   // Bootstrap Motion.
-  CONFIG.motion && NexT.motion.integrator.bootstrap();
+  CONFIG.motion.enable && NexT.motion.integrator.bootstrap();
 
   $(document).trigger('bootstrap:after');
 });
