@@ -3,9 +3,9 @@
 NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
 [![gitter-image]][gitter-url]
-[![mnt-image]](../../commits/master)
+[![mnt-image]][commits-url]
 [![travis-image]][travis-url]
-[![rel-image]](../../releases)
+[![rel-image]][releases-url]
 [![hexo-image]][hexo-url]
 [![lic-image]](LICENSE)
 
@@ -31,7 +31,7 @@ More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119)
 
 **2.** Get theme from GitHub. There are several variants to do it:
 
-### Download [latest release version](https://github.com/iissnan/hexo-theme-next/releases/latest).
+### Download [latest release version][releases-latest-url].
    At most cases **stable**. Recommended for most users.
 
    [![curl-tar-wget-image]][curl-tar-wget-url]
@@ -41,8 +41,8 @@ More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119)
    $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
    ```
 
-### Download [tagged release version](https://github.com/iissnan/hexo-theme-next/releases).
-   You must define version. Replace `v5.1.2` with any version from [tags list](https://github.com/iissnan/hexo-theme-next/tags).
+### Download [tagged release version][releases-url].
+   You must define version. Replace `v5.1.2` with any version from [tags list][tags-url].
 
    [![curl-tar-image]][curl-tar-url]
 
@@ -57,7 +57,7 @@ More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119)
    $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
    ```
 
-### Download [latest master branch](https://github.com/iissnan/hexo-theme-next/archive/master.zip).
+### Download [latest master branch][download-latest-url].
    May be **unstable**, but includes latest features. Recommended for developers.
 
    [![curl-tar-image]][curl-tar-url]
@@ -87,7 +87,7 @@ More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119)
    v5.1.2
    ```
 
-   For example, you want to switch on `v5.1.0` [tagged release version](https://github.com/iissnan/hexo-theme-next/tags). Input the following command:
+   For example, you want to switch on `v5.1.0` [tagged release version][tags-url]. Input the following command:
 
    ```sh
    $ git checkout tags/v5.1.0
@@ -96,7 +96,7 @@ More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119)
    HEAD now on 1f72f68... CSS: Remove global list-style setting of ul
    ```
 
-   And if you want to switch back on [master branch](https://github.com/iissnan/hexo-theme-next/commits/master), input this command:
+   And if you want to switch back on [master branch][commits-url], input this command:
 
    ```sh
    $ git checkout master
@@ -335,5 +335,11 @@ Contribution is welcome, feel free to open an issue and fork. Waiting for your p
 [curl-tar-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar-blue.svg
 [curl-tar-wget-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar%20%7C%20wget-blue.svg
 [git-url]: http://lmgtfy.com/?q=linux+git+install
-[curl-tar-url]: http://lmgtfy.com/?q=linux+curl+tar+install 
+[curl-tar-url]: http://lmgtfy.com/?q=linux+curl+tar+install
 [curl-tar-wget-url]: http://lmgtfy.com/?q=linux+curl+tar+wget+install
+
+[download-latest-url]: https://github.com/iissnan/hexo-theme-next/archive/master.zip
+[releases-latest-url]: https://github.com/iissnan/hexo-theme-next/releases/latest
+[releases-url]: https://github.com/iissnan/hexo-theme-next/releases
+[tags-url]: https://github.com/iissnan/hexo-theme-next/tags
+[commits-url]: https://github.com/iissnan/hexo-theme-next/commits/master
