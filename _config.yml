@@ -10,8 +10,17 @@ override: false
 # Site Information Settings
 # ---------------------------------------------------------------
 
-# Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+# To get favicons visit: https://realfavicongenerator.net
+# Put your favicons into `hexo-site/source/` or `hexo-site/themes/next/source/images/` directory.
+# Default NexT favicons placed in `hexo-site/themes/next/source/images/` directory.
+# And if you want to place your icons in `hexo-site/source/`, you must remove `/images` prefix from pathes.
+favicon:
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/apple-touch-icon.png
+  safari_pinned_tab: /images/logo.svg
+  #android_manifest: /images/manifest.json
+  #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
