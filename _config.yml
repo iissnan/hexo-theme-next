@@ -23,24 +23,26 @@ rss:
 
 footer:
   # Specify the date when the site was setup.
+  # If not defined, current year will be used.
   #since: 2015
 
   # Icon between year and copyright info.
-  icon: heart
+  icon: user
 
+  # If not defined, will be used `author` from Hexo main config.
+  copyright:
+  # -------------------------------------------------------------
   # Hexo link (Powered by Hexo).
   powered: true
 
-  # Theme & scheme info link (Theme - NexT.scheme).
-  theme: true
-
-  # NexT version info (vX.X.X).
-  version: true
-
-  # If value not defined, will be used `author` from Hexo main config.
-  copyright:
-
-  #custom_text:
+  theme:
+    # Theme & scheme info link (Theme - NexT.scheme).
+    enable: true
+    # Version info of NexT after scheme info (vX.X.X).
+    version: true
+  # -------------------------------------------------------------
+  # Any custom text can be defined here.
+  #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
