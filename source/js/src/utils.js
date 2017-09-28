@@ -270,13 +270,19 @@ NexT.utils = NexT.$u = {
     return contentVisibilityHeight;
   },
 
+  getSidebarb2tHeight: function () {
+    //var sidebarb2tHeight = (CONFIG.sidebar.b2t) ? document.getElementsByClassName('back-to-top')[0].clientHeight : 0;
+    var sidebarb2tHeight = (CONFIG.sidebar.b2t) ? $('.back-to-top').height() : 0;
+    //var sidebarb2tHeight = (CONFIG.sidebar.b2t) ? 24 : 0;
+    return sidebarb2tHeight;
+  },
+
   getSidebarSchemePadding: function () {
-    var sidebarb2tHeight = (CONFIG.sidebar.b2t) ? $('.back-to-top').height() : 0,
-        sidebarNavHeight = ($('.sidebar-nav').css('display') == 'block') ? $('.sidebar-nav').outerHeight(true) : 0,
+    var sidebarNavHeight = ($('.sidebar-nav').css('display') == 'block') ? $('.sidebar-nav').outerHeight(true) : 0,
         sidebarInner = $('.sidebar-inner'),
         sidebarPadding = sidebarInner.innerWidth() - sidebarInner.width(),
         sidebarSchemePadding = this.isPisces() || this.isGemini() ?
-          ((sidebarPadding * 2) + sidebarNavHeight + (CONFIG.sidebar.offset * 2) + sidebarb2tHeight) :
+          ((sidebarPadding * 2) + sidebarNavHeight + (CONFIG.sidebar.offset * 2) + this.getSidebarb2tHeight()) :
           ((sidebarPadding * 2) + (sidebarNavHeight / 2));
     return sidebarSchemePadding;
   }
@@ -290,3 +296,39 @@ NexT.utils = NexT.$u = {
 //    return this.isPisces() || this.isGemini();
 //  }
 };
+
+$(document).ready(function () {
+
+  initSidebarDimension();
+
+  /**
+   * Init Sidebar & TOC inner dimensions on all pages and for all schemes.
+   * Need for Sidebar/TOC inner scrolling if content taller then viewport.
+   */
+  function initSidebarDimension () {
+    var updateSidebarHeightTimer;
+
+    $(window).on('resize', function () {
+      updateSidebarHeightTimer && clearTimeout(updateSidebarHeightTimer);
+
+      updateSidebarHeightTimer = setTimeout(function () {
+        var sidebarWrapperHeight = document.body.clientHeight - NexT.utils.getSidebarSchemePadding();
+
+        updateSidebarHeight(sidebarWrapperHeight);
+      }, 0);
+    });
+
+    // Initialize Sidebar & TOC Height.
+    updateSidebarHeight(document.body.clientHeight - NexT.utils.getSidebarSchemePadding());
+
+    // Initialize Sidebar & TOC Width.
+    var scrollbarWidth = NexT.utils.getScrollbarWidth();
+    $('.site-overview, .post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+  }
+
+  function updateSidebarHeight (height) {
+    height = height || 'auto';
+    $('.site-overview, .post-toc').css('max-height', height);
+  }
+
+});
