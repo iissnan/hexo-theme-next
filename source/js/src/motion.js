@@ -290,7 +290,7 @@ $(document).ready(function () {
 
     postList: function (integrator) {
       //var $post = $('.post');
-      var $postBlock = $('.post-block');
+      var $postBlock = $('.post-block, .pagination, .comments');
       var $postBlockTransition = CONFIG.motion.transition.post_block;
       var $postHeader = $('.post-header');
       var $postHeaderTransition = CONFIG.motion.transition.post_header;
@@ -298,6 +298,8 @@ $(document).ready(function () {
       var $postBodyTransition = CONFIG.motion.transition.post_body;
       var $collHeader = $('.collection-title, .archive-year');
       var $collHeaderTransition = CONFIG.motion.transition.coll_header;
+      var $sidebarAffix = $('.sidebar-inner');
+      var $sidebarAffixTransition = CONFIG.motion.transition.sidebar;
       var hasPost = $postBlock.size() > 0;
 
       hasPost ? postMotion() : integrator.next();
@@ -312,6 +314,10 @@ $(document).ready(function () {
             drag: true
           };
         postMotionOptions.complete = function () {
+          // After motion complete need to remove transform from sidebar to let affix work on Pisces | Gemini.
+          if (CONFIG.motion.transition.sidebar && (NexT.utils.isPisces() || NexT.utils.isGemini())) {
+            $sidebarAffix.css({ 'transform': 'initial' });
+          }
           integrator.next();
         };
 
@@ -327,6 +333,10 @@ $(document).ready(function () {
         }
         if (CONFIG.motion.transition.coll_header) {
           $collHeader.velocity('transition.' + $collHeaderTransition, postMotionOptions);
+        }
+        // Only for Pisces | Gemini.
+        if (CONFIG.motion.transition.sidebar && (NexT.utils.isPisces() || NexT.utils.isGemini())) {
+          $sidebarAffix.velocity('transition.' + $sidebarAffixTransition, postMotionOptions);
         }
       }
     },
