@@ -558,7 +558,7 @@ tabs:
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! ---------------------------------------------------------------
 
-# Motion
+# Use velocity to animate everything.
 motion:
   enable: true
   async: false
@@ -574,6 +574,8 @@ motion:
     post_header: slideDownIn
     post_body: slideDownIn
     coll_header: slideLeftIn
+    # Only for Pisces | Gemini.
+    sidebar: slideUpIn
 
 # Fancybox
 fancybox: true
