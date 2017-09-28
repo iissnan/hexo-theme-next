@@ -3,8 +3,6 @@
 $(document).ready(function () {
 
   initScrollSpy();
-//  NexT.utils.needAffix() && initAffix();
-  initTOCDimension();
 
   function initScrollSpy () {
     var tocSelector = '.post-toc';
@@ -29,34 +27,6 @@ $(document).ready(function () {
       $(tocSelector + ' ' + activeCurrentSelector)
         .removeClass(activeCurrentSelector.substring(1));
     }
-  }
-
-  function initTOCDimension () {
-    var updateTOCHeightTimer;
-
-    $(window).on('resize', function () {
-      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
-
-      updateTOCHeightTimer = setTimeout(function () {
-        var tocWrapperHeight = document.body.clientHeight - NexT.utils.getSidebarSchemePadding();
-
-        updateTOCHeight(tocWrapperHeight);
-      }, 0);
-    });
-
-    // Initialize TOC Height.
-    updateTOCHeight(document.body.clientHeight - NexT.utils.getSidebarSchemePadding());
-
-    // Initialize TOC Width.
-    var scrollbarWidth = NexT.utils.getScrollbarWidth();
-    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
-    $('.site-overview').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
-  }
-
-  function updateTOCHeight (height) {
-    height = height || 'auto';
-    $('.post-toc').css('max-height', height);
-    $('.site-overview').css('max-height', height);
   }
 
 });
