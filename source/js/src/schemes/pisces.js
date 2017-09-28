@@ -7,16 +7,21 @@ $(document).ready(function () {
 
   function initAffix () {
     var headerOffset = getHeaderOffset(),
-        footerOffset = getFooterOffset();
+        footerOffset = getFooterOffset(),
+        sidebarHeight = $('#sidebar').height() + NexT.utils.getSidebarb2tHeight(),
+        contentHeight = $('#content').height();
 
-    sidebarInner.affix({
-      offset: {
-        top: headerOffset - CONFIG.sidebar.offset,
-        bottom: footerOffset
-      }
-    });
+    // Not affix if sidebar taller then content (to prevent bottom jumping).
+    if (headerOffset + sidebarHeight < contentHeight) {
+      sidebarInner.affix({
+        offset: {
+          top: headerOffset - CONFIG.sidebar.offset,
+          bottom: footerOffset
+        }
+      });
+    }
 
-    setSidebarMarginTop(headerOffset).show();
+    setSidebarMarginTop(headerOffset).css({ 'margin-left': 'initial' });
   }
 
   function resizeListener () {
