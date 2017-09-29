@@ -76,6 +76,7 @@
   {% include '_third-party/search/index.swig' %}
   {% include '_third-party/analytics/lean-analytics.swig' %}
   {% include '_third-party/seo/baidu-push.swig' %}
+  {% include '_third-party/share/index.swig' %}
   {% include '_third-party/rating.swig' %}
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
