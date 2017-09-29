@@ -68,7 +68,10 @@
 }
 
 .links-of-author {
-  clearfix();
+  //clearfix();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .links-of-author-item {
   sidebar-inline-links-item();
@@ -92,6 +95,7 @@
 
 
 .links-of-blogroll {
+  text-align: center;
   margin-top: 20px;
   padding: 3px 0 0;
   border-top: 1px dotted $grey-light;
@@ -103,5 +107,7 @@
 
   .links-of-blogroll-item {
     sidebar-inline-links-item();
+    display: inline-block;
+    if !hexo-config('social_icons.icons_only') { width: unset; }
   }
 }

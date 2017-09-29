@@ -1,9 +1,9 @@
 sidebar-inline-links-item() {
-  float: left;
   margin: 5px 0 0;
-  width: 50%;
+  if !hexo-config('social_icons.icons_only') { width: 50%; }
 
   & a {
+    max-width: 216px;
     box-sizing: border-box;
     display: inline-block;
     margin-right: 0;
@@ -12,5 +12,6 @@ sidebar-inline-links-item() {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    if hexo-config('social_icons.transition') { the-transition(); }
   }
 }
