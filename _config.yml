@@ -390,6 +390,16 @@ valine:
 # Share
 #duoshuo_share: true
 
+# NeedMoreShare2
+# This plugin is a pure javascript sharing lib which is useful in China.
+# See: https://github.com/revir/need-more-share2
+needMoreShare2:
+  enable: true
+  # Options
+  iconStyle: default
+  boxForm: horizontal
+  position: bottomCenter
+
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
 #google_site_verification:
@@ -709,6 +719,10 @@ vendors:
   # Internal version: 3.3.0
   # https://github.com/ethantw/Han
   han:
+
+  # needMoreShare2
+  # https://github.com/revir/need-more-share2
+  needMoreShare2:
 
 
 # Assets
