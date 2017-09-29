@@ -105,8 +105,9 @@ use_seo = hexo-config('seo');
 // =================================================
 // Headers.
 // =================================================
+// No need anymore?
 .post-header {
-  h2 {
+  h1, h2 {
     margin: initial;
   }
 }
@@ -116,31 +117,35 @@ use_seo = hexo-config('seo');
 .posts-expand .post-title {
   font-size: 1.7em;
 }
-h2 {
-  font-size: 1.5em;
-  if not use_seo {
+.post-body {
+  h1 {
+    font-size: 1.6em;
     border-bottom: 1px solid $body-bg-color;
   }
-}
-h3 {
-  font-size: 1.3em;
-  if use_seo {
+  h2 {
+    font-size: 1.45em;
     border-bottom: 1px solid $body-bg-color;
-  } else {
-    border-bottom: 1px dotted $body-bg-color;
   }
-}
-h4 {
-  font-size: 1.2em;
-  if use_seo {
-    border-bottom: 1px dotted $body-bg-color;
+  h3 {
+    font-size: 1.3em;
+    if use_seo {
+      border-bottom: 1px solid $body-bg-color;
+    } else {
+      border-bottom: 1px dotted $body-bg-color;
+    }
   }
-}
-h5 {
-  font-size: 1.07em;
-}
-h6 {
-  font-size: 1.03em;
+  h4 {
+    font-size: 1.2em;
+    if use_seo {
+      border-bottom: 1px dotted $body-bg-color;
+    }
+  }
+  h5 {
+    font-size: 1.07em;
+  }
+  h6 {
+    font-size: 1.03em;
+  }
 }
 
 // =================================================
