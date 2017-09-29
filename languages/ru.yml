@@ -33,6 +33,7 @@ post:
   visitors: Просмотров
   wordcount: Кол-во слов в статье
   min2read: Время чтения в минутах
+  totalcount: Общее кол-во слов в записях
   copyright:
     author: Автор записи
     link: Ссылка на запись
@@ -96,3 +97,9 @@ symbol:
   comma: ', '
   period: '. '
   colon: ':'
+
+reward:
+  donate: Донат
+  wechatpay: WeChat Pay
+  alipay: Alipay
+  bitcoin: Bitcoin
