@@ -33,26 +33,32 @@ use_seo = hexo-config('seo');
   border-radius: initial;
 }
 
-// Post & comments blocks.
-.post-block,
-.comments {
-  margin-bottom: sboffset;
-  background: white;
+// Post & Comments blocks.
+.post-block {
   padding: $content-desktop-padding;
+  background: white;
   box-shadow: $box-shadow-inner;
   border-radius: $border-radius-inner;
 }
 
-// Last post block in homepage (need to remove bottom margin to save style).
-#posts > :last-child {
+// When blocks are siblings (homepage).
+#posts > article + article {
   .post-block {
-    margin-bottom: initial;
+    margin-top: sboffset;
+    // Rewrite shadows & borders because all blocks have offsets.
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
   }
 }
 
 // Comments blocks.
 .comments {
+  padding: $content-desktop-padding;
   margin: initial;
+  margin-top: sboffset;
+  background: white;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
 }
 
 // Top main padding from header to posts (default 40px).
@@ -84,6 +90,7 @@ use_seo = hexo-config('seo');
   border-top: initial;
   background: white;
   box-shadow: $box-shadow;
+  border-radius: $border-radius;
   padding: 10px 0 10px;
 }
 
@@ -155,13 +162,22 @@ h6 {
   }
 
   .post-block {
-    margin-bottom: $content-tablet-padding;
     // Inside posts blocks content padding (default 40px).
-    //padding: 20px;
     padding: ($content-tablet-padding * 2);
+    // Rewrite shadows & borders because all blocks have offsets.
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+  }
+
+  // Only if blocks are siblings need bottom margin (homepage).
+  #posts > article + article {
+    .post-block {
+      margin-top: $content-tablet-padding;
+    }
   }
 
   .comments {
+    margin-top: $content-tablet-padding;
     padding: $content-tablet-padding ($content-tablet-padding * 2);
     //padding: initial;
     //padding-top: $content-tablet-padding;
@@ -195,15 +211,23 @@ h6 {
   }
 
   .post-block {
-    margin-bottom: $content-mobile-padding;
-    //width: 100%;
     // Inside posts blocks content padding (default 40px).
-    //padding: $content-mobile-padding 0px;
     padding: sboffset;
     min-height: auto;
+    // Rewrite shadows & borders because all blocks have offsets.
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+  }
+
+  // Only if blocks are siblings need bottom margin (homepage).
+  #posts > article + article {
+    .post-block {
+      margin-top: $content-mobile-padding;
+    }
   }
 
   .comments {
+    margin-top: $content-mobile-padding;
     padding: 0 sboffset;
   }
 
