@@ -393,18 +393,26 @@ valine:
 # NeedMoreShare2
 # This plugin is a pure javascript sharing lib which is useful in China.
 # See: https://github.com/revir/need-more-share2
-needMoreShare2:
+# Also see: https://github.com/DzmVasileusky/needShareButton
+# iconStyle: default | box
+# boxForm: horizontal | vertical
+# position: top / middle / bottom + Left / Center / Right
+# networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Twitter,
+#           Reddit,Delicious,Tapiture,StumbleUpon,Pinterest,Facebook,GooglePlus,
+#           Linkedin,Slashdot,Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
+#           Pingfm,Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
+needmoreshare2:
   enable: false
   postbottom: 
     enable: false
-    Options:
+    options:
       iconStyle: box
       boxForm: horizontal
       position: middleCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float: 
     enable: false
-    Options:
+    options:
       iconStyle: box
       boxForm: horizontal
       position: middleRight
