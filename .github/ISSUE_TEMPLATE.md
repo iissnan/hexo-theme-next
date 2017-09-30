@@ -29,6 +29,12 @@ You may delete this recomendations and use template which is placed below.
 * Link to demo site with this issue: N/A
 * Link(s) to source code or any usefull link(s): N/A
 
+### Hexo Information
+<!-- Paste info from `hexo -v`  (粘貼信息 `hexo -v`) -->
+```
+
+```
+
 ### NexT Information
 
 **NexT Version:**
