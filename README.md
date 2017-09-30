@@ -119,6 +119,12 @@ $ cd themes/next
 $ git pull
 ```
 
+### Bugs
+
+> Commit your changes or stash them before you can merge
+
+You must Commit, Stash or Discard local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
+
 ### Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
 
 Currently, it is not smooth to update NexT theme from pulling or downloading new releases. It is quite often running into conflict status when updating NexT theme via `git pull`, or need to merge configurations manually when upgrading to new releases.
