@@ -395,14 +395,14 @@ valine:
 # See: https://github.com/revir/need-more-share2
 needMoreShare2:
   postbottom: 
-    enable: true
+    enable: false
     Options:
       iconStyle: box
       boxForm: horizontal
       position: middleCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float: 
-    enable: true
+    enable: false
     Options:
       iconStyle: box
       boxForm: horizontal
