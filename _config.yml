@@ -394,11 +394,20 @@ valine:
 # This plugin is a pure javascript sharing lib which is useful in China.
 # See: https://github.com/revir/need-more-share2
 needMoreShare2:
-  enable: true
-  # Options
-  iconStyle: default
-  boxForm: horizontal
-  position: bottomCenter
+  postbottom: 
+    enable: true
+    Options:
+      iconStyle: box
+      boxForm: horizontal
+      position: middleCenter
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+  float: 
+    enable: true
+    Options:
+      iconStyle: box
+      boxForm: horizontal
+      position: middleRight
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/

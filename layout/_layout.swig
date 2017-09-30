@@ -58,6 +58,10 @@
       </div>
     {% endif %}
 
+    {% if theme.needMoreShare2.float.enable %}
+        {% include '_third-party/share/needsharebutton/floatdom.swig' %}
+    {% endif %}
+
   </div>
 
   {% include '_scripts/vendors.swig' %}
