@@ -1,4 +1,4 @@
-# <div><img align="top" width="40" height="44" src="../../blob/master/source/images/logo.svg">exT</div>
+# <div align="left"><img align="top" width="40" height="44" src="../../blob/master/source/images/logo.svg"> e x T</div>
 
 NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
