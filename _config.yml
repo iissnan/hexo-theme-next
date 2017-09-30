@@ -10,8 +10,17 @@ override: false
 # Site Information Settings
 # ---------------------------------------------------------------
 
-# Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+# To get favicons visit: https://realfavicongenerator.net
+# Put your favicons into `hexo-site/source/` or `hexo-site/themes/next/source/images/` directory.
+# Default NexT favicons placed in `hexo-site/themes/next/source/images/` directory.
+# And if you want to place your icons in `hexo-site/source/`, you must remove `/images` prefix from pathes.
+favicon:
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/apple-touch-icon.png
+  safari_pinned_tab: /images/logo.svg
+  #android_manifest: /images/manifest.json
+  #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -151,11 +160,11 @@ toc:
 #creative_commons:
 
 sidebar:
-  # Sidebar Position, available value: left | right
+  # Sidebar Position, available value: left | right (only for Pisces | Gemini).
   position: left
   #position: right
 
-  # Sidebar Display, available value:
+  # Sidebar Display, available value (only for Muse | Mist):
   #  - post    expand on posts automatically. Default.
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
@@ -165,17 +174,16 @@ sidebar:
   #display: hide
   #display: remove
 
-  # Sidebar offset from top menubar in pixels.
+  # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   offset: 12
-  offset_float: 12
 
-  # Back to top in sidebar
+  # Back to top in sidebar (only for Pisces | Gemini).
   b2t: false
 
-  # Scroll percent label in b2t button
+  # Scroll percent label in b2t button.
   scrollpercent: false
 
-  # Enable sidebar on narrow view
+  # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
 
@@ -572,7 +580,7 @@ tabs:
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! ---------------------------------------------------------------
 
-# Motion
+# Use velocity to animate everything.
 motion:
   enable: true
   async: false
@@ -588,6 +596,8 @@ motion:
     post_header: slideDownIn
     post_body: slideDownIn
     coll_header: slideLeftIn
+    # Only for Pisces | Gemini.
+    sidebar: slideUpIn
 
 # Fancybox
 fancybox: true
@@ -717,4 +727,4 @@ js: js
 images: images
 
 # Theme version
-version: 5.1.2
+version: 5.1.3
