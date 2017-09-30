@@ -58,7 +58,7 @@
       </div>
     {% endif %}
 
-    {% if theme.needMoreShare2.float.enable %}
+    {% if theme.needMoreShare2.enable and theme.needMoreShare2.float.enable %}
         {% include '_third-party/share/needsharebutton/floatdom.swig' %}
     {% endif %}
 

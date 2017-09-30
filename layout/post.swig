@@ -22,7 +22,7 @@
         {% include '_partials/share/add-this.swig' %}
       {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
         {% include '_partials/share/duoshuo_share.swig' %}
-      {% elseif theme.needMoreShare2.postbottom.enable %}
+      {% elseif theme.needMoreShare2.enable and theme.needMoreShare2.postbottom.enable %}
         {% include '_third-party/share/needsharebutton/postbottomdom.swig' %}
       {% endif %}
     </div>
