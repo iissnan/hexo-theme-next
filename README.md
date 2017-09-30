@@ -145,18 +145,34 @@ With this feature, now you can put all your configurations into one place (`sour
 
 ## Features
 
-### Multiple languages support, including: English / Russian / French / German / Simplified Chinese / Traditional Chinese.
+### Multiple languages support, including:
+:us: English<br>
+:ru: Russian<br>
+:fr: French<br>
+:de: German<br>
+:jp: Japanese<br>
+:indonesia: Indonesian<br>
+:portugal: Portuguese (Brazil)<br>
+:kr: Korean<br>
+:it: Italian<br>
+:cn: Simplified Chinese & Traditional Chinese.
 
 Default language is English.
 
 ```yml
 language: en
 # language: zh-Hans
-# language: fr-FR
 # language: zh-hk
 # language: zh-tw
 # language: ru
+# language: fr-FR
 # language: de
+# language: ja
+# language: id
+# language: pt
+# language: pt-BR
+# language: ko
+# language: it
 ```
 
 Set `language` field as following in site `_config.yml` to change to Chinese.
