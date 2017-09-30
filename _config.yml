@@ -394,6 +394,7 @@ valine:
 # This plugin is a pure javascript sharing lib which is useful in China.
 # See: https://github.com/revir/need-more-share2
 needMoreShare2:
+  enable: false
   postbottom: 
     enable: false
     Options:
