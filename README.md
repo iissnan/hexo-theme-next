@@ -1,4 +1,4 @@
-# NexT
+# NexT <img align="top" width="40" height="40" src="../../blob/master/source/images/logo.svg">
 
 NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from scratch, with love.
 
