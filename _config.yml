@@ -408,7 +408,7 @@ needmoreshare2:
     options:
       iconStyle: box
       boxForm: horizontal
-      position: middleCenter
+      position: bottomCenter
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
   float: 
     enable: false
