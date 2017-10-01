@@ -397,10 +397,7 @@ valine:
 # iconStyle: default | box
 # boxForm: horizontal | vertical
 # position: top / middle / bottom + Left / Center / Right
-# networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Twitter,
-#           Reddit,Delicious,Tapiture,StumbleUpon,Pinterest,Facebook,GooglePlus,
-#           Linkedin,Slashdot,Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
-#           Pingfm,Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
+# networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Reddit,Pinterest,Facebook,GooglePlus,Tumblr,Evernote
 needmoreshare2:
   enable: false
   postbottom: 
