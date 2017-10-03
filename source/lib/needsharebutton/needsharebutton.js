@@ -531,6 +531,4 @@
     });
 
   };
-
-  new needShareButton(".need-share-button");
 })();
