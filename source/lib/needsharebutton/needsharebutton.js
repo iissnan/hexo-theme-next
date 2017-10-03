@@ -148,7 +148,6 @@
           "&description=" + encodeURIComponent(myoptions.description);
         root.popup(url);
       },
-
       "mailto": function (el) {
         var myoptions = getOptions(el);
         var url = "mailto:?subject=" + encodeURIComponent(myoptions.title) +
@@ -470,14 +469,13 @@
       for (var network in myoptions.networks) {
         if (myoptions.networks.hasOwnProperty(network)) {
           var link = document.createElement("span");
-          network = myoptions.networks[network];
+          network = myoptions.networks[network].trim();
           link.className = iconClass + network;
-          var social = ["mailto", "delicious", "stumbleupon", "slashdot", "technorati", "posterous",
-            "googlebookmarks", "newsvine", "friendfeed", "vkontakte", "odnoklassniki", "mailru"];
-          if (social.indexOf(network) === -1) {
-            link.className += " icon-" + network;
-          } else {
+          var fontello = ["weibo", "wechat", "douban", "qqzone", "renren"];
+          if (fontello.indexOf(network) === -1) {
             link.className += " social-" + network;
+          } else {
+            link.className += " icon-" + network;
           }
           link.dataset.network = network;
           link.title = network;
