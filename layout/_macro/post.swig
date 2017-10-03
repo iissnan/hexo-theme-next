@@ -367,6 +367,7 @@
         {% endif %}
         
         {% if theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable %}
+          <div id="needsharebutton-line">|</div>
           <div id="needsharebutton-postbottom">
             <i class="fa fa-share-alt" aria-hidden="true"></i>
           </div>
