@@ -197,9 +197,6 @@
 .need-share-button_qqzone {
   color: #ffce00;
 }
-.need-share-button_qqzone:before {
-  content: '\f1d6';
-}
 .need-share-button_qqzone.need-share-button_link-box {
   color: #fff;
 
