@@ -10,7 +10,8 @@
   // find closest
   function closest(elem, parent) {
     if (typeof (parent) == "string") {
-      var matchesSelector = elem.matches || elem.webkitMatchesSelector || elem.mozMatchesSelector || elem.msMatchesSelector;
+      var matchesSelector = elem.matches || elem.webkitMatchesSelector ||
+                            elem.mozMatchesSelector || elem.msMatchesSelector;
 
       if (!!matchesSelector) {
         while (elem) {
@@ -61,7 +62,8 @@
       var content;
       // check querySelector existance for old browsers
       if (document.querySelector) {
-        content = document.querySelector("meta[property=\"og:image\"]") || document.querySelector("meta[name=\"twitter:image\"]");
+        content = document.querySelector("meta[property=\"og:image\"]") ||
+                  document.querySelector("meta[name=\"twitter:image\"]");
         if (content) {
           return content.getAttribute("content");
         } else {
@@ -77,7 +79,9 @@
       var content;
       // check querySelector existance for old browsers
       if (document.querySelector) {
-        content = document.querySelector("meta[property=\"og:description\"]") || document.querySelector("meta[name=\"twitter:description\"]") || document.querySelector("meta[name=\"description\"]");
+        content = document.querySelector("meta[property=\"og:description\"]") ||
+                  document.querySelector("meta[name=\"twitter:description\"]") ||
+                  document.querySelector("meta[name=\"description\"]");
         if (content) {
           return content.getAttribute("content");
         } else {
@@ -147,7 +151,9 @@
 
       "mailto": function (el) {
         var myoptions = getOptions(el);
-        var url = "mailto:?subject=" + encodeURIComponent(myoptions.title) + "&body=Thought you might enjoy reading this: " + encodeURIComponent(myoptions.url) + " - " + encodeURIComponent(myoptions.description);
+        var url = "mailto:?subject=" + encodeURIComponent(myoptions.title) +
+          "&body=Thought you might enjoy reading this: " + encodeURIComponent(myoptions.url) +
+          " - " + encodeURIComponent(myoptions.description);
 
         window.location.href = url;
       },
@@ -320,14 +326,24 @@
         // fix dual screen mode
         dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left,
         dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top,
-        width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width,
-        height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height,
+        width = window.innerWidth ?
+                window.innerWidth :
+                document.documentElement.clientWidth ?
+                document.documentElement.clientWidth :
+                screen.width,
+        height = window.innerHeight ?
+                 window.innerHeight :
+                 document.documentElement.clientHeight ?
+                 document.documentElement.clientHeight :
+                 screen.height,
         // calculate top and left position
         left = ((width / 2) - (popupWidth / 2)) + dualScreenLeft,
         top = ((height / 2) - (popupHeight / 2)) + dualScreenTop,
 
         // show popup
-        shareWindow = window.open(url, "targetWindow", "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=" + popupWidth + ", height=" + popupHeight + ", top=" + top + ", left=" + left);
+        shareWindow = window.open(url, "targetWindow",
+          "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=" + popupWidth +
+          ", height=" + popupHeight + ", top=" + top + ", left=" + left);
 
       // Puts focus on the newWindow
       if (window.focus) {
@@ -448,13 +464,16 @@
 
 
       // fill fropdown with buttons
-      var iconClass = myoptions.iconStyle == "default" ? "need-share-button_link need-share-button_" : "need-share-button_link-" + myoptions.iconStyle + " need-share-button_link need-share-button_";
+      var iconClass = myoptions.iconStyle == "default" ? 
+                      "need-share-button_link need-share-button_" : 
+                      "need-share-button_link-" + myoptions.iconStyle + " need-share-button_link need-share-button_";
       for (var network in myoptions.networks) {
         if (myoptions.networks.hasOwnProperty(network)) {
           var link = document.createElement("span");
           network = myoptions.networks[network];
           link.className = iconClass + network;
-          var social = ["mailto", "delicious", "stumbleupon", "slashdot", "technorati", "posterous", "googlebookmarks", "newsvine", "friendfeed", "vkontakte", "odnoklassniki", "mailru"];
+          var social = ["mailto", "delicious", "stumbleupon", "slashdot", "technorati", "posterous",
+            "googlebookmarks", "newsvine", "friendfeed", "vkontakte", "odnoklassniki", "mailru"];
           if (social.indexOf(network) === -1) {
             link.className += " icon-" + network;
           } else {
