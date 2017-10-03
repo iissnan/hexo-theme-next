@@ -13,27 +13,18 @@
 +tablet() {
 
 }
-*/
+
 
 // < 767px
 +mobile() {
 
-  // For Pisces scheme only wider width.
-  .content-wrap {
-    padding: 15px !important;
-  }
-
-  .posts-expand {
-    padding-top: 20px !important;
-    margin: initial !important;
-  }
-
 }
+*/
 
 // < 567px
 +mobile-small() {
 
-  // For Muse & Mist schemes only.
+  // For Muse & Mist schemes only vertical economy.
   .header-inner {
     margin-bottom: initial !important;
   }
@@ -41,14 +32,15 @@
     margin-top: initial !important;
   }
 
-  // For Pisces scheme only wider width.
+  // For Pisces & Gemini schemes only wider width (remove main blocks in Gemini).
   .content-wrap {
     padding: initial !important;
   }
 
   // For all schemes wider width.
   .posts-expand {
-    padding-top: 10px !important;
+    padding-top: $content-mobile-padding !important;
+    // For Muse & Mist & Pisces schemes only wider width.
     margin: initial !important;
 
     .post-header {
@@ -61,9 +53,13 @@
 
   }
 
-  .post-body {
+  .post-block {
+    // Inside posts blocks content padding (default 40px).
+    padding: $content-mobile-padding 0 !important;
+  }
 
-    // For post blocks wider width.
+  .post-body {
+    // For headers narrow width.
     h2, h3, h4, h5, h6 {
       margin: 10px 18px 8px;
     }
@@ -74,10 +70,12 @@
       }
     }
 
+    // For paragraphs narrow width.
     p {
       margin: 0 0 10px 0;
       padding: 0 18px;
     }
+
     // Rewrite paddings & margins inside tags.
     .note > p, .tabs .tab-content .tab-pane > p {
       padding: 0 5px;
@@ -105,7 +103,12 @@
     .tabs .tab-content .tab-pane {
       padding: 10px 10px 0 10px !important;
     }
+  }
 
+  // Need to refactor into flex.
+  .post-nav {
+    padding-bottom: 2px;
+    //padding: 2px 8px;
   }
 
 }
