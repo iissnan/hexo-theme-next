@@ -48,7 +48,8 @@
       var content;
       // check querySelector existance for old browsers
       if (document.querySelector) {
-        if (content = document.querySelector("title")) {
+        content = document.querySelector("title");
+        if (content) {
           return content.innerText;
         }
       }
@@ -60,12 +61,15 @@
       var content;
       // check querySelector existance for old browsers
       if (document.querySelector) {
-        if (content = document.querySelector("meta[property=\"og:image\"]") || document.querySelector("meta[name=\"twitter:image\"]")) {
+        content = document.querySelector("meta[property=\"og:image\"]") || document.querySelector("meta[name=\"twitter:image\"]");
+        if (content) {
           return content.getAttribute("content");
-        } else
+        } else {
           return "";
-      } else
+        }
+      } else {
         return "";
+      }
     };
 
     // get description from html
@@ -73,15 +77,19 @@
       var content;
       // check querySelector existance for old browsers
       if (document.querySelector) {
-        if (content = document.querySelector("meta[property=\"og:description\"]") || document.querySelector("meta[name=\"twitter:description\"]") || document.querySelector("meta[name=\"description\"]")) {
+        content = document.querySelector("meta[property=\"og:description\"]") || document.querySelector("meta[name=\"twitter:description\"]") || document.querySelector("meta[name=\"description\"]");
+        if (content) {
           return content.getAttribute("content");
-        } else
+        } else {
           return "";
+        }
       } else {
-        if (content = document.getElementsByTagName("meta").namedItem("description"))
+        content = document.getElementsByTagName("meta").namedItem("description");
+        if (content) {
           return content.getAttribute("content");
-        else
+        } else {
           return "";
+        }
       }
     };
 
@@ -394,10 +402,11 @@
       var myoptions = getOptions(el);
 
       // set dropdown row length
-      if (myoptions.iconStyle == "box" && myoptions.boxForm == "horizontal")
+      if (myoptions.iconStyle == "box" && myoptions.boxForm == "horizontal") {
         dropdownEl.className += " need-share-button_dropdown-box-horizontal";
-      else if (myoptions.iconStyle == "box" && myoptions.boxForm == "vertical")
+      } else if (myoptions.iconStyle == "box" && myoptions.boxForm == "vertical") {
         dropdownEl.className += " need-share-button_dropdown-box-vertical";
+      }
 
       // set dropdown position
       setTimeout(function () {
