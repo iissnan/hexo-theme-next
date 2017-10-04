@@ -58,6 +58,14 @@
       </div>
     {% endif %}
 
+    {% if theme.needmoreshare2.enable and theme.needmoreshare2.float.enable %}
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    {% endif %}
+
   </div>
 
   {% include '_scripts/vendors.swig' %}
@@ -74,6 +82,7 @@
   {% include '_third-party/search/index.swig' %}
   {% include '_third-party/analytics/lean-analytics.swig' %}
   {% include '_third-party/seo/baidu-push.swig' %}
+  {% include '_third-party/needsharebutton.swig' %}
   {% include '_third-party/rating.swig' %}
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
