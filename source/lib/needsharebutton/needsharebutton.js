@@ -369,7 +369,8 @@
       }
     }
     // convert networks string into array
-    root.options.networks = root.options.networks.toLowerCase().split(",");
+    //root.options.networks = root.options.networks.toLowerCase().split(",");
+    root.options.networks = root.options.networks.split(",");
 
     function getOptions(el) {
       // integrate data attribute options
@@ -396,7 +397,8 @@
           newOption = newOption.charAt(0).toLowerCase() + newOption.slice(1);
           var val = el.dataset[option];
           if (newOption === "networks") {
-            val = val.toLowerCase().split(",");
+            //val = val.toLowerCase().split(",");
+            val = val.split(",");
           } else if (newOption === "url" && val && val[0] === "/") {
             // fix relative url problem.
             val = location.origin + val;
@@ -470,14 +472,15 @@
         if (myoptions.networks.hasOwnProperty(network)) {
           var link = document.createElement("span");
           network = myoptions.networks[network].trim();
-          link.className = iconClass + network;
+          var networkLC = network.toLowerCase();
+          link.className = iconClass + networkLC;
           var fontello = ["weibo", "wechat", "douban", "qqzone", "renren"];
-          if (fontello.indexOf(network) === -1) {
-            link.className += " social-" + network;
+          if (fontello.indexOf(networkLC) === -1) {
+            link.className += " social-" + networkLC;
           } else {
-            link.className += " icon-" + network;
+            link.className += " icon-" + networkLC;
           }
-          link.dataset.network = network;
+          link.dataset.network = networkLC;
           link.title = network;
           dropdownEl.appendChild(link);
         }
