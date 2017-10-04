@@ -10,14 +10,18 @@ override: false
 # Site Information Settings
 # ---------------------------------------------------------------
 
-# To get favicons visit: https://realfavicongenerator.net
-# Put your favicons into `hexo-site/source/` or `hexo-site/themes/next/source/images/` directory.
+# To get or check favicons visit: https://realfavicongenerator.net
+# Put your favicons into `hexo-site/source/` (recommend) or `hexo-site/themes/next/source/images/` directory.
+
 # Default NexT favicons placed in `hexo-site/themes/next/source/images/` directory.
-# And if you want to place your icons in `hexo-site/source/`, you must remove `/images` prefix from pathes.
+# And if you want to place your icons in `hexo-site/source/` root directory, you must remove `/images` prefix from pathes.
+
+# For example, you put your favicons into `hexo-site/source/images` directory.
+# Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
 favicon:
-  small: /images/favicon-16x16.png
-  medium: /images/favicon-32x32.png
-  apple_touch_icon: /images/apple-touch-icon.png
+  small: /images/favicon-16x16-next.png
+  medium: /images/favicon-32x32-next.png
+  apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
@@ -132,8 +136,9 @@ social_icons:
   transition: false
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
+links_icon: link
+links_title: Links
+links_layout: block
 #links_layout: inline
 #links:
   #Title: http://example.com/
@@ -413,6 +418,34 @@ gitment:
 
 # Share
 #duoshuo_share: true
+
+# NeedMoreShare2
+# This plugin is a pure javascript sharing lib which is useful in China.
+# See: https://github.com/revir/need-more-share2
+# Also see: https://github.com/DzmVasileusky/needShareButton
+# iconStyle: default | box
+# boxForm: horizontal | vertical
+# position: top / middle / bottom + Left / Center / Right
+# networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Reddit,
+#           Delicious,StumbleUpon,Pinterest,Facebook,GooglePlus,Slashdot,
+#           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,
+#           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru
+needmoreshare2:
+  enable: false
+  postbottom: 
+    enable: false
+    options:
+      iconStyle: box
+      boxForm: horizontal
+      position: bottomCenter
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
+  float: 
+    enable: false
+    options:
+      iconStyle: box
+      boxForm: horizontal
+      position: middleRight
+      networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -735,6 +768,10 @@ vendors:
   # Internal version: 3.3.0
   # https://github.com/ethantw/Han
   han:
+
+  # needMoreShare2
+  # https://github.com/revir/need-more-share2
+  needMoreShare2:
 
 
 # Assets
