@@ -59,11 +59,11 @@
     {% endif %}
 
     {% if theme.needmoreshare2.enable and theme.needmoreshare2.float.enable %}
-        <div id="needsharebutton-float">
-          <span class="btn">
-            <i class="fa fa-share-alt" aria-hidden="true"></i>
-          </span>
-        </div>
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     {% endif %}
 
   </div>
