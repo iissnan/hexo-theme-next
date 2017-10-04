@@ -472,15 +472,15 @@
         if (myoptions.networks.hasOwnProperty(network)) {
           var link = document.createElement("span");
           network = myoptions.networks[network].trim();
-          var network_lc = network.toLowerCase();
-          link.className = iconClass + network_lc;
+          var networkLC = network.toLowerCase();
+          link.className = iconClass + networkLC;
           var fontello = ["weibo", "wechat", "douban", "qqzone", "renren"];
-          if (fontello.indexOf(network_lc) === -1) {
-            link.className += " social-" + network_lc;
+          if (fontello.indexOf(networkLC) === -1) {
+            link.className += " social-" + networkLC;
           } else {
-            link.className += " icon-" + network_lc;
+            link.className += " icon-" + networkLC;
           }
-          link.dataset.network = network_lc;
+          link.dataset.network = networkLC;
           link.title = network;
           dropdownEl.appendChild(link);
         }
