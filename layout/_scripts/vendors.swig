@@ -35,11 +35,15 @@
   {% set js_vendors.canvas_sphere  = 'three/canvas_sphere.min.js' %}
 {% endif %}
 
-{% if theme.canvas_ribbon and theme.scheme === 'Pisces'%}
+{% if theme.canvas_ribbon.enable and theme.scheme === 'Pisces'%}
   {% set js_vendors.canvas_ribbon  = 'canvas-ribbon/canvas-ribbon.js' %}
 {% endif %}
 
 {% for name, internal in js_vendors %}
   {% set internal_script = url_for(theme.vendors._internal) + '/' + internal %}
-  <script type="text/javascript" src="{{ theme.vendors[name] | default(internal_script) }}"></script>
+  {% if name == 'canvas_ribbon' %}
+    <script id="ribbon" type="text/javascript" size="{{ theme.canvas_ribbon.size }}" alpha="{{ theme.canvas_ribbon.alpha }}"  zIndex="{{theme.canvas_ribbon.zIndex }}" src="{{ theme.vendors[name] | default(internal_script) }}"></script>
+  {% else %}
+    <script type="text/javascript" src="{{ theme.vendors[name] | default(internal_script) }}"></script>
+  {% endif %}
 {% endfor %}
