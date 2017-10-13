@@ -2,10 +2,6 @@
  * Created by zproo on 2017/4/8.
  */
 !function () {
-  document.addEventListener('touchmove', function (e) {
-      e.preventDefault()
-  });
-
   function getAttr(script, attr, default_val) {
       return Number(script.getAttribute(attr)) || default_val;
   }
