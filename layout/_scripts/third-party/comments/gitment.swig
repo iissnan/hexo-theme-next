@@ -3,13 +3,14 @@
     <script src='https://imsun.github.io/gitment/dist/gitment.browser.js'></script>
     <script type='text/javascript'>
         (function() {
-            var id = '{{theme.gitment.id}}';
+            var id = window.location.pathname.replace(/(\/$)/g, '');
             var owner = '{{theme.gitment.owner}}';
             var repo = '{{theme.gitment.repo}}';
             var clientId = '{{theme.gitment.client_id}}';
             var clientSecret = '{{theme.gitment.client_secret}}';
 
             var gitment = new Gitment({
+                id: id,
                 owner: owner,
                 repo: repo,
                 oauth: {
