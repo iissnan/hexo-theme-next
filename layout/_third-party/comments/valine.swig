@@ -1,7 +1,7 @@
-{% if theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
+{% if page.comments and theme.valine.enable and theme.valine.appid and theme.valine.appkey %}
   
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine@1.1.6/dist/Valine.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/xcss/valine@v1.1.7-rc3/dist/Valine.min.js"></script>
   <script type="text/javascript">
     new Valine({
         av: AV,
