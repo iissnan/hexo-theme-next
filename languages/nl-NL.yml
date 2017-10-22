@@ -1,0 +1,97 @@
+title:
+  archive: Archief
+  category: Categorie
+  tag: Label
+  schedule: Rooster
+
+author: Auteur
+
+menu:
+  home: Home
+  archives: Archieven
+  categories: Categorieën
+  tags: Labels
+  about: Over
+  search: Zoeken
+  schedule: Rooster
+  sitemap: Sitemap
+  commonweal: Gezond verstand 404
+
+sidebar:
+  overview: Overzicht
+  toc: Inhoudsopgave
+
+post:
+  created: Post aangemaakt
+  modified: Post aangepast
+  sticky: Sticky
+  posted: Geplaatst op
+  in: In
+  more: meer
+  read_more: Lees meer
+  untitled: Naamloos
+  toc_empty: Deze post heeft geen inhoudsopgave
+  visitors: Bezoekers
+  wordcount: Aantal woorden in artikel
+  min2read: Leestijd
+  totalcount: Aantal woorden in site
+  copyright:
+    author: Post auteur
+    link: Post link
+    license_title: Copyright melding
+    license_content: 'Alle artikelen op deze blog zijn gelicenseerd onder
+      <a href="%s" rel="external nofollow" target="_blank">%s</a>, mits niet anders aangegeven.'
+
+page:
+  totally: Totaal
+  tags: labels
+
+footer:
+  powered: "Mede mogelijk gemaakt door %s"
+  theme: Thema
+
+counter:
+  tag_cloud:
+    zero: Geen labels
+    one: 1 label in totaal
+    other: "%d labels in totaal"
+
+  categories:
+    zero: Geen categorieën
+    one: 1 categorie in totaal
+    other: "%d categorieën in totaal"
+
+  archive_posts:
+    zero: Geen posts.
+    one: 1 post.
+    other: "%d posts in totaal."
+
+state:
+  posts: posts
+  pages: pagina's
+  tags: labels
+  categories: categorieën
+
+search:
+  placeholder: Zoeken...
+
+cheers:
+  um: Um..
+  ok: Oké
+  nice: Leuk
+  good: Goed
+  great: Geweldig
+  excellent: Uitstekend
+
+keep_on: Blijf posten.
+
+symbol:
+  comma: ', '
+  period: '. '
+  colon: ':'
+
+reward:
+  donate: Doneer
+  wechatpay: WeChat Pay
+  alipay: Alipay
+  bitcoin: Bitcoin
