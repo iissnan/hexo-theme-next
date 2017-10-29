@@ -152,6 +152,7 @@ With this feature, now you can put all your configurations into one place (`sour
 ## Features
 
 ### Multiple languages support, including:
+:cn: Simplified Chinese & Traditional Chinese.<br>
 :us: English<br>
 :ru: Russian<br>
 :fr: French<br>
@@ -161,7 +162,7 @@ With this feature, now you can put all your configurations into one place (`sour
 :portugal: Portuguese (Brazil)<br>
 :kr: Korean<br>
 :it: Italian<br>
-:cn: Simplified Chinese & Traditional Chinese.
+:netherlands: Dutch
 
 Default language is English.
 
@@ -179,6 +180,7 @@ language: en
 # language: pt-BR
 # language: ko
 # language: it
+# language: nl-NL
 ```
 
 Set `language` field as following in site `_config.yml` to change to Chinese.
