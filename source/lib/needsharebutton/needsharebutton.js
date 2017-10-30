@@ -109,7 +109,7 @@
       },
       "wechat": function (el) {
         var myoptions = getOptions(el);
-        var imgSrc = "https://api.qinco.me/api/qr?size=400&content=" + encodeURIComponent(myoptions.url);
+        var imgSrc = "http://tool.oschina.net/action/qrcode/generate?output=image/png&error=L&type=0&margin=2&size=4&data=" + encodeURIComponent(myoptions.url);
         var dropdownEl = el.querySelector(".need-share-button_dropdown");
         var img = dropdownEl.getElementsByClassName("need-share-wechat-code-image")[0];
         if (img) {
