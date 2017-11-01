@@ -14,7 +14,7 @@
 
 			var db = firebase.firestore()
 			var articles=db.collection('{{ theme.firestore.collection }}')
-			var doc=window.doc=articles.doc(title)
+			var doc=articles.doc(title)
 
 			doc.get().then(function(d){
 				var count
