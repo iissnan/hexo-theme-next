@@ -47,7 +47,7 @@
       <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
     </div>
 
-  {% elseif theme.changyan.appid and theme.changyan.appkey %}
+  {% elseif theme.changyan.enable %}
     <div class="comments" id="comments">
       <div id="SOHUCS"></div>
     </div>
