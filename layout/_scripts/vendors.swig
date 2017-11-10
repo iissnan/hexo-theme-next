@@ -14,7 +14,7 @@
 {% set js_vendors.velocity_ui = 'velocity/velocity.ui.min.js?v=1.2.1' %}
 
 {% if theme.fancybox %}
-  {% set js_vendors.fancybox  = 'fancybox/source/jquery.fancybox.pack.js?v=2.1.5' %}
+  {% set js_vendors.fancybox  = 'fancybox/dist/jquery.fancybox.min.js?v=3.2.0' %}
 {% endif %}
 {% if theme.canvas_nest %}
   {% set js_vendors.canvas_nest  = 'canvas-nest/canvas-nest.min.js' %}
