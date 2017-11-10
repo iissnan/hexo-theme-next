@@ -323,7 +323,6 @@ $(document).ready(function () {
       if ($('.sidebar-panel').height() > (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
         $('.site-overview').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
       }
-    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
 
     // Initialize Sidebar & TOC Height.
     updateSidebarHeight(document.body.clientHeight - NexT.utils.getSidebarSchemePadding());
