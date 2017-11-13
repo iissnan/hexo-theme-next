@@ -1,6 +1,6 @@
 # <div align="center"><a href="https://github.com/iissnan/hexo-theme-next"><img align="center" width="56" height="56" src="../../blob/master/source/images/logo.svg"></a> e x T</div>
 
-<p align="center">NexT 是一个高质量并且优雅的<a href="http://hexo.io">Hexo</a> 主题。这是带着热爱，从零开始一步一步做出来的。</p>
+<p align="center">NexT 是一个高质量并且优雅的<a href="http://hexo.io">Hexo</a> 主题。这是带着热爱，而做出来的 hexo 主题。</p>
 
 ![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
 
@@ -36,7 +36,7 @@
 **2.** 从 github 上获取主题 。这里有几种方式来获取主题:
 
 ### 下载 [最新发布的版本][releases-latest-url].
-   在大多数情况下 **稳定**。 推荐下载这个。
+   在大多数情况下 **稳定**。 推荐用户下载这个。
 
    [![curl-tar-wget-image]][curl-tar-wget-url]
 
@@ -62,7 +62,7 @@
    ```
 
 ### 下载[最新的 master 分支][download-latest-url].
-  可能会 **不稳定**, but includes latest features. Recommended for developers.
+  可能会 **不稳定**, 但是包含最新的特色，推荐开发者下载.
 
    [![curl-tar-image]][curl-tar-url]
 
@@ -91,7 +91,7 @@
    v5.1.2
    ```
 
-   For example, you want to switch on `v5.1.0` [tagged release version][tags-url]. Input the following command:
+   例如, 你想要切换到`v5.1.0` [标签发布版本][tags-url]. 输入以下命令:
 
    ```sh
    $ git checkout tags/v5.1.0
@@ -100,13 +100,13 @@
    HEAD now on 1f72f68... CSS: Remove global list-style setting of ul
    ```
 
-   And if you want to switch back on [master branch][commits-url], input this command:
+   如果你想切换回 [master 分支][commits-url]的话, 输入这个命令:
 
    ```sh
    $ git checkout master
    ```
 
-**3.** Set theme in main **hexo root config** `_config.yml` file:
+**3.** 在 **hexo 根目录下** 的配置文件`_config.yml`里设置主题:
 
     theme: next
 
