@@ -1,0 +1,372 @@
+/***********************************************
+  needShareButton
+  - Version 1.0.0
+  - Copyright 2015 Dzmitry Vasileuski
+  - Licensed under MIT (http://opensource.org/licenses/MIT)
+***********************************************/
+/* Social icons font
+***********************************************/
+@import url('font-embedded.css');
+.need-share-button {
+  position: relative;
+}
+.need-share-button-opened {
+  position: relative;
+}
+.need-share-button-opened img.need-share-wechat-code-image {
+  display: block;
+
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+}
+.need-share-button_dropdown {
+  position: absolute;
+  z-index: 10;
+
+  visibility: hidden;
+  overflow: hidden;
+
+  width: 300px;
+
+  font-size: 16px;
+
+  -webkit-transition: .3s;
+          transition: .3s;
+  -webkit-transform: scale(.1);
+      -ms-transform: scale(.1);
+          transform: scale(.1);
+  text-align: center;
+  white-space: normal;
+
+  opacity: 0;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+          box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+.need-share-button-opened .need-share-button_dropdown {
+  visibility: visible;
+
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+
+  opacity: 1;
+}
+.need-share-button_dropdown-box-vertical,
+.need-share-button_dropdown-box-horizontal {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+.need-share-button_dropdown-box-vertical {
+  width: 50px;
+}
+.need-share-button_dropdown-box-horizontal {
+  width: auto;
+
+  white-space: nowrap;
+}
+.need-share-button_link {
+  display: inline-block;
+
+  width: 50px;
+  height: 50px;
+
+  line-height: 50px;
+
+  cursor: pointer;
+  text-align: center;
+}
+.need-share-button_link:hover {
+  -webkit-transition: .3s;
+          transition: .3s;
+
+  opacity: .7;
+}
+/* Dropdown position
+***********************************************/
+.need-share-button_dropdown-top-left {
+  right: 100%;
+  bottom: 100%;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.need-share-button_dropdown-top-right {
+  bottom: 100%;
+  left: 100%;
+
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.need-share-button_dropdown-top-center {
+  bottom: 100%;
+  left: 50%;
+
+  margin-bottom: 10px;
+}
+.need-share-button_dropdown-middle-left {
+  top: 50%;
+  right: 100%;
+
+  margin-right: 10px;
+}
+.need-share-button_dropdown-middle-right {
+  top: 50%;
+  left: 100%;
+
+  margin-left: 10px;
+}
+.need-share-button_dropdown-bottom-left {
+  top: 100%;
+  right: 100%;
+
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.need-share-button_dropdown-bottom-right {
+  top: 100%;
+  left: 100%;
+
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.need-share-button_dropdown-bottom-center {
+  top: 100%;
+  left: 50%;
+
+  margin-top: 10px;
+}
+/* Default theme
+***********************************************/
+.need-share-button-default {
+  display: inline-block;
+
+  margin-bottom: 0;
+  padding: 6px 12px;
+
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-weight: 400;
+  color: #333;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  vertical-align: middle;
+
+  border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #fff;
+}
+/* Network buttons
+***********************************************/
+.need-share-button_wechat {
+  color: #a2dc30;
+}
+.need-share-button_wechat.need-share-button_link-box {
+  color: #fff;
+
+  background: #a2dc30;
+}
+.need-share-button_weibo {
+  color: #d52b2b;
+}
+.need-share-button_weibo.need-share-button_link-box {
+  color: #fff;
+
+  background: #d52b2b;
+}
+.need-share-button_douban {
+  color: #072;
+}
+.need-share-button_douban:before {
+  content: '豆';
+}
+.need-share-button_douban.need-share-button_link-box {
+  color: #fff;
+
+  background: #072;
+}
+.need-share-button_qqzone {
+  color: #ffce00;
+}
+.need-share-button_qqzone.need-share-button_link-box {
+  color: #fff;
+
+  background: #ffce00;
+}
+.need-share-button_renren {
+  color: #207cc5;
+}
+.need-share-button_renren.need-share-button_link-box {
+  color: #fff;
+
+  background: #207cc5;
+}
+.need-share-button_mailto {
+  color: #efbe00;
+}
+.need-share-button_mailto.need-share-button_link-box {
+  color: #fff;
+
+  background: #efbe00;
+}
+.need-share-button_twitter {
+  color: #00acec;
+}
+.need-share-button_twitter.need-share-button_link-box {
+  color: #fff;
+
+  background: #00acec;
+}
+.need-share-button_pinterest {
+  color: #cd2027;
+}
+.need-share-button_pinterest.need-share-button_link-box {
+  color: #fff;
+
+  background: #cd2027;
+}
+.need-share-button_facebook {
+  color: #3b5998;
+}
+.need-share-button_facebook.need-share-button_link-box {
+  color: #fff;
+
+  background: #3b5998;
+}
+.need-share-button_googleplus {
+  color: #d44132;
+}
+.need-share-button_googleplus.need-share-button_link-box {
+  color: #fff;
+
+  background: #d44132;
+}
+.need-share-button_reddit {
+  color: #000;
+}
+.need-share-button_reddit.need-share-button_link-box {
+  color: #fff;
+
+  background: #000;
+}
+.need-share-button_delicious {
+  color: #000;
+}
+.need-share-button_delicious.need-share-button_link-box {
+  color: #fff;
+
+  background: #000;
+}
+.need-share-button_stumbleupon {
+  color: #f04e23;
+}
+.need-share-button_stumbleupon.need-share-button_link-box {
+  color: #fff;
+
+  background: #f04e23;
+}
+.need-share-button_linkedin {
+  color: #0085af;
+}
+.need-share-button_linkedin.need-share-button_link-box {
+  color: #fff;
+
+  background: #0085af;
+}
+.need-share-button_slashdot {
+  color: #026664;
+}
+.need-share-button_slashdot.need-share-button_link-box {
+  color: #fff;
+
+  background: #026664;
+}
+.need-share-button_technorati {
+  color: #49ae47;
+}
+.need-share-button_technorati.need-share-button_link-box {
+  color: #fff;
+
+  background: #49ae47;
+}
+.need-share-button_posterous {
+  color: #795d31;
+}
+.need-share-button_posterous.need-share-button_link-box {
+  color: #fff;
+
+  background: #795d31;
+}
+.need-share-button_tumblr {
+  color: #34465d;
+}
+.need-share-button_tumblr.need-share-button_link-box {
+  color: #fff;
+
+  background: #34465d;
+}
+.need-share-button_googlebookmarks {
+  color: #fde331;
+}
+.need-share-button_googlebookmarks.need-share-button_link-box {
+  color: #fff;
+
+  background: #fde331;
+}
+.need-share-button_newsvine {
+  color: #03652c;
+}
+.need-share-button_newsvine.need-share-button_link-box {
+  color: #fff;
+
+  background: #03652c;
+}
+.need-share-button_evernote {
+  color: #79d626;
+}
+.need-share-button_evernote.need-share-button_link-box {
+  color: #fff;
+
+  background: #79d626;
+}
+.need-share-button_friendfeed {
+  color: #b0cbe9;
+}
+.need-share-button_friendfeed.need-share-button_link-box {
+  color: #fff;
+
+  background: #b0cbe9;
+}
+.need-share-button_vkontakte {
+  color: #4c75a3;
+}
+.need-share-button_vkontakte.need-share-button_link-box {
+  color: #fff;
+
+  background: #4c75a3;
+}
+.need-share-button_odnoklassniki {
+  color: #ed812b;
+}
+.need-share-button_odnoklassniki.need-share-button_link-box {
+  color: #fff;
+
+  background: #ed812b;
+}
+.need-share-button_mailru {
+  color: #f89c0e;
+}
+.need-share-button_mailru.need-share-button_link-box {
+  color: #fff;
+
+  background: #f89c0e;
+}

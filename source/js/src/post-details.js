@@ -3,8 +3,6 @@
 $(document).ready(function () {
 
   initScrollSpy();
-  NexT.utils.needAffix() && initAffix();
-  initTOCDimension();
 
   function initScrollSpy () {
     var tocSelector = '.post-toc';
@@ -17,6 +15,9 @@ $(document).ready(function () {
 
         removeCurrentActiveClass();
         $currentActiveElement.addClass('active-current');
+
+        // Scrolling to center active TOC element if TOC content is taller then viewport.
+        $tocElement.scrollTop($currentActiveElement.offset().top - $tocElement.offset().top + $tocElement.scrollTop() - ($tocElement.height() / 2));
       })
       .on('clear.bs.scrollspy', removeCurrentActiveClass);
 
@@ -26,56 +27,6 @@ $(document).ready(function () {
       $(tocSelector + ' ' + activeCurrentSelector)
         .removeClass(activeCurrentSelector.substring(1));
     }
-  }
-
-  // Sidebar float
-  function initAffix () {
-    var headerHeight = $('.header-inner').height();
-    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
-
-    /*jshint camelcase: false */
-    var sidebarTop = (CONFIG.sidebar.offset_float === 0) ?
-      headerHeight + CONFIG.sidebar.offset :
-      headerHeight;
-    /*jshint camelcase: true */
-
-    $('.sidebar-inner').affix({
-      offset: {
-        top: sidebarTop,
-        bottom: footerOffset
-      }
-    });
-
-    $(document)
-      .on('affixed.bs.affix', function () {
-        updateTOCHeight(document.body.clientHeight - 100);
-      });
-  }
-
-  function initTOCDimension () {
-    var updateTOCHeightTimer;
-
-    $(window).on('resize', function () {
-      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
-
-      updateTOCHeightTimer = setTimeout(function () {
-        var tocWrapperHeight = document.body.clientHeight - 100;
-
-        updateTOCHeight(tocWrapperHeight);
-      }, 0);
-    });
-
-    // Initialize TOC Height.
-    updateTOCHeight(document.body.clientHeight - 100);
-
-    // Initialize TOC Width.
-    var scrollbarWidth = NexT.utils.getScrollbarWidth();
-    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
-  }
-
-  function updateTOCHeight (height) {
-    height = height || 'auto';
-    $('.post-toc').css('max-height', height);
   }
 
 });
@@ -118,6 +69,7 @@ $(document).ready(function () {
     item.addClass(activeTabClassName);
   });
 
+  // TOC item animation navigate & prevent #item selector in adress bar.
   $('.post-toc a').on('click', function (e) {
     e.preventDefault();
     var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
@@ -139,7 +91,7 @@ $(document).ready(function () {
       CONFIG.sidebar.display === 'always';
   var hasTOC = $tocContent.length > 0 && $tocContent.html().trim().length > 0;
   if (isSidebarCouldDisplay && hasTOC) {
-    CONFIG.motion ?
+    CONFIG.motion.enable ?
       (NexT.motion.middleWares.sidebar = function () {
           NexT.utils.displaySidebar();
       }) : NexT.utils.displaySidebar();

@@ -4,6 +4,30 @@ the-transition() {
   transition-delay: 0s;
 }
 
+the-transition-ease-in() {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+}
+
+the-transition-ease-out() {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+mobile-smallest() {
+  @media (max-width: 413px) {
+    {block}
+  }
+}
+
+mobile-small() {
+  @media (max-width: 567px) {
+    {block}
+  }
+}
+
 mobile() {
   @media (max-width: 767px) {
     {block}
@@ -40,6 +64,18 @@ transform() {
   transform: arguments
 }
 
+hide() {
+  display: none !important;
+}
+
+show() {
+  display: block !important;
+}
+
+fixbutton() {
+  right: 20px;
+  opacity: 0.8;
+}
 
 random-color($min, $max) {
   return floor(math(0, 'random') * ($max - $min + 1) + $min);

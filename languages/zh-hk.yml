@@ -33,6 +33,7 @@ post:
   visitors: 閱讀次數
   wordcount: 字數統計
   min2read: 閱讀時長
+  totalcount: Site words total count
   copyright:
     author: Post author
     link: Post link
@@ -87,3 +88,11 @@ symbol:
   comma: '， '
   period: '。 '
   colon: '：'
+
+reward:
+  donate: 打賞
+  wechatpay: 微信支付
+  alipay: 支付寶
+  bitcoin: 比特幣
+
+gitmentbutton: 顯示 Gitment 評論

@@ -1,0 +1,183 @@
+.post-body .note {
+  note_icons = hexo-config('note.icons');
+
+  position:          relative;
+  padding:           15px;
+  margin-bottom:     20px;
+
+  border:            1px solid transparent;
+  background-color:  $whitesmoke;
+  border-radius:     unit(hexo-config('note.border_radius'), px) if hexo-config('note.border_radius') is a 'unit';
+
+  h2, h3, h4, h5, h6 {
+    if note_icons {
+      margin-top:    3px;
+    } else {
+      margin-top:    0;
+    }
+    margin-bottom:   0;
+    border-bottom:   initial;
+    padding-top:     0 !important;
+  }
+
+  p, ul, ol, table, pre, blockquote {
+    &:first-child {
+      margin-top:    0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  if note_icons {
+    &:not(.no-icon) {
+      padding-left:     45px;
+      &:before {
+        position:       absolute;
+        font-family:    'FontAwesome';
+        font-size:      larger;
+        top:            13px;
+        left:           15px;
+      }
+    }
+  }
+
+  &.default {
+    background-color:            $note-modern-default-bg;
+    border-color:                $note-modern-default-border;
+    color:                       $note-modern-default-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-default-icon;
+        }
+      }
+    }
+    a {
+      &:not(.btn) {
+        color:                     $note-modern-default-text;
+        border-bottom:   1px solid $note-modern-default-text;
+        &:hover {
+          color:                   $note-modern-default-hover;
+          border-bottom: 1px solid $note-modern-default-hover;
+        }
+      }
+    }
+  }
+
+  &.primary {
+    background-color:            $note-modern-primary-bg;
+    border-color:                $note-modern-primary-border;
+    color:                       $note-modern-primary-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-primary-icon;
+        }
+      }
+    }
+    a {
+      &:not(.btn) {
+        color:                     $note-modern-primary-text;
+        border-bottom:   1px solid $note-modern-primary-text;
+        &:hover {
+          color:                   $note-modern-primary-hover;
+          border-bottom: 1px solid $note-modern-primary-hover;
+        }
+      }
+    }
+  }
+
+  &.info {
+    background-color:            $note-modern-info-bg;
+    border-color:                $note-modern-info-border;
+    color:                       $note-modern-info-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-info-icon;
+        }
+      }
+    }
+    a {
+      &:not(.btn) {
+        color:                     $note-modern-info-text;
+        border-bottom:   1px solid $note-modern-info-text;
+        &:hover {
+          color:                   $note-modern-info-hover;
+        border-bottom: 1px solid $note-modern-info-hover;
+        }
+      }
+    }
+  }
+
+  &.success {
+    background-color:            $note-modern-success-bg;
+    border-color:                $note-modern-success-border;
+    color:                       $note-modern-success-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-success-icon;
+        }
+      }
+    }
+    a {
+      &:not(.btn) {
+        color:                     $note-modern-success-text;
+        border-bottom:   1px solid $note-modern-success-text;
+        &:hover {
+          color:                   $note-modern-success-hover;
+          border-bottom: 1px solid $note-modern-success-hover;
+        }
+      }
+    }
+  }
+
+  &.warning {
+    background-color:            $note-modern-warning-bg;
+    border-color:                $note-modern-warning-border;
+    color:                       $note-modern-warning-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-warning-icon;
+        }
+      }
+    }
+    a {
+      &:not(.btn) {
+        color:                     $note-modern-warning-text;
+        border-bottom:   1px solid $note-modern-warning-text;
+        &:hover {
+          color:                   $note-modern-warning-hover;
+          border-bottom: 1px solid $note-modern-warning-hover;
+        }
+      }
+    }
+  }
+
+  &.danger {
+    background-color:            $note-modern-danger-bg;
+    border-color:                $note-modern-danger-border;
+    color:                       $note-modern-danger-text;
+    if note_icons {
+      &:not(.no-icon) {
+        &:before {
+          content:               $note-danger-icon;
+        }
+      }
+    }
+    a {
+      &:not(.btn) {
+        color:                     $note-modern-danger-text;
+        border-bottom:   1px solid $note-modern-danger-text;
+        &:hover {
+          color:                   $note-modern-danger-hover;
+          border-bottom: 1px solid $note-modern-danger-hover;
+        }
+      }
+    }
+  }
+
+}
