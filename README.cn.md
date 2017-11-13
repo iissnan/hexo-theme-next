@@ -61,8 +61,8 @@
    $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
    ```
 
-### Download [latest master branch][download-latest-url].
-   May be **unstable**, but includes latest features. Recommended for developers.
+### 下载[最新的 master 分支][download-latest-url].
+  可能会 **不稳定**, but includes latest features. Recommended for developers.
 
    [![curl-tar-image]][curl-tar-url]
 
