@@ -10,8 +10,11 @@
 [![hexo-image]][hexo-url]
 [![lic-image]](LICENSE)
 
+* <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.md)
 
-<a href="http://notes.iissnan.com" target="_blank">在线预览 Preview</a> | <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.md)
+## Live Preview
+
+
 
 
 
@@ -44,16 +47,34 @@ NexT is built for easily use with elegant appearance. First things first, always
 
 ## [开发历史 Changelog](https://github.com/iissnan/hexo-theme-next/wiki/Changelog)
 
-[![hexo-image]][hexo-url]
-[![bower-image]][bower-url]
-[![jquery-image]][jquery-url]
-[![velocity-image]][velocity-url]
 
-[hexo-image]: http://img.shields.io/badge/Hexo-2.4+-2BAF2B.svg?style=flat-square
+
+[browser-image]: https://img.shields.io/badge/browser-%20chrome%20%7C%20firefox%20%7C%20opera%20%7C%20safari%20%7C%20ie%20%3E%3D%209-lightgrey.svg
+[browser-url]: https://www.browserstack.com
+
+[gitter-image]: https://badges.gitter.im/Join%20Chat.svg
+[gitter-url]: https://gitter.im/iissnan/hexo-theme-next?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+[travis-image]: https://travis-ci.org/iissnan/hexo-theme-next.svg?branch=master
+[travis-url]: https://travis-ci.org/iissnan/hexo-theme-next?branch=master "Travis CI"
+
+[hexo-image]: https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg
 [hexo-url]: http://hexo.io
-[bower-image]: http://img.shields.io/badge/Bower-*-2BAF2B.svg?style=flat-square
-[bower-url]: http://bower.io
-[jquery-image]: https://img.shields.io/badge/jquery-2.1-2BAF2B.svg?style=flat-square
-[jquery-url]: http://jquery.com/
-[velocity-image]: https://img.shields.io/badge/Velocity-1.2-2BAF2B.svg?style=flat-square
-[velocity-url]: http://julian.com/research/velocity/
+
+[mnt-image]: https://img.shields.io/maintenance/yes/2017.svg
+[rel-image]: https://img.shields.io/github/release/iissnan/hexo-theme-next.svg
+<!--[lic-image]: https://img.shields.io/npm/l/hexo-theme-next.svg-->
+[lic-image]: https://img.shields.io/dub/l/vibe-d.svg
+
+[git-image]: https://img.shields.io/badge/install%20with%20-git-blue.svg
+[curl-tar-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar-blue.svg
+[curl-tar-wget-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar%20%7C%20wget-blue.svg
+[git-url]: http://lmgtfy.com/?q=linux+git+install
+[curl-tar-url]: http://lmgtfy.com/?q=linux+curl+tar+install
+[curl-tar-wget-url]: http://lmgtfy.com/?q=linux+curl+tar+wget+install
+
+[download-latest-url]: https://github.com/iissnan/hexo-theme-next/archive/master.zip
+[releases-latest-url]: https://github.com/iissnan/hexo-theme-next/releases/latest
+[releases-url]: https://github.com/iissnan/hexo-theme-next/releases
+[tags-url]: https://github.com/iissnan/hexo-theme-next/tags
+[commits-url]: https://github.com/iissnan/hexo-theme-next/commits/master
