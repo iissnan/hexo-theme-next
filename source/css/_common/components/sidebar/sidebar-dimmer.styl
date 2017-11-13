@@ -1,0 +1,21 @@
+.sidebar-active #sidebar-dimmer {
+  opacity: .7;
+  -webkit-transform: translateX(-150%);
+  transform: translateX(-150%);
+  transition: opacity .2s;
+}
+
+#sidebar-dimmer {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 200%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: opacity .2s,transform 0s .2s;
+  +mobile() {
+    display: block;
+  }
+}

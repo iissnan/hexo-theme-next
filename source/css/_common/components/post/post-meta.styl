@@ -19,7 +19,7 @@
 }
 
 .post-wordcount {
-  display: inline-block;
+  if !hexo-config('post_wordcount.separated_meta') { display: inline-block; }
 }
 
 .post-meta-divider {
@@ -46,26 +46,4 @@
 
 .posts-expand .post-comments-count {
   +mobile() { display: none; }
-}
-.social-like {
-  font-size: 14px;
-  height: 20px;
-  text-align: center;
-  border-top: 1px solid #eee;
-  padding-top: 9px;
-  margin-top: 45px;
-  display: flex;
-  justify-content: center;
-}
-
-.vk_like {
-  width: 85px;
-  height: 21px;
-  padding-top: 7px;
-  align-self: center;
-}
-
-.fb_like {
-  height: 30px;
-  align-self: center;
 }
