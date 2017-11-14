@@ -1,6 +1,6 @@
 # <div align="center"><a href="https://github.com/iissnan/hexo-theme-next"><img align="center" width="56" height="56" src="../../blob/master/source/images/logo.svg"></a> e x T</div>
 
-<p align="center">NexT 是一个高质量并且优雅的<a href="http://hexo.io">Hexo</a> 主题。这是一份带着热爱，而做出来的 hexo 主题。</p>
+<p align="center">NexT 是一个高质量并且优雅的<a href="http://hexo.io">Hexo</a> 主题。这是一份用心而制作做出来的 hexo 主题。</p>
 
 ![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
 
@@ -131,8 +131,8 @@ You must Commit, Stash or Discard local changes. See [here](https://stackoverflo
 
 ### 使用Hexo数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题  Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
 
-Currently, it is not smooth to update NexT theme from pulling or downloading new releases. It is quite often running into conflict status when updating NexT theme via `git pull`, or need to merge configurations manually when upgrading to new releases.
-
+目前，从拉取或下载新发布版本来更新NexT主题时并不是很顺利。当通过`git pull`更新NexT主题时，经常会遇到冲突状态，或者在升级到新发布版本时需要手动合并配置。
+目前，NexT鼓励用户在主题配置文件`_config.yml`和其他选项中存储一些选项。这种方法是适用的，但有一些缺点:
  At present, NexT encourages users to store some options in site's `_config.yml` and other options in theme's `_config.yml`. This approach is applicable, but has some drawbacks:
 1. Configurations are splited into two pieces
 2. Users maybe confuse which place should be for options
