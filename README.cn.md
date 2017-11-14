@@ -285,7 +285,7 @@ social:
 
 ### 内置5种代码高亮主题 Up to 5 code highlight themes built-in
 
-NexT 使用的是 [Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme) ，一用有5种主题供你选择。
+NexT 使用的是 [Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme) ，一共有5种主题供你选择。
 Next 默认使用 `normal`. 下面是 `normal` 和 `night` 主题的预览:
 
 ![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png)
