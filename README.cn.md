@@ -114,7 +114,210 @@
 对于那些遇到r **Error: Cannot find module 'hexo-util'** [问题](https://github.com/iissnan/hexo-theme-next/issues/1490)的人, 请检查你的NPM 版本. 
 
 - `版本 > 3`: 如果仍然不行的话，请移除 `node_modules` 文件 然后重新安装，使用 `npm install`命令。
-- `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加到你网站的包依赖里
+- `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的包依赖里
+
+## Update
+
+```sh
+$ cd themes/next
+$ git pull
+```
+
+### Bugs
+
+> Commit your changes or stash them before you can merge
+
+You must Commit, Stash or Discard local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
+
+### Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
+
+Currently, it is not smooth to update NexT theme from pulling or downloading new releases. It is quite often running into conflict status when updating NexT theme via `git pull`, or need to merge configurations manually when upgrading to new releases.
+
+ At present, NexT encourages users to store some options in site's `_config.yml` and other options in theme's `_config.yml`. This approach is applicable, but has some drawbacks:
+1. Configurations are splited into two pieces
+2. Users maybe confuse which place should be for options
+
+In order to resolve this issue, NexT will take advantage of Hexo [Data files](https://hexo.io/docs/data-files.html). Because Data files is introduced in Hexo 3, so you need upgrade Hexo to 3.0 (or above) to use this feature.  
+
+If you prefer Hexo 2.x, you can still use the old approach for configurations. NexT is still compatible with Hexo 2.x.
+
+#### Benefits
+
+With this feature, now you can put all your configurations into one place (`source/_data/next.yml`), you don't need to touch `next/_config.yml`. If there are any new options in new releases, you just need to copy those options from `next/_config.yml`, paste into `_data/next.yml` and set their values to whatever you want.
+
+#### How to use this feature
+
+1. Please ensure you are using Hexo 3 (or above)
+2. Create an file named `next.yml` in site's `source/_data` directory (create `_data` directory if it did not exist)
+3. Copy NexT theme options both in site's `_config.yml` and theme's `_config.yml` into `next.yml`.
+4. Use `--config source/_data/next.yml` parameter to start server, generate or deploy.\
+   For example: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`.
+
+## Features
+
+### Multiple languages support, including:
+:cn: Simplified Chinese & Traditional Chinese.<br>
+:us: English<br>
+:ru: Russian<br>
+:fr: French<br>
+:de: German<br>
+:jp: Japanese<br>
+:indonesia: Indonesian<br>
+:portugal: Portuguese (Brazil)<br>
+:kr: Korean<br>
+:it: Italian<br>
+:netherlands: Dutch
+
+Default language is English.
+
+```yml
+language: en
+# language: zh-Hans
+# language: zh-hk
+# language: zh-tw
+# language: ru
+# language: fr-FR
+# language: de
+# language: ja
+# language: id
+# language: pt
+# language: pt-BR
+# language: ko
+# language: it
+# language: nl-NL
+```
+
+Set `language` field as following in site `_config.yml` to change to Chinese.
+
+```yml
+language: zh-Hans
+```
+
+### Comment support.
+
+NexT has native support for `DuoShuo` and `Disqus` comment systems.
+
+Add the following snippets to your `_config.yml`:
+
+```yml
+duoshuo:
+  enable: true
+  shortname: your-duoshuo-shortname
+```
+
+OR
+
+```yml
+disqus_shortname: your-disqus-shortname
+```
+
+### Tags page.
+
+> Add a tags page contains all tags in your site.
+
+- Create a page named `tags`
+
+        hexo new page "tags"
+
+- Edit tags page, set page type to `tags`.
+
+        title: All tags
+        date: 2014-12-22 12:39:04
+        type: "tags"
+
+- Add `tags` to theme `_config.yml`:
+
+        menu:
+          home: /
+          archives: /archives
+          tags: /tags
+
+### Categories page.
+
+> Add a categories page contains all categories in your site.
+
+- Create a page named `categories`
+
+        hexo new page "categories"
+
+- Edit categories page, set page type to `categories`.
+
+        title: All categories
+        date: 2014-12-22 12:39:04
+        type: "categories"
+
+- Add `categories` to theme `_config.yml`:
+
+        menu:
+          home: /
+          archives: /archives
+          categories: /categories
+
+### Social Media
+
+NexT can automatically add links to your Social Media accounts:
+
+```yml
+social:
+  GitHub: your-github-url
+  Twitter: your-twitter-url
+  Weibo: your-weibo-url
+  DouBan: your-douban-url
+  ZhiHu: your-zhihu-url
+```
+
+### Feed link.
+
+> Show a feed link.
+
+Set `rss` field in theme's `_config.yml`, as the following value:
+
+1. `rss: false` will totally disable feed link.
+2. `rss:  ` use sites' feed link. This is the default option.
+
+    Follow the installation instruction in the plugin's README. After the configuration is done for this plugin, the feed link is ready too.
+
+3. `rss: http://your-feed-url` set specific feed link.
+
+### Up to 5 code highlight themes built-in.
+
+NexT uses [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) with 5 themes for you to choose from.
+Next use `normal` by default. Have a preview about `normal` and `night`:
+
+![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png)
+![Tomorrow Night Preview](http://iissnan.com/nexus/next/tomorrow-night.png)
+
+Head over to [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) for more details.
+
+## Configuration
+
+NexT comes with few configurations.
+
+```yml
+
+# Menu configuration.
+menu:
+  home: /
+  archives: /archives
+
+# Favicon
+favicon: /favicon.ico
+
+# Avatar (put the image into next/source/images/)
+# can be any image format supported by web browsers (JPEG,PNG,GIF,SVG,..)
+avatar: /default_avatar.png
+
+# Code highlight theme
+# available: normal | night | night eighties | night blue | night bright
+highlight_theme: normal
+
+# Fancybox for image gallery
+fancybox: true
+
+# Specify the date when the site was setup
+since: 2013
+
+```
 
 
 ## 浏览器支持 Browser support
