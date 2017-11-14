@@ -293,9 +293,9 @@ Next 默认使用 `normal`. 下面是 `normal` 和 `night` 主题的预览:
 
 查看更多信息点击[Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme)。
 
-## Configuration
+## 配置 Configuration
 
-NexT comes with few configurations.
+NexT 的配置很少
 
 ```yml
 
