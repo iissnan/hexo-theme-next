@@ -111,7 +111,7 @@
     theme: next
     
 ### Bugs
-对于那些遇到r **Error: Cannot find module 'hexo-util'** [问题](https://github.com/iissnan/hexo-theme-next/issues/1490)的人, 请检查你的NPM 版本. 
+对于那些遇到 **Error: Cannot find module 'hexo-util'** [问题](https://github.com/iissnan/hexo-theme-next/issues/1490)的人, 请检查你的NPM 版本. 
 
 - `版本 > 3`: 如果仍然不行的话，请移除 `node_modules` 文件 然后重新安装，使用 `npm install`命令。
 - `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的主题包依赖里
@@ -147,11 +147,11 @@ With this feature, now you can put all your configurations into one place (`sour
 
 #### 如何使用这个特色
 
-1. Please ensure you are using Hexo 3 (or above)
-2. Create an file named `next.yml` in site's `source/_data` directory (create `_data` directory if it did not exist)
-3. Copy NexT theme options both in site's `_config.yml` and theme's `_config.yml` into `next.yml`.
-4. Use `--config source/_data/next.yml` parameter to start server, generate or deploy.\
-   For example: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`.
+1. 请确保您使用的是Hexo 3以上版本（包含3）
+2. 在主题文件里找到 `source/_data` 目录，创建一个文件名为 `next.yml`  (如果`_data`目录不存在那么就创建`_data` 目录)
+3. 复制 NexT主题配置文件`_config.yml`里面的代码，然后粘贴到`next.yml`里
+4. 使用 `--config source/_data/next.yml` 参数启动服务器, 生成或者部署。\
+   例如: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`。
 
 ## 特色
 
@@ -193,7 +193,7 @@ Set `language` field as following in site `_config.yml` to change to Chinese.
 language: zh-Hans
 ```
 
-### Comment support.
+### 评论支持.
 
 NexT has native support for `DuoShuo` and `Disqus` comment systems.
 
@@ -211,42 +211,42 @@ OR
 disqus_shortname: your-disqus-shortname
 ```
 
-### Tags page.
+### 标签页.
 
-> Add a tags page contains all tags in your site.
+> 添加一个标签页面，里面包含您网站中的所有标签。
 
-- Create a page named `tags`
+- 创建一个名为 `tags` 页
 
         hexo new page "tags"
 
-- Edit tags page, set page type to `tags`.
+- 编辑标签页, 设置页面类型为`tags`.
 
         title: All tags
         date: 2014-12-22 12:39:04
         type: "tags"
 
-- Add `tags` to theme `_config.yml`:
+- 添加 `tags` 到主题配置文件 `_config.yml` 里:
 
         menu:
           home: /
           archives: /archives
           tags: /tags
 
-### Categories page.
+### 分类页.
 
-> Add a categories page contains all categories in your site.
+> 添加一个分类页面，里面包含您网站中的所有分类。
 
 - Create a page named `categories`
 
         hexo new page "categories"
 
-- Edit categories page, set page type to `categories`.
+- 编辑分类页, 设置页面类型为 `categories`.
 
         title: All categories
         date: 2014-12-22 12:39:04
         type: "categories"
 
-- Add `categories` to theme `_config.yml`:
+- 添加 `categories` 到主题配置文件 `_config.yml` 里:
 
         menu:
           home: /
