@@ -266,28 +266,28 @@ social:
   ZhiHu: your-zhihu-url
 ```
 
-### Feed link.
+### Feed 链接.
 
-> Show a feed link.
+> 显示 feed 链接。
 
-Set `rss` field in theme's `_config.yml`, as the following value:
+在主题配置文件`_config.yml`里设置`rss` , 如下所示:
 
-1. `rss: false` will totally disable feed link.
-2. `rss:  ` use sites' feed link. This is the default option.
+1. `rss: false` 会禁用 feed 链接。
+2. `rss:  ` 使用网站 feed 链接。这是默认的选项。
 
-    Follow the installation instruction in the plugin's README. After the configuration is done for this plugin, the feed link is ready too.
+    按照插件的README中的安装说明进行操作。在完成这个插件的配置后，Feed链接也准备好了
 
-3. `rss: http://your-feed-url` set specific feed link.
+3. `rss: http://your-feed-url` 设置你的 feed 链接.
 
-### Up to 5 code highlight themes built-in.
+### 内置5种代码高亮主题。
 
-NexT uses [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) with 5 themes for you to choose from.
-Next use `normal` by default. Have a preview about `normal` and `night`:
+NexT 使用 [Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme) 主题，一个有5种供你选择。
+Next 默认使用 `normal`. 下面是 `normal` 和 `night` 主题的预览:
 
 ![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png)
 ![Tomorrow Night Preview](http://iissnan.com/nexus/next/tomorrow-night.png)
 
-Head over to [Tomorrow Theme](https://github.com/chriskempson/tomorrow-theme) for more details.
+查看更多信息点击[Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme)。
 
 ## Configuration
 
