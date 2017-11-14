@@ -279,7 +279,7 @@ social:
 1. `rss: false` 会禁用 feed 链接。
 2. `rss:  ` 使用站点 feed 链接。这是默认的选项。
 
-    按照插件的README中的安装说明进行操作。在完成这个插件的配置后，Feed链接也准备好了
+    按照插件[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)的README中的安装说明进行操作。在完成这个插件的配置后，Feed链接也生成好了
 
 3. `rss: http://your-feed-url` 设置你的 feed 链接.
 
