@@ -26,7 +26,7 @@
 
 ## 安装
 
-**1.** 在终端切换到 **hexo 根** 目录. 在hexo目录下一定有 `node_modules`, `source`, `themes` 和其他文件夹:
+**1.** 在终端切换到**hexo 根**目录. 在hexo目录下一定有 `node_modules`, `source`, `themes` 和其他文件夹:
    ```sh
    $ cd hexo
    $ ls
@@ -137,9 +137,9 @@ Currently, it is not smooth to update NexT theme from pulling or downloading new
 1. Configurations are splited into two pieces
 2. Users maybe confuse which place should be for options
 
-In order to resolve this issue, NexT will take advantage of Hexo [Data files](https://hexo.io/docs/data-files.html). Because Data files is introduced in Hexo 3, so you need upgrade Hexo to 3.0 (or above) to use this feature.  
+为了解决这个问题, NexT 将利用 Hexo [数据文件](https://hexo.io/docs/data-files.html). 因为数据文件引进了Hexo 3, 因此你需要升级到 Hexo 3.0 以上版本（包含3.0），来使用这个特性。
 
-If you prefer Hexo 2.x, you can still use the old approach for configurations. NexT is still compatible with Hexo 2.x.
+如果你更喜欢Hexo 2.x, 你仍然可以使用旧方法进行配置。 NexT 仍然兼容 Hexo 2.x。
 
 #### Benefits
 
@@ -195,9 +195,9 @@ language: zh-Hans
 
 ### 评论支持.
 
-NexT has native support for `DuoShuo` and `Disqus` comment systems.
+NexT 已经原生支持 `多说` and `Disqus` 评论系统。
 
-Add the following snippets to your `_config.yml`:
+添加以下代码到你的主题配置文件 `_config.yml`:
 
 ```yml
 duoshuo:
@@ -205,7 +205,7 @@ duoshuo:
   shortname: your-duoshuo-shortname
 ```
 
-OR
+或者
 
 ```yml
 disqus_shortname: your-disqus-shortname
@@ -215,7 +215,7 @@ disqus_shortname: your-disqus-shortname
 
 > 添加一个标签页面，里面包含您网站中的所有标签。
 
-- 创建一个名为 `tags` 页
+- 创建一个名为 `tags` 页面
 
         hexo new page "tags"
 
@@ -236,7 +236,7 @@ disqus_shortname: your-disqus-shortname
 
 > 添加一个分类页面，里面包含您网站中的所有分类。
 
-- Create a page named `categories`
+- 创建一个名为 `categories` 页面
 
         hexo new page "categories"
 
