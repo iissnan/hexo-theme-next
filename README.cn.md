@@ -35,7 +35,7 @@
 
 **2.** 从 github 上获取主题 。这里有几种方式来获取主题:
 
-### 下载[最新发布的版本][releases-latest-url]  Download [tagged release version][releases-url]
+### 下载[最新发布的版本][releases-latest-url]  Download tagged release version
    在大多数情况下 **稳定**。 推荐用户下载这个。
 
    [![curl-tar-wget-image]][curl-tar-wget-url]
@@ -45,7 +45,7 @@
    $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
    ```
 
-### 下载[标签发布版本][releases-url]  Download [tagged release version][releases-url]
+### 下载[标签发布版本][releases-url]  Download tagged release version
    您必须定义版本。从[标签列表][tags-url]里选择版本替换`v5.1.2`。
 
    [![curl-tar-image]][curl-tar-url]
@@ -61,7 +61,7 @@
    $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
    ```
 
-### 下载[最新的 master 分支][download-latest-url]  Download [latest master branch][download-latest-url]
+### 下载[最新的 master 分支][download-latest-url]  Download latest master branch
   可能会 **不稳定**, 但是包含最新的特色，推荐开发者下载.
 
    [![curl-tar-image]][curl-tar-url]
@@ -114,7 +114,7 @@
 对于那些遇到 **Error: Cannot find module 'hexo-util'** [问题](https://github.com/iissnan/hexo-theme-next/issues/1490)的人, 请检查你的NPM 版本. 
 
 - `版本 > 3`: 如果仍然不行的话，请移除 `node_modules` 文件 然后重新安装，使用 `npm install`命令。
-- `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的主题包依赖里
+- `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的站点包依赖里
 
 ## 更新 Update
 
@@ -129,7 +129,7 @@ $ git pull
 
 You must Commit, Stash or Discard local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
 
-### 使用Hexo数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题  Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
+### 使用Hexo数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题  Theme configurations using Hexo data files #328
 
 
 目前升级 NexT 主题的时候并不是非常的流畅。若使用 `git pull` 的方式，很多时候可能会产生冲突；而下载新版本覆盖安装的方式又需要手动合并主题的 `_config.yml` 文件。
