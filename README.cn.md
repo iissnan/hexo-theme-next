@@ -131,25 +131,29 @@ You must Commit, Stash or Discard local changes. See [here](https://stackoverflo
 
 ### 使用Hexo数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题  Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
 
-目前，从拉取或下载新发布版本来更新NexT主题时并不是很顺利。当通过`git pull`更新NexT主题时，经常会遇到冲突状态，或者在升级到新发布版本时需要手动合并配置。
-目前，NexT鼓励用户在主题配置文件`_config.yml`和其他选项中存储一些选项。这种方法是适用的，但有一些缺点:
- At present, NexT encourages users to store some options in site's `_config.yml` and other options in theme's `_config.yml`. This approach is applicable, but has some drawbacks:
-1. Configurations are splited into two pieces
-2. Users maybe confuse which place should be for options
 
-为了解决这个问题, NexT 将利用 Hexo [数据文件](https://hexo.io/docs/data-files.html). 因为数据文件引进了Hexo 3, 因此你需要升级到 Hexo 3.0 以上版本（包含3.0），来使用这个特性。
+目前升级 NexT 主题的时候并不是非常的流畅。若使用 `git pull` 的方式，很多时候可能会产生冲突；而下载新版本覆盖安装的方式又需要手动合并主题的 `_config.yml` 文件。
 
-如果你更喜欢Hexo 2.x, 你仍然可以使用旧方法进行配置。 NexT 仍然兼容 Hexo 2.x。
+在此修改之前， NexT 建议将配置分离，一部分在 站点的配置文件中，另外一部分在主题的配置文件中。将需要自定的选项放置在 站点配置文件中，从而脱离避免更新主题时可能遇到的麻烦。这种方式是可行，但是有一些缺点：
 
-#### 优点 Benefits
+1. 配置分离成了两个部分
+2. 用户可能会疑惑一些选项该放置在哪里比较合适
 
-With this feature, now you can put all your configurations into one place (`source/_data/next.yml`), you don't need to touch `next/_config.yml`. If there are any new options in new releases, you just need to copy those options from `next/_config.yml`, paste into `_data/next.yml` and set their values to whatever you want.
+为了解决这个问题， NexT 将会使用 Hexo 的 [Data Files](https://hexo.io/docs/data-files.html) 。然而由于 Data Files 是在 Hexo 3 版本时引进的，所以要使用这个特性，需要 Hexo 的版本不低于 3。
+
+若你比较喜欢 Hexo 2.x 版本，可以继续使用原先的配置方式。 NexT 保持着向下兼容。
+
+
+#### 特性 Benefits
+
+通过这个特性，你可以将所有的主题配置放置在站点的 `source/_data/next.yml` 文件中。原先放置在 站点配置文件 中的选项可以迁移到新的位置，同时，主题配置文件可以不用做任何修改。若后续版本有配置相关的改动时，你仅需在 `next.yml` 中做相应调整即可
+
 
 #### 如何使用这个特性 How to use this feature
 
-1. 请确保您使用的是Hexo 3以上版本（包含3）
-2. 在主题文件里找到 `source/_data` 目录，创建一个文件名为 `next.yml`  (如果`_data`目录不存在那么就创建`_data` 目录)
-3. 复制 NexT主题配置文件`_config.yml`里面的代码，然后粘贴到`next.yml`里
+1. 请先确保你所使用的 Hexo 版本在 3 以上
+2. 在站点的 `source/_data` 目录下新建 `next.yml` 文件（`_data`目录可能需要新建）
+3. 迁移站点配置文件和主题配置文件中的配置到 `next.yml` 中
 4. 使用 `--config source/_data/next.yml` 参数启动服务器, 生成或者部署。\
    例如: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`。
 
