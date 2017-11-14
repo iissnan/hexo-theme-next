@@ -35,7 +35,7 @@
 
 **2.** 从 github 上获取主题 。这里有几种方式来获取主题:
 
-### 下载 [最新发布的版本][releases-latest-url] Download [tagged release version][releases-url]
+### 下载[最新发布的版本][releases-latest-url]  Download [tagged release version][releases-url]
    在大多数情况下 **稳定**。 推荐用户下载这个。
 
    [![curl-tar-wget-image]][curl-tar-wget-url]
@@ -45,7 +45,7 @@
    $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
    ```
 
-### 下载 [标签发布版本][releases-url] Download [tagged release version][releases-url]
+### 下载[标签发布版本][releases-url]  Download [tagged release version][releases-url]
    您必须定义版本。从[标签列表][tags-url]里选择版本替换`v5.1.2`。
 
    [![curl-tar-image]][curl-tar-url]
@@ -61,7 +61,7 @@
    $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
    ```
 
-### 下载[最新的 master 分支][download-latest-url] Download [latest master branch][download-latest-url].
+### 下载[最新的 master 分支][download-latest-url]  Download [latest master branch][download-latest-url]
   可能会 **不稳定**, 但是包含最新的特色，推荐开发者下载.
 
    [![curl-tar-image]][curl-tar-url]
@@ -129,7 +129,7 @@ $ git pull
 
 You must Commit, Stash or Discard local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
 
-### 使用 Hexo 数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题 Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
+### 使用Hexo数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题  Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
 
 Currently, it is not smooth to update NexT theme from pulling or downloading new releases. It is quite often running into conflict status when updating NexT theme via `git pull`, or need to merge configurations manually when upgrading to new releases.
 
@@ -141,11 +141,11 @@ Currently, it is not smooth to update NexT theme from pulling or downloading new
 
 如果你更喜欢Hexo 2.x, 你仍然可以使用旧方法进行配置。 NexT 仍然兼容 Hexo 2.x。
 
-#### Benefits
+#### 优点 Benefits
 
 With this feature, now you can put all your configurations into one place (`source/_data/next.yml`), you don't need to touch `next/_config.yml`. If there are any new options in new releases, you just need to copy those options from `next/_config.yml`, paste into `_data/next.yml` and set their values to whatever you want.
 
-#### 如何使用这个特色
+#### 如何使用这个特性 How to use this feature
 
 1. 请确保您使用的是Hexo 3以上版本（包含3）
 2. 在主题文件里找到 `source/_data` 目录，创建一个文件名为 `next.yml`  (如果`_data`目录不存在那么就创建`_data` 目录)
@@ -153,9 +153,9 @@ With this feature, now you can put all your configurations into one place (`sour
 4. 使用 `--config source/_data/next.yml` 参数启动服务器, 生成或者部署。\
    例如: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`。
 
-## 特色
+## 特色 Features 
 
-### 支持多国语言, 包括:
+### 支持多国语言, 包括: 
 :cn: 简体中文 & 繁体中文.<br>
 :us: 英语<br>
 :ru: 俄语<br>
@@ -193,7 +193,7 @@ Set `language` field as following in site `_config.yml` to change to Chinese.
 language: zh-Hans
 ```
 
-### 评论支持.
+### 评论支持 Comment support
 
 NexT 已经原生支持 `多说` and `Disqus` 评论系统。
 
@@ -211,7 +211,7 @@ duoshuo:
 disqus_shortname: your-disqus-shortname
 ```
 
-### 标签页.
+### 标签页 Tags page
 
 > 添加一个标签页面，里面包含您网站中的所有标签。
 
@@ -232,7 +232,7 @@ disqus_shortname: your-disqus-shortname
           archives: /archives
           tags: /tags
 
-### 分类页.
+### 分类页 Categories page
 
 > 添加一个分类页面，里面包含您网站中的所有分类。
 
@@ -253,7 +253,7 @@ disqus_shortname: your-disqus-shortname
           archives: /archives
           categories: /categories
 
-### 社交媒体
+### 社交媒体 Social Media
 
 NexT 可以自动添加链接到您的社交媒体帐户里:
 
@@ -266,7 +266,7 @@ social:
   ZhiHu: your-zhihu-url
 ```
 
-### Feed 链接.
+### Feed 链接 Feed link
 
 > 显示 feed 链接。
 
@@ -279,7 +279,7 @@ social:
 
 3. `rss: http://your-feed-url` 设置你的 feed 链接.
 
-### 内置5种代码高亮主题。
+### 内置5种代码高亮主题 Up to 5 code highlight themes built-in
 
 NexT 使用的是 [Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme) ，一用有5种主题供你选择。
 Next 默认使用 `normal`. 下面是 `normal` 和 `night` 主题的预览:
