@@ -160,7 +160,7 @@ You must Commit, Stash or Discard local changes. See [here](https://stackoverflo
 ## 特色 Features 
 
 ### 支持多国语言, 包括: 
-:cn: 简体中文 & 繁体中文.<br>
+:cn: 简体中文 & 繁体中文<br>
 :us: 英语<br>
 :ru: 俄语<br>
 :fr: 法语<br>
@@ -191,7 +191,7 @@ language: en
 # language: nl-NL
 ```
 
-Set `language` field as following in site `_config.yml` to change to Chinese.
+在站点配置文件`_config.yml`中可以将语言切换成中文
 
 ```yml
 language: zh-Hans
@@ -277,7 +277,7 @@ social:
 在主题配置文件`_config.yml`里设置`rss` , 如下所示:
 
 1. `rss: false` 会禁用 feed 链接。
-2. `rss:  ` 使用网站 feed 链接。这是默认的选项。
+2. `rss:  ` 使用站点 feed 链接。这是默认的选项。
 
     按照插件的README中的安装说明进行操作。在完成这个插件的配置后，Feed链接也准备好了
 
