@@ -281,7 +281,7 @@ social:
 
 ### 内置5种代码高亮主题。
 
-NexT 使用 [Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme) 主题，一个有5种供你选择。
+NexT 使用 [Tomorrow 主题](https://github.com/chriskempson/tomorrow-theme) ，一个有5种供你选择。
 Next 默认使用 `normal`. 下面是 `normal` 和 `night` 主题的预览:
 
 ![Tomorrow Normal Preview](http://iissnan.com/nexus/next/tomorrow-normal.png)
