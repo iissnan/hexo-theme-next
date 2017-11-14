@@ -13,7 +13,7 @@
 
 * <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.md)
 
-## 实时预览
+## 实时预览 Live Preview
 
 
 * :heart_decoration: Muse 方案: [XiaMo](https://notes.wanghao.work) | [OAwan](https://oawan.me) | [Hui Wang](http://hui-wang.info)
@@ -24,7 +24,7 @@
 
 更多 NexT 例子点击 [这里](https://github.com/iissnan/hexo-theme-next/issues/119).
 
-## 安装
+## 安装 Installation
 
 **1.** 在终端切换到**hexo 根**目录. 在hexo目录下一定有 `node_modules`, `source`, `themes` 和其他文件夹:
    ```sh
@@ -35,7 +35,7 @@
 
 **2.** 从 github 上获取主题 。这里有几种方式来获取主题:
 
-### 下载 [最新发布的版本][releases-latest-url].
+### 下载 [最新发布的版本][releases-latest-url] Download [tagged release version][releases-url]
    在大多数情况下 **稳定**。 推荐用户下载这个。
 
    [![curl-tar-wget-image]][curl-tar-wget-url]
@@ -45,7 +45,7 @@
    $ curl -s https://api.github.com/repos/iissnan/hexo-theme-next/releases/latest | grep tarball_url | cut -d '"' -f 4 | wget -i - -O- | tar -zx -C themes/next --strip-components=1
    ```
 
-### 下载 [标签发布版本][releases-url].
+### 下载 [标签发布版本][releases-url] Download [tagged release version][releases-url]
    您必须定义版本。从[标签列表][tags-url]里选择版本替换`v5.1.2`。
 
    [![curl-tar-image]][curl-tar-url]
@@ -61,7 +61,7 @@
    $ git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next
    ```
 
-### 下载[最新的 master 分支][download-latest-url].
+### 下载[最新的 master 分支][download-latest-url] Download [latest master branch][download-latest-url].
   可能会 **不稳定**, 但是包含最新的特色，推荐开发者下载.
 
    [![curl-tar-image]][curl-tar-url]
@@ -116,7 +116,7 @@
 - `版本 > 3`: 如果仍然不行的话，请移除 `node_modules` 文件 然后重新安装，使用 `npm install`命令。
 - `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的主题包依赖里
 
-## 更新
+## 更新 Update
 
 ```sh
 $ cd themes/next
@@ -129,7 +129,7 @@ $ git pull
 
 You must Commit, Stash or Discard local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
 
-### Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
+### 使用 Hexo 数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题 Theme configurations using Hexo data files ([#328](https://github.com/iissnan/hexo-theme-next/issues/328))
 
 Currently, it is not smooth to update NexT theme from pulling or downloading new releases. It is quite often running into conflict status when updating NexT theme via `git pull`, or need to merge configurations manually when upgrading to new releases.
 
