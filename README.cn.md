@@ -125,11 +125,11 @@ $ git pull
 
 ### Bugs
 
-> Commit your changes or stash them before you can merge
+> 提交您的更改或存储它们，然后才能合并。
 
-You must Commit, Stash or Discard local changes. See [here](https://stackoverflow.com/a/15745424/5861495) how to do it.
+您必须提交，存储或放弃本地更改. 看 [here](https://stackoverflow.com/a/15745424/5861495) 是如何做的。
 
-### 使用Hexo数据文件([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题  Theme configurations using Hexo data files #328
+### 使用Hexo data files([#328](https://github.com/iissnan/hexo-theme-next/issues/328))配置主题  Theme configurations using Hexo data files #328
 
 
 目前升级 NexT 主题的时候并不是非常的流畅。若使用 `git pull` 的方式，很多时候可能会产生冲突；而下载新版本覆盖安装的方式又需要手动合并主题的 `_config.yml` 文件。
