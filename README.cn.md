@@ -13,7 +13,7 @@
 
 * <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.md)
 
-## Live Preview
+## 实时预览
 
 
 * :heart_decoration: Muse 方案: [XiaMo](https://notes.wanghao.work) | [OAwan](https://oawan.me) | [Hui Wang](http://hui-wang.info)
@@ -77,8 +77,8 @@
    $ git clone https://github.com/iissnan/hexo-theme-next themes/next
    ```
 
-   Clone command will give you the **whole repository**. And in any time you can switch to any tagged release.\
-   Get tags list:
+  使用克隆命令，你将得到**整个存储库**。而且在任何时候你都可以切换到任何标签发布版本。
+  获取标签列表：
 
    ```sh
    $ cd themes/next
@@ -114,9 +114,9 @@
 对于那些遇到r **Error: Cannot find module 'hexo-util'** [问题](https://github.com/iissnan/hexo-theme-next/issues/1490)的人, 请检查你的NPM 版本. 
 
 - `版本 > 3`: 如果仍然不行的话，请移除 `node_modules` 文件 然后重新安装，使用 `npm install`命令。
-- `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的包依赖里
+- `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的主题包依赖里
 
-## Update
+## 更新
 
 ```sh
 $ cd themes/next
@@ -145,7 +145,7 @@ If you prefer Hexo 2.x, you can still use the old approach for configurations. N
 
 With this feature, now you can put all your configurations into one place (`source/_data/next.yml`), you don't need to touch `next/_config.yml`. If there are any new options in new releases, you just need to copy those options from `next/_config.yml`, paste into `_data/next.yml` and set their values to whatever you want.
 
-#### How to use this feature
+#### 如何使用这个特色
 
 1. Please ensure you are using Hexo 3 (or above)
 2. Create an file named `next.yml` in site's `source/_data` directory (create `_data` directory if it did not exist)
@@ -153,22 +153,22 @@ With this feature, now you can put all your configurations into one place (`sour
 4. Use `--config source/_data/next.yml` parameter to start server, generate or deploy.\
    For example: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`.
 
-## Features
+## 特色
 
-### Multiple languages support, including:
-:cn: Simplified Chinese & Traditional Chinese.<br>
-:us: English<br>
-:ru: Russian<br>
-:fr: French<br>
-:de: German<br>
-:jp: Japanese<br>
-:indonesia: Indonesian<br>
-:portugal: Portuguese (Brazil)<br>
-:kr: Korean<br>
-:it: Italian<br>
-:netherlands: Dutch
+### 支持多国语言, 包括:
+:cn: 简体中文 & 繁体中文.<br>
+:us: 英语<br>
+:ru: 俄语<br>
+:fr: 法语<br>
+:de: 德语<br>
+:jp: 日语<br>
+:indonesia: 印度尼西亚语<br>
+:portugal: 葡萄牙语 (巴西)<br>
+:kr: 朝鲜语<br>
+:it: 意大利语<br>
+:netherlands: 荷兰语
 
-Default language is English.
+默认语言是英语。
 
 ```yml
 language: en
@@ -253,9 +253,9 @@ disqus_shortname: your-disqus-shortname
           archives: /archives
           categories: /categories
 
-### Social Media
+### 社交媒体
 
-NexT can automatically add links to your Social Media accounts:
+NexT 可以自动添加链接到您的社交媒体帐户里:
 
 ```yml
 social:
