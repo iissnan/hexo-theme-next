@@ -1,6 +1,6 @@
 # <div align="center"><a href="https://github.com/iissnan/hexo-theme-next"><img align="center" width="56" height="56" src="../../blob/master/source/images/logo.svg"></a> e x T</div>
 
-<p align="center">NexT 是一个高质量并且优雅的<a href="http://hexo.io">Hexo</a> 主题。这是很用心而制作做出来的 hexo 主题。</p>
+<p align="center">NexT 是一个高质量并且优雅的<a href="http://hexo.io">Hexo</a> 主题。这是精心制作做出来的 hexo 主题。</p>
 
 ![NexT Schemes](http://iissnan.com/nexus/next/next-schemes.jpg)
 
