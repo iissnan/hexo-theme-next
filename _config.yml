@@ -88,8 +88,8 @@ menu:
   archives: /archives/ || archive
   categories: /categories/ || th
   tags: /tags/ || tags
-  about: /about/ || user
   life: /life/ || life-ring
+  about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -227,7 +227,7 @@ post_wordcount:
   wordcount: true
   min2read: true
   totalcount: false
-  separated_meta: true
+  separated_meta: false
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -308,7 +308,7 @@ font:
   headings:
     external: true
     family: Roboto Slab
-    size: 26
+    size:
 
   # Font settings for posts.
   # Fallback to `global` font settings.
