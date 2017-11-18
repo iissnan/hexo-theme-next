@@ -1,4 +1,4 @@
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/0.4.0/js/sql.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/sql.js/0.4.0/js/sql.js"></script>
       </script>
       <script>
     var xhr = new XMLHttpRequest();
