@@ -663,7 +663,7 @@ motion:
     post_body: slideDownIn
     coll_header: slideLeftIn
     # Only for Pisces | Gemini.
-    sidebar: slideUpIn
+    sidebar:
 
 # Fancybox
 fancybox: true

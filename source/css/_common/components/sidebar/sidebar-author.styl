@@ -2,11 +2,23 @@
   display: block;
   margin: 0 auto;
   padding: $site-author-image-padding;
-  max-width: $site-author-image-width;
+  max-width: 96px;
   height: $site-author-image-height;
-  border: $site-author-image-border-width solid $site-author-image-border-color;
+  border: 2px solid #333;
+  solid $site-author-image-border-color;
+  border-radius: 50%;
+  webkit-transition: 1.4s all;
+  moz-transition: 1.4s all;
+  ms-transition: 1.4s all;
+  transition: 1.4s all;
 }
-
+.site-author-image:hover {
+  background-color: #55DAE1;
+  webkit-transform: rotate(360deg) scale(1.0);
+  moz-transform: rotate(360deg) scale(1.0);
+  ms-transform: rotate(360deg) scale(1.0);
+  transform: rotate(360deg) scale(1.0);
+}
 .site-author-name {
   margin: $site-author-name-margin;
   text-align: $site-author-name-align;
