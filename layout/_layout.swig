@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 {% set html_class = 'theme-next ' + theme.scheme %}
-{% if theme.use_motion %}
+{% if theme.motion.enable %}
   {% set html_class = html_class + ' use-motion' %}
 {% endif %}
 
@@ -19,7 +19,7 @@
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
   {% endif %}
 
-  <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
+  <div class="{{ container_class }} {% block page_class %}{% endblock %}">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -44,7 +44,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         {% include '_partials/footer.swig' %}
-        {% include '_third-party/analytics/busuanzi-counter.swig' %}
+        {% include '_third-party/analytics/analytics-with-widget.swig' %}
         {% block footer %}{% endblock %}
       </div>
     </footer>
@@ -58,6 +58,14 @@
       </div>
     {% endif %}
 
+    {% if theme.needmoreshare2.enable and theme.needmoreshare2.float.enable %}
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    {% endif %}
+
   </div>
 
   {% include '_scripts/vendors.swig' %}
@@ -66,16 +74,16 @@
   {% set scheme_script = '_scripts/schemes/' + theme.scheme | lower + '.swig' %}
   {% include scheme_script %}
 
-  {% block script_extra %}
-    {% include '_scripts/pages/post-details.swig' %}
-  {% endblock %}
+  {% block script_extra %}{% endblock %}
 
   {% include '_scripts/boostrap.swig' %}
 
   {% include '_third-party/comments/index.swig' %}
   {% include '_third-party/search/index.swig' %}
   {% include '_third-party/analytics/lean-analytics.swig' %}
+  {% include '_third-party/analytics/firestore.swig' %}
   {% include '_third-party/seo/baidu-push.swig' %}
+  {% include '_third-party/needsharebutton.swig' %}
   {% include '_third-party/rating.swig' %}
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}

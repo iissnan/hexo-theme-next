@@ -14,7 +14,7 @@
 }
 
 .post-body .image-caption {
-  margin: 10px auto 15px;
+  margin: -20px auto 15px;
   text-align: center;
   font-size: $font-size-base;
   color: $grey-dark;
@@ -33,6 +33,17 @@
   transform: rotate(30deg);
 }
 
+.use-motion {
+  if hexo-config('motion.transition.post_block') {
+    .post-block,
+    .pagination,
+    .comments { opacity: 0; }
+  }
+  if hexo-config('motion.transition.post_header') { .post-header { opacity: 0; } }
+  if hexo-config('motion.transition.post_body') { .post-body { opacity: 0; } }
+  if hexo-config('motion.transition.coll_header') { .collection-title { opacity: 0; } }
+}
+
 @import "post-expand";
 @import "post-collapse";
 @import "post-type";
@@ -43,7 +54,7 @@
 @import "post-nav";
 @import "post-eof";
 @import "post-gallery";
-@import "post-reward" if hexo-config('alipay') or hexo-config('wechatpay');
+@import "post-reward" if hexo-config('alipay') or hexo-config('wechatpay') or hexo-config('bitcoin');
 @import "post-copyright" if hexo-config('post_copyright.enable');
-@import "post-wordcount" if !hexo-config('post_wordcount.separated_meta');
-@import "post-widgets" if (hexo-config('facebook_sdk.enable') and hexo-config('facebook_sdk.like_button')) or (hexo-config('vkontakte_api.enable') and hexo-config('vkontakte_api.like')) or hexo-config('rating.enable');
+@import "post-widgets" if (hexo-config('facebook_sdk.enable') and hexo-config('facebook_sdk.like_button')) or (hexo-config('vkontakte_api.enable') and hexo-config('vkontakte_api.like')) or hexo-config('rating.enable') or (hexo-config('needmoreshare2.enable') and hexo-config('needmoreshare2.postbottom.enable'));
+@import "post-rtl";

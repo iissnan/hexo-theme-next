@@ -1,4 +1,6 @@
-// Scaffolding
+// Variables of Pisces scheme
+// =================================================
+
 // Settings for some of the most global styles.
 // --------------------------------------------------
 $body-bg-color                = #f5f7f9
@@ -19,7 +21,7 @@ $subtitle-color                   = $gray-lighter
 
 // Sidebar
 // --------------------------------------------------
-$sidebar-offset-float             = unit(hexo-config('sidebar.offset_float'), px) if hexo-config('sidebar.offset_float') is a 'unit'
+$sidebar-offset             = unit(hexo-config('sidebar.offset'), px) if hexo-config('sidebar.offset') is a 'unit'
 
 $sidebar-nav-hover-color          = $orange
 $sidebar-highlight                = $orange
@@ -57,9 +59,9 @@ $toc-link-active-current-border-color = $sidebar-highlight
 // --------------------------------------------------
 
 // Button
-$read-more-color              = $text-color
-$read-more-bg-color           = white
-$read-more-border-radius      = 2px
+$btn-default-radius           = 2px
+$btn-default-bg               = white
+$btn-default-color            = $text-color
 $btn-default-border-color     = $text-color
 $btn-default-hover-color      = white
 $btn-default-hover-bg         = $black-deep

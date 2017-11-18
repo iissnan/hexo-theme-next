@@ -33,6 +33,7 @@ post:
   visitors: 阅读次数
   wordcount: 字数统计
   min2read: 阅读时长
+  totalcount: Site words total count
   copyright:
     author: 本文作者
     link: 本文链接
@@ -87,3 +88,11 @@ symbol:
   comma: '， '
   period: '。 '
   colon: '：'
+
+reward:
+  donate: 打赏
+  wechatpay: 微信支付
+  alipay: 支付宝
+  bitcoin: 比特币
+
+gitmentbutton: 显示 Gitment 评论
