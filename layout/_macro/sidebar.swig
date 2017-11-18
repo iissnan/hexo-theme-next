@@ -169,7 +169,8 @@
           {% endif %}
         </div>
       {% endif %}
-
+      <div class = "cost"></div>
+      <div id="cost-inner"></div>
     </div>
   </aside>
 {% endmacro %}
