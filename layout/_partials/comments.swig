@@ -23,6 +23,9 @@
     </div>
 
   {% elseif theme.disqus.enable %}
+    <div style="text-align:center;">
+      <button id="load-disqus" onclick="disqus.load();">点击以加载 Disqus 评论（需翻墙）</button>
+    </div>
     <div class="comments" id="comments">
       <div id="disqus_thread">
         <noscript>
