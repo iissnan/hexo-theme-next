@@ -14,6 +14,7 @@
     {{ post_template.render(page) }}
 
     <div class="post-spread">
+    {% include '_partials/share/sharejs.swig' %}
       {% if theme.jiathis %}
         {% include '_partials/share/jiathis.swig' %}
       {% elseif theme.baidushare %}
