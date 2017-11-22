@@ -92,6 +92,7 @@ $font-weight-bolder       = 700
 
 // Font size
 $font-size-base           = 14px
+$font-size-base           = unit(hexo-config('font.global.size'), px) if hexo-config('font.global.size') is a 'unit'
 $font-size-small          = $font-size-base - 2px
 $font-size-smaller        = $font-size-base - 4px
 $font-size-large          = $font-size-base + 2px
@@ -101,6 +102,7 @@ $font-size-larger         = $font-size-base + 4px
 // Headings font size
 $font-size-headings-step    = 2px
 $font-size-headings-base    = 24px
+$font-size-headings-base    = unit(hexo-config('font.headings.size'), px) if hexo-config('font.headings.size') is a 'unit'
 $font-size-headings-small   = $font-size-headings-base - $font-size-headings-step
 $font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step
 $font-size-headings-large   = $font-size-headings-base + $font-size-headings-step
@@ -194,7 +196,10 @@ $main-desktop-large             = 1200px
 
 $content-desktop                = 700px
 $content-desktop-large          = 900px
+
 $content-desktop-padding        = 40px
+$content-tablet-padding         = 10px
+$content-mobile-padding         = 8px
 
 $sidebar-desktop                = 240px
 
@@ -255,13 +260,6 @@ $post-copyright = {
 // --------------------------------------------------
 $posts-collapse-left            = 55px
 $posts-collapse-left-mobile     = 5px
-
-$read-more-color                = white
-$read-more-font-size            = 14px
-$read-more-bg-color             = $black-deep
-$read-more-border-radius        = 0
-
-
 
 
 // Sidebar

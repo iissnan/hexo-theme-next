@@ -173,11 +173,12 @@ $(document).ready(function () {
       this.sidebarEl.removeClass('sidebar-active');
       this.sidebarEl.trigger('sidebar.isHiding');
 
-      //在 post 页面下按下隐藏 sidebar 时如果当前选中的是“站点概览”，将 toc 去除 motion 效果
-      //防止再次打开时会出现在“站点概览”下的 bug
+      // Prevent adding TOC to Overview if Overview was selected when close & open sidebar.
       if (!!$('.post-toc-wrap')) {
-        if ($('.site-overview').css('display') === 'block') {
+        if ($('.site-overview-wrap').css('display') === 'block') {
           $('.post-toc-wrap').removeClass('motion-element');
+        } else {
+          $('.post-toc-wrap').addClass('motion-element');
         }
       }
     }
@@ -234,6 +235,10 @@ $(document).ready(function () {
         o: {duration: 200}
       });
 
+      if (CONFIG.motion.async) {
+        integrator.next();
+      }
+
       if (sequence.length > 0) {
         sequence[sequence.length - 1].o.complete = function () {
           integrator.next();
@@ -269,6 +274,11 @@ $(document).ready(function () {
     },
 
     menu: function (integrator) {
+
+      if (CONFIG.motion.async) {
+        integrator.next();
+      }
+
       $('.menu-item').velocity('transition.slideDownIn', {
         display: null,
         duration: 200,
@@ -279,10 +289,24 @@ $(document).ready(function () {
     },
 
     postList: function (integrator) {
-      var $post = $('.post');
-      var hasPost = $post.size() > 0;
+      //var $post = $('.post');
+      var $postBlock = $('.post-block, .pagination, .comments');
+      var $postBlockTransition = CONFIG.motion.transition.post_block;
+      var $postHeader = $('.post-header');
+      var $postHeaderTransition = CONFIG.motion.transition.post_header;
+      var $postBody = $('.post-body');
+      var $postBodyTransition = CONFIG.motion.transition.post_body;
+      var $collHeader = $('.collection-title, .archive-year');
+      var $collHeaderTransition = CONFIG.motion.transition.coll_header;
+      var $sidebarAffix = $('.sidebar-inner');
+      var $sidebarAffixTransition = CONFIG.motion.transition.sidebar;
+      var hasPost = $postBlock.size() > 0;
 
       hasPost ? postMotion() : integrator.next();
+
+      if (CONFIG.motion.async) {
+        integrator.next();
+      }
 
       function postMotion () {
         var postMotionOptions = window.postMotionOptions || {
@@ -290,10 +314,30 @@ $(document).ready(function () {
             drag: true
           };
         postMotionOptions.complete = function () {
+          // After motion complete need to remove transform from sidebar to let affix work on Pisces | Gemini.
+          if (CONFIG.motion.transition.sidebar && (NexT.utils.isPisces() || NexT.utils.isGemini())) {
+            $sidebarAffix.css({ 'transform': 'initial' });
+          }
           integrator.next();
         };
 
-        $post.velocity('transition.slideDownIn', postMotionOptions);
+        //$post.velocity('transition.slideDownIn', postMotionOptions);
+        if (CONFIG.motion.transition.post_block) {
+          $postBlock.velocity('transition.' + $postBlockTransition, postMotionOptions);
+        }
+        if (CONFIG.motion.transition.post_header) {
+          $postHeader.velocity('transition.' + $postHeaderTransition, postMotionOptions);
+        }
+        if (CONFIG.motion.transition.post_body) {
+          $postBody.velocity('transition.' + $postBodyTransition, postMotionOptions);
+        }
+        if (CONFIG.motion.transition.coll_header) {
+          $collHeader.velocity('transition.' + $collHeaderTransition, postMotionOptions);
+        }
+        // Only for Pisces | Gemini.
+        if (CONFIG.motion.transition.sidebar && (NexT.utils.isPisces() || NexT.utils.isGemini())) {
+          $sidebarAffix.velocity('transition.' + $sidebarAffixTransition, postMotionOptions);
+        }
       }
     },
 
