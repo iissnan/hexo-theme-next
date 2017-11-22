@@ -56,7 +56,7 @@
 
 
 {% if theme.fancybox %}
-  {% set fancybox_css_uri = url_for(theme.vendors._internal + '/fancybox/source/jquery.fancybox.css?v=2.1.5') %}
+  {% set fancybox_css_uri = url_for(theme.vendors._internal + '/fancybox/source/jquery.fancybox.css') %}
   {% if theme.vendors.fancybox_css %}
     {% set fancybox_css_uri = theme.vendors.fancybox_css %}
   {% endif %}
@@ -65,25 +65,25 @@
 
 {% include "./head/external-fonts.swig" %}
 
-{% set font_awesome_uri = url_for(theme.vendors._internal + '/font-awesome/css/font-awesome.min.css?v=4.6.2') %}
+{% set font_awesome_uri = url_for(theme.vendors._internal + '/font-awesome/css/font-awesome.min.css') %}
 {% if theme.vendors.fontawesome %}
   {% set font_awesome_uri = theme.vendors.fontawesome %}
 {% endif %}
 <link href="{{ font_awesome_uri }}" rel="stylesheet" type="text/css" />
 
-<link href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}" rel="stylesheet" type="text/css" />
+<link href="{{ url_for(theme.css) }}/main.css" rel="stylesheet" type="text/css" />
 
 {% if theme.favicon.apple_touch_icon %}
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for(theme.favicon.apple_touch_icon) }}?v={{ theme.version }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for(theme.favicon.apple_touch_icon) }}">
 {% endif %}
 {% if theme.favicon.medium %}
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for(theme.favicon.medium) }}?v={{ theme.version }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for(theme.favicon.medium) }}">
 {% endif %}
 {% if theme.favicon.small %}
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for(theme.favicon.small) }}?v={{ theme.version }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for(theme.favicon.small) }}">
 {% endif %}
 {% if theme.favicon.safari_pinned_tab %}
-  <link rel="mask-icon" href="{{ url_for(theme.favicon.safari_pinned_tab) }}?v={{ theme.version }}" color="{{ theme.android_chrome_color }}">
+  <link rel="mask-icon" href="{{ url_for(theme.favicon.safari_pinned_tab) }}" color="{{ theme.android_chrome_color }}">
 {% endif %}
 {% if theme.favicon.android_manifest %}
   <link rel="manifest" href="{{ url_for(theme.favicon.android_manifest) }}">

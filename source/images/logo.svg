@@ -1,23 +1,46 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xml:space="preserve"
-   enable-background="new 0 0 512 512"
-   viewBox="0 0 512 512"
-   height="512px"
-   width="512px"
-   y="0px"
-   x="0px"
-   id="NexT"
-   version="1.1"><metadata
-     id="metadata3390"><rdf:RDF><cc:Work
-         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
-     id="defs3388" /><path
-     style="fill:#222222;fill-opacity:1"
-     id="path3384"
-     d="M 256.4,25.8 56.4,141.3 56,371.5 255.6,486.2 455.6,370.7 456,140.5 Z m 92.6,328.8 -18.4,10.7 -18.6,-11 0,0 -112,-142.3 0,142.6 -18.4,10.7 -18.6,-11 0,-197 18.5,-10.6 18.5,10.8 0,0 112,144.5 0,-144.6 18.5,-10.6 18.5,10.8 z" /></svg>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="194.328px" height="194.327px" viewBox="0 0 194.328 194.327" style="enable-background:new 0 0 194.328 194.327;"
+	 xml:space="preserve">
+<g>
+	<path d="M107.694,6.772c0,0-4.822,16.94-5.429,16.581c-3.148-1.964-8.966-1.778-11.646-0.058
+		c-0.414-0.947-4.055-16.642-4.055-16.642s-8.717,22.643-6.856,34.793c-0.362,3.547-0.563,11.542,0.186,13.661
+		c-1.452-1.035-34.132-21.175-33.563-36.084c-31.058,2.563-93.861,123.345,15.326,168.648c-11.85-18.706-19.4-38.533-18.058-48.238
+		c2.405,1.777,7.176,12.494,20.771,19.303c0-3.989,2.28-22.799,7.812-28.352c2.137,3.166,24.068,51.837,24.068,51.837l24.067-51.837
+		c0,0,6.46,22.506,4.518,28.059c3.35-2.095,17.78-11.436,21.057-19.01c0.95,2.947,0.943,27.541-16.538,48.238
+		c28.412-0.037,118.209-102.098,20.666-168.889c-1.93,8.242-31.548,36.139-37.229,36.139c0.061-1.272,0.834-8.607,0-13.476
+		C113.679,39.441,110.763,19.344,107.694,6.772z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>

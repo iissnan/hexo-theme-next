@@ -23,7 +23,7 @@ favicon:
   medium: /images/favicon-32x32-next.png
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
-  #android_manifest: /images/manifest.json
+  android_manifest: /manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
@@ -526,8 +526,8 @@ rating:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  app_id: MBkBz5t1VlxN1ovrSzYoi6Rf-gzGzoHsz
+  app_key: uEwxnhCemEJTftbtVobKKwDQ
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
@@ -543,7 +543,7 @@ firestore:
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
   # count values only if the other configs are false
-  enable: true
+  enable: false
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i> 本站访客数
@@ -722,11 +722,11 @@ vendors:
   _internal: lib
 
   # Internal version: 2.1.3
-  jquery: https://cdn.bootcss.com/jquery/2.1.3/jquery.js
+  jquery: https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js
 
   # Internal version: 2.1.5
   # See: http://fancyapps.com/fancybox/
-  fancybox: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js
+  fancybox: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
   fancybox_css: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
 
   # Internal version: 1.0.6
@@ -735,7 +735,7 @@ vendors:
 
   # Internal version: 1.9.7
   # See: https://github.com/tuupola/jquery_lazyload
-  lazyload: https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.js
+  lazyload: https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js
 
   # Internal version: 1.2.1
   # See: http://VelocityJS.org
