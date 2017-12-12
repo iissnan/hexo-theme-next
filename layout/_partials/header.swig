@@ -24,7 +24,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>

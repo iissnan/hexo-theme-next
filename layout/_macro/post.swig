@@ -41,7 +41,7 @@
                   <i class="fa fa-thumb-tack"></i>
                 </span>
               {% endif %}
-              <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
+              <a class="post-title-link post-title-link-external" target="_blank" rel="noopener" href="{{ url_for(post.link) }}" itemprop="url">
                 {{ post.title or post.link }}
                 <i class="fa fa-external-link"></i>
               </a>
@@ -276,8 +276,8 @@
           {% set COLUMN_NUMBER = 3 %}
           {% for photo in post.photos %}
             {% if loop.index0 % COLUMN_NUMBER === 0 %}<div class="post-gallery-row">{% endif %}
-              <a class="post-gallery-img fancybox"
-                 href="{{ url_for(photo) }}" rel="gallery_{{ post._id }}"
+              <a class="post-gallery-img" data-fancybox="gallery_{{ post._id }}"
+                 href="{{ url_for(photo) }}"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="{{ url_for(photo) }}" itemprop="contentUrl"/>
               </a>

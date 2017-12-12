@@ -120,7 +120,7 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  Telegram: https://t.me/Wincer || telegram
+  Telegram: https://t.me/Tivsae || telegram
   GitHub: https://github.com/WincerChan || github
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
@@ -148,7 +148,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: https://ws1.sinaimg.cn/large/ba22af52gy1fhzhbwsvxij20b40b4q2y.jpg
+avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -337,7 +337,7 @@ font:
 # MathJax Support
 mathjax:
   enable: true
-  per_page: false
+  per_page: true
   cdn: https://cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
 # Han Support docs: https://hanzi.pro/
@@ -459,7 +459,7 @@ needmoreshare2:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-101362832-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -721,12 +721,12 @@ vendors:
   # Internal path prefix. Please do not edit it.
   _internal: lib
 
-  # Internal version: 2.1.3
+  # Internal version: 2.2.0
   jquery: https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js
 
-  # Internal version: 2.1.5
+  # Internal version: 3.2.5
   # See: http://fancyapps.com/fancybox/
-  fancybox: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js
+  fancybox: https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js
   fancybox_css: https://cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css
 
   # Internal version: 1.0.6

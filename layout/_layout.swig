@@ -88,6 +88,5 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
-  {% include '_third-party/hitokoto.swig' %}
 </body>
 </html>

@@ -8,7 +8,7 @@
 
 {% set js_vendors = {} %}
 {% set js_vendors.jquery      = 'jquery/index.js' %}
-{% set js_vendors.fastclick   = 'fastclick/lib/fastclick.min.js' %}
+<script>basket.require({url: 'https://itswincer.com/lib/fastclick/lib/fastclick.min.js' });</script>
 {% set js_vendors.lazyload    = 'jquery_lazyload/jquery.lazyload.js' %}
 {% set js_vendors.velocity    = 'velocity/velocity.min.js' %}
 {% set js_vendors.velocity_ui = 'velocity/velocity.ui.min.js' %}
@@ -17,7 +17,7 @@
   {% set js_vendors.fancybox  = 'fancybox/source/jquery.fancybox.pack.js' %}
 {% endif %}
 {% if theme.canvas_nest %}
-  {% set js_vendors.canvas_nest  = 'canvas-nest/canvas-nest.min.js' %}
+  <script>basket.require({ url: 'https://itswincer.com/lib/canvas-nest/canvas-nest.min.js' });</script>
 {% endif %}
 
 {% if theme.three_waves %}
@@ -38,12 +38,23 @@
 {% if theme.canvas_ribbon.enable and theme.scheme === 'Pisces'%}
   {% set js_vendors.canvas_ribbon  = 'canvas-ribbon/canvas-ribbon.js' %}
 {% endif %}
+<script typy="text/javascript" src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 
-{% for name, internal in js_vendors %}
-  {% set internal_script = url_for(theme.vendors._internal) + '/' + internal %}
-  {% if name == 'canvas_ribbon' %}
-    <script id="ribbon" type="text/javascript" size="{{ theme.canvas_ribbon.size }}" alpha="{{ theme.canvas_ribbon.alpha }}"  zIndex="{{theme.canvas_ribbon.zIndex }}" src="{{ theme.vendors[name] | default(internal_script) }}"></script>
-  {% else %}
-    <script type="text/javascript" src="{{ theme.vendors[name] | default(internal_script) }}"></script>
-  {% endif %}
-{% endfor %}
+<script>
+        basket.require(
+                 { url: 'https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js' },
+                 { url: 'https://itswincer.com/lib/velocity/velocity.min.js'},
+                 { url: 'https://itswincer.com/lib/velocity/velocity.ui.min.js' },
+                 { url: 'https://cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js' },
+                 { url: 'https://cdn.bootcss.com/sql.js/0.4.0/js/sql.js' },
+                 { url: 'https://itswincer.com/js/src/scrollspy.js' }).then(function () {
+                 basket.require({ url: 'https://itswincer.com/js/src/utils.js' },
+                                { url: 'https://itswincer.com/js/src/motion.js' },
+                                { url: 'https://itswincer.com/js/src/affix.js' }).then(function () {
+                                basket.require({ url: 'https://itswincer.com/js/src/bootstrap.js' },
+                                { url: 'https://itswincer.com/js/src/post-details.js' },
+                                { url: 'https://itswincer.com/js/src/schemes/pisces.js' },
+                                { url: 'https://itswincer.com/js/src/hitokoto.js' });
+                                });
+                        });
+</script>
