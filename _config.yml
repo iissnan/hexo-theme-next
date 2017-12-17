@@ -389,6 +389,19 @@ valine:
 # You can get your uid from https://livere.com/insight/myCode (General web site)
 #livere_uid: your uid
 
+# Gitalk comment support.
+# Before using this you need to create a GitHub OAuth applicant.
+# See https://github.com/gitalk/gitalk.
+gitalk:
+  enable: false
+  clientID:
+  clientSecret:
+  repo: # Your repo name.
+  owner: # Your username.
+  admin: # Your username and other admins' username, support multiple admins split with comma, e.g. foo,bar.
+  pagerDirection: first # Start with the first comment.
+
+
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 # You can get your Github ID from https://api.github.com/users/<Github username>
