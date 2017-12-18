@@ -92,22 +92,22 @@
             </div>
           {% endif %}
 
-          <div class="links-of-author motion-element">
-            {% if theme.social %}
-              {% for name, link in theme.social %}
-                <span class="links-of-author-item">
-                  <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}">
-                    {% if theme.social_icons.enable %}
-                      <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>{#
-                  #}{% endif %}{#
-                    #}{% if not theme.social_icons.icons_only %}{#
-                      #}{{ name }}{#
+          {% if theme.social %}
+            <div class="links-of-author motion-element">
+                {% for name, link in theme.social %}
+                  <span class="links-of-author-item">
+                    <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}">
+                      {% if theme.social_icons.enable %}
+                        <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>{#
                     #}{% endif %}{#
-                #}</a>
-                </span>
-              {% endfor %}
-            {% endif %}
-          </div>
+                      #}{% if not theme.social_icons.icons_only %}{#
+                        #}{{ name }}{#
+                      #}{% endif %}{#
+                  #}</a>
+                  </span>
+                {% endfor %}
+            </div>
+          {% endif %}
 
           {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}
           {% if theme.creative_commons in cc %}
