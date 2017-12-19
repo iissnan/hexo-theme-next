@@ -320,7 +320,7 @@ $(document).ready(function () {
 
     // Initialize Sidebar & TOC Width.
     var scrollbarWidth = NexT.utils.getScrollbarWidth();
-      if ($('.sidebar-panel').height() > (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
+      if ($('.sidebar-panel').height() < (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
         $('.site-overview').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
       }
     $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
