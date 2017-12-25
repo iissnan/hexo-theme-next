@@ -227,6 +227,10 @@ post_wordcount:
   totalcount: false
   separated_meta: true
 
+# Recommended posts
+recommended_posts:
+  enabled: true
+
 # Wechat Subscriber
 #wechat_subscriber:
   #enabled: true
