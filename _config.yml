@@ -228,8 +228,9 @@ post_wordcount:
   separated_meta: true
 
 # Recommended posts
+# Dependency: https://github.com/huiwang/hexo-recommended-posts
 recommended_posts:
-  enabled: true
+  enabled: false
 
 # Wechat Subscriber
 #wechat_subscriber:
