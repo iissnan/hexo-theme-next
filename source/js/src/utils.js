@@ -320,8 +320,10 @@ $(document).ready(function () {
 
     // Initialize Sidebar & TOC Width.
     var scrollbarWidth = NexT.utils.getScrollbarWidth();
-      if ($('.sidebar-panel').height() > (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
+      if ($('.site-overview-wrap').height() > (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
         $('.site-overview').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+      }
+      if ($('.post-toc-wrap').height() > (document.body.clientHeight - NexT.utils.getSidebarSchemePadding())) {
         $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
       }
 
