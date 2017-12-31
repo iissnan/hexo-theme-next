@@ -1,4 +1,6 @@
-# <div align="center"><a href="https://github.com/iissnan/hexo-theme-next"><img align="center" width="56" height="56" src="../../blob/master/source/images/logo.svg"></a> e x T</div>
+# <div align="right"><a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next"><img align="center" width="56" height="56" src="../../blob/master/source/images/logo.svg"></a></div>
+
+<h1 align="center">NexT</h1>
 
 <p align="center">NexT is a high quality elegant <a href="http://hexo.io">Hexo</a> theme. It is crafted from scratch, with love.</p>
 
@@ -162,7 +164,8 @@ With this feature, now you can put all your configurations into one place (`sour
 :portugal: Portuguese (Brazil)<br>
 :kr: Korean<br>
 :it: Italian<br>
-:netherlands: Dutch
+:netherlands: Dutch<br>
+:vietnam: Vietnamese
 
 Default language is English.
 
@@ -181,6 +184,7 @@ language: en
 # language: ko
 # language: it
 # language: nl-NL
+# language: vi
 ```
 
 Set `language` field as following in site `_config.yml` to change to Chinese.
