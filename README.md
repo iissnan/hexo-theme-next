@@ -1,11 +1,9 @@
-# <div align="right"><a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next"><img align="center" width="56" height="56" src="../../blob/master/source/images/logo.svg"></a></div>
-
-<h1 align="center">NexT</h1>
+<h1 align="center"><a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next">NexT</a></h1>
 
 <p align="center">NexT is a high quality elegant <a href="http://hexo.io">Hexo</a> theme. It is crafted from scratch, with love.</p>
 
 [![gitter-image]][gitter-url]
-[![mnt-image]][commits-url]
+[![mnt-image]](https://github.com/theme-next/hexo-theme-next)
 [![travis-image]][travis-url]
 [![rel-image]][releases-url]
 [![hexo-image]][hexo-url]
@@ -109,7 +107,7 @@ More NexT examples [here](https://github.com/iissnan/hexo-theme-next/issues/119)
     theme: next
 
 ### Bugs
-For those who also encounter **Error: Cannot find module 'hexo-util'** [issue](https://github.com/iissnan/hexo-theme-next/issues/1490), please check your NPM version. 
+For those who also encounter **Error: Cannot find module 'hexo-util'** [issue](https://github.com/iissnan/hexo-theme-next/issues/1490), please check your NPM version.
 
 - `> 3`: Still not work. Please remove `node_modules` directory and reinstall using `npm install`.
 - `< 3`: Please add `hexo-util` explicitly via `npm install --save-dev hexo-util` to you site package deps.
@@ -135,7 +133,7 @@ Currently, it is not smooth to update NexT theme from pulling or downloading new
 1. Configurations are splited into two pieces
 2. Users maybe confuse which place should be for options
 
-In order to resolve this issue, NexT will take advantage of Hexo [Data files](https://hexo.io/docs/data-files.html). Because Data files is introduced in Hexo 3, so you need upgrade Hexo to 3.0 (or above) to use this feature.  
+In order to resolve this issue, NexT will take advantage of Hexo [Data files](https://hexo.io/docs/data-files.html). Because Data files is introduced in Hexo 3, so you need upgrade Hexo to 3.0 (or above) to use this feature.
 
 If you prefer Hexo 2.x, you can still use the old approach for configurations. NexT is still compatible with Hexo 2.x.
 
