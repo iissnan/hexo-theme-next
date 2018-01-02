@@ -1,4 +1,6 @@
-<h1 align="center"><a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next">NexT</a></h1>
+<p align="right"><a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next">NexT v6.0.0 here :triangular_flag_on_post:</a></p>
+
+<h1 align="center">NexT</h1>
 
 <p align="center">NexT 是一个高质量并且优雅的<a href="http://hexo.io">Hexo</a> 主题。这是精心制作做出来的 hexo 主题。</p>
 
@@ -108,9 +110,9 @@
 **3.** 在 **hexo 根目录下** 的配置文件`_config.yml`里设置主题:
 
     theme: next
-    
+
 ### Bugs
-对于那些遇到 **Error: Cannot find module 'hexo-util'** [问题](https://github.com/iissnan/hexo-theme-next/issues/1490)的人, 请检查你的NPM 版本. 
+对于那些遇到 **Error: Cannot find module 'hexo-util'** [问题](https://github.com/iissnan/hexo-theme-next/issues/1490)的人, 请检查你的NPM 版本.
 
 - `版本 > 3`: 如果仍然不行的话，请移除 `node_modules` 文件 然后重新安装，使用 `npm install`命令。
 - `版本 < 3`: 请通过`npm install --save-dev hexo-util`命令添加`hexo-util`到你的站点包依赖里
@@ -156,9 +158,9 @@ $ git pull
 4. 使用 `--config source/_data/next.yml` 参数启动服务器, 生成或者部署。\
    例如: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`。
 
-## 特色 Features 
+## 特色 Features
 
-### 支持多国语言, 包括: 
+### 支持多国语言, 包括:
 :cn: 简体中文 & 繁体中文<br>
 :us: 英语<br>
 :ru: 俄语<br>
