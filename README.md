@@ -9,7 +9,8 @@
 [![hexo-image]][hexo-url]
 [![lic-image]](LICENSE)
 
-* [Chinese Documentation](README.cn.md)
+* [NexT Use Document](http://theme-next.iissnan.com/) | [Chinese Documentation](README.cn.md)
+* Recommend MarkDown Editor: [HexoEditor](https://github.com/zhuzhuyule/HexoEditor)
 
 ## Live Preview
 
