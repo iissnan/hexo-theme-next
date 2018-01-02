@@ -12,6 +12,7 @@
 [![lic-image]](LICENSE)
 
 * <a href="http://theme-next.iissnan.com" target="_blank">NexT 使用文档</a> |  [English Documentation](README.md)
+* :triangular_flag_on_post: 推荐 Markdown 编辑器：<a href="https://github.com/zhuzhuyule/HexoEditor" target="_blank">HexoEditor</a>
 
 ## 实时预览 Live Preview
 
