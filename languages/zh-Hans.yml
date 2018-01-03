@@ -40,6 +40,7 @@ post:
     license_title: 版权声明
     license_content: '本博客所有文章除特别声明外，均采用
       <a href="%s" rel="external nofollow" target="_blank">%s</a> 许可协议。转载请注明出处！'
+  recommended_posts: 推荐文章
 
 page:
   totally: 共有

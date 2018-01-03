@@ -334,6 +334,12 @@
     {### END POST BODY ###}
     {#####################}
 
+    {% if theme.recommended_posts.enabled and not is_index %}
+      <div>
+        {% include 'recommended_posts.swig' with {post: post, site: site} %}
+      </div>
+    {% endif %}
+
     {% if theme.wechat_subscriber.enabled and not is_index %}
       <div>
         {% include 'wechat-subscriber.swig' %}
