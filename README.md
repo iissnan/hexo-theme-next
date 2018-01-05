@@ -11,9 +11,7 @@
 [![hexo-image]][hexo-url]
 [![lic-image]](LICENSE)
 
-* [NexT Use Document](http://theme-next.iissnan.com/) | [Chinese Documentation](README.cn.md)
-* :triangular_flag_on_post: Recommend Markdown Editor：<a href="https://github.com/zhuzhuyule/HexoEditor" target="_blank">HexoEditor</a>
-
+* [Chinese Documentation](README.cn.md)
 
 ## Live Preview
 
