@@ -1,6 +1,30 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="{{ theme.android_chrome_color }}">
+
+
+{% if theme.pace %}
+  {% set pace_css_uri = url_for(theme.vendors._internal + '/pace/'+ theme.pace_theme +'.min.css?v=1.0.2') %}
+  {% set pace_js_uri = url_for(theme.vendors._internal + '/pace/pace.min.js?v=1.0.2') %}
+    {% if theme.vendors.pace %}
+      {% set pace_js_uri = theme.vendors.pace %}
+    {% endif %}
+    {% if theme.vendors.pace_css %}
+      {% set pace_css_uri = theme.vendors.pace_css %}
+    {% endif %}
+  <script src="{{ pace_js_uri }}"></script>
+  <link href="{{ pace_css_uri }}" rel="stylesheet">
+{% endif %}
+
+
+{% if theme.han %}
+  {% set Han_uri = url_for(theme.vendors._internal + '/Han/dist/han.min.css?v=3.3') %}
+  {% if theme.vendors.Han %}
+    {% set Han_uri = theme.vendors.Han %}
+  {% endif %}
+  <link rel="stylesheet" media="all" href="{{ Han_uri }}">
+{% endif %}
 
 
 {# #238, Disable Baidu tranformation #}
@@ -12,6 +36,9 @@
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
 {% endif %}
 
+{% if theme.bing_site_verification %}
+  <meta name="msvalidate.01" content="{{ theme.bing_site_verification }}" />
+{% endif %}
 
 {% if theme.yandex_site_verification %}
   <meta name="yandex-verification" content="{{ theme.yandex_site_verification }}" />
@@ -46,6 +73,25 @@
 
 <link href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}" rel="stylesheet" type="text/css" />
 
+{% if theme.favicon.apple_touch_icon %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for(theme.favicon.apple_touch_icon) }}?v={{ theme.version }}">
+{% endif %}
+{% if theme.favicon.medium %}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for(theme.favicon.medium) }}?v={{ theme.version }}">
+{% endif %}
+{% if theme.favicon.small %}
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for(theme.favicon.small) }}?v={{ theme.version }}">
+{% endif %}
+{% if theme.favicon.safari_pinned_tab %}
+  <link rel="mask-icon" href="{{ url_for(theme.favicon.safari_pinned_tab) }}?v={{ theme.version }}" color="{{ theme.android_chrome_color }}">
+{% endif %}
+{% if theme.favicon.android_manifest %}
+  <link rel="manifest" href="{{ url_for(theme.favicon.android_manifest) }}">
+{% endif %}
+{% if theme.favicon.ms_browserconfig %}
+  <meta name="msapplication-config" content="{{ url_for(theme.favicon.ms_browserconfig) }}" />
+{% endif %}
+
 {% if page.keywords %}
   <meta name="keywords" content="{{ page.keywords }}" />
 {% elif page.tags and page.tags.length %}
@@ -60,11 +106,6 @@
 {% endif %}
 {% if theme.rss %}
   <link rel="alternate" href="{{ url_for(theme.rss) }}" title="{{ config.title }}" type="application/atom+xml" />
-{% endif %}
-
-
-{% if theme.favicon %}
-  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for(theme.favicon) }}?v={{ theme.version }}" />
 {% endif %}
 
 
@@ -90,9 +131,11 @@
   var CONFIG = {
     root: '{{ theme.root }}',
     scheme: '{{ theme.scheme }}',
+    version: '{{ theme.version }}',
     sidebar: {{ theme.sidebar | json_encode }},
     fancybox: {{ theme.fancybox }},
-    motion: {{ theme.use_motion }},
+    tabs: {{ theme.tabs.enable }},
+    motion: {{ theme.motion | json_encode }},
     duoshuo: {
       userId: '{{ theme.duoshuo_info.user_id | default() }}',
       author: '{{ theme.duoshuo_info.admin_nickname | default(__('author'))}}'

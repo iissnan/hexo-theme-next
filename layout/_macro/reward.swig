@@ -1,3 +1,4 @@
+
 {% if theme.donate %}
   <div align="center">{{ theme.donate_message }}</div>
   <div width="100%" align="center" align="center">
@@ -24,5 +25,6 @@
   //       </div>
   //     {% endif %}
   //   </div>
+
   </div>
-{% endif %}
+</div>

@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-next",
-  "version": "5.1.0",
+  "version": "5.1.4",
   "description": "Elegant theme for Hexo",
   "main": "index.js",
   "directories": {
@@ -18,6 +18,9 @@
     "Hexo"
   ],
   "author": "iissnan <iissnan@gmail.com>",
+  "maintainers": [
+    "Ivan Nginx <ivan.nginx@gmail.com> (https://almostover.ru)"
+    ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iissnan/hexo-theme-next/issues"

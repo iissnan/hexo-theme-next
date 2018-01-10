@@ -92,6 +92,7 @@ $font-weight-bolder       = 700
 
 // Font size
 $font-size-base           = 14px
+$font-size-base           = unit(hexo-config('font.global.size'), px) if hexo-config('font.global.size') is a 'unit'
 $font-size-small          = $font-size-base - 2px
 $font-size-smaller        = $font-size-base - 4px
 $font-size-large          = $font-size-base + 2px
@@ -101,6 +102,7 @@ $font-size-larger         = $font-size-base + 4px
 // Headings font size
 $font-size-headings-step    = 2px
 $font-size-headings-base    = 24px
+$font-size-headings-base    = unit(hexo-config('font.headings.size'), px) if hexo-config('font.headings.size') is a 'unit'
 $font-size-headings-small   = $font-size-headings-base - $font-size-headings-step
 $font-size-headings-smaller = $font-size-headings-small - $font-size-headings-step
 $font-size-headings-large   = $font-size-headings-base + $font-size-headings-step
@@ -194,7 +196,10 @@ $main-desktop-large             = 1200px
 
 $content-desktop                = 700px
 $content-desktop-large          = 900px
+
 $content-desktop-padding        = 40px
+$content-tablet-padding         = 10px
+$content-mobile-padding         = 8px
 
 $sidebar-desktop                = 240px
 
@@ -215,7 +220,7 @@ $headband-bg                    = $black-deep
 // Variables for header section elements.
 // --------------------------------------------------
 
-$head-bg                        = white
+$head-bg                        = transparent
 
 // Site Meta
 $site-meta-text-align           = center
@@ -255,13 +260,6 @@ $post-copyright = {
 // --------------------------------------------------
 $posts-collapse-left            = 55px
 $posts-collapse-left-mobile     = 5px
-
-$read-more-color                = white
-$read-more-font-size            = 14px
-$read-more-bg-color             = $black-deep
-$read-more-border-radius        = 0
-
-
 
 
 // Sidebar
@@ -334,3 +332,85 @@ $post-eof-margin-bottom       = 60px  //  or 120px for less white space
 // blockquote-center icon
 $center-quote-left            = '../images/quote-l.svg'
 $center-quote-right           = '../images/quote-r.svg'
+
+
+// Note colors
+// --------------------------------------------------
+// Read note light_bg_offset from NexT config and set in "lbg%" to use it as string variable.
+hexo-config('note.light_bg_offset') is a 'unit' ? (lbg = unit(hexo-config('note.light_bg_offset'),"%")) : (lbg = 0)
+
+// Default
+$note-default-border        = #777
+$note-default-bg            = lighten(spin($note-default-border, 0), 94% + lbg)
+$note-default-text          = $note-default-border
+$note-default-icon          = "\f0a9"
+
+$note-modern-default-border = #e1e1e1
+$note-modern-default-bg     = lighten(spin($note-modern-default-border, 10), 60% + (lbg * 4))
+$note-modern-default-text   = $grey-dim
+$note-modern-default-hover  = darken(spin($note-modern-default-text, -10), 32%)
+
+// Primary
+$note-primary-border        = #6f42c1
+$note-primary-bg            = lighten(spin($note-primary-border, 10), 92% + lbg)
+$note-primary-text          = $note-primary-border
+$note-primary-icon          = "\f055"
+
+$note-modern-primary-border = #e1c2ff
+$note-modern-primary-bg     = lighten(spin($note-modern-primary-border, 10), 40% + (lbg * 4))
+$note-modern-primary-text   = #6f42c1
+$note-modern-primary-hover  = darken(spin($note-modern-primary-text, -10), 22%)
+
+// Info
+$note-info-border           = #428bca
+$note-info-bg               = lighten(spin($note-info-border, -10), 91% + lbg)
+$note-info-text             = $note-info-border
+$note-info-icon             = "\f05a"
+
+$note-modern-info-border    = #b3e5ef
+$note-modern-info-bg        = lighten(spin($note-modern-info-border, 10), 50% + (lbg * 4))
+$note-modern-info-text      = #31708f
+$note-modern-info-hover     = darken(spin($note-modern-info-text, -10), 32%)
+
+// Success
+$note-success-border        = #5cb85c
+$note-success-bg            = lighten(spin($note-success-border, 10), 90% + lbg)
+$note-success-text          = $note-success-border
+$note-success-icon          = "\f058"
+
+$note-modern-success-border = #d0e6be
+$note-modern-success-bg     = lighten(spin($note-modern-success-border, 10), 40% + (lbg * 4))
+$note-modern-success-text   = #3c763d
+$note-modern-success-hover  = darken(spin($note-modern-success-text, -10), 27%)
+
+// Warning
+$note-warning-border        = #f0ad4e
+$note-warning-bg            = lighten(spin($note-warning-border, 10), 88% + lbg)
+$note-warning-text          = $note-warning-border
+$note-warning-icon          = "\f06a"
+
+$note-modern-warning-border = #fae4cd
+$note-modern-warning-bg     = lighten(spin($note-modern-warning-border, 10), 43% + (lbg * 4))
+$note-modern-warning-text   = #8a6d3b
+$note-modern-warning-hover  = darken(spin($note-modern-warning-text, -10), 18%)
+
+// Danger
+$note-danger-border         = #d9534f
+$note-danger-bg             = lighten(spin($note-danger-border, -10), 92% + lbg)
+$note-danger-text           = $note-danger-border
+$note-danger-icon           = "\f056"
+
+$note-modern-danger-border  = #ebcdd2
+$note-modern-danger-bg      = lighten(spin($note-modern-danger-border, 10), 35% + (lbg * 4))
+$note-modern-danger-text    = #a94442
+$note-modern-danger-hover   = darken(spin($note-modern-danger-text, -10), 22%)
+
+
+// Label colors
+// --------------------------------------------------
+$label-default              = lighten(spin($note-default-border, 0), 89% + lbg)
+$label-primary              = lighten(spin($note-primary-border, 10), 87% + lbg)
+$label-info                 = lighten(spin($note-info-border, -10), 86% + lbg)
+$label-success              = lighten(spin($note-success-border, 10), 85% + lbg)
+$label-warning              = lighten(spin($note-warning-border, 10), 83% + lbg)
+$label-danger               = lighten(spin($note-danger-border, -10), 87% + lbg)

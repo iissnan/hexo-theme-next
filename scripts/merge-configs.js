@@ -9,6 +9,22 @@ var merge = require('./merge');
 hexo.on('generateBefore', function () {
   if (hexo.locals.get) {
     var data = hexo.locals.get('data');
-    data && data.next && merge(hexo.theme.config, data.next);
+    if ( data && data.next ) {
+      if ( data.next.override ) {
+        hexo.theme.config = data.next;
+      } else {
+        merge(hexo.theme.config, data.next);
+      }
+    }
   }
+});
+
+hexo.on('generateAfter', function () {
+  hexo.log.warn("===============================================================");
+  hexo.log.warn("========================= ATTENTION! ==========================");
+  hexo.log.warn("===============================================================");
+  hexo.log.warn(" NexT repository is moving here: https://github.com/theme-next ");
+  hexo.log.warn("===============================================================");
+  hexo.log.warn(" It's rebase to v6.0.0 and future maintenance will resume there");
+  hexo.log.warn("===============================================================");
 });

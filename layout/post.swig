@@ -3,7 +3,7 @@
 {% import '_macro/sidebar.swig' as sidebar_template %}
 
 
-{% block title %} {{ page.title }} | {{ config.title }} {% endblock %}
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
 {% block page_class %}page-post-detail{% endblock %}
 
@@ -39,7 +39,6 @@
 {% block sidebar %}
   {{ sidebar_template.render(true) }}
 {% endblock %}
-
 
 {% block script_extra %}
   {% include '_scripts/pages/post-details.swig' %}

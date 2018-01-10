@@ -1,0 +1,99 @@
+title:
+  archive: Lưu Trữ
+  category: Phân Loại
+  tag: Thẻ
+  schedule: Danh Mục
+
+author: Tác giả
+
+menu:
+  home: Trang Chủ
+  archives: Lưu Trữ
+  categories: Đầu Mục
+  tags: Thẻ
+  about: Giới Thiệu
+  search: Tìm Kiếm
+  schedule: Danh Mục
+  sitemap: Bản đồ trang
+  commonweal: Commonweal 404
+
+sidebar:
+  overview: Tổng Quan
+  toc: Mục Lục
+
+post:
+  created: Được tạo
+  modified: Được thay đổi
+  sticky: Đính
+  posted: Tạo lúc
+  in: Trong
+  more: thêm
+  read_more: Đọc tiếp
+  untitled: Không có tiêu đề
+  toc_empty: Bài viết này không có mục lục
+  visitors: Người xem
+  wordcount: Số từ trong bài viết
+  min2read: Thời gian đọc
+  totalcount: Số từ trong trang
+  copyright:
+    author: Người viết
+    link: Liên kết bài viết
+    license_title: Chú ý bản quyền
+    license_content: 'Tất cả bài viết trong blog này được đăng ký bởi
+      <a href="%s" rel="external nofollow" target="_blank">%s</a> trừ khi có thông báo bổ sung.'
+
+page:
+  totally: Toàn bộ
+  tags: thẻ
+
+footer:
+  powered: "Cung cấp bởi %s"
+  theme: Giao Diện
+
+counter:
+  tag_cloud:
+    zero: Không có thẻ nào
+    one: có 1 thẻ tất cả
+    other: "có %d thẻ tất cả"
+
+  categories:
+    zero: Không có trong mục nào
+    one: có 1 mục tất cả
+    other: "có %d mục tất cả"
+
+  archive_posts:
+    zero: Không có bài viết.
+    one: 1 bài viết.
+    other: "tổng số %d bài viết."
+
+state:
+  posts: bài viết
+  pages: trang
+  tags: thẻ
+  categories: mục
+
+search:
+  placeholder: Đang tìm...
+
+cheers:
+  um: Um..
+  ok: Đồng Ý
+  nice: Hay
+  good: Tốt
+  great: Tuyệt vời
+  excellent: Tuyệt cú mèo
+
+keep_on: Giữ tiến độ nha.
+
+symbol:
+  comma: ', '
+  period: '. '
+  colon: ':'
+
+reward:
+  donate: Tài trợ
+  wechatpay: WeChat Pay
+  alipay: Alipay
+  bitcoin: Bitcoin
+
+gitmentbutton: Hiển thị bình luận từ Gitment
