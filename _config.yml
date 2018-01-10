@@ -65,9 +65,6 @@ footer:
   # Any custom text can be defined here.
   #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
 
-# ---------------------------------------------------------------
-# SEO Settings
-# ---------------------------------------------------------------
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
@@ -75,7 +72,7 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -92,14 +89,16 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
-  #categories: /categories/ || th
-  archives: /archives/ || archive
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+
+  home: /
+  categories: /categories
+  archives: /archives
+  tags: /tags
+  about: /about
+  # search: /
+  #sitemap: /sitemap.xml
+  #commonweal: /404.html
+
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -111,10 +110,57 @@ menu_icons:
 # ---------------------------------------------------------------
 
 # Schemes
-scheme: Muse
-#scheme: Mist
-#scheme: Pisces
-#scheme: Gemini
+
+# scheme: Muse
+# scheme: Mist
+scheme: Pisces
+
+
+# ---------------------------------------------------------------
+# Font Settings
+# - Find fonts on Google Fonts (https://www.google.com/fonts)
+# - All fonts set here will have the following styles:
+#     light, light italic, normal, normal italic, bold, bold italic
+# - Be aware that setting too much fonts will cause site running slowly
+# - Introduce in 5.0.1
+# ---------------------------------------------------------------
+font:
+  enable: true
+
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  host:
+
+  # Global font settings used on <body> element.
+  global:
+    # external: true will load this font family from host.
+    external: true
+    family: Lato
+
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Fallback to `global` font settings.
+  headings:
+    external: true
+    family:
+
+  # Font settings for posts
+  # Fallback to `global` font settings.
+  posts:
+    external: true
+    family:
+
+  # Font settings for Logo
+  # Fallback to `global` font settings.
+  # The `size` option use `px` as unit
+  logo:
+    external: true
+    family:
+    size:
+
+  # Font settings for <code> and code blocks.
+  codes:
+    external: true
+    family:
+    size:
 
 
 # ---------------------------------------------------------------
@@ -124,19 +170,17 @@ scheme: Muse
 # Social Links.
 # Usage: `Key: permalink || icon`
 # Key is the link label showing to end users.
-# Value before `||` delimeter is the target permalink.
-# Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
-  #VK Group: https://vk.com/yourname || vk
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
-  #Skype: skype:yourname?call|chat || skype
+
+# Value is the target link (E.g. GitHub: https://github.com/iissnan)
+social:
+  #LinkLabel: Link
+   GitHub: https://github.com/SukeYang
+   Weibo: http://weibo.com/1720383823
+# Social Links Icons
+# Icon Mapping:
+#   Map a menu item to a specific FontAwesome icon name.
+#   Key is the name of the item and value is the name of FontAwesome icon. Key is case-senstive.
+#   When an globe mask icon presenting up means that the item has no mapping icon.
 
 social_icons:
   enable: true
@@ -175,7 +219,7 @@ toc:
 sidebar:
   # Sidebar Position, available value: left | right (only for Pisces | Gemini).
   position: left
-  #position: right
+  # position: right
 
   # Sidebar Display, available value (only for Muse | Mist):
   #  - post    expand on posts automatically. Default.
@@ -196,8 +240,15 @@ sidebar:
   # Scroll percent label in b2t button.
   scrollpercent: false
 
-  # Enable sidebar on narrow view (only for Muse | Mist).
-  onmobile: false
+
+
+# Blog rolls
+links_title: Links
+#links_layout: block
+#links_layout: inline
+links:
+  省心英语: "http://a.app.qq.com/o/simple.jsp?pkgname=com.xiaobin.ncenglish" 
+
 
 
 # ---------------------------------------------------------------
@@ -216,8 +267,8 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
-  length: 150
+  enable: true
+  length: 400
 
 # Post meta display settings
 post_meta:
@@ -350,10 +401,10 @@ mathjax:
 han: false
 
 # Swiftype Search API Key
-#swiftype_key:
+# swiftype_key: Zo1mzEpQeR6Xjr3hz4jd
 
 # Baidu Analytics ID
-#baidu_analytics:
+# baidu_analytics:
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -395,7 +446,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8yODIwOC80Nzgx
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
@@ -465,7 +516,7 @@ needmoreshare2:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-91431868-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
@@ -476,7 +527,7 @@ needmoreshare2:
 #yandex_site_verification:
 
 # CNZZ count
-#cnzz_siteid:
+cnzz_siteid: 1261207742
 
 # Application Insights
 # See https://azure.microsoft.com/en-us/services/application-insights/
@@ -572,7 +623,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
@@ -604,6 +655,7 @@ algolia_search:
 # Local search
 # Dependencies: https://github.com/flashlab/hexo-generator-search
 local_search:
+
   enable: false
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
@@ -615,6 +667,7 @@ local_search:
 # ---------------------------------------------------------------
 # Tags Settings
 # ---------------------------------------------------------------
+
 
 # External URL with BASE64 encrypt & decrypt.
 # Usage: {% exturl text url "title" %}
@@ -652,24 +705,10 @@ tabs:
 #! UNLESS YOU KNOW WHAT YOU ARE DOING
 #! ---------------------------------------------------------------
 
-# Use velocity to animate everything.
-motion:
-  enable: true
-  async: false
-  transition:
-    # Transition variants:
-    # fadeIn | fadeOut | flipXIn | flipXOut | flipYIn | flipYOut | flipBounceXIn | flipBounceXOut | flipBounceYIn | flipBounceYOut
-    # swoopIn | swoopOut | whirlIn | whirlOut | shrinkIn | shrinkOut | expandIn | expandOut
-    # bounceIn | bounceOut | bounceUpIn | bounceUpOut | bounceDownIn | bounceDownOut | bounceLeftIn | bounceLeftOut | bounceRightIn | bounceRightOut
-    # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
-    # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
-    # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
-    post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
-    coll_header: slideLeftIn
-    # Only for Pisces | Gemini.
-    sidebar: slideUpIn
+
+# Motion
+use_motion: false
+
 
 # Fancybox
 fancybox: true
@@ -708,14 +747,9 @@ canvas_sphere: false
 
 # Only fit scheme Pisces
 # Canvas-ribbon
-# size: The width of the ribbon.
-# alpha: The transparency of the ribbon.
-# zIndex: The display level of the ribbon.
-canvas_ribbon:
-  enable: false
-  size: 300
-  alpha: 0.6
-  zIndex: -1
+
+canvas_ribbon: false
+
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
