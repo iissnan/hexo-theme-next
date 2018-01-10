@@ -23,6 +23,14 @@
       {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
         {% include '_partials/share/duoshuo_share.swig' %}
       {% endif %}
+
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3605983343885600",
+    enable_page_level_ads: true
+  });
+</script>
     </div>
   </div>
 
