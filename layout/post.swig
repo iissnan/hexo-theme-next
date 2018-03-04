@@ -20,6 +20,8 @@
         {% include '_partials/share/baidushare.swig' %}
       {% elseif theme.add_this_id %}
         {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.sharejs %}
+        {% include '_partials/share/sharejs.swig' %}
       {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
         {% include '_partials/share/duoshuo_share.swig' %}
       {% endif %}
