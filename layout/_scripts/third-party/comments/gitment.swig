@@ -23,7 +23,7 @@
     <script src='https://imsun.github.io/gitment/dist/gitment.browser.js'></script>
     <script type='text/javascript'>
         (function() {
-            var id = window.location.pathname.replace(/(\/$)/g, '');
+            var id = '{{page.date}}';
             var owner = '{{theme.gitment.owner}}';
             var repo = '{{theme.gitment.repo}}';
             var clientId = '{{theme.gitment.client_id}}';
