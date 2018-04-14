@@ -1,58 +1,13 @@
-<!-- ATTENTION!
-IF YOU DON'T FILL OUT THE FOLLOWING INFORMATION WE MIGHT CLOSE YOUR ISSUE WITHOUT INVESTIGATING.
-如果你不填充下面的内容，我们可能会直接关闭你的 issue。
+THIS REPO IS NOT SUPPORTED ANYMORE!
+DON'T NEED CREATE ISSUE HERE!
+NEXT MOVED HERE: https://github.com/theme-next/hexo-theme-next
 
-If you want to fast resolve your issue, WRITE IT IN ENGLISH, please. Not all contributors/collaborators know Chinese language and Google translate can't always give true translates on issues. Thanks!
-You may delete this recomendations and use template which is placed below. 
--->
+NexT is rebased into organization repo https://github.com/theme-next
+If you want new feature, fix, or support, create new issue in NexT v6.x repo (desirable in English).
 
-### I agree and want to create new issue <!-- (我确认我已经查看了) -->
+There is instructions
+on English: https://github.com/theme-next/hexo-theme-next/blob/master/docs/UPDATE-FROM-5.1.X.md
+or Chinese: https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md
+how to update from v5.1.x to v 6.x
 
-<!-- Check all with "x" (使用 "x" 选择) -->
-- [] Yes, I was on [Hexo Docs page](https://hexo.io/docs/), especially on [Templates](https://hexo.io/docs/templates.html), [Variables](https://hexo.io/docs/variables.html), [Helpers](https://hexo.io/docs/helpers.html) and [Troubleshooting](https://hexo.io/docs/troubleshooting.html).
-- [] Yes, I was on [NexT Documentation Site](http://theme-next.iissnan.com/).
-- [] And yes, I already searched for current [issues](https://github.com/iissnan/hexo-theme-next/issues?utf8=%E2%9C%93&q=is%3Aissue) and this is not help to me.
-
-***
-
-### Expected behavior <!-- (预期行为) -->
-
-
-### Actual behavior <!-- (实际行为) -->
-
-
-### Steps to reproduce the behavior <!-- (重现步骤) -->
-1. N/A
-2. N/A
-3. N/A
-
-* Link to demo site with this issue: N/A
-* Link(s) to source code or any usefull link(s): N/A
-
-### Hexo Information
-<!-- Paste info from `hexo -v`  (粘貼信息 `hexo -v`) -->
-```
-
-```
-
-### NexT Information
-
-**NexT Version:**
-<!-- Check one with "x" (使用 "x" 选择) -->
-```
-[] Latest Master branch.
-[] Latest Release version.
-[] Old version - 
-```
-
-**NexT Scheme:**
-<!-- Check one with "x" (使用 "x" 选择) -->
-```
-[] All schemes
-[] Muse
-[] Mist
-[] Pisces
-[] Gemini
-```
-
-### Other Information <!-- (Like Browser, System, Screenshots) -->
+You also may read this for details: https://github.com/iissnan/hexo-theme-next/issues/2061
