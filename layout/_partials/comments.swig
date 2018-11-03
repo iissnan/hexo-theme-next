@@ -66,5 +66,8 @@
     <div class="comments" id="comments">
     </div>
   {% endif %}
+  
+  {% elseif them.gitalk.enable %}
+    <div id="gitalk-container"></div>
 
 {% endif %}
