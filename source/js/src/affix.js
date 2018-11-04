@@ -106,9 +106,7 @@
     }
 
     if (affix == 'bottom') {
-      this.$element.offset({
-        top: scrollHeight - height - offsetBottom
-      })
+      this.$element.removeClass(Affix.RESET).addClass('affix')
     }
   }
 
