@@ -336,6 +336,25 @@ font:
     size:
 
 
+
+
+# ---------------------------------------------------------------
+# Carousel Settings
+# ---------------------------------------------------------------
+#Home carousel map, from means link, img means picture
+Carousel:
+  enable: false
+  from1: 
+  img1: 
+  from2: 
+  img2: 
+  from3: 
+  img3: 
+  from4: 
+  img4: 
+
+
+
 # ---------------------------------------------------------------
 # Third Party Services Settings
 # ---------------------------------------------------------------

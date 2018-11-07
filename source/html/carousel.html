@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 轮播（Carousel）插件的标题</title>
+<link rel="stylesheet" href="/js/src/bootstrap.css">
+	<script src="/js/src/jquery.js"></script>
+	<script src="/js/src/bootstrap.min.js"></script>
+
+<!-- 
+<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ -->
+
+</head>
+<style type="text/css">
+	.glyphicon-chevron-left:before{
+		content: "《"
+	}
+	.glyphicon-chevron-right:before{
+		content: "》"
+	}
+
+
+
+</style>
+<body>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3500" style="width: 65%; float: left; height: 280px;">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+		<li data-target="#myCarousel" data-slide-to="3"></li>
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner" style="height: 280px; border-radius: 10px;">
+
+		<!-- 小鸡单词 -->
+		<a id="link1" class="item active" href="" target="_blank">
+			<img id="img1" src=""  width="100%" style="height: auto;" alt="First slide">
+			<div class="carousel-caption"></div>
+		</a>
+
+		<!-- ssr搭建 -->
+		<a id="link2" class="item" href="" target="_blank">
+			<img id="img2" src=""  width="100%" style="height: auto;" alt="Second slide">
+			<div class="carousel-caption"></div>
+		</a>
+
+		<!-- hexo博客 -->
+		<a id="link3" class="item" href="" target="_blank">
+			<img id="img3" src=""  width="100%" style="height: auto;" alt="Second slide">
+			<div class="carousel-caption"></div>
+		</a>
+
+		<!-- 所有的日子 -->
+		<a id="link4" class="item" href="" target="_blank">
+			<img id="img4" src="" alt="Third slide" style="height: auto;" width="100%">
+			<!-- <div class="carousel-caption">标题 3</div> -->
+		</a>
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	</a>
+</div> 
+
+
+<script type="text/javascript">
+	
+	function GetRequest() { 
+	var url = location.search; //获取url中"?"符后的字串 
+	var theRequest = new Object(); 
+	if (url.indexOf("?") != -1) {
+		var str = url.substr(1); 
+		strs = str.split("&"); 
+		for(var i = 0; i < strs.length; i ++) {
+			theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]); 
+		} 
+	} 
+	return theRequest; 
+} 
+
+ 	window.onload=function(){
+ 		var req = GetRequest();
+ 		var from1 = req['from1'];
+ 		var img1 = req['img1'];
+ 		var from2 = req['from2'];
+ 		var img2 = req['img2'];
+ 		var from3 = req['from3'];
+ 		var img3 = req['img3'];
+ 		var from4 = req['from4'];
+ 		var img4 = req['img4'];
+
+ 		document.getElementById("link1").href=from1;
+ 		document.getElementById("img1").src=img1;
+ 		document.getElementById("link2").href=from2;
+ 		document.getElementById("img2").src=img2;
+ 		document.getElementById("link3").href=from3;
+ 		document.getElementById("img3").src=img3;
+ 		document.getElementById("link4").href=from4;
+ 		document.getElementById("img4").src=img4;
+ 		
+ 	}
+    
+</script>
+</body>
+</html>
