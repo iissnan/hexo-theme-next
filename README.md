@@ -10,6 +10,7 @@
 [![rel-image]][releases-url]
 [![hexo-image]][hexo-url]
 [![lic-image]](LICENSE)
+[![hound-image]][hound-url]
 
 * [Chinese Documentation](README.cn.md)
 
@@ -358,6 +359,8 @@ Contribution is welcome, feel free to open an issue and fork. Waiting for your p
 [rel-image]: https://img.shields.io/github/release/iissnan/hexo-theme-next.svg
 <!--[lic-image]: https://img.shields.io/npm/l/hexo-theme-next.svg-->
 [lic-image]: https://img.shields.io/dub/l/vibe-d.svg
+[hound-image]: https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg
+[hound-url]: https://houndci.com
 
 [git-image]: https://img.shields.io/badge/install%20with%20-git-blue.svg
 [curl-tar-image]: https://img.shields.io/badge/install%20with%20-curl%20%7C%20tar-blue.svg
