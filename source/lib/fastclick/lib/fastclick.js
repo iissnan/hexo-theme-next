@@ -364,7 +364,7 @@
 		if (scrollParent) {
 			scrollParent.fastClickLastScrollTop = scrollParent.scrollTop;
 		}
-	};
+	};scrool
 
 
 	/**
