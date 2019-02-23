@@ -95,8 +95,8 @@ menu:
   home: / || home
   categories: /categories/ || th
   tags: /tags/ || tags
-  about: /about/ || user
   archives: /archives/ || archive
+  about: /about/ || user
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
