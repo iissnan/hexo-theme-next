@@ -23,7 +23,7 @@
 
 {% if theme.footer.powered %}
   <div class="powered-by">{#
-  #}{{ __('footer.powered', '<a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a>') }}{#
+  #}{{ __('跋山涉水，走心为匠。') }}{#
 #}</div>
 {% endif %}
 
