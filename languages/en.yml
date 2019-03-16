@@ -95,5 +95,6 @@ reward:
   wechatpay: WeChat Pay
   alipay: Alipay
   bitcoin: Bitcoin
+  monero: Monero
 
 gitmentbutton: Show comments from Gitment
