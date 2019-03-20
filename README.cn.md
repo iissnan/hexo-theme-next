@@ -1,4 +1,4 @@
-<p align="right"><a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next">NexT v6.0.0 here :triangular_flag_on_post:</a></p>
+<h2>本项目已停止维护。社区维护的版本请移步这里：<a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next">NexT v6 & v7 :triangular_flag_on_post:</a></h2>
 
 <h1 align="center">NexT</h1>
 
