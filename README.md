@@ -1,4 +1,5 @@
-<h2>This repository is no longer maintained. The community-maintained version is here: <a title="New «NexT» 6.0.0 version [Reloaded]" href="https://github.com/theme-next/hexo-theme-next">NexT v6 and v7 :triangular_flag_on_post:</a></h2>
+<h1 align="center">This repository is no longer maintained! :warning:</h1>
+<h2 align="center">The community-maintained version is here: <a href="https://github.com/theme-next/hexo-theme-next">NexT v6 and v7 :triangular_flag_on_post:</a></h2>
 
 <h1 align="center">NexT</h1>
 
