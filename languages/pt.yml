@@ -86,3 +86,10 @@ reward:
   wechatpay: WeChat Pay
   alipay: Alipay
   bitcoin: Bitcoin
+
+building_time: 
+  building_time: Criação de um tempo
+  day: Dias
+  hour: Horas
+  Minute: Minutos
+  Minute: Segundo
