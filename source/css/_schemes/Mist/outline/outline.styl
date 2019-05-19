@@ -1,1 +1,45 @@
+//margin-left and margin-right  size
+$offset-margin = 30px;
+
 .main-inner { margin-top: 80px; }
+
+// 767px < screen <  $content-desktop + marginLeft + marginRight        (add marginLeft and marginRight)
+@media only screen and (min-width: 767px) and (max-width: $content-desktop + ($offset-margin * 2)){
+  .header-inner,
+  .main-inner,
+  .footer-inner{
+    margin-left: $offset-margin;
+    margin-right: $offset-margin;
+  }
+}
+
+// screen <  $content-desktop + marginLeft + marginRight   +  sidebarWidth    (hide sidebar)
+@media only screen and (max-width: $content-desktop-large + ($offset-margin * 2) + $sidebar-desktop){
+  body {
+    padding-left: 0 !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+}
+
++desktop-large() {
+// 767px < screen <  $content-desktop-large + marginLeft + marginRight         (add marginLeft and marginRight)
+  @media only screen and (min-width: 767px) and (max-width: $content-desktop-large + ($offset-margin * 2)){
+    .header-inner,
+    .main-inner,
+    .footer-inner{
+      margin-left: $offset-margin;
+      margin-right: $offset-margin;
+    }
+  }
+// screen <  $content-desktop-large + marginLeft + marginRight  +  sidebarWidth      (hide sidebar)
+  @media only screen and (max-width: $content-desktop-large + ($offset-margin * 2) + $sidebar-desktop){
+    body {
+      padding-left: 0 !important;
+    }
+    .sidebar {
+      display: none !important;
+    }
+  }
+}
