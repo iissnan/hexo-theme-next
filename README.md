@@ -4,7 +4,7 @@
 由于第一次使用 Swig 与 Stylus，一边改造一边学习，可惜改动蛮多的，已与原版不兼容_(:зゝ∠)_
 做了响应式处理，基本没什么大问题嘞~
 
-**页面封面设置**（效果预览 > [熊D博客](http://blog.tail.cc/)）：
+**页面封面设置**（效果预览 > [熊D博客](https://blog.beard.ink/)）：
 ```
 # /themes/nextd/_config.yml
 # Page covers for follow pages, whom height is greater than 400px.
@@ -21,7 +21,7 @@ cover:
 效果：
 ![页面封面效果](https://github.com/HiDino9/hexo-theme-nextd/blob/master/test/nextd_home_preview.jpg?raw=true)
 
-**博文封面设置**（效果预览 > [从零开始：现在开始用ES6写代码 | 熊D博客](http://blog.tail.cc/JavaScript/从零开始：现在开始用ES6写代码/)）：
+**博文封面设置**（效果预览 > [从零开始：现在开始用ES6写代码 | 熊D博客](https://blog.beard.ink/JavaScript/从零开始：现在开始用ES6写代码/)）：
 ```
 ---
 title: 从零开始：现在开始用ES6写代码
