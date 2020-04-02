@@ -49,7 +49,7 @@
             {% if config.archive_dir != '/' and site.posts.length > 0 %}
               <div class="site-state-item site-state-posts">
               {% if theme.menu.archives %}
-                <a href="{{ url_for(theme.menu.archives).split('||')[0] | trim }}">
+                <a href="{{ url_for(theme.menu.archives.split('||')[0]) | trim }}">
               {% else %}
                 <a href="{{ url_for(config.archive_dir) }}">
               {% endif %}
