@@ -68,7 +68,7 @@ state:
 
 cheers:
   um: 음..
-  ok: 동의해요
+  ok: OK
   nice: 잘했어요
   good: 좋아요
   great: 훌륭해요
@@ -82,7 +82,7 @@ symbol:
   colon: ':'
 
 reward:
-  donate: 도네이션
+  donate: Donate
   wechatpay: WeChat Pay
   alipay: Alipay
-  bitcoin: 비트코인
+  bitcoin: Bitcoin
