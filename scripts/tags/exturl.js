@@ -51,7 +51,6 @@ function extURL(args, content) {
     title: title
   };
 
-  //console.log(url);
   return htmlTag('span', attrs, text.join(' '));
 }
 
