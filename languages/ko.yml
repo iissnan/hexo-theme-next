@@ -10,7 +10,7 @@ menu:
   archives: 아카이브
   categories: 카테고리
   tags: 태그
-  about: About
+  about: 정보
   search: 검색
 
 sidebar:
@@ -30,7 +30,7 @@ post:
   min2read: Reading time
   totalcount: Site words total count
   copyright:
-    author: Post author
+    author: 포스트 작성자
     link: Post link
     license_title: Copyright Notice
     license_content: 'All articles in this blog are licensed under
@@ -68,7 +68,7 @@ state:
 
 cheers:
   um: 음..
-  ok: OK
+  ok: 동의해요
   nice: 잘했어요
   good: 좋아요
   great: 훌륭해요
@@ -82,7 +82,7 @@ symbol:
   colon: ':'
 
 reward:
-  donate: Donate
+  donate: 도네이션
   wechatpay: WeChat Pay
   alipay: Alipay
-  bitcoin: Bitcoin
+  bitcoin: 비트코인
