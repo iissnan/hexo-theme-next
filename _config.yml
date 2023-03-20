@@ -47,6 +47,9 @@ footer:
   # If not defined, current year will be used.
   #since: 2015
 
+  # Change the website creation time according to the format
+  # Building_time: 2016/06/18 10:00:00
+
   # Icon between year and copyright info.
   icon: user
 

@@ -86,3 +86,10 @@ reward:
   wechatpay: WeChat Pay
   alipay: Alipay
   bitcoin: Bitcoin
+
+building_time: 
+  building_time: 설립 시간
+  day: 날
+  hour: 시간
+  Minute: 분
+  Minute: 초

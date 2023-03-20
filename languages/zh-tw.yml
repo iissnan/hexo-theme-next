@@ -96,3 +96,10 @@ reward:
   bitcoin: 比特幣
 
 gitmentbutton: 顯示 Gitment 評論
+
+building_time: 
+  building_time: 建站時間
+  day: 天
+  hour: 時
+  Minute: 分
+  Minute: 秒
